@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<root>
+	<!--
+		SYS邮件和其他文字引用配置
+	-->
+	<syslanguages>
+		<!-- 系统 -->
+		<entry id="1" languages="系統"/>
+		<!-- 1v1战场 -->
+		<entry id="2" languages="1v1"/>
+		<!-- 天梯排行系统 -->
+		<entry id="3" languages="德怒拉之塔系統"/>
+		<!-- 世界boss击杀奖励 -->
+		<entry id="4" languages="世界Boss擊殺獎勵"/>
+		<!-- 夺宝系统 -->
+		<entry id="5" languages="叢林法則系統"/>
+		<!-- 公会积分奖励 -->
+		<entry id="6" languages="艦隊積分獎勵"/>
+		<!-- 公会副本伤害排名奖励 -->
+		<entry id="7" languages="艦隊副本傷害排名獎勵"/>
+		<!-- 会长已转让 -->
+		<entry id="8" languages="艦長已轉讓"/>
+		<!-- 世界boss奖励 -->
+		<entry id="9" languages="世界Boss獎勵"/>
+		<!-- 公会副本击杀奖励 -->
+		<entry id="10" languages="艦隊副本擊殺獎勵"/>
+		<!-- 公会副本完成奖励 -->
+		<entry id="11" languages="艦隊副本完成獎勵"/>
+		<!-- 限时武神抽奖奖励 -->
+		<entry id="12" languages="限时並蒂者抽獎獎勵"/>
+		<!-- 开服战力排名奖励 -->
+		<entry id="13" languages="開服戰力排名獎勵"/>
+		<!-- 公会领地战 -->
+		<entry id="14" languages="艦隊領地戰"/>
+		<!-- 飞船护送奖励 -->
+		<entry id="15" languages="星際保鏢獎勵"/>
+		<!-- 飞船护送获得奖励 -->
+		<entry id="16" languages="星際保鏢獲得獎勵"/>
+		<!-- 翡翠梦境排名奖励 -->
+		<entry id="17" languages="翡翠夢境排名獎勵"/>
+		<!-- 穿戴翅膀提示 -->
+		<entry id="18" languages="VIP等級不足"/>
+		<!-- 英雄联赛奖励 -->
+		<entry id="19" languages="英雄聯賽獎勵"/>
+		<!-- 穿戴翅膀提示2 -->
+		<entry id="20" languages="VIP等級不足，無法佩戴該機翼"/>
+	</syslanguages>
+</root>

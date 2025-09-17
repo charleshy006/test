@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>	
+	<!--英雄联赛奖励
+	Rewartype：奖励类型
+			=1：冠军奖励
+			=2：亚军奖励
+			=3：4强奖励
+			=4：8强奖励
+			=5：16强奖励
+			=6：复赛出线奖励
+			=7：复赛17-30名奖励
+			=8：复赛31-50名奖励
+			=9：复赛51-100名奖励
+			=10：初赛胜利奖励
+			=11：初赛参与奖励
+	itemID：奖励物品ID
+	-->
+	<Rewar>
+		<entry id="1" Rewartype="1" itemID="730000" rewardname="Herorank_00"/>
+		<entry id="2" Rewartype="2" itemID="730001" rewardname="Herorank_01"/>
+		<entry id="3" Rewartype="3" itemID="730002" rewardname="Herorank_02"/>
+		<entry id="4" Rewartype="4" itemID="730003" rewardname="Herorank_03"/>
+		<entry id="5" Rewartype="5" itemID="730004" rewardname="Herorank_04"/>
+		<entry id="6" Rewartype="6" itemID="730005" rewardname="Herorank_05"/>
+		<entry id="7" Rewartype="7" itemID="730006" rewardname="Herorank_06"/>
+		<entry id="8" Rewartype="10" itemID="730007" rewardname="Herorank_09"/>
+		<entry id="9" Rewartype="11" itemID="730008" rewardname="Herorank_10"/>
+	</Rewar>
+		
+	<!-- 初赛配置
+		opentime：开放时间（周日开始计算起始时间）
+		Clearing：结算时间
+		Levelid：场景ID
+		Limitnum：限制场次
+		VictoryPoints：胜利点数
+		Failurepoints：失败点数
+		participation：参与服务器组编号
+	-->
+	<Preliminary opentime="244800-248400" Clearing="248401" Levelid="150002" Limitnum="5" VictoryPoints="7" participationBOX="730008" victoryBOX="730007"/> 
+	
+	<!-- 复赛人数场次配置
+		Pointpeople：获得初赛分数的人数（低于该值）
+		selectpeople：可以人数参与复赛的人数
+		intermediarynum：复赛需要进行的场次
+	-->
+
+	<!-- 复赛配置
+		Applytime：报名时间
+		Clearing：结算时间
+		Levelid：场景ID
+		Screening：场次
+		Battletime：战斗时间
+		Resttime：休息时间
+	-->
+	<intermediary opentime="417600-421200" Clearing="421201" Levelid="150002" Limitnum="5" VictoryPoints="7">
+		<entry id="1" Startrank="1" Endrank="16" rewardid="730005"/>
+		<entry id="2" Startrank="17" Endrank="1000" rewardid="730006"/>
+	</intermediary>
+	<!-- 决赛配置《32强选1》
+		Applytime：报名时间
+		Clearing：结算时间
+		Levelid：场景ID
+		Screening：场次
+		Battletime：战斗时间
+		Resttime：休息时间
+	-->
+	<Finals Applytime="590400" Clearing="594600" Levelid="150002"> 
+		<entry id="1" Screening="1" Resttime="590400-590999" Battletime="591000-591599" participationBOX="730004" victoryBOX="730003"/>
+		<entry id="2" Screening="2" Resttime="591600-591899" Battletime="591900-592499" participationBOX="730003" victoryBOX="730002"/>
+		<entry id="3" Screening="3" Resttime="592500-592799" Battletime="592800-593399" participationBOX="730002" victoryBOX="730001"/>	
+		<entry id="4" Screening="4" Resttime="593400-593999" Battletime="594000-594599" participationBOX="730001" victoryBOX="730000"/>
+	</Finals>
+	<!-- 膜拜配置
+		differentitem：膜拜奖励
+		denticalitem：同服膜拜奖励
+	-->
+	<worship id="1" differentitem="731000" denticalitem="731000"/>
+	
+	<!-- 赛程时间
+	-->
+	<time ID="1">
+		<entry id="1" time="594601-248400" desc="herodesc_01"/>
+		<entry id="2" time="248401-421200" desc="herodesc_02"/>
+		<entry id="3" time="421201-594600" desc="herodesc_03"/>
+	</time>
+
+</root>	

@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<!--
+		enchantType ID: 附魔类型
+		enchantItem: 附魔材料（0：时装碎片 -锁定数量从0开始（1：附魔石 -物品iD
+		enchantMoney：金币
+        enchantNum：材料数量
+		enchantRanger：附魔范围,附魔ID的范围
+		maxNum:最大附魔次数
+	-->
+	<EnchantType >
+		<enchantType ID="1" enchantItem="0-0" enchantMoney="100000" enchantNum="3" maxNum="5" enchantRanger="1-78"/>
+		<enchantType ID="2" enchantItem="0-1" enchantMoney="100000" enchantNum="6" maxNum="5" enchantRanger="1-78"/>
+		<enchantType ID="3" enchantItem="0-2" enchantMoney="100000" enchantNum="12" maxNum="5" enchantRanger="1-78"/>
+		<enchantType ID="4" enchantItem="0-3" enchantMoney="100000" enchantNum="18" maxNum="5" enchantRanger="1-78"/>
+		<enchantType ID="5" enchantItem="0-4" enchantMoney="100000" enchantNum="24" maxNum="5" enchantRanger="1-78"/>
+		
+ 		<enchantType ID="6" enchantItem="1-121225" enchantMoney="100000" enchantNum="1" maxNum="5" enchantRanger="26-78"/>
+		<enchantType ID="7" enchantItem="1-120425" enchantMoney="100000" enchantNum="1" maxNum="5" enchantRanger="1-52"/>
+		<enchantType ID="8" enchantItem="1-120125" enchantMoney="100000" enchantNum="1" maxNum="5" enchantRanger="1-26"/>
+	<!--	<enchantType ID="9" enchantItem="1-120125" enchantMoney="100000" enchantNum="1" maxNum="5" enchantRanger="101-178"/>
+		<enchantType ID="10" enchantItem="1-120125" enchantMoney="100000" enchantNum="1" maxNum="5" enchantRanger="101-178"/> -->
+
+	</EnchantType>
+	<!--
+		enchantID: 附魔ID
+        property：属性
+		propertyRanger：附魔范围
+		enchantRP：附魔概率
+		color:颜色 1:绿色 2：蓝色 3：紫色
+	-->
+	<Enchant>
+		<enchant ID="1" enchantProperty="1" propertyRanger="500-3000" color="1" enchantRP="36000" />
+		<enchant ID="2" enchantProperty="2" propertyRanger="50-300" color="1" enchantRP="36000" />
+		<enchant ID="3" enchantProperty="3" propertyRanger="1-3" color="1" enchantRP="31500" />
+		<enchant ID="4" enchantProperty="4" propertyRanger="1-2" color="1" enchantRP="31500" />
+		<enchant ID="5" enchantProperty="5" propertyRanger="1-3" color="1" enchantRP="31500" />
+		<enchant ID="6" enchantProperty="6" propertyRanger="1-6" color="1" enchantRP="36000" />
+		<enchant ID="7" enchantProperty="7" propertyRanger="1-4" color="1" enchantRP="36000" />
+		<enchant ID="8" enchantProperty="8" propertyRanger="1-9" color="1" enchantRP="36000" />
+		<enchant ID="9" enchantProperty="9" propertyRanger="250-1500" color="1" enchantRP="36000" />
+		<enchant ID="10" enchantProperty="14" propertyRanger="50-300" color="1" enchantRP="36000" />
+		<enchant ID="11" enchantProperty="15" propertyRanger="50-300" color="1" enchantRP="36000" />
+		<enchant ID="12" enchantProperty="16" propertyRanger="50-300" color="1" enchantRP="36000" />
+		<enchant ID="13" enchantProperty="20" propertyRanger="50-300" color="1" enchantRP="31500" />
+		<enchant ID="14" enchantProperty="1" propertyRanger="3000-4000" color="1" enchantRP="20000" />
+		<enchant ID="15" enchantProperty="2" propertyRanger="300-400" color="1" enchantRP="20000" />
+		<enchant ID="16" enchantProperty="3" propertyRanger="2-4" color="1" enchantRP="17500" />
+		<enchant ID="17" enchantProperty="4" propertyRanger="1-2" color="1" enchantRP="17500" />
+		<enchant ID="18" enchantProperty="5" propertyRanger="1-4" color="1" enchantRP="17500" />
+		<enchant ID="19" enchantProperty="6" propertyRanger="3-8" color="1" enchantRP="20000" />
+		<enchant ID="20" enchantProperty="7" propertyRanger="2-5" color="1" enchantRP="20000" />
+		<enchant ID="21" enchantProperty="8" propertyRanger="2-11" color="1" enchantRP="20000" />
+		<enchant ID="22" enchantProperty="9" propertyRanger="1500-2000" color="1" enchantRP="20000" />
+		<enchant ID="23" enchantProperty="14" propertyRanger="300-400" color="1" enchantRP="20000" />
+		<enchant ID="24" enchantProperty="15" propertyRanger="300-400" color="1" enchantRP="20000" />
+		<enchant ID="25" enchantProperty="16" propertyRanger="300-400" color="1" enchantRP="20000" />
+		<enchant ID="26" enchantProperty="20" propertyRanger="300-400" color="1" enchantRP="17500" />
+		<enchant ID="27" enchantProperty="1" propertyRanger="4000-6000" color="2" enchantRP="12000" />
+		<enchant ID="28" enchantProperty="2" propertyRanger="400-600" color="2" enchantRP="12000" />
+		<enchant ID="29" enchantProperty="3" propertyRanger="5-7" color="2" enchantRP="10500" />
+		<enchant ID="30" enchantProperty="4" propertyRanger="3-4" color="2" enchantRP="10500" />
+		<enchant ID="31" enchantProperty="5" propertyRanger="5-6" color="2" enchantRP="10500" />
+		<enchant ID="32" enchantProperty="6" propertyRanger="9-12" color="2" enchantRP="12000" />
+		<enchant ID="33" enchantProperty="7" propertyRanger="6-9" color="2" enchantRP="12000" />
+		<enchant ID="34" enchantProperty="8" propertyRanger="12-18" color="2" enchantRP="12000" />
+		<enchant ID="35" enchantProperty="9" propertyRanger="2000-3000" color="2" enchantRP="12000" />
+		<enchant ID="36" enchantProperty="14" propertyRanger="400-600" color="2" enchantRP="12000" />
+		<enchant ID="37" enchantProperty="15" propertyRanger="400-600" color="2" enchantRP="12000" />
+		<enchant ID="38" enchantProperty="16" propertyRanger="400-600" color="2" enchantRP="12000" />
+		<enchant ID="39" enchantProperty="20" propertyRanger="400-600" color="2" enchantRP="10500" />
+		<enchant ID="40" enchantProperty="1" propertyRanger="6000-7000" color="2" enchantRP="8000" />
+		<enchant ID="41" enchantProperty="2" propertyRanger="600-700" color="2" enchantRP="8000" />
+		<enchant ID="42" enchantProperty="3" propertyRanger="5-8" color="2" enchantRP="7000" />
+		<enchant ID="43" enchantProperty="4" propertyRanger="4-5" color="2" enchantRP="7000" />
+		<enchant ID="44" enchantProperty="5" propertyRanger="6-7" color="2" enchantRP="7000" />
+		<enchant ID="45" enchantProperty="6" propertyRanger="10-14" color="2" enchantRP="8000" />
+		<enchant ID="46" enchantProperty="7" propertyRanger="8-10" color="2" enchantRP="8000" />
+		<enchant ID="47" enchantProperty="8" propertyRanger="15-21" color="2" enchantRP="8000" />
+		<enchant ID="48" enchantProperty="9" propertyRanger="3000-3500" color="2" enchantRP="8000" />
+		<enchant ID="49" enchantProperty="14" propertyRanger="600-700" color="2" enchantRP="8000" />
+		<enchant ID="50" enchantProperty="15" propertyRanger="600-700" color="2" enchantRP="8000" />
+		<enchant ID="51" enchantProperty="16" propertyRanger="600-700" color="2" enchantRP="8000" />
+		<enchant ID="52" enchantProperty="20" propertyRanger="600-700" color="2" enchantRP="7000" />
+		<enchant ID="53" enchantProperty="1" propertyRanger="7000-9000" color="3" enchantRP="2400" />
+		<enchant ID="54" enchantProperty="2" propertyRanger="700-900" color="3" enchantRP="2400" />
+		<enchant ID="55" enchantProperty="3" propertyRanger="9-10" color="3" enchantRP="2100" />
+		<enchant ID="56" enchantProperty="4" propertyRanger="6-7" color="3" enchantRP="2100" />
+		<enchant ID="57" enchantProperty="5" propertyRanger="8-9" color="3" enchantRP="2100" />
+		<enchant ID="58" enchantProperty="6" propertyRanger="15-18" color="3" enchantRP="2400" />
+		<enchant ID="59" enchantProperty="7" propertyRanger="11-13" color="3" enchantRP="2400" />
+		<enchant ID="60" enchantProperty="8" propertyRanger="22-27" color="3" enchantRP="2400" />
+		<enchant ID="61" enchantProperty="9" propertyRanger="3500-4500" color="3" enchantRP="2400" />
+		<enchant ID="62" enchantProperty="14" propertyRanger="700-900" color="3" enchantRP="2400" />
+		<enchant ID="63" enchantProperty="15" propertyRanger="700-900" color="3" enchantRP="2400" />
+		<enchant ID="64" enchantProperty="16" propertyRanger="700-900" color="3" enchantRP="2400" />
+		<enchant ID="65" enchantProperty="20" propertyRanger="700-900" color="3" enchantRP="2100" />
+		<enchant ID="66" enchantProperty="1" propertyRanger="9000-10000" color="3" enchantRP="1600" />
+		<enchant ID="67" enchantProperty="2" propertyRanger="900-1000" color="3" enchantRP="1600" />
+		<enchant ID="68" enchantProperty="3" propertyRanger="11-12" color="3" enchantRP="1400" />
+		<enchant ID="69" enchantProperty="4" propertyRanger="7-8" color="3" enchantRP="1400" />
+		<enchant ID="70" enchantProperty="5" propertyRanger="9-10" color="3" enchantRP="1400" />
+		<enchant ID="71" enchantProperty="6" propertyRanger="17-20" color="3" enchantRP="1600" />
+		<enchant ID="72" enchantProperty="7" propertyRanger="13-15" color="3" enchantRP="1600" />
+		<enchant ID="73" enchantProperty="8" propertyRanger="26-30" color="3" enchantRP="1600" />
+		<enchant ID="74" enchantProperty="9" propertyRanger="4500-5000" color="3" enchantRP="1600" />
+		<enchant ID="75" enchantProperty="14" propertyRanger="900-1000" color="3" enchantRP="1600" />
+		<enchant ID="76" enchantProperty="15" propertyRanger="900-1000" color="3" enchantRP="1600" />
+		<enchant ID="77" enchantProperty="16" propertyRanger="900-1000" color="3" enchantRP="1600" />
+		<enchant ID="78" enchantProperty="20" propertyRanger="900-1000" color="3" enchantRP="1400" />
+		
+		 <enchant ID="79" enchantProperty="1" propertyRanger="500-3000" color="1" enchantRP="500-3000" />
+			<enchant ID="80" enchantProperty="2" propertyRanger="50-300" color="1" enchantRP="50-300" />
+			<enchant ID="81" enchantProperty="3" propertyRanger="1-3" color="1" enchantRP="1-3" />
+			<enchant ID="82" enchantProperty="4" propertyRanger="1-2" color="1" enchantRP="1-2" />
+			<enchant ID="83" enchantProperty="5" propertyRanger="1-3" color="1" enchantRP="1-3" />
+			<enchant ID="84" enchantProperty="6" propertyRanger="1-6" color="1" enchantRP="1-6" />
+			<enchant ID="85" enchantProperty="7" propertyRanger="1-4" color="1" enchantRP="1-4" />
+			<enchant ID="86" enchantProperty="8" propertyRanger="1-9" color="1" enchantRP="1-9" />
+			<enchant ID="87" enchantProperty="9" propertyRanger="250-1500" color="1" enchantRP="250-1500" />
+			<enchant ID="88" enchantProperty="14" propertyRanger="50-300" color="1" enchantRP="50-300" />
+			<enchant ID="89" enchantProperty="15" propertyRanger="50-300" color="1" enchantRP="50-300" />
+			<enchant ID="90" enchantProperty="16" propertyRanger="50-300" color="1" enchantRP="50-300" />
+			<enchant ID="91" enchantProperty="20" propertyRanger="50-300" color="1" enchantRP="50-300" />
+			<enchant ID="92" enchantProperty="1" propertyRanger="3000-4000" color="1" enchantRP="3000-4000" />
+			<enchant ID="93" enchantProperty="2" propertyRanger="300-400" color="1" enchantRP="300-400" />
+			<enchant ID="94" enchantProperty="3" propertyRanger="2-4" color="1" enchantRP="2-4" />
+			<enchant ID="95" enchantProperty="4" propertyRanger="1-2" color="1" enchantRP="1-2" />
+			<enchant ID="96" enchantProperty="5" propertyRanger="1-4" color="1" enchantRP="1-4" />
+			<enchant ID="97" enchantProperty="6" propertyRanger="3-8" color="1" enchantRP="3-8" />
+			<enchant ID="98" enchantProperty="7" propertyRanger="2-5" color="1" enchantRP="2-5" />
+			<enchant ID="99" enchantProperty="8" propertyRanger="2-11" color="1" enchantRP="2-11" />
+			<enchant ID="100" enchantProperty="9" propertyRanger="1500-2000" color="1" enchantRP="1500-2000" />
+			<enchant ID="101" enchantProperty="14" propertyRanger="300-400" color="1" enchantRP="300-400" />
+			<enchant ID="102" enchantProperty="15" propertyRanger="300-400" color="1" enchantRP="300-400" />
+			<enchant ID="103" enchantProperty="16" propertyRanger="300-400" color="1" enchantRP="300-400" />
+			<enchant ID="104" enchantProperty="20" propertyRanger="300-400" color="1" enchantRP="300-400" />
+			<enchant ID="105" enchantProperty="1" propertyRanger="4000-6000" color="2" enchantRP="4000-6000" />
+			<enchant ID="106" enchantProperty="2" propertyRanger="400-600" color="2" enchantRP="400-600" />
+			<enchant ID="107" enchantProperty="3" propertyRanger="5-7" color="2" enchantRP="5-7" />
+			<enchant ID="108" enchantProperty="4" propertyRanger="3-4" color="2" enchantRP="3-4" />
+			<enchant ID="109" enchantProperty="5" propertyRanger="5-6" color="2" enchantRP="5-6" />
+			<enchant ID="110" enchantProperty="6" propertyRanger="9-12" color="2" enchantRP="9-12" />
+			<enchant ID="111" enchantProperty="7" propertyRanger="6-9" color="2" enchantRP="6-9" />
+			<enchant ID="134" enchantProperty="8" propertyRanger="12-18" color="2" enchantRP="12-18" />
+			<enchant ID="135" enchantProperty="9" propertyRanger="2000-3000" color="2" enchantRP="2000-3000" />
+			<enchant ID="136" enchantProperty="14" propertyRanger="400-600" color="2" enchantRP="400-600" />
+			<enchant ID="137" enchantProperty="15" propertyRanger="400-600" color="2" enchantRP="400-600" />
+			<enchant ID="138" enchantProperty="16" propertyRanger="400-600" color="2" enchantRP="400-600" />
+			<enchant ID="139" enchantProperty="20" propertyRanger="400-600" color="2" enchantRP="400-600" />
+			<enchant ID="140" enchantProperty="1" propertyRanger="6000-7000" color="2" enchantRP="6000-7000" />
+			<enchant ID="141" enchantProperty="2" propertyRanger="600-700" color="2" enchantRP="600-700" />
+			<enchant ID="142" enchantProperty="3" propertyRanger="5-8" color="2" enchantRP="5-8" />
+			<enchant ID="143" enchantProperty="4" propertyRanger="4-5" color="2" enchantRP="4-5" />
+			<enchant ID="144" enchantProperty="5" propertyRanger="6-7" color="2" enchantRP="6-7" />
+			<enchant ID="145" enchantProperty="6" propertyRanger="10-14" color="2" enchantRP="10-14" />
+			<enchant ID="146" enchantProperty="7" propertyRanger="8-10" color="2" enchantRP="8-10" />
+			<enchant ID="147" enchantProperty="8" propertyRanger="15-21" color="2" enchantRP="15-21" />
+			<enchant ID="148" enchantProperty="9" propertyRanger="3000-3500" color="2" enchantRP="3000-3500" />
+			<enchant ID="149" enchantProperty="14" propertyRanger="600-700" color="2" enchantRP="600-700" />
+			<enchant ID="150" enchantProperty="15" propertyRanger="600-700" color="2" enchantRP="600-700" />
+			<enchant ID="151" enchantProperty="16" propertyRanger="600-700" color="2" enchantRP="600-700" />
+			<enchant ID="152" enchantProperty="20" propertyRanger="600-700" color="2" enchantRP="600-700" />
+			<enchant ID="153" enchantProperty="1" propertyRanger="7000-9000" color="3" enchantRP="7000-9000" />
+			<enchant ID="154" enchantProperty="2" propertyRanger="700-900" color="3" enchantRP="700-900" />
+			<enchant ID="155" enchantProperty="3" propertyRanger="9-10" color="3" enchantRP="9-10" />
+			<enchant ID="156" enchantProperty="4" propertyRanger="6-7" color="3" enchantRP="6-7" />
+			<enchant ID="157" enchantProperty="5" propertyRanger="8-9" color="3" enchantRP="8-9" />
+			<enchant ID="158" enchantProperty="6" propertyRanger="15-18" color="3" enchantRP="15-18" />
+			<enchant ID="159" enchantProperty="7" propertyRanger="11-13" color="3" enchantRP="11-13" />
+			<enchant ID="160" enchantProperty="8" propertyRanger="22-27" color="3" enchantRP="22-27" />
+			<enchant ID="161" enchantProperty="9" propertyRanger="3500-4500" color="3" enchantRP="3500-4500" />
+			<enchant ID="162" enchantProperty="14" propertyRanger="700-900" color="3" enchantRP="700-900" />
+			<enchant ID="163" enchantProperty="15" propertyRanger="700-900" color="3" enchantRP="700-900" />
+			<enchant ID="164" enchantProperty="16" propertyRanger="700-900" color="3" enchantRP="700-900" />
+			<enchant ID="165" enchantProperty="20" propertyRanger="700-900" color="3" enchantRP="700-900" />
+			<enchant ID="166" enchantProperty="1" propertyRanger="9000-10000" color="3" enchantRP="9000-10000" />
+			<enchant ID="167" enchantProperty="2" propertyRanger="900-1000" color="3" enchantRP="900-1000" />
+			<enchant ID="168" enchantProperty="3" propertyRanger="11-12" color="3" enchantRP="11-12" />
+			<enchant ID="169" enchantProperty="4" propertyRanger="7-8" color="3" enchantRP="7-8" />
+			<enchant ID="170" enchantProperty="5" propertyRanger="9-10" color="3" enchantRP="9-10" />
+			<enchant ID="171" enchantProperty="6" propertyRanger="17-20" color="3" enchantRP="17-20" />
+			<enchant ID="172" enchantProperty="7" propertyRanger="13-15" color="3" enchantRP="13-15" />
+			<enchant ID="173" enchantProperty="8" propertyRanger="26-30" color="3" enchantRP="26-30" />
+			<enchant ID="174" enchantProperty="9" propertyRanger="4500-5000" color="3" enchantRP="4500-5000" />
+			<enchant ID="175" enchantProperty="14" propertyRanger="900-1000" color="3" enchantRP="900-1000" />
+			<enchant ID="176" enchantProperty="15" propertyRanger="900-1000" color="3" enchantRP="900-1000" />
+			<enchant ID="177" enchantProperty="16" propertyRanger="900-1000" color="3" enchantRP="900-1000" />
+			<enchant ID="178" enchantProperty="20" propertyRanger="900-1000" color="3" enchantRP="900-1000" /> 
+	</Enchant>
+	<!-- 界面展示默认格子数量 -->
+	<Default>
+		<Select Num="24" />
+	</Default>
+</root>

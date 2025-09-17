@@ -1,0 +1,63 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<Root>
+    <Zones>
+        <Zone name="龙牙测试服" status="2" server_id="1" is_active="1" is_recommend="1" socket_domain="192.168.0.103" socket_port="25151"/>
+	</Zones>
+	<!--区充值配置-->
+	<ZoneBillConfig>
+		<BillInfo ip="192.168.0.103" port="8080" serverID="2103430001" serverKey="JJa0MnrBolr60Inv"/>
+	</ZoneBillConfig>
+	<SpecialAccount>
+		<Account name="0060001_1137281524" opID="2105" ip="113.86.52.106" device="867831023626708_0_0" level="25" />
+		<Account name="0060001_1137281719" opID="2105" ip="49.80.232.225" device="864232021658525_0_0" level="25" />
+		<Account name="0060001_1137281923" opID="2105" ip="27.210.137.65" device="867255024753271_0_0" level="25" />
+		<Account name="0060001_1137281940" opID="2105" ip="1.60.226.46" device="864908027082055_0_0" level="25" />
+		<Account name="0060001_1137281950" opID="2105" ip="220.168.209.102" device="864981028093264_0_0" level="25" />
+		<Account name="0060001_1137281623" opID="2105" ip="43.225.236.141" device="860440036096714_0_0" level="25" />
+		<Account name="0060001_1137281723" opID="2105" ip="223.104.5.238" device="866789020811007_0_0" level="25" />
+		<Account name="0060001_1137281933" opID="2105" ip="222.42.238.146" device="352105063741137_0_0" level="25" />
+		<Account name="0060009_136075195" opID="2115" ip="180.116.240.2" device="867516024313964_0_0" level="25" />
+		<Account name="0060009_136075206" opID="2115" ip="101.24.3.148" device="862095025857753_0_0" level="25" />
+		<Account name="0060009_136075238" opID="2115" ip="183.18.48.22" device="863472021309130_0_0" level="25" />
+		<Account name="0060009_136075259" opID="2115" ip="222.187.119.135" device="867080021286517_0_0" level="25" />
+		<Account name="0060009_136075286" opID="2115" ip="117.136.67.136" device="352284048307361_0_0" level="25" />
+		<Account name="0060009_136075294" opID="2115" ip="116.249.134.112" device="866646020336775_0_0" level="25" />
+		<Account name="0060009_136075325" opID="2115" ip="183.53.62.233" device="990004478038767_0_0" level="25" />
+		<Account name="0060009_136075342" opID="2115" ip="116.1.118.79" device="869334022008448_0_0" level="25" />
+		<Account name="0060009_136075352" opID="2115" ip="117.136.101.82" device="869805023791157_0_0" level="25" />
+		<Account name="0060009_136075359" opID="2115" ip="10.88.68.114" device="865645028589113_0_0" level="25" />
+		<Account name="0060014_3fd64db383b1c738948b3fbad393fa5a" opID="2110" ip="123.171.178.149" device="867822024615378_0_0" level="25" />
+		<Account name="0060014_17202739d104a004b432bd2524ad744a" opID="2110" ip="27.38.171.236" device="863985021635733_0_0" level="25" />
+		<Account name="0060014_7aebc138e046bd992d0f743447999abe" opID="2110" ip="116.1.120.170" device="865372024089275_0_0" level="25" />
+		<Account name="0060014_8a796041b3e8d48a4194f85ffdfa80d6" opID="2110" ip="183.11.42.195" device="A00000595D7DFB_0_0" level="25" />
+		<Account name="0060014_ae480ae79a5e7466aa43b5faa4a6bf3a" opID="2110" ip="112.14.100.208" device="99000693151092_0_0" level="25" />
+		<Account name="0060014_d2111d48c10144e593c1c24f5ae8c21a" opID="2110" ip="223.104.9.185" device="865587021936984_0_0" level="25" />
+		<Account name="0060014_070319c5ec51b1d6ff5494213b261949" opID="2110" ip="114.89.134.165" device="865164024595306_0_0" level="25" />
+		<Account name="0060014_e20627d8f4b32ad00a2957f28df5c19a" opID="2110" ip="112.97.62.93" device="868853028742669_0_0" level="25" />
+		<Account name="0060014_cabebe225b89ebc6c8cd0931720a4a80" opID="2110" ip="222.80.2.254" device="867910026037269_0_0" level="25" />
+		<Account name="0060014_5935484d83460d87696d54f0225ce434" opID="2110" ip="139.203.170.204" device="866007023379033_0_0" level="25" />
+		<Account name="0" opID="2110" ip="222.73.199.34" device="867463028440347_0_0" level="25" />
+		<Account name="0060014_b254f3fb0724c458420e76dab6fd41ba" opID="2110" ip="183.246.131.48" device="866500020314623_0_0" level="25" />
+		<Account name="0060014_4424ec0b9344573980ba0e18271d332a" opID="2110" ip="36.100.104.242" device="352284047752344_0_0" level="25" />
+		<Account name="0060014_b1b1789be10f0b66977cf15468ac6765" opID="2110" ip="117.136.30.65" device="a00000559ad2ac_0_0" level="25" />
+		<Account name="0060014_c4162ec5d944aa322dde828df6adf988" opID="2110" ip="112.14.160.141" device="865932023896184_0_0" level="25" />
+		<Account name="0060014_4f02682484dff90d5d631be32f47faa2" opID="2110" ip="117.24.122.165" device="866401021129179_0_0" level="25" />
+		<Account name="0060014_71f5a662d25b61e6bc0c52f3b4559d8c" opID="2110" ip="117.24.121.195" device="865587026016758_0_0" level="25" />
+		<Account name="0060014_fcef8f8f04b85fccaeb312a488f17eb4" opID="2110" ip="222.89.14.187" device="865982020384502_0_0" level="25" />
+		<Account name="0060014_a044fadca7191e9bb839d68cee61a422" opID="2110" ip="219.142.195.5" device="865714026167932_0_0" level="25" />
+		<Account name="0060014_77f61b1b80d5b351bdd7042c14046877" opID="2110" ip="140.243.37.32" device="865951026841187_0_0" level="25" />
+		<Account name="0060042_480E9D649C8EBC236D592275D0F15C41" opID="2235" ip="223.104.13.211" device="867831021016324_0_0" level="25" />
+		<Account name="0060042_480E9D649C8EBC236D592275D0F15C41" opID="2235" ip="119.32.102.200" device="867992027831601_0_0" level="25" />
+		<Account name="0060015_lyang0506" opID="2107" ip="223.66.32.232" device="866819020853434_0_0" level="25" />
+		<Account name="0060116_2351407" opID="2107" ip="223.104.145.4" device="867918026611652_0_0" level="25" />
+		<Account name="0060015_qq1025781559" opID="2107" ip="114.197.145.38" device="99000672596228_0_0" level="25" />
+		<Account name="0060002_3281240649" opID="2110" ip="59.34.242.200" device="865931021800982_0_0" level="25" />
+		<Account name="0060084_cpd10042498" opID="2110" ip="60.181.106.187" device="868588024892486_0_0" level="25" />
+		<Account name="0060015_g514167241644" opID="2107" ip="106.38.206.210" device="A000004E11B7A1D_0_0" level="25" />
+		<Account name="0060014_30df055ccdc4aa80699d8af90cd8c9cd" opID="2110" ip="182.246.158.27" device="351710059293919_0_0" level="25" />
+		<Account name="0060042_5E941476AA5F270732DCCB61B2AD87DE" opID="2151" ip="60.168.177.254" device="352284043037146_0_0" level="25" />
+		<Account name="0060042_oTUzFwCK4V0QGq13MgthZdoAUcN8" opID="2151" ip="60.168.177.254" device="352284043037146_0_0" level="25" />
+		<Account name="0060015_huhaoyu1114" opID="2107" ip="60.168.177.254" device="352284043037146_0_0" level="25" />
+	</SpecialAccount>
+</Root>

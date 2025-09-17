@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<!--
+		Monsterid:对应怪物表怪物ID
+		Speed:怪物每秒移动速度
+		MinDistance:自身与目标最小距离
+		MaxDistance：自身与目标最大距离
+		AIStatus：AI状态，1表示攻击状态，处于攻击状态，所有Action处于CD中不会移动，2表示追踪状态，处于追踪状态，若Action处于CD中，朝攻击目标移动
+		actionID:行动编号
+		skillType:技能类型，0表示普通攻击，1表示技能
+		skillStage:技能阶段，当skillType=0时，skillStage数值表示普攻阶段，当skillType=1时，skillStage数值表示第几个技能
+		skillCD:技能CD，时间为毫秒
+		skillProbability:技能概率权重，处于CD状态下的技能将不会参与权重计算，不会被释放
+	
+	-->
+	
+	<AI AIid="300010" Speed="300" >
+		<Distance MinDistance="0" MaxDistance="500" AIStatus="1" >
+			<Action actionID="1" skillType="0" skillStage="1" skillCD="3000" skillProbability="100" />
+			<Action actionID="2" skillType="0" skillStage="2" skillCD="3500" skillProbability="100" />
+			<Action actionID="3" skillType="1" skillStage="1" skillCD="12000" skillProbability="100" />
+		</Distance>
+		<Distance  MinDistance="500" MaxDistance="10000" AIStatus="2" >
+			<Action actionID="1" skillType="1" skillStage="2" skillCD="16000" skillProbability="100" />
+		</Distance>
+	</AI>
+</root>

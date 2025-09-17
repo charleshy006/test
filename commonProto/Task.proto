@@ -1,0 +1,429 @@
+import "ModID.proto";
+package TaskProto;
+
+enum GAME_EVENT_TYPE {
+	ET_FINISH_COPYMAP = 1;				//完成某个关卡 
+	ET_RAISE_EQUIP_TO_LV = 11;			//强化装备到某个级别
+	ET_REFINE_EQUIP_TO_LV = 12;			//精炼装备到某个级别
+	ET_HERO_BREAK_INTO_LV = 13;			//武将突破到某个级别
+	ET_HERO_LEVELUP_TO_LV = 14;			//武将进化到某个级别
+	ET_RAISE_SKILL_TO_LV = 15;			//技能突破到某个级别
+	ET_EQUIP_FUWEN_NUM = 16;			//装备5个符文的次数
+	ET_RAISE_FUWEN_TO_LV = 17;			//符文强化到某个级别
+	ET_COLLECT_FASHION_NUM = 18;		//时装数量
+
+	ET_DRAW_NUM = 31;                   //抽奖次数
+	ET_CAPTRURE_TREASURE_NUM = 32;		//夺宝次数
+	ET_ARENA_NUM = 33;					//竞技场次数
+	ET_TEAM_FINISH_COPYMAP_NUM = 34;	//组队完成副本次数
+	ET_DIANFENG_PK_NUM = 35;			//巅峰对决次数
+	ET_REALTIME_COPYMAP_NUM = 36;		//实时战场次数
+	ET_LEITAI_COPYMAP_NUM = 37;			//擂台次数
+	ET_SHENGCUN_COPYMAP_NUM = 38;		//生存关
+	ET_GOLDCOIN_COPYMAP_NUM = 39;		//金币关卡次数
+	ET_ELITE_COPYMAP_NUM = 40;			//精英关卡次数
+	
+	ET_RAISE_HERO_NUM = 42;				//强化武神次数
+	ET_RAISE_SKILL_NUM = 43;			//强化技能次数
+	ET_RAISE_EQUIP_NUM = 44;			//强化物品次数
+	ET_RAISE_FUWEN_NUM = 45;			//强化符文次数
+
+	ET_GET_WELFARE_CARD = 51;			//领取福利卡
+	ET_GET_MONTH_CARD = 52;				//领取月卡
+	ET_GET_QUARTER_CARD = 53;			//领取季度卡
+	ET_GET_YEAR_CARD = 54;				//领取年卡
+	ET_GUARD = 62;						//护送
+	ET_INTERCEPT = 63;					//拦截
+
+	ET_BUY_SHOP_ITEM_NUM = 64;		    //商城购买某个物品次数
+	ET_EXPEDITION_NUM = 65;			    //远征完成次数
+	ET_RESET_RUSH_NUM = 66;			    //重置主线关卡挑战次数1次
+	ET_GIVE_LILIAN_NUM = 67;			//赠送好友历练5次
+    ET_GUILD_PRAY_NUM = 68;			    //进行公会祈祷1次
+}
+
+enum TASK_STATUS {
+	TS_INVALID = 0;					//非法状态
+	TS_INCOMPLETE = 1;				//已接未完成
+	TS_COMPLETE = 2;				//已经完成,未领取奖励
+	TS_FAILED = 3;					//任务失败
+	TS_REWARD = 4;					//已经完成，且领取了奖励
+};
+
+//同步已经完成的任务ID s ----> c 
+message stSynFinishTaskID
+{
+	repeated uint32 finishTaskIDList = 1;		//任务ID
+
+	enum ProtoModID
+	{
+		ModID = 4;	
+	}
+	enum ProtoFunID
+	{
+		FunID = 1;	
+	}		
+}
+
+//某个任务完成了 s ---> c
+message stNotifyTaskFinish
+{
+	optional uint32 taskID = 1;		//任务ID
+
+	enum ProtoModID
+	{
+		ModID = 4;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 2;	
+	}	
+}
+
+//同步任务状态 s ---> c
+message stTaskCounter
+{
+	optional GAME_EVENT_TYPE eventType = 1;		//目标类型
+	optional uint32  id = 2;					//id
+	optional uint32  value = 3;					//值
+}
+
+//任务的数据
+message stSynTaskInfo
+{
+	optional uint32 taskID = 1;				//任务ID
+	optional uint32 ts = 2;					//0-未领取，1-未完成，2-已完成，3-失败，4-已领取奖励
+	repeated stTaskCounter counter = 3;		//任务计数
+	optional uint32 subTs = 4;				//任务的第几步(1-6)
+}
+
+//同步已经接了的任务 s ---- >c
+message stSynAllAcceptTask
+{
+	repeated stSynTaskInfo taskInfoList = 1;			//任务列表
+
+	enum ProtoModID
+	{
+		ModID = 4;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 3;	
+	}		
+}
+
+//请求接受任务 c ---> s
+message stReqAcceptTask
+{
+	optional uint32 taskID = 1;			//任务ID
+
+	enum ProtoModID
+	{
+		ModID = 4;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 4;	
+	}		
+}
+
+
+//通知增加某个任务 s ---> c
+message stNotifyAddTask
+{
+	optional stSynTaskInfo taskInfo = 1;		//任务信息
+
+	enum ProtoModID
+	{
+		ModID = 4;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 5;	
+	}		
+}
+
+//接任务出现错误 s ---> c
+message stAcceptTaskError
+{
+	enum eReason
+	{
+		eCon_Not_Enough = 1;		//条件不足
+	}
+	
+	optional eReason reason = 1;	//原因
+
+	enum ProtoModID
+	{
+		ModID = 4;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 6;	
+	}		
+}
+
+//刷新任务信息 s ---> c
+message stRefreshTaskInfo
+{
+	optional stSynTaskInfo taskInfo = 1;        //任务信息
+
+	enum ProtoModID
+	{
+		ModID = 4;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 7;	
+	}		
+}
+
+//请求提交任务也就是领取任务奖励 c ----> s
+message stReqCommitTask
+{
+	optional uint32 taskID = 1;		//任务ID
+
+	enum ProtoModID
+	{
+		ModID = 4;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 8;	
+	}		
+}
+
+//提交任务结果 s  ---> c
+message stCommitTaskResult
+{
+	enum eResult
+	{
+		eSUCCESS = 1;			//成功
+		eCON_NOT_ENOUGH = 2;	//条件不足
+	}
+
+	optional eResult result = 1;	
+	optional uint32  taskID = 2;
+
+	enum ProtoModID
+	{
+		ModID = 4;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 9;	
+	}	
+}
+
+//更新任务的子状态 c ---> s
+message stChgTaskSubStatus
+{
+	optional uint32 taskID = 1;			//任务ID
+	optional uint32 subTs = 2;			//子状态
+
+	enum ProtoModID
+	{
+		ModID = 4;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 10;	
+	}		
+}
+
+//保存当前正在进行的任务 c ---> s
+message stSaveCurrentTask
+{
+	optional uint32 curTaskID = 1;		//当前任务ID
+	optional uint32 curStage  = 2;		//当前状态
+
+	enum ProtoModID
+	{
+		ModID = 4;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 11;	
+	}		
+}
+
+//通知当前正在进行的任务 s ----> c
+message stNotifyCurrentTask
+{
+	optional uint32 curTaskID = 1;		//当前正在进行的任务
+	optional uint32 curState = 2;		//当前状态
+
+	enum ProtoModID
+	{
+		ModID = 4;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 12;	
+	}		
+}
+
+//批量接受任务 c -----> s
+message stReqBatchAcceptTask
+{
+	repeated uint32 taskIDs = 1;	//要接受的任务ID
+
+	enum ProtoModID
+	{
+		ModID = 4;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 13;	
+	}			
+}
+
+//返回批量接受的任务 s ----> c
+message stRetBatchAccpetTask
+{
+	repeated stSynTaskInfo taskInfos = 1;
+
+	enum ProtoModID
+	{
+		ModID = 4;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 14;	
+	}			
+}
+
+//刷新任务积分 s ---> c
+message stSynDailyTaskScore 
+{
+	optional uint32 num = 1;
+	enum ProtoModID
+	{
+		ModID = 4;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 15;	
+	}		
+}
+
+//同步日常任务积分信息 s ----> c
+message stDailyTaskScoreInfo
+{
+	optional uint32 dailyTaskScore = 1;		//日常任务积分
+	repeated uint32 rewardIDs = 2;			//已经领取的积分奖励
+
+	enum ProtoModID
+	{
+		ModID = 4;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 16;	
+	}		
+}
+
+//请求积分奖励 c ----> s
+message stReqDailyTaskScoreReward
+{
+	optional uint32 id = 1;
+
+	enum ProtoModID
+	{
+		ModID = 4;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 17;	
+	}		
+}
+
+//返回领取积分奖励结果 s ----> c
+message stDailyTaskScoreRewardResult
+{
+	enum eResult
+	{
+		eSuccess = 1;
+		eScore_Not_Enough = 2;			//分数不足
+		eHas_Got_Reward = 3;			//已经领取了奖励
+		eInner_Error = 4;				//内部配置错误
+		eBag_Full = 5;					//包裹满
+	}
+	
+	optional eResult result = 1;
+	optional uint32 id = 2;
+
+	enum ProtoModID
+	{
+		ModID = 4;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 18;	
+	}		
+}
+
+//取消掉任务 s  ----> c
+message stCancelTask
+{
+	optional uint32 taskID = 1;				//被取消的任务ID
+
+	enum ProtoModID
+	{
+		ModID = 4;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 19;	
+	}			
+}
+
+//打开任务界面 c ---->s 
+message stReqOpenTaskWindow
+{
+	optional uint32 charID = 1;		//角色ID
+
+	enum ProtoModID
+	{
+		ModID = 4;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 20;	
+	}			
+}
+
+//刷新所有日常任务 s ----> c
+message stRefreshAllDailyTask
+{
+	repeated stSynTaskInfo tasks = 1;	//所有任务
+
+	enum ProtoModID
+	{
+		ModID = 4;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 21;	
+	}			
+}

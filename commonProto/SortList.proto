@@ -1,0 +1,2943 @@
+import "ModID.proto";
+package SortProto;
+
+//请求名次排行榜 c ---> s
+message stReqLevelSortList
+{
+	optional uint32 fromRank = 1;			//开始名次,请求一次发送10条记录,第一名开始是1
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+	enum ProtoFunID
+	{
+		FunID = 1;	
+	}		
+}
+
+//等级排行的信息
+message stSynLevelSortItem
+{
+	optional uint32 charID = 1;			//角色ID
+	optional string name = 2;			//角色名字
+	optional string guildName = 3;		//公会名字
+	optional uint32 level = 4;			//角色等级
+	optional uint32 job = 5;			//职业
+	optional uint32 sex = 6;			//性别
+	optional uint32 photoID = 7;		//头像ID
+}
+
+//返回等级排行榜 s ---> c
+message stRetLevelSortList
+{
+	optional uint32 beginRank = 1;				//列表开始名次
+	optional uint32 myRank = 2;					//我的名次
+	repeated stSynLevelSortItem sortItem = 3;	//排行项目
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+	enum ProtoFunID
+	{
+		FunID = 2;	
+	}		
+}
+
+//请求战力排行榜信息 c ---> s
+message stReqBattlePowerSortList
+{
+	optional uint32 fromRank = 1;			//请求开始的名次
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 3;	
+	}		
+}
+
+//战力排行榜数据
+message stSynBattlePowerSortItem
+{
+	optional uint32 charID = 1;			//角色ID
+	optional string name = 2;			//名字
+	optional string guildName = 3;		//公会名字
+	optional uint32 battlePower = 4;	//战力
+	optional uint32 job = 5;			//职业
+	optional uint32 sex = 6;			//性别
+	optional uint32 level = 7;			//玩家等级
+	optional uint32 photoID = 8;		//头像ID
+}
+
+//返回战力排行
+message stRetBattlePowerSortList
+{
+	optional uint32 beginRank = 1;					//列表开始名次
+	optional uint32 myRank = 2;						//我的名次
+	repeated stSynBattlePowerSortItem sortItem = 3;	//排行项目
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 4;	
+	}		
+}
+
+//请求副本排行 c ---> s
+message stReqCopymapSortList
+{
+	optional uint32 fromRank = 1;  //请求的开始等级
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 5;	
+	}	
+}
+
+//副本排行榜
+message stCopyMapSortItem
+{
+	optional uint32 charID = 1;			//角色ID
+	optional string name = 2;			//角色名字
+	optional string guildName = 3;		//公会名字
+	optional uint32 starNum = 4;		//星数
+	optional uint32 job = 5;			//职业
+	optional uint32 sex = 6;			//性别
+	optional uint32 level = 7;			//玩家等级
+	optional uint32 photoID = 8;		//头像ID
+}
+
+//返回副本排行榜 s ---> c
+message stRetCopyMapSortList
+{
+	optional uint32 beginRank = 1;					//列表开始名次
+	optional uint32 myRank = 2;						//我的名次
+	repeated stCopyMapSortItem sortItem = 3;		//排行项目
+
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 6;	
+	}		
+}
+
+message stSynArenaSortInfo
+{
+	optional uint32 charID = 1;			//角色ID
+	optional string name = 2;			//角色名字
+	optional uint32 level = 3;		    //角色等级
+	optional uint32 job	 = 4;		  	//职业
+	optional uint32 sex = 5;			//性别
+	optional uint32  rank = 6;		  	//排名
+	optional uint32 photoID = 7;		//头像ID
+}
+
+//请求竞技场pk列表 c ---> s
+message stReqArenaPKList
+{
+	optional uint32 charID = 1;			//我的角色ID
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+	enum ProtoFunID
+	{
+		FunID = 7;	
+	}		
+}
+
+//返回竞技场pk列表 s  ---> c
+message stRetArenaPKList
+{
+	repeated stSynArenaSortInfo data = 1;
+	optional uint32 myRank = 2;
+	repeated stSynArenaSortInfo topTen = 3;		//前十
+	optional uint32 cd = 4;						//挑战的cd
+	optional uint32 challengeNum = 5;			//挑战次数
+	optional uint32 resetNum = 6;				//重置次数
+	optional uint32 totalUserNum = 7;			//榜的人数
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+	enum ProtoFunID
+	{
+		FunID = 8;	
+	}		
+}
+
+//请求竞技场排名 c ---> s
+message stReqArenaSortList
+{
+	optional uint32 beginRank = 1;		//开始的排名
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+	enum ProtoFunID
+	{
+		FunID = 9;	
+	}		
+}
+
+//返回竞技场排名  s ---> c
+message stRetArenaSortList
+{
+	repeated stSynArenaSortInfo sortInfo = 1;		//返回排名信息
+	optional uint32 myRank = 2;						//我的名次
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+	enum ProtoFunID
+	{
+		FunID = 10;	
+	}		
+}
+
+//PVP 排行玩家数据
+message stSynOne2OnePVPInfo
+{
+	optional uint32 charID = 1;			//角色ID
+	optional string name = 2;			//角色名字
+	optional uint32 job = 3;			//职业
+	optional uint32 sex = 4;			//性别
+	optional uint32 score = 5;			//分数
+	optional uint32 rank = 6;			//排名
+	optional uint32 level = 7;			//等级
+	optional uint32 photoID = 8;		//头像ID
+}
+
+enum eOne2OneSortListType
+{
+	eOne2OneMyRank = 1;					//请求我的名次
+	eOne2OneFromRank = 2;				//请求从某个名次开始
+}
+
+//请求玩家巅峰排名 c ---> s
+message stReqOne2OnePVPSortList
+{
+
+	optional uint32 beginRank = 1;				//请求开始排名
+	optional eOne2OneSortListType eType = 2;	//请求类型
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 11;	
+	}		
+}
+
+//返回玩家巅峰排名 s  ---> c
+message stRetOne2OnePVPSortList
+{
+	repeated stSynOne2OnePVPInfo sortList = 1;	//返回排名信息
+	optional uint32 myRank = 2;					//我的排名
+	repeated stSynOne2OnePVPInfo lastweekSortList = 3;//上周排名
+	optional eOne2OneSortListType eType = 4;    //请求类型
+	optional uint32 score = 5;					//我的积分
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 12;	
+	}		
+}
+
+//挑战竞技场里的某个玩家 c ---> s
+message stChallengeArenaUser
+{
+	optional uint32 charID = 1;		//挑战竞技场里的玩家
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 13;	
+	}		
+}
+
+//竞技场挑战结果 s  ----> c
+message stChallengeArenaUserResult
+{
+	enum eResult
+	{	
+		eSuccess = 1;				//成功
+		eLilian_Not_Enough = 2;		//等级不足
+		eInner_Error = 3;			//内部配置错误
+		eLevel_Limit = 4;			//等级限制
+		eBagFull = 5;				//包裹不足
+		eCoolDown = 6;				//cd中
+		eTimeUseOut = 7;			//次数用完
+		eEquip = 8;					//装备限制
+	}
+
+	optional eResult result = 1;
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 14;	
+	}		
+}
+
+//挑战擂台赛里的玩家 c ----> s
+message stChallegeLeitaiUser
+{
+	optional uint32  charID = 1;		//自己的角色ID
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 15;	
+	}		
+}
+
+//挑战擂台里的玩家结果 s ----> c
+message stChallegeLeitaiUserResult
+{
+	enum eResult
+	{
+		eSuccess = 1;			//成功
+		eLilian_Not_Enough = 2;	//历练不足
+		eInner_Error = 3;		//内部配置错误
+		eLevel_Limit = 4;		//等级限制
+		eBagFull = 5;			//包裹不足
+	}
+
+	optional eResult result = 1;
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 16;	
+	}		
+}
+
+//打开擂台面板 c ----> s
+message stOpenLeitaiWindow
+{
+	optional uint32 charID = 1;			//自己的角色ID 	
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 17;	
+	}		
+}
+
+message stSynHeroHP
+{
+	optional uint32 heroID = 1;				//武将ID
+	optional uint32 curHP = 2;				//当前血量
+	optional uint32 maxHP = 3;				//最大血量
+}
+
+enum eLeitaiMode
+{
+	eLeitaiMode_Normal = 1;	//普通模式
+	eLeitaiMode_Difficult = 2;//困难模式
+}
+
+//返回擂台相关数据 s ---> c
+message stRetLeitaiInfo
+{
+	optional uint32 challengeNum = 1;		//已经挑战的次数
+	optional uint32 myHP = 2;				//自己的血量
+	repeated stSynHeroHP heroHPs = 3;		//武将的血量	
+	optional eLeitaiMode mode = 4;			//模式 
+	optional uint32   pos1ID = 5;			//位置1的武将
+	optional uint32   pos2ID = 6;			//位置2的武将
+	optional uint32	  pos3ID = 7;			//位置3的武将
+	optional uint32   pos4ID = 8;			//位置4的武将
+	optional uint32   refreshBuffRemainTime = 9;//刷新buff剩余时间
+	optional uint32   buffID = 10;			//刷出来的buffID
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 18;	
+	}		
+}
+
+//请求擂台排行榜 c ---> s
+message stReqLeitaiSortList
+{
+	optional uint32 beginRank = 1;				//开始的名次,从1开始
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 19;	
+	}		
+}
+
+message stLeitaiSortListItem
+{
+	optional uint32 charID = 1;			//角色ID
+	optional string name = 2;			//角色名字
+	optional uint32 useTime = 3;		//使用时间
+	optional uint32 level = 4;			//角色等级
+	optional uint32 job = 5;			//职业
+	optional uint32 sex = 6;			//性别
+	optional uint32 photoID = 7;		//头像ID
+}
+
+//返回擂台排行榜 s ----> c
+message stRetLeitaiSortList
+{
+	repeated stLeitaiSortListItem sortListItem = 1;		//排行榜信息
+	optional uint32 beginRank = 2;						//开始名次
+	optional uint32 myRank = 3;							//我的名次
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 20;	
+	}	
+}
+
+//发送擂台结果 c ---> s
+message stSendLeitaiResult
+{
+	repeated stSynHeroHP heroHP = 1;		//武将HP
+	optional uint32      curUserHP = 2;		//玩家HP
+	optional uint32      useTime = 3;		//使用时间
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 21;	
+	}		
+}
+
+//发送擂台结果返回 s ---> c
+message stRetSendLeitaiResult
+{
+	enum eResult
+	{
+		SUCCESS = 1;			//成功
+		COND_NOT_MEET = 2;		//条件不满足
+		INNER_ERROR = 3;		//内部错误
+		ROLE_LV_TOO_LOW = 4;	//角色等级不足
+		LILIAN_NOT_ENOUGH = 5;	//历练不足
+	}
+
+	optional eResult result = 1;
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 22;	
+	}		
+}
+
+//要求玩家选择模式 s ---> c
+message stNotifySelectLeitaiMode
+{
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 23;	
+	}		
+}
+
+
+//选择擂台模式 c ---> s
+message stSelectLeiTaiMode
+{
+	optional eLeitaiMode mode  = 1;		//模式
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 24;	
+	}		
+}
+
+//选择模式返回结果  s ---> c
+message stSelectLeiTaiModeResult
+{
+	enum eResult
+	{
+		eSuccess = 1;
+		eFail = 2;
+	}
+
+	optional eResult result = 1;
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 25;	
+	}		
+}
+
+//重置擂台 c ---> s
+message stResetLeitaiInfo
+{
+	optional uint32 charID = 1;		//自己的ID
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 26;	
+	}		
+}
+
+//重置擂台数据返回 s ---> c
+message stResetLeitaiInfoResult
+{
+	enum eResult
+	{
+		eSuccess = 1;				//成功
+		eNot_Enough_Diamond = 2;	//钻石不足
+		eNot_Time_Use_Out = 3;		//次数用完
+	}
+
+	optional eResult result = 1;
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 27;	
+	}		
+}
+
+//请求限时武神抽奖排行 c ---> s
+message stReqDrawHeroSortList
+{
+	optional uint32 fromRank = 1;		//从哪个名次开始返回
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 28;	
+	}	
+}
+
+message stDrawHeroSortItem
+{
+	optional uint32 charID = 1;			//角色ID
+	optional string name = 2;			//角色名字
+	optional uint32 level = 3;			//角色等级
+	optional uint32 score = 4;			//分数
+	optional uint32 job = 5;			//职业
+	optional uint32 sex = 6;			//性别
+}
+
+//返回限时武神的抽奖排行帮 s ---> c
+message stDrawHeroSortList
+{
+	optional uint32 beginRank = 1;					//开始的等级
+	repeated stDrawHeroSortItem sortItem = 2;		//排名数据
+	optional uint32 myRank = 3;						//我的名次
+	optional uint32 score = 4;						//我的积分
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 29;	
+	}	
+}
+
+//巅峰对决匹配 c ----> s
+message stReqOne2OnePVPMatch
+{
+	optional uint32 charID = 1;			//自己的角色ID
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 30;	
+	}		
+}
+
+//请求匹配结果 s -----> c
+message stOne2OnePVPMatchResult
+{
+	enum eResult
+	{
+		eSucess = 1;			//成功
+		eWait = 2;				//等待
+		eFail = 3;				//失败
+		eNot_In_Time = 4;		//不在时间返回内
+		eEquip = 5;		//装备限制
+	}
+
+	optional eResult result = 1;
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 31;	
+	}		
+}
+
+//取消等待 c ---> s
+message stCancelOne2OnePVPMatch
+{
+	optional uint32  charID = 1;		//角色ID
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 32;	
+	}		
+}
+
+//取消等待结果 s ---> c
+message stCancelOne2OnePVPResult
+{
+	enum eResult
+	{
+		eSuccess = 1;		//成功
+		eFail = 2;			//失败
+	}
+
+	optional eResult result = 1;
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 33;	
+	}		
+}
+
+//请求我的排名信息 c ---> s
+message stReqMySortListInfo
+{
+	optional uint32 charID = 1;		//我的角色ID
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 34;	
+	}	
+}
+
+//返回我的排名信息 s ---> c
+message stRetMySortListInfo
+{
+	optional uint32 one2onePVPRank = 1;	//巅峰对决的排名
+	optional uint32 arenaPKRank = 2;	//天梯排名
+	optional uint32 copymapRank = 3;	//副本排名
+	optional uint32 battlePowerRank = 4;//战力排名
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 35;	
+	}		
+}
+
+//移动武将位置 c  <--- >s
+message stLeitaiMoveHero2BattlePos
+{
+	optional uint32  heroID = 1;			//武将ID
+	optional uint32  pos = 2;				//位置
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 36;	
+	}		
+}
+
+//移动武将位置错误 s ----> c
+message stLeitaiMoveHero2BattlePosError
+{
+	enum eResult
+	{
+		eSend_Msg_Param_Error = 1;	//发送的协议参数设置错误
+		ePos_The_Same = 2;			//要移动的位置跟原来相同
+	}
+
+	optional eResult result = 1;
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 37;	
+	}		
+}
+
+//擂台取消出战 c ---> s 
+message stLeitaiCancelGoOutForBattle
+{
+	optional uint32 pos = 1;			//所在位置
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 38;	
+	}			
+}
+
+//擂台取消出战结果  s ---> c
+message stLeitaiCancelGoOutForBattleResult
+{
+	enum eResult
+	{
+		sSUCCESS = 1;					//成功
+		eHAS_NO_HERO_IN_THE_POS = 2;	//位置没有出战宠物
+	}
+
+	optional eResult result = 1;
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 39;	
+	}		
+}
+
+//提交竞技场结果 c ----> s
+message stCommitArenaResult
+{
+	optional bool win = 1;		//是否胜利
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 40;	
+	}			
+}
+
+//提交竞技场返回 s ----> c
+message stRetCommintArenaResult
+{
+	enum eResult
+	{
+		SUCCESS = 1;			//成功
+		COND_NOT_MEET = 2;		//条件不满足
+		INNER_ERROR = 3;		//内部错误
+		ROLE_LV_TOO_LOW = 4;	//角色等级不足
+		LILIAN_NOT_ENOUGH = 5;	//历练不足
+	}
+
+	optional eResult result = 1;
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 40;	
+	}			
+}
+
+//请求进入擂台挑战 c ----> s
+message stReqEnterLeitaiScene
+{
+	optional uint32 otherID = 1;		//对方的角色ID
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 41;	
+	}		
+}
+
+//重置buff c -----> s
+message stReqResetLeitaiBuff
+{
+	optional uint32 charID = 1;			//角色ID
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 42;	
+	}			
+}
+
+//重置擂台buff返回 s ---->c
+message stResetLeitaiBuffResult
+{
+	enum eResult
+	{
+		eSuccess = 1;				//成功
+		eDiamond_Not_Enough = 2;	//钻石不足
+		eInner_Error = 3;			//内部错误,配置文件不正确
+	}
+
+	optional uint32 buffID = 1;		//buffID
+	optional eResult result = 2;	//结果
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 43;	
+	}			
+}
+
+//请求buff刷新剩余时间 c -----> s
+message stReqBuffResetTime
+{
+	optional uint32 charID = 1;			//角色ID
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 44;	
+	}			
+}
+
+//返回buff刷新剩余时间 s ----> c
+message stRetBuffResetTime 
+{
+	optional uint32 remainTime = 1;		//剩余时间
+	optional uint32 buffID  = 2;		//buffID
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 45;	
+	}				
+}
+
+//竞技场达到新的历史排名 s -----> c
+message stArenaReachNewRank
+{
+	optional uint32 newRank = 1;		//新的排名
+	optional uint32 oldRank = 2;		//老的排名
+	optional uint32 rewardNum = 3;		//奖励数量
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 46;	
+	}			
+}
+
+//重置竞技场挑战次数  c ----> s
+message stReqResetArenaChallengeNum
+{
+	optional uint32 charID = 1;			//请求重置挑战次数
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 47;	
+	}			
+}
+
+//重置竞技场次数返回 s ----> c
+message stResetArenaChallengeNunResult
+{
+	enum eResult
+	{
+		eSuccess = 1;
+		eResetNum_Use_Out = 2;		//重置次数用完
+		eDiamond_Not_Enough = 3;	//没钱
+		eInner_Error = 4;			//内部错误
+	}
+
+	optional eResult result = 1;
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 48;	
+	}			
+}
+
+//清除掉竞技场的cd  c ----> s
+message stReqClearArenaCD
+{
+	optional uint32 charID = 1;
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 49;	
+	}		
+}
+
+//返回清除竞技场cd结果 s -----> c
+message stClearArenaCDResult
+{
+	enum eResult
+	{
+		eSuccess = 1;
+		eInner_Error = 2;					//内部错误
+		eDiamond_Not_Enough = 3;			//钻石不足
+	}
+
+	optional eResult result = 1;
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 50;	
+	}		
+}
+
+//请求开服战力排行 c -----> s
+message stReqOpenSvrBPRank
+{
+	optional uint32 charID = 1;				//角色ID
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 51;	
+	}
+}
+
+message stBPRankItemInfo
+{
+	optional uint32 charID = 1;				//角色ID
+	optional string name = 2;				//姓名	
+	optional uint32 job = 3;				//职业
+	optional uint32 sex = 4;				//性别
+	optional uint32 level = 5;				//等级
+	optional uint32 bpVal = 6;				//战力
+}
+
+//返回开服战力排行榜 s ------> c
+message stRetOpenSvrBPRank
+{
+	repeated stBPRankItemInfo items = 1;
+	optional uint32 openSvrTime = 2;			//开服时间
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 52;	
+	}
+}
+
+//请求远征数据  c ------> s
+message stReqExpeditionInfo
+{
+	optional uint32  charID = 1;		//自己的角色ID
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 53;	
+	}		
+}
+
+message stExpeditionItem {
+	optional uint32 expeditionId = 1;       //远征副本ID
+	optional uint32 finishTime = 2;         //远征完成时间
+	repeated uint32 heroIds = 3;            //远征已使用随从列表
+}
+
+//返回远征数据 s ----> c
+message stRetExpeditionInfo
+{
+	enum eResult
+	{
+		eSuccess = 1;            //成功
+		eLvl_Limit = 2;          //等级不够
+	}
+
+	optional eResult result = 1;                //征返回结果
+	optional uint32 usedNum = 2;                //远征使用次数
+	repeated stExpeditionItem items = 3;	    //远征副本信息列表
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 54;	
+	}		
+}
+
+//请求远征  c ------> s
+message stReqExpedition
+{
+	optional uint32  expeditionId = 1;		 //远征副本ID
+	repeated uint32  heroIds = 2;            //远征已使用随从列表
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 55;	
+	}		
+}
+
+//请求远征回复  s ------> c
+message stRetExpedition
+{
+	enum eResult
+	{
+		eSuccess = 1;               //成功
+		eHero_In_Used = 2;          //随从在其他远征副本中使用
+		eHero_Num_Limit = 3;        //随从数量不足
+		eLvl_Limit = 4;             //玩家等级不够
+		eTime_Used_Out = 5;         //远征次数不足
+		eInvalid_Id = 6;            //无效副本id
+		eSame_Type = 7;             //相同类型副本
+	}
+
+	optional uint32 expeditionId = 1;   //远征副本id
+	optional eResult result = 2;        //远征返回结果
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 56;	
+	}		
+}
+
+//请求远征奖励 c ------> s
+message stReqExpeditionReward
+{
+	optional uint32  expeditionId = 1;		 //远征副本ID
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 57;	
+	}		
+}
+
+//请求远征奖励 s ------> c
+message stRetExpeditionReward
+{
+	enum eResult
+	{
+		eSuccess = 1;               //成功
+		eTime_Not_Up = 2;           //远征时间未结束
+		eInvalid_Id = 3;            //无效副本id
+	}
+
+	optional uint32 expeditionId = 1;               //远征副本id
+	optional eResult result = 2;                    //远征返回结果
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 58;	
+	}		
+}
+
+//快速完成远征 c ------> s
+message stReqFastExpedition
+{
+	optional uint32  expeditionId = 1;		 //远征副本ID
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 59;	
+	}		
+}
+
+//快速完成远征 s ------> c
+message stRetFastExpedition
+{
+	enum eResult
+	{
+		eSuccess = 1;           //成功
+		eTime_Out = 2;          //超时
+		eInvalid_Id = 3;        //无效副本id
+		eLess_Of_Diamond = 4;   //钻石不够
+	}
+
+	optional uint32  expeditionId = 1;		        //远征副本ID
+	optional eResult result = 2;		            //快速远征结果
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 60;	
+	}		
+}
+
+//解除远征 c ------> s
+message stReqCancelExpedition
+{
+	optional uint32  expeditionId = 1;		 //远征副本ID
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 61;	
+	}		
+}
+
+//解除远征 s ------> c
+message stRetCancelExpedition
+{
+	enum eResult
+	{
+		eSuccess = 1;           //成功
+		eTime_Out = 2;          //超时
+		eInvalid_Id = 3;        //无效副本id
+	}
+
+	optional uint32  expeditionId = 1;		    //远征副本ID
+	optional eResult result = 2;		        //解除远征结果
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 62;	
+	}		
+}
+
+//请求远征副本摘要 c ------> s
+message stReqExpeditionSummary
+{
+	optional uint32  charID = 1;		//自己的角色ID
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 63;	
+	}		
+}
+
+//请求远征副本摘要 s ------> c
+message stRetExpeditionSummary
+{
+	enum eResult
+	{
+		eSuccess = 1;          //成功
+		eLvl_Limit = 2;        //等级不够
+	}
+
+	optional eResult result = 1;                //征返回结果
+	optional uint32 usedTimes = 2;             //远征已使用次数
+	repeated stExpeditionItem items = 3;	    //远征副本信息列表
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 64;	
+	}		
+}
+
+//请求荣耀时装购买排行 c ----> s
+message stReqGloryfashionSortList
+{
+	optional uint32 fromRank = 1;       //从哪个名次开始返回
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 65;
+	}
+}
+
+//返回荣耀时装购买排行榜 s ----> c
+message stGloryfashionSortList
+{
+	optional uint32 beginRank = 1;		//开始的等级
+	repeated string name = 2;	//排名数据
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 66;
+	}
+}
+
+//请求进入翡翠梦境  c ----> s
+message stReqEnterEmeraldDream
+{
+	optional uint32 levelID = 1;        //关卡ID
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 67;
+	}
+}
+
+//请求进入翡翠梦境返回  s ----> c
+message stEnterEmeraldDreamResult
+{
+	enum eResult
+	{
+		eSuccess = 1;				//成功
+		eLvl_Limit = 2;				//等级不够
+		Fight_Num_Not_Enough = 3;	//战斗次数用完了
+		SVR_CFG_ERROR = 4;			//内部错误，可能找不到关卡
+		BAG_FULL = 5;               //背包满了
+		NOT_OPEN_TIME = 6;			//不在开放时间
+	}
+
+	optional eResult result = 1;
+
+	enum ProtoModID
+	{
+		ModID = 6;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 68;	
+	}
+}
+
+//重置翡翠梦境挑战次数 c ----> s
+message stResetFightNum
+{
+	optional uint32 charID = 1;     //角色ID
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 69;
+	}
+}
+
+//重置翡翠梦境挑战次数返回 s ----> c
+message stResetFightNumResult
+{
+	enum  eResult
+	{
+		SUCCESS = 1;                //成功
+		eGoldCoin_Not_Enough = 2;   //宝石不足
+		eNot_Time_Use_Out = 3;		//次数还没用完
+	}
+
+	optional eResult result = 1;
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 70;
+	}
+}
+
+//请求翡翠梦境伤害排行  c ----> s
+message stReqEmeraldDreamSortList
+{
+	optional uint32 fromRank = 1;       //从哪个名次开始返
+
+	enum ProtoModID 
+	{               
+		ModID = 6;  
+	}
+
+	enum ProtoFunID 
+	{               
+		FunID = 71; 
+	}               
+}
+
+//排名信息
+message SortListInfo
+{
+	optional uint32 charID = 1;			//角色ID
+	optional string name = 2;           //角色名字
+	optional uint32 sex = 3;            //性别
+	optional uint32 job = 4;            //职业
+	optional uint32 level = 5;          //等级
+	optional uint32 damage = 6;			//伤害
+	optional uint32 rank = 7;			//名次
+	optional uint32 highest_damage = 8;	//今日最高伤害
+	optional uint32 photoID = 9;		//头像ID
+}
+
+//请求翡翠梦境伤害排行返回  s ----> c
+message stEmeraldDreamSortList
+{
+	optional uint32 beginRank = 1;		//开始的等级
+	repeated SortListInfo info = 2;		//排名信息
+
+	enum ProtoModID 
+	{               
+		ModID = 6;  
+	}
+
+	enum ProtoFunID 
+	{
+		FunID = 72; 
+	}               
+}
+
+//发送翡翠梦境排名信息（自己和排名高于我的玩家）(关卡完成结算主动发送)s ----> c
+message stSendRankInfo
+{
+	repeated SortListInfo myInfo = 1;		//我的排名信息
+	repeated SortListInfo rivalInfo = 2;	//排名高于我的玩家排名信息
+	optional bool promoted = 3;      		//是否提升
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 73;
+	}
+}
+
+//请求翡翠梦境剩余挑战次数 c ----> s
+message stReqSurplusNum
+{
+	optional uint32 charID = 1;     //角色ID
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 74;
+	}
+}
+
+message userSortInfo
+{
+	optional string name = 1;           //角色名字;	
+}
+
+//请求翡翠梦境剩余挑战次数返回 s ----> c
+message stSurplusNumResult
+{
+	optional uint32 num = 1;     //剩余次数
+	optional uint32 damage = 2;  //今日伤害
+	optional uint32 rank = 3;	 //排名
+	optional uint32 resetNum = 4; //当日重置次数
+	repeated userSortInfo info = 5;//前三排名
+	optional uint32 endtime = 6; //结束时间
+	optional uint32 levelID = 7;	//当前levelid
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 75;
+	}
+}
+
+//冠军信息
+message stSynChampionInfo
+{
+	optional uint32 charID = 1;             //角色ID
+	optional string name = 2;               //名字
+	optional uint32 areaCode = 3;			//所在服务器ID
+	optional uint32 level = 4;              //等级
+	optional uint32 job  = 5;               //职业
+	optional uint32 sex = 6;                //性别
+	optional bool   leader = 7;             //队长
+	optional uint32 battlePower = 8;        //战力
+	optional uint32 pos = 9;                //位置
+	optional uint32 headID = 10;             //头部ID
+	optional uint32 bodyID = 11;            //衣服ID
+	optional uint32 weaponID = 12;          //武器ID
+	optional uint32 cloackID = 13;          //披风ID
+	optional uint32 wingID = 14;            //翅膀ID
+	optional uint32 shoeID = 15;            //鞋子
+	optional uint32 fashionHair = 16;       //发型
+	optional uint32 fashionFace = 17;       //表情
+	optional uint32 fashionBody = 18;       //衣服
+	optional uint32 fashionWeapon = 19;		//武器
+	optional uint32 fashionShoe = 20;		//鞋子
+	optional uint32 fashionDecoration =21;	//脸饰品
+	optional uint32 effectID = 22;			//特效ID
+	optional uint32 wingBreakLv= 23;        //翅膀突破等级
+	optional uint32 photoID	= 24;			//头像ID
+}
+
+//自己积分与次数信息
+message stMyIntegralAndNum
+{
+	optional uint32 score			= 1;		//积分
+	//optional uint32 preRegisterNum	= 2;		//初赛报名次数
+}
+
+//请求打开英雄联赛从窗口  c ----> s
+message stReqOpenLeagueWindow
+{
+	optional uint32 charID = 1;     //角色ID	
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 76;
+	}
+}
+
+//请求打开英雄联赛从窗口返回 s ----> c
+message stOpenLeagueWindowResult
+{
+	enum eStatus
+	{
+		eQualified = 1;		//有资格
+		eNoQualified  = 2;	//没资格
+	}
+
+	enum eSession
+	{
+		eSixteen = 1;   //十六强
+		eEight = 2;     //八强
+		eFour = 3;      //四强
+		eTwo = 4;       //二强
+	}
+
+	repeated stSynChampionInfo champion = 1;    //上届冠军模型
+
+	repeated stMyIntegralAndNum myInfo = 2;		//自己积分与次数信息
+
+	optional uint32 session = 3;	//第几届
+
+	optional eStatus status = 4;
+	
+	optional eSession esession = 5;
+	
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 77;
+	}
+}
+
+//英雄联赛匹配 c ----> s
+message stReqHeroLeagueMatch
+{
+	optional uint32 charID = 1;         //自己的角色ID
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 78;
+	}
+}
+
+//请求英雄联赛匹配结果 s -----> c
+message stHeroLeagueMatchResult
+{
+	enum eResult
+	{
+		eSucess = 1;            //成功
+		eWait = 2;              //等待
+		eFail = 3;              //失败
+		eNot_In_Time = 4;       //不在时间返回内
+		eLv_Limit = 5;			//等级限制
+		eRegister_Num_Lack = 6; //报名次数不足
+		eNo_Qualification = 7;	//没资格
+	}
+
+	optional eResult result = 1;
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 79;
+	}
+}
+
+ //请求匹配到的成员信息 c ----> s  (决赛)
+message stReqMenberInfo
+{
+	optional uint32  charID = 1;        //角色ID
+
+	enum ProtoModID
+	{   
+	    ModID = 6;
+	}
+
+	enum ProtoFunID
+	{   
+	    FunID = 80;
+	}
+}
+
+//匹配到的成员信息返回 s ----> c
+message stMemberinfo
+{
+	repeated stSynChampionInfo member = 1;    //匹配到的成员模型
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 81;
+	}
+}
+
+//取消等待 c ---> s
+message stCancelHeroLeagueMatch
+{
+	optional uint32  charID = 1;        //角色ID
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 82;
+	}
+}
+
+//取消等待结果 s ---> c
+message stCanceHeroLeagueResult
+{
+	enum eResult
+	{
+		eSuccess = 1;       //成功
+		eFail = 2;          //失败
+	}
+
+	optional eResult result = 1;
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 83;
+	}
+}
+
+//请求资格名单 c ----> s
+message stReqQualifiedList
+{
+	enum eSession
+	{
+		eSixteen = 1;  	//十六强
+		eEight = 2;		//八强
+		eFour = 3;		//四强
+		eTwo = 4;		//二强
+	}
+
+	optional eSession type = 1;        //角色ID
+
+	enum ProtoModID
+	{
+	    ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+	    FunID = 84;
+	}
+}
+
+message stRoleBasicInfo
+{
+	enum eCompleteState
+	{
+		eSTATE_WIN          = 1;//胜利
+		eSTATE_LOSS         = 2;//失败
+		esTATE_NOT_ATTEND   = 3;//未参加
+	}
+
+	optional uint32 areaCode = 1;           //区服ID
+	optional string name = 2;               //名字
+	optional uint32 leve = 3;               //等级
+	optional uint32 vipLv = 4;              //vip等级
+	optional uint32 job = 5;                //职业
+	optional uint32 sex = 6;                //性别
+	optional uint32 battlePower = 7;        //战力
+	optional eCompleteState winOrLoss = 8;	//完成状态
+	optional uint32 photoID = 9;			//头像ID
+}
+
+message stTeam
+{
+	optional stRoleBasicInfo user1 = 1;
+	optional stRoleBasicInfo user2 = 2;
+}
+//资格名单 s ----> c
+message stQualifiedListResult
+{
+	repeated stTeam users = 1;		//资格列表
+	optional bool isQualified = 2;	//自己是否有资格
+
+	enum ProtoModID
+	{
+	    ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 85;
+	}
+}
+
+//朝拜  c ----> s
+message stReqWorship
+{
+	optional uint32 charID = 1;
+
+	enum ProtoModID
+	{
+	    ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+	    FunID = 86;
+	}
+}
+
+//朝拜返回  s ----> c
+message stWorskipResult
+{
+	enum eResult
+ 	{
+      eSuccess = 1;		//成功
+      eInner_Error = 2;	//内部配置错误
+      eTimeUseOut = 3;	//次数用完
+	  eNoBody = 4;		//没人可朝拜
+	}
+
+	optional eResult result = 1;
+
+	optional uint32 charID = 2;
+
+	enum ProtoModID
+	{
+	    ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+	    FunID = 87;
+	}
+}
+
+//英雄榜  c ----> s
+message stReqHeroList
+{
+	enum stType
+	{
+		eUpperBounds1 = 1;//上届
+		eUpperBounds2 = 2;//上上届
+		eUpperBounds3 = 3;//上上上届
+	}
+
+	optional stType type = 1;
+
+	optional uint32 charID = 2;
+
+	enum ProtoModID
+	{
+	    ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+	    FunID = 88;
+	}
+}
+
+message stRankInfo
+{
+	optional uint32 session = 1; 		//第几届
+	optional uint32 rank = 2; 			//排名
+	optional uint32 charID = 3;			//id
+	optional uint32 pubCharID = 4;		//pub上id
+	optional uint32 areaCode = 5;		//几区
+	optional string name = 6;			//名字
+	optional uint32 level = 7;			//等级
+	optional uint32 vipLv = 8;			//VIP等级
+	optional uint32 job	= 9;			//职业
+	optional uint32 sex = 10;			//性别
+	optional uint32 battlePower = 11;	//战力
+	optional uint32 photoID = 12;		//头像ID
+}
+
+//英雄榜返回 s ----> c
+message stHeroListResult
+{
+	repeated stRankInfo user = 1;
+	
+	enum ProtoModID
+	{
+	    ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+	   FunID = 89;
+	}
+}
+
+//初赛、复赛报名次数 c ----> s
+message stReqRegister
+{
+	optional uint32 charID = 1;	
+
+	enum ProtoModID
+	{
+	    ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+	    FunID = 90;
+	}
+}
+
+//初赛、复赛报名次数返回 s ----> c
+message stRegisrerResult
+{
+	optional uint32 number = 1;
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+	    FunID = 91;
+	}
+}
+
+//竞技场结果通知 s ----> c
+message stArenaResultNotify
+{
+	enum eResult
+	{
+        WIN = 1;        //胜利
+        LOSE = 2;       //失败
+		TIMEOUT = 3;    //超时
+	}
+		 
+	optional eResult result = 1;
+			  
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+				   
+	enum ProtoFunID
+	{
+		FunID = 92;
+	}
+}
+
+//英雄联赛pub登录   c ----> s
+message stReqPubLogIn
+{
+	optional uint32 charID = 1;
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 93;
+	}
+}
+
+//英雄联赛pub登出   c ----> s
+message stReqPubLogOut
+{
+	optional uint32 charID = 1;
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 94;
+	}
+}
+
+//英雄联赛对方退出pub 移除模型  s ----> c
+message stRemoveModel
+{
+	optional uint32 charID = 1;
+
+	enum ProtoModID
+	{
+	    ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+	    FunID = 95;
+	}
+}
+
+//擂台结果通知 s ----> c
+message stLeitaiResultNotify
+{
+	enum eResult
+	{
+        WIN = 1;        //胜利
+        LOSE = 2;       //失败
+		TIMEOUT = 3;    //超时
+	}
+		 
+	optional eResult result = 1;
+			  
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+				   
+	enum ProtoFunID
+	{
+		FunID = 96;
+	}
+}
+
+//英雄联赛请求红点提示 c ----> s
+message stReqRedPoint
+{
+	optional uint32 charID = 1;
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}   
+
+	enum ProtoFunID
+	{
+		FunID = 97;
+	}   
+}
+
+//英雄联赛红点提示返回  s ----> c
+message stRedPointResult
+{
+	optional bool isQualified = 1; 	//(true:有资格)
+	optional bool canWorship = 2;	//(true:可朝拜)
+	
+	enum ProtoModID
+	{
+	    ModID = 6;
+	}   
+	 
+	enum ProtoFunID
+	{
+	    FunID = 98;
+	}
+}
+
+//请求巨龙巢穴基本信息 c ----> s
+message stReqDragonNest
+{
+    optional uint32 charID = 1;
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}   
+
+	enum ProtoFunID
+	{
+	    FunID = 99;
+	}
+}
+
+//巨龙巢穴基本信息 s ----> c
+message stRetDragonNest
+{
+    optional uint32 usedTimes = 1;      //已使用次数
+    optional uint32 maxTimes = 2;       //最大次数
+    optional uint32 resetTimes = 3;     //重置次数
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}   
+
+	enum ProtoFunID
+	{
+	    FunID = 100;
+	}
+}
+
+//挑战巨龙巢穴 c ----> s
+message stReqChallengeDragonNest
+{
+    enum eDragonType {
+        eDragon_Fire = 1;   //火龙
+        eDragon_Water = 2;  //水龙
+        eDragon_Soil = 3;   //土龙
+    }
+
+    enum eDifficultyType {
+        eDifficulty_Common = 1;     //普通
+        eDifficulty_Hard = 2;       //困难
+        eDifficulty_Horrible = 3;   //噩梦
+        eDifficulty_EndDay = 4;     //末日
+        eDifficulty_Hell = 5;       //地狱
+    }
+    optional uint32 levelId = 1;         //副本id
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}   
+
+	enum ProtoFunID
+	{
+	    FunID = 101;
+	}
+}
+
+//挑战巨龙巢穴 s ----> c
+message stRetChallengeDragonNest
+{
+    enum eResult
+    {
+        eSuccess = 1;               //成功
+        eLvl_Id_Not_Exist = 2;      //找不到level id
+        eTime_not_Open = 3;         //开放日期未到
+        eLess_Of_Challenge_Time = 4;//挑战次数不够
+        eLess_Of_Sp = 5;            //体力不足
+        eLess_Of_Lilian = 6;        //历练不足
+        eLvl_Limit = 7;             //等级不足
+        eBag_Full = 8;              //背包空格不够
+        ePre_Lvl_Id_Not_Pass = 9;   //前置关卡未通过
+        ePre_Lvl_Id_Not_Exists = 10;//前置关卡未找到
+    }
+    optional uint32 levelId = 1;       //副本id
+    optional eResult result = 2;       //返回结果
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}   
+
+	enum ProtoFunID
+	{
+	    FunID = 102;
+	}
+}
+
+//重置巨龙巢穴挑战次数 c ----> s
+message stReqResetChallengeDragonNest
+{
+    optional uint32 CharID = 1;
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}   
+
+	enum ProtoFunID
+	{
+	    FunID = 103;
+	}
+}
+
+//重置巨龙巢穴挑战次数 s ----> c
+message stRetResetChallengeDragonNest
+{
+    enum eResult
+    {
+        eSuccess = 1;               //成功
+        eLess_of_Diamond = 2;       //钻石不足
+        eTimes_Remain = 3;          //次数还有剩余
+    }
+
+    optional eResult result = 1;       //返回结果
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}   
+
+	enum ProtoFunID
+	{
+	    FunID = 104;
+	}
+}
+
+//请求进入资源战场 c ----> s
+message stReqEnterResBattle
+{
+    optional uint32 charId = 1;        //pubchar id
+    optional uint32 copyMapLevel = 2;  //副本难度，1：简单难度 2：困难难度
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}   
+
+	enum ProtoFunID
+	{
+	    FunID = 105;
+	}
+}
+
+//请求进入资源战场返回 s ----> c
+message stRetEnterResBattle
+{
+    enum eResult
+    {
+        eSuccess = 1;               //成功
+        eTime_Not_Open = 2;         //暂未开放
+        eNo_Such_Level = 3;         //没有该难度
+        eInner_Error = 4;           //内部错误
+    }
+
+    optional uint32 copyMapLevel = 1;  //副本难度，1：简单难度 2：困难难度
+    optional eResult result = 2;       //返回结果
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}   
+
+	enum ProtoFunID
+	{
+	    FunID = 106;
+	}
+}
+
+//请求查看本场荣耀排行 c ----> s
+message stReqCurResBattleGloryRank
+{
+    optional uint32 charId = 1;        //pubchar id
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}   
+
+	enum ProtoFunID
+	{
+	    FunID = 107;
+	}
+}
+
+//本场荣耀值排行成员信息
+message stResBattleGloryRankMemInfo
+{
+    optional uint32 rank = 1;       //排名
+    optional string name = 2;       //名字
+    optional uint32 charId = 3;     //角色id
+    optional uint32 areaCode = 4;   //所在服务器ID;
+    optional uint32 killNum = 5;    //击杀数
+    optional uint32 gloryVal = 6;   //荣耀值
+}
+
+//请求查看本场荣耀排行返回s ----> c
+message stRetCurResBattleGloryRank
+{
+
+    optional uint32 charId = 1; //自己的角色id
+    repeated stResBattleGloryRankMemInfo member = 2;    //成员排行信息
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}   
+
+	enum ProtoFunID
+	{
+	    FunID = 108;
+	}
+}
+
+//请求查看荣耀战场排行 c ----> s
+message stReqResBattleRank
+{
+    optional uint32 charId = 1;        //pubchar id
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}   
+
+	enum ProtoFunID
+	{
+	    FunID = 109;
+	}
+}
+
+//请求查看荣耀战场排行返回 s ----> c
+message stRetResBattleRank
+{
+
+    optional uint32 charId = 1; //自己的角色id
+    repeated stResBattleGloryRankMemInfo member = 2;    //成员排行信息
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}   
+
+	enum ProtoFunID
+	{
+	    FunID = 110;
+	}
+}
+
+//请求查看本期荣耀王 c ----> s
+message stReqResBattleKing
+{
+    optional uint32 charId = 1;        //pubchar id
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}   
+
+	enum ProtoFunID
+	{
+	    FunID = 111;
+	}
+}
+
+//本期荣耀王者角色模型信息
+message stResBattleRankMemInfo
+{
+    optional string     name = 1;               			//名字
+	optional uint32     charID = 2;		                    //玩家的角色ID
+    optional uint32     areaCode = 3;           			//所在服务器ID
+	optional uint32     job = 4;							//职业
+	optional uint32     sex = 5;							//性别
+	optional uint32 	level = 6;              			//等级
+	optional uint32 	battlePower = 7;        			//战力
+	optional uint32 	killNum = 8;       			        //本期击杀数
+	optional uint32 	evenKillNum = 9;         			//本期最大击杀数
+	optional uint32 	totalKillNum = 10;       			//历史最大击杀数
+	optional uint32 	gloryVal = 11;        			    //本期荣耀值
+	optional uint32 	prostatedNum = 12;     			    //被膜拜次数
+	optional uint32     headID = 13;						//头部ID
+	optional uint32 	bodyID = 14;						//衣服ID
+	optional uint32		weaponID = 15;						//武器ID
+	optional uint32		cloackID = 16;						//披风ID
+	optional uint32		wingID = 17;						//翅膀ID
+	optional uint32     shoeID = 18;						//鞋子
+	optional uint32     fashionHair = 19;					//发型
+	optional uint32     fashionFace = 20;					//表情
+	optional uint32		fashionBody = 21;					//衣服
+	optional uint32		fashionWeapon = 22;					//武器
+	optional uint32		fashionShoe = 23;					//鞋子
+	optional uint32		fashionDecoration = 24;				//脸饰品
+	optional uint32		effectID = 26;						//特效ID
+	optional uint32		wingBreakLv = 27;					//翅膀突破等级
+}
+
+//请求查看本期荣耀王返回 s ----> c
+message stRetResBattleKing
+{
+    optional bool existsKing = 1;                   //是否存在荣耀王
+    optional stResBattleRankMemInfo member = 2;     //荣耀王者信息
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}   
+
+	enum ProtoFunID
+	{
+	    FunID = 112;
+	}
+}
+
+//请求膜拜 c ----> s
+message stReqResBattleProstate
+{
+    optional uint32 charId = 1;        //pubchar id
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}   
+
+	enum ProtoFunID
+	{
+	    FunID = 113;
+	}
+}
+
+//请求膜拜返回 s ----> c
+message stRetResBattleProstate
+{
+    enum eResult
+    {
+        eSuccess = 1;                   //成功
+        eAlready_Done = 2;              //已经膜拜过
+        eNo_King = 3;                   //不存在荣耀王
+    }
+
+    optional eResult result = 1;    //返回结果
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}   
+
+	enum ProtoFunID
+	{
+	    FunID = 114;
+	}
+}
+
+//请求复活  c ----> s
+message stReqResBattleRelive
+{
+    optional uint32 charId = 1;        //pubchar id
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}   
+
+	enum ProtoFunID
+	{
+	    FunID = 115;
+	}
+}
+
+//请求复活返回 s ----> c
+message stRetResBattleRelive
+{
+    enum eResult
+    {
+        eSuccess = 1;                   //成功
+        eLess_Of_Diamond = 2;           //钻石不足
+        eNot_Died = 3;                  //没死亡
+        eNot_In_CopyMap = 4;            //不在副本里
+    }
+
+    optional eResult result = 1;    //返回结果
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}   
+
+	enum ProtoFunID
+	{
+	    FunID = 116;
+	}
+}
+
+//请求离开资源战场  c ----> s
+message stReqLeaveResBattle
+{
+    optional uint32 charId = 1;        //pubchar id
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}   
+
+	enum ProtoFunID
+	{
+	    FunID = 117;
+	}
+}
+
+//请求离开资源战场返回 s ----> c
+message stRetLeaveResBattle
+{
+    enum eResult
+    {
+        eSuccess = 1;                   //成功
+        eNot_In_CopyMap = 2;            //不在副本里
+    }
+
+    optional eResult result = 1;    //返回结果
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}   
+
+	enum ProtoFunID
+	{
+	    FunID = 118;
+	}
+}
+
+//请求资源战场战绩提示 c ----> s
+message stReqRecvResBattleRes
+{
+    optional uint32 charId = 1;        //pubchar id
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}   
+
+	enum ProtoFunID
+	{
+	    FunID = 119;
+	}
+}
+
+message stResBattleResItem
+{
+    optional uint32 itemId = 1;
+    optional uint32 num = 2;
+}
+
+//请求资源战场战绩提示返回 s ----> c
+message stRetRecvResBattleRes
+{
+    optional uint32 killNum = 1;    //击杀玩家
+    optional uint32 streakNum= 2;   //最高连杀
+    optional uint32 gloryVal = 3;   //获得荣耀值
+    repeated stResBattleResItem item = 4;   //采集的资源列表
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}   
+
+	enum ProtoFunID
+	{
+	    FunID = 120;
+	}
+}
+
+//广播资源战场连杀信息 s ----> c
+message stSendResBattleStreakNum
+{
+    optional string name = 1;               //名字
+    optional uint32 areaCode = 2;           //所在服务器ID;
+    optional uint32 val = 3;                //连杀数值
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}   
+
+	enum ProtoFunID
+	{
+	    FunID = 121;
+	}
+}
+
+//广播资源战场公告信息信息 s ----> c
+message stSendResBattleNotice
+{
+    enum eNotice
+    {
+        eActivity_Start = 1;        //活动开启公告(红色字体):荣耀资源战场已开启,第一批核心区域资源将在3分钟后刷新
+        eActivity_End = 2;          //活动结束公告(红色字体):本次荣耀资源战场已结束,关闭核心区域资源刷新
+        eRes_Is_Refresh = 3;        //核心区域资源即将刷新公告,提前1分钟通知玩家,公告内容(黄色字体):核心区域资源将在1分钟后刷新
+        eRes_Has_Refresh = 4;       //核心区域资源刷新后立即给予公告,公告内容(黄色字体):核心区域资源已刷新
+    }
+    optional eNotice noticeIndex = 1;   //公告内容索引
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}   
+
+	enum ProtoFunID
+	{
+	    FunID = 122;
+	}
+}
+
+//谁被谁击杀  s ----> c
+message stNotityResBattleKillInfo
+{
+    optional string name = 1;               //名字
+    optional uint32 areaCode = 2;           //所在服务器ID
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}   
+
+	enum ProtoFunID
+	{
+	    FunID = 123;
+	}
+}
+
+message stBattleResRefreshItem
+{
+    optional uint32 x = 1;          //资源位置x
+    optional uint32 y = 2;          //资源位置y
+    optional uint32 z = 3;          //资源位置z
+    optional uint32 id = 4;         //资源点id
+    optional uint32 itemId = 5;     //刷新物品
+    optional uint32 collectTimes = 6;//可采集次数
+}
+
+//广播资源刷新  s ----> c
+message stNotityResBattleResRefresh
+{
+    repeated stBattleResRefreshItem item = 1;   //刷新物品
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}   
+
+	enum ProtoFunID
+	{
+	    FunID = 124;
+	}
+}
+
+//广播资源耗尽  s ----> c
+message stNotityResBattleResEmpty
+{
+    optional uint32 id = 1;   //资源点id
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}   
+
+	enum ProtoFunID
+	{
+	    FunID = 125;
+	}
+}
+
+//荣耀值刷新  s ----> c
+message stNotityResBattleGlory
+{
+    optional uint32 val = 1;   //最新荣耀值
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}   
+
+	enum ProtoFunID
+	{
+	    FunID = 126;
+	}
+}
+
+//公会广播邀请好友加入战场 c ----> s
+message stBroadCastResBattleInvite
+{
+	optional uint32 charId = 1;		//角色id
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}   
+
+	enum ProtoFunID
+	{
+	    FunID = 127;
+	}
+}
+
+//好友收到邀请请求 s ----> c
+message stRetResBattleReceiveInvite
+{
+	optional string name = 1;		//邀请人名字
+	optional uint32 charId = 2;		//邀请人pub char id
+	optional uint32 instanceLvl = 3;//副本难度, 1 简单难度, 2 困难难度
+    optional uint32 job = 4;        //职业
+    optional uint32 sex = 5;        //性别
+    optional uint32 battlePower = 6;//战斗力
+    optional uint32 vipLv = 7;      //vip等级
+	optional uint32 photoID = 8;	//头像ID
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}   
+
+	enum ProtoFunID
+	{
+	    FunID = 128;
+	}
+}
+
+//好友回复邀请是否加入战场 c ----> s
+message stResBattleReplyInviteJoin
+{
+    optional bool agree = 1;        //1 同意, 0 不同意
+	optional uint32 charId = 2;		//邀请人pub char id
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}   
+
+	enum ProtoFunID
+	{
+	    FunID = 129;
+	}
+}
+
+//邀请好友加入战场结果 s ----> c
+message stResBattleInviteJoinRes
+{
+	enum eResult
+	{
+		TEAM_NOT_EXSIT = 1;		//战场不存在
+		TEAM_FULL = 2;		    //战场已满
+		INNER_ERROR = 3;		//内部错误
+    }
+
+	optional eResult result = 1;    //结果
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}   
+
+	enum ProtoFunID
+	{
+	    FunID = 130;
+	}
+}
+
+//请求宝石副本基本信息 c ----> s
+message stReqStoneCopyMapInfo
+{   
+	optional uint32 charID = 1;
+
+	enum ProtoModID
+	{   
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{   
+		FunID = 131;
+	}
+}
+
+//宝石副本基本信息返回 s ----> c
+message stStoneCopyMapInfoResult
+{   
+	optional uint32 usedTimes = 1;      //已使用次数
+	optional uint32 maxTimes = 2;       //最大次数
+	optional uint32 resetTimes = 3;     //重置次数
+
+	enum ProtoModID
+	{   
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{   
+		FunID = 132;
+	}
+}
+
+//挑战宝石副本 c ----> s
+message stReqChallengeStoneCopyMap
+{   
+	optional uint32 levelId = 1;         //副本id
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 133;
+	}
+}
+
+//挑战宝石副本 s ----> c
+message stChallengeStoneCopyMap
+{
+	enum eResult
+	{
+		eSuccess = 1;               //成功
+		eLvl_Id_Not_Exist = 2;      //找不到level id
+		eTime_not_Open = 3;         //开放日期未到
+		eLess_Of_Challenge_Time = 4;//挑战次数不够
+		eLess_Of_Sp = 5;            //体力不足
+		eLess_Of_Lilian = 6;        //历练不足
+		eLvl_Limit = 7;				//等级不足
+		eBag_Full = 8;				//背包空格不够
+		ePre_Lvl_Id_Not_Pass= 9;	//前置关卡未通过
+		ePre_Lvl_Id_Not_Exists=10;	//前置关卡未找到
+	}
+
+	optional uint32 levelId = 1;       //副本id
+	optional eResult result = 2;       //返回结果
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 134;
+	}
+}
+
+//重置宝石副本挑战次数 c ----> s
+message stReqResetStoneCopyMapNum
+{
+	optional uint32 CharID = 1;
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 135;
+	}
+}
+
+//重置宝石副本挑战次数 s ----> c
+message stResetStoneCopyMapNum
+{
+	enum eResult
+	{
+		eSuccess = 1;               //成功
+		eLess_of_Diamond = 2;       //钻石不足
+		eTimes_Remain = 3;          //次数还有剩余
+	}
+
+	optional eResult result = 1;       //返回结果
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 136;
+	}
+}
+
+//进入资源战场请求资源 c ---> s
+message stReqResBattleResource
+{
+    optional uint32 charID  = 1;    //玩家id
+
+	enum ProtoModID
+	{   
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{   
+		FunID = 137;
+	}
+}
+
+//进入资源战场请求资源回包  s ----> c
+message stRetResBattleResource
+{
+	enum eResult
+	{
+		eSuccess = 1;               //成功
+		eNot_In_Battle = 2;         //不在战场中
+    }
+
+	optional eResult result = 1;                //返回结果
+    repeated stBattleResRefreshItem item = 2;   //刷新物品
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}   
+
+	enum ProtoFunID
+	{
+	    FunID = 138;
+	}
+}
+
+//资源战场结束 s ----> c
+message stResBattleEnd
+{
+	optional uint32 charid = 1; //玩家id
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}   
+
+	enum ProtoFunID
+	{
+	    FunID = 139;
+	}
+}

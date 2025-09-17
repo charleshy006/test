@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<!-- 备注：
+		Level id:关卡地图文件ID。
+		parcels id：地块文件ID。
+		x:相对场景的x坐标。
+		y:相对场景的y坐标。
+		z:相对场景的z坐标。
+		rotatex：地块x轴向旋转角度。
+		rotatey：地块y轴向旋转角度。
+		rotatez：地块z轴向旋转角度。
+	-->
+	<map>
+		<!--地城关卡1-->
+		<Level id="10001" Startx="10.10" Starty="10.10" Start="10.10" >
+			<parcels id="parcels_1001" x="10.10" y="10.10" z="10.10" rotatex="0" rotatey="0" rotatez="0"/>
+			<parcels id="parcels_1002" x="10.10" y="10.10" z="10.10" rotatex="0" rotatey="0" rotatez="0"/>
+			<parcels id="parcels_1003" x="10.10" y="10.10" z="10.10" rotatex="0" rotatey="0" rotatez="0"/>
+			<parcels id="parcels_1004" x="10.10" y="10.10" z="10.10" rotatex="0" rotatey="0" rotatez="0"/>
+			<Prefab id="atk_1000101" x="10.10" y="10.10" z="10.10" rotatex="0" rotatey="0" rotatez="0"/>
+			<Prefab id="atk_1000102" x="10.10" y="10.10" z="10.10" rotatex="0" rotatey="0" rotatez="0"/>
+			<Prefab id="atk_1000103" x="10.10" y="10.10" z="10.10" rotatex="0" rotatey="0" rotatez="0"/>
+			<Prefab id="atk_1000104" x="10.10" y="10.10" z="10.10" rotatex="0" rotatey="0" rotatez="0"/>
+		</Level>
+	</map>
+</root>

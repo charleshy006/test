@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<root>
+	<!--
+        Levelid:关卡编号
+        NextLevel：过关后开放
+        Diamondreset：钻石重置价格
+	    First:初始第一关
+        1: 是
+        0：否-->
+	<GemLevel>
+		<!--前置，开放时间-->
+		<Level indexID="1" Levelid="50101" First="1" NextLevel="50102" />
+		<Level indexID="2" Levelid="50102" First="0" NextLevel="50103" />
+		<Level indexID="3" Levelid="50103" First="0" NextLevel="50104" />
+		<Level indexID="4" Levelid="50104" First="0" NextLevel="50105" />
+		<Level indexID="5" Levelid="50105" First="0" NextLevel="0" />
+	</GemLevel>
+	<!--钻石重置-->
+	<Diamondreset>
+		<Diamond indexID="1" Diamondnum="200"/>
+		<Diamond indexID="2" Diamondnum="200"/>
+		<Diamond indexID="3" Diamondnum="300"/>
+		<Diamond indexID="4" Diamondnum="300"/>
+		<Diamond indexID="5" Diamondnum="300"/>
+		<Diamond indexID="6" Diamondnum="400"/>
+		<Diamond indexID="7" Diamondnum="400"/>
+		<Diamond indexID="8" Diamondnum="400"/>
+		<Diamond indexID="9" Diamondnum="500"/>
+		<Diamond indexID="10" Diamondnum="500"/>
+		<Diamond indexID="11" Diamondnum="500"/>
+		<Diamond indexID="12" Diamondnum="700"/>
+		<Diamond indexID="13" Diamondnum="700"/>
+		<Diamond indexID="14" Diamondnum="700"/>
+		<Diamond indexID="15" Diamondnum="1000"/>
+		<Diamond indexID="16" Diamondnum="1000"/>
+		<Diamond indexID="17" Diamondnum="1000"/>
+		<Diamond indexID="18" Diamondnum="1500"/>
+		<Diamond indexID="19" Diamondnum="1500"/>
+		<Diamond indexID="20" Diamondnum="1500"/>
+	</Diamondreset>
+	<!--关卡难度星级-->
+	<LevelStar>
+		<entry Levelid="50101" StarNum="1"/>
+		<entry Levelid="50102" StarNum="2"/>
+		<entry Levelid="50103" StarNum="3"/>
+		<entry Levelid="50104" StarNum="4"/>
+		<entry Levelid="50105" StarNum="5"/>
+	</LevelStar>
+</root>

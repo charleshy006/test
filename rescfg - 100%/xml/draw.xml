@@ -1,0 +1,3649 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<!--
+		draw: 不同的抽奖序列
+			golddrawgroup01金币单抽组
+			golddrawgroup10金币10连抽组
+			Diamonddraw01钻石单抽组
+			Diamonddraw10钻石10连抽组
+        drawitemID：抽奖物品ID（特殊约定1为游戏币/2为钻石币）
+		drawnum：抽奖出的数量
+		drawRP：抽奖概率（drawprobability）
+	-->
+	<draw>
+		<golddrawgroup01 id="01" Moneytype="1" needMoney="10000" interval="1200"> 
+			<drawitem ID="202200" drawnum="1" drawRP="30" />
+			<drawitem ID="242200" drawnum="1" drawRP="30" />
+			<drawitem ID="262200" drawnum="1" drawRP="30" />
+			<drawitem ID="212210" drawnum="1" drawRP="30" />
+			<drawitem ID="232210" drawnum="1" drawRP="30" />
+			<drawitem ID="262210" drawnum="1" drawRP="30" />
+			<drawitem ID="242220" drawnum="1" drawRP="30" />
+			<drawitem ID="252220" drawnum="1" drawRP="30" />
+			<drawitem ID="262220" drawnum="1" drawRP="30" />
+			<drawitem ID="212230" drawnum="1" drawRP="30" />
+			<drawitem ID="222230" drawnum="1" drawRP="30" />
+			<drawitem ID="252230" drawnum="1" drawRP="30" />
+			<drawitem ID="212240" drawnum="1" drawRP="30" />
+			<drawitem ID="232240" drawnum="1" drawRP="30" />
+			<drawitem ID="252240" drawnum="1" drawRP="30" />
+			<drawitem ID="202250" drawnum="1" drawRP="30" />
+			<drawitem ID="222250" drawnum="1" drawRP="30" />
+			<drawitem ID="232250" drawnum="1" drawRP="30" />
+			<drawitem ID="202260" drawnum="1" drawRP="30" />
+			<drawitem ID="212260" drawnum="1" drawRP="30" />
+			<drawitem ID="222260" drawnum="1" drawRP="30" />
+			<drawitem ID="232260" drawnum="1" drawRP="30" />
+			<drawitem ID="252260" drawnum="1" drawRP="30" />
+			<drawitem ID="202270" drawnum="1" drawRP="31" />
+			<drawitem ID="212270" drawnum="1" drawRP="31" />
+			<drawitem ID="222270" drawnum="1" drawRP="31" />
+			<drawitem ID="202280" drawnum="1" drawRP="31" />
+			<drawitem ID="232280" drawnum="1" drawRP="31" />
+			<drawitem ID="242280" drawnum="1" drawRP="31" />
+			<drawitem ID="262280" drawnum="1" drawRP="31" />
+			<drawitem ID="222290" drawnum="1" drawRP="31" />
+			<drawitem ID="242290" drawnum="1" drawRP="31" />
+			<drawitem ID="252290" drawnum="1" drawRP="31" />
+			<drawitem ID="202100" drawnum="1" drawRP="8571" />
+			<drawitem ID="212100" drawnum="1" drawRP="8571" />
+			<drawitem ID="222100" drawnum="1" drawRP="8571" />
+			<drawitem ID="232100" drawnum="1" drawRP="8571" />
+			<drawitem ID="242100" drawnum="1" drawRP="8571" />
+			<drawitem ID="252100" drawnum="1" drawRP="8571" />
+			<drawitem ID="262100" drawnum="1" drawRP="8571" />
+			<drawitem ID="201200" drawnum="1" drawRP="8572" />
+			<drawitem ID="211200" drawnum="1" drawRP="8572" />
+			<drawitem ID="221200" drawnum="1" drawRP="8572" />
+			<drawitem ID="231200" drawnum="1" drawRP="8572" />
+			<drawitem ID="241200" drawnum="1" drawRP="8572" />
+			<drawitem ID="251200" drawnum="1" drawRP="8572" />
+			<drawitem ID="261200" drawnum="1" drawRP="8571" />
+			<drawitem ID="200500" drawnum="1" drawRP="38572" />
+			<drawitem ID="210500" drawnum="1" drawRP="38572" />
+			<drawitem ID="220500" drawnum="1" drawRP="38572" />
+			<drawitem ID="230500" drawnum="1" drawRP="38571" />
+			<drawitem ID="240500" drawnum="1" drawRP="38571" />
+			<drawitem ID="250500" drawnum="1" drawRP="38571" />
+			<drawitem ID="260500" drawnum="1" drawRP="38571" />
+			<drawitem ID="200300" drawnum="1" drawRP="87000" />
+			<drawitem ID="210300" drawnum="1" drawRP="87000" />
+			<drawitem ID="220300" drawnum="1" drawRP="87000" />
+			<drawitem ID="230300" drawnum="1" drawRP="87000" />
+			<drawitem ID="240300" drawnum="1" drawRP="87000" />
+			<drawitem ID="250300" drawnum="1" drawRP="87000" />
+			<drawitem ID="260300" drawnum="1" drawRP="87000" />
+		</golddrawgroup01>	
+		<golddrawgroup10 id="02" Moneytype="1" needMoney="95000" interval="-1"> 
+			<drawitem ID="202200" drawnum="1" drawRP="30" />
+			<drawitem ID="242200" drawnum="1" drawRP="30" />
+			<drawitem ID="262200" drawnum="1" drawRP="30" />
+			<drawitem ID="212210" drawnum="1" drawRP="30" />
+			<drawitem ID="232210" drawnum="1" drawRP="30" />
+			<drawitem ID="262210" drawnum="1" drawRP="30" />
+			<drawitem ID="242220" drawnum="1" drawRP="30" />
+			<drawitem ID="252220" drawnum="1" drawRP="30" />
+			<drawitem ID="262220" drawnum="1" drawRP="30" />
+			<drawitem ID="212230" drawnum="1" drawRP="30" />
+			<drawitem ID="222230" drawnum="1" drawRP="30" />
+			<drawitem ID="252230" drawnum="1" drawRP="30" />
+			<drawitem ID="212240" drawnum="1" drawRP="30" />
+			<drawitem ID="232240" drawnum="1" drawRP="30" />
+			<drawitem ID="252240" drawnum="1" drawRP="30" />
+			<drawitem ID="202250" drawnum="1" drawRP="30" />
+			<drawitem ID="222250" drawnum="1" drawRP="30" />
+			<drawitem ID="232250" drawnum="1" drawRP="30" />
+			<drawitem ID="202260" drawnum="1" drawRP="30" />
+			<drawitem ID="212260" drawnum="1" drawRP="30" />
+			<drawitem ID="222260" drawnum="1" drawRP="30" />
+			<drawitem ID="232260" drawnum="1" drawRP="30" />
+			<drawitem ID="252260" drawnum="1" drawRP="30" />
+			<drawitem ID="202270" drawnum="1" drawRP="31" />
+			<drawitem ID="212270" drawnum="1" drawRP="31" />
+			<drawitem ID="222270" drawnum="1" drawRP="31" />
+			<drawitem ID="202280" drawnum="1" drawRP="31" />
+			<drawitem ID="232280" drawnum="1" drawRP="31" />
+			<drawitem ID="242280" drawnum="1" drawRP="31" />
+			<drawitem ID="262280" drawnum="1" drawRP="31" />
+			<drawitem ID="222290" drawnum="1" drawRP="31" />
+			<drawitem ID="242290" drawnum="1" drawRP="31" />
+			<drawitem ID="252290" drawnum="1" drawRP="31" />
+			<drawitem ID="202100" drawnum="1" drawRP="8571" />
+			<drawitem ID="212100" drawnum="1" drawRP="8571" />
+			<drawitem ID="222100" drawnum="1" drawRP="8571" />
+			<drawitem ID="232100" drawnum="1" drawRP="8571" />
+			<drawitem ID="242100" drawnum="1" drawRP="8571" />
+			<drawitem ID="252100" drawnum="1" drawRP="8571" />
+			<drawitem ID="262100" drawnum="1" drawRP="8571" />
+			<drawitem ID="201200" drawnum="1" drawRP="8572" />
+			<drawitem ID="211200" drawnum="1" drawRP="8572" />
+			<drawitem ID="221200" drawnum="1" drawRP="8572" />
+			<drawitem ID="231200" drawnum="1" drawRP="8572" />
+			<drawitem ID="241200" drawnum="1" drawRP="8572" />
+			<drawitem ID="251200" drawnum="1" drawRP="8572" />
+			<drawitem ID="261200" drawnum="1" drawRP="8571" />
+			<drawitem ID="200500" drawnum="1" drawRP="38572" />
+			<drawitem ID="210500" drawnum="1" drawRP="38572" />
+			<drawitem ID="220500" drawnum="1" drawRP="38572" />
+			<drawitem ID="230500" drawnum="1" drawRP="38571" />
+			<drawitem ID="240500" drawnum="1" drawRP="38571" />
+			<drawitem ID="250500" drawnum="1" drawRP="38571" />
+			<drawitem ID="260500" drawnum="1" drawRP="38571" />
+			<drawitem ID="200300" drawnum="1" drawRP="87000" />
+			<drawitem ID="210300" drawnum="1" drawRP="87000" />
+			<drawitem ID="220300" drawnum="1" drawRP="87000" />
+			<drawitem ID="230300" drawnum="1" drawRP="87000" />
+			<drawitem ID="240300" drawnum="1" drawRP="87000" />
+			<drawitem ID="250300" drawnum="1" drawRP="87000" />
+			<drawitem ID="260300" drawnum="1" drawRP="87000" />
+		</golddrawgroup10>	
+		<Diamonddraw01 id="03" Moneytype="2" needMoney="11200" interval="72000"> 
+			<drawitem ID="201200" drawnum="1" drawRP="60715" />
+			<drawitem ID="211200" drawnum="1" drawRP="60715" />
+			<drawitem ID="221200" drawnum="1" drawRP="60715" />
+			<drawitem ID="231200" drawnum="1" drawRP="60715" />
+			<drawitem ID="241200" drawnum="1" drawRP="60714" />
+			<drawitem ID="251200" drawnum="1" drawRP="60714" />
+			<drawitem ID="261200" drawnum="1" drawRP="60714" />
+			<drawitem ID="202100" drawnum="1" drawRP="60714" />
+			<drawitem ID="212100" drawnum="1" drawRP="60714" />
+			<drawitem ID="222100" drawnum="1" drawRP="60714" />
+			<drawitem ID="232100" drawnum="1" drawRP="60714" />
+			<drawitem ID="242100" drawnum="1" drawRP="60714" />
+			<drawitem ID="252100" drawnum="1" drawRP="60714" />
+			<drawitem ID="262100" drawnum="1" drawRP="60714" />
+			<drawitem ID="202200" drawnum="1" drawRP="3636" />
+			<drawitem ID="242200" drawnum="1" drawRP="3637" />
+			<drawitem ID="262200" drawnum="1" drawRP="3636" />
+			<drawitem ID="212210" drawnum="1" drawRP="3637" />
+			<drawitem ID="232210" drawnum="1" drawRP="3636" />
+			<drawitem ID="262210" drawnum="1" drawRP="3637" />
+			<drawitem ID="242220" drawnum="1" drawRP="3636" />
+			<drawitem ID="252220" drawnum="1" drawRP="3637" />
+			<drawitem ID="262220" drawnum="1" drawRP="3636" />
+			<drawitem ID="212230" drawnum="1" drawRP="3637" />
+			<drawitem ID="222230" drawnum="1" drawRP="3636" />
+			<drawitem ID="252230" drawnum="1" drawRP="3637" />
+			<drawitem ID="212240" drawnum="1" drawRP="3636" />
+			<drawitem ID="232240" drawnum="1" drawRP="3637" />
+			<drawitem ID="252240" drawnum="1" drawRP="3636" />
+			<drawitem ID="202250" drawnum="1" drawRP="3637" />
+			<drawitem ID="222250" drawnum="1" drawRP="3636" />
+			<drawitem ID="232250" drawnum="1" drawRP="3637" />
+			<drawitem ID="202260" drawnum="1" drawRP="3636" />
+			<drawitem ID="212260" drawnum="1" drawRP="3637" />
+			<drawitem ID="222260" drawnum="1" drawRP="3636" />
+			<drawitem ID="232260" drawnum="1" drawRP="3637" />
+			<drawitem ID="252260" drawnum="1" drawRP="3636" />
+			<drawitem ID="202270" drawnum="1" drawRP="3637" />
+			<drawitem ID="212270" drawnum="1" drawRP="3636" />
+			<drawitem ID="222270" drawnum="1" drawRP="3636" />
+			<drawitem ID="202280" drawnum="1" drawRP="3636" />
+			<drawitem ID="232280" drawnum="1" drawRP="3636" />
+			<drawitem ID="242280" drawnum="1" drawRP="3636" />
+			<drawitem ID="262280" drawnum="1" drawRP="3636" />
+			<drawitem ID="222290" drawnum="1" drawRP="3636" />
+			<drawitem ID="242290" drawnum="1" drawRP="3636" />
+			<drawitem ID="252290" drawnum="1" drawRP="3636" />
+			<drawitem ID="202600" drawnum="1" drawRP="1429" />
+			<drawitem ID="212600" drawnum="1" drawRP="1428" />
+			<drawitem ID="222600" drawnum="1" drawRP="1429" />
+			<drawitem ID="232600" drawnum="1" drawRP="1428" />
+			<drawitem ID="242600" drawnum="1" drawRP="1429" />
+			<drawitem ID="252600" drawnum="1" drawRP="1428" />
+			<drawitem ID="262600" drawnum="1" drawRP="1429" />
+			<drawitem ID="202610" drawnum="1" drawRP="1428" />
+			<drawitem ID="212610" drawnum="1" drawRP="1429" />
+			<drawitem ID="222610" drawnum="1" drawRP="1428" />
+			<drawitem ID="232610" drawnum="1" drawRP="1429" />
+			<drawitem ID="242610" drawnum="1" drawRP="1428" />
+			<drawitem ID="252610" drawnum="1" drawRP="1429" />
+			<drawitem ID="262610" drawnum="1" drawRP="1428" />
+			<drawitem ID="202620" drawnum="1" drawRP="1429" />
+			<drawitem ID="212620" drawnum="1" drawRP="1428" />
+			<drawitem ID="222620" drawnum="1" drawRP="1429" />
+			<drawitem ID="232620" drawnum="1" drawRP="1428" />
+			<drawitem ID="242620" drawnum="1" drawRP="1429" />
+			<drawitem ID="252620" drawnum="1" drawRP="1429" />
+			<drawitem ID="262620" drawnum="1" drawRP="1429" />
+		</Diamonddraw01>		
+		<Diamonddraw10 id="04" Moneytype="2" needMoney="106600" interval="-1"> 
+			<drawitem ID="201200" drawnum="1" drawRP="60715" />
+			<drawitem ID="211200" drawnum="1" drawRP="60715" />
+			<drawitem ID="221200" drawnum="1" drawRP="60715" />
+			<drawitem ID="231200" drawnum="1" drawRP="60715" />
+			<drawitem ID="241200" drawnum="1" drawRP="60714" />
+			<drawitem ID="251200" drawnum="1" drawRP="60714" />
+			<drawitem ID="261200" drawnum="1" drawRP="60714" />
+			<drawitem ID="202100" drawnum="1" drawRP="60714" />
+			<drawitem ID="212100" drawnum="1" drawRP="60714" />
+			<drawitem ID="222100" drawnum="1" drawRP="60714" />
+			<drawitem ID="232100" drawnum="1" drawRP="60714" />
+			<drawitem ID="242100" drawnum="1" drawRP="60714" />
+			<drawitem ID="252100" drawnum="1" drawRP="60714" />
+			<drawitem ID="262100" drawnum="1" drawRP="60714" />
+			<drawitem ID="202200" drawnum="1" drawRP="3636" />
+			<drawitem ID="242200" drawnum="1" drawRP="3637" />
+			<drawitem ID="262200" drawnum="1" drawRP="3636" />
+			<drawitem ID="212210" drawnum="1" drawRP="3637" />
+			<drawitem ID="232210" drawnum="1" drawRP="3636" />
+			<drawitem ID="262210" drawnum="1" drawRP="3637" />
+			<drawitem ID="242220" drawnum="1" drawRP="3636" />
+			<drawitem ID="252220" drawnum="1" drawRP="3637" />
+			<drawitem ID="262220" drawnum="1" drawRP="3636" />
+			<drawitem ID="212230" drawnum="1" drawRP="3637" />
+			<drawitem ID="222230" drawnum="1" drawRP="3636" />
+			<drawitem ID="252230" drawnum="1" drawRP="3637" />
+			<drawitem ID="212240" drawnum="1" drawRP="3636" />
+			<drawitem ID="232240" drawnum="1" drawRP="3637" />
+			<drawitem ID="252240" drawnum="1" drawRP="3636" />
+			<drawitem ID="202250" drawnum="1" drawRP="3637" />
+			<drawitem ID="222250" drawnum="1" drawRP="3636" />
+			<drawitem ID="232250" drawnum="1" drawRP="3637" />
+			<drawitem ID="202260" drawnum="1" drawRP="3636" />
+			<drawitem ID="212260" drawnum="1" drawRP="3637" />
+			<drawitem ID="222260" drawnum="1" drawRP="3636" />
+			<drawitem ID="232260" drawnum="1" drawRP="3637" />
+			<drawitem ID="252260" drawnum="1" drawRP="3636" />
+			<drawitem ID="202270" drawnum="1" drawRP="3637" />
+			<drawitem ID="212270" drawnum="1" drawRP="3636" />
+			<drawitem ID="222270" drawnum="1" drawRP="3636" />
+			<drawitem ID="202280" drawnum="1" drawRP="3636" />
+			<drawitem ID="232280" drawnum="1" drawRP="3636" />
+			<drawitem ID="242280" drawnum="1" drawRP="3636" />
+			<drawitem ID="262280" drawnum="1" drawRP="3636" />
+			<drawitem ID="222290" drawnum="1" drawRP="3636" />
+			<drawitem ID="242290" drawnum="1" drawRP="3636" />
+			<drawitem ID="252290" drawnum="1" drawRP="3636" />
+			<drawitem ID="202600" drawnum="1" drawRP="1429" />
+			<drawitem ID="212600" drawnum="1" drawRP="1428" />
+			<drawitem ID="222600" drawnum="1" drawRP="1429" />
+			<drawitem ID="232600" drawnum="1" drawRP="1428" />
+			<drawitem ID="242600" drawnum="1" drawRP="1429" />
+			<drawitem ID="252600" drawnum="1" drawRP="1428" />
+			<drawitem ID="262600" drawnum="1" drawRP="1429" />
+			<drawitem ID="202610" drawnum="1" drawRP="1428" />
+			<drawitem ID="212610" drawnum="1" drawRP="1429" />
+			<drawitem ID="222610" drawnum="1" drawRP="1428" />
+			<drawitem ID="232610" drawnum="1" drawRP="1429" />
+			<drawitem ID="242610" drawnum="1" drawRP="1428" />
+			<drawitem ID="252610" drawnum="1" drawRP="1429" />
+			<drawitem ID="262610" drawnum="1" drawRP="1428" />
+			<drawitem ID="202620" drawnum="1" drawRP="1429" />
+			<drawitem ID="212620" drawnum="1" drawRP="1428" />
+			<drawitem ID="222620" drawnum="1" drawRP="1429" />
+			<drawitem ID="232620" drawnum="1" drawRP="1428" />
+			<drawitem ID="242620" drawnum="1" drawRP="1429" />
+			<drawitem ID="252620" drawnum="1" drawRP="1429" />
+			<drawitem ID="262620" drawnum="1" drawRP="1429" />
+		</Diamonddraw10>
+		
+		<!--首次金币单连抽必定获得紫色武器-->
+		<firstGolddraw>
+			<drawitem ID="222100" drawnum="1" drawRP="33333" />
+		</firstGolddraw>
+		
+		<!--首次金币十连抽必定获得10个宠物碎片-->
+		<firstTenGolddraw>
+			<drawitem ID="811633" drawnum="10" drawRP="33333" />
+		</firstTenGolddraw>
+		
+		<!--首次钻石免费抽奖必定获得22品质武器-->
+		<firstFreeDiamonddraw>
+			<drawitem ID="222230" drawnum="1" drawRP="10000" />
+		</firstFreeDiamonddraw>
+		
+		<!--首次钻石抽奖必定获得26品质头盔，该次抽奖不记录到钻石抽奖总次数里面，即不影响钻石抽奖原有次数规则，避免造成冲突-->
+		<firstDiamonddraw>
+			<drawitem ID="202600" drawnum="1" drawRP="6061" />
+			<drawitem ID="202610" drawnum="1" drawRP="6061" />
+			<drawitem ID="202620" drawnum="1" drawRP="6061" />
+		</firstDiamonddraw>
+		
+		<!--首次钻石十连抽必定获得26品质武器，该次抽奖不记录到钻石抽奖总次数里面，即不影响钻石抽奖原有次数规则，避免造成冲突-->
+		<firstTenDiamonddraw>
+			<drawitem ID="222600" drawnum="1" drawRP="6061" />
+			<drawitem ID="222610" drawnum="1" drawRP="6061" />
+			<drawitem ID="222620" drawnum="1" drawRP="6061" />
+		</firstTenDiamonddraw>
+		
+		<!--第二次钻石十连抽必定获得稀有灵魂石*20，该次抽奖不记录到钻石抽奖总次数里面，即不影响钻石抽奖原有次数规则，避免造成冲突-->
+		<secondTenDiamonddraw>
+			<drawitem ID="811612" drawnum="15" drawRP="33334" />
+			<drawitem ID="811613" drawnum="15" drawRP="33334" />
+			<drawitem ID="811611" drawnum="15" drawRP="33334" />
+			<drawitem ID="811616" drawnum="15" drawRP="33334" />
+		</secondTenDiamonddraw>
+		
+		<!--当钻石抽奖次数为5的整数倍时必定获得橙色装备或武魂石-->
+		<certain01 baseNum="5" addNum="5" >
+			<drawitem ID="202200" drawnum="1" drawRP="27273" />
+			<drawitem ID="242200" drawnum="1" drawRP="27272" />
+			<drawitem ID="262200" drawnum="1" drawRP="27273" />
+			<drawitem ID="212210" drawnum="1" drawRP="27273" />
+			<drawitem ID="232210" drawnum="1" drawRP="27273" />
+			<drawitem ID="262210" drawnum="1" drawRP="27273" />
+			<drawitem ID="242220" drawnum="1" drawRP="27273" />
+			<drawitem ID="252220" drawnum="1" drawRP="27272" />
+			<drawitem ID="262220" drawnum="1" drawRP="27273" />
+			<drawitem ID="212230" drawnum="1" drawRP="27273" />
+			<drawitem ID="222230" drawnum="1" drawRP="27273" />
+			<drawitem ID="252230" drawnum="1" drawRP="27272" />
+			<drawitem ID="212240" drawnum="1" drawRP="27273" />
+			<drawitem ID="232240" drawnum="1" drawRP="27273" />
+			<drawitem ID="252240" drawnum="1" drawRP="27273" />
+			<drawitem ID="202250" drawnum="1" drawRP="27273" />
+			<drawitem ID="222250" drawnum="1" drawRP="27273" />
+			<drawitem ID="232250" drawnum="1" drawRP="27273" />
+			<drawitem ID="202260" drawnum="1" drawRP="27272" />
+			<drawitem ID="212260" drawnum="1" drawRP="27273" />
+			<drawitem ID="222260" drawnum="1" drawRP="27273" />
+			<drawitem ID="232260" drawnum="1" drawRP="27273" />
+			<drawitem ID="252260" drawnum="1" drawRP="27273" />
+			<drawitem ID="202270" drawnum="1" drawRP="27272" />
+			<drawitem ID="212270" drawnum="1" drawRP="27273" />
+			<drawitem ID="222270" drawnum="1" drawRP="27273" />
+			<drawitem ID="202280" drawnum="1" drawRP="27273" />
+			<drawitem ID="232280" drawnum="1" drawRP="27273" />
+			<drawitem ID="242280" drawnum="1" drawRP="27272" />
+			<drawitem ID="262280" drawnum="1" drawRP="27272" />
+			<drawitem ID="222290" drawnum="1" drawRP="27273" />
+			<drawitem ID="242290" drawnum="1" drawRP="27272" />
+			<drawitem ID="252290" drawnum="1" drawRP="27272" />
+			<drawitem ID="202600" drawnum="1" drawRP="4762" />
+			<drawitem ID="212600" drawnum="1" drawRP="4762" />
+			<drawitem ID="222600" drawnum="1" drawRP="4762" />
+			<drawitem ID="232600" drawnum="1" drawRP="4762" />
+			<drawitem ID="242600" drawnum="1" drawRP="4762" />
+			<drawitem ID="252600" drawnum="1" drawRP="4762" />
+			<drawitem ID="262600" drawnum="1" drawRP="4762" />
+			<drawitem ID="202610" drawnum="1" drawRP="4762" />
+			<drawitem ID="212610" drawnum="1" drawRP="4762" />
+			<drawitem ID="222610" drawnum="1" drawRP="4762" />
+			<drawitem ID="232610" drawnum="1" drawRP="4762" />
+			<drawitem ID="242610" drawnum="1" drawRP="4762" />
+			<drawitem ID="252610" drawnum="1" drawRP="4762" />
+			<drawitem ID="262610" drawnum="1" drawRP="4761" />
+			<drawitem ID="202620" drawnum="1" drawRP="4762" />
+			<drawitem ID="212620" drawnum="1" drawRP="4762" />
+			<drawitem ID="222620" drawnum="1" drawRP="4762" />
+			<drawitem ID="232620" drawnum="1" drawRP="4762" />
+			<drawitem ID="242620" drawnum="1" drawRP="4761" />
+			<drawitem ID="252620" drawnum="1" drawRP="4762" />
+			<drawitem ID="262620" drawnum="1" drawRP="4762" />
+		</certain01>
+		
+		<!--该次抽奖必定获得26品质头盔-->
+		<certain02 baseNum="22" addNum="150" >
+			<drawitem ID="202600" drawnum="1" drawRP="6061" />
+			<drawitem ID="202610" drawnum="1" drawRP="6061" />
+			<drawitem ID="202620" drawnum="1" drawRP="6061" />
+		</certain02>
+		
+		<!--该次抽奖必定获得26品质武器-->
+		<certain03 baseNum="52" addNum="150" >
+			<drawitem ID="222600" drawnum="1" drawRP="6061" />
+			<drawitem ID="222610" drawnum="1" drawRP="6061" />
+			<drawitem ID="222620" drawnum="1" drawRP="6061" />
+		</certain03>
+		
+		<!--该次抽奖必定获得26品质鞋子-->
+		<certain04 baseNum="82" addNum="150" >
+			<drawitem ID="232600" drawnum="1" drawRP="6061" />
+			<drawitem ID="232610" drawnum="1" drawRP="6061" />
+			<drawitem ID="232620" drawnum="1" drawRP="6061" />
+		</certain04>
+		
+		<!--该次抽奖必定获得26品质衣服-->
+		<certain05 baseNum="112" addNum="150" >
+			<drawitem ID="212600" drawnum="1" drawRP="6061" />
+			<drawitem ID="212610" drawnum="1" drawRP="6061" />
+			<drawitem ID="212620" drawnum="1" drawRP="6061" />
+		</certain05>
+		
+		<!--该次抽奖必定获得26品质披风-->
+		<certain06 baseNum="142" addNum="150" >
+			<drawitem ID="252600" drawnum="1" drawRP="6061" />
+			<drawitem ID="252610" drawnum="1" drawRP="6061" />
+			<drawitem ID="252620" drawnum="1" drawRP="6061" />
+		</certain06>
+		
+		<!--该次抽奖必定获得稀有灵魂石*20-->
+		<certain07 baseNum="32" addNum="30" >
+			
+			<drawitem ID="201200" drawnum="1" drawRP="60715" />
+			<drawitem ID="211200" drawnum="1" drawRP="60715" />
+			<drawitem ID="221200" drawnum="1" drawRP="60715" />
+			<drawitem ID="231200" drawnum="1" drawRP="60715" />
+			<drawitem ID="241200" drawnum="1" drawRP="60714" />
+			<drawitem ID="251200" drawnum="1" drawRP="60714" />
+			<drawitem ID="261200" drawnum="1" drawRP="60714" />
+			<drawitem ID="202100" drawnum="1" drawRP="60714" />
+			<drawitem ID="212100" drawnum="1" drawRP="60714" />
+			<drawitem ID="222100" drawnum="1" drawRP="60714" />
+			<drawitem ID="232100" drawnum="1" drawRP="60714" />
+			<drawitem ID="242100" drawnum="1" drawRP="60714" />
+			<drawitem ID="252100" drawnum="1" drawRP="60714" />
+			<drawitem ID="262100" drawnum="1" drawRP="60714" />
+			<drawitem ID="202200" drawnum="1" drawRP="3636" />
+			<drawitem ID="242200" drawnum="1" drawRP="3637" />
+			<drawitem ID="262200" drawnum="1" drawRP="3636" />
+			<drawitem ID="212210" drawnum="1" drawRP="3637" />
+			<drawitem ID="232210" drawnum="1" drawRP="3636" />
+			<drawitem ID="262210" drawnum="1" drawRP="3637" />
+			<drawitem ID="242220" drawnum="1" drawRP="3636" />
+			<drawitem ID="252220" drawnum="1" drawRP="3637" />
+			<drawitem ID="262220" drawnum="1" drawRP="3636" />
+			<drawitem ID="212230" drawnum="1" drawRP="3637" />
+			<drawitem ID="222230" drawnum="1" drawRP="3636" />
+			<drawitem ID="252230" drawnum="1" drawRP="3637" />
+			<drawitem ID="212240" drawnum="1" drawRP="3636" />
+			<drawitem ID="232240" drawnum="1" drawRP="3637" />
+			<drawitem ID="252240" drawnum="1" drawRP="3636" />
+			<drawitem ID="202250" drawnum="1" drawRP="3637" />
+			<drawitem ID="222250" drawnum="1" drawRP="3636" />
+			<drawitem ID="232250" drawnum="1" drawRP="3637" />
+			<drawitem ID="202260" drawnum="1" drawRP="3636" />
+			<drawitem ID="212260" drawnum="1" drawRP="3637" />
+			<drawitem ID="222260" drawnum="1" drawRP="3636" />
+			<drawitem ID="232260" drawnum="1" drawRP="3637" />
+			<drawitem ID="252260" drawnum="1" drawRP="3636" />
+			<drawitem ID="202270" drawnum="1" drawRP="3637" />
+			<drawitem ID="212270" drawnum="1" drawRP="3636" />
+			<drawitem ID="222270" drawnum="1" drawRP="3636" />
+			<drawitem ID="202280" drawnum="1" drawRP="3636" />
+			<drawitem ID="232280" drawnum="1" drawRP="3636" />
+			<drawitem ID="242280" drawnum="1" drawRP="3636" />
+			<drawitem ID="262280" drawnum="1" drawRP="3636" />
+			<drawitem ID="222290" drawnum="1" drawRP="3636" />
+			<drawitem ID="242290" drawnum="1" drawRP="3636" />
+			<drawitem ID="252290" drawnum="1" drawRP="3636" />
+			<drawitem ID="202600" drawnum="1" drawRP="1429" />
+			<drawitem ID="212600" drawnum="1" drawRP="1428" />
+			<drawitem ID="222600" drawnum="1" drawRP="1429" />
+			<drawitem ID="232600" drawnum="1" drawRP="1428" />
+			<drawitem ID="242600" drawnum="1" drawRP="1429" />
+			<drawitem ID="252600" drawnum="1" drawRP="1428" />
+			<drawitem ID="262600" drawnum="1" drawRP="1429" />
+			<drawitem ID="202610" drawnum="1" drawRP="1428" />
+			<drawitem ID="212610" drawnum="1" drawRP="1429" />
+			<drawitem ID="222610" drawnum="1" drawRP="1428" />
+			<drawitem ID="232610" drawnum="1" drawRP="1429" />
+			<drawitem ID="242610" drawnum="1" drawRP="1428" />
+			<drawitem ID="252610" drawnum="1" drawRP="1429" />
+			<drawitem ID="262610" drawnum="1" drawRP="1428" />
+			<drawitem ID="202620" drawnum="1" drawRP="1429" />
+			<drawitem ID="212620" drawnum="1" drawRP="1428" />
+			<drawitem ID="222620" drawnum="1" drawRP="1429" />
+			<drawitem ID="232620" drawnum="1" drawRP="1428" />
+			<drawitem ID="242620" drawnum="1" drawRP="1429" />
+			<drawitem ID="252620" drawnum="1" drawRP="1429" />
+			<drawitem ID="262620" drawnum="1" drawRP="1429" />
+
+		</certain07>
+	</draw>
+	
+	<!--
+		limitTimeDrawID:限时随从抽奖表，后ID与limitpet表limittimedrawid一致
+	-->
+	<limitTimeDraw>
+	
+		<!--小死神-->
+		<limitTimeDrawID ID="1">
+			<Diamonddraw01 id="01" Moneytype="2" needMoney="11200" interval="86400" >
+				<drawitem ID="811606" drawnum="10" drawRP="1500" />
+				<drawitem ID="811604" drawnum="10" drawRP="4584" />
+				<drawitem ID="811605" drawnum="10" drawRP="4584" />
+				<drawitem ID="811610" drawnum="10" drawRP="4583" />
+				<drawitem ID="811619" drawnum="10" drawRP="4583" />
+				<drawitem ID="811620" drawnum="10" drawRP="4583" />
+				<drawitem ID="811633" drawnum="10" drawRP="4583" />
+				<drawitem ID="811611" drawnum="10" drawRP="4375" />
+				<drawitem ID="811612" drawnum="10" drawRP="4375" />
+				<drawitem ID="811613" drawnum="10" drawRP="4375" />
+				<drawitem ID="811616" drawnum="10" drawRP="4375" />
+				<drawitem ID="811607" drawnum="10" drawRP="875" />
+				<drawitem ID="811615" drawnum="10" drawRP="875" />
+				<drawitem ID="811624" drawnum="10" drawRP="875" />
+				<drawitem ID="811625" drawnum="10" drawRP="875" />
+				<drawitem ID="201200" drawnum="1" drawRP="3572" />
+				<drawitem ID="211200" drawnum="1" drawRP="3572" />
+				<drawitem ID="221200" drawnum="1" drawRP="3572" />
+				<drawitem ID="231200" drawnum="1" drawRP="3572" />
+				<drawitem ID="241200" drawnum="1" drawRP="3572" />
+				<drawitem ID="251200" drawnum="1" drawRP="3572" />
+				<drawitem ID="261200" drawnum="1" drawRP="3571" />
+				<drawitem ID="202100" drawnum="1" drawRP="3571" />
+				<drawitem ID="212100" drawnum="1" drawRP="3571" />
+				<drawitem ID="222100" drawnum="1" drawRP="3571" />
+				<drawitem ID="232100" drawnum="1" drawRP="3571" />
+				<drawitem ID="242100" drawnum="1" drawRP="3571" />
+				<drawitem ID="252100" drawnum="1" drawRP="3571" />
+				<drawitem ID="262100" drawnum="1" drawRP="3571" />
+			</Diamonddraw01>
+			
+			<Diamonddraw10 id="02" Moneytype="2" needMoney="106400" interval="-1" >
+				<drawitem ID="811606" drawnum="10" drawRP="1500" />
+				<drawitem ID="811604" drawnum="10" drawRP="4584" />
+				<drawitem ID="811605" drawnum="10" drawRP="4584" />
+				<drawitem ID="811610" drawnum="10" drawRP="4583" />
+				<drawitem ID="811619" drawnum="10" drawRP="4583" />
+				<drawitem ID="811620" drawnum="10" drawRP="4583" />
+				<drawitem ID="811633" drawnum="10" drawRP="4583" />
+				<drawitem ID="811611" drawnum="10" drawRP="4375" />
+				<drawitem ID="811612" drawnum="10" drawRP="4375" />
+				<drawitem ID="811613" drawnum="10" drawRP="4375" />
+				<drawitem ID="811616" drawnum="10" drawRP="4375" />
+				<drawitem ID="811607" drawnum="10" drawRP="875" />
+				<drawitem ID="811615" drawnum="10" drawRP="875" />
+				<drawitem ID="811624" drawnum="10" drawRP="875" />
+				<drawitem ID="811625" drawnum="10" drawRP="875" />
+				<drawitem ID="201200" drawnum="1" drawRP="3572" />
+				<drawitem ID="211200" drawnum="1" drawRP="3572" />
+				<drawitem ID="221200" drawnum="1" drawRP="3572" />
+				<drawitem ID="231200" drawnum="1" drawRP="3572" />
+				<drawitem ID="241200" drawnum="1" drawRP="3572" />
+				<drawitem ID="251200" drawnum="1" drawRP="3572" />
+				<drawitem ID="261200" drawnum="1" drawRP="3571" />
+				<drawitem ID="202100" drawnum="1" drawRP="3571" />
+				<drawitem ID="212100" drawnum="1" drawRP="3571" />
+				<drawitem ID="222100" drawnum="1" drawRP="3571" />
+				<drawitem ID="232100" drawnum="1" drawRP="3571" />
+				<drawitem ID="242100" drawnum="1" drawRP="3571" />
+				<drawitem ID="252100" drawnum="1" drawRP="3571" />
+				<drawitem ID="262100" drawnum="1" drawRP="3571" />
+			</Diamonddraw10>
+			
+			<!--该次限时随从活动钻石抽取次数为10的整数倍时必定获得橙色装备或武魂石-->
+			<certain01 baseNum="10" addNum="10" >
+				<drawitem ID="811604" drawnum="10" drawRP="10000" />
+				<drawitem ID="811605" drawnum="10" drawRP="10000" />
+				<drawitem ID="811610" drawnum="10" drawRP="10000" />
+				<drawitem ID="811619" drawnum="10" drawRP="10000" />
+				<drawitem ID="811620" drawnum="10" drawRP="10000" />
+				<drawitem ID="811633" drawnum="10" drawRP="10000" />
+				<drawitem ID="811611" drawnum="10" drawRP="10000" />
+				<drawitem ID="811612" drawnum="10" drawRP="10000" />
+				<drawitem ID="811613" drawnum="10" drawRP="10000" />
+				<drawitem ID="811616" drawnum="10" drawRP="10000" />
+				<drawitem ID="811607" drawnum="10" drawRP="10000" />
+				<drawitem ID="811615" drawnum="10" drawRP="10000" />
+				<drawitem ID="811624" drawnum="10" drawRP="10000" />
+				<drawitem ID="811625" drawnum="10" drawRP="10000" />
+			</certain01>
+			
+			<!--该次抽奖必定获得限时随从灵魂石-->
+			<certain02 baseNum="3" addNum="4" >
+				<drawitem ID="811606" drawnum="5" drawRP="25000" />
+				<drawitem ID="811606" drawnum="6" drawRP="50000" />
+				<drawitem ID="811606" drawnum="7" drawRP="25000" />
+			</certain02>
+			
+	
+		</limitTimeDrawID>
+		
+		
+		
+		<!--小乔巴-->
+		<limitTimeDrawID ID="2">
+			<Diamonddraw01 id="01" Moneytype="2" needMoney="11200" interval="86400" >
+				<drawitem ID="811614" drawnum="10" drawRP="1500" />
+				<drawitem ID="811604" drawnum="10" drawRP="4584" />
+				<drawitem ID="811605" drawnum="10" drawRP="4584" />
+				<drawitem ID="811610" drawnum="10" drawRP="4583" />
+				<drawitem ID="811619" drawnum="10" drawRP="4583" />
+				<drawitem ID="811620" drawnum="10" drawRP="4583" />
+				<drawitem ID="811633" drawnum="10" drawRP="4583" />
+				<drawitem ID="811611" drawnum="10" drawRP="4375" />
+				<drawitem ID="811612" drawnum="10" drawRP="4375" />
+				<drawitem ID="811613" drawnum="10" drawRP="4375" />
+				<drawitem ID="811616" drawnum="10" drawRP="4375" />
+				<drawitem ID="811607" drawnum="10" drawRP="875" />
+				<drawitem ID="811615" drawnum="10" drawRP="875" />
+				<drawitem ID="811624" drawnum="10" drawRP="875" />
+				<drawitem ID="811625" drawnum="10" drawRP="875" />
+				<drawitem ID="201200" drawnum="1" drawRP="3572" />
+				<drawitem ID="211200" drawnum="1" drawRP="3572" />
+				<drawitem ID="221200" drawnum="1" drawRP="3572" />
+				<drawitem ID="231200" drawnum="1" drawRP="3572" />
+				<drawitem ID="241200" drawnum="1" drawRP="3572" />
+				<drawitem ID="251200" drawnum="1" drawRP="3572" />
+				<drawitem ID="261200" drawnum="1" drawRP="3571" />
+				<drawitem ID="202100" drawnum="1" drawRP="3571" />
+				<drawitem ID="212100" drawnum="1" drawRP="3571" />
+				<drawitem ID="222100" drawnum="1" drawRP="3571" />
+				<drawitem ID="232100" drawnum="1" drawRP="3571" />
+				<drawitem ID="242100" drawnum="1" drawRP="3571" />
+				<drawitem ID="252100" drawnum="1" drawRP="3571" />
+				<drawitem ID="262100" drawnum="1" drawRP="3571" />
+			</Diamonddraw01>
+			
+			<Diamonddraw10 id="02" Moneytype="2" needMoney="106400" interval="-1" >
+				<drawitem ID="811614" drawnum="10" drawRP="1500" />
+				<drawitem ID="811604" drawnum="10" drawRP="4584" />
+				<drawitem ID="811605" drawnum="10" drawRP="4584" />
+				<drawitem ID="811610" drawnum="10" drawRP="4583" />
+				<drawitem ID="811619" drawnum="10" drawRP="4583" />
+				<drawitem ID="811620" drawnum="10" drawRP="4583" />
+				<drawitem ID="811633" drawnum="10" drawRP="4583" />
+				<drawitem ID="811611" drawnum="10" drawRP="4375" />
+				<drawitem ID="811612" drawnum="10" drawRP="4375" />
+				<drawitem ID="811613" drawnum="10" drawRP="4375" />
+				<drawitem ID="811616" drawnum="10" drawRP="4375" />
+				<drawitem ID="811607" drawnum="10" drawRP="875" />
+				<drawitem ID="811615" drawnum="10" drawRP="875" />
+				<drawitem ID="811624" drawnum="10" drawRP="875" />
+				<drawitem ID="811625" drawnum="10" drawRP="875" />
+				<drawitem ID="201200" drawnum="1" drawRP="3572" />
+				<drawitem ID="211200" drawnum="1" drawRP="3572" />
+				<drawitem ID="221200" drawnum="1" drawRP="3572" />
+				<drawitem ID="231200" drawnum="1" drawRP="3572" />
+				<drawitem ID="241200" drawnum="1" drawRP="3572" />
+				<drawitem ID="251200" drawnum="1" drawRP="3572" />
+				<drawitem ID="261200" drawnum="1" drawRP="3571" />
+				<drawitem ID="202100" drawnum="1" drawRP="3571" />
+				<drawitem ID="212100" drawnum="1" drawRP="3571" />
+				<drawitem ID="222100" drawnum="1" drawRP="3571" />
+				<drawitem ID="232100" drawnum="1" drawRP="3571" />
+				<drawitem ID="242100" drawnum="1" drawRP="3571" />
+				<drawitem ID="252100" drawnum="1" drawRP="3571" />
+				<drawitem ID="262100" drawnum="1" drawRP="3571" />
+			</Diamonddraw10>
+			
+			<!--该次限时随从活动钻石抽取次数为10的整数倍时必定获得橙色装备或武魂石-->
+			<certain01 baseNum="10" addNum="10" >
+				<drawitem ID="811604" drawnum="10" drawRP="10000" />
+				<drawitem ID="811605" drawnum="10" drawRP="10000" />
+				<drawitem ID="811610" drawnum="10" drawRP="10000" />
+				<drawitem ID="811619" drawnum="10" drawRP="10000" />
+				<drawitem ID="811620" drawnum="10" drawRP="10000" />
+				<drawitem ID="811633" drawnum="10" drawRP="10000" />
+				<drawitem ID="811611" drawnum="10" drawRP="10000" />
+				<drawitem ID="811612" drawnum="10" drawRP="10000" />
+				<drawitem ID="811613" drawnum="10" drawRP="10000" />
+				<drawitem ID="811616" drawnum="10" drawRP="10000" />
+				<drawitem ID="811607" drawnum="10" drawRP="10000" />
+				<drawitem ID="811615" drawnum="10" drawRP="10000" />
+				<drawitem ID="811624" drawnum="10" drawRP="10000" />
+				<drawitem ID="811625" drawnum="10" drawRP="10000" />
+			</certain01>
+			
+			<!--该次抽奖必定获得限时随从灵魂石-->
+			<certain02 baseNum="3" addNum="4" >
+				<drawitem ID="811614" drawnum="5" drawRP="25000" />
+				<drawitem ID="811614" drawnum="6" drawRP="50000" />
+				<drawitem ID="811614" drawnum="7" drawRP="25000" />
+			</certain02>
+			
+		</limitTimeDrawID>
+		
+		
+		<!--灵魂歌姬-->
+		<limitTimeDrawID ID="3">
+			<Diamonddraw01 id="01" Moneytype="2" needMoney="11200" interval="86400" >
+				<drawitem ID="811617" drawnum="10" drawRP="1500" />
+				<drawitem ID="811604" drawnum="10" drawRP="4584" />
+				<drawitem ID="811605" drawnum="10" drawRP="4584" />
+				<drawitem ID="811610" drawnum="10" drawRP="4583" />
+				<drawitem ID="811619" drawnum="10" drawRP="4583" />
+				<drawitem ID="811620" drawnum="10" drawRP="4583" />
+				<drawitem ID="811633" drawnum="10" drawRP="4583" />
+				<drawitem ID="811611" drawnum="10" drawRP="4375" />
+				<drawitem ID="811612" drawnum="10" drawRP="4375" />
+				<drawitem ID="811613" drawnum="10" drawRP="4375" />
+				<drawitem ID="811616" drawnum="10" drawRP="4375" />
+				<drawitem ID="811607" drawnum="10" drawRP="875" />
+				<drawitem ID="811615" drawnum="10" drawRP="875" />
+				<drawitem ID="811624" drawnum="10" drawRP="875" />
+				<drawitem ID="811625" drawnum="10" drawRP="875" />
+				<drawitem ID="201200" drawnum="1" drawRP="3572" />
+				<drawitem ID="211200" drawnum="1" drawRP="3572" />
+				<drawitem ID="221200" drawnum="1" drawRP="3572" />
+				<drawitem ID="231200" drawnum="1" drawRP="3572" />
+				<drawitem ID="241200" drawnum="1" drawRP="3572" />
+				<drawitem ID="251200" drawnum="1" drawRP="3572" />
+				<drawitem ID="261200" drawnum="1" drawRP="3571" />
+				<drawitem ID="202100" drawnum="1" drawRP="3571" />
+				<drawitem ID="212100" drawnum="1" drawRP="3571" />
+				<drawitem ID="222100" drawnum="1" drawRP="3571" />
+				<drawitem ID="232100" drawnum="1" drawRP="3571" />
+				<drawitem ID="242100" drawnum="1" drawRP="3571" />
+				<drawitem ID="252100" drawnum="1" drawRP="3571" />
+				<drawitem ID="262100" drawnum="1" drawRP="3571" />
+			</Diamonddraw01>
+			
+			<Diamonddraw10 id="02" Moneytype="2" needMoney="106400" interval="-1" >
+				<drawitem ID="811617" drawnum="10" drawRP="1500" />
+				<drawitem ID="811604" drawnum="10" drawRP="4584" />
+				<drawitem ID="811605" drawnum="10" drawRP="4584" />
+				<drawitem ID="811610" drawnum="10" drawRP="4583" />
+				<drawitem ID="811619" drawnum="10" drawRP="4583" />
+				<drawitem ID="811620" drawnum="10" drawRP="4583" />
+				<drawitem ID="811633" drawnum="10" drawRP="4583" />
+				<drawitem ID="811611" drawnum="10" drawRP="4375" />
+				<drawitem ID="811612" drawnum="10" drawRP="4375" />
+				<drawitem ID="811613" drawnum="10" drawRP="4375" />
+				<drawitem ID="811616" drawnum="10" drawRP="4375" />
+				<drawitem ID="811607" drawnum="10" drawRP="875" />
+				<drawitem ID="811615" drawnum="10" drawRP="875" />
+				<drawitem ID="811624" drawnum="10" drawRP="875" />
+				<drawitem ID="811625" drawnum="10" drawRP="875" />
+				<drawitem ID="201200" drawnum="1" drawRP="3572" />
+				<drawitem ID="211200" drawnum="1" drawRP="3572" />
+				<drawitem ID="221200" drawnum="1" drawRP="3572" />
+				<drawitem ID="231200" drawnum="1" drawRP="3572" />
+				<drawitem ID="241200" drawnum="1" drawRP="3572" />
+				<drawitem ID="251200" drawnum="1" drawRP="3572" />
+				<drawitem ID="261200" drawnum="1" drawRP="3571" />
+				<drawitem ID="202100" drawnum="1" drawRP="3571" />
+				<drawitem ID="212100" drawnum="1" drawRP="3571" />
+				<drawitem ID="222100" drawnum="1" drawRP="3571" />
+				<drawitem ID="232100" drawnum="1" drawRP="3571" />
+				<drawitem ID="242100" drawnum="1" drawRP="3571" />
+				<drawitem ID="252100" drawnum="1" drawRP="3571" />
+				<drawitem ID="262100" drawnum="1" drawRP="3571" />
+			</Diamonddraw10>
+			
+			<!--该次限时随从活动钻石抽取次数为10的整数倍时必定获得橙色装备或武魂石-->
+			<certain01 baseNum="10" addNum="10" >
+				<drawitem ID="811604" drawnum="10" drawRP="10000" />
+				<drawitem ID="811605" drawnum="10" drawRP="10000" />
+				<drawitem ID="811610" drawnum="10" drawRP="10000" />
+				<drawitem ID="811619" drawnum="10" drawRP="10000" />
+				<drawitem ID="811620" drawnum="10" drawRP="10000" />
+				<drawitem ID="811633" drawnum="10" drawRP="10000" />
+				<drawitem ID="811611" drawnum="10" drawRP="10000" />
+				<drawitem ID="811612" drawnum="10" drawRP="10000" />
+				<drawitem ID="811613" drawnum="10" drawRP="10000" />
+				<drawitem ID="811616" drawnum="10" drawRP="10000" />
+				<drawitem ID="811607" drawnum="10" drawRP="10000" />
+				<drawitem ID="811615" drawnum="10" drawRP="10000" />
+				<drawitem ID="811624" drawnum="10" drawRP="10000" />
+				<drawitem ID="811625" drawnum="10" drawRP="10000" />
+			</certain01>
+			
+			<!--该次抽奖必定获得限时随从灵魂石-->
+			<certain02 baseNum="3" addNum="4" >
+				<drawitem ID="811617" drawnum="5" drawRP="25000" />
+				<drawitem ID="811617" drawnum="6" drawRP="50000" />
+				<drawitem ID="811617" drawnum="7" drawRP="25000" />
+			</certain02>
+			
+		</limitTimeDrawID>
+		
+		
+		
+		<!--雷神-->
+		<limitTimeDrawID ID="4">
+			<Diamonddraw01 id="01" Moneytype="2" needMoney="11200" interval="86400" >
+				<drawitem ID="811618" drawnum="10" drawRP="1500" />
+				<drawitem ID="811604" drawnum="10" drawRP="4584" />
+				<drawitem ID="811605" drawnum="10" drawRP="4584" />
+				<drawitem ID="811610" drawnum="10" drawRP="4583" />
+				<drawitem ID="811619" drawnum="10" drawRP="4583" />
+				<drawitem ID="811620" drawnum="10" drawRP="4583" />
+				<drawitem ID="811633" drawnum="10" drawRP="4583" />
+				<drawitem ID="811611" drawnum="10" drawRP="4375" />
+				<drawitem ID="811612" drawnum="10" drawRP="4375" />
+				<drawitem ID="811613" drawnum="10" drawRP="4375" />
+				<drawitem ID="811616" drawnum="10" drawRP="4375" />
+				<drawitem ID="811607" drawnum="10" drawRP="875" />
+				<drawitem ID="811615" drawnum="10" drawRP="875" />
+				<drawitem ID="811624" drawnum="10" drawRP="875" />
+				<drawitem ID="811625" drawnum="10" drawRP="875" />
+				<drawitem ID="201200" drawnum="1" drawRP="3572" />
+				<drawitem ID="211200" drawnum="1" drawRP="3572" />
+				<drawitem ID="221200" drawnum="1" drawRP="3572" />
+				<drawitem ID="231200" drawnum="1" drawRP="3572" />
+				<drawitem ID="241200" drawnum="1" drawRP="3572" />
+				<drawitem ID="251200" drawnum="1" drawRP="3572" />
+				<drawitem ID="261200" drawnum="1" drawRP="3571" />
+				<drawitem ID="202100" drawnum="1" drawRP="3571" />
+				<drawitem ID="212100" drawnum="1" drawRP="3571" />
+				<drawitem ID="222100" drawnum="1" drawRP="3571" />
+				<drawitem ID="232100" drawnum="1" drawRP="3571" />
+				<drawitem ID="242100" drawnum="1" drawRP="3571" />
+				<drawitem ID="252100" drawnum="1" drawRP="3571" />
+				<drawitem ID="262100" drawnum="1" drawRP="3571" />
+			</Diamonddraw01>
+			
+			<Diamonddraw10 id="02" Moneytype="2" needMoney="106400" interval="-1" >
+				<drawitem ID="811618" drawnum="10" drawRP="1500" />
+				<drawitem ID="811604" drawnum="10" drawRP="4584" />
+				<drawitem ID="811605" drawnum="10" drawRP="4584" />
+				<drawitem ID="811610" drawnum="10" drawRP="4583" />
+				<drawitem ID="811619" drawnum="10" drawRP="4583" />
+				<drawitem ID="811620" drawnum="10" drawRP="4583" />
+				<drawitem ID="811633" drawnum="10" drawRP="4583" />
+				<drawitem ID="811611" drawnum="10" drawRP="4375" />
+				<drawitem ID="811612" drawnum="10" drawRP="4375" />
+				<drawitem ID="811613" drawnum="10" drawRP="4375" />
+				<drawitem ID="811616" drawnum="10" drawRP="4375" />
+				<drawitem ID="811607" drawnum="10" drawRP="875" />
+				<drawitem ID="811615" drawnum="10" drawRP="875" />
+				<drawitem ID="811624" drawnum="10" drawRP="875" />
+				<drawitem ID="811625" drawnum="10" drawRP="875" />
+				<drawitem ID="201200" drawnum="1" drawRP="3572" />
+				<drawitem ID="211200" drawnum="1" drawRP="3572" />
+				<drawitem ID="221200" drawnum="1" drawRP="3572" />
+				<drawitem ID="231200" drawnum="1" drawRP="3572" />
+				<drawitem ID="241200" drawnum="1" drawRP="3572" />
+				<drawitem ID="251200" drawnum="1" drawRP="3572" />
+				<drawitem ID="261200" drawnum="1" drawRP="3571" />
+				<drawitem ID="202100" drawnum="1" drawRP="3571" />
+				<drawitem ID="212100" drawnum="1" drawRP="3571" />
+				<drawitem ID="222100" drawnum="1" drawRP="3571" />
+				<drawitem ID="232100" drawnum="1" drawRP="3571" />
+				<drawitem ID="242100" drawnum="1" drawRP="3571" />
+				<drawitem ID="252100" drawnum="1" drawRP="3571" />
+				<drawitem ID="262100" drawnum="1" drawRP="3571" />
+			</Diamonddraw10>
+			
+			<!--该次限时随从活动钻石抽取次数为10的整数倍时必定获得橙色装备或武魂石-->
+			<certain01 baseNum="10" addNum="10" >
+				<drawitem ID="811604" drawnum="10" drawRP="10000" />
+				<drawitem ID="811605" drawnum="10" drawRP="10000" />
+				<drawitem ID="811610" drawnum="10" drawRP="10000" />
+				<drawitem ID="811619" drawnum="10" drawRP="10000" />
+				<drawitem ID="811620" drawnum="10" drawRP="10000" />
+				<drawitem ID="811633" drawnum="10" drawRP="10000" />
+				<drawitem ID="811611" drawnum="10" drawRP="10000" />
+				<drawitem ID="811612" drawnum="10" drawRP="10000" />
+				<drawitem ID="811613" drawnum="10" drawRP="10000" />
+				<drawitem ID="811616" drawnum="10" drawRP="10000" />
+				<drawitem ID="811607" drawnum="10" drawRP="10000" />
+				<drawitem ID="811615" drawnum="10" drawRP="10000" />
+				<drawitem ID="811624" drawnum="10" drawRP="10000" />
+				<drawitem ID="811625" drawnum="10" drawRP="10000" />
+			</certain01>
+			
+			<!--该次抽奖必定获得限时随从灵魂石-->
+			<certain02 baseNum="3" addNum="4" >
+				<drawitem ID="811618" drawnum="5" drawRP="25000" />
+				<drawitem ID="811618" drawnum="6" drawRP="50000" />
+				<drawitem ID="811618" drawnum="7" drawRP="25000" />
+			</certain02>
+			
+		</limitTimeDrawID>
+		
+		
+		
+		<!--东方不败-->
+		<limitTimeDrawID ID="5">
+			<Diamonddraw01 id="01" Moneytype="2" needMoney="11200" interval="86400" >
+				<drawitem ID="811621" drawnum="10" drawRP="1500" />
+				<drawitem ID="811604" drawnum="10" drawRP="4584" />
+				<drawitem ID="811605" drawnum="10" drawRP="4584" />
+				<drawitem ID="811610" drawnum="10" drawRP="4583" />
+				<drawitem ID="811619" drawnum="10" drawRP="4583" />
+				<drawitem ID="811620" drawnum="10" drawRP="4583" />
+				<drawitem ID="811633" drawnum="10" drawRP="4583" />
+				<drawitem ID="811611" drawnum="10" drawRP="4375" />
+				<drawitem ID="811612" drawnum="10" drawRP="4375" />
+				<drawitem ID="811613" drawnum="10" drawRP="4375" />
+				<drawitem ID="811616" drawnum="10" drawRP="4375" />
+				<drawitem ID="811607" drawnum="10" drawRP="875" />
+				<drawitem ID="811615" drawnum="10" drawRP="875" />
+				<drawitem ID="811624" drawnum="10" drawRP="875" />
+				<drawitem ID="811625" drawnum="10" drawRP="875" />
+				<drawitem ID="201200" drawnum="1" drawRP="3572" />
+				<drawitem ID="211200" drawnum="1" drawRP="3572" />
+				<drawitem ID="221200" drawnum="1" drawRP="3572" />
+				<drawitem ID="231200" drawnum="1" drawRP="3572" />
+				<drawitem ID="241200" drawnum="1" drawRP="3572" />
+				<drawitem ID="251200" drawnum="1" drawRP="3572" />
+				<drawitem ID="261200" drawnum="1" drawRP="3571" />
+				<drawitem ID="202100" drawnum="1" drawRP="3571" />
+				<drawitem ID="212100" drawnum="1" drawRP="3571" />
+				<drawitem ID="222100" drawnum="1" drawRP="3571" />
+				<drawitem ID="232100" drawnum="1" drawRP="3571" />
+				<drawitem ID="242100" drawnum="1" drawRP="3571" />
+				<drawitem ID="252100" drawnum="1" drawRP="3571" />
+				<drawitem ID="262100" drawnum="1" drawRP="3571" />
+			</Diamonddraw01>
+			
+			<Diamonddraw10 id="02" Moneytype="2" needMoney="106400" interval="-1" >
+				<drawitem ID="811621" drawnum="10" drawRP="1500" />
+				<drawitem ID="811604" drawnum="10" drawRP="4584" />
+				<drawitem ID="811605" drawnum="10" drawRP="4584" />
+				<drawitem ID="811610" drawnum="10" drawRP="4583" />
+				<drawitem ID="811619" drawnum="10" drawRP="4583" />
+				<drawitem ID="811620" drawnum="10" drawRP="4583" />
+				<drawitem ID="811633" drawnum="10" drawRP="4583" />
+				<drawitem ID="811611" drawnum="10" drawRP="4375" />
+				<drawitem ID="811612" drawnum="10" drawRP="4375" />
+				<drawitem ID="811613" drawnum="10" drawRP="4375" />
+				<drawitem ID="811616" drawnum="10" drawRP="4375" />
+				<drawitem ID="811607" drawnum="10" drawRP="875" />
+				<drawitem ID="811615" drawnum="10" drawRP="875" />
+				<drawitem ID="811624" drawnum="10" drawRP="875" />
+				<drawitem ID="811625" drawnum="10" drawRP="875" />
+				<drawitem ID="201200" drawnum="1" drawRP="3572" />
+				<drawitem ID="211200" drawnum="1" drawRP="3572" />
+				<drawitem ID="221200" drawnum="1" drawRP="3572" />
+				<drawitem ID="231200" drawnum="1" drawRP="3572" />
+				<drawitem ID="241200" drawnum="1" drawRP="3572" />
+				<drawitem ID="251200" drawnum="1" drawRP="3572" />
+				<drawitem ID="261200" drawnum="1" drawRP="3571" />
+				<drawitem ID="202100" drawnum="1" drawRP="3571" />
+				<drawitem ID="212100" drawnum="1" drawRP="3571" />
+				<drawitem ID="222100" drawnum="1" drawRP="3571" />
+				<drawitem ID="232100" drawnum="1" drawRP="3571" />
+				<drawitem ID="242100" drawnum="1" drawRP="3571" />
+				<drawitem ID="252100" drawnum="1" drawRP="3571" />
+				<drawitem ID="262100" drawnum="1" drawRP="3571" />
+			</Diamonddraw10>
+			
+			<!--该次限时随从活动钻石抽取次数为10的整数倍时必定获得橙色装备或武魂石-->
+			<certain01 baseNum="10" addNum="10" >
+				<drawitem ID="811604" drawnum="10" drawRP="10000" />
+				<drawitem ID="811605" drawnum="10" drawRP="10000" />
+				<drawitem ID="811610" drawnum="10" drawRP="10000" />
+				<drawitem ID="811619" drawnum="10" drawRP="10000" />
+				<drawitem ID="811620" drawnum="10" drawRP="10000" />
+				<drawitem ID="811633" drawnum="10" drawRP="10000" />
+				<drawitem ID="811611" drawnum="10" drawRP="10000" />
+				<drawitem ID="811612" drawnum="10" drawRP="10000" />
+				<drawitem ID="811613" drawnum="10" drawRP="10000" />
+				<drawitem ID="811616" drawnum="10" drawRP="10000" />
+				<drawitem ID="811607" drawnum="10" drawRP="10000" />
+				<drawitem ID="811615" drawnum="10" drawRP="10000" />
+				<drawitem ID="811624" drawnum="10" drawRP="10000" />
+				<drawitem ID="811625" drawnum="10" drawRP="10000" />
+			</certain01>
+			
+			<!--该次抽奖必定获得限时随从灵魂石-->
+			<certain02 baseNum="3" addNum="4" >
+				<drawitem ID="811621" drawnum="5" drawRP="25000" />
+				<drawitem ID="811621" drawnum="6" drawRP="50000" />
+				<drawitem ID="811621" drawnum="7" drawRP="25000" />
+			</certain02>
+			
+		</limitTimeDrawID>
+		
+		
+		
+		<!--海盗船长-->
+		<limitTimeDrawID ID="6">
+			<Diamonddraw01 id="01" Moneytype="2" needMoney="11200" interval="86400" >
+				<drawitem ID="811623" drawnum="10" drawRP="1500" />
+				<drawitem ID="811604" drawnum="10" drawRP="4584" />
+				<drawitem ID="811605" drawnum="10" drawRP="4584" />
+				<drawitem ID="811610" drawnum="10" drawRP="4583" />
+				<drawitem ID="811619" drawnum="10" drawRP="4583" />
+				<drawitem ID="811620" drawnum="10" drawRP="4583" />
+				<drawitem ID="811633" drawnum="10" drawRP="4583" />
+				<drawitem ID="811611" drawnum="10" drawRP="4375" />
+				<drawitem ID="811612" drawnum="10" drawRP="4375" />
+				<drawitem ID="811613" drawnum="10" drawRP="4375" />
+				<drawitem ID="811616" drawnum="10" drawRP="4375" />
+				<drawitem ID="811607" drawnum="10" drawRP="875" />
+				<drawitem ID="811615" drawnum="10" drawRP="875" />
+				<drawitem ID="811624" drawnum="10" drawRP="875" />
+				<drawitem ID="811625" drawnum="10" drawRP="875" />
+				<drawitem ID="201200" drawnum="1" drawRP="3572" />
+				<drawitem ID="211200" drawnum="1" drawRP="3572" />
+				<drawitem ID="221200" drawnum="1" drawRP="3572" />
+				<drawitem ID="231200" drawnum="1" drawRP="3572" />
+				<drawitem ID="241200" drawnum="1" drawRP="3572" />
+				<drawitem ID="251200" drawnum="1" drawRP="3572" />
+				<drawitem ID="261200" drawnum="1" drawRP="3571" />
+				<drawitem ID="202100" drawnum="1" drawRP="3571" />
+				<drawitem ID="212100" drawnum="1" drawRP="3571" />
+				<drawitem ID="222100" drawnum="1" drawRP="3571" />
+				<drawitem ID="232100" drawnum="1" drawRP="3571" />
+				<drawitem ID="242100" drawnum="1" drawRP="3571" />
+				<drawitem ID="252100" drawnum="1" drawRP="3571" />
+				<drawitem ID="262100" drawnum="1" drawRP="3571" />
+			</Diamonddraw01>
+			
+			<Diamonddraw10 id="02" Moneytype="2" needMoney="106400" interval="-1" >
+				<drawitem ID="811623" drawnum="10" drawRP="1500" />
+				<drawitem ID="811604" drawnum="10" drawRP="4584" />
+				<drawitem ID="811605" drawnum="10" drawRP="4584" />
+				<drawitem ID="811610" drawnum="10" drawRP="4583" />
+				<drawitem ID="811619" drawnum="10" drawRP="4583" />
+				<drawitem ID="811620" drawnum="10" drawRP="4583" />
+				<drawitem ID="811633" drawnum="10" drawRP="4583" />
+				<drawitem ID="811611" drawnum="10" drawRP="4375" />
+				<drawitem ID="811612" drawnum="10" drawRP="4375" />
+				<drawitem ID="811613" drawnum="10" drawRP="4375" />
+				<drawitem ID="811616" drawnum="10" drawRP="4375" />
+				<drawitem ID="811607" drawnum="10" drawRP="875" />
+				<drawitem ID="811615" drawnum="10" drawRP="875" />
+				<drawitem ID="811624" drawnum="10" drawRP="875" />
+				<drawitem ID="811625" drawnum="10" drawRP="875" />
+				<drawitem ID="201200" drawnum="1" drawRP="3572" />
+				<drawitem ID="211200" drawnum="1" drawRP="3572" />
+				<drawitem ID="221200" drawnum="1" drawRP="3572" />
+				<drawitem ID="231200" drawnum="1" drawRP="3572" />
+				<drawitem ID="241200" drawnum="1" drawRP="3572" />
+				<drawitem ID="251200" drawnum="1" drawRP="3572" />
+				<drawitem ID="261200" drawnum="1" drawRP="3571" />
+				<drawitem ID="202100" drawnum="1" drawRP="3571" />
+				<drawitem ID="212100" drawnum="1" drawRP="3571" />
+				<drawitem ID="222100" drawnum="1" drawRP="3571" />
+				<drawitem ID="232100" drawnum="1" drawRP="3571" />
+				<drawitem ID="242100" drawnum="1" drawRP="3571" />
+				<drawitem ID="252100" drawnum="1" drawRP="3571" />
+				<drawitem ID="262100" drawnum="1" drawRP="3571" />
+			</Diamonddraw10>
+			
+			<!--该次限时随从活动钻石抽取次数为10的整数倍时必定获得橙色装备或武魂石-->
+			<certain01 baseNum="10" addNum="10" >
+				<drawitem ID="811604" drawnum="10" drawRP="10000" />
+				<drawitem ID="811605" drawnum="10" drawRP="10000" />
+				<drawitem ID="811610" drawnum="10" drawRP="10000" />
+				<drawitem ID="811619" drawnum="10" drawRP="10000" />
+				<drawitem ID="811620" drawnum="10" drawRP="10000" />
+				<drawitem ID="811633" drawnum="10" drawRP="10000" />
+				<drawitem ID="811611" drawnum="10" drawRP="10000" />
+				<drawitem ID="811612" drawnum="10" drawRP="10000" />
+				<drawitem ID="811613" drawnum="10" drawRP="10000" />
+				<drawitem ID="811616" drawnum="10" drawRP="10000" />
+				<drawitem ID="811607" drawnum="10" drawRP="10000" />
+				<drawitem ID="811615" drawnum="10" drawRP="10000" />
+				<drawitem ID="811624" drawnum="10" drawRP="10000" />
+				<drawitem ID="811625" drawnum="10" drawRP="10000" />
+			</certain01>
+			
+			<!--该次抽奖必定获得限时随从灵魂石-->
+			<certain02 baseNum="3" addNum="4" >
+				<drawitem ID="811623" drawnum="5" drawRP="25000" />
+				<drawitem ID="811623" drawnum="6" drawRP="50000" />
+				<drawitem ID="811623" drawnum="7" drawRP="25000" />
+			</certain02>
+			
+		</limitTimeDrawID>
+		
+		
+		
+		<!--斯巴达勇士-->
+		<limitTimeDrawID ID="7">
+			<Diamonddraw01 id="01" Moneytype="2" needMoney="11200" interval="86400" >
+				<drawitem ID="811607" drawnum="10" drawRP="1500" />
+				<drawitem ID="811604" drawnum="10" drawRP="4584" />
+				<drawitem ID="811605" drawnum="10" drawRP="4584" />
+				<drawitem ID="811610" drawnum="10" drawRP="4583" />
+				<drawitem ID="811619" drawnum="10" drawRP="4583" />
+				<drawitem ID="811620" drawnum="10" drawRP="4583" />
+				<drawitem ID="811633" drawnum="10" drawRP="4583" />
+				<drawitem ID="811611" drawnum="10" drawRP="4375" />
+				<drawitem ID="811612" drawnum="10" drawRP="4375" />
+				<drawitem ID="811613" drawnum="10" drawRP="4375" />
+				<drawitem ID="811616" drawnum="10" drawRP="4375" />
+				<drawitem ID="811607" drawnum="10" drawRP="875" />
+				<drawitem ID="811615" drawnum="10" drawRP="875" />
+				<drawitem ID="811624" drawnum="10" drawRP="875" />
+				<drawitem ID="811625" drawnum="10" drawRP="875" />
+				<drawitem ID="201200" drawnum="1" drawRP="3572" />
+				<drawitem ID="211200" drawnum="1" drawRP="3572" />
+				<drawitem ID="221200" drawnum="1" drawRP="3572" />
+				<drawitem ID="231200" drawnum="1" drawRP="3572" />
+				<drawitem ID="241200" drawnum="1" drawRP="3572" />
+				<drawitem ID="251200" drawnum="1" drawRP="3572" />
+				<drawitem ID="261200" drawnum="1" drawRP="3571" />
+				<drawitem ID="202100" drawnum="1" drawRP="3571" />
+				<drawitem ID="212100" drawnum="1" drawRP="3571" />
+				<drawitem ID="222100" drawnum="1" drawRP="3571" />
+				<drawitem ID="232100" drawnum="1" drawRP="3571" />
+				<drawitem ID="242100" drawnum="1" drawRP="3571" />
+				<drawitem ID="252100" drawnum="1" drawRP="3571" />
+				<drawitem ID="262100" drawnum="1" drawRP="3571" />
+			</Diamonddraw01>
+			
+			<Diamonddraw10 id="02" Moneytype="2" needMoney="106400" interval="-1" >
+				<drawitem ID="811607" drawnum="10" drawRP="1500" />
+				<drawitem ID="811604" drawnum="10" drawRP="4584" />
+				<drawitem ID="811605" drawnum="10" drawRP="4584" />
+				<drawitem ID="811610" drawnum="10" drawRP="4583" />
+				<drawitem ID="811619" drawnum="10" drawRP="4583" />
+				<drawitem ID="811620" drawnum="10" drawRP="4583" />
+				<drawitem ID="811633" drawnum="10" drawRP="4583" />
+				<drawitem ID="811611" drawnum="10" drawRP="4375" />
+				<drawitem ID="811612" drawnum="10" drawRP="4375" />
+				<drawitem ID="811613" drawnum="10" drawRP="4375" />
+				<drawitem ID="811616" drawnum="10" drawRP="4375" />
+				<drawitem ID="811607" drawnum="10" drawRP="875" />
+				<drawitem ID="811615" drawnum="10" drawRP="875" />
+				<drawitem ID="811624" drawnum="10" drawRP="875" />
+				<drawitem ID="811625" drawnum="10" drawRP="875" />
+				<drawitem ID="201200" drawnum="1" drawRP="3572" />
+				<drawitem ID="211200" drawnum="1" drawRP="3572" />
+				<drawitem ID="221200" drawnum="1" drawRP="3572" />
+				<drawitem ID="231200" drawnum="1" drawRP="3572" />
+				<drawitem ID="241200" drawnum="1" drawRP="3572" />
+				<drawitem ID="251200" drawnum="1" drawRP="3572" />
+				<drawitem ID="261200" drawnum="1" drawRP="3571" />
+				<drawitem ID="202100" drawnum="1" drawRP="3571" />
+				<drawitem ID="212100" drawnum="1" drawRP="3571" />
+				<drawitem ID="222100" drawnum="1" drawRP="3571" />
+				<drawitem ID="232100" drawnum="1" drawRP="3571" />
+				<drawitem ID="242100" drawnum="1" drawRP="3571" />
+				<drawitem ID="252100" drawnum="1" drawRP="3571" />
+				<drawitem ID="262100" drawnum="1" drawRP="3571" />
+			</Diamonddraw10>
+			
+			<!--该次限时随从活动钻石抽取次数为10的整数倍时必定获得橙色装备或武魂石-->
+			<certain01 baseNum="10" addNum="10" >
+				<drawitem ID="811604" drawnum="10" drawRP="10000" />
+				<drawitem ID="811605" drawnum="10" drawRP="10000" />
+				<drawitem ID="811610" drawnum="10" drawRP="10000" />
+				<drawitem ID="811619" drawnum="10" drawRP="10000" />
+				<drawitem ID="811620" drawnum="10" drawRP="10000" />
+				<drawitem ID="811633" drawnum="10" drawRP="10000" />
+				<drawitem ID="811611" drawnum="10" drawRP="10000" />
+				<drawitem ID="811612" drawnum="10" drawRP="10000" />
+				<drawitem ID="811613" drawnum="10" drawRP="10000" />
+				<drawitem ID="811616" drawnum="10" drawRP="10000" />
+				<drawitem ID="811607" drawnum="10" drawRP="10000" />
+				<drawitem ID="811615" drawnum="10" drawRP="10000" />
+				<drawitem ID="811624" drawnum="10" drawRP="10000" />
+				<drawitem ID="811625" drawnum="10" drawRP="10000" />
+			</certain01>
+			
+			<!--该次抽奖必定获得限时随从灵魂石-->
+			<certain02 baseNum="3" addNum="4" >
+				<drawitem ID="811607" drawnum="5" drawRP="25000" />
+				<drawitem ID="811607" drawnum="6" drawRP="50000" />
+				<drawitem ID="811607" drawnum="7" drawRP="25000" />
+			</certain02>
+			
+		</limitTimeDrawID>
+		
+		
+		
+		<!--光明牧师-->
+		<limitTimeDrawID ID="8">
+			<Diamonddraw01 id="01" Moneytype="2" needMoney="11200" interval="86400" >
+				<drawitem ID="811615" drawnum="10" drawRP="1500" />
+				<drawitem ID="811604" drawnum="10" drawRP="4584" />
+				<drawitem ID="811605" drawnum="10" drawRP="4584" />
+				<drawitem ID="811610" drawnum="10" drawRP="4583" />
+				<drawitem ID="811619" drawnum="10" drawRP="4583" />
+				<drawitem ID="811620" drawnum="10" drawRP="4583" />
+				<drawitem ID="811633" drawnum="10" drawRP="4583" />
+				<drawitem ID="811611" drawnum="10" drawRP="4375" />
+				<drawitem ID="811612" drawnum="10" drawRP="4375" />
+				<drawitem ID="811613" drawnum="10" drawRP="4375" />
+				<drawitem ID="811616" drawnum="10" drawRP="4375" />
+				<drawitem ID="811607" drawnum="10" drawRP="875" />
+				<drawitem ID="811615" drawnum="10" drawRP="875" />
+				<drawitem ID="811624" drawnum="10" drawRP="875" />
+				<drawitem ID="811625" drawnum="10" drawRP="875" />
+				<drawitem ID="201200" drawnum="1" drawRP="3572" />
+				<drawitem ID="211200" drawnum="1" drawRP="3572" />
+				<drawitem ID="221200" drawnum="1" drawRP="3572" />
+				<drawitem ID="231200" drawnum="1" drawRP="3572" />
+				<drawitem ID="241200" drawnum="1" drawRP="3572" />
+				<drawitem ID="251200" drawnum="1" drawRP="3572" />
+				<drawitem ID="261200" drawnum="1" drawRP="3571" />
+				<drawitem ID="202100" drawnum="1" drawRP="3571" />
+				<drawitem ID="212100" drawnum="1" drawRP="3571" />
+				<drawitem ID="222100" drawnum="1" drawRP="3571" />
+				<drawitem ID="232100" drawnum="1" drawRP="3571" />
+				<drawitem ID="242100" drawnum="1" drawRP="3571" />
+				<drawitem ID="252100" drawnum="1" drawRP="3571" />
+				<drawitem ID="262100" drawnum="1" drawRP="3571" />
+			</Diamonddraw01>
+			
+			<Diamonddraw10 id="02" Moneytype="2" needMoney="106400" interval="-1" >
+				<drawitem ID="811615" drawnum="10" drawRP="1500" />
+				<drawitem ID="811604" drawnum="10" drawRP="4584" />
+				<drawitem ID="811605" drawnum="10" drawRP="4584" />
+				<drawitem ID="811610" drawnum="10" drawRP="4583" />
+				<drawitem ID="811619" drawnum="10" drawRP="4583" />
+				<drawitem ID="811620" drawnum="10" drawRP="4583" />
+				<drawitem ID="811633" drawnum="10" drawRP="4583" />
+				<drawitem ID="811611" drawnum="10" drawRP="4375" />
+				<drawitem ID="811612" drawnum="10" drawRP="4375" />
+				<drawitem ID="811613" drawnum="10" drawRP="4375" />
+				<drawitem ID="811616" drawnum="10" drawRP="4375" />
+				<drawitem ID="811607" drawnum="10" drawRP="875" />
+				<drawitem ID="811615" drawnum="10" drawRP="875" />
+				<drawitem ID="811624" drawnum="10" drawRP="875" />
+				<drawitem ID="811625" drawnum="10" drawRP="875" />
+				<drawitem ID="201200" drawnum="1" drawRP="3572" />
+				<drawitem ID="211200" drawnum="1" drawRP="3572" />
+				<drawitem ID="221200" drawnum="1" drawRP="3572" />
+				<drawitem ID="231200" drawnum="1" drawRP="3572" />
+				<drawitem ID="241200" drawnum="1" drawRP="3572" />
+				<drawitem ID="251200" drawnum="1" drawRP="3572" />
+				<drawitem ID="261200" drawnum="1" drawRP="3571" />
+				<drawitem ID="202100" drawnum="1" drawRP="3571" />
+				<drawitem ID="212100" drawnum="1" drawRP="3571" />
+				<drawitem ID="222100" drawnum="1" drawRP="3571" />
+				<drawitem ID="232100" drawnum="1" drawRP="3571" />
+				<drawitem ID="242100" drawnum="1" drawRP="3571" />
+				<drawitem ID="252100" drawnum="1" drawRP="3571" />
+				<drawitem ID="262100" drawnum="1" drawRP="3571" />
+			</Diamonddraw10>
+			
+			<!--该次限时随从活动钻石抽取次数为10的整数倍时必定获得橙色装备或武魂石-->
+			<certain01 baseNum="10" addNum="10" >
+				<drawitem ID="811604" drawnum="10" drawRP="10000" />
+				<drawitem ID="811605" drawnum="10" drawRP="10000" />
+				<drawitem ID="811610" drawnum="10" drawRP="10000" />
+				<drawitem ID="811619" drawnum="10" drawRP="10000" />
+				<drawitem ID="811620" drawnum="10" drawRP="10000" />
+				<drawitem ID="811633" drawnum="10" drawRP="10000" />
+				<drawitem ID="811611" drawnum="10" drawRP="10000" />
+				<drawitem ID="811612" drawnum="10" drawRP="10000" />
+				<drawitem ID="811613" drawnum="10" drawRP="10000" />
+				<drawitem ID="811616" drawnum="10" drawRP="10000" />
+				<drawitem ID="811607" drawnum="10" drawRP="10000" />
+				<drawitem ID="811615" drawnum="10" drawRP="10000" />
+				<drawitem ID="811624" drawnum="10" drawRP="10000" />
+				<drawitem ID="811625" drawnum="10" drawRP="10000" />
+			</certain01>
+			
+			<!--该次抽奖必定获得限时随从灵魂石-->
+			<certain02 baseNum="3" addNum="4" >
+				<drawitem ID="811615" drawnum="5" drawRP="25000" />
+				<drawitem ID="811615" drawnum="6" drawRP="50000" />
+				<drawitem ID="811615" drawnum="7" drawRP="25000" />
+			</certain02>
+			
+		</limitTimeDrawID>
+		
+		
+		
+		<!--王尼玛-->
+		<limitTimeDrawID ID="9">
+			<Diamonddraw01 id="01" Moneytype="2" needMoney="11200" interval="86400" >
+				<drawitem ID="811628" drawnum="10" drawRP="1500" />
+				<drawitem ID="811604" drawnum="10" drawRP="4584" />
+				<drawitem ID="811605" drawnum="10" drawRP="4584" />
+				<drawitem ID="811610" drawnum="10" drawRP="4583" />
+				<drawitem ID="811619" drawnum="10" drawRP="4583" />
+				<drawitem ID="811620" drawnum="10" drawRP="4583" />
+				<drawitem ID="811633" drawnum="10" drawRP="4583" />
+				<drawitem ID="811611" drawnum="10" drawRP="4375" />
+				<drawitem ID="811612" drawnum="10" drawRP="4375" />
+				<drawitem ID="811613" drawnum="10" drawRP="4375" />
+				<drawitem ID="811616" drawnum="10" drawRP="4375" />
+				<drawitem ID="811607" drawnum="10" drawRP="875" />
+				<drawitem ID="811615" drawnum="10" drawRP="875" />
+				<drawitem ID="811624" drawnum="10" drawRP="875" />
+				<drawitem ID="811625" drawnum="10" drawRP="875" />
+				<drawitem ID="201200" drawnum="1" drawRP="3572" />
+				<drawitem ID="211200" drawnum="1" drawRP="3572" />
+				<drawitem ID="221200" drawnum="1" drawRP="3572" />
+				<drawitem ID="231200" drawnum="1" drawRP="3572" />
+				<drawitem ID="241200" drawnum="1" drawRP="3572" />
+				<drawitem ID="251200" drawnum="1" drawRP="3572" />
+				<drawitem ID="261200" drawnum="1" drawRP="3571" />
+				<drawitem ID="202100" drawnum="1" drawRP="3571" />
+				<drawitem ID="212100" drawnum="1" drawRP="3571" />
+				<drawitem ID="222100" drawnum="1" drawRP="3571" />
+				<drawitem ID="232100" drawnum="1" drawRP="3571" />
+				<drawitem ID="242100" drawnum="1" drawRP="3571" />
+				<drawitem ID="252100" drawnum="1" drawRP="3571" />
+				<drawitem ID="262100" drawnum="1" drawRP="3571" />
+			</Diamonddraw01>
+			
+			<Diamonddraw10 id="02" Moneytype="2" needMoney="106400" interval="-1" >
+				<drawitem ID="811628" drawnum="10" drawRP="1500" />
+				<drawitem ID="811604" drawnum="10" drawRP="4584" />
+				<drawitem ID="811605" drawnum="10" drawRP="4584" />
+				<drawitem ID="811610" drawnum="10" drawRP="4583" />
+				<drawitem ID="811619" drawnum="10" drawRP="4583" />
+				<drawitem ID="811620" drawnum="10" drawRP="4583" />
+				<drawitem ID="811633" drawnum="10" drawRP="4583" />
+				<drawitem ID="811611" drawnum="10" drawRP="4375" />
+				<drawitem ID="811612" drawnum="10" drawRP="4375" />
+				<drawitem ID="811613" drawnum="10" drawRP="4375" />
+				<drawitem ID="811616" drawnum="10" drawRP="4375" />
+				<drawitem ID="811607" drawnum="10" drawRP="875" />
+				<drawitem ID="811615" drawnum="10" drawRP="875" />
+				<drawitem ID="811624" drawnum="10" drawRP="875" />
+				<drawitem ID="811625" drawnum="10" drawRP="875" />
+				<drawitem ID="201200" drawnum="1" drawRP="3572" />
+				<drawitem ID="211200" drawnum="1" drawRP="3572" />
+				<drawitem ID="221200" drawnum="1" drawRP="3572" />
+				<drawitem ID="231200" drawnum="1" drawRP="3572" />
+				<drawitem ID="241200" drawnum="1" drawRP="3572" />
+				<drawitem ID="251200" drawnum="1" drawRP="3572" />
+				<drawitem ID="261200" drawnum="1" drawRP="3571" />
+				<drawitem ID="202100" drawnum="1" drawRP="3571" />
+				<drawitem ID="212100" drawnum="1" drawRP="3571" />
+				<drawitem ID="222100" drawnum="1" drawRP="3571" />
+				<drawitem ID="232100" drawnum="1" drawRP="3571" />
+				<drawitem ID="242100" drawnum="1" drawRP="3571" />
+				<drawitem ID="252100" drawnum="1" drawRP="3571" />
+				<drawitem ID="262100" drawnum="1" drawRP="3571" />
+			</Diamonddraw10>
+			
+			<!--该次限时随从活动钻石抽取次数为10的整数倍时必定获得橙色装备或武魂石-->
+			<certain01 baseNum="10" addNum="10" >
+				<drawitem ID="811604" drawnum="10" drawRP="10000" />
+				<drawitem ID="811605" drawnum="10" drawRP="10000" />
+				<drawitem ID="811610" drawnum="10" drawRP="10000" />
+				<drawitem ID="811619" drawnum="10" drawRP="10000" />
+				<drawitem ID="811620" drawnum="10" drawRP="10000" />
+				<drawitem ID="811633" drawnum="10" drawRP="10000" />
+				<drawitem ID="811611" drawnum="10" drawRP="10000" />
+				<drawitem ID="811612" drawnum="10" drawRP="10000" />
+				<drawitem ID="811613" drawnum="10" drawRP="10000" />
+				<drawitem ID="811616" drawnum="10" drawRP="10000" />
+				<drawitem ID="811607" drawnum="10" drawRP="10000" />
+				<drawitem ID="811615" drawnum="10" drawRP="10000" />
+				<drawitem ID="811624" drawnum="10" drawRP="10000" />
+				<drawitem ID="811625" drawnum="10" drawRP="10000" />
+			</certain01>
+			
+			<!--该次抽奖必定获得限时随从灵魂石-->
+			<certain02 baseNum="3" addNum="4" >
+				<drawitem ID="811628" drawnum="5" drawRP="25000" />
+				<drawitem ID="811628" drawnum="6" drawRP="50000" />
+				<drawitem ID="811628" drawnum="7" drawRP="25000" />
+			</certain02>
+			
+		</limitTimeDrawID>
+		
+		
+		
+		<!--张全蛋-->
+		<limitTimeDrawID ID="10">
+			<Diamonddraw01 id="01" Moneytype="2" needMoney="11200" interval="86400" >
+				<drawitem ID="811629" drawnum="10" drawRP="1500" />
+				<drawitem ID="811604" drawnum="10" drawRP="4584" />
+				<drawitem ID="811605" drawnum="10" drawRP="4584" />
+				<drawitem ID="811610" drawnum="10" drawRP="4583" />
+				<drawitem ID="811619" drawnum="10" drawRP="4583" />
+				<drawitem ID="811620" drawnum="10" drawRP="4583" />
+				<drawitem ID="811633" drawnum="10" drawRP="4583" />
+				<drawitem ID="811611" drawnum="10" drawRP="4375" />
+				<drawitem ID="811612" drawnum="10" drawRP="4375" />
+				<drawitem ID="811613" drawnum="10" drawRP="4375" />
+				<drawitem ID="811616" drawnum="10" drawRP="4375" />
+				<drawitem ID="811607" drawnum="10" drawRP="875" />
+				<drawitem ID="811615" drawnum="10" drawRP="875" />
+				<drawitem ID="811624" drawnum="10" drawRP="875" />
+				<drawitem ID="811625" drawnum="10" drawRP="875" />
+				<drawitem ID="201200" drawnum="1" drawRP="3572" />
+				<drawitem ID="211200" drawnum="1" drawRP="3572" />
+				<drawitem ID="221200" drawnum="1" drawRP="3572" />
+				<drawitem ID="231200" drawnum="1" drawRP="3572" />
+				<drawitem ID="241200" drawnum="1" drawRP="3572" />
+				<drawitem ID="251200" drawnum="1" drawRP="3572" />
+				<drawitem ID="261200" drawnum="1" drawRP="3571" />
+				<drawitem ID="202100" drawnum="1" drawRP="3571" />
+				<drawitem ID="212100" drawnum="1" drawRP="3571" />
+				<drawitem ID="222100" drawnum="1" drawRP="3571" />
+				<drawitem ID="232100" drawnum="1" drawRP="3571" />
+				<drawitem ID="242100" drawnum="1" drawRP="3571" />
+				<drawitem ID="252100" drawnum="1" drawRP="3571" />
+				<drawitem ID="262100" drawnum="1" drawRP="3571" />
+			</Diamonddraw01>
+			
+			<Diamonddraw10 id="02" Moneytype="2" needMoney="106400" interval="-1" >
+				<drawitem ID="811629" drawnum="10" drawRP="1500" />
+				<drawitem ID="811604" drawnum="10" drawRP="4584" />
+				<drawitem ID="811605" drawnum="10" drawRP="4584" />
+				<drawitem ID="811610" drawnum="10" drawRP="4583" />
+				<drawitem ID="811619" drawnum="10" drawRP="4583" />
+				<drawitem ID="811620" drawnum="10" drawRP="4583" />
+				<drawitem ID="811633" drawnum="10" drawRP="4583" />
+				<drawitem ID="811611" drawnum="10" drawRP="4375" />
+				<drawitem ID="811612" drawnum="10" drawRP="4375" />
+				<drawitem ID="811613" drawnum="10" drawRP="4375" />
+				<drawitem ID="811616" drawnum="10" drawRP="4375" />
+				<drawitem ID="811607" drawnum="10" drawRP="875" />
+				<drawitem ID="811615" drawnum="10" drawRP="875" />
+				<drawitem ID="811624" drawnum="10" drawRP="875" />
+				<drawitem ID="811625" drawnum="10" drawRP="875" />
+				<drawitem ID="201200" drawnum="1" drawRP="3572" />
+				<drawitem ID="211200" drawnum="1" drawRP="3572" />
+				<drawitem ID="221200" drawnum="1" drawRP="3572" />
+				<drawitem ID="231200" drawnum="1" drawRP="3572" />
+				<drawitem ID="241200" drawnum="1" drawRP="3572" />
+				<drawitem ID="251200" drawnum="1" drawRP="3572" />
+				<drawitem ID="261200" drawnum="1" drawRP="3571" />
+				<drawitem ID="202100" drawnum="1" drawRP="3571" />
+				<drawitem ID="212100" drawnum="1" drawRP="3571" />
+				<drawitem ID="222100" drawnum="1" drawRP="3571" />
+				<drawitem ID="232100" drawnum="1" drawRP="3571" />
+				<drawitem ID="242100" drawnum="1" drawRP="3571" />
+				<drawitem ID="252100" drawnum="1" drawRP="3571" />
+				<drawitem ID="262100" drawnum="1" drawRP="3571" />
+			</Diamonddraw10>
+			
+			<!--该次限时随从活动钻石抽取次数为10的整数倍时必定获得橙色装备或武魂石-->
+			<certain01 baseNum="10" addNum="10" >
+				<drawitem ID="811604" drawnum="10" drawRP="10000" />
+				<drawitem ID="811605" drawnum="10" drawRP="10000" />
+				<drawitem ID="811610" drawnum="10" drawRP="10000" />
+				<drawitem ID="811619" drawnum="10" drawRP="10000" />
+				<drawitem ID="811620" drawnum="10" drawRP="10000" />
+				<drawitem ID="811633" drawnum="10" drawRP="10000" />
+				<drawitem ID="811611" drawnum="10" drawRP="10000" />
+				<drawitem ID="811612" drawnum="10" drawRP="10000" />
+				<drawitem ID="811613" drawnum="10" drawRP="10000" />
+				<drawitem ID="811616" drawnum="10" drawRP="10000" />
+				<drawitem ID="811607" drawnum="10" drawRP="10000" />
+				<drawitem ID="811615" drawnum="10" drawRP="10000" />
+				<drawitem ID="811624" drawnum="10" drawRP="10000" />
+				<drawitem ID="811625" drawnum="10" drawRP="10000" />
+			</certain01>
+			
+			<!--该次抽奖必定获得限时随从灵魂石-->
+			<certain02 baseNum="3" addNum="4" >
+				<drawitem ID="811629" drawnum="5" drawRP="25000" />
+				<drawitem ID="811629" drawnum="6" drawRP="50000" />
+				<drawitem ID="811629" drawnum="7" drawRP="25000" />
+			</certain02>
+			
+		</limitTimeDrawID>
+		
+		
+		<!--王尼美-->
+		<limitTimeDrawID ID="11">
+			<Diamonddraw01 id="01" Moneytype="2" needMoney="11200" interval="86400" >
+				<drawitem ID="811630" drawnum="10" drawRP="1500" />
+				<drawitem ID="811604" drawnum="10" drawRP="4584" />
+				<drawitem ID="811605" drawnum="10" drawRP="4584" />
+				<drawitem ID="811610" drawnum="10" drawRP="4583" />
+				<drawitem ID="811619" drawnum="10" drawRP="4583" />
+				<drawitem ID="811620" drawnum="10" drawRP="4583" />
+				<drawitem ID="811633" drawnum="10" drawRP="4583" />
+				<drawitem ID="811611" drawnum="10" drawRP="4375" />
+				<drawitem ID="811612" drawnum="10" drawRP="4375" />
+				<drawitem ID="811613" drawnum="10" drawRP="4375" />
+				<drawitem ID="811616" drawnum="10" drawRP="4375" />
+				<drawitem ID="811607" drawnum="10" drawRP="875" />
+				<drawitem ID="811615" drawnum="10" drawRP="875" />
+				<drawitem ID="811624" drawnum="10" drawRP="875" />
+				<drawitem ID="811625" drawnum="10" drawRP="875" />
+				<drawitem ID="201200" drawnum="1" drawRP="3572" />
+				<drawitem ID="211200" drawnum="1" drawRP="3572" />
+				<drawitem ID="221200" drawnum="1" drawRP="3572" />
+				<drawitem ID="231200" drawnum="1" drawRP="3572" />
+				<drawitem ID="241200" drawnum="1" drawRP="3572" />
+				<drawitem ID="251200" drawnum="1" drawRP="3572" />
+				<drawitem ID="261200" drawnum="1" drawRP="3571" />
+				<drawitem ID="202100" drawnum="1" drawRP="3571" />
+				<drawitem ID="212100" drawnum="1" drawRP="3571" />
+				<drawitem ID="222100" drawnum="1" drawRP="3571" />
+				<drawitem ID="232100" drawnum="1" drawRP="3571" />
+				<drawitem ID="242100" drawnum="1" drawRP="3571" />
+				<drawitem ID="252100" drawnum="1" drawRP="3571" />
+				<drawitem ID="262100" drawnum="1" drawRP="3571" />
+			</Diamonddraw01>
+			
+			<Diamonddraw10 id="02" Moneytype="2" needMoney="116400" interval="-1" >
+				<drawitem ID="811630" drawnum="10" drawRP="1500" />
+				<drawitem ID="811604" drawnum="10" drawRP="4584" />
+				<drawitem ID="811605" drawnum="10" drawRP="4584" />
+				<drawitem ID="811610" drawnum="10" drawRP="4583" />
+				<drawitem ID="811619" drawnum="10" drawRP="4583" />
+				<drawitem ID="811620" drawnum="10" drawRP="4583" />
+				<drawitem ID="811633" drawnum="10" drawRP="4583" />
+				<drawitem ID="811611" drawnum="10" drawRP="4375" />
+				<drawitem ID="811612" drawnum="10" drawRP="4375" />
+				<drawitem ID="811613" drawnum="10" drawRP="4375" />
+				<drawitem ID="811616" drawnum="10" drawRP="4375" />
+				<drawitem ID="811607" drawnum="10" drawRP="875" />
+				<drawitem ID="811615" drawnum="10" drawRP="875" />
+				<drawitem ID="811624" drawnum="10" drawRP="875" />
+				<drawitem ID="811625" drawnum="10" drawRP="875" />
+				<drawitem ID="201200" drawnum="1" drawRP="3572" />
+				<drawitem ID="211200" drawnum="1" drawRP="3572" />
+				<drawitem ID="221200" drawnum="1" drawRP="3572" />
+				<drawitem ID="231200" drawnum="1" drawRP="3572" />
+				<drawitem ID="241200" drawnum="1" drawRP="3572" />
+				<drawitem ID="251200" drawnum="1" drawRP="3572" />
+				<drawitem ID="261200" drawnum="1" drawRP="3571" />
+				<drawitem ID="202100" drawnum="1" drawRP="3571" />
+				<drawitem ID="212100" drawnum="1" drawRP="3571" />
+				<drawitem ID="222100" drawnum="1" drawRP="3571" />
+				<drawitem ID="232100" drawnum="1" drawRP="3571" />
+				<drawitem ID="242100" drawnum="1" drawRP="3571" />
+				<drawitem ID="252100" drawnum="1" drawRP="3571" />
+				<drawitem ID="262100" drawnum="1" drawRP="3571" />
+			</Diamonddraw10>
+			
+			<!--该次限时随从活动钻石抽取次数为10的整数倍时必定获得橙色装备或武魂石-->
+			<certain01 baseNum="10" addNum="10" >
+				<drawitem ID="811604" drawnum="10" drawRP="10000" />
+				<drawitem ID="811605" drawnum="10" drawRP="10000" />
+				<drawitem ID="811610" drawnum="10" drawRP="10000" />
+				<drawitem ID="811619" drawnum="10" drawRP="10000" />
+				<drawitem ID="811620" drawnum="10" drawRP="10000" />
+				<drawitem ID="811633" drawnum="10" drawRP="10000" />
+				<drawitem ID="811611" drawnum="10" drawRP="10000" />
+				<drawitem ID="811612" drawnum="10" drawRP="10000" />
+				<drawitem ID="811613" drawnum="10" drawRP="10000" />
+				<drawitem ID="811616" drawnum="10" drawRP="10000" />
+				<drawitem ID="811607" drawnum="10" drawRP="10000" />
+				<drawitem ID="811615" drawnum="10" drawRP="10000" />
+				<drawitem ID="811624" drawnum="10" drawRP="10000" />
+				<drawitem ID="811625" drawnum="10" drawRP="10000" />
+			</certain01>
+			
+			<!--该次抽奖必定获得限时随从灵魂石-->
+			<certain02 baseNum="3" addNum="4" >
+				<drawitem ID="811630" drawnum="5" drawRP="25000" />
+				<drawitem ID="811630" drawnum="6" drawRP="50000" />
+				<drawitem ID="811630" drawnum="7" drawRP="25000" />
+			</certain02>
+			
+		</limitTimeDrawID>
+		
+		
+		<!--26品质装备  火神-->
+		<limitTimeDrawID ID="12">
+			<Diamonddraw01 id="01" Moneytype="2" needMoney="280" interval="86400" >
+				<drawitem ID="201200" drawnum="1" drawRP="57142" />
+				<drawitem ID="211200" drawnum="1" drawRP="57142" />
+				<drawitem ID="221200" drawnum="1" drawRP="57143" />
+				<drawitem ID="231200" drawnum="1" drawRP="57143" />
+				<drawitem ID="241200" drawnum="1" drawRP="57143" />
+				<drawitem ID="251200" drawnum="1" drawRP="57143" />
+				<drawitem ID="261200" drawnum="1" drawRP="57143" />
+				<drawitem ID="202100" drawnum="1" drawRP="57143" />
+				<drawitem ID="212100" drawnum="1" drawRP="57143" />
+				<drawitem ID="222100" drawnum="1" drawRP="57143" />
+				<drawitem ID="232100" drawnum="1" drawRP="57143" />
+				<drawitem ID="242100" drawnum="1" drawRP="57143" />
+				<drawitem ID="252100" drawnum="1" drawRP="57143" />
+				<drawitem ID="262100" drawnum="1" drawRP="57143" />
+				<drawitem ID="202200" drawnum="1" drawRP="4848" />
+				<drawitem ID="242200" drawnum="1" drawRP="4849" />
+				<drawitem ID="262200" drawnum="1" drawRP="4848" />
+				<drawitem ID="212210" drawnum="1" drawRP="4849" />
+				<drawitem ID="232210" drawnum="1" drawRP="4848" />
+				<drawitem ID="262210" drawnum="1" drawRP="4849" />
+				<drawitem ID="242220" drawnum="1" drawRP="4848" />
+				<drawitem ID="252220" drawnum="1" drawRP="4849" />
+				<drawitem ID="262220" drawnum="1" drawRP="4848" />
+				<drawitem ID="212230" drawnum="1" drawRP="4849" />
+				<drawitem ID="222230" drawnum="1" drawRP="4848" />
+				<drawitem ID="252230" drawnum="1" drawRP="4849" />
+				<drawitem ID="212240" drawnum="1" drawRP="4848" />
+				<drawitem ID="232240" drawnum="1" drawRP="4849" />
+				<drawitem ID="252240" drawnum="1" drawRP="4848" />
+				<drawitem ID="202250" drawnum="1" drawRP="4849" />
+				<drawitem ID="222250" drawnum="1" drawRP="4848" />
+				<drawitem ID="232250" drawnum="1" drawRP="4849" />
+				<drawitem ID="202260" drawnum="1" drawRP="4848" />
+				<drawitem ID="212260" drawnum="1" drawRP="4849" />
+				<drawitem ID="222260" drawnum="1" drawRP="4848" />
+				<drawitem ID="232260" drawnum="1" drawRP="4849" />
+				<drawitem ID="252260" drawnum="1" drawRP="4848" />
+				<drawitem ID="202270" drawnum="1" drawRP="4849" />
+				<drawitem ID="212270" drawnum="1" drawRP="4848" />
+				<drawitem ID="222270" drawnum="1" drawRP="4849" />
+				<drawitem ID="202280" drawnum="1" drawRP="4848" />
+				<drawitem ID="232280" drawnum="1" drawRP="4849" />
+				<drawitem ID="242280" drawnum="1" drawRP="4848" />
+				<drawitem ID="262280" drawnum="1" drawRP="4849" />
+				<drawitem ID="222290" drawnum="1" drawRP="4848" />
+				<drawitem ID="242290" drawnum="1" drawRP="4849" />
+				<drawitem ID="252290" drawnum="1" drawRP="4848" />
+				<drawitem ID="202600" drawnum="1" drawRP="5714" />
+				<drawitem ID="212600" drawnum="1" drawRP="5715" />
+				<drawitem ID="222600" drawnum="1" drawRP="5714" />
+				<drawitem ID="232600" drawnum="1" drawRP="5715" />
+				<drawitem ID="242600" drawnum="1" drawRP="5714" />
+				<drawitem ID="252600" drawnum="1" drawRP="5714" />
+				<drawitem ID="262600" drawnum="1" drawRP="5714" />
+			</Diamonddraw01>
+			
+			<Diamonddraw10 id="02" Moneytype="2" needMoney="2660" interval="-1" >
+				<drawitem ID="201200" drawnum="1" drawRP="57142" />
+				<drawitem ID="211200" drawnum="1" drawRP="57142" />
+				<drawitem ID="221200" drawnum="1" drawRP="57143" />
+				<drawitem ID="231200" drawnum="1" drawRP="57143" />
+				<drawitem ID="241200" drawnum="1" drawRP="57143" />
+				<drawitem ID="251200" drawnum="1" drawRP="57143" />
+				<drawitem ID="261200" drawnum="1" drawRP="57143" />
+				<drawitem ID="202100" drawnum="1" drawRP="57143" />
+				<drawitem ID="212100" drawnum="1" drawRP="57143" />
+				<drawitem ID="222100" drawnum="1" drawRP="57143" />
+				<drawitem ID="232100" drawnum="1" drawRP="57143" />
+				<drawitem ID="242100" drawnum="1" drawRP="57143" />
+				<drawitem ID="252100" drawnum="1" drawRP="57143" />
+				<drawitem ID="262100" drawnum="1" drawRP="57143" />
+				<drawitem ID="202200" drawnum="1" drawRP="4848" />
+				<drawitem ID="242200" drawnum="1" drawRP="4849" />
+				<drawitem ID="262200" drawnum="1" drawRP="4848" />
+				<drawitem ID="212210" drawnum="1" drawRP="4849" />
+				<drawitem ID="232210" drawnum="1" drawRP="4848" />
+				<drawitem ID="262210" drawnum="1" drawRP="4849" />
+				<drawitem ID="242220" drawnum="1" drawRP="4848" />
+				<drawitem ID="252220" drawnum="1" drawRP="4849" />
+				<drawitem ID="262220" drawnum="1" drawRP="4848" />
+				<drawitem ID="212230" drawnum="1" drawRP="4849" />
+				<drawitem ID="222230" drawnum="1" drawRP="4848" />
+				<drawitem ID="252230" drawnum="1" drawRP="4849" />
+				<drawitem ID="212240" drawnum="1" drawRP="4848" />
+				<drawitem ID="232240" drawnum="1" drawRP="4849" />
+				<drawitem ID="252240" drawnum="1" drawRP="4848" />
+				<drawitem ID="202250" drawnum="1" drawRP="4849" />
+				<drawitem ID="222250" drawnum="1" drawRP="4848" />
+				<drawitem ID="232250" drawnum="1" drawRP="4849" />
+				<drawitem ID="202260" drawnum="1" drawRP="4848" />
+				<drawitem ID="212260" drawnum="1" drawRP="4849" />
+				<drawitem ID="222260" drawnum="1" drawRP="4848" />
+				<drawitem ID="232260" drawnum="1" drawRP="4849" />
+				<drawitem ID="252260" drawnum="1" drawRP="4848" />
+				<drawitem ID="202270" drawnum="1" drawRP="4849" />
+				<drawitem ID="212270" drawnum="1" drawRP="4848" />
+				<drawitem ID="222270" drawnum="1" drawRP="4849" />
+				<drawitem ID="202280" drawnum="1" drawRP="4848" />
+				<drawitem ID="232280" drawnum="1" drawRP="4849" />
+				<drawitem ID="242280" drawnum="1" drawRP="4848" />
+				<drawitem ID="262280" drawnum="1" drawRP="4849" />
+				<drawitem ID="222290" drawnum="1" drawRP="4848" />
+				<drawitem ID="242290" drawnum="1" drawRP="4849" />
+				<drawitem ID="252290" drawnum="1" drawRP="4848" />
+				<drawitem ID="202600" drawnum="1" drawRP="5714" />
+				<drawitem ID="212600" drawnum="1" drawRP="5715" />
+				<drawitem ID="222600" drawnum="1" drawRP="5714" />
+				<drawitem ID="232600" drawnum="1" drawRP="5715" />
+				<drawitem ID="242600" drawnum="1" drawRP="5714" />
+				<drawitem ID="252600" drawnum="1" drawRP="5714" />
+				<drawitem ID="262600" drawnum="1" drawRP="5714" />
+			</Diamonddraw10>
+			
+			<!--该次限时随从活动钻石抽取次数为10的整数倍时必定获得橙色装备或武魂石-->
+			<certain01 baseNum="10" addNum="10" >
+				<drawitem ID="202200" drawnum="1" drawRP="27273" />
+				<drawitem ID="242200" drawnum="1" drawRP="27272" />
+				<drawitem ID="262200" drawnum="1" drawRP="27273" />
+				<drawitem ID="212210" drawnum="1" drawRP="27273" />
+				<drawitem ID="232210" drawnum="1" drawRP="27273" />
+				<drawitem ID="262210" drawnum="1" drawRP="27273" />
+				<drawitem ID="242220" drawnum="1" drawRP="27273" />
+				<drawitem ID="252220" drawnum="1" drawRP="27272" />
+				<drawitem ID="262220" drawnum="1" drawRP="27273" />
+				<drawitem ID="212230" drawnum="1" drawRP="27273" />
+				<drawitem ID="222230" drawnum="1" drawRP="27273" />
+				<drawitem ID="252230" drawnum="1" drawRP="27272" />
+				<drawitem ID="212240" drawnum="1" drawRP="27273" />
+				<drawitem ID="232240" drawnum="1" drawRP="27273" />
+				<drawitem ID="252240" drawnum="1" drawRP="27273" />
+				<drawitem ID="202250" drawnum="1" drawRP="27273" />
+				<drawitem ID="222250" drawnum="1" drawRP="27273" />
+				<drawitem ID="232250" drawnum="1" drawRP="27273" />
+				<drawitem ID="202260" drawnum="1" drawRP="27272" />
+				<drawitem ID="212260" drawnum="1" drawRP="27273" />
+				<drawitem ID="222260" drawnum="1" drawRP="27273" />
+				<drawitem ID="232260" drawnum="1" drawRP="27273" />
+				<drawitem ID="252260" drawnum="1" drawRP="27273" />
+				<drawitem ID="202270" drawnum="1" drawRP="27272" />
+				<drawitem ID="212270" drawnum="1" drawRP="27273" />
+				<drawitem ID="222270" drawnum="1" drawRP="27273" />
+				<drawitem ID="202280" drawnum="1" drawRP="27273" />
+				<drawitem ID="232280" drawnum="1" drawRP="27273" />
+				<drawitem ID="242280" drawnum="1" drawRP="27272" />
+				<drawitem ID="262280" drawnum="1" drawRP="27272" />
+				<drawitem ID="222290" drawnum="1" drawRP="27273" />
+				<drawitem ID="242290" drawnum="1" drawRP="27272" />
+				<drawitem ID="252290" drawnum="1" drawRP="27272" />
+				<drawitem ID="202600" drawnum="1" drawRP="14286" />
+				<drawitem ID="212600" drawnum="1" drawRP="14286" />
+				<drawitem ID="222600" drawnum="1" drawRP="14286" />
+				<drawitem ID="232600" drawnum="1" drawRP="14286" />
+				<drawitem ID="242600" drawnum="1" drawRP="14285" />
+				<drawitem ID="252600" drawnum="1" drawRP="14286" />
+				<drawitem ID="262600" drawnum="1" drawRP="14285" />
+			</certain01>
+			
+			<!--该次抽奖必定获得限时随从灵魂石-->
+			<certain02 baseNum="3" addNum="4" >
+				<drawitem ID="201200" drawnum="1" drawRP="57142" />
+				<drawitem ID="211200" drawnum="1" drawRP="57142" />
+				<drawitem ID="221200" drawnum="1" drawRP="57143" />
+				<drawitem ID="231200" drawnum="1" drawRP="57143" />
+				<drawitem ID="241200" drawnum="1" drawRP="57143" />
+				<drawitem ID="251200" drawnum="1" drawRP="57143" />
+				<drawitem ID="261200" drawnum="1" drawRP="57143" />
+				<drawitem ID="202100" drawnum="1" drawRP="57143" />
+				<drawitem ID="212100" drawnum="1" drawRP="57143" />
+				<drawitem ID="222100" drawnum="1" drawRP="57143" />
+				<drawitem ID="232100" drawnum="1" drawRP="57143" />
+				<drawitem ID="242100" drawnum="1" drawRP="57143" />
+				<drawitem ID="252100" drawnum="1" drawRP="57143" />
+				<drawitem ID="262100" drawnum="1" drawRP="57143" />
+				<drawitem ID="202200" drawnum="1" drawRP="4848" />
+				<drawitem ID="242200" drawnum="1" drawRP="4849" />
+				<drawitem ID="262200" drawnum="1" drawRP="4848" />
+				<drawitem ID="212210" drawnum="1" drawRP="4849" />
+				<drawitem ID="232210" drawnum="1" drawRP="4848" />
+				<drawitem ID="262210" drawnum="1" drawRP="4849" />
+				<drawitem ID="242220" drawnum="1" drawRP="4848" />
+				<drawitem ID="252220" drawnum="1" drawRP="4849" />
+				<drawitem ID="262220" drawnum="1" drawRP="4848" />
+				<drawitem ID="212230" drawnum="1" drawRP="4849" />
+				<drawitem ID="222230" drawnum="1" drawRP="4848" />
+				<drawitem ID="252230" drawnum="1" drawRP="4849" />
+				<drawitem ID="212240" drawnum="1" drawRP="4848" />
+				<drawitem ID="232240" drawnum="1" drawRP="4849" />
+				<drawitem ID="252240" drawnum="1" drawRP="4848" />
+				<drawitem ID="202250" drawnum="1" drawRP="4849" />
+				<drawitem ID="222250" drawnum="1" drawRP="4848" />
+				<drawitem ID="232250" drawnum="1" drawRP="4849" />
+				<drawitem ID="202260" drawnum="1" drawRP="4848" />
+				<drawitem ID="212260" drawnum="1" drawRP="4849" />
+				<drawitem ID="222260" drawnum="1" drawRP="4848" />
+				<drawitem ID="232260" drawnum="1" drawRP="4849" />
+				<drawitem ID="252260" drawnum="1" drawRP="4848" />
+				<drawitem ID="202270" drawnum="1" drawRP="4849" />
+				<drawitem ID="212270" drawnum="1" drawRP="4848" />
+				<drawitem ID="222270" drawnum="1" drawRP="4849" />
+				<drawitem ID="202280" drawnum="1" drawRP="4848" />
+				<drawitem ID="232280" drawnum="1" drawRP="4849" />
+				<drawitem ID="242280" drawnum="1" drawRP="4848" />
+				<drawitem ID="262280" drawnum="1" drawRP="4849" />
+				<drawitem ID="222290" drawnum="1" drawRP="4848" />
+				<drawitem ID="242290" drawnum="1" drawRP="4849" />
+				<drawitem ID="252290" drawnum="1" drawRP="4848" />
+				<drawitem ID="202600" drawnum="1" drawRP="5714" />
+				<drawitem ID="212600" drawnum="1" drawRP="5715" />
+				<drawitem ID="222600" drawnum="1" drawRP="5714" />
+				<drawitem ID="232600" drawnum="1" drawRP="5715" />
+				<drawitem ID="242600" drawnum="1" drawRP="5714" />
+				<drawitem ID="252600" drawnum="1" drawRP="5714" />
+				<drawitem ID="262600" drawnum="1" drawRP="5714" />
+			</certain02>
+			
+		</limitTimeDrawID>
+		
+		
+		<!--26品质装备  水神-->
+		<limitTimeDrawID ID="13">
+			<Diamonddraw01 id="01" Moneytype="2" needMoney="280" interval="86400" >
+				<drawitem ID="201200" drawnum="1" drawRP="57142" />
+				<drawitem ID="211200" drawnum="1" drawRP="57142" />
+				<drawitem ID="221200" drawnum="1" drawRP="57143" />
+				<drawitem ID="231200" drawnum="1" drawRP="57143" />
+				<drawitem ID="241200" drawnum="1" drawRP="57143" />
+				<drawitem ID="251200" drawnum="1" drawRP="57143" />
+				<drawitem ID="261200" drawnum="1" drawRP="57143" />
+				<drawitem ID="202100" drawnum="1" drawRP="57143" />
+				<drawitem ID="212100" drawnum="1" drawRP="57143" />
+				<drawitem ID="222100" drawnum="1" drawRP="57143" />
+				<drawitem ID="232100" drawnum="1" drawRP="57143" />
+				<drawitem ID="242100" drawnum="1" drawRP="57143" />
+				<drawitem ID="252100" drawnum="1" drawRP="57143" />
+				<drawitem ID="262100" drawnum="1" drawRP="57143" />
+				<drawitem ID="202200" drawnum="1" drawRP="4848" />
+				<drawitem ID="242200" drawnum="1" drawRP="4849" />
+				<drawitem ID="262200" drawnum="1" drawRP="4848" />
+				<drawitem ID="212210" drawnum="1" drawRP="4849" />
+				<drawitem ID="232210" drawnum="1" drawRP="4848" />
+				<drawitem ID="262210" drawnum="1" drawRP="4849" />
+				<drawitem ID="242220" drawnum="1" drawRP="4848" />
+				<drawitem ID="252220" drawnum="1" drawRP="4849" />
+				<drawitem ID="262220" drawnum="1" drawRP="4848" />
+				<drawitem ID="212230" drawnum="1" drawRP="4849" />
+				<drawitem ID="222230" drawnum="1" drawRP="4848" />
+				<drawitem ID="252230" drawnum="1" drawRP="4849" />
+				<drawitem ID="212240" drawnum="1" drawRP="4848" />
+				<drawitem ID="232240" drawnum="1" drawRP="4849" />
+				<drawitem ID="252240" drawnum="1" drawRP="4848" />
+				<drawitem ID="202250" drawnum="1" drawRP="4849" />
+				<drawitem ID="222250" drawnum="1" drawRP="4848" />
+				<drawitem ID="232250" drawnum="1" drawRP="4849" />
+				<drawitem ID="202260" drawnum="1" drawRP="4848" />
+				<drawitem ID="212260" drawnum="1" drawRP="4849" />
+				<drawitem ID="222260" drawnum="1" drawRP="4848" />
+				<drawitem ID="232260" drawnum="1" drawRP="4849" />
+				<drawitem ID="252260" drawnum="1" drawRP="4848" />
+				<drawitem ID="202270" drawnum="1" drawRP="4849" />
+				<drawitem ID="212270" drawnum="1" drawRP="4848" />
+				<drawitem ID="222270" drawnum="1" drawRP="4849" />
+				<drawitem ID="202280" drawnum="1" drawRP="4848" />
+				<drawitem ID="232280" drawnum="1" drawRP="4849" />
+				<drawitem ID="242280" drawnum="1" drawRP="4848" />
+				<drawitem ID="262280" drawnum="1" drawRP="4849" />
+				<drawitem ID="222290" drawnum="1" drawRP="4848" />
+				<drawitem ID="242290" drawnum="1" drawRP="4849" />
+				<drawitem ID="252290" drawnum="1" drawRP="4848" />
+				<drawitem ID="202610" drawnum="1" drawRP="5714" />
+				<drawitem ID="212610" drawnum="1" drawRP="5715" />
+				<drawitem ID="222610" drawnum="1" drawRP="5714" />
+				<drawitem ID="232610" drawnum="1" drawRP="5715" />
+				<drawitem ID="242610" drawnum="1" drawRP="5714" />
+				<drawitem ID="252610" drawnum="1" drawRP="5714" />
+				<drawitem ID="262610" drawnum="1" drawRP="5714" />
+			</Diamonddraw01>
+			
+			<Diamonddraw10 id="02" Moneytype="2" needMoney="2660" interval="-1" >
+				<drawitem ID="201200" drawnum="1" drawRP="57142" />
+				<drawitem ID="211200" drawnum="1" drawRP="57142" />
+				<drawitem ID="221200" drawnum="1" drawRP="57143" />
+				<drawitem ID="231200" drawnum="1" drawRP="57143" />
+				<drawitem ID="241200" drawnum="1" drawRP="57143" />
+				<drawitem ID="251200" drawnum="1" drawRP="57143" />
+				<drawitem ID="261200" drawnum="1" drawRP="57143" />
+				<drawitem ID="202100" drawnum="1" drawRP="57143" />
+				<drawitem ID="212100" drawnum="1" drawRP="57143" />
+				<drawitem ID="222100" drawnum="1" drawRP="57143" />
+				<drawitem ID="232100" drawnum="1" drawRP="57143" />
+				<drawitem ID="242100" drawnum="1" drawRP="57143" />
+				<drawitem ID="252100" drawnum="1" drawRP="57143" />
+				<drawitem ID="262100" drawnum="1" drawRP="57143" />
+				<drawitem ID="202200" drawnum="1" drawRP="4848" />
+				<drawitem ID="242200" drawnum="1" drawRP="4849" />
+				<drawitem ID="262200" drawnum="1" drawRP="4848" />
+				<drawitem ID="212210" drawnum="1" drawRP="4849" />
+				<drawitem ID="232210" drawnum="1" drawRP="4848" />
+				<drawitem ID="262210" drawnum="1" drawRP="4849" />
+				<drawitem ID="242220" drawnum="1" drawRP="4848" />
+				<drawitem ID="252220" drawnum="1" drawRP="4849" />
+				<drawitem ID="262220" drawnum="1" drawRP="4848" />
+				<drawitem ID="212230" drawnum="1" drawRP="4849" />
+				<drawitem ID="222230" drawnum="1" drawRP="4848" />
+				<drawitem ID="252230" drawnum="1" drawRP="4849" />
+				<drawitem ID="212240" drawnum="1" drawRP="4848" />
+				<drawitem ID="232240" drawnum="1" drawRP="4849" />
+				<drawitem ID="252240" drawnum="1" drawRP="4848" />
+				<drawitem ID="202250" drawnum="1" drawRP="4849" />
+				<drawitem ID="222250" drawnum="1" drawRP="4848" />
+				<drawitem ID="232250" drawnum="1" drawRP="4849" />
+				<drawitem ID="202260" drawnum="1" drawRP="4848" />
+				<drawitem ID="212260" drawnum="1" drawRP="4849" />
+				<drawitem ID="222260" drawnum="1" drawRP="4848" />
+				<drawitem ID="232260" drawnum="1" drawRP="4849" />
+				<drawitem ID="252260" drawnum="1" drawRP="4848" />
+				<drawitem ID="202270" drawnum="1" drawRP="4849" />
+				<drawitem ID="212270" drawnum="1" drawRP="4848" />
+				<drawitem ID="222270" drawnum="1" drawRP="4849" />
+				<drawitem ID="202280" drawnum="1" drawRP="4848" />
+				<drawitem ID="232280" drawnum="1" drawRP="4849" />
+				<drawitem ID="242280" drawnum="1" drawRP="4848" />
+				<drawitem ID="262280" drawnum="1" drawRP="4849" />
+				<drawitem ID="222290" drawnum="1" drawRP="4848" />
+				<drawitem ID="242290" drawnum="1" drawRP="4849" />
+				<drawitem ID="252290" drawnum="1" drawRP="4848" />
+				<drawitem ID="202610" drawnum="1" drawRP="5714" />
+				<drawitem ID="212610" drawnum="1" drawRP="5715" />
+				<drawitem ID="222610" drawnum="1" drawRP="5714" />
+				<drawitem ID="232610" drawnum="1" drawRP="5715" />
+				<drawitem ID="242610" drawnum="1" drawRP="5714" />
+				<drawitem ID="252610" drawnum="1" drawRP="5714" />
+				<drawitem ID="262610" drawnum="1" drawRP="5714" />
+			</Diamonddraw10>
+			
+			<!--该次限时随从活动钻石抽取次数为10的整数倍时必定获得橙色装备或武魂石-->
+			<certain01 baseNum="10" addNum="10" >
+				<drawitem ID="202200" drawnum="1" drawRP="27273" />
+				<drawitem ID="242200" drawnum="1" drawRP="27272" />
+				<drawitem ID="262200" drawnum="1" drawRP="27273" />
+				<drawitem ID="212210" drawnum="1" drawRP="27273" />
+				<drawitem ID="232210" drawnum="1" drawRP="27273" />
+				<drawitem ID="262210" drawnum="1" drawRP="27273" />
+				<drawitem ID="242220" drawnum="1" drawRP="27273" />
+				<drawitem ID="252220" drawnum="1" drawRP="27272" />
+				<drawitem ID="262220" drawnum="1" drawRP="27273" />
+				<drawitem ID="212230" drawnum="1" drawRP="27273" />
+				<drawitem ID="222230" drawnum="1" drawRP="27273" />
+				<drawitem ID="252230" drawnum="1" drawRP="27272" />
+				<drawitem ID="212240" drawnum="1" drawRP="27273" />
+				<drawitem ID="232240" drawnum="1" drawRP="27273" />
+				<drawitem ID="252240" drawnum="1" drawRP="27273" />
+				<drawitem ID="202250" drawnum="1" drawRP="27273" />
+				<drawitem ID="222250" drawnum="1" drawRP="27273" />
+				<drawitem ID="232250" drawnum="1" drawRP="27273" />
+				<drawitem ID="202260" drawnum="1" drawRP="27272" />
+				<drawitem ID="212260" drawnum="1" drawRP="27273" />
+				<drawitem ID="222260" drawnum="1" drawRP="27273" />
+				<drawitem ID="232260" drawnum="1" drawRP="27273" />
+				<drawitem ID="252260" drawnum="1" drawRP="27273" />
+				<drawitem ID="202270" drawnum="1" drawRP="27272" />
+				<drawitem ID="212270" drawnum="1" drawRP="27273" />
+				<drawitem ID="222270" drawnum="1" drawRP="27273" />
+				<drawitem ID="202280" drawnum="1" drawRP="27273" />
+				<drawitem ID="232280" drawnum="1" drawRP="27273" />
+				<drawitem ID="242280" drawnum="1" drawRP="27272" />
+				<drawitem ID="262280" drawnum="1" drawRP="27272" />
+				<drawitem ID="222290" drawnum="1" drawRP="27273" />
+				<drawitem ID="242290" drawnum="1" drawRP="27272" />
+				<drawitem ID="252290" drawnum="1" drawRP="27272" />
+				<drawitem ID="202610" drawnum="1" drawRP="14286" />
+				<drawitem ID="212610" drawnum="1" drawRP="14286" />
+				<drawitem ID="222610" drawnum="1" drawRP="14286" />
+				<drawitem ID="232610" drawnum="1" drawRP="14286" />
+				<drawitem ID="242610" drawnum="1" drawRP="14285" />
+				<drawitem ID="252610" drawnum="1" drawRP="14286" />
+				<drawitem ID="262610" drawnum="1" drawRP="14285" />
+			</certain01>
+			
+			<!--该次抽奖必定获得限时随从灵魂石-->
+			<certain02 baseNum="3" addNum="4" >
+				<drawitem ID="201200" drawnum="1" drawRP="57142" />
+				<drawitem ID="211200" drawnum="1" drawRP="57142" />
+				<drawitem ID="221200" drawnum="1" drawRP="57143" />
+				<drawitem ID="231200" drawnum="1" drawRP="57143" />
+				<drawitem ID="241200" drawnum="1" drawRP="57143" />
+				<drawitem ID="251200" drawnum="1" drawRP="57143" />
+				<drawitem ID="261200" drawnum="1" drawRP="57143" />
+				<drawitem ID="202100" drawnum="1" drawRP="57143" />
+				<drawitem ID="212100" drawnum="1" drawRP="57143" />
+				<drawitem ID="222100" drawnum="1" drawRP="57143" />
+				<drawitem ID="232100" drawnum="1" drawRP="57143" />
+				<drawitem ID="242100" drawnum="1" drawRP="57143" />
+				<drawitem ID="252100" drawnum="1" drawRP="57143" />
+				<drawitem ID="262100" drawnum="1" drawRP="57143" />
+				<drawitem ID="202200" drawnum="1" drawRP="4848" />
+				<drawitem ID="242200" drawnum="1" drawRP="4849" />
+				<drawitem ID="262200" drawnum="1" drawRP="4848" />
+				<drawitem ID="212210" drawnum="1" drawRP="4849" />
+				<drawitem ID="232210" drawnum="1" drawRP="4848" />
+				<drawitem ID="262210" drawnum="1" drawRP="4849" />
+				<drawitem ID="242220" drawnum="1" drawRP="4848" />
+				<drawitem ID="252220" drawnum="1" drawRP="4849" />
+				<drawitem ID="262220" drawnum="1" drawRP="4848" />
+				<drawitem ID="212230" drawnum="1" drawRP="4849" />
+				<drawitem ID="222230" drawnum="1" drawRP="4848" />
+				<drawitem ID="252230" drawnum="1" drawRP="4849" />
+				<drawitem ID="212240" drawnum="1" drawRP="4848" />
+				<drawitem ID="232240" drawnum="1" drawRP="4849" />
+				<drawitem ID="252240" drawnum="1" drawRP="4848" />
+				<drawitem ID="202250" drawnum="1" drawRP="4849" />
+				<drawitem ID="222250" drawnum="1" drawRP="4848" />
+				<drawitem ID="232250" drawnum="1" drawRP="4849" />
+				<drawitem ID="202260" drawnum="1" drawRP="4848" />
+				<drawitem ID="212260" drawnum="1" drawRP="4849" />
+				<drawitem ID="222260" drawnum="1" drawRP="4848" />
+				<drawitem ID="232260" drawnum="1" drawRP="4849" />
+				<drawitem ID="252260" drawnum="1" drawRP="4848" />
+				<drawitem ID="202270" drawnum="1" drawRP="4849" />
+				<drawitem ID="212270" drawnum="1" drawRP="4848" />
+				<drawitem ID="222270" drawnum="1" drawRP="4849" />
+				<drawitem ID="202280" drawnum="1" drawRP="4848" />
+				<drawitem ID="232280" drawnum="1" drawRP="4849" />
+				<drawitem ID="242280" drawnum="1" drawRP="4848" />
+				<drawitem ID="262280" drawnum="1" drawRP="4849" />
+				<drawitem ID="222290" drawnum="1" drawRP="4848" />
+				<drawitem ID="242290" drawnum="1" drawRP="4849" />
+				<drawitem ID="252290" drawnum="1" drawRP="4848" />
+				<drawitem ID="202610" drawnum="1" drawRP="5714" />
+				<drawitem ID="212610" drawnum="1" drawRP="5715" />
+				<drawitem ID="222610" drawnum="1" drawRP="5714" />
+				<drawitem ID="232610" drawnum="1" drawRP="5715" />
+				<drawitem ID="242610" drawnum="1" drawRP="5714" />
+				<drawitem ID="252610" drawnum="1" drawRP="5714" />
+				<drawitem ID="262610" drawnum="1" drawRP="5714" />
+			</certain02>
+			
+		</limitTimeDrawID>
+		
+		
+		<!--26品质装备  雷神-->
+		<limitTimeDrawID ID="14">
+			<Diamonddraw01 id="01" Moneytype="2" needMoney="280" interval="86400" >
+				<drawitem ID="201200" drawnum="1" drawRP="57142" />
+				<drawitem ID="211200" drawnum="1" drawRP="57142" />
+				<drawitem ID="221200" drawnum="1" drawRP="57143" />
+				<drawitem ID="231200" drawnum="1" drawRP="57143" />
+				<drawitem ID="241200" drawnum="1" drawRP="57143" />
+				<drawitem ID="251200" drawnum="1" drawRP="57143" />
+				<drawitem ID="261200" drawnum="1" drawRP="57143" />
+				<drawitem ID="202100" drawnum="1" drawRP="57143" />
+				<drawitem ID="212100" drawnum="1" drawRP="57143" />
+				<drawitem ID="222100" drawnum="1" drawRP="57143" />
+				<drawitem ID="232100" drawnum="1" drawRP="57143" />
+				<drawitem ID="242100" drawnum="1" drawRP="57143" />
+				<drawitem ID="252100" drawnum="1" drawRP="57143" />
+				<drawitem ID="262100" drawnum="1" drawRP="57143" />
+				<drawitem ID="202200" drawnum="1" drawRP="4848" />
+				<drawitem ID="242200" drawnum="1" drawRP="4849" />
+				<drawitem ID="262200" drawnum="1" drawRP="4848" />
+				<drawitem ID="212210" drawnum="1" drawRP="4849" />
+				<drawitem ID="232210" drawnum="1" drawRP="4848" />
+				<drawitem ID="262210" drawnum="1" drawRP="4849" />
+				<drawitem ID="242220" drawnum="1" drawRP="4848" />
+				<drawitem ID="252220" drawnum="1" drawRP="4849" />
+				<drawitem ID="262220" drawnum="1" drawRP="4848" />
+				<drawitem ID="212230" drawnum="1" drawRP="4849" />
+				<drawitem ID="222230" drawnum="1" drawRP="4848" />
+				<drawitem ID="252230" drawnum="1" drawRP="4849" />
+				<drawitem ID="212240" drawnum="1" drawRP="4848" />
+				<drawitem ID="232240" drawnum="1" drawRP="4849" />
+				<drawitem ID="252240" drawnum="1" drawRP="4848" />
+				<drawitem ID="202250" drawnum="1" drawRP="4849" />
+				<drawitem ID="222250" drawnum="1" drawRP="4848" />
+				<drawitem ID="232250" drawnum="1" drawRP="4849" />
+				<drawitem ID="202260" drawnum="1" drawRP="4848" />
+				<drawitem ID="212260" drawnum="1" drawRP="4849" />
+				<drawitem ID="222260" drawnum="1" drawRP="4848" />
+				<drawitem ID="232260" drawnum="1" drawRP="4849" />
+				<drawitem ID="252260" drawnum="1" drawRP="4848" />
+				<drawitem ID="202270" drawnum="1" drawRP="4849" />
+				<drawitem ID="212270" drawnum="1" drawRP="4848" />
+				<drawitem ID="222270" drawnum="1" drawRP="4849" />
+				<drawitem ID="202280" drawnum="1" drawRP="4848" />
+				<drawitem ID="232280" drawnum="1" drawRP="4849" />
+				<drawitem ID="242280" drawnum="1" drawRP="4848" />
+				<drawitem ID="262280" drawnum="1" drawRP="4849" />
+				<drawitem ID="222290" drawnum="1" drawRP="4848" />
+				<drawitem ID="242290" drawnum="1" drawRP="4849" />
+				<drawitem ID="252290" drawnum="1" drawRP="4848" />
+				<drawitem ID="202620" drawnum="1" drawRP="5714" />
+				<drawitem ID="212620" drawnum="1" drawRP="5715" />
+				<drawitem ID="222620" drawnum="1" drawRP="5714" />
+				<drawitem ID="232620" drawnum="1" drawRP="5715" />
+				<drawitem ID="242620" drawnum="1" drawRP="5714" />
+				<drawitem ID="252620" drawnum="1" drawRP="5714" />
+				<drawitem ID="262620" drawnum="1" drawRP="5714" />
+			</Diamonddraw01>
+			
+			<Diamonddraw10 id="02" Moneytype="2" needMoney="2660" interval="-1" >
+				<drawitem ID="201200" drawnum="1" drawRP="57142" />
+				<drawitem ID="211200" drawnum="1" drawRP="57142" />
+				<drawitem ID="221200" drawnum="1" drawRP="57143" />
+				<drawitem ID="231200" drawnum="1" drawRP="57143" />
+				<drawitem ID="241200" drawnum="1" drawRP="57143" />
+				<drawitem ID="251200" drawnum="1" drawRP="57143" />
+				<drawitem ID="261200" drawnum="1" drawRP="57143" />
+				<drawitem ID="202100" drawnum="1" drawRP="57143" />
+				<drawitem ID="212100" drawnum="1" drawRP="57143" />
+				<drawitem ID="222100" drawnum="1" drawRP="57143" />
+				<drawitem ID="232100" drawnum="1" drawRP="57143" />
+				<drawitem ID="242100" drawnum="1" drawRP="57143" />
+				<drawitem ID="252100" drawnum="1" drawRP="57143" />
+				<drawitem ID="262100" drawnum="1" drawRP="57143" />
+				<drawitem ID="202200" drawnum="1" drawRP="4848" />
+				<drawitem ID="242200" drawnum="1" drawRP="4849" />
+				<drawitem ID="262200" drawnum="1" drawRP="4848" />
+				<drawitem ID="212210" drawnum="1" drawRP="4849" />
+				<drawitem ID="232210" drawnum="1" drawRP="4848" />
+				<drawitem ID="262210" drawnum="1" drawRP="4849" />
+				<drawitem ID="242220" drawnum="1" drawRP="4848" />
+				<drawitem ID="252220" drawnum="1" drawRP="4849" />
+				<drawitem ID="262220" drawnum="1" drawRP="4848" />
+				<drawitem ID="212230" drawnum="1" drawRP="4849" />
+				<drawitem ID="222230" drawnum="1" drawRP="4848" />
+				<drawitem ID="252230" drawnum="1" drawRP="4849" />
+				<drawitem ID="212240" drawnum="1" drawRP="4848" />
+				<drawitem ID="232240" drawnum="1" drawRP="4849" />
+				<drawitem ID="252240" drawnum="1" drawRP="4848" />
+				<drawitem ID="202250" drawnum="1" drawRP="4849" />
+				<drawitem ID="222250" drawnum="1" drawRP="4848" />
+				<drawitem ID="232250" drawnum="1" drawRP="4849" />
+				<drawitem ID="202260" drawnum="1" drawRP="4848" />
+				<drawitem ID="212260" drawnum="1" drawRP="4849" />
+				<drawitem ID="222260" drawnum="1" drawRP="4848" />
+				<drawitem ID="232260" drawnum="1" drawRP="4849" />
+				<drawitem ID="252260" drawnum="1" drawRP="4848" />
+				<drawitem ID="202270" drawnum="1" drawRP="4849" />
+				<drawitem ID="212270" drawnum="1" drawRP="4848" />
+				<drawitem ID="222270" drawnum="1" drawRP="4849" />
+				<drawitem ID="202280" drawnum="1" drawRP="4848" />
+				<drawitem ID="232280" drawnum="1" drawRP="4849" />
+				<drawitem ID="242280" drawnum="1" drawRP="4848" />
+				<drawitem ID="262280" drawnum="1" drawRP="4849" />
+				<drawitem ID="222290" drawnum="1" drawRP="4848" />
+				<drawitem ID="242290" drawnum="1" drawRP="4849" />
+				<drawitem ID="252290" drawnum="1" drawRP="4848" />
+				<drawitem ID="202620" drawnum="1" drawRP="5714" />
+				<drawitem ID="212620" drawnum="1" drawRP="5715" />
+				<drawitem ID="222620" drawnum="1" drawRP="5714" />
+				<drawitem ID="232620" drawnum="1" drawRP="5715" />
+				<drawitem ID="242620" drawnum="1" drawRP="5714" />
+				<drawitem ID="252620" drawnum="1" drawRP="5714" />
+				<drawitem ID="262620" drawnum="1" drawRP="5714" />
+			</Diamonddraw10>
+			
+			<!--该次限时随从活动钻石抽取次数为10的整数倍时必定获得橙色装备或武魂石-->
+			<certain01 baseNum="10" addNum="10" >
+				<drawitem ID="202200" drawnum="1" drawRP="27273" />
+				<drawitem ID="242200" drawnum="1" drawRP="27272" />
+				<drawitem ID="262200" drawnum="1" drawRP="27273" />
+				<drawitem ID="212210" drawnum="1" drawRP="27273" />
+				<drawitem ID="232210" drawnum="1" drawRP="27273" />
+				<drawitem ID="262210" drawnum="1" drawRP="27273" />
+				<drawitem ID="242220" drawnum="1" drawRP="27273" />
+				<drawitem ID="252220" drawnum="1" drawRP="27272" />
+				<drawitem ID="262220" drawnum="1" drawRP="27273" />
+				<drawitem ID="212230" drawnum="1" drawRP="27273" />
+				<drawitem ID="222230" drawnum="1" drawRP="27273" />
+				<drawitem ID="252230" drawnum="1" drawRP="27272" />
+				<drawitem ID="212240" drawnum="1" drawRP="27273" />
+				<drawitem ID="232240" drawnum="1" drawRP="27273" />
+				<drawitem ID="252240" drawnum="1" drawRP="27273" />
+				<drawitem ID="202250" drawnum="1" drawRP="27273" />
+				<drawitem ID="222250" drawnum="1" drawRP="27273" />
+				<drawitem ID="232250" drawnum="1" drawRP="27273" />
+				<drawitem ID="202260" drawnum="1" drawRP="27272" />
+				<drawitem ID="212260" drawnum="1" drawRP="27273" />
+				<drawitem ID="222260" drawnum="1" drawRP="27273" />
+				<drawitem ID="232260" drawnum="1" drawRP="27273" />
+				<drawitem ID="252260" drawnum="1" drawRP="27273" />
+				<drawitem ID="202270" drawnum="1" drawRP="27272" />
+				<drawitem ID="212270" drawnum="1" drawRP="27273" />
+				<drawitem ID="222270" drawnum="1" drawRP="27273" />
+				<drawitem ID="202280" drawnum="1" drawRP="27273" />
+				<drawitem ID="232280" drawnum="1" drawRP="27273" />
+				<drawitem ID="242280" drawnum="1" drawRP="27272" />
+				<drawitem ID="262280" drawnum="1" drawRP="27272" />
+				<drawitem ID="222290" drawnum="1" drawRP="27273" />
+				<drawitem ID="242290" drawnum="1" drawRP="27272" />
+				<drawitem ID="252290" drawnum="1" drawRP="27272" />
+				<drawitem ID="202620" drawnum="1" drawRP="14286" />
+				<drawitem ID="212620" drawnum="1" drawRP="14286" />
+				<drawitem ID="222620" drawnum="1" drawRP="14286" />
+				<drawitem ID="232620" drawnum="1" drawRP="14286" />
+				<drawitem ID="242620" drawnum="1" drawRP="14285" />
+				<drawitem ID="252620" drawnum="1" drawRP="14286" />
+				<drawitem ID="262620" drawnum="1" drawRP="14285" />
+			</certain01>
+			
+			<!--该次抽奖必定获得限时随从灵魂石-->
+			<certain02 baseNum="3" addNum="4" >
+				<drawitem ID="201200" drawnum="1" drawRP="57142" />
+				<drawitem ID="211200" drawnum="1" drawRP="57142" />
+				<drawitem ID="221200" drawnum="1" drawRP="57143" />
+				<drawitem ID="231200" drawnum="1" drawRP="57143" />
+				<drawitem ID="241200" drawnum="1" drawRP="57143" />
+				<drawitem ID="251200" drawnum="1" drawRP="57143" />
+				<drawitem ID="261200" drawnum="1" drawRP="57143" />
+				<drawitem ID="202100" drawnum="1" drawRP="57143" />
+				<drawitem ID="212100" drawnum="1" drawRP="57143" />
+				<drawitem ID="222100" drawnum="1" drawRP="57143" />
+				<drawitem ID="232100" drawnum="1" drawRP="57143" />
+				<drawitem ID="242100" drawnum="1" drawRP="57143" />
+				<drawitem ID="252100" drawnum="1" drawRP="57143" />
+				<drawitem ID="262100" drawnum="1" drawRP="57143" />
+				<drawitem ID="202200" drawnum="1" drawRP="4848" />
+				<drawitem ID="242200" drawnum="1" drawRP="4849" />
+				<drawitem ID="262200" drawnum="1" drawRP="4848" />
+				<drawitem ID="212210" drawnum="1" drawRP="4849" />
+				<drawitem ID="232210" drawnum="1" drawRP="4848" />
+				<drawitem ID="262210" drawnum="1" drawRP="4849" />
+				<drawitem ID="242220" drawnum="1" drawRP="4848" />
+				<drawitem ID="252220" drawnum="1" drawRP="4849" />
+				<drawitem ID="262220" drawnum="1" drawRP="4848" />
+				<drawitem ID="212230" drawnum="1" drawRP="4849" />
+				<drawitem ID="222230" drawnum="1" drawRP="4848" />
+				<drawitem ID="252230" drawnum="1" drawRP="4849" />
+				<drawitem ID="212240" drawnum="1" drawRP="4848" />
+				<drawitem ID="232240" drawnum="1" drawRP="4849" />
+				<drawitem ID="252240" drawnum="1" drawRP="4848" />
+				<drawitem ID="202250" drawnum="1" drawRP="4849" />
+				<drawitem ID="222250" drawnum="1" drawRP="4848" />
+				<drawitem ID="232250" drawnum="1" drawRP="4849" />
+				<drawitem ID="202260" drawnum="1" drawRP="4848" />
+				<drawitem ID="212260" drawnum="1" drawRP="4849" />
+				<drawitem ID="222260" drawnum="1" drawRP="4848" />
+				<drawitem ID="232260" drawnum="1" drawRP="4849" />
+				<drawitem ID="252260" drawnum="1" drawRP="4848" />
+				<drawitem ID="202270" drawnum="1" drawRP="4849" />
+				<drawitem ID="212270" drawnum="1" drawRP="4848" />
+				<drawitem ID="222270" drawnum="1" drawRP="4849" />
+				<drawitem ID="202280" drawnum="1" drawRP="4848" />
+				<drawitem ID="232280" drawnum="1" drawRP="4849" />
+				<drawitem ID="242280" drawnum="1" drawRP="4848" />
+				<drawitem ID="262280" drawnum="1" drawRP="4849" />
+				<drawitem ID="222290" drawnum="1" drawRP="4848" />
+				<drawitem ID="242290" drawnum="1" drawRP="4849" />
+				<drawitem ID="252290" drawnum="1" drawRP="4848" />
+				<drawitem ID="202620" drawnum="1" drawRP="5714" />
+				<drawitem ID="212620" drawnum="1" drawRP="5715" />
+				<drawitem ID="222620" drawnum="1" drawRP="5714" />
+				<drawitem ID="232620" drawnum="1" drawRP="5715" />
+				<drawitem ID="242620" drawnum="1" drawRP="5714" />
+				<drawitem ID="252620" drawnum="1" drawRP="5714" />
+				<drawitem ID="262620" drawnum="1" drawRP="5714" />
+			</certain02>
+			
+		</limitTimeDrawID>
+	
+	<!--奥特曼-->
+		<limitTimeDrawID ID="15">
+			<Diamonddraw01 id="01" Moneytype="2" needMoney="11200" interval="86400" >
+				<drawitem ID="811608" drawnum="10" drawRP="1500" />
+				<drawitem ID="811604" drawnum="10" drawRP="4584" />
+				<drawitem ID="811605" drawnum="10" drawRP="4584" />
+				<drawitem ID="811610" drawnum="10" drawRP="4583" />
+				<drawitem ID="811619" drawnum="10" drawRP="4583" />
+				<drawitem ID="811620" drawnum="10" drawRP="4583" />
+				<drawitem ID="811633" drawnum="10" drawRP="4583" />
+				<drawitem ID="811611" drawnum="10" drawRP="4375" />
+				<drawitem ID="811612" drawnum="10" drawRP="4375" />
+				<drawitem ID="811613" drawnum="10" drawRP="4375" />
+				<drawitem ID="811616" drawnum="10" drawRP="4375" />
+				<drawitem ID="811607" drawnum="10" drawRP="875" />
+				<drawitem ID="811615" drawnum="10" drawRP="875" />
+				<drawitem ID="811624" drawnum="10" drawRP="875" />
+				<drawitem ID="811625" drawnum="10" drawRP="875" />
+				<drawitem ID="201200" drawnum="1" drawRP="3572" />
+				<drawitem ID="211200" drawnum="1" drawRP="3572" />
+				<drawitem ID="221200" drawnum="1" drawRP="3572" />
+				<drawitem ID="231200" drawnum="1" drawRP="3572" />
+				<drawitem ID="241200" drawnum="1" drawRP="3572" />
+				<drawitem ID="251200" drawnum="1" drawRP="3572" />
+				<drawitem ID="261200" drawnum="1" drawRP="3571" />
+				<drawitem ID="202100" drawnum="1" drawRP="3571" />
+				<drawitem ID="212100" drawnum="1" drawRP="3571" />
+				<drawitem ID="222100" drawnum="1" drawRP="3571" />
+				<drawitem ID="232100" drawnum="1" drawRP="3571" />
+				<drawitem ID="242100" drawnum="1" drawRP="3571" />
+				<drawitem ID="252100" drawnum="1" drawRP="3571" />
+				<drawitem ID="262100" drawnum="1" drawRP="3571" />
+			</Diamonddraw01>
+			
+			<Diamonddraw10 id="02" Moneytype="2" needMoney="106400" interval="-1" >
+				<drawitem ID="811608" drawnum="10" drawRP="1500" />
+				<drawitem ID="811604" drawnum="10" drawRP="4584" />
+				<drawitem ID="811605" drawnum="10" drawRP="4584" />
+				<drawitem ID="811610" drawnum="10" drawRP="4583" />
+				<drawitem ID="811619" drawnum="10" drawRP="4583" />
+				<drawitem ID="811620" drawnum="10" drawRP="4583" />
+				<drawitem ID="811633" drawnum="10" drawRP="4583" />
+				<drawitem ID="811611" drawnum="10" drawRP="4375" />
+				<drawitem ID="811612" drawnum="10" drawRP="4375" />
+				<drawitem ID="811613" drawnum="10" drawRP="4375" />
+				<drawitem ID="811616" drawnum="10" drawRP="4375" />
+				<drawitem ID="811607" drawnum="10" drawRP="875" />
+				<drawitem ID="811615" drawnum="10" drawRP="875" />
+				<drawitem ID="811624" drawnum="10" drawRP="875" />
+				<drawitem ID="811625" drawnum="10" drawRP="875" />
+				<drawitem ID="201200" drawnum="1" drawRP="3572" />
+				<drawitem ID="211200" drawnum="1" drawRP="3572" />
+				<drawitem ID="221200" drawnum="1" drawRP="3572" />
+				<drawitem ID="231200" drawnum="1" drawRP="3572" />
+				<drawitem ID="241200" drawnum="1" drawRP="3572" />
+				<drawitem ID="251200" drawnum="1" drawRP="3572" />
+				<drawitem ID="261200" drawnum="1" drawRP="3571" />
+				<drawitem ID="202100" drawnum="1" drawRP="3571" />
+				<drawitem ID="212100" drawnum="1" drawRP="3571" />
+				<drawitem ID="222100" drawnum="1" drawRP="3571" />
+				<drawitem ID="232100" drawnum="1" drawRP="3571" />
+				<drawitem ID="242100" drawnum="1" drawRP="3571" />
+				<drawitem ID="252100" drawnum="1" drawRP="3571" />
+				<drawitem ID="262100" drawnum="1" drawRP="3571" />
+			</Diamonddraw10>
+			
+			<!--该次限时随从活动钻石抽取次数为10的整数倍时必定获得橙色装备或武魂石-->
+			<certain01 baseNum="10" addNum="10" >
+				<drawitem ID="811604" drawnum="10" drawRP="10000" />
+				<drawitem ID="811605" drawnum="10" drawRP="10000" />
+				<drawitem ID="811610" drawnum="10" drawRP="10000" />
+				<drawitem ID="811619" drawnum="10" drawRP="10000" />
+				<drawitem ID="811620" drawnum="10" drawRP="10000" />
+				<drawitem ID="811633" drawnum="10" drawRP="10000" />
+				<drawitem ID="811611" drawnum="10" drawRP="10000" />
+				<drawitem ID="811612" drawnum="10" drawRP="10000" />
+				<drawitem ID="811613" drawnum="10" drawRP="10000" />
+				<drawitem ID="811616" drawnum="10" drawRP="10000" />
+				<drawitem ID="811607" drawnum="10" drawRP="10000" />
+				<drawitem ID="811615" drawnum="10" drawRP="10000" />
+				<drawitem ID="811624" drawnum="10" drawRP="10000" />
+				<drawitem ID="811625" drawnum="10" drawRP="10000" />
+			</certain01>
+			
+			<!--该次抽奖必定获得限时随从灵魂石-->
+			<certain02 baseNum="3" addNum="4" >
+				<drawitem ID="811608" drawnum="5" drawRP="25000" />
+				<drawitem ID="811608" drawnum="6" drawRP="50000" />
+				<drawitem ID="811608" drawnum="7" drawRP="25000" />
+			</certain02>
+			
+	
+		</limitTimeDrawID>
+		
+		<!--奥特曼-->
+		<limitTimeDrawID ID="16">
+			<Diamonddraw01 id="01" Moneytype="2" needMoney="11200" interval="86400" >
+				<drawitem ID="811609" drawnum="10" drawRP="1500" />
+				<drawitem ID="811604" drawnum="10" drawRP="4584" />
+				<drawitem ID="811605" drawnum="10" drawRP="4584" />
+				<drawitem ID="811610" drawnum="10" drawRP="4583" />
+				<drawitem ID="811619" drawnum="10" drawRP="4583" />
+				<drawitem ID="811620" drawnum="10" drawRP="4583" />
+				<drawitem ID="811633" drawnum="10" drawRP="4583" />
+				<drawitem ID="811611" drawnum="10" drawRP="4375" />
+				<drawitem ID="811612" drawnum="10" drawRP="4375" />
+				<drawitem ID="811613" drawnum="10" drawRP="4375" />
+				<drawitem ID="811616" drawnum="10" drawRP="4375" />
+				<drawitem ID="811607" drawnum="10" drawRP="875" />
+				<drawitem ID="811615" drawnum="10" drawRP="875" />
+				<drawitem ID="811624" drawnum="10" drawRP="875" />
+				<drawitem ID="811625" drawnum="10" drawRP="875" />
+				<drawitem ID="201200" drawnum="1" drawRP="3572" />
+				<drawitem ID="211200" drawnum="1" drawRP="3572" />
+				<drawitem ID="221200" drawnum="1" drawRP="3572" />
+				<drawitem ID="231200" drawnum="1" drawRP="3572" />
+				<drawitem ID="241200" drawnum="1" drawRP="3572" />
+				<drawitem ID="251200" drawnum="1" drawRP="3572" />
+				<drawitem ID="261200" drawnum="1" drawRP="3571" />
+				<drawitem ID="202100" drawnum="1" drawRP="3571" />
+				<drawitem ID="212100" drawnum="1" drawRP="3571" />
+				<drawitem ID="222100" drawnum="1" drawRP="3571" />
+				<drawitem ID="232100" drawnum="1" drawRP="3571" />
+				<drawitem ID="242100" drawnum="1" drawRP="3571" />
+				<drawitem ID="252100" drawnum="1" drawRP="3571" />
+				<drawitem ID="262100" drawnum="1" drawRP="3571" />
+			</Diamonddraw01>
+			
+			<Diamonddraw10 id="02" Moneytype="2" needMoney="106400" interval="-1" >
+				<drawitem ID="811609" drawnum="10" drawRP="1500" />
+				<drawitem ID="811604" drawnum="10" drawRP="4584" />
+				<drawitem ID="811605" drawnum="10" drawRP="4584" />
+				<drawitem ID="811610" drawnum="10" drawRP="4583" />
+				<drawitem ID="811619" drawnum="10" drawRP="4583" />
+				<drawitem ID="811620" drawnum="10" drawRP="4583" />
+				<drawitem ID="811633" drawnum="10" drawRP="4583" />
+				<drawitem ID="811611" drawnum="10" drawRP="4375" />
+				<drawitem ID="811612" drawnum="10" drawRP="4375" />
+				<drawitem ID="811613" drawnum="10" drawRP="4375" />
+				<drawitem ID="811616" drawnum="10" drawRP="4375" />
+				<drawitem ID="811607" drawnum="10" drawRP="875" />
+				<drawitem ID="811615" drawnum="10" drawRP="875" />
+				<drawitem ID="811624" drawnum="10" drawRP="875" />
+				<drawitem ID="811625" drawnum="10" drawRP="875" />
+				<drawitem ID="201200" drawnum="1" drawRP="3572" />
+				<drawitem ID="211200" drawnum="1" drawRP="3572" />
+				<drawitem ID="221200" drawnum="1" drawRP="3572" />
+				<drawitem ID="231200" drawnum="1" drawRP="3572" />
+				<drawitem ID="241200" drawnum="1" drawRP="3572" />
+				<drawitem ID="251200" drawnum="1" drawRP="3572" />
+				<drawitem ID="261200" drawnum="1" drawRP="3571" />
+				<drawitem ID="202100" drawnum="1" drawRP="3571" />
+				<drawitem ID="212100" drawnum="1" drawRP="3571" />
+				<drawitem ID="222100" drawnum="1" drawRP="3571" />
+				<drawitem ID="232100" drawnum="1" drawRP="3571" />
+				<drawitem ID="242100" drawnum="1" drawRP="3571" />
+				<drawitem ID="252100" drawnum="1" drawRP="3571" />
+				<drawitem ID="262100" drawnum="1" drawRP="3571" />
+			</Diamonddraw10>
+			
+			<!--该次限时随从活动钻石抽取次数为10的整数倍时必定获得橙色装备或武魂石-->
+			<certain01 baseNum="10" addNum="10" >
+				<drawitem ID="811604" drawnum="10" drawRP="10000" />
+				<drawitem ID="811605" drawnum="10" drawRP="10000" />
+				<drawitem ID="811610" drawnum="10" drawRP="10000" />
+				<drawitem ID="811619" drawnum="10" drawRP="10000" />
+				<drawitem ID="811620" drawnum="10" drawRP="10000" />
+				<drawitem ID="811633" drawnum="10" drawRP="10000" />
+				<drawitem ID="811611" drawnum="10" drawRP="10000" />
+				<drawitem ID="811612" drawnum="10" drawRP="10000" />
+				<drawitem ID="811613" drawnum="10" drawRP="10000" />
+				<drawitem ID="811616" drawnum="10" drawRP="10000" />
+				<drawitem ID="811607" drawnum="10" drawRP="10000" />
+				<drawitem ID="811615" drawnum="10" drawRP="10000" />
+				<drawitem ID="811624" drawnum="10" drawRP="10000" />
+				<drawitem ID="811625" drawnum="10" drawRP="10000" />
+			</certain01>
+			
+			<!--该次抽奖必定获得限时随从灵魂石-->
+			<certain02 baseNum="3" addNum="4" >
+				<drawitem ID="811609" drawnum="5" drawRP="25000" />
+				<drawitem ID="811609" drawnum="6" drawRP="50000" />
+				<drawitem ID="811609" drawnum="7" drawRP="25000" />
+			</certain02>
+			
+	
+		</limitTimeDrawID>
+	</limitTimeDraw>
+	<!--
+		魔王召唤抽奖表
+	-->
+	<devilcallDraw>
+		<devilcallDrawID id="1">
+			<Diamonddraw01 id="01" Moneytype="122223" needMoney="3" interval="-1" >
+				<drawitem ID="811604" drawnum="1" drawRP="20000" />
+				<drawitem ID="811605" drawnum="1" drawRP="20000" />
+				<drawitem ID="811620" drawnum="1" drawRP="20000" />
+				<drawitem ID="811610" drawnum="1" drawRP="20000" />
+				<drawitem ID="811619" drawnum="1" drawRP="20000" />
+				
+				<drawitem ID="811611" drawnum="1" drawRP="20000" />
+				<drawitem ID="811616" drawnum="1" drawRP="20000" />
+				<drawitem ID="811612" drawnum="1" drawRP="0" />
+				<!-- <drawitem ID="811613" drawnum="2" drawRP="0" />-->
+				<drawitem ID="811607" drawnum="1" drawRP="0" />
+				<drawitem ID="811615" drawnum="1" drawRP="0" />
+				<drawitem ID="811624" drawnum="1" drawRP="120000" />
+				<drawitem ID="152011" drawnum="2" drawRP="105000" />
+				<drawitem ID="152011" drawnum="4" drawRP="45000" />
+				<drawitem ID="101290" drawnum="1" drawRP="105000" />
+				<drawitem ID="101290" drawnum="2" drawRP="45000" />
+				<drawitem ID="202100" drawnum="1" drawRP="28571" />
+				<drawitem ID="212100" drawnum="1" drawRP="28571" />
+				<drawitem ID="222100" drawnum="1" drawRP="28571" />
+				<drawitem ID="232100" drawnum="1" drawRP="28571" />
+				<drawitem ID="242100" drawnum="1" drawRP="28571" />
+				<drawitem ID="252100" drawnum="1" drawRP="28571" />
+				<drawitem ID="262100" drawnum="1" drawRP="28571" />
+				<drawitem ID="201200" drawnum="1" drawRP="28571" />
+				<drawitem ID="211200" drawnum="1" drawRP="28572" />
+				<drawitem ID="221200" drawnum="1" drawRP="28572" />
+				<drawitem ID="231200" drawnum="1" drawRP="28572" />
+				<drawitem ID="241200" drawnum="1" drawRP="28572" />
+				<drawitem ID="251200" drawnum="1" drawRP="28572" />
+				<drawitem ID="261200" drawnum="1" drawRP="28572" />
+			</Diamonddraw01>
+			
+			<!--该次抽取次数为10的整数倍时必定获得武魂石-->
+			<certain01 baseNum="10" addNum="10" >
+				<drawitem ID="811604" drawnum="1" drawRP="66666" />
+				<drawitem ID="811605" drawnum="1" drawRP="66666" />
+				<drawitem ID="811620" drawnum="1" drawRP="66666" />
+				<drawitem ID="811610" drawnum="1" drawRP="66667" />
+				<drawitem ID="811619" drawnum="1" drawRP="66667" />
+				
+				<drawitem ID="811611" drawnum="1" drawRP="66667" />
+				<drawitem ID="811616" drawnum="1" drawRP="66667" />
+				<drawitem ID="811624" drawnum="1" drawRP="400000" />
+			</certain01>
+			
+			<!--该次抽奖必定获得BOSS随从灵魂石-->
+			<certain02 baseNum="3" addNum="4" >
+				<drawitem ID="811624" drawnum="1" drawRP="50000" />
+				<drawitem ID="811624" drawnum="2" drawRP="30000" />
+				<drawitem ID="811624" drawnum="3" drawRP="20000" />
+			</certain02>
+		</devilcallDrawID>
+		
+		<devilcallDrawID id="2">
+			<Diamonddraw01 id="01" Moneytype="122223" needMoney="3" interval="-1" >
+				<drawitem ID="811604" drawnum="1" drawRP="20000" />
+				<drawitem ID="811605" drawnum="1" drawRP="20000" />
+				<drawitem ID="811620" drawnum="1" drawRP="20000" />
+				<drawitem ID="811610" drawnum="1" drawRP="20000" />
+				<drawitem ID="811619" drawnum="1" drawRP="20000" />
+				
+				<drawitem ID="811611" drawnum="1" drawRP="20000" />
+				<drawitem ID="811616" drawnum="1" drawRP="20000" />
+				<drawitem ID="811612" drawnum="1" drawRP="0" />
+				<!-- <drawitem ID="811613" drawnum="2" drawRP="0" />-->
+				<drawitem ID="811607" drawnum="1" drawRP="0" />
+				<drawitem ID="811615" drawnum="1" drawRP="0" />
+				<drawitem ID="811625" drawnum="1" drawRP="120000" />
+				<drawitem ID="152011" drawnum="2" drawRP="105000" />
+				<drawitem ID="152011" drawnum="4" drawRP="45000" />
+				<drawitem ID="101290" drawnum="1" drawRP="105000" />
+				<drawitem ID="101290" drawnum="2" drawRP="45000" />
+				<drawitem ID="202100" drawnum="1" drawRP="28571" />
+				<drawitem ID="212100" drawnum="1" drawRP="28571" />
+				<drawitem ID="222100" drawnum="1" drawRP="28571" />
+				<drawitem ID="232100" drawnum="1" drawRP="28571" />
+				<drawitem ID="242100" drawnum="1" drawRP="28571" />
+				<drawitem ID="252100" drawnum="1" drawRP="28571" />
+				<drawitem ID="262100" drawnum="1" drawRP="28571" />
+				<drawitem ID="201200" drawnum="1" drawRP="28571" />
+				<drawitem ID="211200" drawnum="1" drawRP="28572" />
+				<drawitem ID="221200" drawnum="1" drawRP="28572" />
+				<drawitem ID="231200" drawnum="1" drawRP="28572" />
+				<drawitem ID="241200" drawnum="1" drawRP="28572" />
+				<drawitem ID="251200" drawnum="1" drawRP="28572" />
+				<drawitem ID="261200" drawnum="1" drawRP="28572" />
+			</Diamonddraw01>
+			
+			<!--该次抽取次数为10的整数倍时必定获得橙色装备或武魂石-->
+			<certain01 baseNum="10" addNum="10" >
+				<drawitem ID="811604" drawnum="1" drawRP="66666" />
+				<drawitem ID="811605" drawnum="1" drawRP="66666" />
+				<drawitem ID="811620" drawnum="1" drawRP="66666" />
+				<drawitem ID="811610" drawnum="1" drawRP="66667" />
+				<drawitem ID="811619" drawnum="1" drawRP="66667" />
+				
+				<drawitem ID="811611" drawnum="1" drawRP="66667" />
+				<drawitem ID="811616" drawnum="1" drawRP="66667" />
+				<drawitem ID="811625" drawnum="1" drawRP="400000" />
+			</certain01>
+			
+			<!--该次抽奖必定获得BOSS随从灵魂石-->
+			<certain02 baseNum="3" addNum="4" >
+				<drawitem ID="811625" drawnum="1" drawRP="50000" />
+				<drawitem ID="811625" drawnum="2" drawRP="30000" />
+				<drawitem ID="811625" drawnum="3" drawRP="20000" />
+			</certain02>
+		</devilcallDrawID>
+		
+		<devilcallDrawID id="3">
+			<Diamonddraw01 id="01" Moneytype="122223" needMoney="3" interval="-1" >
+				<drawitem ID="811604" drawnum="1" drawRP="20000" />
+				<drawitem ID="811605" drawnum="1" drawRP="20000" />
+				<drawitem ID="811620" drawnum="1" drawRP="20000" />
+				<drawitem ID="811610" drawnum="1" drawRP="20000" />
+				<drawitem ID="811619" drawnum="1" drawRP="20000" />
+				
+				<drawitem ID="811611" drawnum="1" drawRP="20000" />
+				<drawitem ID="811616" drawnum="1" drawRP="20000" />
+				<drawitem ID="811612" drawnum="1" drawRP="27500" />
+				<!-- <drawitem ID="811613" drawnum="1" drawRP="27500" /> -->
+				<drawitem ID="811607" drawnum="1" drawRP="17500" />
+				<drawitem ID="811615" drawnum="1" drawRP="17500" />
+				<!-- <drawitem ID="811618" drawnum="1" drawRP="30000" /> -->
+				<drawitem ID="152011" drawnum="2" drawRP="105000" />
+				<drawitem ID="152011" drawnum="4" drawRP="45000" />
+				<drawitem ID="101290" drawnum="1" drawRP="105000" />
+				<drawitem ID="101290" drawnum="2" drawRP="45000" />
+				<drawitem ID="202100" drawnum="1" drawRP="28571" />
+				<drawitem ID="212100" drawnum="1" drawRP="28571" />
+				<drawitem ID="222100" drawnum="1" drawRP="28571" />
+				<drawitem ID="232100" drawnum="1" drawRP="28571" />
+				<drawitem ID="242100" drawnum="1" drawRP="28571" />
+				<drawitem ID="252100" drawnum="1" drawRP="28571" />
+				<drawitem ID="262100" drawnum="1" drawRP="28571" />
+				<drawitem ID="201200" drawnum="1" drawRP="28571" />
+				<drawitem ID="211200" drawnum="1" drawRP="28572" />
+				<drawitem ID="221200" drawnum="1" drawRP="28572" />
+				<drawitem ID="231200" drawnum="1" drawRP="28572" />
+				<drawitem ID="241200" drawnum="1" drawRP="28572" />
+				<drawitem ID="251200" drawnum="1" drawRP="28572" />
+				<drawitem ID="261200" drawnum="1" drawRP="28572" />
+			</Diamonddraw01>
+			
+			<!--该次抽取次数为10的整数倍时必定获得橙色装备或武魂石-->
+			<certain01 baseNum="10" addNum="10" >
+				<drawitem ID="811604" drawnum="1" drawRP="66666" />
+				<drawitem ID="811605" drawnum="1" drawRP="66666" />
+				<drawitem ID="811620" drawnum="1" drawRP="66666" />
+				<drawitem ID="811610" drawnum="1" drawRP="66667" />
+				<drawitem ID="811619" drawnum="1" drawRP="66667" />
+				
+				<drawitem ID="811611" drawnum="1" drawRP="66667" />
+				<drawitem ID="811616" drawnum="1" drawRP="66667" />
+				<drawitem ID="811627" drawnum="1" drawRP="400000" />
+			</certain01>
+			
+			<!--该次抽奖必定获得BOSS随从灵魂石-->
+			<certain02 baseNum="3" addNum="4" >
+				<drawitem ID="811627" drawnum="1" drawRP="50000" />
+				<drawitem ID="811627" drawnum="2" drawRP="30000" />
+				<drawitem ID="811627" drawnum="3" drawRP="20000" />
+			</certain02>
+		</devilcallDrawID>
+	</devilcallDraw>
+	
+	
+	
+	<!--幸运寻宝-->
+	<luckyDraw>
+		<luckyDrawID id="1">
+			<!--单次抽奖-->
+			<luckyDraw01 id="01" Moneytype="2" needMoney="320" interval="86400">
+				<drawitem ID="122206" drawnum="30" drawRP="75000" />
+				<drawitem ID="2" drawnum="188" drawRP="150000" />
+				<drawitem ID="102652" drawnum="2" drawRP="155000" />
+				<drawitem ID="102800" drawnum="10" drawRP="100000" />
+				<drawitem ID="121220" drawnum="10" drawRP="100000" />
+				<drawitem ID="811618" drawnum="3" drawRP="45000" />
+				<drawitem ID="120101" drawnum="150" drawRP="75000" />
+				<drawitem ID="2" drawnum="388" drawRP="10000" />
+				<drawitem ID="102771" drawnum="1" drawRP="5000" />
+				<drawitem ID="122206" drawnum="15" drawRP="125000" />
+				<drawitem ID="120101" drawnum="75" drawRP="125000" />
+				<drawitem ID="811607" drawnum="3" drawRP="35000" />
+			</luckyDraw01>
+			
+			<!--十连抽奖-->
+			<luckyDraw01 id="02" Moneytype="2" needMoney="3000" interval="-1">
+				<drawitem ID="122206" drawnum="30" drawRP="75000" />
+				<drawitem ID="2" drawnum="188" drawRP="150000" />
+				<drawitem ID="102652" drawnum="2" drawRP="155000" />
+				<drawitem ID="102800" drawnum="10" drawRP="100000" />
+				<drawitem ID="121220" drawnum="10" drawRP="100000" />
+				<drawitem ID="811618" drawnum="3" drawRP="45000" />
+				<drawitem ID="120101" drawnum="150" drawRP="75000" />
+				<drawitem ID="2" drawnum="388" drawRP="10000" />
+				<drawitem ID="102771" drawnum="1" drawRP="5000" />
+				<drawitem ID="122206" drawnum="15" drawRP="125000" />
+				<drawitem ID="120101" drawnum="75" drawRP="125000" />
+				<drawitem ID="811607" drawnum="3" drawRP="35000" />
+			</luckyDraw01>
+			
+			
+			<!--该次抽取次数为10的整数倍时必定获得橙色装备或武魂石-->
+			<certain01 baseNum="10" addNum="10" >
+				<drawitem ID="811618" drawnum="3" drawRP="20000" />
+				<drawitem ID="811607" drawnum="3" drawRP="17500" />
+			</certain01>
+		</luckyDrawID>
+		
+		
+		<luckyDrawID id="2">
+			<!--单次抽奖-->
+			<luckyDraw01 id="01" Moneytype="2" needMoney="320" interval="86400">
+				<drawitem ID="122206" drawnum="30" drawRP="75000" />
+				<drawitem ID="2" drawnum="188" drawRP="150000" />
+				<drawitem ID="102651" drawnum="2" drawRP="155000" />
+				<drawitem ID="102800" drawnum="10" drawRP="100000" />
+				<drawitem ID="121220" drawnum="10" drawRP="100000" />
+				<drawitem ID="811617" drawnum="3" drawRP="35000" />
+				<drawitem ID="120101" drawnum="150" drawRP="75000" />
+				<drawitem ID="2" drawnum="388" drawRP="10000" />
+				<drawitem ID="102772" drawnum="1" drawRP="5000" />
+				<drawitem ID="122206" drawnum="15" drawRP="125000" />
+				<drawitem ID="120101" drawnum="75" drawRP="125000" />
+				<drawitem ID="811615" drawnum="3" drawRP="45000" />
+			</luckyDraw01>
+			
+			<!--十连抽奖-->
+			<luckyDraw01 id="02" Moneytype="2" needMoney="3000" interval="-1">
+				<drawitem ID="122206" drawnum="30" drawRP="75000" />
+				<drawitem ID="2" drawnum="188" drawRP="150000" />
+				<drawitem ID="102651" drawnum="2" drawRP="155000" />
+				<drawitem ID="102800" drawnum="10" drawRP="100000" />
+				<drawitem ID="121220" drawnum="10" drawRP="100000" />
+				<drawitem ID="811617" drawnum="3" drawRP="35000" />
+				<drawitem ID="120101" drawnum="150" drawRP="75000" />
+				<drawitem ID="2" drawnum="388" drawRP="10000" />
+				<drawitem ID="102772" drawnum="1" drawRP="5000" />
+				<drawitem ID="122206" drawnum="15" drawRP="125000" />
+				<drawitem ID="120101" drawnum="75" drawRP="125000" />
+				<drawitem ID="811615" drawnum="3" drawRP="45000" />
+			</luckyDraw01>
+			
+			
+			<!--该次抽取次数为10的整数倍时必定获得橙色装备或武魂石-->
+			<certain01 baseNum="10" addNum="10" >
+				<drawitem ID="811615" drawnum="3" drawRP="45000" />
+				<drawitem ID="811617" drawnum="3" drawRP="35000" />
+			</certain01>
+		</luckyDrawID>
+		
+		<luckyDrawID id="3">
+			<!--单次抽奖-->
+			<luckyDraw01 id="01" Moneytype="2" needMoney="320" interval="86400">
+				<drawitem ID="122206" drawnum="30" drawRP="75000" />
+				<drawitem ID="2" drawnum="188" drawRP="150000" />
+				<drawitem ID="102650" drawnum="2" drawRP="155000" />
+				<drawitem ID="102800" drawnum="10" drawRP="100000" />
+				<drawitem ID="121220" drawnum="10" drawRP="100000" />
+				<drawitem ID="811620" drawnum="3" drawRP="35000" />
+				<drawitem ID="120101" drawnum="150" drawRP="75000" />
+				<drawitem ID="2" drawnum="388" drawRP="10000" />
+				<drawitem ID="102773" drawnum="1" drawRP="5000" />
+				<drawitem ID="122206" drawnum="15" drawRP="125000" />
+				<drawitem ID="120101" drawnum="75" drawRP="125000" />
+				<drawitem ID="811606" drawnum="3" drawRP="45000" />
+			</luckyDraw01>
+			
+			<!--十连抽奖-->
+			<luckyDraw01 id="02" Moneytype="2" needMoney="3000" interval="-1">
+				<drawitem ID="122206" drawnum="30" drawRP="75000" />
+				<drawitem ID="2" drawnum="188" drawRP="150000" />
+				<drawitem ID="102650" drawnum="2" drawRP="155000" />
+				<drawitem ID="102800" drawnum="10" drawRP="100000" />
+				<drawitem ID="121220" drawnum="10" drawRP="100000" />
+				<drawitem ID="811620" drawnum="3" drawRP="35000" />
+				<drawitem ID="120101" drawnum="150" drawRP="75000" />
+				<drawitem ID="2" drawnum="388" drawRP="10000" />
+				<drawitem ID="102773" drawnum="1" drawRP="5000" />
+				<drawitem ID="122206" drawnum="15" drawRP="125000" />
+				<drawitem ID="120101" drawnum="75" drawRP="125000" />
+				<drawitem ID="811606" drawnum="3" drawRP="45000" />
+			</luckyDraw01>
+			
+			
+			<!--该次抽取次数为10的整数倍时必定获得橙色装备或武魂石-->
+			<certain01 baseNum="10" addNum="10" >
+				<drawitem ID="811620" drawnum="3" drawRP="45000" />
+				<drawitem ID="811606" drawnum="3" drawRP="35000" />
+			</certain01>
+		</luckyDrawID>
+		
+		<!--坐骑抽奖-->
+		<luckyDrawID id="4">
+			<!--单次抽奖-->
+			<luckyDraw01 id="01" Moneytype="2" needMoney="60" interval="86400">
+				<drawitem ID="121266" drawnum="8" drawRP="60000" />
+				<drawitem ID="109000" drawnum="1" drawRP="85000" />
+				<drawitem ID="121267" drawnum="1" drawRP="50000" />
+				<drawitem ID="121266" drawnum="6" drawRP="60000" />
+				<drawitem ID="109001" drawnum="1" drawRP="150000" />
+				<drawitem ID="404000" drawnum="5" drawRP="15000" />
+				<drawitem ID="121266" drawnum="4" drawRP="70000" />
+				<drawitem ID="109002" drawnum="1" drawRP="200000" />
+				<drawitem ID="121268" drawnum="2" drawRP="80000" />
+				<drawitem ID="121266" drawnum="2" drawRP="100000" />
+				<drawitem ID="109003" drawnum="1" drawRP="100000" />
+				<drawitem ID="2" drawnum="288" drawRP="30000" />
+			</luckyDraw01>
+			
+			<!--十连抽奖-->
+			<luckyDraw01 id="02" Moneytype="2" needMoney="540" interval="-1">
+				<drawitem ID="121266" drawnum="8" drawRP="60000" />
+				<drawitem ID="109000" drawnum="1" drawRP="85000" />
+				<drawitem ID="121267" drawnum="1" drawRP="50000" />
+				<drawitem ID="121266" drawnum="6" drawRP="60000" />
+				<drawitem ID="109001" drawnum="1" drawRP="150000" />
+				<drawitem ID="404000" drawnum="5" drawRP="15000" />
+				<drawitem ID="121266" drawnum="4" drawRP="70000" />
+				<drawitem ID="109002" drawnum="1" drawRP="200000" />
+				<drawitem ID="121268" drawnum="2" drawRP="80000" />
+				<drawitem ID="121266" drawnum="2" drawRP="100000" />
+				<drawitem ID="109003" drawnum="1" drawRP="100000" />
+				<drawitem ID="2" drawnum="288" drawRP="30000" />
+			</luckyDraw01>
+			
+			
+			<!--该次抽取次数为10的整数倍时必定获得橙色装备或武魂石-->
+			<certain01 baseNum="10" addNum="10" >
+				<drawitem ID="121266" drawnum="8" drawRP="60000" />
+				<drawitem ID="109000" drawnum="1" drawRP="85000" />
+				<drawitem ID="121267" drawnum="1" drawRP="50000" />
+				<drawitem ID="121266" drawnum="6" drawRP="60000" />
+				<drawitem ID="109001" drawnum="1" drawRP="150000" />
+				<drawitem ID="404000" drawnum="5" drawRP="15000" />
+				<drawitem ID="121266" drawnum="4" drawRP="70000" />
+				<drawitem ID="109002" drawnum="1" drawRP="200000" />
+				<drawitem ID="121268" drawnum="2" drawRP="80000" />
+				<drawitem ID="121266" drawnum="2" drawRP="100000" />
+				<drawitem ID="109003" drawnum="1" drawRP="100000" />
+				<drawitem ID="2" drawnum="288" drawRP="30000" />
+			</certain01>
+		</luckyDrawID>
+		
+		
+		<!--暗影装备抽奖-->
+		<luckyDrawID id="5">
+			<!--单次抽奖-->
+			<luckyDraw01 id="01" Moneytype="2" needMoney="120" interval="86400">
+				<drawitem ID="120101" drawnum="60" drawRP="75000" />
+				<drawitem ID="121221" drawnum="4" drawRP="50000" />
+				<drawitem ID="102831" drawnum="1" drawRP="60000" />
+				<drawitem ID="121222" drawnum="10" drawRP="175000" />
+				<drawitem ID="122207" drawnum="30" drawRP="50000" />
+				<drawitem ID="102832" drawnum="1" drawRP="5000" />
+				<drawitem ID="121221" drawnum="2" drawRP="175000" />
+				<drawitem ID="120101" drawnum="30" drawRP="160000" />
+				<drawitem ID="102831" drawnum="2" drawRP="30000" />
+				<drawitem ID="122207" drawnum="15" drawRP="155000" />
+				<drawitem ID="121222" drawnum="20" drawRP="50000" />
+				<drawitem ID="102831" drawnum="3" drawRP="15000" />
+			</luckyDraw01>
+			
+			<!--十连抽奖-->
+			<luckyDraw01 id="02" Moneytype="2" needMoney="1080" interval="-1">
+				<drawitem ID="120101" drawnum="60" drawRP="75000" />
+				<drawitem ID="121221" drawnum="4" drawRP="50000" />
+				<drawitem ID="102831" drawnum="1" drawRP="60000" />
+				<drawitem ID="121222" drawnum="10" drawRP="175000" />
+				<drawitem ID="122207" drawnum="30" drawRP="50000" />
+				<drawitem ID="102832" drawnum="1" drawRP="5000" />
+				<drawitem ID="121221" drawnum="2" drawRP="175000" />
+				<drawitem ID="120101" drawnum="30" drawRP="160000" />
+				<drawitem ID="102831" drawnum="2" drawRP="30000" />
+				<drawitem ID="122207" drawnum="15" drawRP="155000" />
+				<drawitem ID="121222" drawnum="20" drawRP="50000" />
+				<drawitem ID="102831" drawnum="3" drawRP="15000" />
+			</luckyDraw01>
+			
+			
+			<!--该次抽取次数为10的整数倍时必定获得橙色装备或武魂石-->
+			<certain01 baseNum="10" addNum="10" >
+				<drawitem ID="120101" drawnum="60" drawRP="75000" />
+				<drawitem ID="121221" drawnum="4" drawRP="50000" />
+				<drawitem ID="102831" drawnum="1" drawRP="60000" />
+				<drawitem ID="121222" drawnum="10" drawRP="175000" />
+				<drawitem ID="122207" drawnum="30" drawRP="50000" />
+				<drawitem ID="102832" drawnum="1" drawRP="5000" />
+				<drawitem ID="121221" drawnum="2" drawRP="175000" />
+				<drawitem ID="120101" drawnum="30" drawRP="160000" />
+				<drawitem ID="102831" drawnum="2" drawRP="30000" />
+				<drawitem ID="122207" drawnum="15" drawRP="155000" />
+				<drawitem ID="121222" drawnum="20" drawRP="50000" />
+				<drawitem ID="102831" drawnum="3" drawRP="15000" />
+			</certain01>
+		</luckyDrawID>
+		
+		
+	</luckyDraw>
+	
+	
+	
+	<limitTimeTreasure>
+		<limitTimeTreasureID id="1">
+			<Diamonddraw01 id="01" Moneytype="2" needMoney="100" interval="60" >
+				<drawitem ID="811604" drawnum="20" drawRP="33333" />
+				<drawitem ID="811605" drawnum="20" drawRP="33333" />
+				<drawitem ID="811606" drawnum="20" drawRP="33334" />
+				<drawitem ID="202200" drawnum="1" drawRP="6060" />
+				<drawitem ID="242200" drawnum="1" drawRP="6060" />
+				<drawitem ID="262200" drawnum="1" drawRP="6060" />
+				<drawitem ID="212210" drawnum="1" drawRP="6060" />
+				<drawitem ID="232210" drawnum="1" drawRP="6060" />
+				<drawitem ID="262210" drawnum="1" drawRP="6060" />
+				<drawitem ID="242220" drawnum="1" drawRP="6060" />
+				<drawitem ID="252220" drawnum="1" drawRP="6060" />
+				<drawitem ID="262220" drawnum="1" drawRP="6060" />
+				<drawitem ID="212230" drawnum="1" drawRP="6060" />
+				<drawitem ID="222230" drawnum="1" drawRP="6060" />
+				<drawitem ID="252230" drawnum="1" drawRP="6060" />
+				<drawitem ID="212240" drawnum="1" drawRP="6060" />
+				<drawitem ID="232240" drawnum="1" drawRP="6061" />
+				<drawitem ID="252240" drawnum="1" drawRP="6061" />
+				<drawitem ID="202250" drawnum="1" drawRP="6061" />
+				<drawitem ID="222250" drawnum="1" drawRP="6061" />
+				<drawitem ID="232250" drawnum="1" drawRP="6061" />
+				<drawitem ID="202260" drawnum="1" drawRP="6061" />
+				<drawitem ID="212260" drawnum="1" drawRP="6061" />
+				<drawitem ID="222260" drawnum="1" drawRP="6061" />
+				<drawitem ID="232260" drawnum="1" drawRP="6061" />
+				<drawitem ID="252260" drawnum="1" drawRP="6061" />
+				<drawitem ID="202270" drawnum="1" drawRP="6061" />
+				<drawitem ID="212270" drawnum="1" drawRP="6061" />
+				<drawitem ID="222270" drawnum="1" drawRP="6061" />
+				<drawitem ID="202280" drawnum="1" drawRP="6061" />
+				<drawitem ID="232280" drawnum="1" drawRP="6061" />
+				<drawitem ID="242280" drawnum="1" drawRP="6061" />
+				<drawitem ID="262280" drawnum="1" drawRP="6061" />
+				<drawitem ID="222290" drawnum="1" drawRP="6061" />
+				<drawitem ID="242290" drawnum="1" drawRP="6061" />
+				<drawitem ID="252290" drawnum="1" drawRP="6061" />
+				<drawitem ID="202100" drawnum="1" drawRP="35714" />
+				<drawitem ID="212100" drawnum="1" drawRP="35714" />
+				<drawitem ID="222100" drawnum="1" drawRP="35714" />
+				<drawitem ID="232100" drawnum="1" drawRP="35714" />
+				<drawitem ID="242100" drawnum="1" drawRP="35714" />
+				<drawitem ID="252100" drawnum="1" drawRP="35714" />
+				<drawitem ID="262100" drawnum="1" drawRP="35714" />
+				<drawitem ID="201200" drawnum="1" drawRP="35714" />
+				<drawitem ID="211200" drawnum="1" drawRP="35714" />
+				<drawitem ID="221200" drawnum="1" drawRP="35714" />
+				<drawitem ID="231200" drawnum="1" drawRP="35715" />
+				<drawitem ID="241200" drawnum="1" drawRP="35715" />
+				<drawitem ID="251200" drawnum="1" drawRP="35715" />
+				<drawitem ID="261200" drawnum="1" drawRP="35715" />
+			</Diamonddraw01>
+			
+			<Diamonddraw10 id="02" Moneytype="2" needMoney="900" interval="-1" >
+				<drawitem ID="811604" drawnum="20" drawRP="33333" />
+				<drawitem ID="811605" drawnum="20" drawRP="33333" />
+				<drawitem ID="811606" drawnum="20" drawRP="33334" />
+				<drawitem ID="202200" drawnum="1" drawRP="6060" />
+				<drawitem ID="242200" drawnum="1" drawRP="6060" />
+				<drawitem ID="262200" drawnum="1" drawRP="6060" />
+				<drawitem ID="212210" drawnum="1" drawRP="6060" />
+				<drawitem ID="232210" drawnum="1" drawRP="6060" />
+				<drawitem ID="262210" drawnum="1" drawRP="6060" />
+				<drawitem ID="242220" drawnum="1" drawRP="6060" />
+				<drawitem ID="252220" drawnum="1" drawRP="6060" />
+				<drawitem ID="262220" drawnum="1" drawRP="6060" />
+				<drawitem ID="212230" drawnum="1" drawRP="6060" />
+				<drawitem ID="222230" drawnum="1" drawRP="6060" />
+				<drawitem ID="252230" drawnum="1" drawRP="6060" />
+				<drawitem ID="212240" drawnum="1" drawRP="6060" />
+				<drawitem ID="232240" drawnum="1" drawRP="6061" />
+				<drawitem ID="252240" drawnum="1" drawRP="6061" />
+				<drawitem ID="202250" drawnum="1" drawRP="6061" />
+				<drawitem ID="222250" drawnum="1" drawRP="6061" />
+				<drawitem ID="232250" drawnum="1" drawRP="6061" />
+				<drawitem ID="202260" drawnum="1" drawRP="6061" />
+				<drawitem ID="212260" drawnum="1" drawRP="6061" />
+				<drawitem ID="222260" drawnum="1" drawRP="6061" />
+				<drawitem ID="232260" drawnum="1" drawRP="6061" />
+				<drawitem ID="252260" drawnum="1" drawRP="6061" />
+				<drawitem ID="202270" drawnum="1" drawRP="6061" />
+				<drawitem ID="212270" drawnum="1" drawRP="6061" />
+				<drawitem ID="222270" drawnum="1" drawRP="6061" />
+				<drawitem ID="202280" drawnum="1" drawRP="6061" />
+				<drawitem ID="232280" drawnum="1" drawRP="6061" />
+				<drawitem ID="242280" drawnum="1" drawRP="6061" />
+				<drawitem ID="262280" drawnum="1" drawRP="6061" />
+				<drawitem ID="222290" drawnum="1" drawRP="6061" />
+				<drawitem ID="242290" drawnum="1" drawRP="6061" />
+				<drawitem ID="252290" drawnum="1" drawRP="6061" />
+				<drawitem ID="202100" drawnum="1" drawRP="35714" />
+				<drawitem ID="212100" drawnum="1" drawRP="35714" />
+				<drawitem ID="222100" drawnum="1" drawRP="35714" />
+				<drawitem ID="232100" drawnum="1" drawRP="35714" />
+				<drawitem ID="242100" drawnum="1" drawRP="35714" />
+				<drawitem ID="252100" drawnum="1" drawRP="35714" />
+				<drawitem ID="262100" drawnum="1" drawRP="35714" />
+				<drawitem ID="201200" drawnum="1" drawRP="35714" />
+				<drawitem ID="211200" drawnum="1" drawRP="35714" />
+				<drawitem ID="221200" drawnum="1" drawRP="35714" />
+				<drawitem ID="231200" drawnum="1" drawRP="35715" />
+				<drawitem ID="241200" drawnum="1" drawRP="35715" />
+				<drawitem ID="251200" drawnum="1" drawRP="35715" />
+				<drawitem ID="261200" drawnum="1" drawRP="35715" />
+			</Diamonddraw10>
+			
+			<!--该次限时随从活动钻石抽取次数为10的整数倍时必定获得橙色装备或武魂石-->
+			<certain01 baseNum="10" addNum="10" >
+				<drawitem ID="811604" drawnum="20" drawRP="33333" />
+				<drawitem ID="811605" drawnum="20" drawRP="33333" />
+				<drawitem ID="811606" drawnum="20" drawRP="33334" />
+				<drawitem ID="202200" drawnum="1" drawRP="6060" />
+				<drawitem ID="242200" drawnum="1" drawRP="6060" />
+				<drawitem ID="262200" drawnum="1" drawRP="6060" />
+				<drawitem ID="212210" drawnum="1" drawRP="6060" />
+				<drawitem ID="232210" drawnum="1" drawRP="6060" />
+				<drawitem ID="262210" drawnum="1" drawRP="6060" />
+				<drawitem ID="242220" drawnum="1" drawRP="6060" />
+				<drawitem ID="252220" drawnum="1" drawRP="6060" />
+				<drawitem ID="262220" drawnum="1" drawRP="6060" />
+				<drawitem ID="212230" drawnum="1" drawRP="6060" />
+				<drawitem ID="222230" drawnum="1" drawRP="6060" />
+				<drawitem ID="252230" drawnum="1" drawRP="6060" />
+				<drawitem ID="212240" drawnum="1" drawRP="6060" />
+				<drawitem ID="232240" drawnum="1" drawRP="6061" />
+				<drawitem ID="252240" drawnum="1" drawRP="6061" />
+				<drawitem ID="202250" drawnum="1" drawRP="6061" />
+				<drawitem ID="222250" drawnum="1" drawRP="6061" />
+				<drawitem ID="232250" drawnum="1" drawRP="6061" />
+				<drawitem ID="202260" drawnum="1" drawRP="6061" />
+				<drawitem ID="212260" drawnum="1" drawRP="6061" />
+				<drawitem ID="222260" drawnum="1" drawRP="6061" />
+				<drawitem ID="232260" drawnum="1" drawRP="6061" />
+				<drawitem ID="252260" drawnum="1" drawRP="6061" />
+				<drawitem ID="202270" drawnum="1" drawRP="6061" />
+				<drawitem ID="212270" drawnum="1" drawRP="6061" />
+				<drawitem ID="222270" drawnum="1" drawRP="6061" />
+				<drawitem ID="202280" drawnum="1" drawRP="6061" />
+				<drawitem ID="232280" drawnum="1" drawRP="6061" />
+				<drawitem ID="242280" drawnum="1" drawRP="6061" />
+				<drawitem ID="262280" drawnum="1" drawRP="6061" />
+				<drawitem ID="222290" drawnum="1" drawRP="6061" />
+				<drawitem ID="242290" drawnum="1" drawRP="6061" />
+				<drawitem ID="252290" drawnum="1" drawRP="6061" />
+			</certain01>
+			
+			<!--该次抽奖必定获得限时随从灵魂石-->
+			<certain02 baseNum="3" addNum="4" >
+				<drawitem ID="811604" drawnum="3" drawRP="66667" />
+				<drawitem ID="811604" drawnum="4" drawRP="33333" />
+			</certain02>
+			
+		</limitTimeTreasureID>
+	</limitTimeTreasure>
+	
+	<!--打怪兽-->
+	<M78Draw>
+		<M78DrawID id="1">
+			<drawitem ID="1" drawnum="500" drawRP="6000" />
+			<drawitem ID="1" drawnum="550" drawRP="6000" />
+			<drawitem ID="1" drawnum="600" drawRP="6000" />
+			<drawitem ID="1" drawnum="650" drawRP="6000" />
+			<drawitem ID="1" drawnum="700" drawRP="6000" />
+			<drawitem ID="1" drawnum="750" drawRP="4000" />
+			<drawitem ID="1" drawnum="800" drawRP="4000" />
+			<drawitem ID="1" drawnum="850" drawRP="4000" />
+			<drawitem ID="3" drawnum="13" drawRP="4167" />
+			<drawitem ID="3" drawnum="14" drawRP="4167" />
+			<drawitem ID="3" drawnum="15" drawRP="4167" />
+			<drawitem ID="3" drawnum="16" drawRP="4167" />
+			<drawitem ID="3" drawnum="17" drawRP="4166" />
+			<drawitem ID="3" drawnum="18" drawRP="4166" />
+			<drawitem ID="19" drawnum="13" drawRP="4167" />
+			<drawitem ID="19" drawnum="14" drawRP="4167" />
+			<drawitem ID="19" drawnum="15" drawRP="4167" />
+			<drawitem ID="19" drawnum="16" drawRP="4167" />
+			<drawitem ID="19" drawnum="17" drawRP="4166" />
+			<drawitem ID="19" drawnum="18" drawRP="4166" />
+			<drawitem ID="100103" drawnum="2" drawRP="2000" />
+			<drawitem ID="100104" drawnum="5" drawRP="6000" />
+		</M78DrawID>
+		
+		<M78DrawID id="2">
+			<drawitem ID="1" drawnum="1000" drawRP="6000" />
+			<drawitem ID="1" drawnum="1100" drawRP="6000" />
+			<drawitem ID="1" drawnum="1200" drawRP="6000" />
+			<drawitem ID="1" drawnum="1300" drawRP="6000" />
+			<drawitem ID="1" drawnum="1400" drawRP="6000" />
+			<drawitem ID="1" drawnum="1500" drawRP="4000" />
+			<drawitem ID="1" drawnum="1600" drawRP="4000" />
+			<drawitem ID="1" drawnum="1700" drawRP="4000" />
+			<drawitem ID="3" drawnum="20" drawRP="4167" />
+			<drawitem ID="3" drawnum="21" drawRP="4167" />
+			<drawitem ID="3" drawnum="22" drawRP="4167" />
+			<drawitem ID="3" drawnum="23" drawRP="4167" />
+			<drawitem ID="3" drawnum="24" drawRP="4166" />
+			<drawitem ID="3" drawnum="25" drawRP="4166" />
+			<drawitem ID="19" drawnum="20" drawRP="4167" />
+			<drawitem ID="19" drawnum="21" drawRP="4167" />
+			<drawitem ID="19" drawnum="22" drawRP="4167" />
+			<drawitem ID="19" drawnum="23" drawRP="4167" />
+			<drawitem ID="19" drawnum="24" drawRP="4166" />
+			<drawitem ID="19" drawnum="25" drawRP="4166" />
+			<drawitem ID="100103" drawnum="2" drawRP="2000" />
+			<drawitem ID="100104" drawnum="5" drawRP="6000" />
+		</M78DrawID>
+		
+		<M78DrawID id="3">
+			<drawitem ID="1" drawnum="1500" drawRP="6000" />
+			<drawitem ID="1" drawnum="1600" drawRP="6000" />
+			<drawitem ID="1" drawnum="1700" drawRP="6000" />
+			<drawitem ID="1" drawnum="1800" drawRP="6000" />
+			<drawitem ID="1" drawnum="1900" drawRP="6000" />
+			<drawitem ID="1" drawnum="2000" drawRP="4000" />
+			<drawitem ID="1" drawnum="2100" drawRP="4000" />
+			<drawitem ID="1" drawnum="2200" drawRP="4000" />
+			<drawitem ID="3" drawnum="24" drawRP="4167" />
+			<drawitem ID="3" drawnum="25" drawRP="4167" />
+			<drawitem ID="3" drawnum="26" drawRP="4167" />
+			<drawitem ID="3" drawnum="27" drawRP="4167" />
+			<drawitem ID="3" drawnum="28" drawRP="4166" />
+			<drawitem ID="3" drawnum="29" drawRP="4166" />
+			<drawitem ID="19" drawnum="24" drawRP="4167" />
+			<drawitem ID="19" drawnum="25" drawRP="4167" />
+			<drawitem ID="19" drawnum="26" drawRP="4167" />
+			<drawitem ID="19" drawnum="27" drawRP="4167" />
+			<drawitem ID="19" drawnum="28" drawRP="4166" />
+			<drawitem ID="19" drawnum="29" drawRP="4166" />
+			<drawitem ID="100103" drawnum="2" drawRP="2000" />
+			<drawitem ID="100404" drawnum="5" drawRP="6000" />
+		</M78DrawID>
+		
+		<M78DrawID id="4">
+			<drawitem ID="1" drawnum="2000" drawRP="6000" />
+			<drawitem ID="1" drawnum="2100" drawRP="6000" />
+			<drawitem ID="1" drawnum="2200" drawRP="6000" />
+			<drawitem ID="1" drawnum="2300" drawRP="6000" />
+			<drawitem ID="1" drawnum="2400" drawRP="6000" />
+			<drawitem ID="1" drawnum="2500" drawRP="4000" />
+			<drawitem ID="1" drawnum="2600" drawRP="4000" />
+			<drawitem ID="1" drawnum="2700" drawRP="4000" />
+			<drawitem ID="3" drawnum="28" drawRP="4167" />
+			<drawitem ID="3" drawnum="29" drawRP="4167" />
+			<drawitem ID="3" drawnum="30" drawRP="4167" />
+			<drawitem ID="3" drawnum="31" drawRP="4167" />
+			<drawitem ID="3" drawnum="32" drawRP="4166" />
+			<drawitem ID="3" drawnum="33" drawRP="4166" />
+			<drawitem ID="19" drawnum="28" drawRP="4167" />
+			<drawitem ID="19" drawnum="29" drawRP="4167" />
+			<drawitem ID="19" drawnum="30" drawRP="4167" />
+			<drawitem ID="19" drawnum="31" drawRP="4167" />
+			<drawitem ID="19" drawnum="32" drawRP="4166" />
+			<drawitem ID="19" drawnum="33" drawRP="4166" />
+			<drawitem ID="100103" drawnum="2" drawRP="2000" />
+			<drawitem ID="100404" drawnum="5" drawRP="6000" />
+		</M78DrawID>
+		
+		<M78DrawID id="5">
+			<drawitem ID="1" drawnum="2500" drawRP="6000" />
+			<drawitem ID="1" drawnum="2600" drawRP="6000" />
+			<drawitem ID="1" drawnum="2700" drawRP="6000" />
+			<drawitem ID="1" drawnum="2800" drawRP="6000" />
+			<drawitem ID="1" drawnum="2900" drawRP="6000" />
+			<drawitem ID="1" drawnum="3000" drawRP="4000" />
+			<drawitem ID="1" drawnum="3100" drawRP="4000" />
+			<drawitem ID="1" drawnum="3200" drawRP="4000" />
+			<drawitem ID="3" drawnum="30" drawRP="4167" />
+			<drawitem ID="3" drawnum="31" drawRP="4167" />
+			<drawitem ID="3" drawnum="32" drawRP="4167" />
+			<drawitem ID="3" drawnum="33" drawRP="4167" />
+			<drawitem ID="3" drawnum="34" drawRP="4166" />
+			<drawitem ID="3" drawnum="35" drawRP="4166" />
+			<drawitem ID="19" drawnum="30" drawRP="4167" />
+			<drawitem ID="19" drawnum="31" drawRP="4167" />
+			<drawitem ID="19" drawnum="32" drawRP="4167" />
+			<drawitem ID="19" drawnum="33" drawRP="4167" />
+			<drawitem ID="19" drawnum="34" drawRP="4166" />
+			<drawitem ID="19" drawnum="35" drawRP="4166" />
+			<drawitem ID="100103" drawnum="2" drawRP="2000" />
+			<drawitem ID="100404" drawnum="5" drawRP="6000" />
+		</M78DrawID>
+		
+		<M78DrawID id="6">
+			<drawitem ID="1" drawnum="3000" drawRP="6000" />
+			<drawitem ID="1" drawnum="3100" drawRP="6000" />
+			<drawitem ID="1" drawnum="3200" drawRP="6000" />
+			<drawitem ID="1" drawnum="3300" drawRP="6000" />
+			<drawitem ID="1" drawnum="3400" drawRP="6000" />
+			<drawitem ID="1" drawnum="3500" drawRP="4000" />
+			<drawitem ID="1" drawnum="3600" drawRP="4000" />
+			<drawitem ID="1" drawnum="3700" drawRP="4000" />
+			<drawitem ID="3" drawnum="32" drawRP="4167" />
+			<drawitem ID="3" drawnum="33" drawRP="4167" />
+			<drawitem ID="3" drawnum="34" drawRP="4167" />
+			<drawitem ID="3" drawnum="35" drawRP="4167" />
+			<drawitem ID="3" drawnum="36" drawRP="4166" />
+			<drawitem ID="3" drawnum="37" drawRP="4166" />
+			<drawitem ID="19" drawnum="32" drawRP="4167" />
+			<drawitem ID="19" drawnum="33" drawRP="4167" />
+			<drawitem ID="19" drawnum="34" drawRP="4167" />
+			<drawitem ID="19" drawnum="35" drawRP="4167" />
+			<drawitem ID="19" drawnum="36" drawRP="4166" />
+			<drawitem ID="19" drawnum="37" drawRP="4166" />
+			<drawitem ID="100403" drawnum="2" drawRP="2000" />
+			<drawitem ID="101218" drawnum="5" drawRP="6000" />
+		</M78DrawID>
+		
+		<M78DrawID id="7">
+			<drawitem ID="1" drawnum="3500" drawRP="6000" />
+			<drawitem ID="1" drawnum="3600" drawRP="6000" />
+			<drawitem ID="1" drawnum="3700" drawRP="6000" />
+			<drawitem ID="1" drawnum="3800" drawRP="6000" />
+			<drawitem ID="1" drawnum="3900" drawRP="6000" />
+			<drawitem ID="1" drawnum="4000" drawRP="4000" />
+			<drawitem ID="1" drawnum="4100" drawRP="4000" />
+			<drawitem ID="1" drawnum="4200" drawRP="4000" />
+			<drawitem ID="3" drawnum="35" drawRP="4167" />
+			<drawitem ID="3" drawnum="36" drawRP="4167" />
+			<drawitem ID="3" drawnum="37" drawRP="4167" />
+			<drawitem ID="3" drawnum="38" drawRP="4167" />
+			<drawitem ID="3" drawnum="39" drawRP="4166" />
+			<drawitem ID="3" drawnum="40" drawRP="4166" />
+			<drawitem ID="19" drawnum="35" drawRP="4167" />
+			<drawitem ID="19" drawnum="36" drawRP="4167" />
+			<drawitem ID="19" drawnum="37" drawRP="4167" />
+			<drawitem ID="19" drawnum="38" drawRP="4167" />
+			<drawitem ID="19" drawnum="39" drawRP="4166" />
+			<drawitem ID="19" drawnum="40" drawRP="4166" />
+			<drawitem ID="100403" drawnum="2" drawRP="2000" />
+			<drawitem ID="101218" drawnum="5" drawRP="6000" />
+		</M78DrawID>
+		
+		<M78DrawID id="8">
+			<drawitem ID="1" drawnum="4000" drawRP="6000" />
+			<drawitem ID="1" drawnum="4100" drawRP="6000" />
+			<drawitem ID="1" drawnum="4200" drawRP="6000" />
+			<drawitem ID="1" drawnum="4300" drawRP="6000" />
+			<drawitem ID="1" drawnum="4400" drawRP="6000" />
+			<drawitem ID="1" drawnum="4500" drawRP="4000" />
+			<drawitem ID="1" drawnum="4600" drawRP="4000" />
+			<drawitem ID="1" drawnum="4700" drawRP="4000" />
+			<drawitem ID="3" drawnum="37" drawRP="4167" />
+			<drawitem ID="3" drawnum="38" drawRP="4167" />
+			<drawitem ID="3" drawnum="39" drawRP="4167" />
+			<drawitem ID="3" drawnum="40" drawRP="4167" />
+			<drawitem ID="3" drawnum="41" drawRP="4166" />
+			<drawitem ID="3" drawnum="42" drawRP="4166" />
+			<drawitem ID="19" drawnum="37" drawRP="4167" />
+			<drawitem ID="19" drawnum="38" drawRP="4167" />
+			<drawitem ID="19" drawnum="39" drawRP="4167" />
+			<drawitem ID="19" drawnum="40" drawRP="4167" />
+			<drawitem ID="19" drawnum="41" drawRP="4166" />
+			<drawitem ID="19" drawnum="42" drawRP="4166" />
+			<drawitem ID="100403" drawnum="2" drawRP="2000" />
+			<drawitem ID="101218" drawnum="8" drawRP="6000" />
+
+		</M78DrawID>
+		
+		<M78DrawID id="9">
+			<drawitem ID="1" drawnum="4500" drawRP="6000" />
+			<drawitem ID="1" drawnum="4600" drawRP="6000" />
+			<drawitem ID="1" drawnum="4700" drawRP="6000" />
+			<drawitem ID="1" drawnum="4800" drawRP="6000" />
+			<drawitem ID="1" drawnum="4900" drawRP="6000" />
+			<drawitem ID="1" drawnum="5000" drawRP="4000" />
+			<drawitem ID="1" drawnum="5100" drawRP="4000" />
+			<drawitem ID="1" drawnum="5200" drawRP="4000" />
+			<drawitem ID="3" drawnum="40" drawRP="4167" />
+			<drawitem ID="3" drawnum="41" drawRP="4167" />
+			<drawitem ID="3" drawnum="42" drawRP="4167" />
+			<drawitem ID="3" drawnum="43" drawRP="4167" />
+			<drawitem ID="3" drawnum="44" drawRP="4166" />
+			<drawitem ID="3" drawnum="45" drawRP="4166" />
+			<drawitem ID="19" drawnum="40" drawRP="4167" />
+			<drawitem ID="19" drawnum="41" drawRP="4167" />
+			<drawitem ID="19" drawnum="42" drawRP="4167" />
+			<drawitem ID="19" drawnum="43" drawRP="4167" />
+			<drawitem ID="19" drawnum="44" drawRP="4166" />
+			<drawitem ID="19" drawnum="45" drawRP="4166" />
+			<drawitem ID="100403" drawnum="2" drawRP="2000" />
+			<drawitem ID="101218" drawnum="10" drawRP="6000" />
+		</M78DrawID>
+		
+		<M78DrawID id="10">
+			<drawitem ID="1" drawnum="5000" drawRP="6000" />
+			<drawitem ID="1" drawnum="5100" drawRP="6000" />
+			<drawitem ID="1" drawnum="5200" drawRP="6000" />
+			<drawitem ID="1" drawnum="5300" drawRP="6000" />
+			<drawitem ID="1" drawnum="5400" drawRP="6000" />
+			<drawitem ID="1" drawnum="5500" drawRP="4000" />
+			<drawitem ID="1" drawnum="5600" drawRP="4000" />
+			<drawitem ID="1" drawnum="5700" drawRP="4000" />
+			<drawitem ID="3" drawnum="42" drawRP="4167" />
+			<drawitem ID="3" drawnum="43" drawRP="4167" />
+			<drawitem ID="3" drawnum="44" drawRP="4167" />
+			<drawitem ID="3" drawnum="45" drawRP="4167" />
+			<drawitem ID="3" drawnum="46" drawRP="4166" />
+			<drawitem ID="3" drawnum="47" drawRP="4166" />
+			<drawitem ID="19" drawnum="42" drawRP="4167" />
+			<drawitem ID="19" drawnum="43" drawRP="4167" />
+			<drawitem ID="19" drawnum="44" drawRP="4167" />
+			<drawitem ID="19" drawnum="45" drawRP="4167" />
+			<drawitem ID="19" drawnum="46" drawRP="4166" />
+			<drawitem ID="19" drawnum="47" drawRP="4166" />
+			<drawitem ID="100403" drawnum="2" drawRP="2000" />
+			<drawitem ID="101218" drawnum="5" drawRP="6000" />
+		</M78DrawID>
+	</M78Draw>
+	
+	<M78Dead>
+		<M78DeadID id="1">
+			<drawitem ID="102290" drawnum="1" drawRP="75000" />
+		</M78DeadID>
+		
+		<M78DeadID id="2">
+			<drawitem ID="102291" drawnum="1" drawRP="75000" />
+		</M78DeadID>
+		
+		<M78DeadID id="3">
+			<drawitem ID="102292" drawnum="1" drawRP="75000" />
+		</M78DeadID>
+		
+		<M78DeadID id="4">
+			<drawitem ID="102293" drawnum="1" drawRP="75000" />
+		</M78DeadID>
+		
+		<M78DeadID id="5">
+			<drawitem ID="102294" drawnum="1" drawRP="75000" />
+		</M78DeadID>
+		
+		<M78DeadID id="6">
+			<drawitem ID="102295" drawnum="1" drawRP="75000" />
+		</M78DeadID>
+		
+		<M78DeadID id="7">
+			<drawitem ID="102296" drawnum="1" drawRP="75000" />
+		</M78DeadID>
+		
+		<M78DeadID id="8">
+			<drawitem ID="102297" drawnum="1" drawRP="75000" />
+		</M78DeadID>
+		
+		<M78DeadID id="9">
+			<drawitem ID="102298" drawnum="1" drawRP="75000" />
+		</M78DeadID>
+		
+		<M78DeadID id="10">
+			<drawitem ID="102299" drawnum="1" drawRP="75000" />
+		</M78DeadID>
+	</M78Dead>
+	
+	<M78EXDraw>
+		<M78EXDrawID id="1">
+			<drawitem ID="302200" drawnum="1" drawRP="1515" />
+			<drawitem ID="342200" drawnum="1" drawRP="1515" />
+			<drawitem ID="362200" drawnum="1" drawRP="1515" />
+			<drawitem ID="312210" drawnum="1" drawRP="1515" />
+			<drawitem ID="332210" drawnum="1" drawRP="1515" />
+			<drawitem ID="362210" drawnum="1" drawRP="1515" />
+			<drawitem ID="342220" drawnum="1" drawRP="1515" />
+			<drawitem ID="352220" drawnum="1" drawRP="1515" />
+			<drawitem ID="362220" drawnum="1" drawRP="1515" />
+			<drawitem ID="312230" drawnum="1" drawRP="1515" />
+			<drawitem ID="322230" drawnum="1" drawRP="1515" />
+			<drawitem ID="352230" drawnum="1" drawRP="1515" />
+			<drawitem ID="312240" drawnum="1" drawRP="1515" />
+			<drawitem ID="332240" drawnum="1" drawRP="1515" />
+			<drawitem ID="352240" drawnum="1" drawRP="1515" />
+			<drawitem ID="302250" drawnum="1" drawRP="1515" />
+			<drawitem ID="322250" drawnum="1" drawRP="1515" />
+			<drawitem ID="332250" drawnum="1" drawRP="1515" />
+			<drawitem ID="302260" drawnum="1" drawRP="1515" />
+			<drawitem ID="312260" drawnum="1" drawRP="1515" />
+			<drawitem ID="322260" drawnum="1" drawRP="1515" />
+			<drawitem ID="332260" drawnum="1" drawRP="1515" />
+			<drawitem ID="352260" drawnum="1" drawRP="1515" />
+			<drawitem ID="302270" drawnum="1" drawRP="1515" />
+			<drawitem ID="312270" drawnum="1" drawRP="1515" />
+			<drawitem ID="322270" drawnum="1" drawRP="1515" />
+			<drawitem ID="302280" drawnum="1" drawRP="1515" />
+			<drawitem ID="332280" drawnum="1" drawRP="1515" />
+			<drawitem ID="342280" drawnum="1" drawRP="1516" />
+			<drawitem ID="362280" drawnum="1" drawRP="1516" />
+			<drawitem ID="322290" drawnum="1" drawRP="1516" />
+			<drawitem ID="342290" drawnum="1" drawRP="1516" />
+			<drawitem ID="352290" drawnum="1" drawRP="1516" />
+			<drawitem ID="120101" drawnum="10" drawRP="10000" />
+			<drawitem ID="9" drawnum="2000" drawRP="10000" />
+			<drawitem ID="122206" drawnum="2" drawRP="15000" />
+			<drawitem ID="122306" drawnum="2" drawRP="15000" />
+		</M78EXDrawID>
+		
+		<M78EXDrawID id="2">
+			<drawitem ID="302200" drawnum="1" drawRP="1515" />
+			<drawitem ID="342200" drawnum="1" drawRP="1515" />
+			<drawitem ID="362200" drawnum="1" drawRP="1515" />
+			<drawitem ID="312210" drawnum="1" drawRP="1515" />
+			<drawitem ID="332210" drawnum="1" drawRP="1515" />
+			<drawitem ID="362210" drawnum="1" drawRP="1515" />
+			<drawitem ID="342220" drawnum="1" drawRP="1515" />
+			<drawitem ID="352220" drawnum="1" drawRP="1515" />
+			<drawitem ID="362220" drawnum="1" drawRP="1515" />
+			<drawitem ID="312230" drawnum="1" drawRP="1515" />
+			<drawitem ID="322230" drawnum="1" drawRP="1515" />
+			<drawitem ID="352230" drawnum="1" drawRP="1515" />
+			<drawitem ID="312240" drawnum="1" drawRP="1515" />
+			<drawitem ID="332240" drawnum="1" drawRP="1515" />
+			<drawitem ID="352240" drawnum="1" drawRP="1515" />
+			<drawitem ID="302250" drawnum="1" drawRP="1515" />
+			<drawitem ID="322250" drawnum="1" drawRP="1515" />
+			<drawitem ID="332250" drawnum="1" drawRP="1515" />
+			<drawitem ID="302260" drawnum="1" drawRP="1515" />
+			<drawitem ID="312260" drawnum="1" drawRP="1515" />
+			<drawitem ID="322260" drawnum="1" drawRP="1515" />
+			<drawitem ID="332260" drawnum="1" drawRP="1515" />
+			<drawitem ID="352260" drawnum="1" drawRP="1515" />
+			<drawitem ID="302270" drawnum="1" drawRP="1515" />
+			<drawitem ID="312270" drawnum="1" drawRP="1515" />
+			<drawitem ID="322270" drawnum="1" drawRP="1515" />
+			<drawitem ID="302280" drawnum="1" drawRP="1515" />
+			<drawitem ID="332280" drawnum="1" drawRP="1515" />
+			<drawitem ID="342280" drawnum="1" drawRP="1516" />
+			<drawitem ID="362280" drawnum="1" drawRP="1516" />
+			<drawitem ID="322290" drawnum="1" drawRP="1516" />
+			<drawitem ID="342290" drawnum="1" drawRP="1516" />
+			<drawitem ID="352290" drawnum="1" drawRP="1516" />
+			<drawitem ID="120101" drawnum="15" drawRP="10000" />
+			<drawitem ID="9" drawnum="4000" drawRP="10000" />
+			<drawitem ID="122206" drawnum="3" drawRP="15000" />
+			<drawitem ID="122306" drawnum="3" drawRP="15000" />
+		</M78EXDrawID>
+		
+		<M78EXDrawID id="3">
+			<drawitem ID="302200" drawnum="1" drawRP="1515" />
+			<drawitem ID="342200" drawnum="1" drawRP="1515" />
+			<drawitem ID="362200" drawnum="1" drawRP="1515" />
+			<drawitem ID="312210" drawnum="1" drawRP="1515" />
+			<drawitem ID="332210" drawnum="1" drawRP="1515" />
+			<drawitem ID="362210" drawnum="1" drawRP="1515" />
+			<drawitem ID="342220" drawnum="1" drawRP="1515" />
+			<drawitem ID="352220" drawnum="1" drawRP="1515" />
+			<drawitem ID="362220" drawnum="1" drawRP="1515" />
+			<drawitem ID="312230" drawnum="1" drawRP="1515" />
+			<drawitem ID="322230" drawnum="1" drawRP="1515" />
+			<drawitem ID="352230" drawnum="1" drawRP="1515" />
+			<drawitem ID="312240" drawnum="1" drawRP="1515" />
+			<drawitem ID="332240" drawnum="1" drawRP="1515" />
+			<drawitem ID="352240" drawnum="1" drawRP="1515" />
+			<drawitem ID="302250" drawnum="1" drawRP="1515" />
+			<drawitem ID="322250" drawnum="1" drawRP="1515" />
+			<drawitem ID="332250" drawnum="1" drawRP="1515" />
+			<drawitem ID="302260" drawnum="1" drawRP="1515" />
+			<drawitem ID="312260" drawnum="1" drawRP="1515" />
+			<drawitem ID="322260" drawnum="1" drawRP="1515" />
+			<drawitem ID="332260" drawnum="1" drawRP="1515" />
+			<drawitem ID="352260" drawnum="1" drawRP="1515" />
+			<drawitem ID="302270" drawnum="1" drawRP="1515" />
+			<drawitem ID="312270" drawnum="1" drawRP="1515" />
+			<drawitem ID="322270" drawnum="1" drawRP="1515" />
+			<drawitem ID="302280" drawnum="1" drawRP="1515" />
+			<drawitem ID="332280" drawnum="1" drawRP="1515" />
+			<drawitem ID="342280" drawnum="1" drawRP="1516" />
+			<drawitem ID="362280" drawnum="1" drawRP="1516" />
+			<drawitem ID="322290" drawnum="1" drawRP="1516" />
+			<drawitem ID="342290" drawnum="1" drawRP="1516" />
+			<drawitem ID="352290" drawnum="1" drawRP="1516" />
+			<drawitem ID="120101" drawnum="20" drawRP="10000" />
+			<drawitem ID="9" drawnum="6000" drawRP="10000" />
+			<drawitem ID="122206" drawnum="3" drawRP="15000" />
+			<drawitem ID="122306" drawnum="3" drawRP="15000" />
+		</M78EXDrawID>
+		
+		<M78EXDrawID id="4">
+			<drawitem ID="302200" drawnum="1" drawRP="1515" />
+			<drawitem ID="342200" drawnum="1" drawRP="1515" />
+			<drawitem ID="362200" drawnum="1" drawRP="1515" />
+			<drawitem ID="312210" drawnum="1" drawRP="1515" />
+			<drawitem ID="332210" drawnum="1" drawRP="1515" />
+			<drawitem ID="362210" drawnum="1" drawRP="1515" />
+			<drawitem ID="342220" drawnum="1" drawRP="1515" />
+			<drawitem ID="352220" drawnum="1" drawRP="1515" />
+			<drawitem ID="362220" drawnum="1" drawRP="1515" />
+			<drawitem ID="312230" drawnum="1" drawRP="1515" />
+			<drawitem ID="322230" drawnum="1" drawRP="1515" />
+			<drawitem ID="352230" drawnum="1" drawRP="1515" />
+			<drawitem ID="312240" drawnum="1" drawRP="1515" />
+			<drawitem ID="332240" drawnum="1" drawRP="1515" />
+			<drawitem ID="352240" drawnum="1" drawRP="1515" />
+			<drawitem ID="302250" drawnum="1" drawRP="1515" />
+			<drawitem ID="322250" drawnum="1" drawRP="1515" />
+			<drawitem ID="332250" drawnum="1" drawRP="1515" />
+			<drawitem ID="302260" drawnum="1" drawRP="1515" />
+			<drawitem ID="312260" drawnum="1" drawRP="1515" />
+			<drawitem ID="322260" drawnum="1" drawRP="1515" />
+			<drawitem ID="332260" drawnum="1" drawRP="1515" />
+			<drawitem ID="352260" drawnum="1" drawRP="1515" />
+			<drawitem ID="302270" drawnum="1" drawRP="1515" />
+			<drawitem ID="312270" drawnum="1" drawRP="1515" />
+			<drawitem ID="322270" drawnum="1" drawRP="1515" />
+			<drawitem ID="302280" drawnum="1" drawRP="1515" />
+			<drawitem ID="332280" drawnum="1" drawRP="1515" />
+			<drawitem ID="342280" drawnum="1" drawRP="1516" />
+			<drawitem ID="362280" drawnum="1" drawRP="1516" />
+			<drawitem ID="322290" drawnum="1" drawRP="1516" />
+			<drawitem ID="342290" drawnum="1" drawRP="1516" />
+			<drawitem ID="352290" drawnum="1" drawRP="1516" />
+			<drawitem ID="120101" drawnum="25" drawRP="10000" />
+			<drawitem ID="9" drawnum="6000" drawRP="10000" />
+			<drawitem ID="122206" drawnum="4" drawRP="15000" />
+			<drawitem ID="122306" drawnum="4" drawRP="15000" />
+		</M78EXDrawID>
+		
+		<M78EXDrawID id="5">
+			<drawitem ID="302200" drawnum="1" drawRP="1515" />
+			<drawitem ID="342200" drawnum="1" drawRP="1515" />
+			<drawitem ID="362200" drawnum="1" drawRP="1515" />
+			<drawitem ID="312210" drawnum="1" drawRP="1515" />
+			<drawitem ID="332210" drawnum="1" drawRP="1515" />
+			<drawitem ID="362210" drawnum="1" drawRP="1515" />
+			<drawitem ID="342220" drawnum="1" drawRP="1515" />
+			<drawitem ID="352220" drawnum="1" drawRP="1515" />
+			<drawitem ID="362220" drawnum="1" drawRP="1515" />
+			<drawitem ID="312230" drawnum="1" drawRP="1515" />
+			<drawitem ID="322230" drawnum="1" drawRP="1515" />
+			<drawitem ID="352230" drawnum="1" drawRP="1515" />
+			<drawitem ID="312240" drawnum="1" drawRP="1515" />
+			<drawitem ID="332240" drawnum="1" drawRP="1515" />
+			<drawitem ID="352240" drawnum="1" drawRP="1515" />
+			<drawitem ID="302250" drawnum="1" drawRP="1515" />
+			<drawitem ID="322250" drawnum="1" drawRP="1515" />
+			<drawitem ID="332250" drawnum="1" drawRP="1515" />
+			<drawitem ID="302260" drawnum="1" drawRP="1515" />
+			<drawitem ID="312260" drawnum="1" drawRP="1515" />
+			<drawitem ID="322260" drawnum="1" drawRP="1515" />
+			<drawitem ID="332260" drawnum="1" drawRP="1515" />
+			<drawitem ID="352260" drawnum="1" drawRP="1515" />
+			<drawitem ID="302270" drawnum="1" drawRP="1515" />
+			<drawitem ID="312270" drawnum="1" drawRP="1515" />
+			<drawitem ID="322270" drawnum="1" drawRP="1515" />
+			<drawitem ID="302280" drawnum="1" drawRP="1515" />
+			<drawitem ID="332280" drawnum="1" drawRP="1515" />
+			<drawitem ID="342280" drawnum="1" drawRP="1516" />
+			<drawitem ID="362280" drawnum="1" drawRP="1516" />
+			<drawitem ID="322290" drawnum="1" drawRP="1516" />
+			<drawitem ID="342290" drawnum="1" drawRP="1516" />
+			<drawitem ID="352290" drawnum="1" drawRP="1516" />
+			<drawitem ID="120101" drawnum="30" drawRP="10000" />
+			<drawitem ID="9" drawnum="6000" drawRP="10000" />
+			<drawitem ID="122206" drawnum="4" drawRP="15000" />
+			<drawitem ID="122306" drawnum="4" drawRP="15000" />
+		</M78EXDrawID>
+		
+		<M78EXDrawID id="6">
+			<drawitem ID="302200" drawnum="1" drawRP="1515" />
+			<drawitem ID="342200" drawnum="1" drawRP="1515" />
+			<drawitem ID="362200" drawnum="1" drawRP="1515" />
+			<drawitem ID="312210" drawnum="1" drawRP="1515" />
+			<drawitem ID="332210" drawnum="1" drawRP="1515" />
+			<drawitem ID="362210" drawnum="1" drawRP="1515" />
+			<drawitem ID="342220" drawnum="1" drawRP="1515" />
+			<drawitem ID="352220" drawnum="1" drawRP="1515" />
+			<drawitem ID="362220" drawnum="1" drawRP="1515" />
+			<drawitem ID="312230" drawnum="1" drawRP="1515" />
+			<drawitem ID="322230" drawnum="1" drawRP="1515" />
+			<drawitem ID="352230" drawnum="1" drawRP="1515" />
+			<drawitem ID="312240" drawnum="1" drawRP="1515" />
+			<drawitem ID="332240" drawnum="1" drawRP="1515" />
+			<drawitem ID="352240" drawnum="1" drawRP="1515" />
+			<drawitem ID="302250" drawnum="1" drawRP="1515" />
+			<drawitem ID="322250" drawnum="1" drawRP="1515" />
+			<drawitem ID="332250" drawnum="1" drawRP="1515" />
+			<drawitem ID="302260" drawnum="1" drawRP="1515" />
+			<drawitem ID="312260" drawnum="1" drawRP="1515" />
+			<drawitem ID="322260" drawnum="1" drawRP="1515" />
+			<drawitem ID="332260" drawnum="1" drawRP="1515" />
+			<drawitem ID="352260" drawnum="1" drawRP="1515" />
+			<drawitem ID="302270" drawnum="1" drawRP="1515" />
+			<drawitem ID="312270" drawnum="1" drawRP="1515" />
+			<drawitem ID="322270" drawnum="1" drawRP="1515" />
+			<drawitem ID="302280" drawnum="1" drawRP="1515" />
+			<drawitem ID="332280" drawnum="1" drawRP="1515" />
+			<drawitem ID="342280" drawnum="1" drawRP="1516" />
+			<drawitem ID="362280" drawnum="1" drawRP="1516" />
+			<drawitem ID="322290" drawnum="1" drawRP="1516" />
+			<drawitem ID="342290" drawnum="1" drawRP="1516" />
+			<drawitem ID="352290" drawnum="1" drawRP="1516" />
+			<drawitem ID="120101" drawnum="35" drawRP="10000" />
+			<drawitem ID="9" drawnum="8000" drawRP="10000" />
+			<drawitem ID="122206" drawnum="4" drawRP="15000" />
+			<drawitem ID="122306" drawnum="4" drawRP="15000" />
+		</M78EXDrawID>
+		
+		<M78EXDrawID id="7">
+			<drawitem ID="302200" drawnum="1" drawRP="1515" />
+			<drawitem ID="342200" drawnum="1" drawRP="1515" />
+			<drawitem ID="362200" drawnum="1" drawRP="1515" />
+			<drawitem ID="312210" drawnum="1" drawRP="1515" />
+			<drawitem ID="332210" drawnum="1" drawRP="1515" />
+			<drawitem ID="362210" drawnum="1" drawRP="1515" />
+			<drawitem ID="342220" drawnum="1" drawRP="1515" />
+			<drawitem ID="352220" drawnum="1" drawRP="1515" />
+			<drawitem ID="362220" drawnum="1" drawRP="1515" />
+			<drawitem ID="312230" drawnum="1" drawRP="1515" />
+			<drawitem ID="322230" drawnum="1" drawRP="1515" />
+			<drawitem ID="352230" drawnum="1" drawRP="1515" />
+			<drawitem ID="312240" drawnum="1" drawRP="1515" />
+			<drawitem ID="332240" drawnum="1" drawRP="1515" />
+			<drawitem ID="352240" drawnum="1" drawRP="1515" />
+			<drawitem ID="302250" drawnum="1" drawRP="1515" />
+			<drawitem ID="322250" drawnum="1" drawRP="1515" />
+			<drawitem ID="332250" drawnum="1" drawRP="1515" />
+			<drawitem ID="302260" drawnum="1" drawRP="1515" />
+			<drawitem ID="312260" drawnum="1" drawRP="1515" />
+			<drawitem ID="322260" drawnum="1" drawRP="1515" />
+			<drawitem ID="332260" drawnum="1" drawRP="1515" />
+			<drawitem ID="352260" drawnum="1" drawRP="1515" />
+			<drawitem ID="302270" drawnum="1" drawRP="1515" />
+			<drawitem ID="312270" drawnum="1" drawRP="1515" />
+			<drawitem ID="322270" drawnum="1" drawRP="1515" />
+			<drawitem ID="302280" drawnum="1" drawRP="1515" />
+			<drawitem ID="332280" drawnum="1" drawRP="1515" />
+			<drawitem ID="342280" drawnum="1" drawRP="1516" />
+			<drawitem ID="362280" drawnum="1" drawRP="1516" />
+			<drawitem ID="322290" drawnum="1" drawRP="1516" />
+			<drawitem ID="342290" drawnum="1" drawRP="1516" />
+			<drawitem ID="352290" drawnum="1" drawRP="1516" />
+			<drawitem ID="120101" drawnum="35" drawRP="10000" />
+			<drawitem ID="9" drawnum="8000" drawRP="10000" />
+			<drawitem ID="122206" drawnum="4" drawRP="15000" />
+			<drawitem ID="122306" drawnum="4" drawRP="15000" />
+		</M78EXDrawID>
+		
+		<M78EXDrawID id="8">
+			<drawitem ID="302200" drawnum="1" drawRP="1515" />
+			<drawitem ID="342200" drawnum="1" drawRP="1515" />
+			<drawitem ID="362200" drawnum="1" drawRP="1515" />
+			<drawitem ID="312210" drawnum="1" drawRP="1515" />
+			<drawitem ID="332210" drawnum="1" drawRP="1515" />
+			<drawitem ID="362210" drawnum="1" drawRP="1515" />
+			<drawitem ID="342220" drawnum="1" drawRP="1515" />
+			<drawitem ID="352220" drawnum="1" drawRP="1515" />
+			<drawitem ID="362220" drawnum="1" drawRP="1515" />
+			<drawitem ID="312230" drawnum="1" drawRP="1515" />
+			<drawitem ID="322230" drawnum="1" drawRP="1515" />
+			<drawitem ID="352230" drawnum="1" drawRP="1515" />
+			<drawitem ID="312240" drawnum="1" drawRP="1515" />
+			<drawitem ID="332240" drawnum="1" drawRP="1515" />
+			<drawitem ID="352240" drawnum="1" drawRP="1515" />
+			<drawitem ID="302250" drawnum="1" drawRP="1515" />
+			<drawitem ID="322250" drawnum="1" drawRP="1515" />
+			<drawitem ID="332250" drawnum="1" drawRP="1515" />
+			<drawitem ID="302260" drawnum="1" drawRP="1515" />
+			<drawitem ID="312260" drawnum="1" drawRP="1515" />
+			<drawitem ID="322260" drawnum="1" drawRP="1515" />
+			<drawitem ID="332260" drawnum="1" drawRP="1515" />
+			<drawitem ID="352260" drawnum="1" drawRP="1515" />
+			<drawitem ID="302270" drawnum="1" drawRP="1515" />
+			<drawitem ID="312270" drawnum="1" drawRP="1515" />
+			<drawitem ID="322270" drawnum="1" drawRP="1515" />
+			<drawitem ID="302280" drawnum="1" drawRP="1515" />
+			<drawitem ID="332280" drawnum="1" drawRP="1515" />
+			<drawitem ID="342280" drawnum="1" drawRP="1516" />
+			<drawitem ID="362280" drawnum="1" drawRP="1516" />
+			<drawitem ID="322290" drawnum="1" drawRP="1516" />
+			<drawitem ID="342290" drawnum="1" drawRP="1516" />
+			<drawitem ID="352290" drawnum="1" drawRP="1516" />
+			<drawitem ID="120101" drawnum="35" drawRP="10000" />
+			<drawitem ID="9" drawnum="8000" drawRP="10000" />
+			<drawitem ID="122206" drawnum="4" drawRP="15000" />
+			<drawitem ID="122306" drawnum="4" drawRP="15000" />
+		</M78EXDrawID>
+		
+		<M78EXDrawID id="9">
+			<drawitem ID="302200" drawnum="1" drawRP="1515" />
+			<drawitem ID="342200" drawnum="1" drawRP="1515" />
+			<drawitem ID="362200" drawnum="1" drawRP="1515" />
+			<drawitem ID="312210" drawnum="1" drawRP="1515" />
+			<drawitem ID="332210" drawnum="1" drawRP="1515" />
+			<drawitem ID="362210" drawnum="1" drawRP="1515" />
+			<drawitem ID="342220" drawnum="1" drawRP="1515" />
+			<drawitem ID="352220" drawnum="1" drawRP="1515" />
+			<drawitem ID="362220" drawnum="1" drawRP="1515" />
+			<drawitem ID="312230" drawnum="1" drawRP="1515" />
+			<drawitem ID="322230" drawnum="1" drawRP="1515" />
+			<drawitem ID="352230" drawnum="1" drawRP="1515" />
+			<drawitem ID="312240" drawnum="1" drawRP="1515" />
+			<drawitem ID="332240" drawnum="1" drawRP="1515" />
+			<drawitem ID="352240" drawnum="1" drawRP="1515" />
+			<drawitem ID="302250" drawnum="1" drawRP="1515" />
+			<drawitem ID="322250" drawnum="1" drawRP="1515" />
+			<drawitem ID="332250" drawnum="1" drawRP="1515" />
+			<drawitem ID="302260" drawnum="1" drawRP="1515" />
+			<drawitem ID="312260" drawnum="1" drawRP="1515" />
+			<drawitem ID="322260" drawnum="1" drawRP="1515" />
+			<drawitem ID="332260" drawnum="1" drawRP="1515" />
+			<drawitem ID="352260" drawnum="1" drawRP="1515" />
+			<drawitem ID="302270" drawnum="1" drawRP="1515" />
+			<drawitem ID="312270" drawnum="1" drawRP="1515" />
+			<drawitem ID="322270" drawnum="1" drawRP="1515" />
+			<drawitem ID="302280" drawnum="1" drawRP="1515" />
+			<drawitem ID="332280" drawnum="1" drawRP="1515" />
+			<drawitem ID="342280" drawnum="1" drawRP="1516" />
+			<drawitem ID="362280" drawnum="1" drawRP="1516" />
+			<drawitem ID="322290" drawnum="1" drawRP="1516" />
+			<drawitem ID="342290" drawnum="1" drawRP="1516" />
+			<drawitem ID="352290" drawnum="1" drawRP="1516" />
+			<drawitem ID="120101" drawnum="35" drawRP="10000" />
+			<drawitem ID="9" drawnum="8000" drawRP="10000" />
+			<drawitem ID="122206" drawnum="4" drawRP="15000" />
+			<drawitem ID="122306" drawnum="4" drawRP="15000" />
+		</M78EXDrawID>
+		
+		<M78EXDrawID id="10">
+			<drawitem ID="302200" drawnum="1" drawRP="1515" />
+			<drawitem ID="342200" drawnum="1" drawRP="1515" />
+			<drawitem ID="362200" drawnum="1" drawRP="1515" />
+			<drawitem ID="312210" drawnum="1" drawRP="1515" />
+			<drawitem ID="332210" drawnum="1" drawRP="1515" />
+			<drawitem ID="362210" drawnum="1" drawRP="1515" />
+			<drawitem ID="342220" drawnum="1" drawRP="1515" />
+			<drawitem ID="352220" drawnum="1" drawRP="1515" />
+			<drawitem ID="362220" drawnum="1" drawRP="1515" />
+			<drawitem ID="312230" drawnum="1" drawRP="1515" />
+			<drawitem ID="322230" drawnum="1" drawRP="1515" />
+			<drawitem ID="352230" drawnum="1" drawRP="1515" />
+			<drawitem ID="312240" drawnum="1" drawRP="1515" />
+			<drawitem ID="332240" drawnum="1" drawRP="1515" />
+			<drawitem ID="352240" drawnum="1" drawRP="1515" />
+			<drawitem ID="302250" drawnum="1" drawRP="1515" />
+			<drawitem ID="322250" drawnum="1" drawRP="1515" />
+			<drawitem ID="332250" drawnum="1" drawRP="1515" />
+			<drawitem ID="302260" drawnum="1" drawRP="1515" />
+			<drawitem ID="312260" drawnum="1" drawRP="1515" />
+			<drawitem ID="322260" drawnum="1" drawRP="1515" />
+			<drawitem ID="332260" drawnum="1" drawRP="1515" />
+			<drawitem ID="352260" drawnum="1" drawRP="1515" />
+			<drawitem ID="302270" drawnum="1" drawRP="1515" />
+			<drawitem ID="312270" drawnum="1" drawRP="1515" />
+			<drawitem ID="322270" drawnum="1" drawRP="1515" />
+			<drawitem ID="302280" drawnum="1" drawRP="1515" />
+			<drawitem ID="332280" drawnum="1" drawRP="1515" />
+			<drawitem ID="342280" drawnum="1" drawRP="1516" />
+			<drawitem ID="362280" drawnum="1" drawRP="1516" />
+			<drawitem ID="322290" drawnum="1" drawRP="1516" />
+			<drawitem ID="342290" drawnum="1" drawRP="1516" />
+			<drawitem ID="352290" drawnum="1" drawRP="1516" />
+			<drawitem ID="120101" drawnum="35" drawRP="10000" />
+			<drawitem ID="9" drawnum="8000" drawRP="10000" />
+			<drawitem ID="122206" drawnum="4" drawRP="15000" />
+			<drawitem ID="122306" drawnum="4" drawRP="15000" />
+		</M78EXDrawID>
+	</M78EXDraw>
+</root>

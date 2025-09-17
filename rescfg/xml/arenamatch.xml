@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<root>
+	<!--
+		startPoint:积分段下限
+		endPoint:积分段上限
+		upperLimt:搜索百分比下限，填写为整数，计算为百分比
+		lowerLimit:搜索百分比上限，填写为整数，计算为百分比
+		奖励类型：
+			1：游戏金币
+			2：钻石币
+			3：黑市结晶
+			4：声望值
+			5：荣誉值
+			6：勇者证
+			7：巅峰令
+			8：虎符
+			9：陨铁
+			10：公会贡献度
+			11：体力
+			12：历练
+			13：觉醒经验值
+			14：领悟经验值
+		Startrank:排名下限
+		Endrank:排名上限
+		Fristrewardid：第一个奖励ID
+		Fristrewardnum：第一个奖励数量
+		Secondrewardid：第二个奖励ID
+		Secondrewardnum：第二个奖励数量
+		Startpoints：起始分数值
+		Endpoints：结束分数值
+		pointname：巅峰级别名字编号
+	-->
+	<!--
+		巅峰对决每日/每周奖励规则：
+		1、首次开启巅峰对决功能，默认巅峰积分为1000，不参与巅峰积分排名，不发放排名奖励，不发送巅峰积分排名奖励邮件
+		2、每日凌晨1点，根据玩家当前巅峰积分排名，结算排名奖励，奖励通过邮件发放
+		3、每周星期天凌晨1点，根据玩家当前巅峰积分排名，结算周排名奖励，奖励通过邮件发放
+		4、发放周巅峰奖励，不再发放该天的每日巅峰奖励
+		5、巅峰对决积分排名大于10000名，无排名奖励，不发送巅峰积分排名奖励邮件
+		6、玩家连续7天未参与巅峰对决，保留玩家当前积分，不参与巅峰积分排名，不发放排名奖励，不发送巅峰积分排名奖励邮件
+		7、每隔指定时间清空一次巅峰对决积分，清空后玩家默认积分为1000，清空后未参与巅峰对决，则不参与巅峰积分排名，不发放排名奖励
+	-->
+	
+	
+	<!--
+		startPoint：积分段下限
+		endPoint：积分段上限
+		matchType：匹配类型
+				1：达到第一个阶段等待时间后，全部匹配机器人，matchTimeStage1第一个阶段的等待时间
+				2：第一个时间段内匹配同积分段玩家，超过第一个匹配时间段匹配机器人，matchTimeStage1第一个阶段匹配时间
+				3：第一个时间段内匹配同积分段玩家，第二个时间段匹配积分段上下+1玩家，超过第二个时间段匹配机器人，matchTimeStage1为第一个阶段匹配时间，matchTimeStage2为第二个阶段匹配时间，超过第二个阶段匹配时间匹配机器人
+				4：第一个时间段内匹配同积分段玩家，第二个时间段匹配积分段上下+1玩家，超过第二个时间段匹配机器人，matchTimeStage1为第一个阶段匹配时间，matchTimeStage1为第二个阶段匹配时间，超过第二个阶段匹配时间匹配机器人
+		matchRobot：对应匹配机器人范围ID
+	-->
+	<Arenamatch>	
+		<match id="1" startPoint="0" endPoint="100" matchType="2" matchTimeStage1="5" matchTimeStage2="10" matchRobot="1" />
+		<match id="2" startPoint="101" endPoint="250" matchType="2" matchTimeStage1="5" matchTimeStage2="10" matchRobot="1" />
+		<match id="3" startPoint="251" endPoint="500" matchType="3" matchTimeStage1="10" matchTimeStage2="20" matchRobot="2" />
+		<match id="4" startPoint="501" endPoint="750" matchType="3" matchTimeStage1="10" matchTimeStage2="20" matchRobot="3" />
+		<match id="5" startPoint="751" endPoint="1000" matchType="4" matchTimeStage1="15" matchTimeStage2="30" matchRobot="3" />
+		<match id="6" startPoint="1001" endPoint="1250" matchType="4" matchTimeStage1="15" matchTimeStage2="30" matchRobot="4" />
+		<match id="7" startPoint="1251" endPoint="1500" matchType="4" matchTimeStage1="15" matchTimeStage2="30" matchRobot="4" />
+		<match id="8" startPoint="1501" endPoint="2000" matchType="4" matchTimeStage1="15" matchTimeStage2="30" matchRobot="4" />
+		<match id="9" startPoint="2001" endPoint="3000" matchType="4" matchTimeStage1="15" matchTimeStage2="30" matchRobot="4" />
+		<match id="10" startPoint="3001" endPoint="4000" matchType="4" matchTimeStage1="15" matchTimeStage2="30" matchRobot="4" />
+		<match id="11" startPoint="4001" endPoint="400000" matchType="4" matchTimeStage1="15" matchTimeStage2="30" matchRobot="4" />
+	</Arenamatch>
+	
+	<!--
+		robotRange：对应matchRobot的ID
+		startLevel：玩家等级下限
+		endLevel：玩家等上限
+		group：匹配机器人范围
+	-->
+	<Arenarobot>
+		<robotRange id="1">
+			<robot id="1" startLevel="18" endLevel="24" group="1" />
+			<robot id="2" startLevel="25" endLevel="33" group="5" />
+			<robot id="3" startLevel="34" endLevel="41" group="9" />
+			<robot id="4" startLevel="42" endLevel="50" group="13" />
+			<robot id="5" startLevel="51" endLevel="65" group="17" />
+			<robot id="6" startLevel="66" endLevel="75" group="21" />
+			<robot id="7" startLevel="76" endLevel="80" group="22" />
+		</robotRange>
+		<robotRange id="2">
+			<robot id="1" startLevel="18" endLevel="24" group="2" />
+			<robot id="2" startLevel="25" endLevel="33" group="6" />
+			<robot id="3" startLevel="34" endLevel="41" group="10" />
+			<robot id="4" startLevel="42" endLevel="50" group="14" />
+			<robot id="5" startLevel="51" endLevel="65" group="18" />
+			<robot id="6" startLevel="66" endLevel="75" group="21" />
+			<robot id="7" startLevel="76" endLevel="80" group="22" />
+		</robotRange>
+		<robotRange id="3">
+			<robot id="1" startLevel="18" endLevel="24" group="3" />
+			<robot id="2" startLevel="25" endLevel="33" group="7" />
+			<robot id="3" startLevel="34" endLevel="41" group="11" />
+			<robot id="4" startLevel="42" endLevel="50" group="15" />
+			<robot id="5" startLevel="51" endLevel="65" group="19" />
+			<robot id="6" startLevel="66" endLevel="75" group="21" />
+			<robot id="7" startLevel="76" endLevel="80" group="22" />
+		</robotRange>
+		<robotRange id="4">
+			<robot id="1" startLevel="18" endLevel="24" group="4" />
+			<robot id="2" startLevel="25" endLevel="33" group="8" />
+			<robot id="3" startLevel="34" endLevel="41" group="12" />
+			<robot id="4" startLevel="42" endLevel="50" group="16" />
+			<robot id="5" startLevel="51" endLevel="65" group="20" />
+			<robot id="6" startLevel="66" endLevel="75" group="21" />
+			<robot id="7" startLevel="76" endLevel="80" group="22" />
+		</robotRange>
+	</Arenarobot>
+	
+	
+	<!--巅峰对决每日奖励-->
+	<ArenaReward>
+		<reward id="1" Startrank="1" Endrank="1" Fristrewardid="7" Fristrewardnum="200"/>
+		<reward id="2" Startrank="2" Endrank="2" Fristrewardid="7" Fristrewardnum="180"/>
+		<reward id="3" Startrank="3" Endrank="3" Fristrewardid="7" Fristrewardnum="160"/>
+		<reward id="4" Startrank="4" Endrank="10" Fristrewardid="7" Fristrewardnum="140"/>
+		<reward id="5" Startrank="11" Endrank="20" Fristrewardid="7" Fristrewardnum="120"/>
+		<reward id="6" Startrank="21" Endrank="50" Fristrewardid="7" Fristrewardnum="100"/>
+		<reward id="7" Startrank="51" Endrank="100" Fristrewardid="7" Fristrewardnum="80"/>
+		<reward id="8" Startrank="101" Endrank="200" Fristrewardid="7" Fristrewardnum="60"/>
+		<reward id="9" Startrank="201" Endrank="500" Fristrewardid="7" Fristrewardnum="40"/>
+		<reward id="10" Startrank="501" Endrank="1000" Fristrewardid="7" Fristrewardnum="30"/>
+		<reward id="11" Startrank="1001" Endrank="10000" Fristrewardid="7" Fristrewardnum="20"/>
+		
+		
+		
+		<!--双倍奖励-->
+		
+		
+		<!-- <reward id="1" Startrank="1" Endrank="1" Fristrewardid="7" Fristrewardnum="400"/>
+		<reward id="2" Startrank="2" Endrank="2" Fristrewardid="7" Fristrewardnum="360"/>
+		<reward id="3" Startrank="3" Endrank="3" Fristrewardid="7" Fristrewardnum="320"/>
+		<reward id="4" Startrank="4" Endrank="10" Fristrewardid="7" Fristrewardnum="280"/>
+		<reward id="5" Startrank="11" Endrank="20" Fristrewardid="7" Fristrewardnum="240"/>
+		<reward id="6" Startrank="21" Endrank="50" Fristrewardid="7" Fristrewardnum="200"/>
+		<reward id="7" Startrank="51" Endrank="100" Fristrewardid="7" Fristrewardnum="160"/>
+		<reward id="8" Startrank="101" Endrank="200" Fristrewardid="7" Fristrewardnum="120"/>
+		<reward id="9" Startrank="201" Endrank="500" Fristrewardid="7" Fristrewardnum="80"/>
+		<reward id="10" Startrank="501" Endrank="1000" Fristrewardid="7" Fristrewardnum="60"/>
+		<reward id="11" Startrank="1001" Endrank="10000" Fristrewardid="7" Fristrewardnum="40"/> -->
+	</ArenaReward>
+	
+	<!--巅峰对决每周奖励-->
+	<TimeReward>
+		<reward id="1" Startrank="1" Endrank="1" Fristrewardid="7" Fristrewardnum="540" Secondrewardid="2" Secondrewardnum="150" Thirdrewardid="109010" Thirdrewardnum="1"/>
+		<reward id="2" Startrank="2" Endrank="2" Fristrewardid="7" Fristrewardnum="480" Secondrewardid="2" Secondrewardnum="130" Thirdrewardid="109011" Thirdrewardnum="2"/>
+		<reward id="3" Startrank="3" Endrank="3" Fristrewardid="7" Fristrewardnum="420" Secondrewardid="2" Secondrewardnum="110" Thirdrewardid="109011" Thirdrewardnum="1"/>
+		<reward id="4" Startrank="4" Endrank="10" Fristrewardid="7" Fristrewardnum="360" Secondrewardid="2" Secondrewardnum="90"/>
+		<reward id="5" Startrank="11" Endrank="20" Fristrewardid="7" Fristrewardnum="300" Secondrewardid="2" Secondrewardnum="80"/>
+		<reward id="6" Startrank="21" Endrank="50" Fristrewardid="7" Fristrewardnum="240" Secondrewardid="2" Secondrewardnum="70"/>
+		<reward id="7" Startrank="51" Endrank="100" Fristrewardid="7" Fristrewardnum="200" Secondrewardid="2" Secondrewardnum="65"/>
+		<reward id="8" Startrank="101" Endrank="200" Fristrewardid="7" Fristrewardnum="160" Secondrewardid="2" Secondrewardnum="60"/>
+		<reward id="9" Startrank="201" Endrank="500" Fristrewardid="7" Fristrewardnum="120" Secondrewardid="2" Secondrewardnum="55"/>
+		<reward id="10" Startrank="501" Endrank="1000" Fristrewardid="7" Fristrewardnum="80" Secondrewardid="2" Secondrewardnum="50"/>
+		<reward id="11" Startrank="1001" Endrank="3000" Fristrewardid="7" Fristrewardnum="40" Secondrewardid="2" Secondrewardnum="45"/>
+		<reward id="12" Startrank="3001" Endrank="10000" Fristrewardid="7" Fristrewardnum="20" Secondrewardid="2" Secondrewardnum="40"/>
+	</TimeReward>
+	
+	
+	<!--巅峰对积分规则-->
+	<PointStage>
+		<!--青铜5-->
+		<point id="1" pointname="pointname_001" Startpoints="0" Endpoints="50"/>
+		<!--青铜4-->
+		<point id="2" pointname="pointname_002" Startpoints="51" Endpoints="150"/>
+		<!--青铜3-->
+		<point id="3" pointname="pointname_003" Startpoints="151" Endpoints="250"/>
+		<!--青铜2-->
+		<point id="4" pointname="pointname_004" Startpoints="251" Endpoints="350"/>
+		<!--青铜1-->
+		<point id="5" pointname="pointname_005" Startpoints="351" Endpoints="450"/>
+		<!--白银5-->
+		<point id="6" pointname="pointname_006" Startpoints="451" Endpoints="550"/>
+		<!--白银4-->	
+		<point id="7" pointname="pointname_007" Startpoints="551" Endpoints="650"/>
+		<!--白银3-->
+		<point id="8" pointname="pointname_008" Startpoints="651" Endpoints="750"/>
+		<!--白银2-->
+		<point id="9" pointname="pointname_009" Startpoints="751" Endpoints="850"/>
+		<!--白银1-->
+		<point id="10" pointname="pointname_010" Startpoints="851" Endpoints="1000"/>
+		<!--黄金5-->
+		<point id="11" pointname="pointname_011" Startpoints="1001" Endpoints="1200"/>
+		<!--黄金4-->
+		<point id="12" pointname="pointname_012" Startpoints="1201" Endpoints="1400"/>
+		<!--黄金3-->
+		<point id="13" pointname="pointname_013" Startpoints="1401" Endpoints="1600"/>
+		<!--黄金2-->
+		<point id="14" pointname="pointname_014" Startpoints="1601" Endpoints="1800"/>
+		<!--黄金1-->
+		<point id="15" pointname="pointname_015" Startpoints="1801" Endpoints="2000"/>
+		<!--白金5-->
+		<point id="16" pointname="pointname_016" Startpoints="2001" Endpoints="2500"/>
+		<!--白金4-->
+		<point id="17" pointname="pointname_017" Startpoints="2501" Endpoints="3000"/>
+		<!--白金3-->
+		<point id="18" pointname="pointname_018" Startpoints="3001" Endpoints="3500"/>
+		<!--白金2-->
+		<point id="19" pointname="pointname_019" Startpoints="3501" Endpoints="4000"/>
+		<!--白金1-->
+		<point id="20" pointname="pointname_020" Startpoints="4001" Endpoints="500000"/>	
+	</PointStage>
+</root>

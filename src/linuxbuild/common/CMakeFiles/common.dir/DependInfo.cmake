@@ -1,0 +1,95 @@
+# The set of languages for which implicit dependencies are needed:
+SET(CMAKE_DEPENDS_LANGUAGES
+  "CXX"
+  )
+# The set of files for implicit dependencies of each language:
+SET(CMAKE_DEPENDS_CHECK_CXX
+  "/data/workspace_H/Server/src/common/AdvEventReport.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/AdvEventReport.cpp.o"
+  "/data/workspace_H/Server/src/common/AppConfig.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/AppConfig.cpp.o"
+  "/data/workspace_H/Server/src/common/ArenaConfig.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/ArenaConfig.cpp.o"
+  "/data/workspace_H/Server/src/common/BattlePropValue.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/BattlePropValue.cpp.o"
+  "/data/workspace_H/Server/src/common/CaptureCfg.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/CaptureCfg.cpp.o"
+  "/data/workspace_H/Server/src/common/DevilCallCfg.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/DevilCallCfg.cpp.o"
+  "/data/workspace_H/Server/src/common/DevilCallMgr.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/DevilCallMgr.cpp.o"
+  "/data/workspace_H/Server/src/common/DiscoverCfg.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/DiscoverCfg.cpp.o"
+  "/data/workspace_H/Server/src/common/DragonNest.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/DragonNest.cpp.o"
+  "/data/workspace_H/Server/src/common/EmeraldDreamCfg.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/EmeraldDreamCfg.cpp.o"
+  "/data/workspace_H/Server/src/common/EnchantCfg.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/EnchantCfg.cpp.o"
+  "/data/workspace_H/Server/src/common/ExpeditionConfig.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/ExpeditionConfig.cpp.o"
+  "/data/workspace_H/Server/src/common/FashionShopOpenCfg.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/FashionShopOpenCfg.cpp.o"
+  "/data/workspace_H/Server/src/common/GameVersionCfg.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/GameVersionCfg.cpp.o"
+  "/data/workspace_H/Server/src/common/GemCfg.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/GemCfg.cpp.o"
+  "/data/workspace_H/Server/src/common/GloryfashionCfg.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/GloryfashionCfg.cpp.o"
+  "/data/workspace_H/Server/src/common/GuardCfg.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/GuardCfg.cpp.o"
+  "/data/workspace_H/Server/src/common/GuildConfig.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/GuildConfig.cpp.o"
+  "/data/workspace_H/Server/src/common/HeroLeagueCfg.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/HeroLeagueCfg.cpp.o"
+  "/data/workspace_H/Server/src/common/HeroTrainCfg.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/HeroTrainCfg.cpp.o"
+  "/data/workspace_H/Server/src/common/InviteCfg.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/InviteCfg.cpp.o"
+  "/data/workspace_H/Server/src/common/ItemBoxCfg.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/ItemBoxCfg.cpp.o"
+  "/data/workspace_H/Server/src/common/KoreaLog.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/KoreaLog.cpp.o"
+  "/data/workspace_H/Server/src/common/LateWelfareCfg.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/LateWelfareCfg.cpp.o"
+  "/data/workspace_H/Server/src/common/LevelWflfareCfg.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/LevelWflfareCfg.cpp.o"
+  "/data/workspace_H/Server/src/common/LimitFashionCfg.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/LimitFashionCfg.cpp.o"
+  "/data/workspace_H/Server/src/common/LimitTimePetCfg.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/LimitTimePetCfg.cpp.o"
+  "/data/workspace_H/Server/src/common/LoadStat.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/LoadStat.cpp.o"
+  "/data/workspace_H/Server/src/common/LuckShopCfg.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/LuckShopCfg.cpp.o"
+  "/data/workspace_H/Server/src/common/LuckyDrawCfg.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/LuckyDrawCfg.cpp.o"
+  "/data/workspace_H/Server/src/common/M78.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/M78.cpp.o"
+  "/data/workspace_H/Server/src/common/MarryCfg.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/MarryCfg.cpp.o"
+  "/data/workspace_H/Server/src/common/MiscCfgMgr.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/MiscCfgMgr.cpp.o"
+  "/data/workspace_H/Server/src/common/MountSynthesisCfg.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/MountSynthesisCfg.cpp.o"
+  "/data/workspace_H/Server/src/common/NftConfig.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/NftConfig.cpp.o"
+  "/data/workspace_H/Server/src/common/OpIDMgr.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/OpIDMgr.cpp.o"
+  "/data/workspace_H/Server/src/common/OpenFunction.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/OpenFunction.cpp.o"
+  "/data/workspace_H/Server/src/common/OpenSvrPowerRankCfg.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/OpenSvrPowerRankCfg.cpp.o"
+  "/data/workspace_H/Server/src/common/OperateActivityCfg.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/OperateActivityCfg.cpp.o"
+  "/data/workspace_H/Server/src/common/ProFilePhotoCfg.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/ProFilePhotoCfg.cpp.o"
+  "/data/workspace_H/Server/src/common/QuestionCfg.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/QuestionCfg.cpp.o"
+  "/data/workspace_H/Server/src/common/RecastEquipCfg.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/RecastEquipCfg.cpp.o"
+  "/data/workspace_H/Server/src/common/RechargeActivityCfg.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/RechargeActivityCfg.cpp.o"
+  "/data/workspace_H/Server/src/common/RefreshDataBase.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/RefreshDataBase.cpp.o"
+  "/data/workspace_H/Server/src/common/ResBackCfg.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/ResBackCfg.cpp.o"
+  "/data/workspace_H/Server/src/common/RuneCfg.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/RuneCfg.cpp.o"
+  "/data/workspace_H/Server/src/common/ServerBase.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/ServerBase.cpp.o"
+  "/data/workspace_H/Server/src/common/SevenDayActivity.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/SevenDayActivity.cpp.o"
+  "/data/workspace_H/Server/src/common/SmeltItemCfg.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/SmeltItemCfg.cpp.o"
+  "/data/workspace_H/Server/src/common/SortList.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/SortList.cpp.o"
+  "/data/workspace_H/Server/src/common/StoneCopyMapCfg.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/StoneCopyMapCfg.cpp.o"
+  "/data/workspace_H/Server/src/common/SysLanguages.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/SysLanguages.cpp.o"
+  "/data/workspace_H/Server/src/common/TblDataMgr.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/TblDataMgr.cpp.o"
+  "/data/workspace_H/Server/src/common/Unicode2Utf8.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/Unicode2Utf8.cpp.o"
+  "/data/workspace_H/Server/src/common/WelfareCenterCfg.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/WelfareCenterCfg.cpp.o"
+  "/data/workspace_H/Server/src/common/WorldBossCfg.cpp" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/WorldBossCfg.cpp.o"
+  "/data/workspace_H/Server/src/common/datacenter_log.cc" "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/datacenter_log.cc.o"
+  )
+SET(CMAKE_CXX_COMPILER_ID "GNU")
+
+# Targets to which this target links.
+SET(CMAKE_TARGET_LINKED_INFO_FILES
+  "/data/workspace_H/Server/src/linuxbuild/jsoncpp/CMakeFiles/jsoncpp.dir/DependInfo.cmake"
+  "/data/workspace_H/Server/src/linuxbuild/Proto/CMakeFiles/Proto.dir/DependInfo.cmake"
+  "/data/workspace_H/Server/src/linuxbuild/GameServer/CMakeFiles/commGame.dir/DependInfo.cmake"
+  )
+
+# The include file search paths:
+SET(CMAKE_C_TARGET_INCLUDE_PATH
+  "../../3rd/include"
+  "../../3rd/include/log4cxx"
+  "../../3rd/include/mysql"
+  "../../3rd/include/apr"
+  "../../3rd/include/zlib"
+  "../../3rd/include/protobuf"
+  "../../3rd/include/svrlib"
+  "../../3rd/include/curl"
+  "../../3rd/include/tinyxml"
+  "../../3rd/include/hiredis"
+  "../../3rd/include/openssl"
+  "../tmxparser"
+  "../common"
+  "../GameServer"
+  "../Proto"
+  "../navi"
+  )
+SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
+SET(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
+SET(CMAKE_ASM_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

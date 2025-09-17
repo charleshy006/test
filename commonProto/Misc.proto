@@ -1,0 +1,5732 @@
+import "ModID.proto";
+package MiscProto;
+
+//附件状态
+enum eAttachStatus
+{
+	eATTACH_STATUS_NO = 0;		//没有附件
+	eATTACH_STATUS_UNFETCH = 1;	//没有提取
+	eATTACH_STATUS_FETCHED = 2;	//已经提取了
+}
+
+//邮件类型
+enum eMailType 
+{
+	MAIL_TYPE_SYSTEM = 1;			//系统邮件	
+	MAIL_TYPE_SYSTEM_ONEDAY = 2;	//系统邮件-一天有效期	
+}
+
+//邮件的基本信息
+message stSynMainSnalInfo
+{
+	optional uint32 id = 1;				//邮件ID
+	optional string senderName = 2; 	//发送者名字
+	optional string title =3 ;			//标题
+	optional uint32 sendTime = 4;		//发送时间
+	optional bool	isRead = 5;			//是否已经读了
+	optional eMailType mailType = 6;	//邮件类型:1是系统
+	optional bool   isFetchAttach = 7;  //是否已经读取了附件
+	optional bool   hasAttach = 8;		//是否有附件
+}
+
+//邮件的附件
+message stSynMailAttach
+{
+	optional uint32 itemID = 1;			//道具ID
+	optional uint32 num = 2;			//道具数量
+}
+
+//邮件的详细信息
+message stSynDetailMailInfo
+{
+	optional uint32 id = 1;				//邮件ID
+	optional string senderName = 2; 	//发送者名字
+	optional string title =3 ;			//标题
+	optional string content = 4;		//内容
+	optional uint32 sendTime = 5;		//发送时间
+	optional bool	isRead = 6;			//是否已经读了
+	optional eMailType mailType = 7;	//邮件类型:1是系统
+	optional bool   isFetchAttach = 8;  //是否已经读取了附件
+	repeated stSynMailAttach attachs = 9;//附件			
+}
+
+//s ---> c 给玩家发送所有邮件
+message stSynAllMail
+{
+	repeated stSynMainSnalInfo mailInfos = 1;
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+	enum ProtoFunID
+	{
+		FunID = 1;	
+	}		
+}
+
+//请求阅读邮件 c ---> s
+message stReqReadMail
+{
+	optional uint32 id = 1;			//邮件ID
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+	enum ProtoFunID
+	{
+		FunID = 2;	
+	}	
+}
+
+//s ---> c 返回邮件的详细内容
+message stRetMailInfo
+{
+	optional stSynDetailMailInfo mailInfo = 1;	//邮件的详细信息
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+	enum ProtoFunID
+	{
+		FunID = 3;	
+	}	
+}
+
+//提取附件 c ---> s ,成功会给系统添加相应的资源
+message stReqFetchAttach
+{
+	optional uint32 id = 1;			//邮件ID
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+	enum ProtoFunID
+	{
+		FunID = 4;	
+	}		
+}
+
+//提取附件返回 s --> c
+message stFetchAttachResult
+{
+	enum Result
+	{
+		SUCCESS = 1;			//成功
+		ATTACH_NOT_EXIST = 2;	//附件不存在
+	}
+
+	optional Result result = 1;	//结果
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+	enum ProtoFunID
+	{
+		FunID = 5;	
+	}		
+}
+
+//通知客户端收到一封邮件 s ---> c
+message stReceiveMail
+{
+	optional stSynMainSnalInfo	mailInfo = 1;	//邮件信息
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+	enum ProtoFunID
+	{
+		FunID = 6;	
+	}			
+}
+
+//请求奖励信息 c ---> s
+message stReqRewardInfo
+{
+	optional uint32 flag = 1;		//无意义随便填
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+	enum ProtoFunID
+	{
+		FunID = 7;	
+	}		
+}
+
+
+//返回奖励信息 s  ---> c
+message stRetRewardInfo
+{
+	optional uint32 getSignRewardNum = 1;			//已经领取签到奖励次数
+	optional bool	hasGetSignReward = 2;			//今天是否领取了签到奖励
+	optional uint32 getOpenSvrRewardNum = 3;		//领取开服奖励次数
+	optional bool	hasGetOpenSvrReward = 4;		//今天是否已经领取了开服奖励
+	repeated uint32 hasGetRewardLv = 5;				//已经领取奖励等级   
+	optional uint32 onlineTimes = 6;				//今天已经在线时间
+	repeated uint32 hasGetOnlineReward = 7;			//已经领取的在线奖励
+
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+	enum ProtoFunID
+	{
+		FunID = 8;	
+	}		
+}
+
+//请求领取签到奖励 c ---> s
+message stReqSignReward
+{
+	optional uint32 day = 1;		//领第几天的奖励
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+	enum ProtoFunID
+	{
+		FunID = 9;	
+	}		
+}
+
+//返回领取奖励结果 s  ---> c
+message stGetSignRewardResult
+{
+	enum Result
+	{
+		SUCCESS = 1;		//领取成功
+		HAS_GET_REWARD = 2; //已经领取了
+		BAG_FULL = 3;		//包裹满了
+	}
+
+	optional Result result = 1;			//领取结果
+	optional uint32 day = 2;			//返回领取了第几天的奖励,只有成功后才有意义
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+	enum ProtoFunID
+	{
+		FunID = 10;	
+	}		
+}
+
+//请求领取开服奖励 c ---> s
+message stReqOpenSvrReward
+{
+	optional uint32 day = 1;		//第几天
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 11;	
+	}		
+}
+
+//返回领取奖励 s ---> c
+message stGetOpenSvrRewardResult
+{
+	enum eResult
+	{
+		eSUCCESS = 1;				//成功
+		eHAS_GET_REWARD = 2;		//已经领取了奖励
+		eBAG_FULL = 3;				//包裹满了
+	}
+
+	optional eResult result = 1;	//领取结果
+	optional uint32  day = 2;		//领取了第几天的奖励,只有领取成功后才有意义
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 12;	
+	}		
+}
+
+//领取等级奖励 c ---> s
+message stReqLvReward
+{
+	optional uint32 lv = 1;		//领取的第几级的奖励
+
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 13;	
+	}		
+}
+
+//返回领取奖励结果 s ---> c
+message stLvRewardResult
+{
+	enum eResult
+	{
+		eSUCCESS = 1;				//领取成功
+		eLEVEL_TOO_LOW = 2; 		//等级太低,不能领取该等级
+		eHAS_NO_REWARD_LV = 3;		//没有奖励等级
+		eINNER_ERROR = 4;	  		//内部错误
+		eBAG_SLOT_NOT_ENOUGH = 5;	//背包格子不足
+	}
+
+	optional eResult result = 1;	//结果
+	optional uint32  getRewardLv = 2;//领取了奖励的等级
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 14;	
+	}		
+}
+
+//请求在线奖励 c  --> s
+message stReqOnlineReward
+{
+	optional uint32 id = 1;		//领取在线奖励的ID
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 15;	
+	}		
+}
+
+//返回在线奖励结果 s ---> c
+message stGetOnlineRewardResult
+{
+	enum eResult
+	{
+		eSUCCESS = 1;			//成功
+		eHAS_REMAIN_TIME = 2;   //还剩余时间
+		eBAG_FULL = 3;			//包裹满了
+		eHAS_GOT_REWARD = 4;	//已经领取奖励
+		eINNER_ERROR = 5;		//内部错误
+	}
+
+	optional eResult result = 1;		//返回结果
+	optional uint32  id = 2;			//奖励id
+	optional uint32  onlineTime = 3;		//在线时间
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 16;	
+	}		
+}
+
+//请求打星信息 s ---> c
+message stBuyStarInfo
+{
+	optional uint32 buyNum = 1;			//已经购买了次数
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 17;	
+	}		
+}
+
+//请求购买下一个星 c ---> s
+message stReqBuyStar
+{
+	optional uint32 num = 1;		//所购买的次数		
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 18;	
+	}	
+}
+
+//返回买星结果 s ---> c
+message stBuyStarResult
+{
+	enum Result
+	{
+		SUCCESS = 1;			//成功	
+		ITEM_NOT_ENOUGH = 2;	//道具不足
+		INNER_ERROR = 3;		//找不到配置,等内部错误
+	}
+
+	optional Result result = 1;		//结果
+	optional uint32 hasBuyNum = 2;	//已经购买的次数
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 19;	
+	}		
+}
+
+//宝藏抽奖 c ---> s
+message ReqOpenDrawWindow
+{
+	optional uint32 flag = 1;		//一个标志,随便填
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 20;	
+	}		
+}
+
+//返回宝藏抽奖相关信息 s ---> c
+message stDrawWindowInfo
+{
+	optional uint32 goldFreeRemainTime = 1;			//金币免费剩余时间秒为单位
+	optional uint32 goldFreeRemainNum = 2;			//金币免费剩余次数
+	optional uint32 diamondFreeRemainTime = 3;		//钻石免费时间
+	optional uint32 drawHeroFreeRemainTime = 4;		//免费抽武将剩余时间
+	optional uint32 diamondDrawNum = 5;				//钻石抽奖次数
+	optional uint32 heroDrawNum = 6;				//限时武神抽奖次数
+	optional bool   hasGoldDraw = 7;				//是否已经进行过金币抽奖,true表示已经进行了金币抽奖,false表示还没有
+	optional bool   hasGold10Draw = 8;				//是否已经进行过金币10连抽,同上
+	optional bool   hasDiamondDraw = 9;				//是否已经进行过钻石抽奖,同上
+	optional bool   hasDiamond10Draw = 10;			//是否已经进行过钻石10连抽,同上
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 21;	
+	}		
+}
+
+enum eDrawType
+{
+	eDrawType_Gold = 1;			//金币抽奖
+	eDrawType_10Gold = 2;		//金币10连抽
+	eDrawType_Diamond = 3;		//钻石抽奖
+	eDrawType_10Diamond = 4;	//钻石10连抽
+	eDrawType_DrawHero = 5;		//武神抽奖
+	eDrawType_10DrawHero = 6;	//武神10连抽
+	eDrawType_TreasureDraw = 7; //宝藏抽奖
+	eDrawType_10TreasureDraw = 8;//宝藏抽奖
+	eDrawType_DevilCallDraw = 9;//魔王抽奖
+}
+//请求进行抽奖 c ---> s
+message stReqDraw
+{
+	optional eDrawType type = 1;				//抽奖类型
+	optional uint32    flag = 2;				//标志
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 22;	
+	}		
+}
+
+message stSynDrawItem
+{
+	optional uint32 itemID = 1;		//抽奖的道具ID
+	optional uint32 num  = 2;		//数量
+}
+
+//抽奖返回 s ---> c
+message stDrawResult
+{
+	enum Result 
+	{
+		SUCCESS = 1;
+		MONEY_NOT_ENOUGH = 2;		//金币
+		BAG_FULL = 3;				//包裹满了
+		DIAMOND_NOT_ENOUGH = 4;		//钻石不足
+	}
+
+	optional Result result = 1;			//结果
+	repeated stSynDrawItem items = 2;	//抽到的道具,只有成功时候才有值
+	optional eDrawType type = 3;    //抽奖类型
+	optional uint32  diamondDrawNum = 4;	//当前钻石抽奖次数
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 23;	
+	}		
+}
+
+//上线同步称号 s ---> c
+message stSynMyTitle
+{
+	repeated uint32 allTitle = 1;		//所有称号
+	optional uint32 activeTitle = 2;	//激活的称号
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 24;	
+	}		
+}
+
+//激活某个称号
+message stActiveOneTitle
+{
+	optional uint32 titleID = 1;		//激活的称号
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 25;	
+	}		
+}
+
+//激活称号结果 s ---> c
+message stActiveTitleResult
+{
+	enum eResult
+	{
+		SUCCESS = 1;				//成功
+		TITLE_NOT_EXIST = 2;		//称号不存在
+	}
+
+	optional eResult result = 1;		//激活结果
+	optional uint32 titleID = 2;		//称号ID
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 26;	
+	}		
+}
+
+//获得一个称号
+message stObtainOneTitle
+{
+	optional uint32 titleID = 1;		//称号ID
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 27;	
+	}		
+}
+
+//购买投资计划 c --->s 
+message stBuyInvestPlan
+{
+	optional uint32 charID = 1;		//自己的角色ID
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 28;	
+	}		
+}
+
+//购买投资计划返回 s ---> c
+message stBuyInvestPlanResult
+{
+	enum eResult
+	{
+		eSUCCESS = 1;				//购买成功
+		eDIAMOND_NOT_ENOGUH = 2;	//钻石不足
+		eVIP_LV_TOO_LOW = 3;		//vip等级太低了
+		eHAS_BUY = 4;				//已经购买
+	}
+
+	optional eResult result = 1;		//购买结果
+	optional string  index = 2;			//索引
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 29;	
+	}		
+}
+
+//领取奖励 c ---> s
+message stReqInvestPlanReward
+{
+	optional uint32 lv = 1;		//请求lv等级的奖励
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 30;	
+	}		
+}
+
+//领取奖励结果 s ----> c
+message stInvestPlanRewardResult
+{
+	enum eResult
+	{
+		eSUCCESS = 1;					//成功
+		eHAS_GET_REWARD = 2;			//已经领取了奖励
+		eHAS_NOT_BUY_INVEST_PLAN = 3;	//还没有购买了投资计划
+	}
+
+	optional eResult result = 1;		//结果
+	optional uint32  lv = 2;			//领取奖励的等级
+	optional string  index = 3;			//索引
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 31;	
+	}		
+}
+
+//请求吃大餐 c --->s 
+message stReqEatDinner
+{
+	optional uint32 charID = 1;			//角色的ID
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 32;	
+	}		
+}
+
+//请求吃大餐返回 s ---> c
+message stEatDinnerResult
+{
+	enum eResult
+	{
+		eSUCCESS = 1;			//成功
+		eTIME_LIMIT = 2;		//不在吃大餐的时间范围内
+		eHAS_EAT = 3;			//已经吃过大餐了
+		eEAT_DINNER_NUM_OUT = 4;//今天已经吃完了
+	}
+
+	optional eResult result = 1;	//结果
+	optional uint32  hasEatedNum = 2;//已经吃了次数,成功时候有意义
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 33;	
+	}		
+}
+
+//上线发送活动相关数据 s ----> c
+message stSynActivityData
+{
+	optional bool hasBuyInvestment = 1;		//是否已经购买了投资计划
+	repeated uint32 investGetRewardLv = 2;	//投资已经领取奖励的等级
+	optional uint32 eatDinnerNum = 3;		//今天已经吃了大餐次数
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 34;	
+	}	
+}
+
+enum eTreasureType
+{
+	eTreasure_Yuntie1000_1 = 130201;			//陨铁1000碎片1
+	eTreasure_Yuntie1000_2 = 130202;			//陨铁1000碎片2
+
+	eTreasure_Yuntie3000_1 = 130401;			//陨铁3000碎片1
+	eTreasure_Yuntie3000_2 = 130402;			//陨铁3000碎片2
+	eTreasure_Yuntie3000_3 = 130403;			//陨铁3000碎片3
+
+	eTreasure_Yuntie5000_1 = 131201;			//陨铁5000碎片1
+	eTreasure_Yuntie5000_2 = 131202;			//陨铁5000碎片2
+	eTreasure_Yuntie5000_3 = 131203;			//陨铁5000碎片3
+	eTreasure_Yuntie5000_4 = 131204;			//陨铁5000碎片4
+
+	eTreasure_Jinglian_1   = 131211;			//精炼石碎片1
+	eTreasure_Jinglian_2   = 131212;			//精炼石碎片2
+	eTreasure_Jinglian_3   = 131213;			//精炼石碎片3
+
+	eTreasure_Small_Jinglian_Mine1 = 131411;	//小精炼矿碎片1
+	eTreasure_Small_Jinglian_Mine2 = 131412;  	//小精炼矿碎片2
+	eTreasure_Small_Jinglian_Mine3 = 131413;	//小精炼矿碎片3
+
+	eTreasure_Mid_Jinglian_Mine1  = 131611;		//中精炼石碎片1
+	eTreasure_Mid_Jinglian_Mine2  = 131612;  	//中精炼石碎片2
+	eTreasure_Mid_Jinglian_Mine3  = 131613;		//中精炼石碎片3
+	eTreasure_Mid_Jinglian_Mine4  = 131614;		//中精炼石碎片4
+
+	eTreasure_Big_Jinglian_Mine1  = 131811;		//大精炼矿碎片1
+	eTreasure_Big_Jinglian_Mine2  = 131812;		//大精炼矿碎片2
+	eTreasure_Big_Jinglian_Mine3  = 131813;		//大精炼矿碎片3
+	eTreasure_Big_Jinglian_Mine4  = 131814;		//大精炼矿碎片4
+	eTreasure_Big_Jinglian_Mine5  = 131815;		//大精炼矿碎片5
+
+	eTreasure_Fuwen_2Class_1	  = 130221;		//2阶符文碎片1
+	eTreasure_Fuwen_2Class_2	  = 130222;		//2阶符文碎片2
+	eTreasure_Fuwen_2Class_3	  = 130223;		//2阶符文碎片3
+
+	eTreasure_Fuwen_10Class_1	  = 131021;		//10阶符文碎片1
+	eTreasure_Fuwen_10Class_2	  = 131022;		//10阶符文碎片2
+	eTreasure_Fuwen_10Class_3	  = 131023;		//10阶符文碎片3
+	eTreasure_Fuwen_10Class_4	  = 131024;		//10阶符文碎片4
+
+	eTreasure_Fuwen_18Class_1	  = 131821;		//18阶符文碎片1
+	eTreasure_Fuwen_18Class_2	  = 131822;		//18阶符文碎片2
+	eTreasure_Fuwen_18Class_3	  = 131823;		//18阶符文碎片3
+	eTreasure_Fuwen_18Class_4	  = 131824;		//18阶符文碎片4
+	eTreasure_Fuwen_18Class_5	  = 131825;		//18阶符文碎片5
+
+	eTreasure_Fuwen_20Class_1	  = 132021;		//20阶符文碎片1
+	eTreasure_Fuwen_20Class_2	  = 132022;		//20阶符文碎片2
+	eTreasure_Fuwen_20Class_3	  = 132023;		//20阶符文碎片3
+	eTreasure_Fuwen_20Class_4	  = 132024;		//20阶符文碎片4
+	eTreasure_Fuwen_20Class_5	  = 132025;		//20阶符文碎片5
+
+	eTreasure_Fuwen_26Class_1	  = 132621;		//26阶符文碎片1
+	eTreasure_Fuwen_26Class_2	  = 132622;		//26阶符文碎片2
+	eTreasure_Fuwen_26Class_3	  = 132623;		//26阶符文碎片3
+	eTreasure_Fuwen_26Class_4	  = 132624;		//26阶符文碎片4
+	eTreasure_Fuwen_26Class_5	  = 132625;		//26阶符文碎片5
+	eTreasure_Fuwen_26Class_6	  = 132626;		//26阶符文碎片6
+
+	eTreasure_Fuwen_28Class_1_1	  = 132821;		//28阶符文碎片1
+	eTreasure_Fuwen_28Class_1_2	  = 132822;		//28阶符文碎片2
+	eTreasure_Fuwen_28Class_1_3	  = 132823;		//28阶符文碎片3
+	eTreasure_Fuwen_28Class_1_4	  = 132824;		//28阶符文碎片4
+	eTreasure_Fuwen_28Class_1_5	  = 132825;		//28阶符文碎片5
+	eTreasure_Fuwen_28Class_1_6	  = 132826;		//28阶符文碎片6
+
+	eTreasure_Fuwen_28Class_2_1	  = 132841;		//28阶符文碎片1
+	eTreasure_Fuwen_28Class_2_2	  = 132842;		//28阶符文碎片2
+	eTreasure_Fuwen_28Class_2_3	  = 132843;		//28阶符文碎片3
+	eTreasure_Fuwen_28Class_2_4	  = 132844;		//28阶符文碎片4
+	eTreasure_Fuwen_28Class_2_5	  = 132845;		//28阶符文碎片5
+	eTreasure_Fuwen_28Class_2_6	  = 132846;		//28阶符文碎片6
+
+	eTreasure_Fuwen_28Class_3_1	  = 132851;		//28阶符文碎片1
+	eTreasure_Fuwen_28Class_3_2	  = 132852;		//28阶符文碎片2
+	eTreasure_Fuwen_28Class_3_3	  = 132853;		//28阶符文碎片3
+	eTreasure_Fuwen_28Class_3_4	  = 132854;		//28阶符文碎片4
+	eTreasure_Fuwen_28Class_3_5	  = 132855;		//28阶符文碎片5
+	eTreasure_Fuwen_28Class_3_6	  = 132856;		//28阶符文碎片6
+
+
+	eTreasure_Fuwen_30Class_1	  = 133021;		//30阶符文碎片1
+	eTreasure_Fuwen_30Class_2	  = 133022;		//30阶符文碎片2
+	eTreasure_Fuwen_30Class_3	  = 133023;		//30阶符文碎片3
+	eTreasure_Fuwen_30Class_4	  = 133024;		//30阶符文碎片4
+	eTreasure_Fuwen_30Class_5	  = 133025;		//30阶符文碎片5
+	eTreasure_Fuwen_30Class_6	  = 133026;		//30阶符文碎片6
+
+
+	eTreasure_Small_Exp_Fushi_1	  = 130231; 	//小经验符石碎片1
+	eTreasure_Small_Exp_Fushi_2	  = 130232; 	//小经验符石碎片2
+	eTreasure_Small_Exp_Fushi_3	  = 130233; 	//小经验符石碎片3
+
+	eTreasure_Mid_Exp_Fushi_1	  = 130631; 	//中经验符石碎片1
+	eTreasure_Mid_Exp_Fushi_2	  = 130632; 	//中经验符石碎片2
+	eTreasure_Mid_Exp_Fushi_3	  = 130633; 	//中经验符石碎片3
+	eTreasure_Mid_Exp_Fushi_4	  = 130634;		//中经验符石碎片4
+
+	eTreasure_Big_Exp_Fushi_1	  = 131231; 	//大经验符石碎片1
+	eTreasure_Big_Exp_Fushi_2	  = 131232; 	//大经验符石碎片2
+	eTreasure_Big_Exp_Fushi_3	  = 131233; 	//大经验符石碎片3
+	eTreasure_Big_Exp_Fushi_4	  = 131234; 	//大经验符石碎片4
+	eTreasure_Big_Exp_Fushi_5	  = 131235;		//大经验符石碎片5
+
+	eTreasure_GoldCoins_Card2_1	  = 130271;     //2W金币卡碎片1
+	eTreasure_GoldCoins_Card2_2   = 130272;     //2W金币卡碎片2
+	eTreasure_GoldCoins_Card2_3   = 130273;     //2W金币卡碎片3
+
+	eTreasure_GoldCoins_Card5_1	  = 130471;     //5W金币卡碎片1
+	eTreasure_GoldCoins_Card5_2   = 130472;     //5W金币卡碎片2
+	eTreasure_GoldCoins_Card5_3   = 130473;     //5W金币卡碎片3
+	eTreasure_GoldCoins_Card5_4   = 130474;     //5W金币卡碎片4
+
+	eTreasure_GoldCoins_Card10_1  = 131271;     //10W金币卡碎片1
+	eTreasure_GoldCoins_Card10_2  = 131272;     //10W金币卡碎片2
+	eTreasure_GoldCoins_Card10_3  = 131273;     //10W金币卡碎片3
+	eTreasure_GoldCoins_Card10_4  = 131274;     //10W金币卡碎片4
+	eTreasure_GoldCoins_Card10_5  = 131275;     //10W金币卡碎片5
+
+	eTreasure_Diamond_Card10_1	  = 130281;     //10钻石卡碎片1
+	eTreasure_Diamond_Card10_2    = 130282;     //10钻石卡碎片2
+	eTreasure_Diamond_Card10_3    = 130283;     //10钻石卡碎片3
+
+	eTreasure_Diamond_Card20_1	  = 130481;     //20钻石卡碎片1
+	eTreasure_Diamond_Card20_2    = 130482;     //20钻石卡碎片2
+	eTreasure_Diamond_Card20_3    = 130483;     //20钻石卡碎片3
+	eTreasure_Diamond_Card20_4    = 130484;     //20钻石卡碎片4
+
+	eTreasure_Diamond_Card50_1	  = 131281;     //50钻石卡碎片1
+	eTreasure_Diamond_Card50_2    = 131282;     //50钻石卡碎片2
+	eTreasure_Diamond_Card50_3    = 131283;     //50钻石卡碎片3
+	eTreasure_Diamond_Card50_4    = 131284;     //50钻石卡碎片4
+	eTreasure_Diamond_Card50_5    = 131285;     //50钻石卡碎片4
+}
+
+enum eCombineItem
+{
+	eCombine_None = 0;
+	eCombine_Yuntie1000 = 100290;				//合成的陨铁1000
+	eCombine_Yuntie3000 = 100490;				//合成的陨铁3000
+	eCombine_Yuntie5000 = 101290;				//合成的陨铁5000
+
+	eCombine_Jinglian   = 120101;				//合成精炼石
+	eCombine_Small_Jinglian_Mine = 101206;   	//小精炼矿石
+	eCombine_Mid_Jinglian_Mine = 101406;		//中精炼矿石
+	eCombine_Big_Jinglian_Mine = 101606;		//大精炼矿石
+
+	eCombine_2Class_Fuwen = 600200;				//2阶符文
+	eCombine_10Class_Fuwen = 601000;			//10阶符文
+	eCombine_18Class_Fuwen = 601800;			//18阶符文
+	eCombine_20Class_Fuwen = 602000;			//20阶符文
+	eCombine_26Class_Fuwen = 602600;			//26阶符文
+	eCombine_28Class_Fuwen = 602800;			//28阶符文
+	eCombine_30Class_Fuwen = 603000;			//30阶符文
+
+	eCombine_Small_Exp_Fushi = 650200;			//小经验符石
+	eCombine_Mid_Exp_Fushi = 650600;			//中经验符石
+	eCombine_Big_Exp_Fushi = 651200;			//大经验符石
+}
+
+//请求打开资源抢夺界面 c ----> s
+message stReqOpenCaptureTreasure
+{
+	optional uint32 charID = 1;			//角色ID
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+	enum ProtoFunID
+	{
+		FunID = 35;	
+	}		
+}
+
+message stSynCaptureTreasureInfo
+{
+	optional uint32   resType = 1;
+	optional uint32   resNum = 2;
+}
+
+//返回玩家所具有的资源 s ---> c
+message stRetCaptureTreasure
+{
+	repeated stSynCaptureTreasureInfo tresures = 1;		//碎片资源信息
+	optional uint32 remainTime = 2;						//免战剩余时间
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+	enum ProtoFunID
+	{
+		FunID = 36;	
+	}		
+}
+
+//进行合成 c ----> s
+message stReqCombineTreasure
+{
+	optional uint32 combineType = 1;			//合成类型
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 37;	
+	}		
+}
+
+//返回合成结果 s ---> c
+message stCombineTreasureResult
+{
+	enum eResult
+	{
+		eSUCCESS = 1;				//成功
+		eTREASURE_NOT_ENOUGH = 2;	//资源不足
+		eBAG_FULL = 3;				//包裹满了
+		eINNER_ERROR = 4;			//内部错误
+	}
+
+	optional eResult result = 1;
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 38;	
+	}		
+}
+
+//请求购买和平模式时间  c ---> s
+message stBuyPeaceModuleTime
+{
+	enum eType
+	{
+		e1_HOUR_ITEM = 1;		//用1小时免战令
+		e3_HOUR_ITEM = 2;		//用3消失免战令
+		e12_HOUR_ITEM = 3;		//用12小时免战令
+		e10_DIAMOND = 4;		//用10钻石免战时间1小时
+	}
+
+	optional eType type = 1;
+	optional uint32 hour = 2;		//在钻石购买模式下购买多少个小时
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 39;	
+	}		
+}
+
+//购买和平模式时间返回 s ----> c
+message stBuyPeaceModuleTimeResult
+{
+	enum eResult
+	{
+		eSUCCESS = 1;			//成功
+		eHAS_NO_ITEM = 2;		//没有道具
+		eDIAMOND_NOT_ENOUGH = 3;//钻石不足
+	}
+
+	optional eResult result = 1;
+	optional uint32  remainTime = 2;
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 40;	
+	}		
+}
+
+
+//抢夺资源玩家列表
+message stCaptureTreasureUserInfo
+{
+	optional uint32 charID = 1;			//角色ID
+	optional string name = 2;			//名字
+	optional uint32 job = 3;			//职业
+	optional uint32 sex = 4;			//性别
+	optional uint32 level = 5;			//等级
+	optional uint32 photoID = 6;		//头像ID
+}
+
+//请求挑战列表 c ---> s
+message stReqChallengeUserList
+{
+	optional uint32 charID = 1;			//角色自己的ID
+	optional uint32 resID = 2;			//资源ID
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 41;	
+	}	
+}
+
+//返回挑战列表 s ---> c
+message stRetChallengeUserList
+{
+	repeated stCaptureTreasureUserInfo userInfo = 1;		//玩家信息
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 42;	
+	}		
+}
+
+enum eCaptureType
+{
+	eOneTime_Capture = 1;				//1次抢夺
+	eFiveTime_Capture = 2;				//5连抢
+}
+
+//抢夺玩家的资源 c ---> s
+message stCaptureUserTreasure
+{
+	optional uint32 charID = 1;			//被抢夺的玩家ID
+	optional uint32 combineID = 2;		//合成ID
+	optional uint32 resType = 3;		//抢夺的资源类型
+	optional eCaptureType type = 4;		//抢夺类型
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 43;	
+	}		
+}
+
+message stSynCaptureReward
+{
+	optional uint32 itemID = 1;
+	optional uint32 num = 2;
+	optional uint32  goldCoin = 3;      //金币数量
+	optional uint32  exp = 4;           //获得经验
+}
+
+//抢夺资源返回 s ---> c
+message stCaptureUserTreasureResult
+{
+	enum eResult
+	{
+		eSUCCESS = 1;					//成功
+		eFAIL = 2;						//失败
+		eINNER_ERROR = 3;				//内部错误
+		eSP_NOT_ENOUGH = 4;				//体力不足
+		eBAG_FULL = 5;					//背包满了
+		eNOT_IN_OPEN_TIME = 6;			//不在时间内
+	}
+
+	optional eResult result = 1;		//抢夺结果
+	optional bool    obtainPiece = 2;	//是否抢到碎片
+	repeated stSynCaptureReward rewards = 3;//获得的道具
+	optional eCaptureType type = 4;			//抢夺类型
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 44;	
+	}		
+}
+
+//同步宝藏数量 s  ---> c
+message stSynTreasureNum
+{
+	optional uint32 resType = 1;		//资源类型
+	optional uint32 num = 2;				//数量
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 45;	
+	}		
+}
+
+//取消激活称号 c ----> s
+message stCancelActiveTitle
+{
+	optional uint32 charID = 1;			//自己的角色ID
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 46;	
+	}			
+}
+
+//取消激活称号结果 s ----> c
+message stCancelActiveTitleResult
+{
+	optional bool success = 1;			//true 成功,false失败
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 47;	
+	}			
+}
+
+//同步的精灵信息
+message stSynSpriteInfo
+{
+	optional uint32 spriteID = 1;		//精灵ID
+	optional uint32 level = 2;			//精灵等级
+}
+
+//发送解锁的精灵 s ----- >c
+message stSynAllSprite
+{
+	repeated stSynSpriteInfo data = 1;
+	optional uint32  followSpriteID = 2;		//跟随精灵ID
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 48;	
+	}		
+}
+
+//解锁精灵 c ----> s
+message stReqUnlockedSprite
+{
+	optional uint32 spriteID = 1;		//精灵ID
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 49;	
+	}			
+}
+
+//解锁精灵返回 s ---> c
+message stUnlockedSpriteResult
+{
+	enum eResult
+	{
+		eLevel_Not_Meet = 1;		//人物等级不满足
+		eVipLv_Not_Meet = 2;		//vip等级不满足
+		eInner_Error =33;			//内部错误
+		eSuccess = 4;				//成功
+	}
+
+	optional eResult result = 1;	//等级
+	optional uint32  spriteID = 2;
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 50;	
+	}			
+}
+
+//增加一只精灵  s ---> c
+message stAddSprite
+{
+	optional stSynSpriteInfo sprite = 1;
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 51;	
+	}		
+}
+
+//升级精灵  c ----> s
+message stReqLevelupSprite
+{
+	optional uint32 spriteID = 1;		//精灵ID
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 52;	
+	}		
+}
+
+//升级精灵返回 s ---> c
+message stLevelupSpriteResult
+{
+	enum eResult
+	{
+		eSuccess = 1;				//成功
+		eInner_Error = 2;			//内部错误
+		eConsume_Res_Not_Enough = 3;//消耗物不足
+		eRole_Level_Limit = 4;		//等级限制
+		eHas_Not_Unlocked = 5;		//还没有解锁
+		eLevel_Full = 6;			//等级满了
+		eSprite_Not_Exist = 7;		//精灵不存在
+	}
+
+	optional uint32 spriteID = 1;		//精灵ID
+	optional eResult result = 2;		//结果
+	optional uint32  curLv = 3;			//升级后的等级，只有成功后才有意义
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 53;	
+	}		
+}
+
+//跟随主人  c ----> s
+message stSpriteFollowMaster
+{
+	optional uint32 spriteID = 1;		//精灵ID
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 54;	
+	}		
+}
+
+//跟随设置返回 s -----> c
+message stSpriteFollowMasterResult
+{
+	enum eResult
+	{
+		eSucess = 1;		//成功
+		eFail = 2;			//失败
+	}
+
+	optional eResult result = 1;
+	optional uint32  spriteID = 2;		//精灵ID
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 55;	
+	}		
+}
+
+///新的活动接口 走后台配置
+
+//获得当前活动 c ----> s
+message stReqAvaibleActivity
+{
+	optional uint32 charID = 1;			//自己的角色ID
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 56;	
+	}			
+}
+
+message stSynActivityStepReward
+{
+	optional uint32 itemID = 1;					//道具id，包括资源
+	optional uint32 num  = 2;	
+}
+
+message stSynActivityStepOptionalReward
+{
+	repeated stSynActivityStepReward rewards = 1;   //奖励	
+}
+
+message stSynActivityStepInfo
+{
+	optional uint32 stepID = 1;							   //阶段ID
+	optional string stepDesc = 2;						   //阶段描述
+	repeated stSynActivityStepOptionalReward optionals = 3;//可选奖励
+}
+
+
+enum eActivityType
+{
+	eActivityType_Invalid = 0;						//无效类
+	eActivityType_Consume = 1;						//消耗类
+	eActivityType_CumuLogin = 2;					//累积登录类
+	eActivityType_SpecialTimeLogin = 3;				//限时登录类
+	eActivityType_Exchange = 4;						//兑换活动
+	eActivityType_WeeklyConsume = 5;				//周消耗
+	eActivityType_OneDayOneRecharge = 6;			//每日一笔消耗
+	eActivityType_OneDayAccRecharge = 7;			//每日累积充值
+	eActivityType_OneDayRecyleRecharge = 8;			//每日循环充值
+	eActivityType_MultiAccRecharge = 9;				//多日累积充值
+	eActivityType_AccRechargeDay = 10;				//累计充值天数
+}
+
+message stSynActivityInfo
+{
+	optional uint32 id = 1;							//活动ID   
+	optional uint32 type = 2;						//活动的类型	对应枚举eActivityType
+	optional string title = 3;						//活动名字
+	optional string desc = 4;						//活动描述
+	optional uint32 curVal = 5;						//已经完成的最新阶段，阶段ID
+	repeated uint32 finishStep = 6;					//已经领奖的阶段,阶段ID
+	repeated stSynActivityStepInfo avaibleStep = 7;	//所有可以进行的阶段	
+}
+
+
+
+//返回活动相关信息 s ----> c
+message stRetAvaibleActivity
+{
+	repeated stSynActivityInfo activities = 1;//包括的活动对应枚举eActivityType的所有(除eActivityType_Exchange/兑换活动和eActivityType_OneDayRecyleRecharge/每日循环充值)
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 57;	
+	}		
+}
+
+//请求领取活动奖励 c ----> s
+message stReqAcitivityReward
+{
+	optional uint32 id = 1;			//活动的ID
+	optional uint32 stepID = 2;		//阶段ID
+	optional uint32 selIndex = 3;	//选择的奖励索引,有些活动会有不同的选选项,0表示第一个
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 58;	
+	}		
+}
+
+//领取活动奖励返回 s ----> c
+message stActivityRewardResult
+{
+	enum eResult
+	{
+		eSuccess = 1;	
+		eHas_Got_Reward = 2;		//已经获得了奖励
+		eCond_Not_Meet = 3;			//条件未满足
+		eSelect_Not_Exist = 4;		//选择的奖励不存在
+		eBag_Full = 5;				//包裹满了
+	}
+
+	optional uint32 id = 1;			//活动的ID
+	optional uint32 stepID = 2;		//阶段ID
+	optional eResult result = 3;	//领取阶段奖励返回
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 59;	
+	}		
+}
+
+//请求世界boss血量排名 c -----> s
+message stReqWorldBossDamageRank
+{
+	optional uint32 fromRank = 1;		//开始名次
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 60;	
+	}			
+}
+
+message stWorldBossDamageSortItem
+{
+	optional uint32 charID = 1;
+	optional string name = 2;
+	optional uint32 job = 3;
+	optional uint32 sex = 4;
+	optional uint32 damage = 5;
+	optional uint32 photoID = 6;
+}
+
+//返回血量排名 s ---> c
+message stRetWorldBossDamageRank
+{
+	repeated stWorldBossDamageSortItem sortItem = 1;
+	optional uint32 fromRank = 2;							//开始名次
+	optional uint32 myRank = 3;								//我的名次
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 61;	
+	}		
+}
+
+//请求打开世界boss界面 c ---> s
+message stReqOpenWorldBossWin
+{
+	optional uint32 charID = 1;			//自己角色ID
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 62;	
+	}			
+}
+
+//打开世界boss窗口返回 s ----> c
+message stRetOpenWorldBossWin
+{
+	optional uint32 reliveRemainTime = 1;			//复活剩余时间
+	optional uint32 buyNum = 2;						//购买鼓舞士气次数
+	optional uint32 beginTime = 3;					//最近一个活动开始时间
+	optional uint32 endTime = 4;					//最近一个活动结束时间
+	optional uint32 bossID = 5;						//bossID
+	optional uint32 hp = 6;							//血量
+	optional uint32 stepID = 7;						//阶段ID
+	optional bool	tomorrow = 8;					//明 = 8;					//明天天
+	optional string killerName = 9;					//击杀者名字
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 63;	
+	}			
+}
+
+//请求匹配世界boss c ----> s
+message stReqBossWorldMatch
+{
+	optional uint32 charID = 1 ;
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 64;	
+	}			
+}
+
+//请求匹配世界boss返回 s ----> c
+message stRetBossWorldMatch
+{
+	enum eResult
+	{
+		eSuccess = 1;		//成功
+		eWait = 2;			//等待
+		eNot_Open = 3;		//活动没有开启
+		eActivity_End = 4;	//活动结束
+		eLevel_Too_Low = 5;	//等级太低
+		eBoss_Die = 6;		//boss死亡了
+		eCool_Down = 7;		//CD中
+	}
+
+	optional eResult result = 1;
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 65;	
+	}		
+}
+
+//请求清除世界boss活动CD c ---> s
+message stReqClearWorldBossActivityCD
+{
+	optional uint32 charID = 1;				//角色ID
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 66;	
+	}			
+}
+
+//清除世界boss活动cd结果 s ---> c
+message stClearWorldBossActivityCDResult
+{
+	enum eResult
+	{
+		eSuccess = 1;			//清CD成功
+		eDiamond_Not_Enough = 2;//钻石不足
+	}
+
+	optional eResult result = 1;
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 67;	
+	}		
+}
+
+//请求增加世界boss活动伤害 c ----> s
+message stReqRaiseDamageInWorldBoss
+{
+	optional uint32 charID = 1;
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 68;	
+	}			
+}
+
+//增加世界boss活动中伤害 s  ---> c
+message stRaiseDamageInWorldBossResult
+{
+	enum eResult
+	{
+		eSuccess = 1;
+		eDaimond_Not_Enough = 2;		//钻石不足
+		eTime_Out = 3;					//次数不足
+	}
+	optional eResult result = 1;
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+	enum ProtoFunID
+	{
+		FunID = 69;	
+	}			
+}
+
+//取消匹配世界boss c ------> s
+message stCancelWorldBossMatch
+{
+	optional uint32 charID = 1;			//角色ID
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+	enum ProtoFunID
+	{
+		FunID = 70;	
+	}			
+}
+
+//取消匹配结果 s   ---> c
+message stCancelWorldBossMatchResult
+{
+	enum eResult
+	{
+		eSuccess = 1;			//成功
+		eFail = 2;				//失败
+	};
+
+	optional eResult result = 1;		//结果
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+	enum ProtoFunID
+	{
+		FunID = 71;	
+	}			
+}
+
+//查询是否有限时武神活动 c ----> s
+message stQueryDrawHeroActivity
+{
+	optional uint32 charID = 1;		//自己的角色ID
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+	enum ProtoFunID
+	{
+		FunID = 72;	
+	}			
+}
+
+//返回限时武神活动相关数据  s ---> c
+message stRetDrawHeroActivityInfo
+{
+	optional uint32 heroID = 1;		//heroID > 0表示活动开始
+	optional uint32 beginTime =2;   //开始时间 utc时间
+	optional uint32 endTime = 3;	//结束时间 utc时间
+	repeated uint32 rewardIDs = 4;	//领取的奖励ID
+	optional bool   gotRankReward = 5;//是否已经领取了排名奖励
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+	enum ProtoFunID
+	{
+		FunID = 73;	
+	}	
+}
+
+//请求限时武神抽奖积分奖励 c  ----> s
+message stReqDrawHeroScoreReward
+{
+	optional uint32 id = 1;			//领取那个ID的奖励
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+	enum ProtoFunID
+	{
+		FunID = 74;	
+	}	
+}
+
+//领取武神抽奖积分奖励  s  -----> c
+message stDrawHeroScoreRewardRet
+{
+	enum eResult
+	{
+		eSuccess = 1;			//领取成功
+		eScore_Not_Enough = 2;  //积分不足
+		eHas_Got_Reward = 3;	//已经领取了奖励
+		eInner_Error = 4;		//内部配置错误
+		eBagFull = 5;			//背包满了
+	}
+
+	optional eResult result = 1;
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 75;	
+	}
+}
+
+//请求排名奖励 c ----> s
+message stReqDrawHeroRankReward
+{
+	optional uint32 charID = 1;		//角色ID
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 76;	
+	}
+}
+
+//返回抽取武将排名奖励 s ----> c
+message stDrawHeroRankReward
+{
+	enum eResult
+	{
+		eSuccess = 1;				//成功
+		eHas_No_Rewards = 2;		//没有奖励
+		eHas_Got_Reward = 3;		//已经领取了奖励
+		eInner_Error = 4;			//内部错误
+	}
+
+	optional eResult result = 1;
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 77;	
+	}
+}
+
+//请求补偿列表 c  ------> s
+message stReqCompensationList
+{
+	optional uint32 charID = 1;//角色ID
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 78;	
+	}
+}
+
+message stCompensationItem
+{
+	optional uint32 itemID = 1;
+	optional uint32 num = 2;
+}
+
+message stCompensationInfo
+{
+	optional uint32 id = 1;
+	optional string desc = 2;
+	repeated stCompensationItem items = 3;
+}
+
+//返回补偿列表 s   ----> c
+message stRetCompensationList
+{
+	repeated stCompensationInfo info = 1;
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 79;	
+	}
+}
+
+//领取补偿 c ------> s
+message stReqGotCompensation
+{
+	optional uint32 id = 1;
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 80;	
+	}
+}
+
+//领取补偿结果 s ----> c
+message stGotCompensationResult
+{
+	enum eResult
+	{
+		eSuccess = 1;		//成功
+		eHas_Got = 2;		//已经领取
+	}
+
+	optional eResult result = 1;
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 81;	
+	}
+}
+
+
+//7天活动目标类型
+enum eSevenDayGoalType
+{
+	eSD_GoalType_Login = 1;     //登录奖励目标
+	eSD_GoalType_Gift = 2;      //礼包奖励
+	eSD_GoalType_Module1 = 3;   //模块一任务
+	eSD_GoalType_Module2 = 4;   //模块二任务
+};
+
+//7天活动目标
+enum eSevenDayGoal
+{
+	eSD_Goal_Login_Num = 1;             //登录次数
+	eSD_Goal_Total_Recharge = 2;        //充值数量
+	eSD_Goal_GitfBag_Price = 3;         //半价礼包价格
+	eSD_Goal_MainTask_Star_Num = 4;     //主线任务星星数
+	eSD_Goal_All_Skill_Raise_Num = 5;   //所有技能强化等级
+	eSD_Goal_Arena_History_Rank = 6;    //天梯历史排名
+	eSD_Goal_All_Equip_Refine_Lv = 7;   //所有装备精炼等级
+	eSD_Goal_Team_Copymap = 8;          //组队副本进度
+	eSD_Goal_All_Equip_Raise_Lv = 9;    //所有装备强化等级
+	eSD_Goal_One_One_Win_Num = 10;      //1v1胜利次数
+	eSD_Goal_Heishi_Refresh_Num = 11;   //黑市刷新次数
+	eSD_Goal_RealTime_PK_Num = 12;      //实时战场次数
+	eSD_Goal_Fuwen_Purple_Num = 13;     //符文紫色数量
+	eSD_Goal_Guild_Hall_Lv = 14;        //公会等级
+	eSD_Goal_Role_Lv = 15;              //公会等级
+	eSD_Goal_Battle_Power = 16;         //战力
+	eSD_Goal_Draw_num = 17;             //抽奖次数
+	eSD_Goal_Hero_EvolutionLv = 18;		//宠物进化等级
+	eSD_Goal_Consume_Diamond = 19;		//累计消耗
+};
+
+//请求7天活动信息 c ------> s
+message stReq7DayActivityInfo
+{
+	optional uint32 day = 1;
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 82;	
+	}
+}
+
+//7填奖励的目标
+message stSynSDGoalInfo
+{
+	optional uint32 id = 1;					//对应 carnival表里的entry的id
+	optional uint32 cond = 2;				//条件对应 eSevenDayGoal
+	optional uint32 value = 3;				//该条件的当前值
+	optional bool	hasGotReward = 4;		//是否已经领取了奖励
+}
+
+//返回7天活动信息 s  ------> c
+message stRet7DayActivityInfo
+{
+	optional uint32 day = 1;					//天数
+	repeated stSynSDGoalInfo loginGoal = 2;		//登录类型目标
+	repeated stSynSDGoalInfo gifBagGoal = 3;	//礼包类目标
+	repeated stSynSDGoalInfo module1Goal = 4;	//模块1的目标
+	repeated stSynSDGoalInfo module2Goal = 5;	//模块2的目标
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 83;	
+	}
+}
+
+//请求获得7天奖励 c ------> s
+message stReqSevenDayReward
+{
+	optional uint32 day  = 1;		//第几天
+	optional uint32 goalType = 2;	//对应 eSevenDayGoalType
+	optional uint32 id = 3;			//对应 carnival表里的entry的id
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 84;	
+	}
+}
+
+//7天活动返回 s ------> c
+message stSevenDayRewardRet
+{
+	enum eResult
+	{
+		eSuccess = 1;			//成功
+		eCond_Not_Meet = 2;		//条件未满足
+		eHas_Got_Reward = 3;	//已经领取了奖励
+		eInner_Error = 4;		//内部配置错误
+		eBag_Full = 5;			//包裹满了
+		eNot_Enough_Diamond = 6;//钻石不足
+	}
+
+	optional eResult result = 1;	//结果
+	optional uint32 goalType = 2;	//对应 eSevenDayGoalType
+	optional uint32 id = 3;			//对应 配置里每个目标的ID ,不是 eSevenDayGoal
+	optional uint32 day = 4;		//领取第几天
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 85;	
+	}
+}
+
+//是否有奖励要领取 s  ----> c
+message stSevenDayHasRewardTip
+{
+	optional uint32 day = 1;		//创建角色第几天
+	optional bool   hasReward = 2;	//是否有奖励要领取
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 86;	
+	}
+}
+
+//appstore 版本相关配置 s ----> c
+message stAppStoreCfg
+{
+	optional bool openAppVersion = 1;	//开启app版本
+	optional bool isSandbox = 2;		//是否沙盒版本
+	optional bool directBuy = 3;		//直接购买方式
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 87;	
+	}
+}
+
+//弹出窗口的通知 s ----> c
+message stOpenWindowTip
+{
+	enum eAction{
+		eNotify_Download_New_Version = 1;		//通知去下载新版本	
+	}
+
+	optional eAction action = 1;				//行为
+	optional string  content = 2;				//内容
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 88;	
+	}
+}
+
+//请求充值奖励活动列表 c -----> s
+message stReqRechargeActivityList
+{
+	optional uint32 charID = 1;					//角色ID
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 89;	
+	}
+}
+
+message stSynRechargeActivityInfo
+{
+	optional uint32 id = 1;
+	optional uint32 rechargeNum = 2;	//活动期间已经充值了多少
+	repeated uint32 gotRewardSteps = 3;	//已经领取奖励的阶段
+}
+
+//返回充值活动列表 s ---> c
+message stRetRechargeActivityList
+{
+	repeated stSynRechargeActivityInfo infos = 1;
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 90;	
+	}
+}
+
+//请求领取充值活动的奖励 c ------> s
+message stReqRechargeActivtiyReward
+{
+	optional uint32 activityID = 1;		//活动ID
+	optional uint32 stepID = 2;			//阶段ID	
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 91;	
+	}
+}
+
+//返回领取充值活动的奖励 s ----> c
+message stRetRechargeActivityReward
+{
+	enum eResult
+	{
+		eSuccess = 1;			//成功
+		eCond_Not_Meet = 2;		//条件不满足
+		eBagFull = 3;			//包裹满了
+		eHas_Got_Reward = 4;	//已经领取奖励
+		eInner_Error = 5;		//内部错误,配置不对
+	}
+
+	optional uint32 activityID = 1;		//活动ID
+	optional uint32 stepID = 2;			//阶段ID	
+	optional eResult result = 3;
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 92;	
+	}
+}
+
+message stSynInvestigation
+{
+	optional uint32 questID = 1;
+	repeated uint32 levels = 2;		//所有等级
+}
+//上线发送领取过的问卷调查 s ---> c
+message stSynAllInvestigation
+{
+	repeated stSynInvestigation infos = 1;
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 93;	
+	}
+}
+
+message stInvestAnswer
+{
+	optional uint32  problemID = 1;		//问题ID
+	optional bool	 answerA = 2;		//是否选择A
+	optional bool    answerB = 3;		//是否选择B
+	optional bool    answerC = 4;		//是否选择C
+	optional bool    answerD = 5;		//是否选择D
+	optional bool    answerE = 6;		//是否选择E
+	optional bool    answerF = 7;		//是否选择F
+	optional bool    answerG = 8;		//是否选择G
+	optional bool    answerH = 9;		//是否选择H
+	optional bool    answerI = 10;		//是否选择I
+	optional bool    answerJ = 11;		//是否选择J
+}
+
+//领取问卷调查奖励 c ----> s
+message stReqInvestgationReward
+{
+	optional uint32 questID = 1;		//问卷ID
+	optional uint32 level = 2;			//第几级的问卷
+	repeated stInvestAnswer answers = 3;//答案
+	optional uint32 useTime = 5;		//用时间
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 94;	
+	}
+}
+
+//领取问卷调查结果 s ----> c
+message stInvestgationRewardResult
+{
+	enum eResult
+	{
+		eInner_Error = 1;			//内部错误
+		eHas_Got_Reward = 2;		//已经获得奖励
+		eBag_Full = 3;				//包裹满了
+		eSuccess = 4;				//成功
+	}
+
+	optional eResult result = 1;
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 95;	
+	}
+}
+
+//请求所有商店活动 c -----> s
+message stReqActivityShop
+{
+	optional uint32 charID = 1;
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 96;	
+	}
+}
+
+//所有开启的限购商店s ----> c
+message stActivityShopList
+{
+	repeated uint32 activityIDs = 1;		//活动ID
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 97;	
+	}
+}
+
+//幸运商店领取信息 s ---> c 上线通知
+message stLuchShopInfo
+{
+	optional uint32 curRewardVipLv = 1;		//当前要领取的vip等级
+	optional uint32 randRewardEntryID = 2;	//随机到的奖励ID
+	optional bool   hasGotReward = 3;		//是否已经领取奖励
+	optional uint32 todayHasRecharge = 4;	//今天已经充值了多少
+	optional uint32 openWindowTime = 5;		//utc时间
+	optional uint32 rechargeMeetCondTime = 6;//满足满足条件时间
+	optional uint32 openSvrDay = 7;			//开服天数
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 98;	
+	}
+}
+
+//充值幸运商店今天充值数量 s -----> c
+message stSynLuckShopTodayRecharge
+{
+	optional uint32 num = 1;				//数量
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 99;	
+	}
+}
+
+//请求领取幸运商店的奖励 c -----> s
+message stReqLuckShopReward
+{
+	optional uint32 charID = 1;			//角色ID
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 100;	
+	}
+}
+
+//幸运商店奖励返回  s ----> c
+message stLuckShopRewardResult
+{
+	enum eResult
+	{
+		eSuccess = 1;				//成功
+		eHas_Got_Reward = 2;		//已经领取了奖励
+		eRecharge_Not_Enough = 3;	//充值不足
+		eBag_Full = 4;				//包裹满了
+		eInner_Error = 5;			//内部配置错误
+	}
+
+	optional eResult result = 1;	//结果
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 101;	
+	}
+}
+
+//保存打开窗口时间 c ----> s
+message stSaveOpenLuckShopWinTime
+{
+	optional uint32 charID = 1;		//角色ID
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 102;	
+	}
+}
+
+//发送充值满足条件时间 s ----> c
+message stLuckShopRechargeMeetCondTime
+{
+	optional uint32 meetCondTime = 1;		//满足条件时间
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 103;	
+	}
+}
+
+//请求打开护送界面 c ----> s
+message stReqOpenGuardWin
+{
+	optional uint32 charID = 1;				//打开护送窗口
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 104;	
+	}
+}
+
+//护送敌人
+message stGuardEnemy
+{
+	optional uint32 charID = 1;		//角色ID
+	optional string name = 2;		//角色名字
+	optional uint32 job = 3;		//角色职业
+	optional uint32 sex = 4;		//角色性别
+}
+
+//护送船只基本信息
+message stGuardBaseInfo
+{
+	optional uint32 charID = 1;		//角色ID
+	optional uint32 quality = 2;	//船只品质
+	optional uint32 remainTime = 3;	//护送剩余时间
+}
+
+//护送船只详细信息
+message stGuardDetailInfo
+{
+	optional uint32 charID = 1;		//角色ID
+	optional string name = 2;		//角色名字
+	optional uint32 quality = 3;	//船只品质
+	optional string guildName = 4;	//公会名字
+	optional string friendName = 5;	//协助好友名字
+	optional uint32 beInterceptNum = 6;//被劫持次数
+	optional uint32 remainTime = 7;	//剩余时间
+	optional uint32 level = 8;		//对方等级
+	optional uint32 inspiredNum = 9; //鼓舞次数
+}
+
+//返回护送界面相关信息 s ----> c
+message stGuardWinInfo
+{
+	optional uint32 guardNum = 1;			//护送次数
+	optional uint32 interceptNum = 2;		//拦截次数
+	optional uint32 helpNum = 3;			//协助次数
+	repeated stGuardBaseInfo enemies = 4;		//敌人
+	repeated stGuardBaseInfo guardInfos = 5;//护送船只信息
+	optional uint32 interceptCD = 6;		//拦截cd
+	optional uint32 guardRemainTime = 7;	//护送剩余时间,为0表示还没有开始护送
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 105;	
+	}
+}
+
+
+//重置拦截cd c ----> s
+message stResetInterceptCD
+{
+	optional uint32 charID = 1;						//角色ID
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 106;	
+	}
+}
+
+//重置拦截cd结果 s  ----> c
+message stResetInterceptCDResult
+{
+	enum eResult
+	{
+		eSuccess = 1;				//成功
+		eDiamond_Not_Enough = 2;	//钻石不足
+		eInner_Cfg_Error = 3;		//内部错误
+	}
+
+	optional eResult result = 1;	//结果
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 107;	
+	}
+}
+
+//重置拦截次数 c ----> s
+message stResetInterceptNum
+{
+	optional uint32 charID = 1;		//角色ID
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 108;	
+	}
+}
+
+//重置拦截次数结果 s ----> c
+message stResetInterceptNumResult
+{
+	enum eResult
+	{
+		eSuccess = 1;				//成功
+		eDiamond_Not_Enough = 2;	//钻石不足
+		eInner_Cfg_Error = 3;		//内部不足
+		eNum_Use_Out = 4;			//次数用完
+	}
+
+	optional eResult result = 1;
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 109;	
+	}
+}
+
+//查看某人的护送详细信息  c ----> s
+message stReqGuardDetailInfo
+{
+	optional uint32 charID = 1;		//要查看的玩家的角色ID
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 110;	
+	}
+}
+
+//返回某个玩家的护送详细信息  s ----> c
+message stRetGuardDetailInfo
+{
+	optional stGuardDetailInfo detailInfo = 1;
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 111;	
+	}
+}
+
+//请求拦截某个玩家的护送宝藏  c ----> s
+message stReqIntercept
+{
+	optional uint32 charID = 1;			//要拦截的玩家的角色ID
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 112;	
+	}
+}
+
+//返回拦截结果 s  -----> c
+message stIntercerptResult
+{
+	enum eResult
+	{
+		eSuccess = 1;					//成功
+		eNot_Begin_Guard = 2;			//对方没有开始运镖
+		eIntercept_Num_Use_Out = 3;		//拦截次数用完
+		eBeing_Intercepted = 4;			//正在被劫持
+		eSafe_State = 5;				//安全航行状态
+		eBeIntercept_Num_Use_Out = 6;   //被拦截次数用完
+		eHelp_This_Guard = 7;			//协助了这个护送,不能拦截
+	}
+
+	optional eResult result = 1;
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 113;	
+	}
+}
+
+//请求进行宝藏护送 c -----> s
+message stReqGuard
+{
+	optional uint32 charID = 1;			//角色ID
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 114;	
+	}
+}
+
+//返回开始护送界面 s  ----> c
+message stRetGuardWin
+{
+	optional uint32 quality = 1;		//品质
+	optional uint32 refreshNum = 2;		//刷新次数
+	optional uint32 buff = 3;			//buff数值
+	optional string friendName = 4;		//协助好友
+	optional bool   canFreeRefresh = 5;	//是否可以免费刷
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 115;	
+	}
+}
+
+//请求召唤高级护送船只 c -----> s
+message stReqSummonHighQualityGuard
+{
+	optional uint32 charID = 1;			//角色ID
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 116;	
+	}
+}
+
+//返回召唤结果 s  -----> c
+message stSummonHighQualityGuardResult
+{
+	enum eResult
+	{
+		eSuccess = 1;				//成功
+		eInner_Cfg_Error = 2;		//内部错误
+		eDiamond_Not_Enough = 3;	//钻石不足
+	}
+
+	optional eResult result = 1;	
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 117;	
+	}
+}
+
+//请求护送士气鼓舞 c -----> s
+message stReqGuardInspired
+{
+	optional uint32 charID = 1;		//请求士气鼓舞
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 118;	
+	}
+}
+
+//返回士气鼓舞结果 s -----> c
+message stGuardInspiredResult
+{
+	enum eResult
+	{
+		eSuccess = 1;	
+		eDiamond_Not_Enough = 2;			//钻石不足
+	}
+
+	optional eResult result = 1;		//结果
+	optional int32   num = 2;			//已经鼓舞了第几次
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 119;	
+	}
+}
+
+//请求刷护送品质 c ----> s
+message stReqRefreshGuardQuality
+{
+	optional uint32 charID = 1;			//角色id
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 120;	
+	}
+}
+
+//返回刷新护送品质结果 s ----> c
+message stRetRefreshGuardQualityResult
+{
+	enum eResult
+	{
+		eSuccess = 1;					//成功,品质提升
+		eDiamond_Not_Enough = 2;		//钻石不足
+		eFail = 3;						//扣钱成功,但是概率判断品质不提升
+	}
+
+	optional eResult result = 1;		//结果
+	optional uint32 quality = 2;		//品质
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 121;	
+	}
+}
+
+//获得在线,有协助次数的好友 c  ----> s
+message stReqCanHelpGuardFriend
+{
+	optional uint32 charID = 1;
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 122;	
+	}
+}
+
+message stHelpGaurdFriendInfo
+{
+	optional uint32 charID  = 1;			//角色ID
+	optional string name = 2;				//名字
+	optional uint32 remainHelpNum = 3;		//剩余协助次数
+	optional uint32 level = 4;				//等级
+
+}
+
+//返回可以协助好友 s  ----> c
+message stRetCanHelpGuardFriend
+{
+	repeated stHelpGaurdFriendInfo infos = 1; //好友信息
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 123;	
+	}
+}
+
+//邀请好友协助护送 c ----> s
+message stInviteFriendForHelpGuard
+{
+	optional uint32 charID = 1;		//好友的角色ID
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 124;	
+	}
+}
+
+//邀请好友返回 s ----> c
+message stInviteFriendForHelpGuardResult
+{
+	enum eResult
+	{
+		eSuccess = 1;
+		eHelp_Num_Use_Out = 2;			//次数用完了
+		eNot_Online = 3;				//对方不在线
+		eRefuse = 4;					//对方拒绝你了
+	}
+
+	optional eResult result = 1;	//结果
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 125;	
+	}
+}
+
+//询问好友是否同意协助  s ----> c 
+message stAskFriendHelpGuard
+{
+	optional string inviterName = 1;		//邀请者名字
+	optional uint32 inviterID = 2;			//邀请者名字	
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 126;	
+	}
+}
+
+//答复邀请  c ----> s
+message stReplyHelpGuard
+{
+	optional bool agree = 1;					//是否同意
+	optional uint32 charID = 2;					//邀请者的角色ID
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 127;	
+	}
+}
+
+//答复邀请返回 s ----> c
+message stReplyHelpGuardResult
+{
+	enum eResult
+	{
+		eSuccess = 1;		//成功
+		eHas_Start = 2;		//已经开始了
+		eHelp_Num_Use_Out = 3;	//次数用完了
+		eHas_Friend_Help = 4;	//已经有协助好友了
+	}
+
+	optional eResult result = 1;
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 128;	
+	}
+
+}
+
+//通知某人同意协助你护送 s ----> c
+message stUserAgreeHelpGuard
+{
+	optional string name = 1;					//同意协助的玩家名字
+	optional uint32 charID = 2;					//同意协助的玩家角色ID
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 129;	
+	}
+}
+
+//开始护送 c ----> s
+message stBeginGuard
+{
+	optional uint32 charID = 1;				//开始护送
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 130;	
+	}
+}
+
+//开始护送结果 s ----> c
+message stBeginGuardResult
+{
+	enum eResult
+	{
+		eSuccess = 1;
+		eHas_Begin = 2;		//已经还是了,还没有结束
+		eUse_Out_Num = 3;	//次数用完
+	}
+
+	optional eResult result = 1;			//结果
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 131;	
+	}
+}
+
+message stInterceptInfo
+{
+	optional uint32 timestamp = 1;			//时间
+	optional string content = 2;			//内容
+}
+
+//查看战报 c ----> s
+message stReqInterceptInfo
+{
+	optional uint32 charID = 1;				//角色ID
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 132;	
+	}
+}
+
+//返回战报 s ----> c
+message stRetInterceptInfo
+{
+	repeated stInterceptInfo infos = 1;
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 133;	
+	}
+}
+
+message stRechargeActivityInfoItem
+{
+	optional uint32 id = 1;
+	optional uint32 rechargeNum = 2;
+}
+
+//同步充值活动数量 s ----> c
+message stNotifyRechargeActivityInfo
+{
+	repeated stRechargeActivityInfoItem items = 1;
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 134;	
+	}
+}
+
+//幸运商店刷出选项ID s ---> c
+message stLuckShopRefreshResult
+{
+	optional uint32 curRefreshVipLv = 1;			//当前刷新vip等级
+	optional uint32 entryID = 2;					//改vip等级下的选项ID
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 135;	
+	}
+}
+
+//运镖完成提示自己  s -----> c
+message stNotifyGuardFinish
+{
+	optional uint32 quality = 1;			//宝藏品质
+	optional uint32 beInterceptNum = 2;		//被拦截次数
+	optional string friendName = 3;			//好友名字,没有的时候为空
+	optional uint32 resID1 = 4;				//奖励的资源
+	optional uint32 resNum1 = 5;			//奖励资源数量	
+	optional uint32 resID2 = 6;
+	optional uint32 resNum2 = 7;
+	optional uint32 resID3 = 8;
+	optional uint32 resNum3 = 9;
+	optional uint32 guardID = 10;			//护送ID
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 136;	
+	}
+}
+
+//运镖完成提示协助好友 s ----> c
+message stNotifyFriendGuardFinish
+{
+	optional uint32 quality = 1;			//宝藏品质
+	optional uint32 beInterceptNum = 2;		//被拦截次数
+	optional string friendName = 3;			//协助的好友
+	optional uint32 resID1 = 4;				//奖励的资源
+	optional uint32 resNum1 = 5;			//奖励资源数量	
+	optional uint32 resID2 = 6;
+	optional uint32 resNum2 = 7;
+	optional uint32 guardID = 8;			//护送的ID
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 137;	
+	}
+}
+
+//通知劫持结果 c -----> s
+message stNotifyInterceptResult
+{
+	optional bool win = 1;		//true胜利,false失败
+	optional uint32 flag = 2;	
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 138;	
+	}
+}
+
+//返回拦截结果 s ----> c
+message stReplyNotifyIntercept
+{
+	optional uint32 resID1 = 1;
+	optional uint32 resNum1 = 2;
+	optional uint32 resID2 = 3;
+	optional uint32 resNum2 = 4;
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 139;	
+	}
+}
+
+//请求直接完成护送 c -----> s
+message stQuickFinishGuard
+{
+	optional uint32 charID = 1;			//角色ID
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 140;	
+	}
+}
+
+//请求快速完成结果 s ------> c
+message stQuickFinishGuardResult
+{
+	enum eResult
+	{
+		eSuccess = 1;
+		eHas_Not_Begin = 2;			//还没有开始护送
+		eDiamond_Not_Enough = 3;	//钻石不足
+		eBeing_Intercepted = 4;		//正在被拦截
+	}
+
+	optional eResult result = 1;
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 141;	
+	}
+}
+
+//通知删除一个称号 s ----> c
+message stNotifyDelTitle
+{
+	optional uint32 titleID = 1;
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 142;	
+	}
+}
+
+//被拦截提示 s ----> c
+message stBeInterceptTip
+{
+	optional bool win = 1;		//是否胜利	
+	optional string name = 2;	//拦截者名字
+	optional uint32 quality = 3;//品质
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 143;	
+	}
+}
+
+//上线有新的拦截战报 s -----> c
+message stOnlineNotifyNewInterceptInfo
+{
+	optional uint32 num = 1;		//战报数量
+	optional uint32 guardNum = 2;	//拦截次数
+	optional uint32 intercertNum = 3;//拦截次数
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 144;	
+	}
+}
+
+//请求限时时装界面 c -----> s
+message stReqOpenLimitFashionDrawWin
+{
+	optional uint32 charID = 1;			//自己的角色ID
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 145;	
+	}
+}
+
+//限时时装界面 s -----> c
+message stRetLimitFashionDrawWinInfo
+{
+	optional uint32 canDrawNum = 1;		//可以抽奖次数
+	repeated uint32 hasDrawedID = 2;	//已经抽的ID,配置里的ID不是道具ID
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 146;	
+	}
+}
+
+//请求抽奖 c ----> s
+message stReqDrawLimitFashion
+{
+	optional uint32 charID = 1;			//角色ID	
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 147;	
+	}
+}
+
+//抽奖返回 s ----> c
+message stDrawLimitFashionResult
+{
+	enum eResult
+	{
+		eSuccess = 1;
+		eBag_Full = 2;			//包裹满了
+		eHas_Not_Draw_Num = 3;	//没有抽奖次数
+		eActivity_Not_Open = 4;	//活动没有开启
+		eDraw_Out = 5;			//已经抽完了,没有东西抽了
+	}
+
+	optional eResult result = 1;
+	optional uint32  id = 2;			//同上,配置里的ID,而不是道具ID
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 148;	
+	}
+}
+
+message stExchangeItem
+{
+	optional uint32 itemID = 1;			//道具ID
+	optional uint32 num = 2;			//道具数量
+}
+
+message stSynExchangeActivityiStep
+{
+	repeated stExchangeItem needItems = 1;		//需要的道具
+	repeated stExchangeItem gotItems = 2;		//获得道具
+	optional uint32 hasExchgNum = 3;			//已经兑换次数
+	optional uint32 maxExchgNum = 4;			//最大兑换次数
+	optional uint32 stepID = 5;					//阶段ID
+	optional string desc = 6;					//阶段描述
+}
+
+message stSynExchangeActivity
+{
+	repeated stSynExchangeActivityiStep step = 1;	
+	optional uint32 activityID = 2;					//id
+	optional string titile = 3;					//标题
+	optional string desc = 4;						//描述
+	optional bool   dailyRefresh = 5;			//每日刷新
+}
+
+
+//返回兑换活动 s ----> c
+message stRetExchangeActivity
+{
+	repeated stSynExchangeActivity  activity = 1;
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 149;	
+	}
+}
+
+//请求兑换 c ----> s
+message stReqExchangeItem
+{
+	optional uint32 activityID = 1;
+	optional uint32 stepID = 2;			//哪一个阶段，也就是第几个兑换	
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 150;	
+	}
+}
+
+//会还结果 s ----> c
+message stExchangeItemResult
+{
+	enum eResult
+	{
+		eSuccess = 1;
+		eTime_Use_Out = 2;		//次数用完
+		eBag_Full = 3;			//包裹满了
+		eActivity_Finish = 4;	//活动结束了
+		eHas_Not_Enough_Item = 5;//没有足够道具
+	}
+
+	optional eResult result = 1;
+	optional uint32 activityID = 2;
+	optional uint32 stepID = 3;
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 151;	
+	}
+}
+
+//每日循环充值活动
+message stRecycleRechargeActivity
+{
+	optional uint32 activityID = 1;							//活动ID
+	optional string titile = 2;								//标题
+	optional string desc = 3;								//描述
+	optional uint32 maxRewardNum = 4;						//最大奖励次数
+	optional uint32 gotRewardNum = 5;						//获得奖励次数
+	optional uint32 stepVal = 6;							//已经充值了多少
+	optional stSynActivityStepInfo step = 7;				//活动阶段,但是只会有一个阶段
+}
+
+//发送每日充值活动 s ----> c
+message stSendRecycleRechargeActivity
+{
+	repeated stRecycleRechargeActivity activties = 1;		//活动	
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 152;	
+	}
+}
+
+//请求领取每日循环奖励 c -----> s
+message stReqRecycleRechargeActReward
+{
+	optional uint32 activityID  = 1;							//活动ID
+	optional uint32 stepID = 2;									//活动阶段	
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 153;	
+	}
+}
+
+//领取每日循环充值奖励返回 s ----> c
+message stRetRecycleRechargeActReward
+{
+	enum eResult
+	{
+		eSuccess = 1;
+		eBag_Full = 2;					//包裹满了
+		eTime_Use_Out = 3;				//次数用完了
+		eNot_Begin = 4;					//活动未开始
+		eSelect_Not_Exist = 5;			//选项不存在
+		eRecharge_Not_Enough = 6;		//充值不足
+	}
+
+	optional eResult result = 1;			//结果
+	optional uint32  activityID = 2;		//活动ID
+
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 154;	
+	}
+}
+
+//新的活动刷新
+message stCommonActInfoItem
+{
+	optional uint32 id = 1;
+	optional uint32 type = 2;
+	optional uint32 val = 3;
+}
+
+//新的充值活动 s ----> c
+message stRefreshCommonActInfo
+{
+	repeated stCommonActInfoItem items = 1;
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 155;	
+	}
+}
+
+//邮件一键提取附件 c ----> s   成功会给系统添加相应的资源
+message stReqAKeyFetchAttach
+{
+	repeated uint32 id = 1;         //邮件ID
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 156;
+	}
+}
+
+//一键提取附件返回 s ---> c
+message stAKeyFetchAttachResult
+{
+	enum Result
+	{
+		SUCCESS = 1;//领取完成
+		ATTACH_NOT_EXIST = 2;   //附件不存在
+	}
+
+	optional Result result = 1; //结果
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 157;
+	}
+}
+
+//荣耀时装购买 c ---> s
+message stReqGloryfashion
+{
+	optional uint32 charID = 1;         //角色ID
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 158;
+	}
+}
+
+
+//荣耀时装购买返回  s ----> c
+message stGloryfashionResult
+{
+	enum eResult
+	{
+		eSuccess = 1;               //成功
+		eRecharge_Not_Enough = 2;   //资源不足
+		eBag_Full = 3;              //包裹满了
+		eNot_Open_Time = 4;			//不在开放时间
+	}
+
+	optional eResult result = 1;    //结果
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 159;
+	}
+}
+
+message stDevilCallItem
+{
+	enum eRewardStatus 
+	{
+		eHas_Reward = 1;    //有奖励但是没领取
+		eNo_Reward = 2;     //没奖励
+		eGot_Reward = 3;    //已经领取过
+	};
+	optional uint32 itemId = 1;             //魔王召唤id
+	optional uint32 bossDrawStatus = 2;     //首杀奖励领取状态
+	optional uint32 commonDrawStatus = 3;   //全名奖励领取状态
+	optional string name1 = 4;               //首杀名单
+	optional string name2 = 5;               //首杀名单
+	optional string name3 = 6;               //首杀名单
+	optional bool   hasPass = 7;            //副本是否首次通关
+}
+
+//魔王召唤 c ---> s
+message stReqAllDevilCall
+{
+	optional uint32 charID = 1;         //角色ID
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 160;
+	}
+}
+
+//魔王召唤 s ----> c
+message stRetAllDevilCall
+{
+	enum eResult
+	{
+		eSuccess = 1;               //成功
+		eLvl_Limit = 2;             //等级不够
+	}
+
+	optional eResult result = 1;            //结果
+	repeated stDevilCallItem item = 2;      //召唤项目信息
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 161;
+	}
+}
+
+//领取宝箱奖励 c ---> s
+message stReqDevilCallReward
+{
+	enum eType
+	{
+		eBoss_Reward = 1;       //首杀奖励
+		eCommon_Reward = 2;     //全名奖励
+	}
+
+	optional eType rewardType = 1;         //奖励类型
+	optional uint32 bossId = 2;            //魔王id
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 162;
+	}
+}
+
+//领取宝箱奖励回包 s ----> c
+message stRetDevilCallReward
+{
+	enum eType
+	{
+		eBoss_Reward = 1;       //首杀奖励
+		eCommon_Reward = 2;     //全名奖励
+	}
+
+	enum eResult
+	{
+		eSuccess = 1;               //成功
+		eNot_That_Reward = 2;       //该玩家没有该奖励
+		eAlready_Draw = 3;          //已经领过
+		eBag_Full = 4;             //背包已满
+		eLvl_limit = 5;             //等级不够
+	}
+
+	optional eType rewardType = 1;         //奖励类型
+	optional eResult result = 2;           //结果
+	optional uint32 bossId = 3;            //魔王id
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 163;
+	}
+}
+
+//召唤魔王 c ---> s
+message stReqDevilCall
+{
+	optional uint32 bossId = 1;         //魔王id
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 164;
+	}
+}
+
+//召唤魔王回包 s ----> c
+message stRetDevilCall
+{
+	enum eResult
+	{
+		eSuccess = 1;               //成功
+		eRes_Not_Enough = 2;        //资源不足
+		eBag_Full = 3;              //背包空位不够
+		eNot_Open = 4;             //未开放
+		eNo_Such_Id = 5;           //无效id
+		eLvl_limit = 6;             //等级不够
+	}
+
+	optional uint32 id = 1;         //魔王id
+	optional eResult result = 2;    //结果
+	repeated stSynDrawItem items = 3;	//抽到的道具,只有成功时候才有值
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 165;
+	}
+}
+
+//获取召唤魔王摘要 c ---> s
+message stReqDevilCallSummary
+{
+	optional uint32 charID = 1;         //角色ID
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 166;
+	}
+}
+
+//获取召唤魔王摘要 s ----> c
+message stRetDevilCallSummary
+{
+	repeated stDevilCallItem item = 2;      //召唤项目信息
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 167;
+	}
+}
+
+//获取充值渠道配置 c ---> s
+message stReqPayType
+{
+	optional uint32 charID = 1;         //角色ID
+	optional uint32 itemId = 2;         //item id
+	optional string serverId = 3;       //server id
+	optional bool isExtend = 4;         //是否是热云统计
+	optional string data = 5;           //具体数据 json格式
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 168;
+	}
+}
+
+//获取充值渠道配置 s ---> c
+message stRetPayType
+{
+	enum eResult
+	{
+		eSuccess = 1;				//成功
+		eNo_Such_Item = 2;		    //无效的item id
+		eSame_Order_Id = 3;		    //订单号
+	}
+	optional string payType = 1;         //充值渠道
+	optional uint32 itemId = 2;         //item id
+	optional string orderId = 3;         //订单id
+	optional eResult res = 4;           //结果
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 169;
+	}
+}
+
+//获取所有活动信息 c ---> s
+message stReqOperateActvity
+{
+	optional uint32 charID = 1;         //角色ID
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 170;
+	}
+}
+
+message stOperateActvityItemInfo
+{
+	optional uint32 itemId = 1; //item id   
+	optional uint32 status = 2; //奖励领取状态, 1 领取, 0 未领取
+}
+
+//单个活动详情
+message stOperateActvityItems
+{
+	optional uint32 activityId = 1;     //活动id
+	optional uint32 condition = 2;      //完成次数
+	repeated stOperateActvityItemInfo itemInfo = 3; //活动所有数据
+}
+
+//获取所有活动信息 s ---> c
+message stRetOperateActvity
+{
+	repeated stOperateActvityItems items = 1; //活动详细信息
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 171;
+	}
+}
+
+//单个活动具体每个项请求领取奖励 c ---> s
+message stReqOperateActvityReward
+{
+	optional uint32 activityId = 1; //活动id
+	optional uint32 itemId = 2; //itemid
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 172;
+	}
+}
+
+//单个活动具体每个项请求领取奖励 s ---> c
+message stRetOperateActvityReward
+{
+	enum Result
+	{
+		SUCCESS = 1;			//成功
+		ACTIVITY_EXPIRE = 2;	//活动过期
+		INVALID_ID = 3;	        //无效id
+		INNER_ERROR = 4;        //内部错误
+		REWARD_ALREAD_DRAW = 5;	//奖励已经领过
+		CONDITION_LIMIT = 6;	//条件不满足
+		BAG_FULL = 7;	        //背包已满
+		RESOURCE_LIMIT = 8;	    //资源不够
+	}
+	optional uint32 activityId = 1; //活动id
+	optional uint32 itemId = 2;     //itemid
+	optional Result res = 3;        //领取状态
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 173;
+	}
+}
+
+//请求精灵幻化信息
+message stReqIllusionSprite
+{
+	optional uint32 id = 1;		//精灵ID
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 174;
+	}
+}
+
+//幻化精灵技能信息
+message stIllusionSpriteSkillItem
+{
+	optional uint32 skillId = 1;       //技能id
+	optional uint32 skillLvl = 2;      //技能等级
+}
+
+//请求精灵幻化信息回包
+message stRetIllusionSprite
+{
+	enum eResult
+	{
+		eSuccess = 1;				//成功
+		eNo_Such_Id = 2;		    //无效的精灵id
+	}
+	optional uint32 id = 1;						        //精灵ID
+	optional uint32 lvl = 2;    						//幻化等级
+	optional uint32 exp = 3;    						//幻化当前经验
+	optional uint32 talentNum = 4;						//当前天赋点
+	repeated stIllusionSpriteSkillItem skills= 5;		//当前技能列表
+	optional eResult res = 6;    						//请求结果
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 175;
+	}
+}
+
+//幻化精灵喂养信息
+message illusionSpriteEatItem
+{
+	optional uint64 id = 1;
+	optional uint32 num = 2;
+}
+
+//请求喂养幻化精灵
+message stReqIllusionSpriteEat
+{
+	optional uint32 id = 1;		                    //精灵ID
+	repeated illusionSpriteEatItem eatItem = 2;     //喂养物品信息
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 176;
+	}
+}
+
+//请求喂养幻化精灵回包
+message stRetIllusionSpriteEat
+{
+	enum eResult
+	{
+		eSuccess = 1;				//成功
+		eNo_Such_Id = 2;		    //无效的精灵id
+		eInvalid_item = 3;		    //无效的喂养物品
+		eMax_Lvl_Limit = 4;		    //已经到达满级
+		eItem_Not_Enough = 5;		//喂养物品不足
+	}
+
+	optional uint32 id = 1;						        //精灵ID
+	optional uint32 lvl = 2;    						//幻化等级
+	optional uint32 exp = 3;    						//幻化当前经验
+	optional uint32 talentNum = 4;						//当前天赋点
+	optional eResult res = 5;						    //喂养结果
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 177;
+	}
+}
+
+//请求升级幻化精灵技能
+message stReqIllusionSpriteSkillUp
+{
+	optional uint32 id = 1;		                    //精灵ID
+	optional uint32 skillId = 2;		            //幻化技能id
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 178;
+	}
+}
+
+//请求升级幻化精灵技能回包
+message stRetIllusionSpriteSkillUp
+{
+	enum eResult
+	{
+		eSuccess = 1;				//成功
+		eNo_Such_Id = 2;		    //无效的精灵id
+		eNo_Such_Skill_Id = 3;		//无效的技能id
+		eLess_Of_Talent_Num = 4;    //天赋点不足
+		eMax_Lvl_Limit = 5;		    //已经到达满级
+		eLast_Skill_Lvl_Limit = 6;  //需求技能等级条件不够
+		eInner_Error = 7;           //内部错误
+	}
+	optional uint32 id = 1;		                    //精灵ID
+	optional uint32 skillId = 2;		            //幻化技能id
+	optional uint32 skillLvl = 3;		            //幻化技能等级
+	optional eResult res = 4;						//升级技能结果
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 179;
+	}
+}
+
+//打开秘境寻宝界面 c ----> s
+message stRepOpenDiscoverWindow
+{
+	optional uint32 charID = 1;     //角色ID
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 180;
+	}
+}
+
+//打开秘境寻宝界面返回 s ----> c
+message stOpenDiscoverWindowResult
+{
+	optional uint32 mapID = 1;		//当前地图编号
+	optional uint32 place = 2;		//当前人物位置
+	optional uint32 taskID = 3;		//任务ID
+	optional uint32 state = 4;		//当前格子的任务状态（1-未领取 2-领取未完成 3-完成 4-放弃）
+	optional uint32 battleNum =  5;	//完成次数
+	optional uint32 integral = 6;	//积分
+	optional uint32 refreshNum = 7;	//刷新次数
+	optional uint32 playDiceNum = 8;//掷骰子次数
+	optional uint32 canUseNum = 9;	//可掷骰子次数
+	optional uint32 hasReceivedIdentify = 10;//积分奖励领取标识（二进制：1-领取，0-未领取）
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 181;
+	}
+}
+
+//掷骰子 c ----> s
+message stReqPlayDice
+{
+	optional uint32 charID = 1;	//角色ID
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 182;
+	}
+}
+
+//掷骰子返回 s ----> c
+message stPlayDiceResult
+{
+	enum eResult
+	{
+		eSuccess = 1;			//成功
+		eNot_Dice_NUM = 2;		//次数不足
+		eTask_Not_Finish = 3;	//任务未完成
+		eInner_Error = 4;		//内部错误
+		eThe_End = 5;			//已经走到底了
+	}
+
+	optional eResult result = 1; //结果
+
+	optional uint32 point = 2;	//点数
+
+	optional uint32 mapID = 3;	//当前地图编号
+
+	optional uint32 taskID = 4;	//任务ID
+
+	optional uint32 state = 5;  //当前格子的任务状态（1-未领取 2-领取未完成 3-完成 4-放弃）
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 183;
+	}
+}
+
+//领取、放弃任务 c ----> s
+message stReqGetOrGiveUpTask
+{
+	optional uint32 tag = 1; //(1-领取，2-放弃)
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 184;
+	}
+}
+
+//领取任务返回 s ----> c
+message stGetTaskResult
+{
+	enum eResult
+	{
+		eSuccess = 1;           //成功
+		eThe_Begin = 2;			//还在开始位置，没掷过骰子
+		eTask_Not_Finish = 3;	//任务还未完成，小子开挂了
+		eInner_Error =4;        //内部错误
+	}
+
+	optional eResult result = 1;	//结果
+
+	optional uint32 taskType = 2;	//任务类型
+
+	optional uint32 taskID = 3;		//任务ID
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 185;
+	}
+}
+
+//放弃任务返回 s ----> c
+message stGiveUpTaskResult
+{
+	enum eResult
+	{
+		eSuccess = 1;			//成功
+		eTask_Has_Receive = 2;	//任务已领取，不能放弃
+		eInner_Error = 3;		//内部错误
+	}
+
+	optional eResult result = 1;    //结果
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 186;
+	}
+}
+
+//重置次数  c ----> s
+message stReqRefreshNum
+{
+	optional uint32 charID = 1; //角色ID
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 187;
+	}
+}
+
+//重置返回 s ----> c
+message stRefreshNumResult
+{
+	enum eResult
+	{
+		eSuccess = 1;			//成功
+		eInner_Error = 2;       //内部错误
+		eNum_Useless_Over = 3;	//次数没用完
+		eDIAMOND_NOT_ENOUGH = 4;//钻石不足
+	}
+
+	optional eResult result = 1;    //结果
+	optional uint32 count = 2;	//次数
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 188;
+	}
+}
+
+//领取积分奖励 c ----> s
+message stReqGetIntegralReward
+{
+	optional uint32 rewardID = 1;	//奖励ID
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 189;
+	}
+}
+
+//领取积分奖励返回 s ----> c
+message stGetIntegralRewardResult
+{
+	enum eResult
+	{
+		eSuccess = 1;           //成功
+		eInner_Error = 2;       //内部错误
+		eNum_Useless_Over = 3;  //积分不足
+		eHas_Received = 4;		//已经领过了
+		eBAG_SLOT_NOT_ENOUGH = 5;//背包格子不足
+	}
+
+	optional eResult result = 1;    //结果
+	optional uint32 value = 2;	//计算后的领取标识
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 190;
+	}
+}
+
+//领取奖励 c ----> s
+message stReqGiveReward
+{
+	optional uint32 tag = 1;	//(1-积分奖励，2-宝箱奖励)
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 191;
+	}
+}
+
+//领取奖励返回 s ----> c
+message stGiveRewardResult
+{
+	enum eResult
+	{
+		eSuccess = 1;           //成功
+		eInner_Error = 2;       //内部错误
+		eTask_Has_Receive = 3;	//任务未完成
+		eBAG_SLOT_NOT_ENOUGH = 5;//背包格子不足
+		eHas_Received = 6;		//已经领过了
+	}
+
+	optional eResult result = 1;    //结果
+	optional uint32 integral = 2;	//积分
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 192;
+	}
+}
+
+//获取挖宝活动信息 c ---> s
+message stReqLuckyDraw
+{
+	optional uint32 charID = 1;         //角色ID
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 193;
+	}
+}
+//挖宝积分奖励
+message stLuckyDrawPointRewardInfo {
+	optional uint32 id = 1;         //point id
+	optional uint32 status = 2;     //1 draw, 0 not draw
+}
+
+//挖宝广告显示的单个玩家奖励信息
+message stLuckyDrawRewardInfo {
+	optional uint32 id = 1;         //
+	optional uint32 num = 2;        //
+};
+
+//挖宝广告显示的单个玩家信息
+message stLuckyDrawUserInfo {
+	optional string name = 1;                   //玩家名字
+	optional uint32 id = 2;                     //奖励物品id
+	optional uint32 num = 3;                    //数量
+};
+
+//获取挖宝活动信息回包 s ---> c
+message stRetLuckyDraw
+{
+	optional uint32 activityid = 1;                 //活动id
+	repeated stLuckyDrawPointRewardInfo reward = 2; //奖励领取记录
+	optional uint32 diamond = 3;                    //累计消耗的钻石
+	repeated stLuckyDrawUserInfo player = 4;        //最新的50个玩家记录
+	optional uint32 lastFreeTime = 5;               //上一次免费抽奖时间
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 194;
+	}
+}
+
+//挖宝抽奖 c ---> s
+message stReqLuckyDrawReward
+{
+	optional uint32 type = 1;       //1 单抽, 0 十连抽
+	optional uint32 id = 2;         //活动id
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 195;
+	}
+}
+
+//挖宝抽奖回包 s ---> c
+message stRetLuckyDrawReward
+{
+	enum eResult
+	{
+		eSuccess = 1;               //成功
+		eBag_Full = 2;              //背包已满
+		eDiamond_Less = 3;          //钻石不够
+		eActivity_Expire = 4;       //活动过期
+		eNo_Such_Id = 5;            //活动id不对
+	}
+	optional uint32 id = 1;                         //活动id
+	repeated stLuckyDrawRewardInfo reward = 2;      //活动奖励
+	repeated stLuckyDrawUserInfo player = 3;        //最新的50个玩家记录
+	optional eResult result = 4;                    //返回结果
+	optional uint32 lastFreeTime = 5;               //上一次免费抽奖时间
+	optional uint32 diamond = 6;                    //累计消耗钻石
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 196;
+	}
+}
+
+//挖宝领取积分奖励 c ---> s
+message stReqLuckyDrawPointReward
+{
+	optional uint32 activityid = 1;         //活动id
+	optional uint32 pointid = 2;            //不同积分档次对应的id
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 197;
+	}
+}
+
+//挖宝领取积分奖励回包 s ---> c
+message stRetLuckyDrawPointReward
+{
+	enum eResult
+	{
+		eSuccess = 1;               //成功
+		eBag_Full = 2;              //背包已满
+		eDiamond_Less = 3;          //累计消耗钻石不够
+		eActivity_Expire = 4;       //活动过期
+		eNo_Such_Id = 5;            //找不到对应的id
+		eAlready_Get = 6;           //已经领过奖励
+	}
+	optional uint32 activityid = 1;                 //活动id
+	optional uint32 pointid = 2;                    //不同积分档次对应的id
+	optional eResult result = 3;                    //返回结果
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 198;
+	}
+}
+
+//秘境寻宝 红点规则 c ----> s
+message stReqRedPointRuls
+{
+	optional uint32 charID = 1; //角色ID	
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 199;
+	}
+}
+
+//秘境寻宝 红点规则返回 s ----> c
+message stRedPointRulsResult
+{
+	optional bool times = 1;				//还有次数
+	optional bool canGetReward = 2;			//可以领奖
+	optional bool canOpenIntegalBox = 3;	//可以开积分宝箱
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 200;
+	}
+}
+
+//请求邀请好友信息 c ----> s
+message stReqInviteFriend
+{
+	optional uint32 charID = 1; //角色ID	
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 201;
+	}
+}
+
+//邀请奖励对应邀请数量的奖励状态信息
+message InviteFriendReward
+{
+	optional uint32 id = 1;         //邀请奖励的id
+	optional uint32 status = 2;     //该档次奖励是否领取, 1 已领取, 0 未领取
+}
+
+//请求邀请好友信息回包 s ----> c
+message stRetInviteFriend
+{
+	optional string code = 1;               //自己的邀请码
+	optional uint32 num = 2;                //总的邀请人数
+	optional bool useInviteCode = 3;        //是否使用过邀请码
+	repeated InviteFriendReward reward = 4; //各个档次的邀请奖励信息
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 202;
+	}
+}
+
+//请求领取邀请好友奖励 c ----> s
+message stReqDrawInviteFriend
+{
+	optional uint32 id = 1; //邀请奖励的id
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 203;
+	}
+}
+
+//请求领取邀请好友奖励回包 s ----> c
+message stRetDrawInviteFriend
+{
+	enum eResult
+	{
+		eSuccess = 1;               //成功
+		eBag_Full = 2;              //背包已满
+		eLess_Of_Invite_Num = 3;    //邀请人数不够
+		eNo_Such_Id = 4;            //没有这个档次的邀请人数奖励
+		eAlready_Get = 5;           //已经领过奖励
+		eNot_Find_Record = 6;       //没有找到对应的配置
+	}
+
+	optional uint32 id = 1;                 //邀请奖励的id
+	optional eResult result = 2;            //返回结果
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 204;
+	}
+}
+
+//使用邀请码 c ----> s
+message stReqUseInviteCode
+{
+	optional string code = 1;   //邀请码
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 205;
+	}
+}
+
+//使用邀请码回包 s ----> c
+message stRetUseInviteCode
+{
+	enum eResult
+	{
+		eSuccess = 1;               //成功
+		eBag_Full = 2;              //背包已满
+		eNo_Such_Code = 3;          //没有该邀请码
+		eAlready_Get = 4;           //已经领过奖励
+		eNot_Find_Record = 5;       //没有找到对应的配置
+		eInner_error = 6;           //内部错误
+		eLevel_Limit = 7;           //等级不够
+		eUse_Self_Code = 8;         //不能使用自己的邀请码
+	}
+
+	optional eResult result = 1;            //返回结果
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 206;
+	}
+}
+
+//是否有分享邀请玩家 c ----> s
+message stReqShareInvite
+{
+	optional uint32 charID = 1; //角色ID	
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 207;
+	}
+}
+
+//是否有分享邀请玩家回包 s ----> c
+message stRetShareInvite 
+{
+	optional uint32 num = 1;        //当日邀请次数
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 208;
+	}
+}
+
+//加载每日分享信息 c ----> s
+message stReqDailyShareInvite
+{
+	optional uint32 charId = 1; //角色id
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 209;
+	}
+}
+
+//加载每日分享信息 s ----> c
+message stRetDailyShareInvite
+{
+	optional uint32 num = 1; //总的邀请次数	
+	repeated uint32 id = 2;  //已领取的奖励id列表	
+	optional bool onceReward = 3; //分享单次的奖励, true 领取过, false 未领取
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 210;
+	}
+}
+//领取每日分享奖励 c ----> s
+message stReqDrawDailyShareReward
+{
+	optional uint32 id = 1; //待领取的奖励id	
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 211;
+	}
+}
+
+//领取每日分享奖励 s ----> c
+message stRetDrawDailyShareReward
+{
+	enum eResult
+	{
+		eSuccess = 1;               //成功
+		eBag_Full = 2;              //背包已满
+		eLess_Of_Num = 3;           //次数不够
+		eAlready_Get = 4;           //已经领过奖励
+		eNot_Find_Id = 5;           //没有找到配置
+	}
+	optional uint32 id = 1;        //当日邀请次数
+	optional eResult result = 2;   //返回结果
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 212;
+	}
+}
+
+//领取分享奖励 c ----> s
+message stReqDrawOnceShareReward
+{
+	optional uint32 charID = 1; //角色id	
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 213;
+	}
+}
+
+//领取分享奖励 s ----> c
+message stRetDrawOnceShareReward
+{
+	enum eResult
+	{
+		eSuccess = 1;               //成功
+		eBag_Full = 2;              //背包已满
+		eAlready_Get = 3;           //已经领过奖励
+		eLess_Of_Num = 4;           //次数不够
+	}
+	optional eResult result = 1;   //返回结果
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 214;
+	}
+}
+
+//通知劫持结果 s -----> c
+message stNotifyInterceptServerResult
+{
+	enum eResult
+	{
+		eWin	= 1;
+		eLose	= 2;
+		eTimeout = 3;
+	}
+	optional eResult result = 1;	
+
+	enum ProtoModID
+	{
+		ModID = 8;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 215;	
+	}
+}
+
+
+//请求每日充值奖励是否领取 c -----> s
+message stReqReceiveState
+{
+	optional uint32 charID = 1;
+
+	enum ProtoModID
+	{
+		ModID = 8;  
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 216; 
+	}
+}
+
+//请求每日充值奖励是否领取返回 s ----> c
+message stReceiveStateResult
+{
+	optional bool isReceive = 1;
+
+	enum ProtoModID
+	{
+		ModID = 8;  
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 217; 
+	}
+}
+
+//请求领取每日充值奖励 c -----> s
+message stReqReceiveReward
+{
+	optional uint32 charID = 1;
+
+	enum ProtoModID
+	{
+		ModID = 8;  
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 218; 
+	}
+}
+
+//请求领取每日充值奖励返回 s ----> c
+message stReceiveRewardResult
+{
+	enum eResult
+	{
+		eSuccess = 1;               //成功
+		eHas_Got_Reward = 2;        //已经领取了奖励
+		eRecharge_Not_Enough = 3;   //充值不足
+		eBag_Full = 4;              //包裹满了
+		eInner_Error = 5;           //内部配置错误
+		eIs_Not_Open = 6;			//活动未开放
+	}
+
+	optional eResult result = 1;    //结果
+
+	enum ProtoModID
+	{
+		ModID = 8;  
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 219; 
+	}
+}
+
+message stAcitivityLimitPetItem
+{
+	optional uint32 id = 1;        //唯一id
+	optional uint32 activiyId = 2; //对应限时随从的活动id
+	optional uint32 startTime = 3; //开启时间
+	optional uint32 endTime = 4;   //结束时间
+}
+
+//限时随从 s ----> c
+message stSendAllAcitivityLimitPet
+{
+	repeated stAcitivityLimitPetItem item = 1;  //如果为0,则活动不存在,登陆或者活动更改时推送
+
+	enum ProtoModID
+	{
+		ModID = 8;  
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 220; 
+	}
+}
+
+//限时福利 s ----> c
+message stSendLateWalfareActivity
+{
+	optional uint32 id = 1;         //活动id 对应xml Gruop字段那一行的id
+	optional uint32 expireTime = 2; //过期时间
+	repeated uint32 rewardId = 3;   //已领取过的id列表
+
+	enum ProtoModID
+	{
+		ModID = 8;  
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 221; 
+	}
+}
+
+//限时福利领取 c ----> s
+message stReqDrawLateWalfare
+{
+	optional uint32 rewardId = 1; //待领取过的id
+
+	enum ProtoModID
+	{
+		ModID = 8;  
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 222; 
+	}
+}
+
+//限时福利领取 s ----> c
+message stRetDrawLateWalfare
+{
+	enum eResult
+	{
+		eSuccess = 1;               //成功
+		eNot_Open = 2;              //未开放
+		eAlread_Draw = 3;           //已领取
+		eActivity_Expire = 4;       //过期
+		eNo_Such_Id = 5;            //没有对应的id
+		eDiamond_Not_Enough = 6;    //钻石不足
+	}
+
+	optional uint32 rewardId = 1;   //待领取过的id
+	optional eResult result = 2;    //结果
+
+	enum ProtoModID
+	{
+		ModID = 8;  
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 223; 
+	}
+}
+
+message stResGetBackItem
+{
+	optional uint32 type = 1;       //找回的资源类型
+	optional uint32 num = 2;        //可以找回的次数
+}
+
+//发送待找回的物品列表 s ----> c
+message stSendAllResGetBack
+{
+	repeated stResGetBackItem item = 1;  //登陆时推送,只发送有次数的类型
+
+	enum ProtoModID
+	{
+		ModID = 8;  
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 224; 
+	}
+}
+
+//找回次数  c ----> s
+message stReqDrawResGetBack
+{
+	optional uint32 type = 1;   //找回次数的类型
+	optional uint32 num = 2;    //待找回几次
+
+	enum ProtoModID
+	{
+		ModID = 8;  
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 225; 
+	}
+}
+
+//找回次数回包 s  ----> c
+message stRetDrawResGetBack
+{
+	enum eResult
+	{
+		eSuccess = 1;               //成功
+		eAlread_Draw = 2;           //已找回
+		eNo_Such_Type = 3;          //没有对应的类型
+		eDiamond_Not_Enough = 4;    //钻石不足
+		eTimes_Not_Enough = 5;      //剩余次数不足
+	}
+
+	optional uint32 type = 1;       //找回次数的类型
+	optional uint32 num = 2;        //剩余待找回次数
+	optional eResult result = 3;    //结果
+
+	enum ProtoModID
+	{
+		ModID = 8;  
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 226; 
+	}
+}
+
+//一键找回次数  c ----> s
+message stReqDrawAllResGetBack
+{
+	optional uint32 charId = 1; //角色id
+
+	enum ProtoModID
+	{
+		ModID = 8;  
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 227; 
+	}
+}
+
+//一键找回次数回包 s  ----> c
+message stRetDrawAllResGetBack
+{
+	enum eResult
+	{
+		eSuccess = 1;               //成功
+		eNo_Res_Back = 2;           //没有资源需要找回
+		eDiamond_Not_Enough = 3;    //钻石不足
+	}
+
+	optional eResult result = 1;    //结果
+
+	enum ProtoModID
+	{
+		ModID = 8;  
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 228; 
+	}
+}
+
+//请求打开小怪兽窗口   c ----> s
+message stReqOpenMonsterWindow
+{
+	optional uint32 charID = 1; 
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 229;
+	}
+}
+
+//请求打开小怪兽窗口返回   s ----> c
+message stOpenMonsterWindowResult
+{
+	optional uint32 bossLv = 1; 	//boss等级
+	optional uint32 bossHp = 2; 	//boss血量
+	optional uint32 time = 3; 		//剩余恢复时间
+	optional uint32 attackTime = 4; //剩余攻击次数
+	optional uint32 buyTime = 5;	//已购买次数
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 230;
+	}
+}
+
+//请求攻击小怪兽 c ----> s
+message stReqAttackMonster
+{
+	optional uint32 charID = 1;
+
+	enum ProtoModID
+	{   
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{   
+		FunID = 231;
+	}
+}
+
+//请求攻击小怪兽 s ----> c
+message stAttackMonsterResult
+{
+	enum eResult
+	{
+		eSuccess		=	1;	//成功
+		eInner_Error	=	2;	//内部配置错误
+		eTime_Out		=	3;	//次数不足
+	}
+
+	optional eResult result = 1;    //结果
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 232;
+	}
+}
+
+//请求购买次数  c ----> s
+message stReqBuyAttackTime
+{
+	optional uint32 charID = 1;
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 233;
+	}
+}
+
+
+//请求购买次数返回 s ----> c
+message stBuyAttackTimeResult
+{
+	enum eResult
+	{
+		eSuccess			=	1;	//成功
+		eInner_Error		=	2;	//内部配置错误
+		eDiamond_Not_Enough =	3;	//钻石不足
+		eMax_Count			=	4;	//已达购买上限
+		eItem_Not_Enough =	5;	//道具不足
+	}
+
+	optional eResult result = 1;    //结果
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 234;
+	}
+}
+
+//请求一键攻击小怪兽 c ----> s
+message stReqAKeyAttackMonster
+{
+	optional uint32 charID = 1;
+
+	enum ProtoModID
+	{   
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{   
+		FunID = 235;
+	}
+}
+
+//请求一键攻击小怪兽 s ----> c
+message stAKeyAttackMonsterResult
+{
+	enum eResult
+	{
+		eSuccess		=	1;	//成功
+		eInner_Error	=	2;	//内部配置错误
+		eTime_Out		=	3;	//次数不足
+		eVip_Lv_Too_Low = 	4;  //vip等级太低了
+	}
+
+	optional eResult result = 1;    //结果
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 236;
+	}
+}
+
+message stSynTipItem
+{
+	optional uint32 itemID = 1;
+	optional uint32 num  = 2;
+}
+
+//提示玩家获得那些道具,该协议是通用的,各个模块获得东西时候都有可能弹出 s ---> c
+message stObtainItemTip
+{
+	repeated stSynTipItem  getItems = 1;
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 237;
+	}
+}
+
+//坐骑用户上线 s ----> c
+message stUserOnline
+{
+	repeated uint32 mountList		=	1;	//坐骑id
+	optional uint32 battleMountID	=	2;	//当前装备的坐骑id
+	optional bool 	isFollow		=	3;	//是否骑乘
+	optional uint32 mountLv			=	4;	//坐骑等级
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 238;
+	}
+}
+
+enum eLevelUpType
+{
+	eNormalLeveUp	=	1;	//正常升级
+	eAKeyLevelUp	=	2;	//一键升级
+}
+
+message stConsumeItemInfo
+{
+	optional uint64 id	=	1;	//唯一ID
+	optional uint32 num	=	2;	//数量
+}
+
+//请求坐骑升级  c ----> s
+message stReqMountLevelUp
+{
+	optional eLevelUpType type = 1;					//升级类型
+	optional stConsumeItemInfo itemInfo = 2;		//物品Id
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 239;
+	}
+}
+
+//请求坐骑升级返回  s ----> c
+message stMountLevelUpResult
+{
+	enum eResult
+	{
+		eSuccess        =   1;  //成功
+		eInner_Error    =   2;  //内部配置错误
+		eMax_Level		=	3;	//已到最高等级
+		eRes_Not_Enough = 	4;  //资源不足
+		eStar_max       =   5;  //本阶已满，请进阶
+	}
+
+	optional eResult result		=	1;	//结果
+	optional uint32 level		=	2;	//等级
+	optional uint32 exp			=	3;	//经验
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 240;
+	}
+}
+
+//请求幻化坐骑  c ----> s
+message stReqButtleMount
+{
+	optional uint32 id = 1;	//坐骑ID
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 241;
+	}
+}
+
+//请求幻化坐骑返回 s ----> c
+message stButtleMountResult
+{
+	enum eResult
+	{
+		eSuccess        =   1;  //成功
+		eInner_Error    =   2;  //内部配置错误
+		eIs_Not_Unlock 	= 	3;  //还未解锁
+		eHas_Battle		=	4;	//已装备
+	}
+
+	optional eResult result		=	1;	//结果
+	optional uint32 mountId		=	2;	//坐骑ID
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 242;
+	}
+}
+
+//请求骑乘坐骑 c ----> s
+message stReqMountFollow
+{
+	optional uint32 charId = 1; //ID
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 243;
+	}
+}
+
+//请求骑乘坐骑返回 s ----> c
+message stMountFollowResult
+{
+	enum eResult
+	{
+		eSuccess        =   1;  //成功
+		eInner_Error    =   2;  //内部配置错误
+		eIs_Not_Battle 	= 	3;  //还没有装备坐骑
+	}
+
+	optional eResult result		=	1;	//结果
+	optional bool   isFollow	=   2;  //骑乘状态
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 244;
+	}
+}
+
+//请求坐骑进阶 c ----> s
+message stReqMountUnreal
+{
+	optional uint32 mountId = 1;	//坐骑id
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 245;
+	}
+}
+
+//请求坐骑进阶返回 s ----> c
+message stMountUnrealResult
+{
+	enum eResult
+	{
+		eSuccess        =   1;  //成功
+		eInner_Error    =   2;  //内部配置错误
+		eCond_Not_Meet	=	3;	//条件未满足
+		eRes_Not_Enough = 	4;  //资源不足
+		eMax_Unreal		=	5;	//已经幻化到顶了
+	}
+
+	optional eResult result		=	1;	//结果
+	optional uint32 mountId		=	2;	//坐骑id
+	optional uint32 oldMountId	=	3;	//旧的id
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 246;
+	}
+}
+
+//请求打开坐骑成长窗口 c ----> s
+message stReqOpenMountGrowWindow
+{
+	optional uint32 charId = 1;    //角色id
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 247;
+	}
+}
+
+//请求打开坐骑成长窗口返回 s ----> c
+message stOpenMountGrowWindowResult
+{
+	optional uint32 level = 1;	//成长等级
+	optional uint32 exp = 2;	//经验
+	optional uint32 battle = 3; //战力
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 248;
+	}
+}
+
+//刷新战力  s ----> c
+message stRefreshBattle
+{
+	optional uint32 battle = 1;	//战力
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 249;
+	}
+}
+
+message stLevelWflfareInfo
+{
+	optional int32 level = 1;	//等级
+	optional int32 type = 2; 	//类型
+}
+
+//发送已领取冲级好礼信息（上线、领取） s ----> c
+message stHasGotRewardWflfareInfo
+{
+	repeated stLevelWflfareInfo info = 1;
+	optional bool isOpen = 2;	//活动开启状态（true:开启，false:未开启）
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 250;
+	}
+}
+
+//请求领取冲级好礼 c ----> s
+message stReqReceiveWflfare
+{
+	optional int32 level = 1;	//等级
+	optional int32 type = 2;	//类型
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 251;
+	}
+}
+
+//请求领取冲级好礼返回 s ----> c
+message stReceiveWflfareResult
+{
+	enum eResult
+	{
+		eSuccess     	   		=   1;  //成功
+		eInner_Error    		=   2;  //内部配置错误
+		eHas_Got_Reward 		=	3;	//已经被领取
+		eDiamond_Not_Enough 	= 	4;	//钻石不足
+		eLevel_Too_Low			=	5;	//等级太低
+	}
+
+	optional eResult result		=	1;  //结果
+
+	enum ProtoModID
+	{
+	    ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+	    FunID = 252;
+	}
+}
+
+
+//请求支付签名 c ----> s
+message stReqPaySign
+{
+	optional int32 sdkid = 1;	//sdkid
+	optional string data = 2;	//要计算签名的字符串
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 253;
+	}
+}
+
+
+//返回支付签名 s ----> c
+message stRetPaySign
+{
+	optional string sign = 1;	//签名
+
+	enum ProtoModID
+	{
+		ModID = 8;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 254;
+	}
+}
+
+//请求服务器支付 c ----> s
+message stReqServerPay
+{
+	optional uint32 sdkid = 1;			//sdkid
+	optional uint32 itemId = 2;         //item id
+	optional uint32 money = 3;         //money
+	optional string token = 4;         //token
+
+	enum ProtoModID
+	{
+		ModID = 10;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 1;
+	}
+}
+
+
+//请求服务器支付返回 s ----> c
+message stRetServerPay
+{
+	enum eResult
+	{
+		eSuccess     	   		=   1;  //成功
+		eInner_Error    		=   2;  //内部错误
+		eMoney_Not_Enough 		=	3;	//第三方货币不足
+		eItem   				=   4;  //itemid错误
+		eMoney   				=   5;  //金额错误
+	}
+
+	optional eResult result		=	1;  //结果
+	optional string orderId = 2;         //游戏服订单号
+
+
+	enum ProtoModID
+	{
+		ModID = 10;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 2;
+	}
+}
+
+//【召唤计划】领奖 请求 c ---> s
+message stReqSummonReward
+{
+	optional uint32 countId = 1;		//当前次数档位
+	optional uint32 summonType = 2;		//召唤的类型 1钻石，2英雄
+	optional uint32 rewardType = 3;		//奖励的类型 1免费，2收费
+
+	enum ProtoModID
+	{
+		ModID = 10;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 3;	
+	}		
+}
+
+//【召唤计划】领奖 返回 s ----> c
+message stSummonRewardResult
+{
+	enum eResult
+	{
+		eSUCCESS = 1;					//成功
+		eHAS_GET_REWARD = 2;			//已经领取了奖励
+		eHAS_NOT_BUY_INVEST_PLAN = 3;	//还没有购买了召唤计划
+		eBAG_FULL = 4;              	//背包已满
+		eOTHER_ERROR = 5;				//其他错误
+	}
+
+	optional eResult result = 1;		//结果
+	optional uint32  countId = 2;		//当前次数档位
+	optional uint32 summonType = 3;		//召唤的类型 1钻石，2英雄
+	optional uint32 rewardType = 4;		//奖励的类型 1免费，2收费
+
+	enum ProtoModID
+	{
+		ModID = 10;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 4;	
+	}		
+}
+
+//【召唤计划】当前进度 请求 c ---> s
+message stReqSummonData
+{
+	optional uint32 summonType = 1;		//召唤的类型  1钻石，2英雄
+
+	enum ProtoModID
+	{
+		ModID = 10;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 5;	
+	}		
+}
+
+//【召唤计划】当前进度 返回 s ----> c
+message stSummonDataResult
+{
+	optional bool hasBuySummonment = 1;		//是否已经购买了召唤计划
+	repeated uint32 freeSummonRewardList = 2;	//已经领取奖励的等级列表 免费
+	repeated uint32 rechargeSummonRewardList = 3;	//已经领取奖励的等级列表 收费
+	optional uint32 summonType = 4;		//召唤的类型
+	optional uint32 countId = 5;		//当前次数档位
+	optional uint32 countNum = 6;		//当前次数
+	optional uint32 beginTime =7;   //开始时间 utc时间
+	optional uint32 endTime = 8;	//结束时间 utc时间
+
+	enum ProtoModID
+	{
+		ModID = 10;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 6;	
+	}		
+}
+
+//购买召唤计划返回 s ---> c
+message stBuySummonPlanResult
+{
+	enum eResult
+	{
+		eSUCCESS = 1;				//购买成功
+		eDIAMOND_NOT_ENOGUH = 2;	//钻石不足
+		eVIP_LV_TOO_LOW = 3;		//vip等级太低了
+		eHAS_BUY = 4;				//已经购买
+	}
+
+	optional eResult result = 1;		//购买结果
+	optional string  index = 2;			//索引
+
+	enum ProtoModID
+	{
+		ModID = 10;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 7;	
+	}		
+}
+
+//【充值】校验 请求 c ---> s
+message stReqRechargeCheck
+{
+	optional uint32 rechargeId = 1;		//当前充值档位
+	optional uint32 buyCount = 2;		//总次数
+
+	enum ProtoModID
+	{
+		ModID = 10;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 8;	
+	}		
+}
+
+//【充值】校验 返回 s ----> c
+message stRechargeCheckResult
+{
+	enum eResult
+	{
+		eSuccess = 1;               //成功
+		eBag_Full = 2;              //背包已满
+		eNo_Times = 3;				//次数用完了
+		eOther_Error = 4;			//其他错误
+	}
+
+	optional eResult result = 1;		//【充值】校验结果
+
+	enum ProtoModID
+	{
+		ModID = 10;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 9;	
+	}		
+}

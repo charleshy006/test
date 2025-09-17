@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+
+<!--
+	points:日常任务积分
+	boxid:奖励对应box表id
+-->
+
+<conf>
+	<daily>
+		<entry id="1" points="30" boxid="1800" />
+		<entry id="2" points="60" boxid="1801" />
+		<entry id="3" points="90" boxid="1802" />
+		<entry id="4" points="120" boxid="1803" />
+		<entry id="5" points="150" boxid="1804" />
+	</daily>
+</conf>

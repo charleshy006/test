@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<root>
+	<!--
+		id：编号
+		level：功能开放等级，若同一等级存在多个功能同时开启，按id先后条件顺序开启显示。	
+		openfunction：开放功能
+					1：竞技场
+					2：夺宝
+					3：组队副本（普通）
+					4：组队副本（精英）
+					5：巅峰对决
+					6：实时战场（消灭）
+					7：实时战场（抢分）
+					8：擂台战（低级）
+					9：擂台战（高级）
+					10：装备强化
+					11：精炼
+					12：觉醒
+					13：灵魂祭坛
+					14：时装附魔
+					15：技能强化
+					16：稀有技能（学习/强化）
+					17：随从编组
+					18：随从强化（强化/突破）
+					19：随从领悟
+					20：精灵养成
+					21：符文装备
+					22：符文强化
+					23：称号装备
+					24：炼金
+					25：开服礼包
+					26：第二队武神
+					27：公会
+					28：限时随从
+					29：金币单抽
+					30：金币十抽
+					31：钻石单抽
+					32：钻石十抽
+					33：历练
+                    34: 飞船
+                    35：装备突破
+                    36：翅膀飞升
+                    37：通灵
+                    38：幻化
+					39：随从远征
+                    40：翡翠梦境
+					27：魔王召唤
+					42：荣耀时装
+					44：公会领地战
+					45：改名
+					46：宝石合成
+					47：秘境寻宝
+					48：邀请好友
+					49：副本扫荡
+					50：英雄联赛
+					54: 巨龙巢穴
+					55: 新手引导
+                    61：宝石副本
+					171：拍脸图
+					172：回忆
+					173：挂机
+		isopen：是否开放（1代表开放、0代表不开放）
+		openday：在开服后几天开放（以更新时间早上5：00为准、0代表开服就开放 ）
+
+
+		appversion:值固定为1，表示APP审核模式关闭该按钮功能
+	-->
+	<Openlevel>
+		<!--历练功能-->
+		<entry id="0" level="7"  isopen="1" openday="0"/>
+		<!--竞技场-->
+		<entry id="1" level="7"  isopen="1" openday="0"/>
+		<!--夺宝-->
+		<entry id="2" level="9" isopen="1" openday="0"/>
+		<!--组队副本（普通）-->
+		<entry id="3" level="15"  isopen="1" openday="0"/>
+		<!--组队副本（精英）-->
+		<entry id="4" level="15" isopen="1" openday="0"/>
+		<!--巅峰对决-->
+		<entry id="5" level="18" isopen="1" openday="0"/>
+		<!--实时战场（消灭）-->
+		<entry id="6" level="21" isopen="1" openday="0"/>
+		<!--实时战场（抢分）-->
+		<entry id="7" level="21" isopen="1" openday="0"/>
+		<!--擂台战（低级）-->
+		<entry id="8" level="37" isopen="0" openday="0"/>
+		<!--擂台战（高级）-->
+		<entry id="9" level="37" isopen="0" openday="0"/>
+		<!--翡翠梦境-->
+		<entry id="10" level="10"  isopen="1" openday="0" appversion="1"/>
+		<!--飞船护送功能-->
+		<entry id="11" level="23"  isopen="1" openday="0"/>
+		<!--秘境寻宝-->
+		<entry id="12" level="19"  isopen="1" openday="0" appversion="1"/>
+		<!--英雄联赛-->
+		<entry id="13" level="32"  isopen="0" openday="0"/>
+		<!--巨龙-->
+		<entry id="14" level="22"  isopen="1" openday="0"/>
+		<!--资源战场-->
+		<entry id="15" level="17"  isopen="0" openday="0"/>
+		<!--宝石副本-->
+		<entry id="16" level="24"  isopen="1" openday="0"/>
+		<!--魔王召唤-->
+		<entry id="17" level="18"  isopen="0" openday="0"/>
+		
+		<!--装备强化-->
+		<entry id="21" level="2" isopen="1" openday="0"/>
+		<!--精炼-->
+		<entry id="22" level="7" isopen="1" openday="0"/>
+		<!--觉醒-->
+		<entry id="23" level="38" isopen="1" openday="0"/>
+		<!--装备突破-->
+		<entry id="24" level="50"  isopen="1" openday="0"/>
+		<!--灵魂祭坛-->
+		<entry id="25" level="31" isopen="1" openday="0"/>
+		<!--炼金-->
+		<entry id="26" level="6" isopen="1" openday="0"/>
+		
+		
+		<!--时装-->
+		<entry id="40" level="1" isopen="1" openday="0"/>
+		<!--时装附魔-->
+		<entry id="41" level="1" isopen="1" openday="0" appversion="1"/>
+		<!--翅膀飞升-->
+		<entry id="42" level="8"  isopen="1" openday="0"/>
+		<!--荣耀时装-->
+		<entry id="43" level="8"  isopen="1" openday="0" appversion="1"/>
+		
+		
+		
+		
+		<!--技能-->
+		<entry id="50" level="3"  isopen="1" openday="0"/>
+		<!--技能强化-->
+		<entry id="51" level="2" isopen="1" openday="0"/>
+		<!--稀有技能（学习/强化）-->
+		<entry id="52" level="2" isopen="1" openday="0"/>
+		
+		
+		
+		<!--随从-->
+		<entry id="60" level="5"  isopen="1" openday="0"/>
+		<!--随从编组-->
+		<entry id="61" level="5" isopen="1" openday="0"/>
+		<!--随从强化（强化/突破）-->
+		<entry id="62" level="5" isopen="1" openday="0"/>
+		<!--随从领悟-->
+		<entry id="63" level="39" isopen="1" openday="0"/>
+		<!--限时随从-->
+		<entry id="64" level="6" isopen="1" openday="0"/>
+		<!--随从远征-->
+		<entry id="65" level="16"  isopen="1" openday="0"/>
+		<!--第二队随从-->
+		<entry id="66" level="16" isopen="1" openday="0"/>
+		<!--随从符文-->
+		<entry id="67" level="16" isopen="1" openday="0"/>
+		<!--随从重铸-->
+		<entry id="68" level="11"  isopen="1" openday="0"/>
+		<!--随从商店-->
+		<entry id="69" level="11"  isopen="1" openday="0"/>
+		
+		
+		<!--公会-->
+		<entry id="80" level="17" isopen="1" openday="0"/>
+		<!--公会领地战开启-->
+		<entry id="81" level="17"  isopen="0" openday="0" appversion="1"/>
+		<!--公会黑市-->
+		<entry id="82" level="17"  isopen="0" openday="0"/>
+		
+		
+		
+		<!--精灵-->
+		<entry id="100" level="13" isopen="1" openday="0"/>
+		<!--精灵养成-->
+		<entry id="101" level="13" isopen="1" openday="0"/>
+		<!--幻化-->
+		<entry id="102" level="42"  isopen="1" openday="0"/>
+		
+		
+		<!--符文-->
+		<entry id="110" level="24" isopen="1" openday="0"/>
+		<!--符文强化-->
+		<entry id="111" level="24" isopen="1" openday="0"/>
+		<!--宝石合成-->
+		<entry id="112" level="24"  isopen="1" openday="0"/>
+		
+		
+		<!--称号装备-->
+		<entry id="120" level="8" isopen="1" openday="0"/>
+		
+		
+		<!--Rank-->
+		<entry id="130" level="1" isopen="1" openday="0"/>
+
+		<!--资源找回-->
+		<entry id="150" level="6"  isopen="1" openday="0"/>
+
+	
+		
+	
+		<!--金币单抽-->
+		<entry id="160" level="2" isopen="1" openday="0"/>
+		<!--金币十抽-->
+		<entry id="161" level="4" isopen="1" openday="0"/>
+		<!--钻石单抽-->
+		<entry id="162" level="6" isopen="1" openday="0"/>
+		<!--钻石十抽-->
+		<entry id="163" level="6"  isopen="1" openday="0"/>
+		<!--幸运挖宝-->
+		<entry id="164" level="12"  isopen="1" openday="0" appversion="1"/>
+		
+		<!--开服礼包-->
+		<entry id="170" level="12" isopen="1" openday="0"/>
+		<!--拍脸图-->
+		<entry id="171" level="7" isopen="1" openday="0"/>
+		
+		<!--挂机-->
+		<entry id="173" level="6" isopen="1" openday="0"/>
+		<!--充值好礼-->
+		<entry id="181" level="101"  isopen="1" openday="0"/>
+		<!--首冲礼包-->
+		<entry id="182" level="6"  isopen="1" openday="0"/>
+		<!--每日首充-->
+		<entry id="183" level="99"  isopen="1" openday="0"/>
+
+		
+		
+		<!--邀请好友-->
+		<entry id="190" level="1"  isopen="1" openday="0"/>
+		<entry id="191" level="7"  isopen="0" openday="0" appversion="1"/>
+		
+		
+		<!--是否开启消耗扫荡券功能-->
+		<entry id="201" level="1"  isopen="1" openday="0" appversion="1"/>
+		
+		<!--时装商店-->
+		<entry id="221" level="90"  isopen="1" openday="0" appversion="1"/>
+		<!--限时商店-->
+		<entry id="222" level="14"  isopen="1" openday="0"/>
+		<!--幸运商店-->
+		<entry id="223" level="90"  isopen="0" openday="0"/>
+		
+		<!--世界boss-->
+		<entry id="230" level="10"  isopen="1" openday="0"/>
+		<!--koboss-->
+		<entry id="231" level="7"  isopen="1" openday="0" appversion="1"/>
+		
+		<!--限时福利-->
+		<entry id="240" level="6"  isopen="1" openday="0" appversion="1"/>
+		<!--七日狂欢-->
+		<entry id="241" level="9"  isopen="1" openday="0"/>
+		<!--精彩活动-->
+		<entry id="242" level="7"  isopen="1" openday="0"/>
+		<!--活动礼包-->
+		<entry id="243" level="4"  isopen="1" openday="0"/>
+		
+		<entry id="10001" level="1"  isopen="1" openday="0"/>
+		<entry id="10002" level="1"  isopen="1" openday="0"/>
+		
+		
+		
+		<!--回忆-->
+		<entry id="260" level="6" isopen="0" openday="0"/>
+	</Openlevel>
+</root>

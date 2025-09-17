@@ -1,0 +1,66 @@
+<Athena>
+    <Global>
+        <gameVersion>0.8.0</gameVersion>
+        <statNetFlow>false</statNetFlow>
+        <statProto>false</statProto>
+        <loadStat>true</loadStat>
+        <tblResDir>./tblres</tblResDir>
+        <confDir>./conf</confDir>
+        <gameID>129</gameID>
+        <platformID>2016</platformID>
+        <serverID>2016310006</serverID>
+        <signKey>aYTmMfdRc5]sRA7t</signKey>
+        <serverKey>ra0n4D3hkVsyl6S5</serverKey>
+        <billURL></billURL>
+        <isApp>false</isApp>
+        <sanbox>false</sanbox>
+        <ZoneID>1</ZoneID>
+        <OpenServer_Time>1735574401</OpenServer_Time>
+        <LogDir>/data/log_dir</LogDir>
+        <CountryVersion>Korea</CountryVersion>
+        <isNotUuzu>true</isNotUuzu>
+        <ApiURL>http://oss.bz.dh.i2joy.com/api/</ApiURL>
+        <pubServerKey>ra0n4D3hkVsyl6S5</pubServerKey>
+        <pubServerIndex>2</pubServerIndex>
+    </Global>
+    <ServerList>
+        <Server svrID="1" name="全局服务器" svrType="1" ip="172.29.81.26" port="21101" />
+        <Server svrID="2" name="游戏服务器" svrType="2" ip="172.29.81.26" port="21201" />
+        <Server svrID="3" name="web服务器" svrType="5" ip="172.29.81.26" port="21301"/>
+        <Server svrID="4" name="网关服务器" svrType="3" ip="172.29.81.26" port="21401" />
+        <Server svrID="5" name="pub服务器" svrType="9" ip="172.29.81.26" port="16666"/>
+        <Server svrID="1003"    name="update服务器"     svrType="7" ip="172.29.81.26" port="11111" />
+        <Server svrID="1004"    name="update服务器"     svrType="7" ip="172.29.81.26" port="11112" />
+        <Server svrID="1005"    name="update服务器"     svrType="7" ip="172.29.81.26" port="11113" />
+        <Server svrID="1006"    name="update服务器"     svrType="7" ip="172.29.81.26" port="11114" />
+        <Server svrID="1007"    name="login服务器"     svrType="7" ip="172.29.81.26" port="19999" />
+    </ServerList>
+    <GlobalServer>
+		<logfilename>./Hlog/globalserver</logfilename>
+        <mysqlurl>rm-bp15fg96gd03xcpu8wo.mysql.rds.aliyuncs.com;3306;kugame_mysql;Kugame_1234;gamedb_s1</mysqlurl>
+    </GlobalServer>
+    <GameServer>
+		<logfilename>./Hlog/gameserver</logfilename>
+    </GameServer>
+    <GateServer>
+		<logfilename>./Hlog/gateserver</logfilename>
+        <VerifyToken>true</VerifyToken>
+        <InnerVerifyMethod>false</InnerVerifyMethod>
+        <GateUserNum>8000</GateUserNum>
+    </GateServer>
+    <WebServer>
+	<logfilename>./Hlog/webserver</logfilename>
+        <mysqlurl>rm-bp15fg96gd03xcpu8wo.mysql.rds.aliyuncs.com;3306;kugame_mysql;Kugame_1234;gamedb_s1</mysqlurl>
+    </WebServer>
+    <UpdateServer>
+        <logfilename>./Hlog/updateserver</logfilename>
+        <mysqlurl>rm-bp15fg96gd03xcpu8wo.mysql.rds.aliyuncs.com;3306;kugame_mysql;Kugame_1234;gamedb_s1</mysqlurl>
+    </UpdateServer>
+    <LoginServer>
+        <logfilename>./Hlog/loginserver</logfilename>
+        <mysqlurl>rm-bp15fg96gd03xcpu8wo.mysql.rds.aliyuncs.com;3306;kugame_mysql;Kugame_1234;gamedb_s1</mysqlurl>
+    </LoginServer>
+    <PubGameServer>
+		<logfilename>./Hlog/pubserver</logfilename>
+    </PubGameServer>
+</Athena>

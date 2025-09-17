@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>	
+	<!--
+		RefreshType:刷新类型
+					1:每天凌晨0点刷新
+					2:每周星期一凌晨0点刷新
+		StartTime:活动开始时间
+		EndTime:活动结束时间
+		UIType:客户端显示用， 显示活动UI类型
+			   1:道具呈现为上下拖动，道具数量较多采用该UI表现
+			   2:道具呈现为左右拖动，道具数量以3个为最优
+			   3:VIP周礼包界面
+			   
+			   4:每周特惠随从界面
+			   
+		Position:显示位于活动列表位置，字段无效
+		Title:活动名字
+			Salename_001:VIP周礼包
+			Salename_002:限时特惠  11  12 
+			Salename_003:超值装备  14  15  16  17  （周末特惠）
+			Salename_004:限时时装  19  20  21  22
+			Salename_005:每周福利  18
+			Salename_006:限时表情  23  24  25
+			Salename_007:限时饰品  26  27  28
+			
+			
+			
+			龙牙版本:
+			Salename_005:每周福利  50      该商店常驻限时商店
+			Salename_047:每日礼包  51      该商店常驻限时商店
+			Salename_048:特惠随从  52 53 54        该商店每周刷新
+			Salename_049:超值道具  55 56        该商店每周刷新
+			
+		Desc:活动描述
+		ShopID:对应Shop表商店
+		
+		活动填写规则说明：根据活动id来决定是否为新活动，已经使用过的id不能重复使用，过期的活动立即删除
+	-->
+	
+<RewardConf>	
+	
+
+	<activity id="3022" ShopID="51" StartTime="2025-07-25 00:00:00" EndTime="2025-07-31 23:59:59" UIType="1" Position="2" Title="Salename_047" Desc="Saledesc_047" icon="act_weihu"/>
+	<activity id="3023" ShopID="51" StartTime="2025-08-01 00:00:00" EndTime="2025-08-07 23:59:59" UIType="1" Position="2" Title="Salename_047" Desc="Saledesc_047" icon="act_weihu"/>
+	<activity id="3024" ShopID="51" StartTime="2025-08-08 00:00:00" EndTime="2025-08-14 23:59:59" UIType="1" Position="2" Title="Salename_047" Desc="Saledesc_047" icon="act_weihu"/>
+
+
+
+	<activity id="3117" ShopID="50" StartTime="2022-06-10 00:00:00" EndTime="2022-06-12 23:59:59" UIType="1" Position="2" Title="Salename_005" Desc="Saledesc_005" icon="act_xiaohao"/>
+	<activity id="3118" ShopID="50" StartTime="2022-06-13 00:00:00" EndTime="2022-06-19 23:59:59" UIType="1" Position="2" Title="Salename_005" Desc="Saledesc_005" icon="act_xiaohao"/>
+	<activity id="3119" ShopID="50" StartTime="2022-06-20 00:00:00" EndTime="2022-06-26 23:59:59" UIType="1" Position="2" Title="Salename_005" Desc="Saledesc_005" icon="act_xiaohao"/>
+	<activity id="3120" ShopID="50" StartTime="2022-06-27 00:00:00" EndTime="2022-07-03 23:59:59" UIType="1" Position="2" Title="Salename_005" Desc="Saledesc_005" icon="act_xiaohao"/>
+	<activity id="3121" ShopID="50" StartTime="2022-07-04 00:00:00" EndTime="2022-07-10 23:59:59" UIType="1" Position="2" Title="Salename_005" Desc="Saledesc_005" icon="act_xiaohao"/>
+	<activity id="3122" ShopID="50" StartTime="2022-07-11 00:00:00" EndTime="2022-07-17 23:59:59" UIType="1" Position="2" Title="Salename_005" Desc="Saledesc_005" icon="act_xiaohao"/>
+	<activity id="3123" ShopID="50" StartTime="2022-07-18 00:00:00" EndTime="2022-07-24 23:59:59" UIType="1" Position="2" Title="Salename_005" Desc="Saledesc_005" icon="act_xiaohao"/>
+	<activity id="3124" ShopID="50" StartTime="2022-07-25 00:00:00" EndTime="2022-07-31 23:59:59" UIType="1" Position="2" Title="Salename_005" Desc="Saledesc_005" icon="act_xiaohao"/>
+	<activity id="3125" ShopID="50" StartTime="2022-08-01 00:00:00" EndTime="2022-08-07 23:59:59" UIType="1" Position="2" Title="Salename_005" Desc="Saledesc_005" icon="act_xiaohao"/>
+	<activity id="3126" ShopID="50" StartTime="2022-08-08 00:00:00" EndTime="2022-08-14 23:59:59" UIType="1" Position="2" Title="Salename_005" Desc="Saledesc_005" icon="act_xiaohao"/>
+	
+
+
+
+
+
+<activity id="31001" ShopID="54" StartTime="2025-04-14 00:00:00" EndTime="2025-04-20 23:59:59" UIType="4" Position="2" Title="Salename_070" Desc="Saledesc_048" icon="fenxiang"/>
+	<activity id="31002" ShopID="56" StartTime="2025-04-14 00:00:00" EndTime="2025-04-20 23:59:59" UIType="2" Position="2" Title="Salename_071" Desc="Saledesc_049" icon="act_tehui"/>
+	<activity id="31003" ShopID="53" StartTime="2025-04-21 00:00:00" EndTime="2025-04-27 23:59:59" UIType="4" Position="2" Title="Salename_068" Desc="Saledesc_048" icon="fenxiang"/>
+	<activity id="31004" ShopID="55" StartTime="2025-04-21 00:00:00" EndTime="2025-04-27 23:59:59" UIType="2" Position="2" Title="Salename_069" Desc="Saledesc_049" icon="act_tehui"/>
+	<activity id="31005" ShopID="54" StartTime="2025-04-28 00:00:00" EndTime="2025-05-04 23:59:59" UIType="4" Position="2" Title="Salename_070" Desc="Saledesc_048" icon="fenxiang"/>
+	<activity id="31006" ShopID="56" StartTime="2025-04-28 00:00:00" EndTime="2025-05-04 23:59:59" UIType="2" Position="2" Title="Salename_071" Desc="Saledesc_049" icon="act_tehui"/>
+	<activity id="31007" ShopID="53" StartTime="2025-05-05 00:00:00" EndTime="2025-05-11 23:59:59" UIType="4" Position="2" Title="Salename_068" Desc="Saledesc_048" icon="fenxiang"/>
+	<activity id="31008" ShopID="55" StartTime="2025-05-05 00:00:00" EndTime="2025-05-11 23:59:59" UIType="2" Position="2" Title="Salename_069" Desc="Saledesc_049" icon="act_tehui"/>
+	
+	<activity id="31011" ShopID="54" StartTime="2025-05-12 00:00:00" EndTime="2025-05-18 23:59:59" UIType="4" Position="2" Title="Salename_070" Desc="Saledesc_048" icon="fenxiang"/>
+	<activity id="31012" ShopID="56" StartTime="2025-05-12 00:00:00" EndTime="2025-05-18 23:59:59" UIType="2" Position="2" Title="Salename_071" Desc="Saledesc_049" icon="act_tehui"/>
+	<activity id="31013" ShopID="53" StartTime="2025-05-19 00:00:00" EndTime="2025-05-25 23:59:59" UIType="4" Position="2" Title="Salename_068" Desc="Saledesc_048" icon="fenxiang"/>
+	<activity id="31014" ShopID="55" StartTime="2025-05-19 00:00:00" EndTime="2025-05-25 23:59:59" UIType="2" Position="2" Title="Salename_069" Desc="Saledesc_049" icon="act_tehui"/>
+	<activity id="31015" ShopID="54" StartTime="2025-05-26 00:00:00" EndTime="2025-06-01 23:59:59" UIType="4" Position="2" Title="Salename_070" Desc="Saledesc_048" icon="fenxiang"/>
+	<activity id="31016" ShopID="56" StartTime="2025-05-26 00:00:00" EndTime="2025-06-01 23:59:59" UIType="2" Position="2" Title="Salename_071" Desc="Saledesc_049" icon="act_tehui"/>
+	<activity id="31017" ShopID="53" StartTime="2025-06-02 00:00:00" EndTime="2025-06-08 23:59:59" UIType="4" Position="2" Title="Salename_068" Desc="Saledesc_048" icon="fenxiang"/>
+	<activity id="31018" ShopID="55" StartTime="2025-06-02 00:00:00" EndTime="2025-06-08 23:59:59" UIType="2" Position="2" Title="Salename_069" Desc="Saledesc_049" icon="act_tehui"/>
+
+</RewardConf>

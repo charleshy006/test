@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<root>
+	
+	<!--
+		IsOpen：功能是否开启
+		        1：开启
+				0：关闭
+	-->
+	
+	<function>
+		<entry id="1" IsOpen="0"/>
+	</function>
+
+	<!--
+		礼包码使用等级限制
+	-->
+	<LimitLevel>
+		<entry id="1" level="7" />
+	</LimitLevel>
+	
+	<!--
+		输入其他玩家邀请码获得奖励：
+		RewardBoxid:奖励对应BOX表ID
+	-->
+	<InvitationAward>
+		<reward id="1" RewardBoxid="171000" />
+	</InvitationAward>
+	
+	<!--
+		邀请其他玩家人数达到一定人数获得奖励：
+		InvitationNum：邀请玩家数量
+		RewardBoxid：奖励对应BOX表ID
+	-->
+	<BeInvitationRward>
+		<reward id="1" InvitationNum="30" RewardBoxid="171001"/>
+		<reward id="2" InvitationNum="50" RewardBoxid="171002"/>
+		<reward id="3" InvitationNum="100" RewardBoxid="171003"/>
+		<reward id="4" InvitationNum="300" RewardBoxid="171004"/>
+		<reward id="5" InvitationNum="500" RewardBoxid="171005"/>
+		<reward id="6" InvitationNum="1000" RewardBoxid="171006"/>
+	</BeInvitationRward>
+	
+	<!--
+		每日分享奖励：
+		RewardBoxid：奖励对应BOX表ID
+	-->
+	<DailyShareReward>
+		<reward id="1" RewardBoxid="171100"/>
+	</DailyShareReward>
+	
+	<!--
+		累计分享奖励：
+		ShareTimes：累计分享次数
+		RewardBoxid：奖励对应BOX表ID
+	-->
+	<TotalShareReward>
+		<reward id="1" ShareTimes="10" RewardBoxid="171101"/>
+		<reward id="2" ShareTimes="30" RewardBoxid="171102"/>
+		<reward id="3" ShareTimes="50" RewardBoxid="171103"/>
+		<reward id="4" ShareTimes="100" RewardBoxid="171104"/>
+		<reward id="5" ShareTimes="300" RewardBoxid="171105"/>
+	</TotalShareReward>
+</root>

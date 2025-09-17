@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<root>
+	<!--
+		id:活动id
+		StartTime:活动开始时间
+		EndTime:活动结束时间
+		ActivityType:活动条件
+					 1:普通副本完成次数
+					 2:精英副本完成次数
+					 3:购买金币次数
+					 4:竞技场挑战次数
+					 5:挑战组队副本次数
+					 6:钻石开宝箱活动
+					 7:1V1完成活动
+					 8:3V3完成活动
+					 9:抽宝箱活动
+					 
+					 可用配置：1 2 3 6 9
+		ActivityCondition:活动条件
+					 如果ActivityType是1:普通副本完成次数  对应  需要完成普通副本几次
+					 如果ActivityType是2:精英副本完成次数  对应  需要完成精英副本几次
+					 如果ActivityType是3:购买金币次数  对应  需要购买金币几次
+					 如果ActivityType是4:竞技场挑战次数  对应 需要挑战竞技场几次
+					 如果ActivityType是5:组队副本完成次数  对应  需要挑战组队副本几次
+					 如果ActivityType是6:钻石开宝箱活动  对应  开启宝箱需要消耗钻石数量
+					 如果ActivityType是7:1V1完成次数   对应  需要完成1V1几次
+					 如果ActivityType是8:3V3完成次数   对应  需要完成3V3几次
+					 如果ActivityType是9:抽宝箱次数   对应  需要抽宝箱几次
+		RewardBoxID:对应奖励BOX表ID
+	-->
+	<!-- 普通关卡次数 -->
+	<!-- <activity id="1" StartTime="2016-08-28 00:00:00" EndTime="2016-08-30 23:59:00" ActivityType="1" Activityname="ui_Activity_80" ActivityDesc="Saledesc_020">
+		<entry id="1" ActivityCondition="5" RewardBoxID="172310" Desc="ui_sevenRevelry_40"/>
+		<entry id="2" ActivityCondition="10" RewardBoxID="172311" Desc="ui_sevenRevelry_40"/>
+		<entry id="3" ActivityCondition="30" RewardBoxID="172312" Desc="ui_sevenRevelry_40"/>
+		<entry id="4" ActivityCondition="50" RewardBoxID="172313" Desc="ui_sevenRevelry_40"/>
+		<entry id="5" ActivityCondition="80" RewardBoxID="172314" Desc="ui_sevenRevelry_40"/>
+		<entry id="6" ActivityCondition="120" RewardBoxID="172315" Desc="ui_sevenRevelry_40"/>
+		<entry id="7" ActivityCondition="150" RewardBoxID="172316" Desc="ui_sevenRevelry_40"/>
+		<entry id="8" ActivityCondition="200" RewardBoxID="172317" Desc="ui_sevenRevelry_40"/>
+	</activity> -->
+	<!-- 精英关卡通关 -->
+	<!-- <activity id="2" StartTime="2016-09-03 00:00:00" EndTime="2016-09-05 23:59:00" ActivityType="2" Activityname="ui_Activity_81" ActivityDesc="Saledesc_021">
+		<entry id="1" ActivityCondition="5" RewardBoxID="172323" Desc="ui_sevenRevelry_41"/>
+		<entry id="2" ActivityCondition="10" RewardBoxID="172324" Desc="ui_sevenRevelry_41"/>
+		<entry id="3" ActivityCondition="30" RewardBoxID="172325" Desc="ui_sevenRevelry_41"/>
+		<entry id="4" ActivityCondition="50" RewardBoxID="172326" Desc="ui_sevenRevelry_41"/>
+		<entry id="5" ActivityCondition="80" RewardBoxID="172327" Desc="ui_sevenRevelry_41"/>
+	</activity> -->
+	<!-- 购买金币次数 -->
+	<!-- <activity id="3" StartTime="2016-08-25 00:00:00" EndTime="2016-08-27 23:59:00" ActivityType="3" Activityname="ui_Activity_82" ActivityDesc="Saledesc_022">
+		<entry id="1" ActivityCondition="1" RewardBoxID="172300" Desc="ui_sevenRevelry_42"/>
+		<entry id="2" ActivityCondition="3" RewardBoxID="172301" Desc="ui_sevenRevelry_42"/>
+		<entry id="3" ActivityCondition="10" RewardBoxID="172302" Desc="ui_sevenRevelry_42"/>
+		<entry id="4" ActivityCondition="30" RewardBoxID="172303" Desc="ui_sevenRevelry_42"/>
+		<entry id="5" ActivityCondition="50" RewardBoxID="172304" Desc="ui_sevenRevelry_42"/>
+	</activity> -->
+	<!-- 竞技场次数 -->
+	<!--<activity id="4" StartTime="2016-05-13 00:00:00" EndTime="2018-05-15 00:00:00" ActivityType="4" Activityname="ui_Activity_83" ActivityDesc="Saledesc_023">
+		<entry id="1" ActivityCondition="2" RewardBoxID="170700" Desc="ui_sevenRevelry_43"/>
+		<entry id="2" ActivityCondition="5" RewardBoxID="170700" Desc="ui_sevenRevelry_43"/>
+	</activity>-->
+	<!-- 组队副本次数 -->
+	<!--<activity id="5" StartTime="2016-05-13 00:00:00" EndTime="2018-05-15 00:00:00" ActivityType="5" Activityname="ui_Activity_84" ActivityDesc="Saledesc_024">
+		<entry id="1" ActivityCondition="2" RewardBoxID="170700" Desc="ui_sevenRevelry_44"/>
+		<entry id="2" ActivityCondition="5" RewardBoxID="170700" Desc="ui_sevenRevelry_44"/>
+	</activity>-->
+	<!-- 钻石宝箱 -->
+	<!-- <activity id="6" StartTime="2016-08-30 00:00:00" EndTime="2016-09-01 23:59:00" ActivityType="6" Activityname="ui_Activity_85" ActivityDesc="Saledesc_025">
+		<entry id="1" ActivityCondition="100" RewardBoxID="172318" Desc=""/>
+		<entry id="2" ActivityCondition="300" RewardBoxID="172319" Desc=""/>
+		<entry id="3" ActivityCondition="1000" RewardBoxID="172320" Desc=""/>
+		<entry id="4" ActivityCondition="5000" RewardBoxID="172321" Desc=""/>
+		<entry id="5" ActivityCondition="10000" RewardBoxID="172322" Desc=""/>
+	</activity> -->
+	<!-- 1v1次数 -->
+	<!--<activity id="7" StartTime="2016-05-13 00:00:00" EndTime="2018-05-15 00:00:00" ActivityType="7" Activityname="ui_Activity_86" ActivityDesc="Saledesc_026">
+		<entry id="1" ActivityCondition="2" RewardBoxID="170700" Desc="ui_sevenRevelry_46"/>
+		<entry id="2" ActivityCondition="5" RewardBoxID="170700" Desc="ui_sevenRevelry_46"/>
+	</activity>-->
+	<!-- 3v3次数 -->
+	<!--<activity id="8" StartTime="2016-05-13 00:00:00" EndTime="2018-05-15 00:00:00" ActivityType="8" Activityname="ui_Activity_87" ActivityDesc="Saledesc_027">
+		<entry id="1" ActivityCondition="2" RewardBoxID="170700" Desc="ui_sevenRevelry_47"/>
+		<entry id="2" ActivityCondition="5" RewardBoxID="170700" Desc="ui_sevenRevelry_47"/>
+	</activity>-->
+	<!-- 钻石宝藏次数 -->
+	<!-- <activity id="9" StartTime="2016-08-27 00:00:00" EndTime="2016-08-29 23:59:00" ActivityType="9" Activityname="ui_Activity_88" ActivityDesc="Saledesc_028">
+		<entry id="1" ActivityCondition="3" RewardBoxID="172305" Desc="ui_sevenRevelry_48"/>
+		<entry id="2" ActivityCondition="10" RewardBoxID="172306" Desc="ui_sevenRevelry_48"/>
+		<entry id="3" ActivityCondition="30" RewardBoxID="172307" Desc="ui_sevenRevelry_48"/>
+		<entry id="4" ActivityCondition="50" RewardBoxID="172308" Desc="ui_sevenRevelry_48"/>
+		<entry id="5" ActivityCondition="100" RewardBoxID="172309" Desc="ui_sevenRevelry_48"/> 
+	</activity>-->
+	<!-- 1v1次数 -->
+	<!-- <activity id="10" StartTime="2016-09-05 00:01:00" EndTime="2016-09-09 23:59:00" ActivityType="7" Activityname="ui_Activity_86" ActivityDesc="Saledesc_026">
+		<entry id="1" ActivityCondition="3" RewardBoxID="172328" Desc="ui_sevenRevelry_46"/>
+		<entry id="2" ActivityCondition="10" RewardBoxID="172329" Desc="ui_sevenRevelry_46"/>
+		<entry id="3" ActivityCondition="20" RewardBoxID="172330" Desc="ui_sevenRevelry_46"/>
+		<entry id="4" ActivityCondition="30" RewardBoxID="172331" Desc="ui_sevenRevelry_46"/>
+	</activity> -->
+	<!-- 组队副本次数 -->
+	<!-- <activity id="11" StartTime="2016-09-08 00:01:00" EndTime="2016-09-10 23:59:00" ActivityType="5" Activityname="ui_Activity_84" ActivityDesc="Saledesc_024">
+		<entry id="1" ActivityCondition="3" RewardBoxID="172332" Desc="ui_sevenRevelry_44"/>
+		<entry id="2" ActivityCondition="6" RewardBoxID="172333" Desc="ui_sevenRevelry_44"/>
+		<entry id="3" ActivityCondition="12" RewardBoxID="172334" Desc="ui_sevenRevelry_44"/>
+		<entry id="4" ActivityCondition="18" RewardBoxID="172335" Desc="ui_sevenRevelry_44"/>
+	</activity> -->
+	
+	<!-- 购买金币次数 -->
+	<!--<activity id="12" StartTime="2016-09-19 00:00:00" EndTime="2016-09-22 23:59:00" ActivityType="3" Activityname="ui_Activity_82" ActivityDesc="Saledesc_022">
+		<entry id="1" ActivityCondition="1" RewardBoxID="172300" Desc="ui_sevenRevelry_42"/>
+		<entry id="2" ActivityCondition="3" RewardBoxID="172301" Desc="ui_sevenRevelry_42"/>
+		<entry id="3" ActivityCondition="10" RewardBoxID="172302" Desc="ui_sevenRevelry_42"/>
+		<entry id="4" ActivityCondition="30" RewardBoxID="172303" Desc="ui_sevenRevelry_42"/>
+		<entry id="5" ActivityCondition="50" RewardBoxID="172304" Desc="ui_sevenRevelry_42"/>
+	</activity> -->
+	
+	<!-- 1v1次数 -->
+	<!-- <activity id="13" StartTime="2016-09-21 00:01:00" EndTime="2016-09-25 23:59:00" ActivityType="7" Activityname="ui_Activity_86" ActivityDesc="Saledesc_026">
+		<entry id="1" ActivityCondition="5" RewardBoxID="172328" Desc="ui_sevenRevelry_46"/>
+		<entry id="2" ActivityCondition="10" RewardBoxID="172329" Desc="ui_sevenRevelry_46"/>
+		<entry id="3" ActivityCondition="20" RewardBoxID="172330" Desc="ui_sevenRevelry_46"/>
+		<entry id="4" ActivityCondition="30" RewardBoxID="172331" Desc="ui_sevenRevelry_46"/>
+	</activity> -->
+	
+	<!-- 钻石宝藏次数 -->
+<!-- 	<activity id="14" StartTime="2016-09-25 00:00:00" EndTime="2016-09-27 23:59:00" ActivityType="9" Activityname="ui_Activity_88" ActivityDesc="Saledesc_028">
+		<entry id="1" ActivityCondition="3" RewardBoxID="172305" Desc="ui_sevenRevelry_48"/>
+		<entry id="2" ActivityCondition="10" RewardBoxID="172306" Desc="ui_sevenRevelry_48"/>
+		<entry id="3" ActivityCondition="30" RewardBoxID="172307" Desc="ui_sevenRevelry_48"/>
+		<entry id="4" ActivityCondition="50" RewardBoxID="172308" Desc="ui_sevenRevelry_48"/>
+		<entry id="5" ActivityCondition="100" RewardBoxID="172309" Desc="ui_sevenRevelry_48"/>
+	</activity> -->
+	
+	<!-- 组队副本次数 -->
+	<!-- <activity id="15" StartTime="2016-09-27 00:01:00" EndTime="2016-09-30 23:59:00" ActivityType="5" Activityname="ui_Activity_84" ActivityDesc="Saledesc_024">
+		<entry id="1" ActivityCondition="5" RewardBoxID="172332" Desc="ui_sevenRevelry_44"/>
+		<entry id="2" ActivityCondition="10" RewardBoxID="172333" Desc="ui_sevenRevelry_44"/>
+		<entry id="3" ActivityCondition="15" RewardBoxID="172334" Desc="ui_sevenRevelry_44"/>
+		<entry id="4" ActivityCondition="20" RewardBoxID="172335" Desc="ui_sevenRevelry_44"/>
+	</activity> -->
+	
+	<!-- 钻石宝箱 -->
+	<!--<activity id="16" StartTime="2016-09-30 00:00:00" EndTime="2016-10-02 23:59:00" ActivityType="6" Activityname="ui_Activity_85" ActivityDesc="Saledesc_025">
+		<entry id="1" ActivityCondition="300" RewardBoxID="172318" Desc=""/>
+		<entry id="2" ActivityCondition="1000" RewardBoxID="172319" Desc=""/>
+		<entry id="3" ActivityCondition="3000" RewardBoxID="172320" Desc=""/>
+		<entry id="4" ActivityCondition="6000" RewardBoxID="172321" Desc=""/>
+		<entry id="5" ActivityCondition="12000" RewardBoxID="172322" Desc=""/>
+	</activity>-->
+	
+	<!-- 1v1次数 -->
+	<!-- <activity id="17" StartTime="2016-10-01 00:01:00" EndTime="2016-10-03 23:59:00" ActivityType="7" Activityname="ui_Activity_86" ActivityDesc="Saledesc_026">
+		<entry id="1" ActivityCondition="5" RewardBoxID="172328" Desc="ui_sevenRevelry_46"/>
+		<entry id="2" ActivityCondition="10" RewardBoxID="172329" Desc="ui_sevenRevelry_46"/>
+		<entry id="3" ActivityCondition="20" RewardBoxID="172330" Desc="ui_sevenRevelry_46"/>
+		<entry id="4" ActivityCondition="30" RewardBoxID="172331" Desc="ui_sevenRevelry_46"/>
+	</activity> -->
+	
+	<!-- 3v3次数 -->
+	<!--<activity id="18" StartTime="2016-10-12 00:00:00" EndTime="2016-10-14 00:00:00" ActivityType="8" Activityname="ui_Activity_87" ActivityDesc="Saledesc_027">
+		<entry id="1" ActivityCondition="5" RewardBoxID="172336" Desc="ui_sevenRevelry_47"/>
+		<entry id="2" ActivityCondition="10" RewardBoxID="172337" Desc="ui_sevenRevelry_47"/>
+		<entry id="3" ActivityCondition="15" RewardBoxID="172338" Desc="ui_sevenRevelry_47"/>
+		<entry id="4" ActivityCondition="20" RewardBoxID="172339" Desc="ui_sevenRevelry_47"/>
+	</activity> -->
+	
+	<!-- 精英关卡通关 -->
+	<!--<activity id="19" StartTime="2016-10-07 00:00:00" EndTime="2016-10-11 23:59:00" ActivityType="2" Activityname="ui_Activity_81" ActivityDesc="Saledesc_021">
+		<entry id="1" ActivityCondition="5" RewardBoxID="172323" Desc="ui_sevenRevelry_41"/>
+		<entry id="2" ActivityCondition="10" RewardBoxID="172324" Desc="ui_sevenRevelry_41"/>
+		<entry id="3" ActivityCondition="20" RewardBoxID="172325" Desc="ui_sevenRevelry_41"/>
+		<entry id="4" ActivityCondition="30" RewardBoxID="172326" Desc="ui_sevenRevelry_41"/>
+		<entry id="5" ActivityCondition="35" RewardBoxID="172327" Desc="ui_sevenRevelry_41"/>
+	</activity> -->
+	
+	<!-- 普通关卡次数 -->
+	<!--<activity id="20" StartTime="2016-09-29 00:00:00" EndTime="2016-09-30 23:59:00" ActivityType="1" Activityname="ui_Activity_80" ActivityDesc="Saledesc_020">
+		<entry id="1" ActivityCondition="30" RewardBoxID="172310" Desc="ui_sevenRevelry_40"/>
+		<entry id="2" ActivityCondition="50" RewardBoxID="172311" Desc="ui_sevenRevelry_40"/>
+	</activity>-->
+	
+	<!-- 1v1次数 -->
+	<!-- <activity id="21" StartTime="2016-10-12 00:01:00" EndTime="2016-10-14 23:59:00" ActivityType="7" Activityname="ui_Activity_86" ActivityDesc="Saledesc_026">
+		<entry id="1" ActivityCondition="5" RewardBoxID="172328" Desc="ui_sevenRevelry_46"/>
+		<entry id="2" ActivityCondition="10" RewardBoxID="172329" Desc="ui_sevenRevelry_46"/>
+		<entry id="3" ActivityCondition="30" RewardBoxID="172330" Desc="ui_sevenRevelry_46"/>
+		<entry id="4" ActivityCondition="50" RewardBoxID="172331" Desc="ui_sevenRevelry_46"/>
+	</activity> -->
+	
+	<!-- 组队副本次数 -->
+	<!--<activity id="22" StartTime="2016-10-11 00:01:00" EndTime="2016-10-13 23:59:00" ActivityType="5" Activityname="ui_Activity_84" ActivityDesc="Saledesc_024">
+		<entry id="1" ActivityCondition="5" RewardBoxID="172332" Desc="ui_sevenRevelry_44"/>
+		<entry id="2" ActivityCondition="10" RewardBoxID="172333" Desc="ui_sevenRevelry_44"/>
+		<entry id="3" ActivityCondition="15" RewardBoxID="172334" Desc="ui_sevenRevelry_44"/>
+		<entry id="4" ActivityCondition="20" RewardBoxID="172335" Desc="ui_sevenRevelry_44"/>
+	</activity>-->
+	
+	<!-- 精英关卡通关 -->
+	<!--<activity id="24" StartTime="2016-10-18 00:00:00" EndTime="2016-10-20 23:59:00" ActivityType="2" Activityname="ui_Activity_81" ActivityDesc="Saledesc_021">
+		<entry id="1" ActivityCondition="5" RewardBoxID="172323" Desc="ui_sevenRevelry_41"/>
+		<entry id="2" ActivityCondition="10" RewardBoxID="172324" Desc="ui_sevenRevelry_41"/>
+		<entry id="3" ActivityCondition="20" RewardBoxID="172325" Desc="ui_sevenRevelry_41"/>
+		<entry id="4" ActivityCondition="30" RewardBoxID="172326" Desc="ui_sevenRevelry_41"/>
+	</activity>-->
+	
+	<!-- 3v3次数 -->
+	<!--<activity id="25" StartTime="2016-10-20 00:00:00" EndTime="2016-10-22 23:59:00" ActivityType="8" Activityname="ui_Activity_87" ActivityDesc="Saledesc_027">
+		<entry id="1" ActivityCondition="5" RewardBoxID="172336" Desc="ui_sevenRevelry_47"/>
+		<entry id="2" ActivityCondition="10" RewardBoxID="172337" Desc="ui_sevenRevelry_47"/>
+		<entry id="3" ActivityCondition="15" RewardBoxID="172338" Desc="ui_sevenRevelry_47"/>
+		<entry id="4" ActivityCondition="20" RewardBoxID="172339" Desc="ui_sevenRevelry_47"/>
+	</activity>-->
+	
+	<!-- 普通关卡次数 -->
+	<!-- <activity id="26" StartTime="2016-12-06 00:00:00" EndTime="2016-12-09 23:59:59" ActivityType="1" Activityname="ui_Activity_80" ActivityDesc="Saledesc_020">
+		<entry id="1" ActivityCondition="50" RewardBoxID="172310" Desc="ui_sevenRevelry_40"/>
+		<entry id="2" ActivityCondition="100" RewardBoxID="172311" Desc="ui_sevenRevelry_40"/>
+		<entry id="3" ActivityCondition="150" RewardBoxID="172312" Desc="ui_sevenRevelry_40"/>
+	</activity> -->
+	
+	<!-- 1v1次数 -->
+	<!-- <activity id="27" StartTime="2016-12-08 00:00:00" EndTime="2016-12-10 23:59:59" ActivityType="7" Activityname="ui_Activity_86" ActivityDesc="Saledesc_026">
+		<entry id="1" ActivityCondition="10" RewardBoxID="172328" Desc="ui_sevenRevelry_46"/>
+		<entry id="2" ActivityCondition="20" RewardBoxID="172329" Desc="ui_sevenRevelry_46"/>
+		<entry id="3" ActivityCondition="30" RewardBoxID="172330" Desc="ui_sevenRevelry_46"/>
+		<entry id="4" ActivityCondition="50" RewardBoxID="172331" Desc="ui_sevenRevelry_46"/>
+	</activity> -->
+	
+	<!-- 精英关卡通关 -->
+	<!-- <activity id="28" StartTime="2016-12-10 00:00:00" EndTime="2016-12-13 23:59:59" ActivityType="2" Activityname="ui_Activity_81" ActivityDesc="Saledesc_021">
+		<entry id="1" ActivityCondition="20" RewardBoxID="172323" Desc="ui_sevenRevelry_41"/>
+		<entry id="2" ActivityCondition="30" RewardBoxID="172324" Desc="ui_sevenRevelry_41"/>
+		<entry id="3" ActivityCondition="50" RewardBoxID="172325" Desc="ui_sevenRevelry_41"/>
+		<entry id="4" ActivityCondition="70" RewardBoxID="172326" Desc="ui_sevenRevelry_41"/>
+	</activity> -->
+	
+	<!-- 3v3次数 -->
+	<!-- <activity id="29" StartTime="2016-12-06 00:00:00" EndTime="2016-12-11 23:59:59" ActivityType="8" Activityname="ui_Activity_87" ActivityDesc="Saledesc_027">
+		<entry id="1" ActivityCondition="5" RewardBoxID="172336" Desc="ui_sevenRevelry_47"/>
+		<entry id="2" ActivityCondition="10" RewardBoxID="172337" Desc="ui_sevenRevelry_47"/>
+		<entry id="3" ActivityCondition="15" RewardBoxID="172338" Desc="ui_sevenRevelry_47"/>
+	</activity> -->
+	
+	<!-- 普通关卡次数 -->
+	<!--<activity id="30" StartTime="2016-12-13 00:00:00" EndTime="2016-12-15 23:59:59" ActivityType="1" Activityname="ui_Activity_80" ActivityDesc="Saledesc_020">
+		<entry id="1" ActivityCondition="50" RewardBoxID="172310" Desc="ui_sevenRevelry_40"/>
+		<entry id="2" ActivityCondition="100" RewardBoxID="172311" Desc="ui_sevenRevelry_40"/>
+		<entry id="3" ActivityCondition="150" RewardBoxID="172312" Desc="ui_sevenRevelry_40"/>
+	</activity> -->
+	
+	<!-- 1v1次数 -->
+	<!--<activity id="31" StartTime="2016-12-15 00:00:00" EndTime="2016-12-17 23:59:59" ActivityType="7" Activityname="ui_Activity_86" ActivityDesc="Saledesc_026">
+		<entry id="1" ActivityCondition="10" RewardBoxID="172328" Desc="ui_sevenRevelry_46"/>
+		<entry id="2" ActivityCondition="20" RewardBoxID="172329" Desc="ui_sevenRevelry_46"/>
+		<entry id="3" ActivityCondition="30" RewardBoxID="172330" Desc="ui_sevenRevelry_46"/>
+		<entry id="4" ActivityCondition="50" RewardBoxID="172331" Desc="ui_sevenRevelry_46"/>
+	</activity> -->
+	
+	<!-- 精英关卡通关 -->
+	<!-- <activity id="32" StartTime="2016-12-17 00:00:00" EndTime="2016-12-20 23:59:59" ActivityType="2" Activityname="ui_Activity_81" ActivityDesc="Saledesc_021">
+		<entry id="1" ActivityCondition="20" RewardBoxID="172323" Desc="ui_sevenRevelry_41"/>
+		<entry id="2" ActivityCondition="30" RewardBoxID="172324" Desc="ui_sevenRevelry_41"/>
+		<entry id="3" ActivityCondition="50" RewardBoxID="172325" Desc="ui_sevenRevelry_41"/>
+		<entry id="4" ActivityCondition="70" RewardBoxID="172326" Desc="ui_sevenRevelry_41"/>
+	</activity> -->
+	
+	<!-- 3v3次数 -->
+	<activity id="33" StartTime="2016-12-13 00:00:00" EndTime="2016-12-16 23:59:59" ActivityType="8" Activityname="ui_Activity_87" ActivityDesc="Saledesc_027">
+		<entry id="1" ActivityCondition="5" RewardBoxID="172336" Desc="ui_sevenRevelry_47"/>
+		<entry id="2" ActivityCondition="10" RewardBoxID="172337" Desc="ui_sevenRevelry_47"/>
+		<entry id="3" ActivityCondition="15" RewardBoxID="172338" Desc="ui_sevenRevelry_47"/>
+	</activity>
+	
+	<!-- 普通关卡次数 -->
+	<!-- <activity id="34" StartTime="2016-12-20 00:00:00" EndTime="2016-12-22 23:59:59" ActivityType="1" Activityname="ui_Activity_80" ActivityDesc="Saledesc_020">
+		<entry id="1" ActivityCondition="50" RewardBoxID="172310" Desc="ui_sevenRevelry_40"/>
+		<entry id="2" ActivityCondition="100" RewardBoxID="172311" Desc="ui_sevenRevelry_40"/>
+		<entry id="3" ActivityCondition="150" RewardBoxID="172312" Desc="ui_sevenRevelry_40"/>
+	</activity> -->
+	
+	<!-- 1v1次数 -->
+	<!-- <activity id="35" StartTime="2016-12-22 00:00:00" EndTime="2016-12-24 23:59:59" ActivityType="7" Activityname="ui_Activity_86" ActivityDesc="Saledesc_026">
+		<entry id="1" ActivityCondition="10" RewardBoxID="172328" Desc="ui_sevenRevelry_46"/>
+		<entry id="2" ActivityCondition="20" RewardBoxID="172329" Desc="ui_sevenRevelry_46"/>
+		<entry id="3" ActivityCondition="30" RewardBoxID="172330" Desc="ui_sevenRevelry_46"/>
+		<entry id="4" ActivityCondition="50" RewardBoxID="172331" Desc="ui_sevenRevelry_46"/>
+	</activity> -->
+	
+	<!-- 钻石宝藏次数 -->
+	<!-- <activity id="36" StartTime="2016-12-24 00:00:00" EndTime="2016-12-27 23:59:00" ActivityType="9" Activityname="ui_Activity_88" ActivityDesc="Saledesc_028">
+		<entry id="1" ActivityCondition="5" RewardBoxID="172305" Desc="ui_sevenRevelry_48"/>
+		<entry id="2" ActivityCondition="10" RewardBoxID="172306" Desc="ui_sevenRevelry_48"/>
+		<entry id="3" ActivityCondition="30" RewardBoxID="172307" Desc="ui_sevenRevelry_48"/>
+		<entry id="4" ActivityCondition="50" RewardBoxID="172308" Desc="ui_sevenRevelry_48"/>
+	</activity>
+	 -->
+	<!-- 3v3次数 -->
+	<!-- <activity id="37" StartTime="2016-12-25 00:00:00" EndTime="2016-12-27 23:59:59" ActivityType="8" Activityname="ui_Activity_87" ActivityDesc="Saledesc_027">
+		<entry id="1" ActivityCondition="5" RewardBoxID="172336" Desc="ui_sevenRevelry_47"/>
+		<entry id="2" ActivityCondition="10" RewardBoxID="172337" Desc="ui_sevenRevelry_47"/>
+		<entry id="3" ActivityCondition="15" RewardBoxID="172338" Desc="ui_sevenRevelry_47"/>
+	</activity> -->
+	
+	<!-- 普通关卡次数 -->
+	<!-- <activity id="45" StartTime="2017-12-27 02:00:00" EndTime="2017-12-28 23:59:59" ActivityType="1" Activityname="ui_Activity_80" ActivityDesc="Saledesc_020">
+		<entry id="1" ActivityCondition="50" RewardBoxID="172310" Desc="ui_sevenRevelry_40"/>
+		<entry id="2" ActivityCondition="100" RewardBoxID="172311" Desc="ui_sevenRevelry_40"/>
+		<entry id="3" ActivityCondition="150" RewardBoxID="172312" Desc="ui_sevenRevelry_40"/>
+	</activity> -->
+	
+	<!-- 1v1次数 -->
+	<!-- <activity id="46" StartTime="2017-12-27 02:00:00" EndTime="2017-12-28 23:59:59" ActivityType="7" Activityname="ui_Activity_86" ActivityDesc="Saledesc_026">
+		<entry id="1" ActivityCondition="10" RewardBoxID="172328" Desc="ui_sevenRevelry_46"/>
+		<entry id="2" ActivityCondition="20" RewardBoxID="172329" Desc="ui_sevenRevelry_46"/>
+		<entry id="3" ActivityCondition="30" RewardBoxID="172330" Desc="ui_sevenRevelry_46"/>
+		<entry id="4" ActivityCondition="50" RewardBoxID="172331" Desc="ui_sevenRevelry_46"/>
+	</activity> -->
+	
+	<!-- 钻石宝藏次数 -->
+	<!-- <activity id="47" StartTime="2017-12-27 02:00:00" EndTime="2017-12-28 23:59:59" ActivityType="9" Activityname="ui_Activity_88" ActivityDesc="Saledesc_028">
+		<entry id="1" ActivityCondition="5" RewardBoxID="172305" Desc="ui_sevenRevelry_48"/>
+		<entry id="2" ActivityCondition="10" RewardBoxID="172306" Desc="ui_sevenRevelry_48"/>
+		<entry id="3" ActivityCondition="30" RewardBoxID="172307" Desc="ui_sevenRevelry_48"/>
+		<entry id="4" ActivityCondition="50" RewardBoxID="172308" Desc="ui_sevenRevelry_48"/>
+	</activity> -->
+	
+	<!-- 3v3次数 -->
+	<!-- <activity id="48" StartTime="2017-12-27 02:00:00" EndTime="2017-12-28 23:59:59" ActivityType="8" Activityname="ui_Activity_87" ActivityDesc="Saledesc_027">
+		<entry id="1" ActivityCondition="5" RewardBoxID="172336" Desc="ui_sevenRevelry_47"/>
+		<entry id="2" ActivityCondition="10" RewardBoxID="172337" Desc="ui_sevenRevelry_47"/>
+		<entry id="3" ActivityCondition="15" RewardBoxID="172338" Desc="ui_sevenRevelry_47"/>
+	</activity> -->
+	
+	<!-- 精英关卡通关 -->
+	<!-- <activity id="49" StartTime="2017-12-27 02:00:00" EndTime="2017-12-28 23:59:59" ActivityType="2" Activityname="ui_Activity_81" ActivityDesc="Saledesc_021">
+		<entry id="1" ActivityCondition="20" RewardBoxID="172323" Desc="ui_sevenRevelry_41"/>
+		<entry id="2" ActivityCondition="30" RewardBoxID="172324" Desc="ui_sevenRevelry_41"/>
+		<entry id="3" ActivityCondition="50" RewardBoxID="172325" Desc="ui_sevenRevelry_41"/>
+		<entry id="4" ActivityCondition="70" RewardBoxID="172326" Desc="ui_sevenRevelry_41"/>
+	</activity> -->
+	
+	<!-- 钻石宝箱 -->
+	<!-- <activity id="50" StartTime="2017-12-27 02:00:00" EndTime="2017-12-28 23:59:59" ActivityType="6" Activityname="ui_Activity_85" ActivityDesc="Saledesc_025">
+		<entry id="1" ActivityCondition="300" RewardBoxID="172318" Desc=""/>
+		<entry id="2" ActivityCondition="1000" RewardBoxID="172319" Desc=""/>
+		<entry id="3" ActivityCondition="3000" RewardBoxID="172320" Desc=""/>
+		<entry id="4" ActivityCondition="6000" RewardBoxID="172321" Desc=""/>
+		<entry id="5" ActivityCondition="12000" RewardBoxID="172322" Desc=""/>
+	</activity> -->
+	
+	<!-- 组队副本次数 -->
+	<!-- <activity id="51" StartTime="2017-12-17 00:00:00" EndTime="2017-12-22 23:59:59" ActivityType="5" Activityname="ui_Activity_84" ActivityDesc="Saledesc_024">
+		<entry id="1" ActivityCondition="5" RewardBoxID="172332" Desc="ui_sevenRevelry_44"/>
+		<entry id="2" ActivityCondition="10" RewardBoxID="172333" Desc="ui_sevenRevelry_44"/>
+		<entry id="3" ActivityCondition="15" RewardBoxID="172334" Desc="ui_sevenRevelry_44"/>
+		<entry id="4" ActivityCondition="20" RewardBoxID="172335" Desc="ui_sevenRevelry_44"/>
+	</activity> -->
+</root>

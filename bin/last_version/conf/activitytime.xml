@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+
+<!--
+	id:活动根据id排序，一个活动id为一个标签
+	Icon:活动标签栏ICON
+	ActivityTitle:活动名字
+	OpenTimeTitle:活动开启时间描述
+	OpenTimeShow:活动开启显示时间
+	Timetype:活动时间类型（1每日、2每周）
+	OpenTime:活动开启时间，多段用“ , ”分隔，同时换行限时
+	ActivityDescTitle:活动规则描述标题
+	ActivityDesc1:活动描述，若无填写对应键值则不显示
+	RewardTitle:活动奖励标题
+	RewardIcon1:活动奖励道具，若未填写对应ICON则不显示
+	IsOpen:是否开放显示，1：显示，0：不显示
+	day:星期日：0 星期一到六：1-6 全周开放：99
+-->
+<conf>
+	<activity id="1" IsOpen="1" day="99" Icon="Boss" ActivityTitle="ActivityTitle_S01" OpenTimeTitle="OpenTimeTitle_01" OpenTime="43200-44100,64800-65700" OpenTimeShow="00:00-23:59\n00:00-23:59" ActivityDescTitle="ActivityDescTitle_01" ActivityDesc1="ActivityDesc1_01" ActivityDesc2="ActivityDesc2_01" ActivityDesc3="ActivityDesc3_01" RewardTitle="ActivityRewardTitle_01" RewardIcon1="102319" RewardIcon2="2" RewardIcon3="1" RewardIcon4="9"/>
+	<activity id="2" IsOpen="1" day="99" Icon="1V1" ActivityTitle="ActivityTitle_S02" OpenTimeTitle="OpenTimeTitle_02" OpenTime="43200-46800,77400-81000" OpenTimeShow="00:00-23:59\n00:00-23:59" ActivityDescTitle="ActivityDescTitle_02" ActivityDesc1="ActivityDesc1_02" ActivityDesc2="ActivityDesc2_02" ActivityDesc3="ActivityDesc3_02" RewardTitle="ActivityRewardTitle_02" RewardIcon1="811607" RewardIcon2="51220300" RewardIcon3="122204" RewardIcon4="102815"/>
+	<activity id="3" IsOpen="1" day="99" Icon="3V3" ActivityTitle="ActivityTitle_S03" OpenTimeTitle="OpenTimeTitle_03" OpenTime="73800-77400" OpenTimeShow="00:00-23:59" ActivityDescTitle="ActivityDescTitle_03" ActivityDesc1="ActivityDesc1_03" ActivityDesc2="ActivityDesc2_03" ActivityDesc3="ActivityDesc3_03" RewardTitle="ActivityRewardTitle_03" RewardIcon1="102920" RewardIcon2="51220200" RewardIcon3="121222" RewardIcon4="120101"/>
+	<activity id="4" IsOpen="1" day="99" Icon="UnionVS" ActivityTitle="ActivityTitle_S04" OpenTimeTitle="OpenTimeTitle_04" OpenTime="73800-76200" OpenTimeShow="00:00-23:59" ActivityDescTitle="ActivityDescTitle_04" ActivityDesc1="ActivityDesc1_04" ActivityDesc2="ActivityDesc2_04" ActivityDesc3="ActivityDesc3_04" RewardTitle="ActivityRewardTitle_04" RewardIcon1="2" RewardIcon2="1" RewardIcon3="102800" RewardIcon4="4"/>
+	<activity id="5" IsOpen="1" day="99" Icon="HeroLegue" ActivityTitle="ActivityTitle_S05" OpenTimeTitle="OpenTimeTitle_05" OpenTime="72000-75600" OpenTimeShow="00:00-23:59" ActivityDescTitle="ActivityDescTitle_05" ActivityDesc1="ActivityDesc1_05" ActivityDesc2="ActivityDesc2_05" ActivityDesc3="ActivityDesc3_05" RewardTitle="ActivityRewardTitle_05" RewardIcon1="811623" RewardIcon2="102815" RewardIcon3="17" RewardIcon4="121221"/>
+	
+</conf>

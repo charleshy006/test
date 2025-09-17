@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<conf>
+	<!--
+		isopen:功能是否开放		
+
+		id:展示图片先后顺序与ID一致
+		StartTime:展示图片开始时间
+		EndTime:展示图片结束时间
+		ShowPicture:展示图片  热更格式：资源目录名+"_"+任意串组成，否则查找不到图片
+		BoxID:展示图片上额外显示道具ID，留空则不显示道具ID
+	-->
+	<activity isopen="1" >
+		<entry id="1" StartTime="2022-01-01 00:00:00" EndTime="2022-02-28 23:59:59" ShowPicture="Eventpage_3" BoxID=""/>
+		<entry id="2" StartTime="2022-01-01 00:00:00" EndTime="2022-05-26 23:59:59" ShowPicture="Eventpage_1" BoxID=""/>
+		<entry id="3" StartTime="2017-05-01 00:00:00" EndTime="2017-05-03 23:59:59" ShowPicture="Eventpage_2" BoxID=""/>
+		<entry id="4" StartTime="2017-05-01 00:00:00" EndTime="2017-05-03 23:59:59" ShowPicture="Eventpage_3" BoxID=""/>
+		<entry id="5" StartTime="2017-04-28 00:00:00" EndTime="2017-05-01 23:59:59" ShowPicture="Eventpage_5" BoxID=""/>
+	</activity>
+	
+	<rechargetype>
+		<!--首充6元-->
+		<entry id="1" StartTime="2017-03-27 00:00:00" EndTime="2017-03-27 00:00:00" ShowPicture="Eventpage_1" BoxID="" Probability="1000" RechargeID="23" />
+		<!--月卡-->
+		<entry id="2" StartTime="2017-03-27 00:00:00" EndTime="2017-03-27 00:00:00" ShowPicture="Eventpage_1" BoxID="" Probability="1000" RechargeID="20" />
+		<!--成长计划-->
+		<entry id="3" StartTime="2017-03-27 00:00:00" EndTime="2017-03-27 00:00:00" ShowPicture="Eventpage_1" BoxID="" Probability="1000" RechargeID="22"  />
+	</rechargetype>
+	
+	<doublerecharge>
+		<!--首充6元双倍-->
+		<entry id="1" StartTime="2017-03-27 00:00:00" EndTime="2017-03-27 00:00:00" ShowPicture="Eventpage_1" BoxID="" Probability="2000" RechargeID="23" />
+		<!--首充30元双倍-->
+		<entry id="2" StartTime="2017-03-27 00:00:00" EndTime="2017-03-27 00:00:00" ShowPicture="Eventpage_1" BoxID="" Probability="2000" RechargeID="24" />
+		<!--首充98元双倍-->
+		<entry id="3" StartTime="2017-03-27 00:00:00" EndTime="2017-03-27 00:00:00" ShowPicture="Eventpage_1" BoxID="" Probability="1000" RechargeID="25" />
+		<!--首充198元双倍-->
+		<entry id="4" StartTime="2017-03-27 00:00:00" EndTime="2017-03-27 00:00:00" ShowPicture="Eventpage_1" BoxID="" Probability="1000" RechargeID="26" />
+		<!--首充328元双倍-->
+		<entry id="5" StartTime="2017-03-27 00:00:00" EndTime="2017-03-27 00:00:00" ShowPicture="Eventpage_1" BoxID="" Probability="500" RechargeID="27" />
+		<!--首充648元双倍-->
+		<entry id="6" StartTime="2017-03-27 00:00:00" EndTime="2017-03-27 00:00:00" ShowPicture="Eventpage_1" BoxID="" Probability="500" RechargeID="28" />
+	</doublerecharge>
+	
+	
+</conf>

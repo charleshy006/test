@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root>
+	<Openitem>
+		<!--新年时装-->
+		<!-- <entry id="4" openitemID="41221000" isopen="0"/>
+		<entry id="5" openitemID="43221000" isopen="0"/>
+		<entry id="6" openitemID="49221000" isopen="0"/> -->
+		
+		<!--皮卡丘时装-->
+		<entry id="7" openitemID="41221700" isopen="0"/>
+		<entry id="8" openitemID="43221700" isopen="0"/>
+		<entry id="9" openitemID="49221700" isopen="0"/>
+		
+		<!--哆啦A梦时装-->
+		<entry id="10" openitemID="41221800" isopen="0"/>
+		<entry id="11" openitemID="43221800" isopen="0"/>
+		<entry id="12" openitemID="49221800" isopen="0"/>
+		
+		<!--中秋时装-->
+		<entry id="13" openitemID="41221900" isopen="0"/>
+		<entry id="14" openitemID="43221900" isopen="0"/>
+		<entry id="15" openitemID="49221900" isopen="0"/>
+		
+		<!--韩服时装-->
+		<entry id="16" openitemID="41222000" isopen="0"/>
+		<entry id="17" openitemID="49222000" isopen="0"/>
+		
+		<!--万圣节时装-->
+		<!-- <entry id="18" openitemID="41222100" isopen="0"/>
+		<entry id="19" openitemID="43222100" isopen="0"/>
+		<entry id="20" openitemID="49222100" isopen="0"/> -->
+		
+		<!--哈喽K提时装-->
+		<entry id="21" openitemID="41222200" isopen="0"/>
+		<entry id="22" openitemID="43222200" isopen="0"/>
+		<entry id="23" openitemID="49222200" isopen="0"/>
+		
+		<!--王尼玛时装-->
+		<entry id="24" openitemID="41222300" isopen="0"/>
+		<entry id="25" openitemID="49222300" isopen="0"/>
+		
+		<entry id="26" openitemID="41222400" isopen="0"/>
+		<entry id="27" openitemID="49222400" isopen="0"/>
+		
+		<entry id="28" openitemID="41222500" isopen="0"/>
+		<entry id="29" openitemID="49222500" isopen="0"/>
+		
+		<!--双子座-->
+		<!-- <entry id="30" openitemID="41260200" isopen="0"/>
+		<entry id="31" openitemID="49260200" isopen="0"/> -->
+		<!--巨蟹座-->
+		<entry id="32" openitemID="41260300" isopen="0"/>
+		<entry id="33" openitemID="49260300" isopen="0"/>
+		
+		<!--王尼玛表情-->
+		<entry id="34" openitemID="41210800" isopen="0"/>
+		<entry id="35" openitemID="41210900" isopen="0"/>
+		<entry id="36" openitemID="41211000" isopen="0"/>
+		<entry id="37" openitemID="41211100" isopen="0"/>
+		<entry id="38" openitemID="41211200" isopen="0"/>
+		<entry id="39" openitemID="41211300" isopen="0"/>
+		<entry id="40" openitemID="41211400" isopen="0"/>
+		<entry id="41" openitemID="41211500" isopen="0"/>
+		<entry id="42" openitemID="41211600" isopen="0"/>
+		<entry id="43" openitemID="41211700" isopen="0"/>
+		
+	</Openitem>
+	
+	<Openpet>
+		<!--小萝莉-->
+		<entry id="3" openpetID="811626" isopen="0"/>
+		<!--王尼玛-->
+		<entry id="4" openpetID="811628" isopen="0"/>
+		<!--张全蛋-->
+		<entry id="5" openpetID="811629" isopen="0"/>
+		<!--王尼美-->
+		<entry id="6" openpetID="811630" isopen="0"/>
+		<!--蓝龙-->
+		<entry id="7" openpetID="811627" isopen="0"/>
+		<!--亡灵法师-->
+		<entry id="8" openpetID="811632" isopen="0"/>
+	</Openpet>
+	
+</root>

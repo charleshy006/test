@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<root>
+	<!--
+		SYS邮件和其他文字引用配置
+	-->
+	<syslanguages>
+			<!-- 系统 -->
+		<entry id="1" languages="系统"/>
+		<!-- 1v1战场 -->
+		<entry id="2" languages="1v1"/>
+		<!-- 天梯排行系统 -->
+		<entry id="3" languages="德怒拉之塔系统"/>
+		<!-- 世界boss击杀奖励 -->
+		<entry id="4" languages="世界Boss击杀奖励"/>
+		<!-- 夺宝系统 -->
+		<entry id="5" languages="丛林法则系统"/>
+		<!-- 公会积分奖励 -->
+		<entry id="6" languages="舰队积分奖励"/>
+		<!-- 公会副本伤害排名奖励 -->
+		<entry id="7" languages="舰队副本伤害排名奖励"/>
+		<!-- 会长已转让 -->
+		<entry id="8" languages="舰长已转让"/>
+		<!-- 世界boss奖励 -->
+		<entry id="9" languages="世界Boss奖励"/>
+		<!-- 公会副本击杀奖励 -->
+		<entry id="10" languages="舰队副本击杀奖励"/>
+		<!-- 公会副本完成奖励 -->
+		<entry id="11" languages="舰队副本完成奖励"/>
+		<!-- 限时武神抽奖奖励 -->
+		<entry id="12" languages="限时并蒂者抽奖奖励"/>
+		<!-- 开服战力排名奖励 -->
+		<entry id="13" languages="开服战力排名奖励"/>
+		<!-- 公会领地战 -->
+		<entry id="14" languages="舰队领地战"/>
+		<!-- 飞船护送奖励 -->
+		<entry id="15" languages="星际保镖奖励"/>
+		<!-- 飞船护送获得奖励 -->
+		<entry id="16" languages="星际保镖获得奖励"/>
+		<!-- 翡翠梦境排名奖励 -->
+		<entry id="17" languages="翡翠梦境排名奖励"/>
+		<!-- 穿戴翅膀提示 -->
+		<entry id="18" languages="VIP等级不足"/>
+		<!-- 英雄联赛奖励 -->
+		<entry id="19" languages="英雄联赛奖励"/>
+		<!-- 穿戴翅膀提示2 -->
+		<entry id="20" languages="VIP等级不足，无法佩戴该机翼"/>
+	</syslanguages>
+</root>

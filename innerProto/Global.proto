@@ -1,0 +1,5250 @@
+package  Global;
+
+enum GlobalModID
+{
+	LOGIN_MOD = 1;					//登录协议	
+	GATE_MOD  = 2;					//与网关相关的协议
+	GAME_MOD  = 3;					//与game相关协议
+	PLATFORM_MOD = 4;				//与平台相关协议
+	HTTP_MOD = 5;					//处理http协议
+	WEB_MOD = 6;					//与Web之间的相关协议
+}
+
+/////////////////////////////////
+//
+/////////////////////////////////
+
+message stLoginGlobal
+{
+	optional uint32 svrType  = 1;		
+	optional uint32 svrID = 2;
+	optional string ip = 3;
+	optional uint32 port = 4;
+
+	enum ProtoModID
+	{
+		ModID = 1;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 1;	
+	}
+}
+
+////////////////////////////////
+//
+///////////////////////////////
+
+//////////////////////////////
+// 与网关相关的协议
+////////////////////////////////
+
+//创建角色
+message stCreateRole
+{
+	optional string account  = 1;
+	optional string name = 2;
+	optional uint32 gateID = 3;
+	optional uint32 job = 4;
+	optional uint32 sex = 5;
+	optional uint32 headID = 6;
+	optional uint32 faceID = 7;
+	optional string clientIP = 8;
+	optional string deviceID = 9;
+	optional uint32 opID = 10;
+	optional string channelID = 11;		//渠道ID
+	optional uint32 serverID = 12;
+
+	enum ProtoModID
+	{
+		ModID = 2;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 1;	
+	}
+}
+
+//创建角色返回
+message stCreateRoleResult
+{
+	optional uint32 retCode = 1;
+	optional string account = 2;
+	optional uint32 charID = 3;
+	optional string name = 4;
+	optional uint32 level = 5;
+	optional uint32 job = 6;
+	optional uint32 sex = 7;
+	optional uint32 serverID = 8;
+	optional uint32 createTime = 9;
+
+	enum ProtoModID
+	{
+		ModID = 2;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 2;	
+	}
+}
+
+//请求快照数据
+message stReqSnapData
+{
+	optional string account = 1;
+	optional uint32 gateID = 2;
+	optional string ip = 3;
+	optional string deviceID = 4;			//设备ID
+	optional uint32 opID = 5;				//运营ID
+	optional uint32 serverID = 6;
+
+	enum ProtoModID
+	{
+		ModID = 2;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 3;	
+	}
+}
+
+message stSnapData
+{
+	optional uint32 charID = 1;
+	optional string name = 2;
+	optional uint32 level = 3;
+	optional string account = 4;
+	optional uint32 job = 5;
+	optional uint32 sex = 6;
+	optional uint32 serverID = 7;
+}
+
+//返回快照数据
+message stRetSnapData
+{
+	repeated stSnapData data = 1;
+	optional string  account =  2;
+
+	enum ProtoModID
+	{
+		ModID = 2;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 4;	
+	}
+};
+
+//请求加载角色数据
+message stReqLoadData
+{
+	optional uint32 gameSvrID = 1;
+	optional uint32 gateSvrID = 2;
+	optional string account = 3;
+	optional uint32 charID = 4;
+	optional string ip = 5;
+	optional string deviceID = 6;
+	optional string channelID = 7;			//渠道ID
+	optional string netIP = 8;
+
+	enum ProtoModID
+	{
+		ModID = 2;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 5;	
+	}
+}
+
+//网关转发过来的协议  gate ---> global
+message stGateForwardProto
+{
+	optional uint32 charID  = 1 ;		//角色ID
+	optional uint32 modID   = 2 ;		//转发的协议模块号
+	optional uint32 funID   = 3;		//转发的协议功能号
+	optional uint32 cmdLen  = 4;		//转发的协议长度
+	optional bytes  data	= 5;		//转发的协议内容
+
+	enum ProtoModID
+	{
+		ModID = 2;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 6;	
+	}
+}
+
+//发送协议给玩家 global ---> gate
+message stForwardProto2Me
+{
+	optional uint32 charID  = 1 ;		//角色ID
+	optional uint32 modID   = 2 ;		//转发的协议模块号
+	optional uint32 funID   = 3;		//转发的协议功能号
+	optional uint32 cmdLen  = 4;		//转发的协议长度
+	optional bytes  data	= 5;		//转发的协议内容
+
+	enum ProtoModID
+	{
+		ModID = 2;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 7;	
+	}
+}
+
+//广播协议给所有玩家 global ---> gate
+message stBroadcastProto2AllUser
+{
+	optional uint32 modID   = 1;		//转发的协议模块号
+	optional uint32 funID   = 2;		//转发的协议功能号
+	optional uint32 cmdLen  = 3;		//转发的协议长度
+	optional bytes  data	= 4;		//转发的协议内容
+
+	enum ProtoModID
+	{
+		ModID = 2;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 8;	
+	}
+}
+
+//登录global失败 global ---> gate
+message  stLoginGlobalFail
+{
+	enum FailReason
+	{
+		HAS_LOGIN_IN = 1;		//已经登录了
+		CREATE_FAIL = 2;		//创建失败
+		LOAD_DATA_FAIL = 3;		//加载错误
+		FORBID_LOGIN = 4;		//禁止登录
+		OTHER = 5;				//其它原因
+	}
+
+	optional string account = 1;		//账号
+	optional FailReason erroCode = 2;	//错误码
+
+	enum ProtoModID
+	{
+		ModID = 2;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 9;	
+	}
+}
+
+//网关通知下线 gate ---> global
+message stNotifyLoginOut
+{
+	optional uint32 charID = 1;
+	optional string account = 2;
+
+	enum ProtoModID
+	{
+		ModID = 2;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 10;	
+	}
+}
+
+//game 服务器启动了  global ---> gate
+message stGameSvrStartUp
+{
+	optional uint32 svrID = 1;		//服务器ID
+
+	enum ProtoModID
+	{
+		ModID = 2;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 10;	
+	}
+}
+
+//踢人下线 global ---> gate
+message stKillUserOut
+{
+	optional uint32 charID = 1;		//踢玩家下线
+
+	enum ProtoModID
+	{
+		ModID = 2;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 11;	
+	}
+}
+
+message stServerCfgPair
+{
+	optional string key = 1;
+	optional string value = 2;
+}
+
+//通知网关服务器配置
+message stNotifyGateSvrCfg
+{
+	repeated stServerCfgPair cfgPair = 1;		//配置信息
+
+	enum ProtoModID
+	{
+		ModID = 2;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 12;	
+	}
+}
+
+//重新登录了游戏 gate ----> global
+message stReloginGlobal
+{
+	optional string ip = 1;		//现在的ip
+	optional string device = 2;	//设备
+	optional uint32 charID = 3;	//角色ID
+	optional string account = 4;//账号
+
+	enum ProtoModID
+	{
+		ModID = 2;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 13;	
+	}
+}
+
+//自动重连游戏 gate ----> global
+message stPlayerAutoConnect
+{
+	optional string ip = 1;		//现在的ip
+	optional string device = 2;	//设备
+	optional uint32 charID = 3;	//角色ID
+	optional string account = 4;//账号
+
+	enum ProtoModID
+	{
+		ModID = 2;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 14;	
+	}
+}
+
+//客户端失去连接 gate -----> global
+message stClientLostConnect
+{
+	repeated string account = 1;	//失去连接的玩家
+
+	enum ProtoModID
+	{
+		ModID = 2;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 15;	
+	}
+}
+
+//返回是否是新建账号 gate -----> global
+message stAskIsNewAccount
+{
+    optional string account = 1;	//登录账号
+
+	enum ProtoModID
+	{
+		ModID = 2;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 16;	
+	}
+}
+
+//返回是否是新建账号 global -----> gate
+message stIsNewAccount
+{
+    optional bool isNew = 1;	    //是否是新账号
+    optional string account = 2;	//登录账号
+
+	enum ProtoModID
+	{
+		ModID = 2;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 17;	
+	}
+}
+
+//////////////////////////////
+//
+//////////////////////////////
+
+///////////////////////////////
+/// 网关与global之间的交互
+///////////////////////////////
+
+enum SaveType
+{   
+	SAVE_TIMETICK = 1;      //定时保存
+	SAVE_LOGOUT = 2;        //退出时候保存
+	SAVE_FORCE =3 ;        //强制保存
+	SAVE_CHGSVR = 4;		//切换服务器保存
+} 
+
+//保存角色信息 game --> global
+message stSaveRoleInfo
+{
+	optional SaveType   type = 1;       //存档类型
+	optional uint32     charID = 2;     //角色ID
+	optional uint32     gameID = 3;     //游戏服务器ID
+	optional string     account = 4;   	//账号
+	optional uint32     dataSize = 5;   //二进制存档的大小
+	optional bytes      data = 6;    	//二进制存档的数据
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 1;	
+	}
+}
+
+enum eLoadRoleDataType
+{
+	eLoadData_Login = 1;			//登录加载
+	eLoadData_ChgSvr = 2;			//换服加载
+}
+
+//返回玩家信息  global ---> game
+message stRetRoleInfo
+{
+	optional  uint32     charID = 1;                		//角色ID
+	optional  uint32     gateID = 2;                		//场景ID
+	optional  string     ip  = 3; 							//IP
+	optional  string     account = 4;  						//账号
+	optional  uint32     dataSize = 5;              		//二进制存档的大小
+	optional  bytes      data = 6;							//二进制存档内容
+	optional  eLoadRoleDataType eloadDataType = 7;			//加载数据类型
+	optional  string 	 deviceID = 8;						//设备ID
+	optional  string     channelID = 9;						//渠道ID
+	optional  string     netIP = 10;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 2;	
+	}
+}
+
+//登录game成功 game ---> global
+message stUserEnterMapSuccess
+{
+	optional uint32 charID = 1;
+	optional uint32 gmType = 2;
+	optional uint32 level = 3;
+	optional uint32 job = 4;
+	optional uint32 sex = 5;
+	optional uint32 fetchLilianNum = 6;
+	optional uint32 serverID = 7;
+	optional uint32 vipLv = 8;
+	optional uint32 headID = 9;							//头部ID
+	optional uint32 bodyID = 10;						//衣服ID
+	optional uint32	weaponID = 11;						//武器ID
+	optional uint32	cloackID = 12;						//披风ID
+	optional uint32	wingID = 13;						//翅膀ID
+	optional uint32 shoeID = 14;						//鞋子
+	optional uint32 fashionHair = 15;       			//发型
+	optional uint32 fashionFace = 16;       			//表情
+	optional uint32 fashionBody = 17;       			//衣服
+	optional uint32 fashionWeapon = 18;     			//武器
+	optional uint32 fashionShoe = 19;       			//鞋子
+	optional uint32 fashionDecoration = 20; 			//脸饰品
+	optional uint32 compensationID = 21;				//补偿ID
+	optional uint32 effectID = 22;						//特效ID
+	optional uint32 wingBreakLv = 23;					//翅膀突破等级
+	optional uint32 pubServerIndex = 24; 				//PubServerID
+	optional uint32 pubCharID = 25;                     //pub上的charID
+	optional uint32 areaCode = 26;						//区服ID
+	optional uint32 photoID = 27;						//头像ID
+	
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 3;	
+	}
+}
+
+message stRechargeInfo
+{
+	optional uint32 itemID = 1;
+	optional uint32 money = 2;
+	optional string tid = 3;
+	optional string data = 4;	//扩展参数
+}
+//通知Game玩家充值了  global ---> game
+message stUserRecharge
+{
+	optional uint32 charID = 1;					//角色ID
+	repeated stRechargeInfo rechargeInfo = 2;	//充值信息
+	optional bool isExtend = 3;					//是否统计
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 4;	
+	}
+}
+
+//客户端发送过来的gm指令 game ---> global
+enum eGMType
+{
+	GMType_SendMail = 1;		//发送邮件
+	GMType_OpRedis = 2;			//操作redis
+	GMType_SendNotice = 3;		//发送通知
+	GMType_BatchSendMail = 4;	//批量发送邮件
+	GMType_ADD_GUILD_ACTIVITY_DEGREE = 5;//增加公会活跃度
+}
+
+message stProcessGM
+{
+	optional eGMType type = 1;		//邮件类型
+	repeated uint32  intParam = 2;	//整型参数
+	repeated string  strParam = 3;	//字符串参数
+	optional uint32  charID = 4;	//角色ID
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 5;	
+	}
+}
+
+//今日领取历练次数 global ---> game
+message stSynFetchLilianNum
+{
+	optional uint32 charID = 1;		//角色ID
+	optional uint32 num = 2;		//数量
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 6;	
+	}
+}
+
+//上线同步公会ID global ---> game
+message stSynGuildID
+{
+	optional uint32 charID  		= 1;		//角色ID
+	optional uint32 guildID 		= 2;		//公会ID
+	optional uint32 guildLv 		= 3;		//公会等级
+	optional uint32 joinInTime		= 4;		//加入时间
+	optional uint32 blackMarketLv	= 5;		//黑市等级
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 7;	
+	}
+}
+
+//创建公会 game ---> global
+message stCreateGuild
+{
+	optional uint32 charID = 1;		//角色ID
+	optional string name = 2;		//公会名字
+	optional uint32 badge = 3;		//徽章
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 8;	
+	}
+}
+
+//玩家创建公会成功扣钱了 global ---> game
+message stCreateGuildDecMoney
+{
+	optional uint32 charID = 1;		//角色ID
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 9;	
+	}
+}
+
+//请求加入公会 game ---> global
+message stForwardJoininGuild
+{
+	optional uint32 charID = 1;		//角色ID
+	optional uint32 guildID = 2;	//公会ID
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 10;	
+	}
+}
+
+//增加公会的贡献度 game ---> global
+message stAddGuildContribute
+{
+	optional uint32 charID = 1;		//角色ID
+	optional uint32 contribute = 2; //贡献度
+	optional uint32 todayDayContribute = 3;//今日贡献度
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 11;	
+	}
+}
+
+//广播公会聊天 game ---> global
+message stBroadcastGuildChatInfo
+{
+	optional uint32 	 charID = 1;			//角色ID
+	optional uint32		 vipLv = 2;				//vip等级
+	optional string      content = 3;			//发送的聊天内容
+	optional bool		 isVoice = 4;			//是否声音
+	optional string		 voiceUrl = 5;			//语音
+	optional uint32		 voiceLenght = 6;		//语音长度
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 12;	
+	}
+}
+
+//玩家进行了祈福 global ---> game
+message stGuildPray
+{
+	optional uint32 charID = 1;
+	optional uint32 buildingLv = 2;
+	optional uint32 extraBoxID = 3;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 13;	
+	}
+}
+
+//同步等级 game ----> global
+message stSynUserLevel
+{
+	optional uint32 charID = 1;		//角色ID
+	optional uint32 lv = 2;			//等级
+	optional bool   levelup = 3;	//是否升级
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 14;	
+	}
+}
+
+//同步玩家星星数 game ----> global
+message stSynCopymapStarNum
+{
+	optional uint32 charID = 1;		//角色ID
+	optional uint32 starNum = 2;	//星星数
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 15;	
+	}
+}
+
+//同步战力
+message stSynUserBattlePower
+{
+	optional uint32 charID = 1;		//角色ID
+	optional uint32 battlePower = 2;//战力
+	optional uint32 maxHP = 3;		//最大血量
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 16;	
+	}
+}
+
+//广播组队聊天 game ---> global
+message stSendTeamChatInfo
+{
+	optional uint32 	 charID = 1;			//角色ID	
+	optional string      content = 2;			//发送的聊天内容
+	optional uint32      vipLv = 3;				//vip等级
+	optional bool		 isVoice = 4;			//是否声音
+	optional string 	 voiceUrl = 5;			//声音位置
+	optional uint32		 voiceLenght = 6;		//语音长度
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 17;	
+	}
+}
+
+//队伍离开了组队 game ---> global
+message stTeamLeaveCopyMap
+{
+	optional uint32 teamID = 1;		//队伍ID
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 18;	
+	}
+}
+
+//宝藏合成 game ----> global
+message stTreasureCombine
+{
+	optional uint32 charID = 1;		//角色ID
+	optional uint32 combineType = 2;//合成类型
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 19;	
+	}
+}
+
+//宝藏合成增加道具 global ---> game
+message stTreasureCombineSuccess
+{
+	optional uint32 charID = 1;		//角色ID
+	optional uint32 itemID = 2;		//道具ID
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 20;	
+	}	
+}
+
+//宝藏掠夺和平购买  game ---> global
+message stBuyPeaceModubleTime
+{
+	optional uint32 charID = 1;
+	optional uint32 addTime = 2;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 21;	
+	}		
+}
+
+//玩家请求切换服务器 game ----> global
+message stReqChangeGameSvr
+{
+	optional uint32 charID = 1;				//角色ID
+	optional uint32 gameSvrID = 2;			//game服务器ID
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 22;	
+	}		
+}
+
+//确定玩家可以切换服务器 global ----> game
+message stConfirmChangeGameSvr
+{
+	optional uint32 charID = 1;				//角色ID
+	optional uint32 gameSvrID = 2;			//game服务器ID
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 23;	
+	}		
+}
+
+//给某个玩家返回其它玩家数据数据 global ---> game
+message stRetOtherUserData2Me
+{
+	optional uint32 myCharID = 1;					//玩家ID
+	optional uint32 otherCharID = 2;				//其它角色ID
+	optional bool   isRobot = 3;					//是否是机器人
+	optional uint32 dataSize = 4;              		//二进制存档的大小
+	optional bytes  data = 5;						//二进制存档内容
+	optional string guildName = 6;					//公会名字
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 24;	
+	}		
+}
+
+message stMailAttach
+{
+	optional uint32 itemID = 1;	
+	optional uint32 num = 2;
+}
+//提取附件获得物品 global ----> game
+message stObtainItemFromMail
+{
+	repeated stMailAttach attachs = 1;//附件
+	optional uint32 charID = 2;		  //角色ID
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 25;	
+	}		
+}
+
+//增加宝藏资源 game ---> global
+message stSynAddTreasure
+{
+	optional uint32 resID = 1;
+	optional uint32 num = 2;
+	optional uint32 charID = 3;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 26;	
+	}		
+}
+
+
+//和某人pk global ---> game
+message stBeginPKWithOther
+{
+	enum ePKType 
+	{
+		eArena_PK = 1;      //竞技场PK 
+		eLeitai_PK = 2;     //擂台PK
+		eIntercept_PK = 3;	//劫持pk
+	}
+
+	optional uint32 myCharID = 1;					//玩家ID
+	optional uint32 otherCharID = 2;				//其它角色ID					
+	optional uint32 dataSize = 3;              		//二进制存档的大小
+	optional bytes  data = 4;						//二进制存档内容
+	optional ePKType type = 5;						//pk类型
+	optional uint32  challengeRank = 6;				//挑战等级
+	optional uint32  robotID = 7;					//机器人ID
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 27;	
+	}		
+}
+
+//擂台赛挑战玩家 game ----> global
+message stUserLeitaiChallenge
+{
+	optional uint32 round = 1;			//轮次
+	optional uint32 charID = 2;			//角色ID
+	optional uint32 mode = 3;			//模式
+	optional uint32 challengeCharID = 4;//挑战角色ID
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 28;	
+	}		
+}
+
+//竞技场战斗结果 game ---> global
+message stArenaPKResult
+{
+	optional uint32 charID = 1;		//挑战者的ID
+	optional bool   win = 2;		//true 胜利,false失败
+	optional uint32 rank = 3;		//挑战的名次
+	optional uint32 historyRank = 4;//历史排名
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 29;	
+	}			
+}
+
+//同步武神抽奖积分 game ---> global
+message stSynDrawHeroScore
+{
+	optional uint32 charID = 1;			//角色ID
+	optional uint32 score = 2;			//分数
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 30;	
+	}		
+}
+
+//更新擂台使用时间 game ---> global
+message stUpLeitaiUseTime
+{
+	optional uint32 charID = 1;		//角色ID
+	optional uint32 useTime = 2;	//使用时间
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 31;	
+	}			
+}
+
+//玩家离开公会时间 global ---> game
+message stUserLeaveGuild
+{
+	repeated uint32 charIDs = 1;		//离开公会的玩家
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 32;	
+	}		
+}
+
+message stEnterCopymapMemInfo
+{
+	optional uint32 charID = 1;			//角色ID
+	optional uint32 addDamagePer = 2;	//增加伤害百分比
+}
+
+//玩家组队进入副本 global ---> game
+message stTeamEnterCopyMap
+{
+	optional uint32 copymapID = 1;		//副本ID
+	optional uint32 teamID = 2;			//队伍的ID
+	repeated stEnterCopymapMemInfo memerInfo = 3;		//队伍成员ID
+	optional uint32 bossHP = 4;			//boss血量
+	optional uint32 bossLv = 5;			//等级
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 33;	
+	}		
+}
+
+//巅峰对决进入副本  global ---> game
+message stOne2OnePVPEnterCopyMap
+{
+	repeated uint32 memberIDs = 1;			//所有成员
+	optional bool   pkWithFriend =2 ;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 34;	
+	}		
+}
+
+//转发抢夺协议 game ---> global
+message stForwardCapture
+{
+	optional uint32 charID = 1;		//我的角色ID
+	optional uint32 otherID = 2;	//其它人的角色ID
+	optional uint32 combineID = 3;	//合成ID
+	optional uint32 resType = 4;	//抢夺的资源类型
+	optional uint32 num = 5;		//抢夺次数
+	optional bool   multiCapture = 6;//是否多次抢夺
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 34;	
+	}		
+}
+
+message stCaptureRewardItem
+{
+	optional uint32 itemID = 1;
+	optional uint32 num = 2;
+}
+
+//夺宝抢夺增加金币和金钱 global ---> game
+message stCaptureReward
+{
+	optional uint32 charID = 1;		//角色ID
+	optional uint32 dropID = 2;		//掉落ID
+	optional uint32 moneyCoef = 3;	//金钱系数
+	optional uint32 expCoef = 4;	//经验系数
+	optional bool   obtainPiece = 5;//是否抢到碎片
+	optional uint32 num = 6;		//数量
+	optional bool  multiCapture = 7;//多次抢夺
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 36;	
+	}		
+}
+
+enum eRealTimePKType
+{
+	eRealTimePKType_KillAll = 1;		//杀完对方所有人
+	eRealTimePKType_Finish = 2;			//完成所有节点
+}
+
+//实时战场进入副本 global ---> game
+message stRealTimeBattleEnterCopymap
+{
+	optional eRealTimePKType pkType = 1; //类型
+	optional uint32 teamAID = 2;		 //A方的ID
+	optional uint32 teamBID = 3;		 //B方的ID
+	repeated uint32 teamAMembers = 4;	 //A方的所有成员
+	repeated uint32 teamBMembers = 5;	 //B方的所有成员
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 37;	
+	}		
+}
+
+//通知玩家增加历练 global ---> game
+message stNotifyAddLilian
+{
+	optional uint32 charID = 1;			//角色ID
+	optional uint32 num = 2;			//增加的历练数量
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 38;	
+	}			
+}
+
+//进入公会领地 global ---> game
+message stEnterGuildCopymap
+{
+	optional string guildName = 1;		//公会名字
+	optional uint32 charID = 2;			//角色ID
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 39;	
+	}			
+}
+
+//同步自己的贡献度 game ---> global
+message stSynMyContribyte
+{
+	optional uint32 charID = 1;		//角色ID
+	optional uint32 myContribute = 2;//自己的贡献度
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 40;	
+	}
+}
+
+//设置GM类型 global ---> game
+message stOnlineUserGMType
+{
+	optional uint32 charID = 1;		//角色ID
+	optional uint32 gmValue = 2;	//gm值
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 41;	
+	}
+}
+
+//封禁解禁玩家 global ----> game
+message stForbidOnlineUser
+{
+	optional uint32 charID = 1;				//角色ID
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 42;	
+	}
+}
+
+//one2one PK结果
+message stOne2OnePVPFinish
+{
+	optional uint32 charID1 = 1;
+	optional uint32 score1 = 2;
+	optional bool   win1 = 3;            //是否胜利
+	optional uint32 charID2 = 4;
+	optional uint32 score2 = 5;
+	optional bool	win2 = 6;			//是否胜利
+	optional bool   pkWithFriend = 7;	//是否和好友切磋
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 43;	
+	}
+}
+
+message stActivityConfig
+{
+	optional uint32 activityID = 1;		//活动ID
+	optional string cofing = 2;			//配置
+}
+
+//发送活动配置给Game global ----> game
+message stSynActivityConfig
+{
+	repeated stActivityConfig data = 1;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 44;	
+	}
+}
+
+//夺宝失败 global ----> game
+message stCaptureTreasureFail
+{
+	optional uint32 charID = 1;
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 45;	
+	}
+}
+
+enum eRankModule_ID
+{
+	eRankModule_Level_Rank = 1;         //等级排名
+	eRankModule_BattlePower_Rank = 2;   //战力排名
+	eRankModule_Copymap_Rank = 3;       //副本排行
+	eRankModule_One2One_Rank = 4;       //巅峰排名
+	eRankModule_Leitai_Rank = 5;        //擂台排行
+	eRankModule_Arena_Rank = 6;			//竞技场排行
+}
+
+message stCharID2Rank
+{
+	optional uint32 charID = 1;	
+	optional uint32 rank = 2;
+}
+
+message stRankModuleInfo
+{
+	optional uint32 moduleID = 1;				//模块ID	
+	repeated stCharID2Rank charID2Rank = 2;		//角色ID与名次对应关系
+}
+
+//同步排名系统数据 global ---> game
+message stSynRankModuleInfo
+{
+	repeated stRankModuleInfo data = 1; 
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 46;	
+	}
+}
+
+message stGiftBagReward
+{
+	optional uint32 itemID = 1;		//道具ID
+	optional uint32 num = 2;		//道具数量
+}
+
+//领取礼包成功 global ---> game
+message stGiveGiftBagReward
+{
+	optional uint32 charID = 1;				//角色ID
+	repeated stGiftBagReward rewards = 2;	//领取奖励
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 47;	
+	}
+}
+
+//通知Game服务器配置 global ---> game
+message stNotifyGameSvrCfg
+{
+	repeated stServerCfgPair cfgPair = 1;		//配置
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 48;	
+	}
+}
+
+//通知换装位置的道具 global ---> game
+message stNotifyCurEquipInfo
+{
+	optional uint32 charID = 1;
+	optional uint32 index = 2;
+	optional uint32 itemID = 3;
+	optional uint32 effectID = 4;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 49;	
+	}
+}
+
+//重新登录game global ----> game
+message stReloginGame
+{
+	optional string account = 1;
+	optional uint32 charID = 2;
+	optional string ip = 3;
+	optional string device = 4;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 50;	
+	}
+}
+
+message stFirstKillBaseInfo
+{
+	optional uint32 charID = 1;
+	optional string  name = 2;
+	optional uint32 job = 3;
+	optional uint32 sex = 4;
+	optional uint32 level = 5;
+	optional uint32 battlePower = 6;
+	optional uint32 photoID = 7;
+}
+
+//组队副本结算完毕 game ---> global
+message stTeamCopyMapFinish
+{
+	optional uint32 copymapID = 1;				//组队副本
+	repeated stFirstKillBaseInfo userInfo = 2;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 51;	
+	}
+}
+
+//上线发送首杀信息 global ----> game
+message stUserOnlineSendFirstKillInfo
+{
+	optional uint32 charID = 1;					//玩家信息
+	repeated uint32 copymapID = 2;				//副本ID
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 52;	
+	}
+}
+
+//一个队伍完成了首杀 global ----> game
+message stTeamFinishFirstKill
+{
+	optional uint32 copymapID = 1;
+	optional uint32 charID1 = 2;
+	optional uint32 charID2 = 3;
+	optional uint32 charID3 = 4;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 53;	
+	}
+}
+
+//设置某个玩家的清世界boss活动CD game ---> global
+message stSetClearWorldBossTime
+{
+	optional uint32 charID = 1;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 54;	
+	}
+}
+
+//设置某个玩家购买士气鼓舞次数 game ---> global
+message stSetWorldBossBuyNum
+{
+	optional uint32 charID = 1;
+	optional uint32 buyNum = 2;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 55;	
+	}
+}
+
+//消耗了体力 game -----> global
+message stUserDecSP
+{
+	optional uint32 charID = 1;
+	optional uint32 sp = 2;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 56;	
+	}
+}
+
+//消耗了历练 game ----> global
+message stUsreDecLilian
+{
+	optional uint32 charID = 1;
+	optional uint32 lilian = 2;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 57;	
+	}
+}
+
+message stUserDamagePair
+{
+	optional uint32 charID = 1;
+	optional uint32 damage = 2;
+}
+
+//公会组队副本失败 game ----> global
+message stGuildCopymapFail
+{
+	repeated stUserDamagePair damageInfo = 1;		//成员
+	optional uint32 bossHP = 2;						//boss血量	
+	optional uint32 copymapID = 3;					//副本ID
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 58;	
+	}
+}
+
+//公会组队boss杀死 game ----> global
+message stGuildCopymapKillBoss
+{
+	repeated stUserDamagePair damageInfo = 1;       //成员
+	optional uint32 copymapID = 2;					//副本ID
+	optional uint32 killCharID = 3;					//击杀玩家ID
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 59;	
+	}
+}
+
+//世界boss失败 game ----> global
+message stWorldBossCopymapFail
+{
+	repeated stUserDamagePair damageInfo = 1;		//成员
+	optional uint32 bossHP = 2;						//boss血量	
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 60;	
+	}
+}
+
+//杀死了世界boss game ----> global
+message stKillWorldBoss
+{
+	repeated stUserDamagePair damageInfo = 1;       //成员
+	optional uint32 killCharID = 2;					//击杀玩家
+	optional uint32 bossID = 3;						//bossID
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 61;	
+	}
+}
+
+//限时武神抽奖积分奖励  global ---> game
+message stDrawHeroScoreReward
+{
+	optional uint32 charID = 1;
+	optional uint32 boxID = 2;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 62;	
+	}
+}
+
+//限时武神排行奖励 global ----> game
+message stDrawHeroRankReward
+{
+	optional uint32 charID = 1;
+	optional uint32 boxID = 2;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 63;	
+	}
+}
+
+message stCompensantionItem
+{
+	optional uint32 itemID = 1;
+	optional uint32 num = 2;
+}
+
+//设置补偿ID global ----> game
+message stSetCompensationID
+{
+	optional uint32 charID = 1;
+	optional uint32 compensationID = 2;
+	repeated stCompensantionItem items = 3;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 64;	
+	}
+}
+
+//设置开服天数 global ---> game
+message stSetOpenServerDay
+{
+	optional uint32 day = 1;			//开服的天数
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 65;	
+	}
+}
+
+//升级后给所有成员同步公会等级  global ----> game
+message stSynGuildLv2AllMember
+{
+	repeated uint32 members = 1;
+	optional uint32 guildLv = 2;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 66;	
+	}
+}
+
+//更换徽章 game ---> global
+message stForwardChgBadge
+{
+	optional uint32 charID = 1;
+	optional uint32 badgeID = 2;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 67;	
+	}
+}
+
+//世界boss购买扣钱 global ---> game
+message stWorldBossBuyDecDiamond
+{
+	optional uint32 charID = 1;
+	optional uint32 hasBuyNum = 2;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 68;	
+	}
+}
+
+//公会捐赠成功 game ----> global
+message stGuildDonateSuccess
+{
+	optional uint32 charID = 1;				//角色ID
+	optional uint32 todayContribute = 2;	//今日贡献度
+	optional uint32 addContribute = 3;		//增加的贡献度
+	optional uint32 donateType = 4;			//公司捐赠数量 
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 69;	
+	}
+}
+
+//玩家离开世界副本 game ----> global
+message stUserLeaveWorldBoss
+{
+	optional uint32 charID = 1;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 70;	
+	}
+}
+
+//自动重连 global ----> game
+message stNotifyGameAutoConnect
+{
+	optional string account = 1;
+	optional uint32 charID = 2;
+	optional string ip = 3;
+	optional string device = 4;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 71;	
+	}
+}
+
+//限时武神抽奖积分奖励 game ----> global
+message stForwardDrawHeroScoreReward
+{
+	optional uint32 charID = 1;
+	optional uint32 scoreID = 2;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 72;	
+	}
+}
+
+//竞技场历史排名奖励 global ----> game
+message stNotifyArenaReward
+{
+	optional uint32 charID = 1;				//角色ID
+	optional uint32 resType = 2;			//资源类型
+	optional uint32 resNum = 3;				//资源数量
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 73;	
+	}
+}
+
+message stForwardInvestgateAnswer
+{
+	optional uint32 problemID = 1;		//问题ID
+	optional bool	 answerA = 2;		//是否选择A
+	optional bool    answerB = 3;		//是否选择B
+	optional bool    answerC = 4;		//是否选择C
+	optional bool    answerD = 5;		//是否选择D
+	optional bool    answerE = 6;		//是否选择E
+	optional bool    answerF = 7;		//是否选择F
+	optional bool    answerG = 8;		//是否选择G
+	optional bool    answerH = 9;		//是否选择H
+	optional bool    answerI = 10;		//是否选择I
+	optional bool    answerJ = 11;		//是否选择J
+}
+
+//用户问卷调查结果 game ----> global
+message ForwardInvestgateResult
+{
+	optional uint32 questID = 1;
+	repeated stForwardInvestgateAnswer  infos = 2;
+	optional uint32 charID = 3;
+	optional uint32 useTime = 4;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 74;	
+	}
+}
+
+//GM修改数据 global ----> game
+message stGMModifyUserInfo
+{
+	optional uint32 charID = 1;			//角色ID
+	optional uint32 newbieGuideID = 2;	//新手引导ID
+	optional uint32 goldCoin = 3;		//金币
+	optional uint32 diamond = 4;		//钻石
+	optional uint32 vipPoint = 5;		//vip点数
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 75;	
+	}
+}
+
+//同步我的竞技场排名 global ----> game
+message stSynMyArenaRank
+{
+	optional uint32 charID = 1;			//角色ID
+	optional uint32 rank = 2;			//名次
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 76;	
+	}
+}
+
+//同步viplv到global  game ----> global
+message stSynVipLv
+{
+	optional uint32 charID = 1;
+	optional uint32 vipLv = 2;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 77;	
+	}
+}
+
+//通知清除竞技场cd game ---> global
+message stNotifyClearArenaCD
+{
+	optional uint32 charID = 1;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 78;	
+	}
+}
+
+//到game请求重置竞技场挑战次数 global -----> game
+message stReqResetArenaChallengeNum
+{
+	optional uint32 charID = 1;			
+	optional uint32 curResetNum = 2;	
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 79;	
+	}
+}
+
+//通知global进行竞技场挑战次数重置  game ----> global
+message stNotfiyResetChallengeNum
+{
+	optional uint32 charID = 1;			
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 80;	
+	}
+}
+
+//请求重置拦截次数 global ---> game
+message stReqResetInterceptNum
+{
+	optional uint32 charID = 1;				//角色ID
+	optional uint32 resetNum = 2;			//重置次数
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 81;	
+	}
+}
+
+//通知global重置拦截CD game ----> global
+message stNotifyClearInterceptCD
+{
+	optional uint32 charID = 1;				//角色ID
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 82;	
+	}
+}
+
+//通知global重置拦截次数 game ----> global
+message stNotifyResetInterceptNum
+{
+	optional uint32 charID = 1;			//角色ID
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 83;	
+	}
+}
+
+//通知护送的品质改变  game ---> global
+message stNotifyGuardQuality
+{
+	optional uint32 charID = 1;
+	optional uint32 quality = 2;			//品质
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 84;	
+	}
+}
+
+//鼓舞士气成功 game ---> global
+message stNotifyGuardInspiredSuccess
+{
+	optional uint32 charID = 1;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 85;	
+	}
+}
+
+//请求刷新宝藏品质 global ----> game
+message stReqRefreshGuardQuality
+{
+	optional uint32 charID = 1;			//角色ID
+	optional uint32 quality = 2;		//品质
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 86;	
+	}
+}
+
+//清空在线玩家的1v1积分 global ----> game
+message stNotifyClearOne2OneScore
+{
+	optional uint32 flag = 1;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 87;	
+	}
+}
+
+//清空在线玩家积分成功 game ----> global
+message stClearOne2OneScoreSuccess
+{
+	optional uint32 flag = 1;	
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 88;	
+	}
+}
+
+//拦截奖励  global ---> game
+message stInterceptReward
+{
+	optional uint32 charID = 1;
+	optional uint32 resID1 = 2;
+	optional uint32 resNum1 = 3;
+	optional uint32 resID2 = 4;
+	optional uint32 resNum2 = 5;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 89;	
+	}
+}
+
+//快速完成请求扣钱 global ----> game
+message stQuickFinishDecDiamond
+{
+	optional uint32 charID = 1;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 90;	
+	}
+}
+
+//快速完成扣钱成功 game ----> global
+message stQuickFinishDiamondSuccess
+{
+	optional uint32 charID = 1;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 91;	
+	}
+}
+
+//1v1和机器人pk global ----> game
+message stOne2OnePkWithRobot
+{
+	optional uint32 charID = 1;
+	optional uint32 robotGroup = 2;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 92;	
+	}
+}
+
+//通知护送开始 global ----> game
+message stNotifyUserBeginGuard
+{
+	optional uint32 charID = 1;
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 93;	
+	}
+}
+
+//通知拦截结束 global ----> game
+message stNotifyUserInterceptResult
+{
+	optional uint32 charID = 1;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 94;	
+	}
+}
+
+//通知获得内侧奖励 global ----> game
+message stNotifyCloseBetaReward
+{
+	optional uint32 charID = 1;
+	optional uint32 boxID = 2;
+	optional uint32 giveDiamond = 3;
+	optional uint32 giveRecharge = 4;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 95;	
+	}
+}
+
+message stEnterManorFightMapUserInfo
+{
+	optional uint32 charID = 1;
+	optional uint32 hp = 2;
+}
+
+//进入领地战地图 global ----> game
+message stEnterManorFightMap
+{
+	repeated stEnterManorFightMapUserInfo guildAMem = 1;
+	repeated stEnterManorFightMapUserInfo guildBMem = 2;		
+	optional uint32 manorID = 3;		//领地ID
+	optional uint32 fomation = 4;		//阵容
+	optional uint32 teamAID = 5;		//A队伍
+	optional uint32 teamBID = 6;		//B队伍
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 96;	
+	}
+}
+
+message stManorFightBattleProp
+{
+	optional uint32 curHP = 1;
+	optional uint32 charID = 2;
+}
+//领地战结束
+message stFinishManorFight
+{
+	optional uint32 manorID = 1;
+	optional uint32 fomation = 2;
+	optional uint32 teamAID = 3;
+	optional uint32 teamBID = 4;
+	optional bool	bFail = 5;				//本场战斗失败
+	optional bool   bFinish = 6;			//本场结算出胜负
+	repeated stManorFightBattleProp userInfo = 7; 
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 97;	
+	}
+}
+//改名检查名字是否重复 global ----> game
+message stExistName
+{
+	enum eResult
+	{
+		eSuccess = 1;
+		eName_Repetition = 2;
+	}
+
+	optional eResult result = 1;
+	optional uint32 charID = 2;		//角色ID
+	optional string name = 3;        //角色新名称
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 98;
+	}
+}
+
+//同步name到global  game ----> global
+message stSynName
+{
+	optional uint32 charID = 1;
+	optional string name = 2;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 99;
+	}
+}
+
+//同步荣耀时装购买者名单 game ---> global
+message stSynGloryfashionCharID
+{
+	optional uint32 charID = 1;         //角色ID
+	optional uint32 buyTime = 2;     	//购买时间
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 100;
+	}
+}
+
+//魔王召唤
+message stDevilCallItem
+{
+	optional uint32 itemId = 1;             //魔王召唤id
+	optional string name1 = 2;
+	optional uint32 charID1 = 3;
+	optional string name2 = 4;
+	optional uint32 charID2 = 5;
+	optional string name3 = 6;
+	optional uint32 charID3 = 7;
+	optional bool hasPass = 8;
+	optional uint32 bossdrawstatus = 9;
+	optional uint32 commondrawstatus  = 10;
+}
+
+message stAllDevilCall
+{
+	optional uint32 charID = 1;     		//角色ID
+	repeated stDevilCallItem item = 2;      //召唤项目信息
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 101;	
+	}
+}
+
+message stDevilCallReward
+{
+	optional uint32 charID = 1;     		//角色ID
+	optional uint32 bossId = 2;     		//魔王id
+	optional uint32 rewardType = 3;         //奖励类型
+	optional uint32 gotPass = 4;     		//是否通关
+	optional uint32 status = 5;     		//領取狀態
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 102;	
+	}
+}
+
+message stDevilCallRewardRet
+{
+	optional uint32 charID = 1;     		//角色ID
+	optional uint32 bossId = 2;     		//魔王id
+	optional uint32 rewardType = 3;         //奖励类型
+	optional uint32 status = 4;     		//領取狀態
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 103;	
+	}
+}
+
+message stDevilCall
+{
+	optional uint32 charID = 1;     		//角色ID
+	optional uint32 bossId = 2;     		//魔王id
+	optional uint32 gotPass = 3;     		//是否通关
+	optional uint32 drawNum = 4;     		//使用次數
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 104;	
+	}
+}
+
+message stDevilCallRet
+{
+	optional uint32 charID = 1;     		//角色ID
+	optional uint32 bossId = 2;     		//魔王id
+	optional uint32 drawNum = 3;     		//使用次數
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 105;	
+	}
+}
+message stDevilCallSummary
+{
+	optional uint32 charID = 1;     		//角色ID
+	repeated stDevilCallItem item = 2;      //召唤项目信息
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 106;	
+	}
+}
+
+message stExpeditionItem {
+	optional uint32 expeditionId = 1;       //远征副本ID
+	optional uint32 finishTime = 2;         //远征完成时间
+	repeated uint32 heroIds = 3;            //远征已使用随从列表
+}
+
+message stExpeditionInfo
+{
+	optional uint32 charID = 1;     		//角色ID
+	repeated stExpeditionItem items = 2;      //召唤项目信息
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 107;	
+	}
+}
+
+message stExpedition
+{
+	optional uint32  charID = 1;     		//角色ID
+	repeated uint32  expeIds = 2;           //已远征id列表
+	repeated uint32  heroIds = 3;            //需求随从
+	repeated uint32  usedHero = 4;            //远征已使用随从列表
+	optional uint32  expeditionid = 5;     		//远征ID
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 108;	
+	}
+}
+
+message stExpeditionHero
+{
+	optional uint32  id = 1;     		//随从ID
+	optional uint32  lvl = 2;     	    //等级
+	optional uint32  power = 3;        //战斗力
+}
+message stExpeditionRet
+{
+	optional uint32  charID = 1;     		//角色ID
+	optional uint32  expeditionid = 2;     	//远征ID
+	optional uint32  finishTime = 3;        //完成时间
+	repeated stExpeditionHero usedHero = 4;          //远征已使用随从列表
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 109;	
+	}
+}
+
+message stExpeditionReward
+{
+	optional uint32  charID = 1;     		//角色ID
+	optional uint32  expeditionid = 2;     	//远征ID
+	optional uint32  finishTime = 3;        //完成时间
+	repeated stExpeditionHero usedHero = 4;          //远征已使用随从列表
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 110;	
+	}
+}
+
+message stExpeditionRewardRet
+{
+	optional uint32  charID = 1;     		//角色ID
+	optional uint32  expeditionid = 2;     	//远征ID
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 111;	
+	}
+}
+
+message stFastExpedition
+{
+	optional uint32  charID = 1;     		//角色ID
+	optional uint32  expeditionid = 2;     	//远征ID
+	optional uint32  finishTime = 3;     	//远征完成時間
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 112;	
+	}
+}
+
+message stFastExpeditionRet
+{
+	optional uint32  charID = 1;     		//角色ID
+	optional uint32  expeditionid = 2;     	//远征ID
+	optional uint32  finishTime = 3;     	//远征完成時間
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 113;	
+	}
+}
+
+message stCancelExpedition
+{
+	optional uint32  charID = 1;     		//角色ID
+	optional uint32  expeditionid = 2;     	//远征ID
+	optional uint32  finishTime = 3;     	//远征完成時間
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 114;	
+	}
+}
+
+message stCancelExpeditionRet
+{
+	optional uint32  charID = 1;     		//角色ID
+	optional uint32  expeditionid = 2;     	//远征ID
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 115;	
+	}
+}
+
+message stExpeditionSummary
+{
+	optional uint32  charID = 1;     		//角色ID
+	repeated stExpeditionItem items = 2;    //遠征信息
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 116;	
+	}
+}
+
+message stGiveLilianDayTaskCb
+{
+	optional uint32  charID = 1;     		//角色ID
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 117;	
+	}
+}
+
+//通知更新翡翠梦境伤害排行  game ----> global
+message stUpdateDamageRank
+{
+	optional uint32 charID = 1;		//角色ID
+	optional uint32 damage = 2;		//伤害
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 118;
+	}	
+}
+
+//通知发送我的排行信息 game ----> global
+message stNoticeSendRankInfo
+{
+	optional uint32 charID = 1;	//角色ID
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 119;
+	}
+}
+
+//回调新加活动  game ---> global
+message stOperateActivityCb
+{
+	optional uint32  charID = 1;     		//角色ID
+	optional uint32  activityId = 2;        //活动ID
+	optional uint32  num = 3;     		    //完成次数
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 120;	
+	}
+}
+
+//新加活动领取奖励  global ---> game
+message stOperateActivityReward
+{
+	optional uint32  charID = 1;     		//角色ID
+	optional uint32  activityId = 2;        //
+	optional uint32  itemId = 3;     		//
+	optional uint32  status = 4;     		//
+	optional uint32  boxId = 5;     		//
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 121;	
+	}
+}
+
+//新加活动领取奖励回调  game ---> global
+message stOperateActivityRewardCb
+{
+	optional uint32  charID = 1;     		//角色ID
+	optional uint32  activityId = 2;        //
+	optional uint32  itemId = 3;     		//
+	optional uint32  status = 4;     		//
+	optional uint32  boxId = 5;     		//
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 122;	
+	}
+}
+//新加活动抽奖 global ---> game
+message stOperateActivityLotteryReward
+{
+	optional uint32  charID = 1;     		//角色ID
+	optional uint32  itemId = 2;     		//id
+	optional uint32  cost = 3;     		    //花费钻石
+	optional uint32  boxId = 4;     		//奖励
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 123;	
+	}
+}
+
+//回调新加活动抽奖 game ---> global
+message stOperateActivityLotteryRewardCb
+{
+	optional uint32  charID = 1;     		//角色ID
+	optional uint32  itemId = 2;     		//id
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 124;	
+	}
+}
+
+//新加活动抽奖 global ---> game
+message stReqPayTypeCb
+{
+	optional uint32  charID = 1;            //角色ID
+	optional uint32  itemId = 2;            //item id
+	optional string orderId= 3;             //订单号
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 125;
+	}
+}
+
+//请求翠梦境个人伤害排名信息 game ----> global
+message stReqUserRankInfo
+{
+	optional uint32 charID = 1;	//角色ID
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 126;
+	}
+}
+
+message userSortInfo
+{
+	optional string name = 1;           //角色名字;
+}
+
+//返回翡翠梦境个人伤害排名信息 global ----> game
+message stUserRankInfoResult
+{
+	optional uint32 charID = 1; //角色ID
+	optional uint32 damage = 2; //伤害
+	optional uint32 rank = 3;	//排名
+	optional uint32 endTime = 4;//结束时间
+	repeated userSortInfo info = 5;//前三排名
+	optional uint32 levelID = 6;	//当前levelID
+
+	enum ProtoModID
+	{   
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{   
+		FunID = 127;
+	}
+}
+
+//翡翠梦境失败 game ----> global
+message stEmeraldDreamCopymapFail
+{
+	repeated stUserDamagePair damageInfo = 1;       //成员
+	optional uint32 bossHP = 2;                     //boss血量
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 128;
+	}
+}
+
+//杀死了翡翠梦境boss game ----> global
+message stKillEmeraldDreamBoss
+{
+	repeated stUserDamagePair damageInfo = 1;       //成员
+	optional uint32 bossID = 2;                     //bossID
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 129;
+	}
+}
+
+//通知扣除进入次数 global ----> game
+message strRemoveNum
+{
+	optional uint32 charID = 1; //角色ID
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 130;
+	}
+}
+
+//请求翡翠梦境CopyMapID game ----> global
+message stCopyMapInfo
+{
+	optional uint32 charID = 1; //角色ID
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 131;
+	}
+}
+
+//请求翡翠梦境CopyMapID返回 global ----> game
+message stCopyMapInfoResult
+{
+	optional uint32 charID = 1;		//角色ID
+	optional uint32 levelId = 2;	//副本ID
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 132;
+	}
+}
+
+//组队匹配信息到跨服 global ----> game
+message stRealTimeTeamMatch
+{
+	optional eRealTimePKType eType  = 1;    //实时战场类型
+	optional uint32 teamID = 2;		//teamID
+	repeated uint32 memberId = 3;	//memberID
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 133;
+	}
+}
+//跨服,退出队伍  game ----> global
+message stOnPubLeaveTeam
+{
+	optional uint32 charID = 2;		//CharID
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 134;
+	}
+}
+
+//通知game扣钱 global ---->game
+message stDeductMoney
+{
+	optional uint32 num = 1;		//钱数
+	optional uint32 charID = 2;     //角色ID
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 135;
+	}
+}
+
+//扣钱返回 game ----> global
+message stDeductMoneyResult
+{
+	enum eResult
+	{
+		eSuccess = 1;	//成功
+		DIAMOND_NOT_ENOUGH = 2;     //钻石不足
+	}
+
+	optional eResult result = 1; //结果
+
+	optional uint32 charID = 2;     //角色ID
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 136;
+	}
+}
+
+//发奖励 global ----> game
+message stGiveReward
+{
+	optional uint32 charID = 1;     //角色ID
+	optional uint32 boxID = 2;		//boxID
+	optional uint32 rewardID = 3;	//奖励id
+	optional bool isIntegralReward = 4; //是否积分奖励
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 137;
+	}
+}
+
+//发奖励返回 game ----> global
+message stGiveRewardResult
+{
+	enum eResult
+	{
+		eSuccess = 1;   //成功
+		eBAG_SLOT_NOT_ENOUGH = 2;//背包格子不足
+	}
+
+	optional eResult result = 1;	//结果
+
+	optional uint32 charID = 2;		//角色ID
+
+	optional uint32 rewardID = 3;   //奖励id
+
+	optional bool isIntegralReward = 4; //是否积分奖励
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 138;
+	}
+}
+
+//检查关卡任务(SquareType id=2/3/4)  game ----> global
+message stReqCheckMission
+{
+	optional uint32 charID	= 1;     //角色ID
+	optional uint32 levelID = 2;	//关卡ID
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 139;
+	}
+}
+
+//检查任务（SquareType id=5/6）game ----> global
+message stReqCheckTask
+{
+	optional uint32 charID  = 1;     //角色ID
+	optional uint32 squareType = 2;	 //格子类型
+	optional uint32 battleType = 3;	 //任务类型
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 140;
+	}
+}
+
+//请求进入任务关卡 global ----> game
+message stReqEnterTaskLv
+{
+	optional uint32 charID  = 1;     //角色ID
+	optional uint32 levelID = 2;	//关卡ID
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 141;
+	}
+}
+
+//通知解散队伍  game ----> global
+message stReqDisbandTeam
+{
+	optional uint32 charID  = 1;     //角色ID
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 142;
+	}
+}
+
+//请求领取邀请好友人数奖励 global ----> game
+message stReqDrawInviteReward
+{
+	optional uint32 charID  = 1;     //角色ID
+	optional uint32 boxId = 2;	     //奖励box
+	optional uint32 id = 3;	         //奖励id
+	optional string account = 4;	 //账户名
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 143;
+	}
+}
+
+//请求领取邀请好友人数奖励 game ----> global
+message stReqDrawInviteRewardCb
+{
+	optional uint32 charID  = 1;     //角色ID
+	optional uint32 id = 2;	         //奖励id
+	optional bool res = 3;           //是否成功
+	optional string account = 4;	 //账户名
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 144;
+	}
+}
+
+//使用邀请码奖励 global ----> game
+message stReqDrawUseInviteReward
+{
+	optional uint32 charID  = 1;     //角色ID
+	optional uint32 boxId = 2;	     //奖励box
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 145;
+	}
+}
+
+//保存跨服玩家信息 game ---->global
+message stRoleInfo
+{
+	optional  uint32     charID = 1;                //角色ID
+	optional  uint32     dataSize = 2;              //二进制存档的大小
+	optional  bytes      data = 3;                  //二进制存档内容
+	optional  uint32     normalServerID = 4 ;       //normalServerID
+
+	enum ProtoModID
+	{
+	    ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+	    FunID = 146;
+	}
+}
+
+//英雄联赛进入副本  global ---> game
+message stHeroLeagueEnterCopyMap
+{
+	repeated uint32 memberIDs = 1;          //所有成员
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 147;
+	}
+}
+
+//1v1和机器人pk global ----> game
+message stHeroLeaguePkWithRobot
+{
+	optional uint32 charID = 1;
+	optional uint32 robotGroup = 2;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 148;
+	}
+}
+/*
+//通知Global增加报名次数 game ----> global
+message stAddRegisterNum
+{
+	optional uint32 charID = 1;
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 149;
+	}
+}
+*/
+//英雄联赛匹配检查 global ----> game
+message stReqHeroLeagueCheck
+{
+	enum eResult
+	{   
+		eSuccess = 1;               //成功
+		eRegister_Num_Lack = 2;     //报名次数不足
+	}
+
+	optional eResult result = 1;    //结果
+	optional uint32 charID = 2;		//角色ID
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 150;
+	}
+}
+
+//英雄联赛匹配 global ----> game
+message stHeroLeagueMatch
+{
+	optional uint32 charID = 1;		//角色ID
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 151;
+	}
+}
+
+message stPubRoleInfo
+{
+	optional uint32 charID = 1;             //普通服务器角色ID
+	optional uint32 pubCharID = 2;          //pub上角色ID
+	optional uint32 areaCode = 3;           //区服ID
+	optional string name = 4;               //名字
+	optional uint32 level = 5;               //等级
+	optional uint32 vipLv = 6;              //vip等级
+	optional uint32 job = 7;                //职业
+	optional uint32 sex = 8;                //性别
+	optional uint32 battlePower = 9;        //战力
+	optional uint32 pubServerIndex = 10;    //pubServerIndex
+	optional uint32 score = 11;				//积分
+	optional bool winOrLoss = 12;           //胜负(胜:true 负:false)
+	optional uint32 photoID = 13;			//头像ID
+}
+
+//英雄联赛战斗结果 game ----> global 
+message stHeroLeagueResult
+{
+	optional stPubRoleInfo user1 = 1;
+
+	optional stPubRoleInfo user2 = 2;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 152;
+	}
+}
+
+//联赛开始前同步参赛角色列表 game ----> global
+message stSynRoleList
+{
+	optional uint32 tag = 1;//没用，随便填
+
+	enum ProtoModID
+	{
+	    ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+	    FunID = 153;
+	}
+}
+/*
+message stTeam
+{
+	optional uint32 charID1 = 1;
+	optional uint32 charID2 = 2;
+}
+*/
+
+message stTeam
+{
+	optional stPubRoleInfo user1 = 1;
+	optional stPubRoleInfo user2 = 2;
+}
+
+//联赛开始前同步参赛角色列表返回 global----> game
+message stSynRoleListResult
+{
+	//repeated stSynRoleInfo info = 1;
+	repeated stTeam team = 1;
+	repeated stPubRoleInfo charIDS = 2;
+	optional bool isFinal = 3;
+
+	enum ProtoModID
+	{
+	    ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+	    FunID = 154;
+	}
+}
+
+//组员信息
+message stSynChampionInfo
+{
+	optional uint32 charID = 1;             //角色ID
+	optional string name = 2;               //名字
+	optional uint32 areaCode = 3;           //所在服务器ID
+	optional uint32 level = 4;              //等级
+	optional uint32 job  = 5;               //职业
+	optional uint32 sex = 6;                //性别
+	optional bool   leader = 7;             //队长
+	optional uint32 battlePower = 8;        //战力
+	optional uint32 pos = 9;                //位置
+	optional uint32 headID = 10;            //头部ID
+	optional uint32 bodyID = 11;            //衣服ID
+	optional uint32 weaponID = 12;          //武器ID
+	optional uint32 cloackID = 13;          //披风ID
+	optional uint32 wingID = 14;			//翅膀ID
+	optional uint32 shoeID = 15;			//鞋子
+	optional uint32 fashionHair = 16;		//发型
+	optional uint32 fashionFace =17;       	//表情
+	optional uint32 fashionBody = 18;		//衣服
+	optional uint32 fashionWeapon =19;	    //武器
+	optional uint32	fashionShoe = 20;		//鞋子
+	optional uint32	fashionDecoration = 21; //脸饰品
+	optional uint32	effectID = 22;			//特效ID
+	optional uint32 wingBreakLv = 23;		//翅膀突破等级
+	optional uint32 photoID = 24;			//头像ID
+}
+
+//同步冠军信息  pub ----> game
+message stReqSynChampionInfo
+{
+	optional stSynChampionInfo info = 1;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 155;
+	}
+}
+
+//朝拜  game  ----> global
+message stReqWorskip
+{
+	optional uint32 charID = 1;
+
+	enum ProtoModID
+	{
+	    ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+	    FunID = 156;
+	}
+}
+
+//朝拜返回  global  ----> game
+message stWorskipResult
+{
+	enum eResult
+	{
+		eInner_Error = 1;           //内部配置错误
+		eNoBody = 2;				//没人朝拜
+	}
+
+	optional eResult result = 1;
+
+	optional uint32 charID = 2;
+
+	optional bool isSameAreaCode = 3;	//是否同服
+	
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 157;
+	}
+}
+
+//英雄联赛红点  game ----> global
+message stReqRedPoint
+{
+	optional uint32 charID = 1;
+	
+	optional uint32 pubCharID = 2;
+
+	enum ProtoModID
+	{   
+	    ModID = 3;
+	}
+
+	enum ProtoFunID
+	{   
+	    FunID = 158;
+	}
+}
+
+//英雄联赛红点返回 global ----> game
+message stRedPointResult
+{
+	optional bool isQualified = 1;  //(true:有资格)
+
+	optional bool canWorship = 2;   //(true:可朝拜)
+
+	optional uint32 charID = 3;
+
+	enum ProtoModID
+	{
+	    ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+	    FunID = 159;
+	}
+}
+
+//拦截结果  game  ----> global
+message stInterceptResultToGlobal
+{
+        optional uint32 charID  =       1;
+        optional bool win = 2;
+        enum ProtoModID
+        {
+            ModID = 3;
+        }
+
+        enum ProtoFunID
+        {
+            FunID = 160;
+        }
+}
+
+//组员信息
+message stSynMemberInfo
+{
+	optional uint32 charID = 1;				//角色ID
+	optional string name = 2;				//名字
+	optional uint32 level = 3;				//等级
+	optional uint32 job  = 4;				//职业
+	optional uint32 sex = 5;				//性别
+	optional bool   leader = 6;				//队长
+	optional uint32 battlePower = 7;		//战力
+	optional uint32 pos = 8;				//位置
+	optional uint32 headID = 9;				//头部ID
+	optional uint32 bodyID = 10;			//衣服ID
+	optional uint32 weaponID = 11;			//武器ID
+	optional uint32	cloackID = 12;			//披风ID
+	optional uint32	wingID = 13;			//翅膀ID
+	optional uint32 shoeID = 14;			//鞋子
+	optional uint32 fashionHair = 15;		//发型
+	optional uint32 fashionFace = 16;		//表情
+	optional uint32	fashionBody = 17;		//衣服
+	optional uint32	fashionWeapon = 18;		//武器
+	optional uint32	fashionShoe = 19;		//鞋子
+	optional uint32	fashionDecoration = 20; //脸饰品
+	optional uint32 effectID = 21;			//特效ID 
+	optional uint32 wingBreakLv = 22;		//翅膀突破等级
+	optional uint32 fashionWingID = 23;		//时装翅膀ID
+}
+
+//转发队伍信息表 global ----> game
+message stRetRoomInfo
+{
+        optional uint32 charID  = 1;
+        optional uint32 copyMapID = 2;			//对的的关卡ID
+        repeated stSynMemberInfo members = 3;	//成员
+        optional uint32 teamID = 4;				//队伍ID
+        enum ProtoModID
+        {
+            ModID = 3;
+        }
+
+        enum ProtoFunID
+        {
+            FunID = 161;
+        }
+}
+
+//通知某个成员进入队伍 global ----> game
+message stRetAddTeamMember
+{
+        repeated uint32 charID  = 1;
+        optional uint32 exceptID = 2;
+        optional uint32 pos = 3;					    //位置
+        optional stSynMemberInfo memberInfo = 4;		//成员信息
+        enum ProtoModID
+        {
+            ModID = 3;
+        }
+
+        enum ProtoFunID
+        {
+            FunID = 162;
+        }
+}
+
+message MarryObjInfo
+{
+	optional uint32 charID = 1;				//角色ID
+	optional string name = 2;				//名字
+	optional uint32 level = 3;				//等级
+	optional uint32 job  = 4;				//职业
+	optional uint32 sex = 5;				//性别
+	optional uint32 battlePower = 6;		//战力
+	optional uint32 headID = 7;				//头部ID
+	optional uint32 bodyID = 8;	    		//衣服ID
+	optional uint32 weaponID = 9;			//武器ID
+	optional uint32	cloackID = 10;			//披风ID
+	optional uint32	wingID = 11;			//翅膀ID
+	optional uint32 shoeID = 12;			//鞋子
+	optional uint32 fashionHair = 13;		//发型
+	optional uint32 fashionFace = 14;		//表情
+	optional uint32	fashionBody = 15;		//衣服
+	optional uint32	fashionWeapon = 16;		//武器
+	optional uint32	fashionShoe = 17;		//鞋子
+	optional uint32	fashionDecoration = 18; //脸饰品
+	optional uint32 effectID = 19;			//特效ID 
+	optional uint32 wingBreakLv = 20;		//翅膀突破等级
+	optional uint32 fashionWingID = 21;     //时装翅膀ID
+}
+
+// global -> game
+message stReqPropose
+{
+	optional uint32 id1 = 1;		//求婚玩家ID
+	optional uint32 id2 = 2;		//被求婚玩家ID
+	optional MarryObjInfo info = 3; //求婚方信息
+	
+	enum ProtoModID
+	{
+	    ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+	    FunID = 163;
+	}
+}
+// 同意结婚
+message stReqAgreeMarry
+{
+	optional uint32 id1 = 1; // 求婚人ID
+	optional uint32 id2 = 2; // 同意人的ID
+	optional uint32 roomId = 3; //场景id
+	optional MarryObjInfo info = 4;
+
+	enum ProtoModID
+	{
+	    ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+	    FunID = 164;
+	}
+}
+//退出结婚场景  global -----> game
+message stReqQuitWedding
+{
+	optional uint32 charId = 1; //角色Id
+	optional uint32 levelId = 2;//map Id
+	repeated uint32 id = 3;     //场景所有玩家列表
+
+	enum ProtoModID
+	{
+	    ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+	    FunID = 165;
+	}
+}
+
+//进入婚礼场景  global -----> game
+message stReqReEnterWedding
+{
+	optional uint32 charId = 1; //角色Id
+	repeated uint32 id = 2;     //场景所有玩家列表
+	optional uint32 roomId = 3; //场景Id
+
+	enum ProtoModID
+	{
+	    ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+	    FunID = 166;
+	}
+}
+
+//购买烟火   global -----> game
+message stReqBuyFireWork
+{
+	optional uint32 charId = 1; //烟火id
+	optional uint32 id = 2; //烟火id
+
+	enum ProtoModID
+	{
+	    ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+	    FunID = 167;
+	}
+}
+
+//同意邀请   global -----> game
+message stReqAgreeInvite
+{
+	optional uint32 charId = 1; //角色id
+	optional uint32 roomId = 2; //场景id
+	repeated uint32 id = 3;     //场景所有玩家列表
+
+	enum ProtoModID
+	{
+	    ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+	    FunID = 168;
+	}
+}
+
+//同意邀请   global -----> game
+message stReqTakeCandy
+{
+	optional uint32 charId = 1; //烟火id
+
+	enum ProtoModID
+	{
+	    ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+	    FunID = 169;
+	}
+}
+
+//确定结婚   game -----> global
+message stNotifyCoupleMarry
+{
+	optional uint32 husband = 1;
+	optional uint32 wife = 2;
+	optional uint32 id = 3;
+    optional string husName = 4;
+    optional string wifeName = 5;
+
+	enum ProtoModID
+	{
+	    ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+	    FunID = 170;
+    }
+}
+
+//给结婚礼物 global -----> game
+message stSendWeedingRing
+{
+	optional uint32 charId = 1;
+	optional uint32 roomId = 2;
+	optional uint32 id = 3;
+
+	enum ProtoModID
+	{
+	    ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+	    FunID = 171;
+    }
+}
+
+//给结婚礼物 game -----> global
+message stMarryInfoCb
+{
+	optional uint32 charId = 1;
+	optional uint32 roomId = 2;
+	optional uint32 id = 3;
+
+	enum ProtoModID
+	{
+	    ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+	    FunID = 171;
+    }
+}
+
+//给结婚礼物 global -----> game
+message stUseFireWork
+{
+	optional uint32 charId = 1;
+	optional uint32 index = 2;
+	repeated uint32 id = 3;
+
+	enum ProtoModID
+	{
+	    ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+	    FunID = 172;
+    }
+}
+
+//给结婚礼物 global -----> game
+message stRetMarryInfoToCouple
+{
+	optional uint32 husband = 1;
+	optional uint32 wife = 2;
+
+	enum ProtoModID
+	{
+	    ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+	    FunID = 173;
+    }
+}
+
+//给结婚礼物 global -----> game
+message stNotifyCoupleMarryCb
+{
+	optional uint32 husband = 1;
+	optional uint32 wife = 2;
+	optional uint32 roomId = 3;
+
+	enum ProtoModID
+	{
+	    ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+	    FunID = 174;
+    }
+}
+
+//给结婚礼物 game -----> global
+message stRetForceDivorce
+{
+	optional uint32 coupleA = 1;
+	optional uint32 coupleB = 2;
+	optional bool coupleOnline = 3;
+
+	enum ProtoModID
+	{
+	    ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+	    FunID = 175;
+    }
+}
+
+//给结婚礼物 global -----> game
+message stRetForceDivorceCb
+{
+	repeated uint32 id = 1;
+	repeated uint32 coupleId = 2;
+
+	enum ProtoModID
+	{
+	    ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+	    FunID = 176;
+    }
+}
+//给结婚礼物 game -----> global
+message stRetRejectDivorce
+{
+	optional uint32 coupleId = 1;
+	optional uint32 time = 2;
+
+	enum ProtoModID
+	{
+	    ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+	    FunID = 177;
+    }
+}
+
+//给结婚礼物 game -----> global
+message stRetDelUserOnlineMarryInfo
+{
+	optional uint32 id = 1;
+
+	enum ProtoModID
+	{
+	    ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+	    FunID = 178;
+    }
+}
+
+//公会黑市同步等级  game ----> global
+message stReqSynGuildBlackMarketLv
+{
+	optional uint32 charid = 1;
+
+	enum ProtoModID
+	{
+	    ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+	    FunID = 179;
+	}
+}
+
+//公会黑市同步等级  global ----> game
+message stSynGuildBlackMarketLvResult
+{
+	optional uint32 lv = 1;
+
+	optional uint32 charid = 2;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 180;
+	}
+}
+
+message stGloryUserPart
+{
+	optional uint32     charID = 1;		                    //玩家的角色ID
+    optional uint32     areaCode = 2;           			//所在服务器ID
+    optional string     name = 3;               			//名字
+	optional uint32     job = 4;							//职业
+	optional uint32     sex = 5;							//性别
+	optional uint32 	level = 6;              			//等级
+	optional uint32 	battlePower = 7;        			//战力
+	optional uint32     headID = 8;			    			//头部ID
+	optional uint32 	bodyID = 9;				    		//衣服ID
+	optional uint32		weaponID = 10;						//武器ID
+	optional uint32		cloackID = 11;						//披风ID
+	optional uint32		wingID = 12;						//翅膀ID
+	optional uint32     shoeID = 13;						//鞋子
+	optional uint32     fashionHair = 14;					//发型
+	optional uint32     fashionFace = 15;					//表情
+	optional uint32		fashionBody = 16;					//衣服
+	optional uint32		fashionWeapon = 17;					//武器
+	optional uint32		fashionShoe = 18;					//鞋子
+	optional uint32		fashionDecoration = 19;				//脸饰品
+	optional uint32		effectID = 20;						//特效ID
+	optional uint32		wingBreakLv = 21;					//翅膀突破等级
+}
+
+message stGloryUserDetail
+{
+	optional uint32     charID = 1;		                    //玩家的pub角色ID
+    optional uint32     areaCode = 2;           			//所在服务器ID
+    optional string     name = 3;               			//名字
+	optional uint32     job = 4;							//职业
+	optional uint32     sex = 5;							//性别
+	optional uint32 	level = 6;              			//等级
+	optional uint32 	battlePower = 7;        			//战力
+	optional uint32     headID = 8;			    			//头部ID
+	optional uint32 	bodyID = 9;				    		//衣服ID
+	optional uint32		weaponID = 10;						//武器ID
+	optional uint32		cloackID = 11;						//披风ID
+	optional uint32		wingID = 12;						//翅膀ID
+	optional uint32     shoeID = 13;						//鞋子
+	optional uint32     fashionHair = 14;					//发型
+	optional uint32     fashionFace = 15;					//表情
+	optional uint32		fashionBody = 16;					//衣服
+	optional uint32		fashionWeapon = 17;					//武器
+	optional uint32		fashionShoe = 18;					//鞋子
+	optional uint32		fashionDecoration = 19;				//脸饰品
+	optional uint32		effectID = 20;						//特效ID
+	optional uint32		wingBreakLv = 21;					//翅膀突破等级
+	optional uint32 	killNum = 22;         			    //本期击杀数
+	optional uint32 	evenKillNum = 23;          			//本期最大连杀数
+	optional uint32 	totalKillNum = 24;       			//历史总击杀数
+	optional uint32 	gloryVal = 25;        			    //本期荣耀值
+	optional uint32		gloryActionTime = 26;				//荣耀值获得时间
+	optional uint32		prostatedNum = 27;				    //被膜拜次数
+	optional uint32		prostateTime = 28;				    //上一次膜拜时间
+	optional uint32		normalId = 29;				        //角色id
+}
+
+message stGloryUser
+{
+	optional uint32     charID = 1;		                    //玩家的角色ID
+    optional uint32     areaCode = 2;           			//所在服务器ID
+    optional string     name = 3;               			//名字
+	optional uint32 	killNum = 4;         			    //本期击杀数
+	optional uint32 	evenKillNum = 5;          			//本期最大连杀数
+	optional uint32 	totalKillNum = 6;       			//历史总击杀数
+	optional uint32 	gloryVal = 7;        			    //本期荣耀值
+	optional uint32		gloryActionTime = 8;				//荣耀值获得时间
+	optional uint32		prostatedNum = 9;				    //被膜拜次数
+	optional uint32		prostateTime = 10;				    //上一次膜拜时间
+	optional uint32		normalId = 11;				        //角色id
+}
+
+//资源战场玩家数据同步 global ----> game
+message stEnterResBattle
+{
+	optional uint32 charId = 1; 
+	optional uint32 copyMapLevel = 2;
+	optional uint32 guildId = 3;
+	optional stGloryUser self = 4;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 181;
+	}
+}
+
+//资源战场邀请好友 game ----> global
+message stBroadResBattleInvite
+{
+	optional uint32 charId = 1;
+	optional string name = 2;
+	optional uint32 guildId = 3;
+    optional uint32 job = 4;        //职业
+    optional uint32 sex = 5;        //性别
+    optional uint32 battlePower = 6;//战斗力
+    optional uint32 vipLv = 7;      //vip等级
+	optional uint32 instanceLvl = 8;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 182;
+	}
+}
+
+//pub断线 game ----> global
+message stPubOffline
+{
+    optional string msg = 1;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 183;
+	}
+}
+
+//秘境寻宝消耗次数 global ----> game
+message stDiscoverConsume
+{
+	optional uint32 charID = 1;		//玩家的角色ID
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 184;
+	}
+}
+
+
+//改名同步夫妻信息 game ----> global
+message stSynCoupleInfo
+{
+	optional uint32 coupleId = 1; //配偶的id
+	optional uint32 charID = 2;		//自己的id
+	optional string myNewName = 3;	//自己新名字
+
+	enum ProtoModID
+	{
+	    ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+	    FunID = 185;
+	}
+}
+
+//同步资源战场个人主要信息 game ----> global
+message stSynResBattleUserData
+{
+	optional stGloryUser user = 1;		//玩家信息
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 186;
+	}
+}
+
+//同步资源战场top50玩家信息 game ----> global
+message stSynResBattleTop50
+{
+	repeated stGloryUserPart detail = 1;		//玩家信息
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 187;
+	}
+}
+
+//同步资源战场荣耀王者信息 game ----> global
+message stSynResBattleKing
+{
+    optional bool clear = 1;
+    optional stGloryUserDetail king = 2;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 188;
+	}
+}
+
+//同意邀请加入资源战场 global ----> game
+message stReplyInviteResBattle
+{
+	optional uint32 charId = 1;		//角色id
+	optional uint32 guildId = 2;	//自己的公会id
+	optional uint32 inviteId = 3;	//邀请人pub char id
+	optional stGloryUser self = 4;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 189;
+	}
+}
+
+//同步荣耀王者称号 global ----> game
+message stSynGloryKingTitle
+{
+	optional uint32 charId = 1;	    //得到称号的玩家id
+	optional uint32 expireTime = 2;	//称号的过期时间
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 190;
+	}
+}
+
+//pub上线 game ----> global
+message stPubOnline
+{
+    optional string msg = 1;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 191;
+	}
+}
+
+//资源战场数据同步到pub global ----> game
+message stResBattleSend2Pub
+{
+	optional stGloryUserDetail king = 1;
+    repeated stGloryUserDetail detail = 2;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 192;
+	}
+}
+
+
+message stServerParamItem
+{
+    optional string name = 1;
+    optional string value = 2;
+}
+//系统参数同步到game global ----> game
+message stServerParamSend2Game
+{
+	repeated stServerParamItem params = 1;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 193;
+	}
+}
+//同步头像id game ----> global
+message stSynUserPhotoID
+{
+	optional uint32 charID	= 1;	//角色ID
+	optional uint32 photoID = 2;	//头像ID
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 194;
+	}
+}
+
+//使用等级直升宝箱 game ----> global
+message stUseLvlBox
+{
+	optional uint32 charID	= 1;	//角色ID
+	optional uint32 bagtype = 2;	//背包类型
+	optional uint64 instanceid = 3;	//实例id
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 195;
+	}
+}
+
+//使用等级直升宝箱 global ----> game
+message stUseLvlBoxRes
+{
+	optional uint32 charID	= 1;	//角色ID
+	optional uint32 bagtype = 2;	//背包类型
+	optional uint64 instanceid = 3;	//实例id
+	optional uint32 maxLvl = 4;	    //排行榜最高等级
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 196;
+	}
+}
+
+//云顶充值统计 game ----> global
+message stRechangeStatistics
+{
+	optional uint32 obtainDiamond = 1; 	//获得的钻石数量
+	optional uint32 giveDiamond = 2;	//额外获得的钻石数量
+	optional string data = 3;			//扩展字段
+	optional uint32 charid = 4;			//id	
+	optional uint32 money = 5;			//金额
+
+	enum ProtoModID
+	{
+	    ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+	    FunID = 197;
+	}
+}
+
+message stNftItem
+{
+    optional uint32 itemid = 1;		//道具id
+    optional uint32 itemcnt = 2; 	//对应限时随从的活动id
+    optional string itemname = 3; //道具名称
+    optional bytes url = 4;   //图片url
+}
+
+//查询用户nft global ----> game
+message stGlobal2GameQueryUserNft
+{
+	optional uint32 webConnID = 1;	//连接ID
+	optional uint32 charid = 2;	    //用户id
+
+	enum ProtoModID 
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 198;	
+	}		
+}
+
+
+//查询用户nft game ----> global
+message stGame2GlobalQueryUserNftResult
+{
+	optional uint32 webConnID = 1;	//连接ID
+	optional uint32 charid = 2;	    //用户id
+	optional uint32 result = 3;	    //处理结果, 0-成功
+	repeated stNftItem data = 4; //道具信息
+	optional uint32 vip = 5;	    //是否vip
+
+	enum ProtoModID 
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 199;	
+	}		
+}
+
+
+//nft道具上链/提现 global ----> game
+message stGlobal2GameChangeNftItem
+{
+	optional uint32 webConnID = 1;	//连接ID
+	optional uint32 charid = 2;	    //用户id
+	optional uint32 itemid = 3;	    //道具id
+	optional int32 count = 4;	    //数量
+
+	enum ProtoModID 
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 200;	
+	}		
+}
+
+
+//nft道具上链/提现结果 game ----> global
+message stGame2GlobalChangeNftItemResult
+{
+	optional uint32 webConnID = 1;	//连接ID
+	optional uint32 charid = 2;	    //用户id
+	optional uint32 result = 3;	    //处理结果, 0-成功 
+
+	enum ProtoModID 
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 201;	
+	}		
+}
+
+
+//nftVip邮件 game ----> global
+message stGame2GlobalNftVipGift
+{ 
+	optional uint32 charid = 1;	    //用户id 
+	repeated stSendMailAttach attaches = 2;	//附件
+	optional uint32 vipLv = 3;	    //vip等级 
+
+	enum ProtoModID 
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 202;	
+	}		
+}
+
+
+//ntf查询离线玩家数据数据 global ---> game
+message stRetNftOfflineUserData
+{
+	optional uint32 charid = 1;	//charid  
+	optional uint32 dataSize = 2;              		//二进制存档的大小
+	optional bytes  data = 3;						//二进制存档内容 
+	optional uint32 webConnID = 4;	//连接ID  
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 203;	
+	}		
+}
+
+
+//ntf修改离线玩家数据数据 global ---> game
+message stRetChangeNftOfflineUserData
+{
+	optional uint32 charid = 1;	//charid  
+	optional uint32 dataSize = 2;              		//二进制存档的大小
+	optional bytes  data = 3;						//二进制存档内容 
+	optional uint32 webConnID = 4;	//连接ID  
+	optional uint32 itemID = 5;	//
+	optional int32 count = 6;	//
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 204;	
+	}		
+}
+
+
+//////////////////////////////
+//////////////////////////////
+//////////////////////////////
+//////////////////////////////
+//////////////////////////////
+//////////////////////////////
+///
+//   game 与 global 通信结束
+//
+//////////////////////////////
+
+//////////////////////////////////////////
+//
+// 与Web之间的通信
+//
+/////////////////////////////////////////
+
+//打印日志 global ----> web
+message stSendUserLog
+{
+	repeated string logParam = 1;			//日志参数
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 1;	
+	}				
+}
+
+//提玩家下线 web  ----> global
+message stReqKillUserOut
+{
+	optional uint32 charID = 1;		//被踢的玩家的角色ID
+	optional uint32 webConnID = 2;	//连接ID
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 2;	
+	}				
+}
+
+//踢玩家下线返回 global ---> web
+message stKillUserOutResult
+{
+	optional  bool   result = 1;		//true 成功,false失败
+	optional uint32 webConnID = 2;	//连接ID
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 3;	
+	}		
+}
+
+//设置GM web ----> global
+message stReqSetUserGMType
+{
+	optional uint32  charID = 1;			//角色ID
+	optional uint32  gmValue = 2;			//gm值
+	optional uint32  webConnID = 3;			//连接ID
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 4;	
+	}		
+}
+
+//设置 GM结果 global ---> web
+message stSetUserGMTypeResult
+{
+	optional bool result = 1;			 //结果
+	optional uint32 webConnID = 2;		 //连接ID
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 5;	
+	}		
+}
+
+//封号解封 web ----> global
+message stReqBanUser
+{
+	optional uint32 charID = 1;			//角色ID
+	optional uint32 webConnID = 2;		//连接ID
+	optional bool   ban = 3;			//true 封,false解封
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 6;	
+	}		
+}
+
+//封号解封结果 global ----> web
+message stBanUserResult
+{
+	optional uint32 webConnID = 1;		//连接ID
+	optional bool	result = 2;			//结果
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 7;	
+	}		
+}
+
+message stSendMailAttach
+{
+	optional uint32 itemID = 1;
+	optional uint32 num  = 2;
+}
+
+//发送邮件 web -----> global
+message stSendMail2User
+{
+	optional string title = 1;		//标题
+	optional string content = 2;	//内容
+	repeated uint32 userList = 3;	//用户列表
+	repeated stSendMailAttach attaches = 4;	//附件
+	optional uint32 webConnID = 5;	//连接ID
+	optional string tag = 6;		//标志
+	optional bool   bAll = 7;		//是否所有玩家
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 8;	
+	}		
+}
+
+//发送邮件返回 global ---> web
+message stSendMail2UserResult
+{
+	optional bool   result = 1;		//true成功, false失败
+	optional uint32 webConnID = 2;  //连接ID
+	optional string tag = 3;		//标志
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 9;	
+	}			
+}
+
+//请求修改玩家数据 web ----> global
+message stWebMotifyUserInfo
+{
+	optional uint32 charID = 1;			//角色ID
+	optional uint32 newbieGuideID = 2;	//新手引导ID
+	optional uint32 webConnID = 3;		//连接ID
+	optional uint32 goldCoin = 4;		//金币
+	optional uint32 diamond = 5;		//钻石
+	optional uint32 vipPoint = 6;		//vip点数
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 10;	
+	}		
+}
+
+//返回修改玩家数据 global ----> web
+message stWebMotifyUserInfoRet
+{
+	optional uint32 charID = 1;			//角色ID
+	optional uint32 webConnID = 2;		//连接ID
+	optional bool   result = 3;			//true成功,false失败
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 10;	
+	}		
+}
+
+enum eNoticeOp
+{
+	eInsert_Notice = 1;
+	eUpdate_Notice = 2;
+}
+
+//增加或修改一条公告 web ----> global
+message stAddOrUpdateNotice
+{
+	optional uint32 noticeID = 1;		//公告ID
+	optional int32  interval = 2;		//间隔
+	optional uint32 num = 3;			//次数
+	optional string content = 4;		//内容	
+	optional eNoticeOp op = 5;			//操作
+	optional uint32 noticePosition = 6;	//公告位置
+	optional uint32 beginTime = 7;		//开始时间
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 11;	
+	}		
+}
+
+
+//删除一条公告 web ---> global
+message stDelNotice
+{
+	optional uint32 noticeID = 1;
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 12;	
+	}		
+}
+
+//发送充值通知  web ----> global
+message stWebNotifyRechargeInfo
+{
+	optional uint32 charID = 1;			//角色的ID
+	optional uint32 money = 2;			//充值的金钱
+	optional uint32 itemID = 3;			//购买的物品ID
+	optional string tid = 4;			//账单
+	optional string account = 5;		//账号
+	optional uint32 opID = 6;			//渠道ID
+	optional bool   isExtend = 7;		//是否统计	
+	optional string data = 8;			//扩展参数
+	optional uint32 payChannel = 9;		//支付渠道ID
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 13;	
+	}		
+}
+
+//增加一个礼包配置  web ---> global
+message stAddGiftBagCfg
+{
+	optional uint32 id = 1;
+	optional string content = 2;
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 14;	
+	}		
+}
+
+//删除礼包配置 web ---> global
+message stDelGiftBagCfg
+{
+	optional uint32 id = 1;
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 15;	
+	}		
+}
+
+//提交黑白名单 web ----> global
+message stAddBlackAndWhite
+{
+	repeated string blackList = 1;			//黑名单
+	repeated string whiteList = 2;			//白名单
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 16;	
+	}			
+}
+
+//设置维护时间 web ----> global
+message stSetServerMaintenanceTime
+{
+	optional string opTime = 1;		//维护时间
+	optional uint32 opDuring = 2;	//持续时间分钟
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 17;	
+	}		
+}
+
+//获得服务器配置 web ----> global
+message stGetSvrConfig
+{
+	optional uint32 webConnID = 1;			//web连接ID 
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 18;	
+	}	
+}
+
+//返回服务器配置 global ---> web
+message stRetSvrConfig
+{
+	repeated stServerCfgPair cfgPair = 1;
+	optional uint32 webConnID = 2;			//web连接ID 
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 19;	
+	}		
+}
+
+//更新服务器配置 web ----> global
+message stUpdateSvrCfg
+{
+	repeated stServerCfgPair cfgPair = 1;
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 20;	
+	}		
+}
+
+//获取在线人数 global ---->  web
+message stNotifyWebOnlineNum
+{
+	optional uint32 num = 1;      
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 21;	
+	}			
+}
+
+//进入选择界面 global ---> web
+message stEnterSelectPage
+{
+	optional string account = 1;			//账号
+	optional string deviceID = 2;			//设备ID
+	optional uint32 opID = 3;				//运营商ID
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 22;	
+	}			
+}
+
+//通知web创建了角色 global ----> web
+message stNotifyWebCreateRole
+{
+	optional string account = 1;			//账号
+	optional uint32 opID = 2;				//运营商ID
+	optional string deviceID = 3;			//设备ID
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 23;	
+	}		
+}
+
+//公会日志 global -----> web
+message stSendGuildLog
+{
+	optional string account = 1;
+	optional uint32 opID = 2;
+	optional uint32 charID = 3;
+	optional uint32 level = 4;
+	optional uint32 vipLv = 5;
+	optional uint32 guildID = 6;
+	optional string action = 7;
+	optional string opObjID = 8;
+	optional string name = 9;
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 24;	
+	}		
+}
+
+//公会资源日志 global -----> web
+message sstSendGuildResLog
+{
+	optional uint32 guildID = 1;
+	optional string res = 2;
+	optional uint32 oldVal = 3;
+	optional uint32 newVal = 4;
+	optional string reason = 5;
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 25;	
+	}			
+}
+
+//模块功能日追 global ----> web
+message stSendModuleLog
+{
+	optional string account = 1;
+	optional uint32 opID = 2;
+	optional uint32 charID = 3;
+	optional uint32 level = 4;
+	optional uint32 vipLv = 5;
+	optional string module = 6;
+	optional uint32 copymapID = 7;
+	optional string otherCharID = 8;
+	optional bool   result = 9;
+	optional uint32 oldRank = 10;
+	optional uint32 newRank = 11;
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 26;	
+	}		
+}
+
+//领取TX福利中心的礼包 web ----> global
+message stReqGetTxGiftBag
+{
+	optional uint32 webConnID = 1;			//web连接ID 
+	optional string openid = 2;				//也就是账号ID
+	optional uint32 taskID = 3;				//任务ID
+	optional uint32 arewardID = 4;			//奖励ID
+	optional string action = 5;				//行为
+	optional string billno = 6;				//账单
+	optional uint32 charID = 7;				//角色ID
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 27;	
+	}		
+}
+
+//领取TX福利中心的礼包返回 global ----> web
+message stRetGetTxGiftBag
+{
+	optional uint32 webConnID = 1;          //web连接ID
+	optional uint32  result = 2;				//结果
+	optional string msg = 3;				//返回的消息
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 28;	
+	}			
+}
+
+//修改服务器开服时间 web ----> global
+message stUpdateSvrOpenTime
+{
+	optional uint32 time = 1;   //开服时间
+
+	enum ProtoModID
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 29;	
+	}		
+}
+
+//资源变化 global ----> web
+message stResourceChgLog
+{
+	optional uint32 charID = 1;		//角色ID
+	optional string account = 2;	//账号
+	optional string name = 3;		//角色名字
+	optional uint32 resID = 4;		//资源ID
+	optional uint32 addNum = 5;		//增加前的数量
+	optional uint32 oldValue = 6;	//变化前的数量
+	optional uint32 newValue = 7;	//变化后的数量
+	optional string reason = 8;		//原因
+
+	enum ProtoModID 
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 30;	
+	}		
+}
+
+//使用分享码 global ----> web
+message stUseInviteCode
+{
+	optional string code = 1;		//分享码
+	optional uint32 webConnID = 2;	//连接ID
+	optional string account = 3;	//账户名
+	optional string userId = 4;	    //用户id
+
+	enum ProtoModID 
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 31;	
+	}		
+}
+
+//使用分享码 web ----> global
+message stUseInviteCodeCb
+{
+	optional string msg = 1;		//使用提示
+	optional uint32 webConnID = 2;	//连接ID
+	optional string account = 3;	//账户名
+	optional string userId = 4;	    //用户id
+
+	enum ProtoModID 
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 32;	
+	}		
+}
+
+//请求同步限时随从活动数据 global ----> web
+message stReqLimitPetActivityData
+{
+	optional string msg = 1;
+
+	enum ProtoModID 
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 33;	
+	}		
+}
+
+message stAcitivityLimitPetItem
+{
+    optional uint32 id = 1;        //唯一id
+    optional uint32 activiyId = 2; //对应限时随从的活动id
+    optional uint32 startTime = 3; //开启时间
+    optional uint32 endTime = 4;   //结束时间
+}
+
+//同步限时随从活动数据 web ----> global
+message stSendLimitPetActivityData
+{
+    optional string msg = 1;
+	repeated stAcitivityLimitPetItem item = 2;
+
+	enum ProtoModID 
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 34;	
+	}		
+}
+
+//给global发送信息 web ----> global
+message stSendShutDown
+{
+    optional string msg = 1;
+
+	enum ProtoModID 
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 35;	
+	}		
+}
+
+//查询用户nft web ----> global
+message stWeb2GlobalQueryUserNft
+{
+	optional uint32 webConnID = 1;	//连接ID
+	optional uint32 charid = 2;	    //用户id
+
+	enum ProtoModID 
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 36;	
+	}		
+}
+
+
+//查询用户nft global ----> web
+message stGlobal2WebQueryUserNftResult
+{
+	optional uint32 webConnID = 1;	//连接ID
+	optional uint32 charid = 2;	    //用户id
+	optional uint32 result = 3;	    //处理结果, 0-成功
+	repeated stNftItem data = 4; //道具信息
+	optional uint32 vip = 5;	    //是否vip
+
+	enum ProtoModID 
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 37;	
+	}		
+}
+
+
+//nft道具上链/提现 web ----> global
+message stWeb2GlobalChangeNftItem
+{
+	optional uint32 webConnID = 1;	//连接ID
+	optional uint32 charid = 2;	    //用户id
+	optional uint32 itemid = 3;	    //道具id
+	optional int32 count = 4;	    //数量
+
+	enum ProtoModID 
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 38;	
+	}		
+}
+
+
+//nft道具上链/提现结果 global ----> web
+message stGlobal2WebChangeNftItemResult
+{
+	optional uint32 webConnID = 1;	//连接ID
+	optional uint32 charid = 2;	    //用户id
+	optional uint32 result = 3;	    //处理结果, 0-成功 
+
+	enum ProtoModID 
+	{
+		ModID = 6;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 39;	
+	}		
+}
+
+
+
+////////////////////////////////////////
+///
+/// 与Web之间的通信协议结束
+///
+//////////////////////////////////////

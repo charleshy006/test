@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Authorize>
+	<!-- 指令权限设定 -->
+	<!-- command：指令  authority：使用该指令需要的最低权限 -->
+	<Set command="addItem" authority="3" />
+	<Set command="addPointCard" authority="3" />
+</Authorize>

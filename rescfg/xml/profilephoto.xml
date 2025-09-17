@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2013 sp1 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<conf>
+	<!--
+		id:id为1固定为默认解锁头像
+		Icon:头像ICON
+		UnlockCondition:解锁条件
+		                1:等级解锁
+						2:钻石解锁
+						3:使用道具解锁
+		ConditionNum:解锁条件对应值
+		             1:对应需求玩家等级
+					 2:对应需求钻石数量
+					 3:对应需要道具ID
+		UnlockDesc:解锁说明
+	-->
+	<profession id="100000">
+		<entry id="1" Icon="100000_1" UnlockCondition="1" ConditionNum="1" UnlockDesc="photo_01"/>
+		<entry id="2" Icon="100000_2" UnlockCondition="1" ConditionNum="10" UnlockDesc="photo_02"/>
+		<entry id="3" Icon="100000_3" UnlockCondition="1" ConditionNum="30" UnlockDesc="photo_03"/>
+		<entry id="4" Icon="100000_4" UnlockCondition="2" ConditionNum="300" UnlockDesc="photo_04"/>
+		<entry id="5" Icon="100000_5" UnlockCondition="2" ConditionNum="1000" UnlockDesc="photo_05"/>
+		<entry id="6" Icon="100000_6" UnlockCondition="2" ConditionNum="2000" UnlockDesc="photo_06"/>
+		<entry id="7" Icon="100000_v1" UnlockCondition="1" ConditionNum="30" UnlockDesc="photo_07"/>
+		<entry id="8" Icon="100000_v2" UnlockCondition="1" ConditionNum="30" UnlockDesc="photo_08"/>
+		<entry id="9" Icon="100000_v3" UnlockCondition="1" ConditionNum="30" UnlockDesc="photo_09"/>
+		<entry id="10" Icon="100000_v4" UnlockCondition="1" ConditionNum="30" UnlockDesc="photo_10"/>
+	</profession>
+	<profession id="100001">
+		<entry id="1" Icon="100001_1" UnlockCondition="1" ConditionNum="1" UnlockDesc="photo_01"/>
+		<entry id="2" Icon="100001_2" UnlockCondition="1" ConditionNum="10" UnlockDesc="photo_02"/>
+		<entry id="3" Icon="100001_3" UnlockCondition="1" ConditionNum="30" UnlockDesc="photo_03"/>
+		<entry id="4" Icon="100001_4" UnlockCondition="2" ConditionNum="300" UnlockDesc="photo_04"/>
+		<entry id="5" Icon="100001_5" UnlockCondition="2" ConditionNum="1000" UnlockDesc="photo_05"/>
+		<entry id="6" Icon="100001_6" UnlockCondition="2" ConditionNum="2000" UnlockDesc="photo_06"/>
+		<entry id="7" Icon="100001_v1" UnlockCondition="1" ConditionNum="30" UnlockDesc="photo_07"/>
+		<entry id="8" Icon="100001_v2" UnlockCondition="1" ConditionNum="30" UnlockDesc="photo_08"/>
+		<entry id="9" Icon="100001_v3" UnlockCondition="1" ConditionNum="30" UnlockDesc="photo_09"/>
+		<entry id="10" Icon="100001_v4" UnlockCondition="1" ConditionNum="30" UnlockDesc="photo_10"/>
+	</profession>
+	<profession id="100002">
+		<entry id="1" Icon="100002_1" UnlockCondition="1" ConditionNum="1" UnlockDesc="photo_01"/>
+		<entry id="2" Icon="100002_2" UnlockCondition="1" ConditionNum="10" UnlockDesc="photo_02"/>
+		<entry id="3" Icon="100002_3" UnlockCondition="1" ConditionNum="30" UnlockDesc="photo_03"/>
+		<entry id="4" Icon="100002_4" UnlockCondition="2" ConditionNum="300" UnlockDesc="photo_04"/>
+		<entry id="5" Icon="100002_5" UnlockCondition="2" ConditionNum="1000" UnlockDesc="photo_05"/>
+		<entry id="6" Icon="100002_6" UnlockCondition="2" ConditionNum="2000" UnlockDesc="photo_06"/>
+		<entry id="7" Icon="100002_v1" UnlockCondition="1" ConditionNum="30" UnlockDesc="photo_07"/>
+		<entry id="8" Icon="100002_v2" UnlockCondition="1" ConditionNum="30" UnlockDesc="photo_08"/>
+		<entry id="9" Icon="100002_v3" UnlockCondition="1" ConditionNum="30" UnlockDesc="photo_09"/>
+		<entry id="10" Icon="100002_v4" UnlockCondition="1" ConditionNum="30" UnlockDesc="photo_10"/>
+	</profession>
+	<profession id="100003">
+		<entry id="1" Icon="100003_1" UnlockCondition="1" ConditionNum="1" UnlockDesc="photo_01"/>
+		<entry id="2" Icon="100003_2" UnlockCondition="1" ConditionNum="10" UnlockDesc="photo_02"/>
+		<entry id="3" Icon="100003_3" UnlockCondition="1" ConditionNum="30" UnlockDesc="photo_03"/>
+		<entry id="4" Icon="100003_4" UnlockCondition="2" ConditionNum="300" UnlockDesc="photo_04"/>
+		<entry id="5" Icon="100003_5" UnlockCondition="2" ConditionNum="1000" UnlockDesc="photo_05"/>
+		<entry id="6" Icon="100003_6" UnlockCondition="2" ConditionNum="2000" UnlockDesc="photo_06"/>
+		<entry id="7" Icon="100003_v1" UnlockCondition="1" ConditionNum="30" UnlockDesc="photo_07"/>
+		<entry id="8" Icon="100003_v2" UnlockCondition="1" ConditionNum="30" UnlockDesc="photo_08"/>
+		<entry id="9" Icon="100003_v3" UnlockCondition="1" ConditionNum="30" UnlockDesc="photo_09"/>
+		<entry id="10" Icon="100003_v4" UnlockCondition="1" ConditionNum="30" UnlockDesc="photo_10"/>
+	</profession>
+	<profession id="100004">
+		<entry id="1" Icon="100004_1" UnlockCondition="1" ConditionNum="1" UnlockDesc="photo_01"/>
+		<entry id="2" Icon="100004_2" UnlockCondition="1" ConditionNum="10" UnlockDesc="photo_02"/>
+		<entry id="3" Icon="100004_3" UnlockCondition="1" ConditionNum="30" UnlockDesc="photo_03"/>
+		<entry id="4" Icon="100004_4" UnlockCondition="2" ConditionNum="300" UnlockDesc="photo_04"/>
+		<entry id="5" Icon="100004_5" UnlockCondition="2" ConditionNum="1000" UnlockDesc="photo_05"/>
+		<entry id="6" Icon="100004_6" UnlockCondition="2" ConditionNum="2000" UnlockDesc="photo_06"/>
+		<entry id="7" Icon="100004_v1" UnlockCondition="1" ConditionNum="30" UnlockDesc="photo_07"/>
+		<entry id="8" Icon="100004_v2" UnlockCondition="1" ConditionNum="30" UnlockDesc="photo_08"/>
+		<entry id="9" Icon="100004_v3" UnlockCondition="1" ConditionNum="30" UnlockDesc="photo_09"/>
+		<entry id="10" Icon="100004_v4" UnlockCondition="1" ConditionNum="30" UnlockDesc="photo_10"/>
+	</profession>
+	<profession id="100005">
+		<entry id="1" Icon="100005_1" UnlockCondition="1" ConditionNum="1" UnlockDesc="photo_01"/>
+		<entry id="2" Icon="100005_2" UnlockCondition="1" ConditionNum="10" UnlockDesc="photo_02"/>
+		<entry id="3" Icon="100005_3" UnlockCondition="1" ConditionNum="30" UnlockDesc="photo_03"/>
+		<entry id="4" Icon="100005_4" UnlockCondition="2" ConditionNum="300" UnlockDesc="photo_04"/>
+		<entry id="5" Icon="100005_5" UnlockCondition="2" ConditionNum="1000" UnlockDesc="photo_05"/>
+		<entry id="6" Icon="100005_6" UnlockCondition="2" ConditionNum="2000" UnlockDesc="photo_06"/>
+		<entry id="7" Icon="100005_v1" UnlockCondition="1" ConditionNum="30" UnlockDesc="photo_07"/>
+		<entry id="8" Icon="100005_v2" UnlockCondition="1" ConditionNum="30" UnlockDesc="photo_08"/>
+		<entry id="9" Icon="100005_v3" UnlockCondition="1" ConditionNum="30" UnlockDesc="photo_09"/>
+		<entry id="10" Icon="100005_v4" UnlockCondition="1" ConditionNum="30" UnlockDesc="photo_10"/>
+	</profession>
+</conf>

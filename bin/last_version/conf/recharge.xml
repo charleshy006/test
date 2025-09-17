@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<root>
+	<!--
+		id：商品编号
+		type：商品类型
+			  1：月卡、季卡、年卡三种不同类型的时效福利卡商品，同时只可以存在一个，当存在时效性福利卡时，ID编号大的可以替换ID编号小的，ID编号小的不可以替换ID编号大的
+			  2：永久生效的福利卡商品，只可购买一次
+			  3：一般商品，可购买多次
+			  4：成长基金，只可购买一次
+			  5： 战令 
+			  6：次数宝箱 (<extra 子标签配置差异化：buyCount 为购买次数)
+		firstreward：是否存在第一次充值奖励，0：不存在；1：存在
+		money：需要现实价格
+		getdiamond：获得钻石数量，购买该档次商品获得钻石数量
+		everydaydiamond:月卡、季卡、年卡、福利卡每日获得钻石显示
+		firstextradiamond：首次购买额外获得钻石数量，首次该买该档次商品额外获得钻石数量，首次购买该档次商品不会获得extradiamond中非首次购买给予的钻石
+		extradiamond：非首次购买额外获得钻石数量额外获得钻石数量
+		DiamondGetdesc：用于额外获得钻石数量描述（月/季/年）和福利卡描述。
+		Timedesc：用于（月/季/年/福利）卡使用期限描述。
+		Effectdesc：用于（月/季/年/福利）卡剩余生效时间。
+		Prompttag：用于商品图片左上的图标（打折图标）。
+		Discounttag：用于商品条中下端的图标（购买提示图标）。
+		ShowIcon:客户端使用的商品图标
+		refreshTime: 商店刷新时间（单位：秒）
+		refreshType：商店刷新类型
+			1表示每日刷新 0点
+			2表示间隔时间刷新 开服时间  
+			3表示不刷新 永久 
+			4表示每周星期一凌晨 0点
+	-->
+	<pay>
+		<cost id="28" projectid="com.ssh.28" type="3" firstreward="1" money="6" getdiamond="60" firstextradiamond="60" extradiamond="0" everydaydiamond="0" DiamondGetdesc="itemname_2" Timedesc="" Effectdesc="" ShowIcon="VipCard_10" unit="RMB">
+			<special opID="5000" chargeID="com.ssh.28" unit="RMB" money="6"/>
+		</cost>	
+		<cost id="29" projectid="com.ssh.29" type="3" firstreward="1" money="18" getdiamond="180" firstextradiamond="180" extradiamond="0" everydaydiamond="0" DiamondGetdesc="itemname_2" Timedesc="" Effectdesc="" ShowIcon="VipCard_10" unit="RMB">
+			<special opID="5000" chargeID="com.ssh.29" unit="RMB" money="18"/>
+		</cost>	
+		<cost id="30" projectid="com.ssh.30" type="3" firstreward="1" money="30" getdiamond="300" firstextradiamond="300" extradiamond="0" everydaydiamond="0" DiamondGetdesc="itemname_2" Timedesc="" Effectdesc="" ShowIcon="VipCard_9" unit="RMB">
+			<special opID="5000" chargeID="com.ssh.30" unit="RMB" money="30"/>
+		</cost>	
+		<cost id="31" projectid="com.ssh.31" type="3" firstreward="1" money="68" getdiamond="680" firstextradiamond="680" extradiamond="0" everydaydiamond="0" DiamondGetdesc="itemname_2" Timedesc="" Effectdesc="" ShowIcon="VipCard_9" unit="RMB">
+			<special opID="5000" chargeID="com.ssh.31" unit="RMB" money="68"/>
+		</cost>	
+		<cost id="32" projectid="com.ssh.32" type="3" firstreward="1" money="98" getdiamond="980" firstextradiamond="980" extradiamond="0" everydaydiamond="0" DiamondGetdesc="itemname_2" Timedesc="" Effectdesc="" ShowIcon="VipCard_8" unit="RMB">
+			<special opID="5000" chargeID="com.ssh.32" unit="RMB" money="98"/>
+		</cost>	
+		<cost id="33" projectid="com.ssh.33" type="3" firstreward="1" money="198" getdiamond="1980" firstextradiamond="1980" extradiamond="0" everydaydiamond="0" DiamondGetdesc="itemname_2" Timedesc="" Effectdesc="" ShowIcon="VipCard_8" unit="RMB">
+			<special opID="5000" chargeID="com.ssh.33" unit="RMB" money="198"/>
+		</cost>	
+		<cost id="34" projectid="com.ssh.34" type="3" firstreward="1" money="328" getdiamond="3280" firstextradiamond="3280" extradiamond="0" everydaydiamond="0" DiamondGetdesc="itemname_2" Timedesc="" Effectdesc="" ShowIcon="VipCard_8" unit="RMB">
+			<special opID="5000" chargeID="com.ssh.34" unit="RMB" money="328"/>
+		</cost>	
+		<cost id="35" projectid="com.ssh.35" type="3" firstreward="1" money="648" getdiamond="6480" firstextradiamond="6480" extradiamond="0" everydaydiamond="0" DiamondGetdesc="itemname_2" Timedesc="" Effectdesc="" ShowIcon="VipCard_7" unit="RMB">
+			<special opID="5000" chargeID="com.ssh.35" unit="RMB" money="648"/>
+		</cost>	
+		<cost id="36" projectid="com.ssh.36" type="3" firstreward="1" money="1000" getdiamond="10000" firstextradiamond="20000" extradiamond="0" everydaydiamond="0" DiamondGetdesc="itemname_2" Timedesc="" Effectdesc="" ShowIcon="VipCard_7" unit="RMB">
+			<special opID="5000" chargeID="com.ssh.36" unit="RMB" money="1000"/>
+		</cost>	
+		<cost id="37" projectid="com.ssh.37" type="3" firstreward="1" money="2000" getdiamond="20000" firstextradiamond="40000" extradiamond="0" everydaydiamond="0" DiamondGetdesc="itemname_2" Timedesc="" Effectdesc="" ShowIcon="VipCard_6" unit="RMB">
+			<special opID="5000" chargeID="com.ssh.37" unit="RMB" money="2000"/>
+		</cost>	
+		<cost id="38" projectid="com.ssh.38" type="3" firstreward="1" money="3000" getdiamond="30000" firstextradiamond="60000" extradiamond="0" everydaydiamond="0" DiamondGetdesc="itemname_2" Timedesc="" Effectdesc="" ShowIcon="VipCard_5" unit="RMB">
+			<special opID="5000" chargeID="com.ssh.38" unit="RMB" money="3000"/>
+		</cost>			
+		<cost id="39" projectid="com.ssh.39" type="3" firstreward="1" money="5000" getdiamond="50000" firstextradiamond="150000" extradiamond="0" everydaydiamond="0" DiamondGetdesc="itemname_2" Timedesc="" Effectdesc="" ShowIcon="VipCard_5" unit="RMB">
+			<special opID="5000" chargeID="com.ssh.39" unit="RMB" money="5000"/>
+		</cost>	
+		<cost id="40" projectid="com.ssh.40" type="3" firstreward="1" money="10000" getdiamond="100000" firstextradiamond="400000" extradiamond="0" everydaydiamond="0" DiamondGetdesc="itemname_2" Timedesc="" Effectdesc="" ShowIcon="VipCard_4" unit="RMB">
+			<special opID="5000" chargeID="com.ssh.40" unit="RMB" money="10000"/>
+		</cost>	
+		<cost id="41" projectid="com.ssh.41" type="3" firstreward="1" money="20000" getdiamond="200000" firstextradiamond="800000" extradiamond="0" everydaydiamond="0" DiamondGetdesc="itemname_2" Timedesc="" Effectdesc="" ShowIcon="VipCard_3" unit="RMB">
+			<special opID="5000" chargeID="com.ssh.41" unit="RMB" money="20000"/>
+		</cost>	
+		<cost id="42" projectid="com.ssh.42" type="3" firstreward="1" money="50000" getdiamond="500000" firstextradiamond="500000" extradiamond="0" everydaydiamond="0" DiamondGetdesc="itemname_2" Timedesc="" Effectdesc="" ShowIcon="VipCard_3" unit="RMB">
+			<special opID="5000" chargeID="com.ssh.42" unit="RMB" money="50000"/>
+		</cost>
+		<cost id="43" projectid="com.ssh.43" type="3" firstreward="1" money="100000" getdiamond="1000000" firstextradiamond="1000000" extradiamond="0" everydaydiamond="0" DiamondGetdesc="itemname_2" Timedesc="" Effectdesc="" ShowIcon="VipCard_3" unit="RMB">
+			<special opID="5000" chargeID="com.ssh.43" unit="RMB" money="100000"/>
+		</cost>	
+		<cost id="48" projectid="com.ssh.48" type="3" firstreward="0" money="200000" getdiamond="2000000" firstextradiamond="0" extradiamond="8000000" everydaydiamond="0" DiamondGetdesc="itemname_2" Timedesc="" Effectdesc="" ShowIcon="VipCard_2" unit="RMB">
+			<special opID="5000" chargeID="com.ssh.48" unit="RMB" money="200000"/>
+		</cost>
+		<cost id="20" projectid="com.ssh.20" type="1" firstreward="0" money="300" getdiamond="3000" firstextradiamond="0" extradiamond="0" everydaydiamond="200" DiamondGetdesc="ui_VipShop_13" Timedesc="shopdesc_02" Effectdesc="shopdesc_03" ShowIcon="VipCard_1" unit="RMB">
+			<special opID="5000" chargeID="com.ssh.20" unit="RMB" money="300"/>
+		</cost>
+		<cost id="44" projectid="com.ssh.44" type="4" firstreward="0" money="680" getdiamond="700" firstextradiamond="0" extradiamond="300" everydaydiamond="0" DiamondGetdesc="ui_VipShop_44" Timedesc="" Effectdesc="" ShowIcon="VipCard_12" unit="RMB">
+			<special opID="5000" chargeID="com.ssh.44" unit="RMB" money="680"/>
+		</cost>
+		<cost id="45" projectid="com.ssh.45" type="2" firstreward="0" money="648" getdiamond="6480" firstextradiamond="0" extradiamond="0" everydaydiamond="200" DiamondGetdesc="ui_VipShop_21" Timedesc="shopdesc_07" Effectdesc="shopdesc_08" ShowIcon="VipCard_11" unit="RMB">
+			<special opID="5000" chargeID="com.ssh.45" unit="RMB" money="648"/>
+		</cost>
+		<cost id="51" projectid="com.ssh.51" type="5" firstreward="0" money="5888" getdiamond="0" firstextradiamond="0" extradiamond="0" everydaydiamond="0" DiamondGetdesc="ui_VipShop_21" Timedesc="shopdesc_07" Effectdesc="shopdesc_08" ShowIcon="VipCard_11" unit="RMB" refreshType="2" refreshTime="2592000">
+			<special opID="5000" chargeID="com.ssh.51" unit="RMB" money="5888"/>
+		</cost>
+		<cost id="52" projectid="com.ssh.52" type="5" firstreward="0" money="5888" getdiamond="0" firstextradiamond="0" extradiamond="0" everydaydiamond="0" DiamondGetdesc="ui_VipShop_21" Timedesc="shopdesc_07" Effectdesc="shopdesc_08" ShowIcon="VipCard_11" unit="RMB" refreshType="2" refreshTime="2592000">
+			<special opID="5000" chargeID="com.ssh.52" unit="RMB" money="5888"/>
+		</cost>
+		<cost id="53" projectid="com.ssh.53" type="6" firstreward="0" money="100" getdiamond="0" firstextradiamond="0" extradiamond="0" everydaydiamond="0" DiamondGetdesc="itemname_102647" Timedesc="ui_VipShop_109" Effectdesc="shopdesc_08" ShowIcon="VipCard_11" unit="RMB" buyCount="5" boxId="102647" boxNum="1" refreshType="1" refreshTime="86400">
+			<special opID="5000" chargeID="com.ssh.53" unit="RMB" money="100" />
+		</cost>
+		<cost id="54" projectid="com.ssh.54" type="6" firstreward="0" money="100" getdiamond="0" firstextradiamond="0" extradiamond="0" everydaydiamond="0" DiamondGetdesc="itemname_17" Timedesc="ui_VipShop_109" Effectdesc="shopdesc_08" ShowIcon="VipCard_11" unit="RMB" buyCount="3" boxId="17" boxNum="60" refreshType="1" refreshTime="86400">
+			<special opID="5000" chargeID="com.ssh.54" unit="RMB" money="100" />
+		</cost>
+		<cost id="55" projectid="com.ssh.55" type="6" firstreward="0" money="400" getdiamond="0" firstextradiamond="0" extradiamond="0" everydaydiamond="0" DiamondGetdesc="ui_VipShop_103" Timedesc="ui_VipShop_109" Effectdesc="shopdesc_08" ShowIcon="VipCard_11" unit="RMB" buyCount="1" boxId="122609" boxNum="1" refreshType="1" refreshTime="604800">
+			<special opID="5000" chargeID="com.ssh.55" unit="RMB" money="400" />
+		</cost>
+		<cost id="56" projectid="com.ssh.56" type="6" firstreward="0" money="500" getdiamond="0" firstextradiamond="0" extradiamond="0" everydaydiamond="0" DiamondGetdesc="itemname_120101" Timedesc="ui_VipShop_109" Effectdesc="shopdesc_08" ShowIcon="VipCard_11" unit="RMB"  buyCount="1" boxId="120101" boxNum="100" refreshType="1" refreshTime="86400">
+			<special opID="5000" chargeID="com.ssh.56" unit="RMB" money="500" />
+		</cost>
+	</pay>
+	
+	<firstPay>
+		<reward id="1" boxid="1" />
+		<reward id="2" boxid="2" />
+	</firstPay>
+</root>

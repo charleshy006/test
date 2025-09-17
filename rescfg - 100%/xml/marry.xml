@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<root>
+	<!--
+		DivorceCD:无用
+		LevelID：结婚场景
+		Typeid: 婚礼规格ID
+		Typename:规格名字
+		Boxid：展示盒子ID
+		Ringid：无用
+		SweetID：喜糖ID
+		Firework：烟花ID
+		CostType：消耗类型（1金币，2钻石
+		Cost：消耗数量
+		Sweetnum：可领取喜糖数量
+		SweetCD：喜糖领取CD
+		Effect：烟花效果
+		FWlength：烟花时间长度
+		
+		
+		
+	-->
+	<Marry divorceCD="36000" >
+		<Type id="1" Levelid="5" Boxid="102828" Ringid="720003" CostType="2" Cost="3000" Sweetid="102825" Sweetnum="3" SweetCD="300" Typename="ui_marriage_100"/>
+		<Type id="2" Levelid="5" Boxid="102829" Ringid="720003" CostType="2" Cost="8000" Sweetid="102826" Sweetnum="3" SweetCD="300" Typename="ui_marriage_101"/>
+		<Type id="3" Levelid="5" Boxid="102830" Ringid="720003" CostType="2" Cost="15000" Sweetid="102827" Sweetnum="3" SweetCD="300" Typename="ui_marriage_102"/>
+	</Marry>
+	
+	<FWshop>
+		<Firework id="1" itemid="121232" CostType="2" Cost="50" Effect="UI_Fireworks_single" FWlength="2"/>
+		<Firework id="2" itemid="122232" CostType="2" Cost="100" Effect="UI_Fireworks" FWlength="2"/>
+		<Firework id="3" itemid="122632" CostType="2" Cost="200" Effect="UI_Fireworks_colorful" FWlength="2"/>
+	</FWshop>
+	<!--
+		Divorce:离婚
+		id：1普通离婚，2强制离婚
+		Time：需要等待时间	
+		
+	-->
+	<Divorce>
+		<entry id="1"  CostType="2" Cost="200" Time="1000000"/>
+		<entry id="2"  CostType="2" Cost="3000" Time="0"/>
+	</Divorce>
+</root>

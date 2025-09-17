@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+
+<!--
+	Activityid:活动id
+	limittimedrawid:抽奖掉落组ID
+	pointreward:积分奖励，积分达到pointnum值，可领取boxid奖励，玩家活动期间手动领取，活动结束无法继续领取，开启下次活动时积分清零
+	rankreward:排名奖励，活动结束结算排名奖励，奖励通过邮箱发送
+-->
+<conf>
+	<!--第一抽奖组-->
+	<Activity Activityid="1">
+		<drawid>
+			<entry id="1" limittimedrawid="1" />
+		</drawid>
+		<pointreward>
+			<entry id="1" pointnum="500" boxid="170900" />
+			<entry id="2" pointnum="3000" boxid="170901" />
+			<entry id="3" pointnum="10000" boxid="170902" />
+			<entry id="4" pointnum="30000" boxid="170903" />
+			<entry id="5" pointnum="50000" boxid="170904" />
+		</pointreward>
+	</Activity>
+
+	<!--第二抽奖组-->
+	<Activity Activityid="2">
+		<drawid>
+			<entry id="1" limittimedrawid="2" />
+		</drawid>
+		<pointreward>
+			<entry id="1" pointnum="500" boxid="170910" />
+			<entry id="2" pointnum="3000" boxid="170911" />
+			<entry id="3" pointnum="10000" boxid="170912" />
+			<entry id="4" pointnum="30000" boxid="170913" />
+			<entry id="5" pointnum="50000" boxid="170914" />
+		</pointreward>
+	</Activity>
+	
+	<!--第三抽奖组-->
+	<Activity Activityid="3">
+		<drawid>
+			<entry id="1" limittimedrawid="3" />
+		</drawid>
+		<pointreward>
+			<entry id="1" pointnum="500" boxid="170920" />
+			<entry id="2" pointnum="3000" boxid="170921" />
+			<entry id="3" pointnum="10000" boxid="170922" />
+			<entry id="4" pointnum="30000" boxid="170923" />
+			<entry id="5" pointnum="50000" boxid="170924" />
+		</pointreward>
+	</Activity>
+	
+	<!--第四抽奖组  坐骑-->
+	<Activity Activityid="4">
+		<drawid>
+			<entry id="1" limittimedrawid="4" />
+		</drawid>
+		<pointreward>
+			<entry id="1" pointnum="500" boxid="170925" />
+			<entry id="2" pointnum="3000" boxid="170926" />
+			<entry id="3" pointnum="10000" boxid="170927" />
+			<entry id="4" pointnum="30000" boxid="170928" />
+			<entry id="5" pointnum="50000" boxid="170929" />
+		</pointreward>
+	</Activity>
+	
+	
+	<!--第五抽奖组  暗影装备-->
+	<Activity Activityid="5">
+		<drawid>
+			<entry id="1" limittimedrawid="5" />
+		</drawid>
+		<pointreward>
+			<entry id="1" pointnum="500" boxid="170930" />
+			<entry id="2" pointnum="3000" boxid="170931" />
+			<entry id="3" pointnum="10000" boxid="170932" />
+			<entry id="4" pointnum="30000" boxid="170933" />
+			<entry id="5" pointnum="50000" boxid="170934" />
+		</pointreward>
+	</Activity>
+	
+	<!--
+		Activityid:对应活动id
+		Starttime:开始时间
+		Endtime:结束时间
+	-->
+	<ActivityOn>
+	<!-- 正式用数据-->
+		<entry id="1" Activityid="4" Starttime="2018-01-19 00:00:00" Endtime="2018-01-21 23:00:00" />
+		<entry id="2" Activityid="4" Starttime="2018-01-26 00:00:00" Endtime="2018-01-28 23:00:00" />
+		<entry id="3" Activityid="4" Starttime="2018-02-02 00:00:00" Endtime="2018-02-04 23:00:00" />
+		<entry id="4" Activityid="4" Starttime="2018-02-10 00:00:00" Endtime="2018-02-16 23:00:00" />
+		<entry id="5" Activityid="5" Starttime="2018-02-17 00:00:00" Endtime="2018-02-23 23:00:00" />
+		<entry id="6" Activityid="4" Starttime="2018-02-24 00:00:00" Endtime="2018-02-25 23:00:00" />
+		
+		<entry id="7" Activityid="5" Starttime="2018-03-02 00:00:00" Endtime="2018-03-04 23:00:00" />
+		<entry id="8" Activityid="4" Starttime="2018-03-09 00:00:00" Endtime="2018-03-11 23:00:00" />
+		<entry id="9" Activityid="5" Starttime="2018-03-16 00:00:00" Endtime="2018-03-18 23:00:00" />
+		<entry id="10" Activityid="4" Starttime="2018-03-23 00:00:00" Endtime="2018-03-25 23:00:00" />
+		<entry id="11" Activityid="5" Starttime="2018-03-30 00:00:00" Endtime="2018-04-01 23:00:00" />
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+	</ActivityOn>
+
+</conf>

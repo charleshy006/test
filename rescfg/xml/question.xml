@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<!--
+		activitytitle:活动名字
+		openlevel:问题开放等级
+		rewardboxid:答题结束奖励对应BOX ID
+		problemdesc:问题描述
+		optionsdesc:选项描述
+		isopen:是开放,0是不开放此功能
+		备注:问题id不能重复
+	-->		
+	<limit>
+		<type isopen="0"/>
+	</limit>
+	<question id="1" activitytitle="activitytitle_01">
+		<level openlevel="6" rewardboxid="2001">
+			<problem id="1" problemdesc="problemdesc_01" optionsnum="1">
+				<options id="1" optionsdesc="optionsdesc_1001" />
+				<options id="2" optionsdesc="optionsdesc_1002" />
+				<options id="3" optionsdesc="optionsdesc_1003" />
+				<options id="4" optionsdesc="optionsdesc_1004" />
+				<options id="5" optionsdesc="optionsdesc_1005" />
+				<options id="6" optionsdesc="optionsdesc_1006" />
+				<options id="7" optionsdesc="optionsdesc_1007" />
+				<options id="8" optionsdesc="optionsdesc_1008" />
+				<options id="9" optionsdesc="optionsdesc_1009" />
+				<options id="10" optionsdesc="optionsdesc_1010" />
+			</problem>
+			<problem id="2" problemdesc="problemdesc_02" optionsnum="10">
+				<options id="1" optionsdesc="optionsdesc_2001" />
+				<options id="2" optionsdesc="optionsdesc_2002" />
+				<options id="3" optionsdesc="optionsdesc_2003" />
+				<options id="4" optionsdesc="optionsdesc_2004" />
+				<options id="5" optionsdesc="optionsdesc_2005" />
+				<options id="6" optionsdesc="optionsdesc_2006" />
+				<options id="7" optionsdesc="optionsdesc_2007" />
+				<options id="8" optionsdesc="optionsdesc_2008" />
+				<options id="9" optionsdesc="optionsdesc_2009" />
+				<options id="10" optionsdesc="optionsdesc_2010" />
+			</problem>
+			<problem id="3" problemdesc="problemdesc_03" optionsnum="10">
+				<options id="1" optionsdesc="optionsdesc_3001" />
+				<options id="2" optionsdesc="optionsdesc_3002" />
+				<options id="3" optionsdesc="optionsdesc_3003" />
+				<options id="4" optionsdesc="optionsdesc_3004" />
+				<options id="5" optionsdesc="optionsdesc_3005" />
+				<options id="6" optionsdesc="optionsdesc_3006" />
+				<options id="7" optionsdesc="optionsdesc_3007" />
+				<options id="8" optionsdesc="optionsdesc_3008" />
+				<options id="9" optionsdesc="optionsdesc_3009" />
+				<options id="10" optionsdesc="optionsdesc_3010" />
+			</problem>
+			<problem id="4" problemdesc="problemdesc_04" optionsnum="1">
+				<options id="1" optionsdesc="optionsdesc_4001" />
+				<options id="2" optionsdesc="optionsdesc_4002" />
+				<options id="3" optionsdesc="optionsdesc_4003" />
+				<options id="4" optionsdesc="optionsdesc_4004" />
+				<options id="5" optionsdesc="optionsdesc_4005" />
+				<options id="6" optionsdesc="optionsdesc_4006" />
+				<options id="7" optionsdesc="optionsdesc_4007" />
+				<options id="8" optionsdesc="optionsdesc_4008" />
+			</problem>
+			<problem id="5" problemdesc="problemdesc_05" optionsnum="1">
+				<options id="1" optionsdesc="optionsdesc_5001" />
+				<options id="2" optionsdesc="optionsdesc_5002" />
+			</problem>
+			<problem id="6" problemdesc="problemdesc_06" optionsnum="1">
+				<options id="1" optionsdesc="optionsdesc_6001" />
+				<options id="2" optionsdesc="optionsdesc_6002" />
+				<options id="3" optionsdesc="optionsdesc_6003" />
+				<options id="4" optionsdesc="optionsdesc_6004" />
+				<options id="5" optionsdesc="optionsdesc_6005" />
+				<options id="6" optionsdesc="optionsdesc_6006" />
+				<options id="7" optionsdesc="optionsdesc_6007" />
+				<options id="8" optionsdesc="optionsdesc_6008" />
+				<options id="9" optionsdesc="optionsdesc_6009" />
+				<options id="10" optionsdesc="optionsdesc_6010" />
+			</problem>
+			<problem id="7" problemdesc="problemdesc_07" optionsnum="1">
+				<options id="1" optionsdesc="optionsdesc_7001" />
+				<options id="2" optionsdesc="optionsdesc_7002" />
+				<options id="3" optionsdesc="optionsdesc_7003" />
+				<options id="4" optionsdesc="optionsdesc_7004" />
+				<options id="5" optionsdesc="optionsdesc_7005" />
+				<options id="6" optionsdesc="optionsdesc_7006" />
+				<options id="7" optionsdesc="optionsdesc_7007" />
+				<options id="8" optionsdesc="optionsdesc_7008" />
+				<options id="9" optionsdesc="optionsdesc_7009" />
+			</problem>
+			<problem id="8" problemdesc="problemdesc_08" optionsnum="1">
+				<options id="1" optionsdesc="optionsdesc_8001" />
+				<options id="2" optionsdesc="optionsdesc_8002" />
+				<options id="3" optionsdesc="optionsdesc_8003" />
+				<options id="4" optionsdesc="optionsdesc_8004" />
+				<options id="5" optionsdesc="optionsdesc_8005" />
+				<options id="6" optionsdesc="optionsdesc_8006" />
+			</problem>
+			<problem id="9" problemdesc="problemdesc_09" optionsnum="1">
+				<options id="1" optionsdesc="optionsdesc_9001" />
+				<options id="2" optionsdesc="optionsdesc_9002" />
+				<options id="3" optionsdesc="optionsdesc_9003" />
+				<options id="4" optionsdesc="optionsdesc_9004" />
+				<options id="5" optionsdesc="optionsdesc_9005" />
+				<options id="6" optionsdesc="optionsdesc_9006" />
+				<options id="7" optionsdesc="optionsdesc_9007" />
+				<options id="8" optionsdesc="optionsdesc_9008" />
+				<options id="9" optionsdesc="optionsdesc_9009" />
+			</problem>
+			<problem id="10" problemdesc="problemdesc_10" optionsnum="1">
+				<options id="1" optionsdesc="optionsdesc_10001" />
+				<options id="2" optionsdesc="optionsdesc_10002" />
+				<options id="3" optionsdesc="optionsdesc_10003" />
+				<options id="4" optionsdesc="optionsdesc_10004" />
+				<options id="5" optionsdesc="optionsdesc_10005" />
+				<options id="6" optionsdesc="optionsdesc_10006" />
+			</problem>
+		</level>
+		
+		
+		
+		<level openlevel="18" rewardboxid="2002">
+			<problem id="11" problemdesc="problemdesc_11" optionsnum="1">
+				<options id="1" optionsdesc="optionsdesc_11001" />
+				<options id="2" optionsdesc="optionsdesc_11002" />
+				<options id="3" optionsdesc="optionsdesc_11003" />
+				<options id="4" optionsdesc="optionsdesc_11004" />
+				<options id="5" optionsdesc="optionsdesc_11005" />
+				<options id="6" optionsdesc="optionsdesc_11006" />
+				<options id="7" optionsdesc="optionsdesc_11007" />
+				<options id="8" optionsdesc="optionsdesc_11008" />
+				<options id="9" optionsdesc="optionsdesc_11009" />
+				<options id="10" optionsdesc="optionsdesc_11010" />
+			</problem>
+			<problem id="12" problemdesc="problemdesc_12" optionsnum="1">
+				<options id="1" optionsdesc="optionsdesc_12001" />
+				<options id="2" optionsdesc="optionsdesc_12002" />
+				<options id="3" optionsdesc="optionsdesc_12003" />
+				<options id="4" optionsdesc="optionsdesc_12004" />
+				<options id="5" optionsdesc="optionsdesc_12005" />
+			</problem>
+			<problem id="13" problemdesc="problemdesc_13" optionsnum="1">
+				<options id="1" optionsdesc="optionsdesc_13001" />
+				<options id="2" optionsdesc="optionsdesc_13002" />
+				<options id="3" optionsdesc="optionsdesc_13003" />
+				<options id="4" optionsdesc="optionsdesc_13004" />
+				<options id="5" optionsdesc="optionsdesc_13005" />
+			</problem>
+			<problem id="14" problemdesc="problemdesc_14" optionsnum="3">
+				<options id="1" optionsdesc="optionsdesc_14001" />
+				<options id="2" optionsdesc="optionsdesc_14002" />
+				<options id="3" optionsdesc="optionsdesc_14003" />
+				<options id="4" optionsdesc="optionsdesc_14004" />
+				<options id="5" optionsdesc="optionsdesc_14005" />
+				<options id="6" optionsdesc="optionsdesc_14006" />
+				<options id="7" optionsdesc="optionsdesc_14007" />
+				<options id="8" optionsdesc="optionsdesc_14008" />
+				<options id="9" optionsdesc="optionsdesc_14009" />
+				<options id="10" optionsdesc="optionsdesc_14010" />
+			</problem>
+			<problem id="15" problemdesc="problemdesc_15" optionsnum="3">
+				<options id="1" optionsdesc="optionsdesc_15001" />
+				<options id="2" optionsdesc="optionsdesc_15002" />
+				<options id="3" optionsdesc="optionsdesc_15003" />
+				<options id="4" optionsdesc="optionsdesc_15004" />
+				<options id="5" optionsdesc="optionsdesc_15005" />
+				<options id="6" optionsdesc="optionsdesc_15006" />
+				<options id="7" optionsdesc="optionsdesc_15007" />
+				<options id="8" optionsdesc="optionsdesc_15008" />
+				<options id="9" optionsdesc="optionsdesc_15009" />
+				<options id="10" optionsdesc="optionsdesc_15010" />
+			</problem>
+			<problem id="16" problemdesc="problemdesc_16" optionsnum="1">
+				<options id="1" optionsdesc="optionsdesc_16001" />
+				<options id="2" optionsdesc="optionsdesc_16002" />
+				<options id="3" optionsdesc="optionsdesc_16003" />
+				<options id="4" optionsdesc="optionsdesc_16004" />
+				<options id="5" optionsdesc="optionsdesc_16005" />
+			</problem>
+			<problem id="17" problemdesc="problemdesc_17" optionsnum="1">
+				<options id="1" optionsdesc="optionsdesc_17001" />
+				<options id="2" optionsdesc="optionsdesc_17002" />
+				<options id="3" optionsdesc="optionsdesc_17003" />
+				<options id="4" optionsdesc="optionsdesc_17004" />
+				<options id="5" optionsdesc="optionsdesc_17005" />
+			</problem>
+			<problem id="18" problemdesc="problemdesc_18" optionsnum="1">
+				<options id="1" optionsdesc="optionsdesc_18001" />
+				<options id="2" optionsdesc="optionsdesc_18002" />
+				<options id="3" optionsdesc="optionsdesc_18003" />
+				<options id="4" optionsdesc="optionsdesc_18004" />
+				<options id="5" optionsdesc="optionsdesc_18005" />
+			</problem>
+			<problem id="19" problemdesc="problemdesc_19" optionsnum="1">
+				<options id="1" optionsdesc="optionsdesc_19001" />
+				<options id="2" optionsdesc="optionsdesc_19002" />
+				<options id="3" optionsdesc="optionsdesc_19003" />
+				<options id="4" optionsdesc="optionsdesc_19004" />
+				<options id="5" optionsdesc="optionsdesc_19005" />
+			</problem>
+			<problem id="20" problemdesc="problemdesc_20" optionsnum="1">
+				<options id="1" optionsdesc="optionsdesc_20001" />
+				<options id="2" optionsdesc="optionsdesc_20002" />
+				<options id="3" optionsdesc="optionsdesc_20003" />
+				<options id="4" optionsdesc="optionsdesc_20004" />
+				<options id="5" optionsdesc="optionsdesc_20005" />
+			</problem>
+			<problem id="21" problemdesc="problemdesc_21" optionsnum="1">
+				<options id="1" optionsdesc="optionsdesc_21001" />
+				<options id="2" optionsdesc="optionsdesc_21002" />
+				<options id="3" optionsdesc="optionsdesc_21003" />
+				<options id="4" optionsdesc="optionsdesc_21004" />
+				<options id="5" optionsdesc="optionsdesc_21005" />
+			</problem>
+			<problem id="22" problemdesc="problemdesc_22" optionsnum="1">
+				<options id="1" optionsdesc="optionsdesc_22001" />
+				<options id="2" optionsdesc="optionsdesc_22002" />
+				<options id="3" optionsdesc="optionsdesc_22003" />
+				<options id="4" optionsdesc="optionsdesc_22004" />
+				<options id="5" optionsdesc="optionsdesc_22005" />
+			</problem>
+		</level>
+			
+		<level openlevel="27" rewardboxid="2003">
+			<problem id="23" problemdesc="problemdesc_23" optionsnum="1">
+				<options id="1" optionsdesc="optionsdesc_23001" />
+				<options id="2" optionsdesc="optionsdesc_23002" />
+				<options id="3" optionsdesc="optionsdesc_23003" />
+				<options id="4" optionsdesc="optionsdesc_23004" />
+				<options id="5" optionsdesc="optionsdesc_23005" />
+				<options id="6" optionsdesc="optionsdesc_23006" />
+				<options id="7" optionsdesc="optionsdesc_23007" />
+				<options id="8" optionsdesc="optionsdesc_23008" />
+				<options id="9" optionsdesc="optionsdesc_23009" />
+				<options id="10" optionsdesc="optionsdesc_23010" />
+			</problem>
+			<problem id="24" problemdesc="problemdesc_24" optionsnum="1">
+				<options id="1" optionsdesc="optionsdesc_24001" />
+				<options id="2" optionsdesc="optionsdesc_24002" />
+				<options id="3" optionsdesc="optionsdesc_24003" />
+				<options id="4" optionsdesc="optionsdesc_24004" />
+				<options id="5" optionsdesc="optionsdesc_24005" />
+			</problem>
+			<problem id="25" problemdesc="problemdesc_25" optionsnum="3">
+				<options id="1" optionsdesc="optionsdesc_25001" />
+				<options id="2" optionsdesc="optionsdesc_25002" />
+				<options id="3" optionsdesc="optionsdesc_25003" />
+				<options id="4" optionsdesc="optionsdesc_25004" />
+				<options id="5" optionsdesc="optionsdesc_25005" />
+			</problem>
+			<problem id="26" problemdesc="problemdesc_26" optionsnum="3">
+				<options id="1" optionsdesc="optionsdesc_26001" />
+				<options id="2" optionsdesc="optionsdesc_26002" />
+				<options id="3" optionsdesc="optionsdesc_26003" />
+				<options id="4" optionsdesc="optionsdesc_26004" />
+				<options id="5" optionsdesc="optionsdesc_26005" />
+				<options id="6" optionsdesc="optionsdesc_26006" />
+				<options id="7" optionsdesc="optionsdesc_26007" />
+				<options id="8" optionsdesc="optionsdesc_26008" />
+				<options id="9" optionsdesc="optionsdesc_26009" />
+				<options id="10" optionsdesc="optionsdesc_26010" />
+			</problem>
+			<problem id="27" problemdesc="problemdesc_27" optionsnum="1">
+				<options id="1" optionsdesc="optionsdesc_27001" />
+				<options id="2" optionsdesc="optionsdesc_27002" />
+				<options id="3" optionsdesc="optionsdesc_27003" />
+				<options id="4" optionsdesc="optionsdesc_27004" />
+				<options id="5" optionsdesc="optionsdesc_27005" />
+			</problem>
+			<problem id="28" problemdesc="problemdesc_28" optionsnum="4">
+				<options id="1" optionsdesc="optionsdesc_28001" />
+				<options id="2" optionsdesc="optionsdesc_28002" />
+				<options id="3" optionsdesc="optionsdesc_28003" />
+				<options id="4" optionsdesc="optionsdesc_28004" />
+				<options id="5" optionsdesc="optionsdesc_28005" />
+				<options id="6" optionsdesc="optionsdesc_28006" />
+				<options id="7" optionsdesc="optionsdesc_28007" />
+				<options id="8" optionsdesc="optionsdesc_28008" />
+				<options id="9" optionsdesc="optionsdesc_28009" />
+				<options id="10" optionsdesc="optionsdesc_28010" />
+			</problem>
+			<problem id="29" problemdesc="problemdesc_29" optionsnum="1">
+				<options id="1" optionsdesc="optionsdesc_29001" />
+				<options id="2" optionsdesc="optionsdesc_29002" />
+				<options id="3" optionsdesc="optionsdesc_29003" />
+				<options id="4" optionsdesc="optionsdesc_29004" />
+				<options id="5" optionsdesc="optionsdesc_29005" />
+			</problem>
+		    <problem id="30" problemdesc="problemdesc_30" optionsnum="1">
+				<options id="1" optionsdesc="optionsdesc_30001" />
+				<options id="2" optionsdesc="optionsdesc_30002" />
+				<options id="3" optionsdesc="optionsdesc_30003" />
+				<options id="4" optionsdesc="optionsdesc_30004" />
+				<options id="5" optionsdesc="optionsdesc_30005" />
+			</problem>
+			<problem id="31" problemdesc="problemdesc_31" optionsnum="1">
+				<options id="1" optionsdesc="optionsdesc_31001" />
+				<options id="2" optionsdesc="optionsdesc_31002" />
+				<options id="3" optionsdesc="optionsdesc_31003" />
+				<options id="4" optionsdesc="optionsdesc_31004" />
+				<options id="5" optionsdesc="optionsdesc_31005" />
+				<options id="6" optionsdesc="optionsdesc_31006" />
+			</problem>
+			<problem id="32" problemdesc="problemdesc_32" optionsnum="1">
+				<options id="1" optionsdesc="optionsdesc_32001" />
+				<options id="2" optionsdesc="optionsdesc_32002" />
+				<options id="3" optionsdesc="optionsdesc_32003" />
+				<options id="4" optionsdesc="optionsdesc_32004" />
+				<options id="5" optionsdesc="optionsdesc_32005" />
+			</problem>
+			<problem id="33" problemdesc="problemdesc_33" optionsnum="1">
+				<options id="1" optionsdesc="optionsdesc_33001" />
+				<options id="2" optionsdesc="optionsdesc_33002" />
+				<options id="3" optionsdesc="optionsdesc_33003" />
+				<options id="4" optionsdesc="optionsdesc_33004" />
+			</problem>
+			<problem id="34" problemdesc="problemdesc_34" optionsnum="1">
+				<options id="1" optionsdesc="optionsdesc_34001" />
+				<options id="2" optionsdesc="optionsdesc_34002" />
+			</problem>
+			<problem id="35" problemdesc="problemdesc_35" optionsnum="1">
+				<options id="1" optionsdesc="optionsdesc_35001" />
+				<options id="2" optionsdesc="optionsdesc_35002" />
+				<options id="3" optionsdesc="optionsdesc_35003" />
+				<options id="4" optionsdesc="optionsdesc_35004" />
+				<options id="5" optionsdesc="optionsdesc_35005" />
+			</problem>
+			<problem id="36" problemdesc="problemdesc_36" optionsnum="1">
+				<options id="1" optionsdesc="optionsdesc_36001" />
+				<options id="2" optionsdesc="optionsdesc_36002" />
+				<options id="3" optionsdesc="optionsdesc_36003" />
+				<options id="4" optionsdesc="optionsdesc_36004" />
+				<options id="5" optionsdesc="optionsdesc_36005" />
+			</problem>
+			<problem id="37" problemdesc="problemdesc_37" optionsnum="1">
+				<options id="1" optionsdesc="optionsdesc_37001" />
+				<options id="2" optionsdesc="optionsdesc_37002" />
+				<options id="3" optionsdesc="optionsdesc_37003" />
+				<options id="4" optionsdesc="optionsdesc_37004" />
+				<options id="5" optionsdesc="optionsdesc_37005" />
+			</problem>
+			<problem id="38" problemdesc="problemdesc_38" optionsnum="1">
+				<options id="1" optionsdesc="optionsdesc_38001" />
+				<options id="2" optionsdesc="optionsdesc_38002" />
+				<options id="3" optionsdesc="optionsdesc_38003" />
+				<options id="4" optionsdesc="optionsdesc_38004" />
+				<options id="5" optionsdesc="optionsdesc_38005" />
+			</problem>
+			<problem id="39" problemdesc="problemdesc_39" optionsnum="1">
+				<options id="1" optionsdesc="optionsdesc_39001" />
+				<options id="2" optionsdesc="optionsdesc_39002" />
+				<options id="3" optionsdesc="optionsdesc_39003" />
+				<options id="4" optionsdesc="optionsdesc_39004" />
+				<options id="5" optionsdesc="optionsdesc_39005" />
+			</problem>
+			<problem id="40" problemdesc="problemdesc_40" optionsnum="2">
+				<options id="1" optionsdesc="optionsdesc_40001" />
+				<options id="2" optionsdesc="optionsdesc_40002" />
+				<options id="3" optionsdesc="optionsdesc_40003" />
+				<options id="4" optionsdesc="optionsdesc_40004" />
+				<options id="5" optionsdesc="optionsdesc_40005" />
+			</problem>
+		</level>
+	</question>
+</root>

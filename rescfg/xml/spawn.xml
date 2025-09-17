@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<!-- 备注：
+		Level id:关卡ID
+		Prefab id：战斗区域ID（预置体ID）
+		Site:预置体的怪物刷新点
+		Wave：刷新波次
+		Spawnmode：怪物刷新方式
+				0：触发预置体即刷新
+				正数：触发预置体后多少秒刷新
+				-1：当前一波次全部死亡刷新
+				-2：当前一波次该刷新点怪物死亡刷新
+		Anime:播放何种出生技能动画
+		Monster：怪物组ID
+		Delay:延迟
+		Event:事件
+	-->
+	<entry>
+		<!--地城关卡1-->
+		<Level id="map_10002" Startx="10.10" Starty="10.10" Startz="10.10">
+			<Trigger id="atk_1" triggerType="" triggerNum="">
+				<Wave Index = "0">
+					<Monsterspawn Site="01" Spawnmode="0" Delay="0" Anime="90001" Monster="01"/>
+					<Monsterspawn Site="02" Spawnmode="0" Delay="0" Anime="90001" Monster="01"/>
+					<Monsterspawn Site="03" Spawnmode="0" Delay="0" Anime="90001" Monster="01"/>
+					<Monsterspawn Site="04" Spawnmode="0" Delay="0" Anime="90001" Monster="01"/>
+					<Gate id="01" x="-8.44" y="3.51" z="51.81" rotatex="0" rotatey="0" rotatez="0"/>
+				</Wave>
+			</Trigger>
+
+			<Prefab id="atk_2">
+				<Monsterspawn Site="01" Wave="1" Spawnmode="0" Delay="0" Anime="90001" Monster="01"/>
+				<Monsterspawn Site="02" Wave="1" Spawnmode="0" Delay="0" Anime="90001" Monster="01"/>
+				<Monsterspawn Site="03" Wave="1" Spawnmode="0" Delay="0" Anime="90001" Monster="01"/>
+				<Monsterspawn Site="04" Wave="1" Spawnmode="0" Delay="0" Anime="90001" Monster="01"/>
+				<Monsterspawn Site="05" Wave="1" Spawnmode="0" Delay="0" Anime="90001" Monster="01"/>
+				<Monsterspawn Site="06" Wave="2" Spawnmode="-1" Delay="0" Anime="90001" Monster="01"/>
+				<Monsterspawn Site="07" Wave="2" Spawnmode="-1" Delay="0" Anime="90001" Monster="01"/>
+				<Monsterspawn Site="08" Wave="2" Spawnmode="-1" Delay="0" Anime="90001" Monster="01"/>	
+				<Monsterspawn Site="09" Wave="2" Spawnmode="-1" Delay="0" Anime="90001" Monster="01"/>
+				<Monsterspawn Site="10" Wave="2" Spawnmode="-1" Delay="0" Anime="90001" Monster="01"/>
+				<Gate id="01" x="-8.44" y="3.51" z="51.81" rotatex="0" rotatey="0" rotatez="0"/>
+				<Gate id="01" x="-0.822" y="3.51" z="40.125" rotatex="0" rotatey="0" rotatez="0"/>
+			</Prefab>
+
+			<Prefab id="atk_3">
+				<Monsterspawn Site="01" Wave="1" Spawnmode="0" Delay="0" Anime="90001" Monster="01"/>
+				<Monsterspawn Site="02" Wave="1" Spawnmode="0" Delay="0" Anime="90001" Monster="01"/>
+				<Monsterspawn Site="03" Wave="1" Spawnmode="0" Delay="0" Anime="90001" Monster="01"/>
+				<Monsterspawn Site="04" Wave="1" Spawnmode="0" Delay="0" Anime="90001" Monster="01"/>
+				<Monsterspawn Site="05" Wave="1" Spawnmode="0" Delay="0" Anime="90001" Monster="01"/>
+				<Monsterspawn Site="06" Wave="2" Spawnmode="-1" Delay="0" Anime="90001" Monster="01"/>
+				<Monsterspawn Site="07" Wave="2" Spawnmode="-1" Delay="0" Anime="90001" Monster="01"/>
+				<Monsterspawn Site="08" Wave="2" Spawnmode="-1" Delay="0" Anime="90001" Monster="01"/>
+				<Monsterspawn Site="09" Wave="2" Spawnmode="-1" Delay="0" Anime="90001" Monster="01"/>
+				<Monsterspawn Site="10" Wave="2" Spawnmode="-1" Delay="0" Anime="90001" Monster="01"/>
+				<Bossspawn Site="04" Wave="3" Spawnmode="-2" Delay="3" Anime="90001" Monster="01"/>
+				<Gate id="01" x="-1.53" y="3.51" z="23.93" rotatex="0" rotatey="0" rotatez="0"/>
+			</Prefab>
+		</Level>
+	</entry>
+</root>

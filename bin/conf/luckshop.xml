@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!--
+		OffTime：功能关闭的时间 单位：从凌晨开始的秒0-86400为全部关闭
+		RefreshTime：每日更新刷新时间
+		ShowTime：需要多少时间自动弹出
+		DuaTime：界面和按钮出现持续时间
+		VIP：对应用户的VIP等级
+		RP：礼包条目随机概率
+		AginRecharge：需要再充值的金额
+		oriPrice：显示用虚假钻石价格
+		BOXID：商品BOX
+		duration:活动持续时间，现在定义在开服后多久秒
+		delayed:充值成功后增加可领取的延迟时间
+
+	-->
+<activity OffTime="0-86400" RefreshTime="18000" DuaTime="7200" duration="864000" delayed="1800">
+	<screen VIP="0" ShowTime="3600-5400">
+		<entry id="1" RP="10000" AginRecharge="180" oriPrice="180" boxid="3000"/>
+	 </screen>
+	<screen VIP="1" ShowTime="18000-21600">
+		<entry id="1" RP="10000" AginRecharge="180" oriPrice="180" boxid="3001"/>
+	</screen>
+	<screen VIP="2" ShowTime="18000-21600">
+		<entry id="1" RP="5000" AginRecharge="300" oriPrice="300" boxid="3000"/>
+		<entry id="2" RP="5000" AginRecharge="300" oriPrice="300" boxid="3001"/>
+	</screen>
+	<screen VIP="3" ShowTime="18000-21600">
+		<entry id="1" RP="5000" AginRecharge="360" oriPrice="360" boxid="3000"/>
+		<entry id="2" RP="5000" AginRecharge="360" oriPrice="360" boxid="3001"/>
+	</screen>
+	<screen VIP="4" ShowTime="18000-21600">
+		<entry id="1" RP="5000" AginRecharge="360" oriPrice="360" boxid="3000"/>
+		<entry id="2" RP="3500" AginRecharge="720" oriPrice="720" boxid="3002"/>
+		<entry id="3" RP="1500" AginRecharge="1440" oriPrice="1440" boxid="3003"/>
+	</screen>
+	<screen VIP="5" ShowTime="18000-21600">
+		<entry id="1" RP="4000" AginRecharge="360" oriPrice="360" boxid="3000"/>
+		<entry id="2" RP="3000" AginRecharge="720" oriPrice="720" boxid="3002"/>
+		<entry id="3" RP="3000" AginRecharge="1440" oriPrice="1440" boxid="3003"/>
+	</screen>
+	<screen VIP="6" ShowTime="18000-21600">
+		<entry id="1" RP="3000" AginRecharge="360" oriPrice="360" boxid="3000"/>
+		<entry id="2" RP="3000" AginRecharge="720" oriPrice="720" boxid="3002"/>
+		<entry id="3" RP="4000" AginRecharge="1440" oriPrice="1440" boxid="3003"/>
+	</screen>
+	<screen VIP="7" ShowTime="18000-21600">
+		<entry id="1" RP="4000" AginRecharge="720" oriPrice="720" boxid="3004"/>
+		<entry id="2" RP="3000" AginRecharge="1440" oriPrice="1440" boxid="3003"/>
+		<entry id="3" RP="2000" AginRecharge="2880" oriPrice="2880" boxid="3005"/>
+		<entry id="4" RP="1000" AginRecharge="5760" oriPrice="5760" boxid="3006"/>
+	</screen>
+	<screen VIP="8" ShowTime="18000-21600">
+		<entry id="1" RP="3000" AginRecharge="720" oriPrice="720" boxid="3004"/>
+		<entry id="2" RP="3000" AginRecharge="1440" oriPrice="1440" boxid="3003"/>
+		<entry id="3" RP="3000" AginRecharge="2880" oriPrice="2880" boxid="3005"/>
+		<entry id="4" RP="1000" AginRecharge="5760" oriPrice="5760" boxid="3006"/>
+	</screen>
+	<screen VIP="9" ShowTime="18000-21600">
+		<entry id="1" RP="2000" AginRecharge="720" oriPrice="720" boxid="3004"/>
+		<entry id="2" RP="2000" AginRecharge="1440" oriPrice="1440" boxid="3003"/>
+		<entry id="3" RP="3000" AginRecharge="2880" oriPrice="2880" boxid="3005"/>
+		<entry id="4" RP="3000" AginRecharge="5760" oriPrice="5760" boxid="3006"/>
+	</screen>
+	<screen VIP="10" ShowTime="18000-21600">
+		<entry id="1" RP="3500" AginRecharge="1440" oriPrice="1440" boxid="3003"/>
+		<entry id="2" RP="2500" AginRecharge="2880" oriPrice="2880" boxid="3007"/>
+		<entry id="3" RP="2000" AginRecharge="5760" oriPrice="5760" boxid="3006"/>
+		<entry id="4" RP="1000" AginRecharge="7680" oriPrice="7680" boxid="3013"/>
+		<entry id="5" RP="1000" AginRecharge="10080" oriPrice="10080" boxid="3008"/>
+	</screen>
+	<screen VIP="11" ShowTime="18000-21600">
+		<entry id="1" RP="2000" AginRecharge="1440" oriPrice="1440" boxid="3003"/>
+		<entry id="2" RP="2000" AginRecharge="2880" oriPrice="2880" boxid="3007"/>
+		<entry id="3" RP="2000" AginRecharge="5760" oriPrice="5760" boxid="3006"/>
+		<entry id="4" RP="2000" AginRecharge="7580" oriPrice="7680" boxid="3013"/>
+		<entry id="5" RP="2000" AginRecharge="10080" oriPrice="10080" boxid="3008"/>
+	</screen>
+	<screen VIP="12" ShowTime="18000-21600">
+		<entry id="1" RP="1000" AginRecharge="1440" oriPrice="1440" boxid="3003"/>
+		<entry id="2" RP="2000" AginRecharge="2880" oriPrice="2880" boxid="3007"/>
+		<entry id="3" RP="2000" AginRecharge="5760" oriPrice="5760" boxid="3006"/>
+		<entry id="4" RP="2000" AginRecharge="7680" oriPrice="7680" boxid="3013"/>
+		<entry id="5" RP="3000" AginRecharge="10080" oriPrice="10080" boxid="3008"/>
+	</screen>
+	<screen VIP="13" ShowTime="18000-21600">
+		<entry id="1" RP="1000" AginRecharge="2880" oriPrice="2880" boxid="3009"/>
+		<entry id="2" RP="1000" AginRecharge="5760" oriPrice="5760" boxid="3010"/>
+		<entry id="3" RP="2000" AginRecharge="7680" oriPrice="7680" boxid="3013"/>
+		<entry id="4" RP="3000" AginRecharge="10080" oriPrice="10080" boxid="3011"/>
+		<entry id="5" RP="3000" AginRecharge="14880" oriPrice="14880" boxid="3012"/>
+	</screen>
+	<screen VIP="14" ShowTime="18000-21600">
+		<entry id="1" RP="1000" AginRecharge="2880" oriPrice="2880" boxid="3009"/>
+		<entry id="2" RP="1000" AginRecharge="5760" oriPrice="5760" boxid="3010"/>
+		<entry id="3" RP="2000" AginRecharge="7680" oriPrice="7680" boxid="3013"/>
+		<entry id="4" RP="3000" AginRecharge="10080" oriPrice="10080" boxid="3011"/>
+		<entry id="5" RP="3000" AginRecharge="14880" oriPrice="14880" boxid="3012"/>
+	</screen>
+	<screen VIP="15" ShowTime="18000-21600">
+		<entry id="1" RP="1000" AginRecharge="2880" oriPrice="2880" boxid="3009"/>
+		<entry id="2" RP="1000" AginRecharge="5760" oriPrice="5760" boxid="3010"/>
+		<entry id="3" RP="2000" AginRecharge="7680" oriPrice="7680" boxid="3013"/>
+		<entry id="4" RP="3000" AginRecharge="10080" oriPrice="10080" boxid="3011"/>
+		<entry id="5" RP="3000" AginRecharge="14880" oriPrice="14880" boxid="3012"/>
+	</screen>
+</activity>

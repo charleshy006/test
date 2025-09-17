@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<root>
+	<!-- 合成配置
+		id：配置序号
+		name：按钮引用文字
+		resultID：结果物品ID
+		MaterialsID：材料物品ID
+		Synthesisnum：合成所需数量
+		consumegold：每次合成所需金币数量
+		Successrate：合成概率
+		needitem：必成所需材料物品ID
+		neednum：必成材料所需数量
+		show：显示位置
+	-->
+	<Synthesis>
+		<!--红宝石-->
+		<group id="1" name="itemtype_420">
+			<!--18精磨红宝石-->
+			<entry id="11" resultID="611800" MaterialsID="611200;621200;631200;641200" Synthesisnum="3" consumegold="250000" Successrate="100" needitem="122131" neednum="10" show="1"/>
+			<!--20精致红宝石-->
+			<entry id="12" resultID="612000" MaterialsID="611800;621800;631800;641800" Synthesisnum="3" consumegold="500000" Successrate="100" needitem="122131" neednum="40" show="2"/>
+			<!--22珍惜红宝石-->
+			<entry id="13" resultID="612200" MaterialsID="612000;622000;632000;642000" Synthesisnum="3" consumegold="750000" Successrate="100" needitem="122131" neednum="80" show="3"/>
+			<!--24完美红宝石-->
+			<entry id="14" resultID="612400" MaterialsID="612200;622200;632200;642200" Synthesisnum="3" consumegold="1000000" Successrate="100" needitem="122131" neednum="120" show="4"/>
+			<!--26极品红宝石-->
+			<entry id="15" resultID="612600" MaterialsID="612400;622400;632400;642400" Synthesisnum="3" consumegold="2000000" Successrate="100" needitem="122131" neednum="200" show="5"/>
+			<!--28皇家红宝石-->
+			<entry id="16" resultID="612800" MaterialsID="612600;622600;632600;642600" Synthesisnum="3" consumegold="3500000" Successrate="100" needitem="122131" neednum="400" show="6"/>
+			<!--30永恒红宝石-->
+			<entry id="17" resultID="613000" MaterialsID="612800;622800;632800;642800" Synthesisnum="3" consumegold="5000000" Successrate="100" needitem="122131" neednum="600" show="7"/>
+		</group>
+		<!--绿宝石-->
+		<group id="2" name="itemtype_440">
+			<!--18精磨绿宝石-->
+			<entry id="21" resultID="621800" MaterialsID="611200;621200;631200;641200" Synthesisnum="3" consumegold="250000" Successrate="100" needitem="122131" neednum="10" show="1"/>
+			<!--20精致绿宝石-->
+			<entry id="22" resultID="622000" MaterialsID="611800;621800;631800;641800" Synthesisnum="3" consumegold="500000" Successrate="100" needitem="122131" neednum="40" show="2"/>
+			<!--22珍惜红宝石-->
+			<entry id="23" resultID="622200" MaterialsID="612000;622000;632000;642000" Synthesisnum="3" consumegold="750000" Successrate="100" needitem="122131" neednum="80" show="3"/>
+			<!--24完美绿宝石-->
+			<entry id="24" resultID="622400" MaterialsID="612200;622200;632200;642200" Synthesisnum="3" consumegold="1000000" Successrate="100" needitem="122131" neednum="120" show="4"/>
+			<!--26极品绿宝石-->
+			<entry id="25" resultID="622600" MaterialsID="612400;622400;632400;642400" Synthesisnum="3" consumegold="2000000" Successrate="100" needitem="122131" neednum="200" show="5"/>
+			<!--28皇家绿宝石-->
+			<entry id="26" resultID="622800" MaterialsID="612600;622600;632600;642600" Synthesisnum="3" consumegold="3500000" Successrate="100" needitem="122131" neednum="400" show="6"/>
+			<!--30永恒绿宝石-->
+			<entry id="27" resultID="623000" MaterialsID="612800;622800;632800;642800" Synthesisnum="3" consumegold="5000000" Successrate="100" needitem="122131" neednum="600" show="7"/>
+		</group>
+		<!--黄宝石-->
+		<group id="3" name="itemtype_450">
+			<!--18精磨黄宝石-->
+			<entry id="31" resultID="631800" MaterialsID="611200;621200;631200;641200" Synthesisnum="3" consumegold="250000" Successrate="100" needitem="122131" neednum="10" show="1"/>
+			<!--20精致黄宝石-->
+			<entry id="32" resultID="632000" MaterialsID="611800;621800;631800;641800" Synthesisnum="3" consumegold="500000" Successrate="100" needitem="122131" neednum="40" show="2"/>
+			<!--22珍惜黄宝石-->
+			<entry id="33" resultID="632200" MaterialsID="612000;622000;632000;642000" Synthesisnum="3" consumegold="750000" Successrate="100" needitem="122131" neednum="80" show="3"/>
+			<!--24完美黄宝石-->
+			<entry id="34" resultID="632400" MaterialsID="612200;622200;632200;642200" Synthesisnum="3" consumegold="1000000" Successrate="100" needitem="122131" neednum="120" show="4"/>
+			<!--26极品黄宝石-->
+			<entry id="35" resultID="632600" MaterialsID="612400;622400;632400;642400" Synthesisnum="3" consumegold="2000000" Successrate="100" needitem="122131" neednum="200" show="5"/>
+			<!--28皇家黄宝石-->
+			<entry id="36" resultID="632800" MaterialsID="612600;622600;632600;642600" Synthesisnum="3" consumegold="3500000" Successrate="100" needitem="122131" neednum="400" show="6"/>
+			<!--30永恒黄宝石-->
+			<entry id="37" resultID="633000" MaterialsID="612800;622800;632800;642800" Synthesisnum="3" consumegold="5000000" Successrate="100" needitem="122131" neednum="600" show="7"/>
+		</group>
+		<!--蓝宝石-->
+		<group id="4" name="itemtype_430">
+			<!--18精磨蓝宝石-->
+			<entry id="41" resultID="641800" MaterialsID="611200;621200;631200;641200" Synthesisnum="3" consumegold="250000" Successrate="100" needitem="122131" neednum="10" show="1"/>
+			<!--20精致蓝宝石-->
+			<entry id="42" resultID="642000" MaterialsID="611800;621800;631800;641800" Synthesisnum="3" consumegold="500000" Successrate="100" needitem="122131" neednum="40" show="2"/>
+			<!--22珍惜蓝宝石-->
+			<entry id="43" resultID="642200" MaterialsID="612000;622000;632000;642000" Synthesisnum="3" consumegold="750000" Successrate="100" needitem="122131" neednum="80" show="3"/>
+			<!--24完美蓝宝石-->
+			<entry id="44" resultID="642400" MaterialsID="612200;622200;632200;642200" Synthesisnum="3" consumegold="1000000" Successrate="100" needitem="122131" neednum="120" show="4"/>
+			<!--26极品蓝宝石-->
+			<entry id="45" resultID="642600" MaterialsID="612400;622400;632400;642400" Synthesisnum="3" consumegold="2000000" Successrate="100" needitem="122131" neednum="200" show="5"/>
+			<!--28皇家蓝宝石-->
+			<entry id="46" resultID="642800" MaterialsID="612600;622600;632600;642600" Synthesisnum="3" consumegold="3500000" Successrate="100" needitem="122131" neednum="400" show="6"/>
+			<!--30永恒蓝宝石-->
+			<entry id="47" resultID="643000" MaterialsID="612800;622800;632800;642800" Synthesisnum="3" consumegold="5000000" Successrate="100" needitem="122131" neednum="600" show="7"/>
+		</group>
+	</Synthesis>
+	
+	<!-- 必成配置 
+		open：必成功能开启
+			1：开启后根据num来决定多少次后必成。
+			0：关闭后每次都会成功！且界面上不显示“多少次必成”文字。
+		num：合成几次必定成功。
+	-->
+	<Beecham open="1">
+		<entry id="1" num="10" max="75"/>
+	</Beecham>
+	
+	
+	
+	
+</root>

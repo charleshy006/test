@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>	
+
+	
+<Config>
+
+	<!--
+		资源战场开启关闭时间：
+		BattleType：战场类型，1：资源战场
+		                      2：荣耀战场活动
+		ActivityTime：活动时间，存在多段时间，用“ : ”符号隔开
+	
+	-->
+	<Time id="1" BattleType="1" ActivityTime="28800-86399" />
+	<Time id="2" BattleType="2" ActivityTime="43200-46800:72000-75600" />
+	
+	
+	<!--
+		资源战场副本：
+		InstanceLevel:副本难度，1：简单难度
+		                        2：困难难度
+		LevelID:对应进入副本ID
+	-->
+	<ReplicaSelection>
+		<Entry id="1" InstanceLevel="1" LevelID="20004" />
+		<Entry id="2" InstanceLevel="2" LevelID="20005" />
+	</ReplicaSelection>
+	
+	
+
+	<!--
+		膜拜奖励：
+	-->
+	<Worship>
+		<Entry id="1" WorshipReward="1-100000:2-50" />
+	</Worship>
+	
+	<!--
+		BattlefieldNum：战场最多同时容纳人数
+		ReviveTime：复活时间，单位：秒
+		ReviveDiamond：复活消耗钻石
+		HPMultiple：生命加成倍数
+	-->
+	<BaseSet>
+		<Entry id="1" BattlefieldNum="20" ReviveTime="10" ReviveDiamond="50" HPMultiple="11" />
+	</BaseSet>
+	
+	<!--
+		资源类型对应的表现预制体
+	-->
+	<ResourcePrefab DefPreafabName="">
+		<Entry ItemID="1" PreafabName="kuang_001"/>
+		<Entry ItemID="2" PreafabName="kuang_002"/>
+		<Entry ItemID="9" PreafabName="kuang_003"/>
+		<Entry ItemID="120101" PreafabName="kuang_004"/>
+		<Entry ItemID="122131" PreafabName="kuang_005"/>
+		<Entry ItemID="19" PreafabName="kuang_006"/>
+	</ResourcePrefab>
+	
+	<!--
+		资源刷新：
+		IsActivityTime：是否荣耀战场活动时间：0：荣耀资源战场活动时间内
+		                                      1：荣耀资源战场活动时间内
+		InstanceLevel：副本难度，1：简单难度
+		                        2：困难难度
+					  对应难度下资源点刷新资源
+		ResourceType：资源点类型，1：安全区域的小资源点
+		                          2：中资源点
+								  3：大资源点
+								  4：核心资源点
+		AcquisitionTime：对应资源点采集时间，单位：秒
+		RefreshTime：资源点被采集完成后刷新时间，单位：秒
+		CollectTimes：刷新出来的资源点可被采集次数，采集次数为0时该资源点消失，进入资源点刷新时间，资源点采集次数大于0时不消失
+		ItemID：采集获得资源对应道具表ID
+		ResourceIcon：采集资源点地图上图标表现
+		CollectMin：采集获得对应资源最小值
+		CollectMax：采集获得对应资源最大值
+		Probability：刷新采集资源点随机概率
+	-->
+	<Activity id="1" IsActivityTime="0">
+		<!--
+			非活动时间内资源刷新
+		-->
+		<Level id="1" InstanceLevel="1">
+			<Refresh id="1" ResourceType="1">
+				<Entry id="1" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="1" ResourceIcon="" CollectMin="2400" CollectMax="4000" Probability="3000" />
+				<Entry id="2" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="2" ResourceIcon="" CollectMin="2" CollectMax="3" Probability="1000" />
+				<Entry id="3" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="9" ResourceIcon="" CollectMin="320" CollectMax="480" Probability="2000" />
+				<Entry id="4" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="120101" ResourceIcon="" CollectMin="2" CollectMax="3" Probability="2000" />
+				<Entry id="5" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="122131" ResourceIcon="" CollectMin="1" CollectMax="3" Probability="2000" />
+			</Refresh>
+			
+			<Refresh id="2" ResourceType="2">
+				<Entry id="1" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="1" ResourceIcon="" CollectMin="3000" CollectMax="6000" Probability="1000" />
+				<Entry id="2" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="2" ResourceIcon="" CollectMin="3000" CollectMax="6000" Probability="1000" />
+				<Entry id="3" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="3" ResourceIcon="" CollectMin="3000" CollectMax="6000" Probability="1000" />
+				<Entry id="4" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="4" ResourceIcon="" CollectMin="3000" CollectMax="6000" Probability="1000" />
+			</Refresh>
+			
+			
+			<Refresh id="3" ResourceType="3">
+				<Entry id="1" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="1" ResourceIcon="" CollectMin="3000" CollectMax="6000" Probability="1000" />
+				<Entry id="2" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="2" ResourceIcon="" CollectMin="3000" CollectMax="6000" Probability="1000" />
+				<Entry id="3" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="3" ResourceIcon="" CollectMin="3000" CollectMax="6000" Probability="1000" />
+				<Entry id="4" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="4" ResourceIcon="" CollectMin="3000" CollectMax="6000" Probability="1000" />
+			</Refresh>
+			
+			
+			<Refresh id="4" ResourceType="4">
+				<Entry id="1" RefreshTime="180" AcquisitionTime="12" CollectTimes="4" ItemID="1" ResourceIcon="" CollectMin="4800" CollectMax="8000" Probability="3000" />
+				<Entry id="2" RefreshTime="180" AcquisitionTime="12" CollectTimes="4" ItemID="2" ResourceIcon="" CollectMin="4" CollectMax="6" Probability="1000" />
+				<Entry id="3" RefreshTime="180" AcquisitionTime="12" CollectTimes="4" ItemID="9" ResourceIcon="" CollectMin="640" CollectMax="960" Probability="2000" />
+				<Entry id="4" RefreshTime="180" AcquisitionTime="12" CollectTimes="4" ItemID="120101" ResourceIcon="" CollectMin="4" CollectMax="6" Probability="2000" />
+				<Entry id="5" RefreshTime="180" AcquisitionTime="12" CollectTimes="4" ItemID="122131" ResourceIcon="" CollectMin="2" CollectMax="6" Probability="2000" />
+			</Refresh>
+		</Level>
+		
+		<Level id="2" InstanceLevel="2">
+			<Refresh id="1" ResourceType="1">
+				<Entry id="1" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="1" ResourceIcon="" CollectMin="3000" CollectMax="5000" Probability="3000" />
+				<Entry id="2" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="2" ResourceIcon="" CollectMin="2" CollectMax="4" Probability="1000" />
+				<Entry id="3" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="9" ResourceIcon="" CollectMin="400" CollectMax="600" Probability="2000" />
+				<Entry id="4" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="120101" ResourceIcon="" CollectMin="2" CollectMax="4" Probability="2000" />
+				<Entry id="5" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="122131" ResourceIcon="" CollectMin="1" CollectMax="3" Probability="2000" />
+			</Refresh>
+			
+			<Refresh id="2" ResourceType="2">
+				<Entry id="1" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="1" ResourceIcon="" CollectMin="3000" CollectMax="6000" Probability="1000" />
+				<Entry id="2" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="2" ResourceIcon="" CollectMin="3000" CollectMax="6000" Probability="1000" />
+				<Entry id="3" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="3" ResourceIcon="" CollectMin="3000" CollectMax="6000" Probability="1000" />
+				<Entry id="4" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="4" ResourceIcon="" CollectMin="3000" CollectMax="6000" Probability="1000" />
+			</Refresh>
+			
+			
+			<Refresh id="3" ResourceType="3">
+				<Entry id="1" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="1" ResourceIcon="" CollectMin="3000" CollectMax="6000" Probability="1000" />
+				<Entry id="2" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="2" ResourceIcon="" CollectMin="3000" CollectMax="6000" Probability="1000" />
+				<Entry id="3" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="3" ResourceIcon="" CollectMin="3000" CollectMax="6000" Probability="1000" />
+				<Entry id="4" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="4" ResourceIcon="" CollectMin="3000" CollectMax="6000" Probability="1000" />
+			</Refresh>
+			
+			
+			<Refresh id="4" ResourceType="4">
+				<Entry id="1" RefreshTime="180" AcquisitionTime="12" CollectTimes="4" ItemID="1" ResourceIcon="" CollectMin="6000" CollectMax="10000" Probability="3000" />
+				<Entry id="2" RefreshTime="180" AcquisitionTime="12" CollectTimes="4" ItemID="2" ResourceIcon="" CollectMin="4" CollectMax="8" Probability="1000" />
+				<Entry id="3" RefreshTime="180" AcquisitionTime="12" CollectTimes="4" ItemID="9" ResourceIcon="" CollectMin="800" CollectMax="1200" Probability="2000" />
+				<Entry id="4" RefreshTime="180" AcquisitionTime="12" CollectTimes="4" ItemID="120101" ResourceIcon="" CollectMin="4" CollectMax="8" Probability="2000" />
+				<Entry id="5" RefreshTime="180" AcquisitionTime="12" CollectTimes="4" ItemID="122131" ResourceIcon="" CollectMin="2" CollectMax="6" Probability="2000" />
+			</Refresh>
+		</Level>
+		
+		<!--
+			非活动时间内击杀玩家活动荣耀值：
+			LevelMin：击杀玩家-被击杀玩家等级差距最小值
+			LevelMax：击杀玩家-被击杀玩家等级差距最大值
+			Glory：获得荣耀值
+		-->
+		<KillGlory>
+			<Entry id="1" LevelMin="0" LevelMax="3" Glory="6" />
+			<Entry id="2" LevelMin="4" LevelMax="6" Glory="4" />
+			<Entry id="3" LevelMin="7" LevelMax="10" Glory="3" />
+			<Entry id="4" LevelMin="11" LevelMax="20" Glory="2" />
+			<Entry id="5" LevelMin="21" LevelMax="200" Glory="1" />
+		</KillGlory>
+		
+		
+		<!--
+			非活动时间内连杀获得荣耀值：
+			EvenKillNum：连杀数量
+			ExtraGlory：连杀额外获得荣耀值
+		-->
+		<EvenKillGlory>
+			<Entry id="1" EvenKillNum="5" ExtraGlory="6" />
+			<Entry id="2" EvenKillNum="10" ExtraGlory="12" />
+			<Entry id="3" EvenKillNum="15" ExtraGlory="24" />
+			<Entry id="4" EvenKillNum="20" ExtraGlory="36" />
+		</EvenKillGlory>
+		
+	</Activity>
+	
+	
+	<Activity id="2" IsActivityTime="1">
+		<!--
+			活动时间内资源刷新
+		-->
+		<Level id="1" InstanceLevel="1">
+			<Refresh id="1" ResourceType="1">
+				<Entry id="1" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="1" ResourceIcon="" CollectMin="4800" CollectMax="8000" Probability="3000" />
+				<Entry id="2" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="2" ResourceIcon="" CollectMin="3" CollectMax="6" Probability="1000" />
+				<Entry id="3" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="9" ResourceIcon="" CollectMin="640" CollectMax="960" Probability="2000" />
+				<Entry id="4" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="120101" ResourceIcon="" CollectMin="4" CollectMax="6" Probability="2000" />
+				<Entry id="5" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="122131" ResourceIcon="" CollectMin="2" CollectMax="4" Probability="2000" />
+			</Refresh>
+			
+			<Refresh id="2" ResourceType="2">
+				<Entry id="1" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="1" ResourceIcon="" CollectMin="3000" CollectMax="6000" Probability="1000" />
+				<Entry id="2" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="2" ResourceIcon="" CollectMin="3000" CollectMax="6000" Probability="1000" />
+				<Entry id="3" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="3" ResourceIcon="" CollectMin="3000" CollectMax="6000" Probability="1000" />
+				<Entry id="4" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="4" ResourceIcon="" CollectMin="3000" CollectMax="6000" Probability="1000" />
+			</Refresh>
+			
+			
+			<Refresh id="3" ResourceType="3">
+				<Entry id="1" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="1" ResourceIcon="" CollectMin="3000" CollectMax="6000" Probability="1000" />
+				<Entry id="2" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="2" ResourceIcon="" CollectMin="3000" CollectMax="6000" Probability="1000" />
+				<Entry id="3" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="3" ResourceIcon="" CollectMin="3000" CollectMax="6000" Probability="1000" />
+				<Entry id="4" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="4" ResourceIcon="" CollectMin="3000" CollectMax="6000" Probability="1000" />
+			</Refresh>
+			
+			
+			<Refresh id="4" ResourceType="4">
+				<Entry id="1" RefreshTime="180" AcquisitionTime="12" CollectTimes="4" ItemID="1" ResourceIcon="" CollectMin="9600" CollectMax="16000" Probability="3000" />
+				<Entry id="2" RefreshTime="180" AcquisitionTime="12" CollectTimes="4" ItemID="2" ResourceIcon="" CollectMin="8" CollectMax="12" Probability="1000" />
+				<Entry id="3" RefreshTime="180" AcquisitionTime="12" CollectTimes="4" ItemID="9" ResourceIcon="" CollectMin="1280" CollectMax="1920" Probability="2000" />
+				<Entry id="4" RefreshTime="180" AcquisitionTime="12" CollectTimes="4" ItemID="120101" ResourceIcon="" CollectMin="8" CollectMax="12" Probability="2000" />
+				<Entry id="5" RefreshTime="180" AcquisitionTime="12" CollectTimes="4" ItemID="122131" ResourceIcon="" CollectMin="4" CollectMax="12" Probability="2000" />
+			</Refresh>
+		</Level>
+		
+		<Level id="2" InstanceLevel="2">
+			<Refresh id="1" ResourceType="1">
+				<Entry id="1" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="1" ResourceIcon="" CollectMin="6000" CollectMax="12000" Probability="3000" />
+				<Entry id="2" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="2" ResourceIcon="" CollectMin="4" CollectMax="8" Probability="1000" />
+				<Entry id="3" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="9" ResourceIcon="" CollectMin="800" CollectMax="1200" Probability="2000" />
+				<Entry id="4" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="120101" ResourceIcon="" CollectMin="4" CollectMax="8" Probability="2000" />
+				<Entry id="5" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="122131" ResourceIcon="" CollectMin="2" CollectMax="6" Probability="2000" />
+			</Refresh>
+			
+			<Refresh id="2" ResourceType="2">
+				<Entry id="1" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="1" ResourceIcon="" CollectMin="3000" CollectMax="6000" Probability="1000" />
+				<Entry id="2" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="2" ResourceIcon="" CollectMin="3000" CollectMax="6000" Probability="1000" />
+				<Entry id="3" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="3" ResourceIcon="" CollectMin="3000" CollectMax="6000" Probability="1000" />
+				<Entry id="4" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="4" ResourceIcon="" CollectMin="3000" CollectMax="6000" Probability="1000" />
+			</Refresh>
+			
+			
+			<Refresh id="3" ResourceType="3">
+				<Entry id="1" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="1" ResourceIcon="" CollectMin="3000" CollectMax="6000" Probability="1000" />
+				<Entry id="2" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="2" ResourceIcon="" CollectMin="3000" CollectMax="6000" Probability="1000" />
+				<Entry id="3" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="3" ResourceIcon="" CollectMin="3000" CollectMax="6000" Probability="1000" />
+				<Entry id="4" RefreshTime="120" AcquisitionTime="12" CollectTimes="4" ItemID="4" ResourceIcon="" CollectMin="3000" CollectMax="6000" Probability="1000" />
+			</Refresh>
+			
+			
+			<Refresh id="4" ResourceType="4">
+				<Entry id="1" RefreshTime="180" AcquisitionTime="12" CollectTimes="4" ItemID="1" ResourceIcon="" CollectMin="12000" CollectMax="20000" Probability="3000" />
+				<Entry id="2" RefreshTime="180" AcquisitionTime="12" CollectTimes="4" ItemID="2" ResourceIcon="" CollectMin="8" CollectMax="16" Probability="1000" />
+				<Entry id="3" RefreshTime="180" AcquisitionTime="12" CollectTimes="4" ItemID="9" ResourceIcon="" CollectMin="1600" CollectMax="2400" Probability="2000" />
+				<Entry id="4" RefreshTime="180" AcquisitionTime="12" CollectTimes="4" ItemID="120101" ResourceIcon="" CollectMin="8" CollectMax="16" Probability="2000" />
+				<Entry id="5" RefreshTime="180" AcquisitionTime="12" CollectTimes="4" ItemID="122131" ResourceIcon="" CollectMin="4" CollectMax="12" Probability="2000" />
+			</Refresh>
+		</Level>
+		
+		
+		<!--
+			活动时间内击杀玩家活动荣耀值：
+			LevelMin：击杀玩家-被击杀玩家等级差距最小值
+			LevelMax：击杀玩家-被击杀玩家等级差距最大值
+			Glory：获得荣耀值
+		-->
+		<KillGlory>
+			<Entry id="1" LevelMin="0" LevelMax="3" Glory="30" />
+			<Entry id="2" LevelMin="4" LevelMax="6" Glory="24" />
+			<Entry id="3" LevelMin="7" LevelMax="10" Glory="12" />
+			<Entry id="4" LevelMin="11" LevelMax="20" Glory="6" />
+			<Entry id="5" LevelMin="21" LevelMax="200" Glory="3" />
+		</KillGlory>
+		
+		
+		<!--
+			非活动时间内连杀获得荣耀值：
+			EvenKillNum：连杀数量
+			ExtraGlory：连杀额外获得荣耀值
+		-->
+		<EvenKillGlory>
+			<Entry id="1" EvenKillNum="5" ExtraGlory="20" />
+			<Entry id="2" EvenKillNum="10" ExtraGlory="40" />
+			<Entry id="3" EvenKillNum="15" ExtraGlory="60" />
+			<Entry id="4" EvenKillNum="20" ExtraGlory="80" />
+		</EvenKillGlory>
+		
+	</Activity>
+	
+
+</Config>

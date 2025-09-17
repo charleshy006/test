@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- openshopid:英文逗号分隔开启的商店id
+id:唯一序列号
+icon:iconspritename
+name:商店名称在languages.txt里的索引key键
+product_des:商店产出描述在languages.txt里的索引key键
+describle:商店描述,无任何作用,只是对应商店用的描述 -->
+
+<allshop openshopid="2,3,1,6,4,5">
+	<shop id="1" icon="Allshop_01" name="Allshop_01" product_des="Allshopdes_01" describle="熔炼商店"/>
+	<shop id="2" icon="Allshop_02" name="Allshop_02" product_des="Allshopdes_02" describle="神秘商店"/>
+	<shop id="3" icon="Allshop_03" name="Allshop_03" product_des="Allshopdes_03" describle="竞技商店"/>
+	<shop id="4" icon="Allshop_04" name="Allshop_04" product_des="Allshopdes_04" describle="1V1商店"/>
+	<shop id="5" icon="Allshop_05" name="Allshop_05" product_des="Allshopdes_05" describle="3V3商店"/>
+	<shop id="6" icon="Allshop_06" name="Allshop_06" product_des="Allshopdes_06" describle="公会商店"/>
+	<shop id="7" icon="Allshop_07" name="Allshop_07" product_des="Allshopdes_07" describle="公会黑市"/>
+</allshop>

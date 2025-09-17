@@ -1,0 +1,59 @@
+package  Bill;
+
+enum BillModID
+{
+	LOGIN_MOD = 1;
+	GLOBAL2BILL_MOD = 2;	
+}
+
+////////////////////////////////////////////
+/////
+///////////////////////////////////////////
+
+message stLoginBill
+{
+	optional uint32 svrType  = 1;		
+	optional uint32 svrID = 2;
+	optional string ip = 3;
+	optional uint32 port = 4;
+	optional uint32 zoneID = 5;
+
+	enum ProtoModID
+	{
+		ModID = 1;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 1;	
+	}
+}
+
+/////////////////////////////////////////////////
+///
+////////////////////////////////////////////////
+
+/////////////////////////////////////////////////
+//
+////////////////////////////////////////////////
+
+//通知玩家充值了 bill ---> global
+message stNotifyUserRecharge
+{
+	optional uint32 charID = 1;		//角色ID
+
+	enum ProtoModID
+	{
+		ModID = 2;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 1;	
+	}
+	
+}
+
+///////////////////////////////////////////////
+//
+///////////////////////////////////////////////

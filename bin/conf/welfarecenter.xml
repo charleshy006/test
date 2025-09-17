@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+
+
+<conf>
+	<condition taskid="1" awardid="1" level="1" >
+		<reward id="1" itemid="1" itemnum="50000" />
+		<reward id="2" itemid="2" itemnum="50" />
+	</condition>
+	
+	<condition taskid="2" awardid="2" level="5" >
+		<reward id="1" itemid="1" itemnum="100000" />
+		<reward id="2" itemid="100101" itemnum="3" />
+	</condition>
+	
+	<condition taskid="3" awardid="3" level="10" >
+		<reward id="1" itemid="2" itemnum="50" />
+		<reward id="2" itemid="100102" itemnum="3" />
+	</condition>
+	
+	<condition taskid="4" awardid="4" level="20" >
+		<reward id="1" itemid="1" itemnum="300000" />
+		<reward id="2" itemid="120104" itemnum="5" />
+		<reward id="3" itemid="101201" itemnum="2" />
+	</condition>
+	
+	<condition taskid="5" awardid="5" level="30" >
+		<reward id="1" itemid="1" itemnum="500000" />
+		<reward id="2" itemid="2" itemnum="100" />
+		<reward id="3" itemid="120101" itemnum="50" />
+	</condition>
+	
+</conf>

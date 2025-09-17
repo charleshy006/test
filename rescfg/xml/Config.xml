@@ -1,0 +1,10 @@
+﻿<?xml version="0.5" encoding="UTF-8"?>
+<config>
+	<Version content="1.0.0" />
+	<minVersion value="800"/>
+	<BBShttp address="http://service@funmobi.com.tw"/>
+	<mail address="http://service@funmobi.com.tw"/>
+	<ShareUrl url="www.funmobi.com.tw/Redirect?id=tw.funmobi.cutegirl.googleplay2" icon="http://cdn.tw.dh.i2joy.com/dh/taiwan_icon.jpg"/>
+</config>
+
+

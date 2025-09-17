@@ -1,0 +1,416 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+
+<!--
+	Activityid:活动id
+	petid:限时随从id
+	drawid:对应填写draw表限时随从id
+	pointreward:积分奖励，积分达到pointnum值，可领取boxid奖励，玩家活动期间手动领取，活动结束无法继续领取，开启下次活动时积分清零
+	rankreward:排名奖励，活动结束结算排名奖励，奖励通过邮箱发送
+	Title:名字
+	Desc:随从描述
+	equipment:装备穿戴装备
+	star:星级
+-->
+<conf>
+	<!--小死神-->
+	<Activity Activityid="1" petid="811606" Title="LimitTitle_811606" Desc="LimitDesc_811606" equipment="" star="5">
+		<drawid>
+			<entry id="1" limittimedrawid="1" />
+		</drawid>
+		<pointreward>
+			<entry id="1" pointnum="500" boxid="103500" />
+			<entry id="2" pointnum="3000" boxid="103501" />
+			<entry id="3" pointnum="10000" boxid="103502" />
+			<entry id="4" pointnum="30000" boxid="103503" />
+			<entry id="5" pointnum="50000" boxid="103504" />
+		</pointreward>
+		<rankreward>
+			<entry id="1" Startrank="1" EndRank="1" boxid="102400" rewarditem="102400" />
+			<entry id="2" Startrank="2" EndRank="2" boxid="102401" rewarditem="102401" />
+			<entry id="3" Startrank="3" EndRank="3" boxid="102402" rewarditem="102402" />
+			<entry id="4" Startrank="4" EndRank="10" boxid="102403" rewarditem="102403" />
+			<entry id="5" Startrank="11" EndRank="20" boxid="102404" rewarditem="102404" />
+			<entry id="6" Startrank="21" EndRank="50" boxid="102405" rewarditem="102405" />
+		</rankreward>
+	</Activity>
+	
+	
+	<!--小乔巴-->
+	<Activity Activityid="2" petid="811614" Title="LimitTitle_811614" Desc="LimitDesc_811614" equipment=""  star="5">
+		<drawid>
+			<entry id="1" limittimedrawid="2" />
+		</drawid>
+		<pointreward>
+			<entry id="1" pointnum="500" boxid="103505" />
+			<entry id="2" pointnum="3000" boxid="103506" />
+			<entry id="3" pointnum="10000" boxid="103507" />
+			<entry id="4" pointnum="30000" boxid="103508" />
+			<entry id="5" pointnum="50000" boxid="103509" />
+		</pointreward>
+		<rankreward>
+			<entry id="1" Startrank="1" EndRank="1" boxid="102406" rewarditem="102406" />
+			<entry id="2" Startrank="2" EndRank="2" boxid="102407" rewarditem="102407" />
+			<entry id="3" Startrank="3" EndRank="3" boxid="102408" rewarditem="102408" />
+			<entry id="4" Startrank="4" EndRank="10" boxid="102409" rewarditem="102409" />
+			<entry id="5" Startrank="11" EndRank="20" boxid="102410" rewarditem="102410" />
+			<entry id="6" Startrank="21" EndRank="50" boxid="102411" rewarditem="102411" />
+		</rankreward>
+	</Activity>
+	
+
+	
+	<!--灵魂歌姬-->
+	<Activity Activityid="3" petid="811617" Title="LimitTitle_811617" Desc="LimitDesc_811617" equipment=""  star="5">
+		<drawid>
+			<entry id="1" limittimedrawid="3" />
+		</drawid>
+		<pointreward>
+			<entry id="1" pointnum="500" boxid="103510" />
+			<entry id="2" pointnum="3000" boxid="103511" />
+			<entry id="3" pointnum="10000" boxid="103512" />
+			<entry id="4" pointnum="30000" boxid="103513" />
+			<entry id="5" pointnum="50000" boxid="103514" />
+		</pointreward>
+		<rankreward>
+			<entry id="1" Startrank="1" EndRank="1" boxid="102412" rewarditem="102412" />
+			<entry id="2" Startrank="2" EndRank="2" boxid="102413" rewarditem="102413" />
+			<entry id="3" Startrank="3" EndRank="3" boxid="102414" rewarditem="102414" />
+			<entry id="4" Startrank="4" EndRank="10" boxid="102415" rewarditem="102415" />
+			<entry id="5" Startrank="11" EndRank="20" boxid="102416" rewarditem="102416" />
+			<entry id="6" Startrank="21" EndRank="50" boxid="102417" rewarditem="102417" />
+		</rankreward>
+	</Activity>
+	
+	
+	<!--雷神-->
+	<Activity Activityid="4" petid="811618" Title="LimitTitle_811618" Desc="LimitDesc_811618" equipment="" star="5" >
+		<drawid>
+			<entry id="1" limittimedrawid="4" />
+		</drawid>
+		<pointreward>
+			<entry id="1" pointnum="500" boxid="103515" />
+			<entry id="2" pointnum="3000" boxid="103516" />
+			<entry id="3" pointnum="10000" boxid="103517" />
+			<entry id="4" pointnum="30000" boxid="103518" />
+			<entry id="5" pointnum="50000" boxid="103519" />
+		</pointreward>
+		<rankreward>
+			<entry id="1" Startrank="1" EndRank="1" boxid="102418" rewarditem="102418" />
+			<entry id="2" Startrank="2" EndRank="2" boxid="102419" rewarditem="102419" />
+			<entry id="3" Startrank="3" EndRank="3" boxid="102420" rewarditem="102420" />
+			<entry id="4" Startrank="4" EndRank="10" boxid="102421" rewarditem="102421" />
+			<entry id="5" Startrank="11" EndRank="20" boxid="102422" rewarditem="102422" />
+			<entry id="6" Startrank="21" EndRank="50" boxid="102423" rewarditem="102423" />
+		</rankreward>
+	</Activity>
+	
+	<!--东方不败-->
+	<Activity Activityid="5" petid="811621" Title="LimitTitle_811621" Desc="LimitDesc_811621" equipment="" star="5" >
+		<drawid>
+			<entry id="1" limittimedrawid="5" />
+		</drawid>
+		<pointreward>
+			<entry id="1" pointnum="500" boxid="103520" />
+			<entry id="2" pointnum="3000" boxid="103521" />
+			<entry id="3" pointnum="10000" boxid="103522" />
+			<entry id="4" pointnum="30000" boxid="103523" />
+			<entry id="5" pointnum="50000" boxid="103524" />
+		</pointreward>
+		<rankreward>
+			<entry id="1" Startrank="1" EndRank="1" boxid="102424" rewarditem="102424" />
+			<entry id="2" Startrank="2" EndRank="2" boxid="102425" rewarditem="102425" />
+			<entry id="3" Startrank="3" EndRank="3" boxid="102426" rewarditem="102426" />
+			<entry id="4" Startrank="4" EndRank="10" boxid="102427" rewarditem="102427" />
+			<entry id="5" Startrank="11" EndRank="20" boxid="102428" rewarditem="102428" />
+			<entry id="6" Startrank="21" EndRank="50" boxid="102429" rewarditem="102429" />
+		</rankreward>
+	</Activity>
+	
+	
+	<!--海盗船长-->
+	<Activity Activityid="6" petid="811623" Title="LimitTitle_811623" Desc="LimitDesc_811623" equipment="" star="5" >
+		<drawid>
+			<entry id="1" limittimedrawid="6" />
+		</drawid>
+		<pointreward>
+			<entry id="1" pointnum="500" boxid="103525" />
+			<entry id="2" pointnum="3000" boxid="103526" />
+			<entry id="3" pointnum="10000" boxid="103527" />
+			<entry id="4" pointnum="30000" boxid="103528" />
+			<entry id="5" pointnum="50000" boxid="103529" />
+		</pointreward>
+		<rankreward>
+			<entry id="1" Startrank="1" EndRank="1" boxid="102430" rewarditem="102430" />
+			<entry id="2" Startrank="2" EndRank="2" boxid="102431" rewarditem="102431" />
+			<entry id="3" Startrank="3" EndRank="3" boxid="102432" rewarditem="102432" />
+			<entry id="4" Startrank="4" EndRank="10" boxid="102433" rewarditem="102433" />
+			<entry id="5" Startrank="11" EndRank="20" boxid="102434" rewarditem="102434" />
+			<entry id="6" Startrank="21" EndRank="50" boxid="102435" rewarditem="102435" />
+		</rankreward>
+	</Activity>
+	
+	
+	
+	
+	<!--斯巴达勇士-->
+	<Activity Activityid="7" petid="811607" Title="LimitTitle_811607" Desc="LimitDesc_811607" equipment="" star="5" >
+		<drawid>
+			<entry id="1" limittimedrawid="7" />
+		</drawid>
+		<pointreward>
+			<entry id="1" pointnum="500" boxid="103530" />
+			<entry id="2" pointnum="3000" boxid="103531" />
+			<entry id="3" pointnum="10000" boxid="103532" />
+			<entry id="4" pointnum="30000" boxid="103533" />
+			<entry id="5" pointnum="50000" boxid="103534" />
+		</pointreward>
+		<rankreward>
+			<entry id="1" Startrank="1" EndRank="1" boxid="102436" rewarditem="102436" />
+			<entry id="2" Startrank="2" EndRank="2" boxid="102437" rewarditem="102437" />
+			<entry id="3" Startrank="3" EndRank="3" boxid="102438" rewarditem="102438" />
+			<entry id="4" Startrank="4" EndRank="10" boxid="102439" rewarditem="102439" />
+			<entry id="5" Startrank="11" EndRank="20" boxid="102440" rewarditem="102440" />
+			<entry id="6" Startrank="21" EndRank="50" boxid="102441" rewarditem="102441" />
+		</rankreward>
+	</Activity>
+	
+	
+	<!--小牧师-->
+	<Activity Activityid="8" petid="811615" Title="LimitTitle_811615" Desc="LimitDesc_811615" equipment="" star="5" >
+		<drawid>
+			<entry id="1" limittimedrawid="8" />
+		</drawid>
+		<pointreward>
+			<entry id="1" pointnum="500" boxid="103535" />
+			<entry id="2" pointnum="3000" boxid="103536" />
+			<entry id="3" pointnum="10000" boxid="103537" />
+			<entry id="4" pointnum="30000" boxid="103538" />
+			<entry id="5" pointnum="50000" boxid="103539" />
+		</pointreward>
+		<rankreward>
+			<entry id="1" Startrank="1" EndRank="1" boxid="102442" rewarditem="102442" />
+			<entry id="2" Startrank="2" EndRank="2" boxid="102443" rewarditem="102443" />
+			<entry id="3" Startrank="3" EndRank="3" boxid="102444" rewarditem="102444" />
+			<entry id="4" Startrank="4" EndRank="10" boxid="102445" rewarditem="102445" />
+			<entry id="5" Startrank="11" EndRank="20" boxid="102446" rewarditem="102446" />
+			<entry id="6" Startrank="21" EndRank="50" boxid="102447" rewarditem="102447" />
+		</rankreward>
+	</Activity>
+	
+
+	<!--王尼玛-->
+	<Activity Activityid="9" petid="811628" Title="LimitTitle_811628" Desc="LimitDesc_811628" equipment="" star="5" >
+		<drawid>
+			<entry id="1" limittimedrawid="9" />
+		</drawid>
+		<pointreward>
+			<entry id="1" pointnum="500" boxid="103540" />
+			<entry id="2" pointnum="3000" boxid="103541" />
+			<entry id="3" pointnum="10000" boxid="103542" />
+			<entry id="4" pointnum="30000" boxid="103543" />
+			<entry id="5" pointnum="50000" boxid="103544" />
+		</pointreward>
+		<rankreward>
+			<entry id="1" Startrank="1" EndRank="1" boxid="102448" rewarditem="102448" />
+			<entry id="2" Startrank="2" EndRank="2" boxid="102449" rewarditem="102449" />
+			<entry id="3" Startrank="3" EndRank="3" boxid="102450" rewarditem="102450" />
+			<entry id="4" Startrank="4" EndRank="10" boxid="102451" rewarditem="102451" />
+			<entry id="5" Startrank="11" EndRank="20" boxid="102452" rewarditem="102452" />
+			<entry id="6" Startrank="21" EndRank="50" boxid="102453" rewarditem="102453" />
+		</rankreward>
+	</Activity>
+	
+	
+	<!--张全蛋-->
+	<Activity Activityid="10" petid="811629" Title="LimitTitle_811629" Desc="LimitDesc_811629" equipment="" star="5" >
+		<drawid>
+			<entry id="1" limittimedrawid="10" />
+		</drawid>
+		<pointreward>
+			<entry id="1" pointnum="500" boxid="103545" />
+			<entry id="2" pointnum="3000" boxid="103546" />
+			<entry id="3" pointnum="10000" boxid="103547" />
+			<entry id="4" pointnum="30000" boxid="103548" />
+			<entry id="5" pointnum="50000" boxid="103549" />
+		</pointreward>
+		<rankreward>
+			<entry id="1" Startrank="1" EndRank="1" boxid="102454" rewarditem="102454" />
+			<entry id="2" Startrank="2" EndRank="2" boxid="102455" rewarditem="102455" />
+			<entry id="3" Startrank="3" EndRank="3" boxid="102456" rewarditem="102456" />
+			<entry id="4" Startrank="4" EndRank="10" boxid="102457" rewarditem="102457" />
+			<entry id="5" Startrank="11" EndRank="20" boxid="102458" rewarditem="102458" />
+			<entry id="6" Startrank="21" EndRank="50" boxid="102459" rewarditem="102459" />
+		</rankreward>
+	</Activity>
+	
+	
+	<!--王尼美-->
+	<Activity Activityid="11" petid="811630" Title="LimitTitle_811630" Desc="LimitDesc_811630" equipment="" star="5" >
+		<drawid>
+			<entry id="1" limittimedrawid="11" />
+		</drawid>
+		<pointreward>
+			<entry id="1" pointnum="500" boxid="103550" />
+			<entry id="2" pointnum="3000" boxid="103551" />
+			<entry id="3" pointnum="10000" boxid="103552" />
+			<entry id="4" pointnum="30000" boxid="103553" />
+			<entry id="5" pointnum="50000" boxid="103554" />
+		</pointreward>
+		<rankreward>
+			<entry id="1" Startrank="1" EndRank="1" boxid="102460" rewarditem="102460" />
+			<entry id="2" Startrank="2" EndRank="2" boxid="102461" rewarditem="102461" />
+			<entry id="3" Startrank="3" EndRank="3" boxid="102462" rewarditem="102462" />
+			<entry id="4" Startrank="4" EndRank="10" boxid="102463" rewarditem="102463" />
+			<entry id="5" Startrank="11" EndRank="20" boxid="102464" rewarditem="102464" />
+			<entry id="6" Startrank="21" EndRank="50" boxid="102465" rewarditem="102465" />
+		</rankreward>
+	</Activity>
+	
+	
+	<!--26品质装备  火神-->
+	<Activity Activityid="12" petid="0" Title="LimitTitle_Fire" Desc="LimitDesc_Fire" equipment="202600,212600,222600,232600,242600,252600,262600" star="5" >
+		<drawid>
+			<entry id="1" limittimedrawid="12" />
+		</drawid>
+		<pointreward>
+			<entry id="1" pointnum="500" boxid="103555" />
+			<entry id="2" pointnum="3000" boxid="103556" />
+			<entry id="3" pointnum="10000" boxid="103557" />
+			<entry id="4" pointnum="30000" boxid="103558" />
+			<entry id="5" pointnum="50000" boxid="103559" />
+		</pointreward>
+		<rankreward>
+			<entry id="1" Startrank="1" EndRank="1" boxid="102466" rewarditem="102466" />
+			<entry id="2" Startrank="2" EndRank="2" boxid="102467" rewarditem="102467" />
+			<entry id="3" Startrank="3" EndRank="3" boxid="102468" rewarditem="102468" />
+			<entry id="4" Startrank="4" EndRank="10" boxid="102469" rewarditem="102469" />
+			<entry id="5" Startrank="11" EndRank="50" boxid="102470" rewarditem="102470" />
+		</rankreward>
+	</Activity>
+	
+	
+	
+	<!--26品质装备  水神-->
+	<Activity Activityid="13" petid="0" Title="LimitTitle_Water" Desc="LimitDesc_Water" equipment="202610,212610,222610,232610,242610,252610,262610" star="5" >
+		<drawid>
+			<entry id="1" limittimedrawid="13" />
+		</drawid>
+		<pointreward>
+			<entry id="1" pointnum="500" boxid="103560" />
+			<entry id="2" pointnum="3000" boxid="103561" />
+			<entry id="3" pointnum="10000" boxid="103562" />
+			<entry id="4" pointnum="30000" boxid="103563" />
+			<entry id="5" pointnum="50000" boxid="103564" />
+		</pointreward>
+		<rankreward>
+			<entry id="1" Startrank="1" EndRank="1" boxid="102471" rewarditem="102471" />
+			<entry id="2" Startrank="2" EndRank="2" boxid="102472" rewarditem="102472" />
+			<entry id="3" Startrank="3" EndRank="3" boxid="102473" rewarditem="102473" />
+			<entry id="4" Startrank="4" EndRank="10" boxid="102474" rewarditem="102474" />
+			<entry id="5" Startrank="11" EndRank="50" boxid="102475" rewarditem="102475" />
+		</rankreward>
+	</Activity>
+	
+	
+	
+	<!--26品质装备  雷神-->
+	<Activity Activityid="14" petid="0" Title="LimitTitle_Thunder" Desc="LimitDesc_Thunder" equipment="202620,212620,222620,232620,242620,252620,262620" star="5" >
+		<drawid>
+			<entry id="1" limittimedrawid="14" />
+		</drawid>
+		<pointreward>
+			<entry id="1" pointnum="500" boxid="103565" />
+			<entry id="2" pointnum="3000" boxid="103566" />
+			<entry id="3" pointnum="10000" boxid="103567" />
+			<entry id="4" pointnum="30000" boxid="103568" />
+			<entry id="5" pointnum="50000" boxid="103569" />
+		</pointreward>
+		<rankreward>
+			<entry id="1" Startrank="1" EndRank="1" boxid="102476" rewarditem="102476" />
+			<entry id="2" Startrank="2" EndRank="2" boxid="102477" rewarditem="102477" />
+			<entry id="3" Startrank="3" EndRank="3" boxid="102478" rewarditem="102478" />
+			<entry id="4" Startrank="4" EndRank="10" boxid="102479" rewarditem="102479" />
+			<entry id="5" Startrank="11" EndRank="50" boxid="102480" rewarditem="102480" />
+		</rankreward>
+	</Activity>
+	
+	<!--奥特曼-->
+	<Activity Activityid="15" petid="811608" Title="LimitTitle_811608" Desc="LimitDesc_811608" equipment="" star="5" >
+		<drawid>
+			<entry id="1" limittimedrawid="15" />
+		</drawid>
+		<pointreward>
+			<entry id="1" pointnum="500" boxid="103570" />
+			<entry id="2" pointnum="3000" boxid="103571" />
+			<entry id="3" pointnum="10000" boxid="103572" />
+			<entry id="4" pointnum="30000" boxid="103573" />
+			<entry id="5" pointnum="50000" boxid="103574" />
+		</pointreward>
+		<rankreward>
+			<entry id="1" Startrank="1" EndRank="1" boxid="102481" rewarditem="102481" />
+			<entry id="2" Startrank="2" EndRank="2" boxid="102482" rewarditem="102482" />
+			<entry id="3" Startrank="3" EndRank="3" boxid="102483" rewarditem="102483" />
+			<entry id="4" Startrank="4" EndRank="10" boxid="102484" rewarditem="102484" />
+			<entry id="5" Startrank="11" EndRank="20" boxid="102485" rewarditem="102485" />
+			<entry id="6" Startrank="21" EndRank="50" boxid="102486" rewarditem="102486" />
+		</rankreward>
+	</Activity>
+	
+	<!--奥特曼-->
+	<Activity Activityid="16" petid="811609" Title="LimitTitle_811609" Desc="LimitDesc_811609" equipment="" star="5" >
+		<drawid>
+			<entry id="1" limittimedrawid="16" />
+		</drawid>
+		<pointreward>
+			<entry id="1" pointnum="500" boxid="103575" />
+			<entry id="2" pointnum="3000" boxid="103576" />
+			<entry id="3" pointnum="10000" boxid="103577" />
+			<entry id="4" pointnum="30000" boxid="103578" />
+			<entry id="5" pointnum="50000" boxid="103579" />
+		</pointreward>
+		<rankreward>
+			<entry id="1" Startrank="1" EndRank="1" boxid="102487" rewarditem="102487" />
+			<entry id="2" Startrank="2" EndRank="2" boxid="102488" rewarditem="102488" />
+			<entry id="3" Startrank="3" EndRank="3" boxid="102489" rewarditem="102489" />
+			<entry id="4" Startrank="4" EndRank="10" boxid="102490" rewarditem="102490" />
+			<entry id="5" Startrank="11" EndRank="20" boxid="102491" rewarditem="102491" />
+			<entry id="6" Startrank="21" EndRank="50" boxid="102492" rewarditem="102492" />
+		</rankreward>
+	</Activity>
+	
+	
+	<!--
+		Activityid:对应活动id
+		Starttime:开始时间
+		Endtime:结束时间
+	-->
+	<ActivityOn>
+	<!-- 正式用数据-->
+	
+
+		<entry id="1" Activityid="3" Starttime="2021-09-16 00:00:00" Endtime="2021-09-19 23:00:00" />
+		<entry id="2" Activityid="4" Starttime="2021-09-20 00:00:00" Endtime="2021-09-23 23:00:00" />
+		<entry id="3" Activityid="5" Starttime="2021-09-24 00:00:00" Endtime="2021-09-27 23:00:00" />
+		
+		<entry id="4" Activityid="3" Starttime="2021-09-28 00:00:00" Endtime="2021-10-01 23:00:00" />
+		<entry id="5" Activityid="4" Starttime="2021-10-02 00:00:00" Endtime="2021-10-05 23:00:00" />
+		<entry id="6" Activityid="5" Starttime="2021-10-06 00:00:00" Endtime="2021-10-09 23:00:00" />
+		
+		<entry id="7" Activityid="3" Starttime="2021-10-10 00:00:00" Endtime="2021-10-13 23:00:00" />
+		<entry id="8" Activityid="4" Starttime="2021-10-14 00:00:00" Endtime="2021-10-17 23:00:00" />
+
+
+
+
+	</ActivityOn>
+	
+	
+	<!--
+		limitpoint:前50名需求保底积分
+	-->
+	<limit>
+		<entry id="1" limitpoint="1500"  />
+	</limit>
+
+</conf>

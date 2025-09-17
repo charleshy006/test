@@ -1,0 +1,647 @@
+import "ModID.proto";
+package TeamProto;
+
+//创建队伍 c ---->s 
+message stReqCreateTeam
+{
+	optional uint32 copyMapID = 1;		//关卡ID
+
+	enum ProtoModID
+	{
+		ModID = 9;	
+	}
+	enum ProtoFunID
+	{
+		FunID = 1;	
+	}		
+}
+
+//创建队伍结果 s ---> c
+message stCreateTeamResult
+{
+	enum eResult
+	{
+		eSUCCESS = 1;
+		eHAS_JOIN_IN_TEAM = 2;
+		eINNER_ERROR = 3;
+	}
+	
+	optional eResult result = 1;
+
+	enum ProtoModID
+	{
+		ModID = 9;	
+	}
+	enum ProtoFunID
+	{
+		FunID = 2;	
+	}		
+}
+
+//组员信息
+message stSynMemberInfo
+{
+	optional uint32 charID = 1;				//角色ID
+	optional string name = 2;				//名字
+	optional uint32 level = 3;				//等级
+	optional uint32 job  = 4;				//职业
+	optional uint32 sex = 5;				//性别
+	optional bool   leader = 6;				//队长
+	optional uint32 battlePower = 7;		//战力
+	optional uint32 pos = 8;				//位置
+	optional uint32 headID = 9;				//头部ID
+	optional uint32 bodyID = 10;			//衣服ID
+	optional uint32 weaponID = 11;			//武器ID
+	optional uint32	cloackID = 12;			//披风ID
+	optional uint32	wingID = 13;			//翅膀ID
+	optional uint32 shoeID = 14;			//鞋子
+	optional uint32 fashionHair = 15;		//发型
+	optional uint32 fashionFace = 16;		//表情
+	optional uint32	fashionBody = 17;		//衣服
+	optional uint32	fashionWeapon = 18;		//武器
+	optional uint32	fashionShoe = 19;		//鞋子
+	optional uint32	fashionDecoration = 20; //脸饰品
+	optional uint32 effectID = 21;			//特效ID 
+	optional uint32 wingBreakLv = 22;		//翅膀突破等级
+	optional uint32 fashionWingID = 23;		//时装翅膀ID
+}
+
+//队伍信息表 s ---> c
+message stRoomInfo
+{
+	optional uint32 copyMapID = 1;			//对的的关卡ID
+	repeated stSynMemberInfo members = 2;	//成员
+	optional uint32 teamID = 3;				//队伍ID
+
+	enum ProtoModID
+	{
+		ModID = 9;	
+	}
+	enum ProtoFunID
+	{
+		FunID = 3;	
+	}				
+}
+
+//请求加入队伍 c ---> s
+message stReqEnterTeam
+{
+	optional uint32 teamID = 1;				//队伍ID
+
+	enum ProtoModID
+	{
+		ModID = 9;	
+	}
+	enum ProtoFunID
+	{
+		FunID = 4;	
+	}		
+}
+
+//加入队伍结果 s ---> c
+message stEnterTeamResult
+{
+	enum eResult
+	{
+		eTeam_Full = 1;		//队伍满了
+		eTeam_Not_Exist = 2;//队伍不存在
+		eTeam_Leader_Busy = 3;//队长忙
+		eHas_In_Team = 4;	 //已经在队伍了
+		eTeam_Is_Auto_Match = 5;//队伍正在匹配
+		ePos_Has_Member = 6;	//位置上已经有玩家
+	}
+	
+	optional eResult result = 1;
+
+	enum ProtoModID
+	{
+		ModID = 9;	
+	}
+	enum ProtoFunID
+	{
+		FunID = 5;	
+	}		
+}
+
+//通知某个成员进入队伍 s ---> c
+message stAddTeamMember
+{
+	optional uint32 pos = 1;							//位置
+	optional stSynMemberInfo memberInfo = 2;		//成员信息
+
+	enum ProtoModID
+	{
+		ModID = 9;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 6;	
+	}		
+}
+
+//请求离开队伍 c ---> s
+message stReqLeaveTeam
+{
+	optional uint32 charID = 1;		//角色ID
+
+	enum ProtoModID
+	{
+		ModID = 9;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 7;	
+	}		
+}
+
+//通知某个人离开队伍 s ---> c
+message stNotifyLeaveTeam
+{
+	optional uint32 charID = 1;			//离开的人的角色ID
+
+	enum ProtoModID
+	{
+		ModID = 9;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 8;	
+	}	
+}
+
+//请求解散队伍 c --->s 
+message stReqFireTeam
+{
+	optional uint32 charID = 1;			//角色ID
+
+	enum ProtoModID
+	{
+		ModID = 9;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 9;	
+	}	
+}
+
+//通知队员队伍解散 s ---> c
+message stNotifyFireTeam
+{
+	enum ProtoModID
+	{
+		ModID = 9;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 10;	
+	}		
+}
+
+enum eTeamType
+{
+	eCopymap_Team = 1;		//组队副本队伍
+	eRealTime_Team = 2;		//实时战场队伍
+	eGuild_Copymap_Team = 3;//公会副本组队
+	eSpouse_Inviti = 4;		//婚礼邀请
+}
+
+//要求某人加入队伍 c ---> s
+message stInviteJoinInTeam
+{
+	optional uint32 charID = 1;		//邀请对象
+	optional uint32 pos = 2;		//邀请玩家的某个位置
+	optional eTeamType eType = 3;   //队伍类型
+
+	enum ProtoModID
+	{
+		ModID = 9;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 10;	
+	}			
+}
+
+//邀请结果 s ---> c
+message stInviteJoinInTeamResult
+{
+	enum eResult
+	{
+		USER_OFFLINE = 1;		//玩家不在线
+		NOT_LEADER = 2;			//不是队长
+		DISAGREE = 3;			//玩家不同意加入
+		TEAM_NOT_EXSIT = 4;		//队伍不存在
+		NOT_IN_APPLY_LIST = 5;	//不在申请列表中
+		OTHER = 6;				//其它因为
+		COPYMAP_NUM_USE_OUT = 7;//副本次数用尽
+		TEAM_IS_AUTO_MATCH = 8;	//队伍正在匹配
+	}
+	
+	optional eResult result = 1;
+	optional eTeamType eType = 2;   //队伍类型
+
+	enum ProtoModID
+	{
+		ModID = 9;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 11;	
+	}		
+}
+
+//询问是否同意加入 s ----> c
+message stAskJoinInTeam
+{
+	optional uint32 teamID = 1;		//队伍ID
+	optional string inviteName = 2;	//邀请者名字
+	optional uint32 pos = 3;		//位置
+	optional eTeamType eType = 4;   //队伍类型
+	optional uint32 copymapID = 5;	//关卡ID
+
+	enum ProtoModID
+	{
+		ModID = 9;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 12;	
+	}	
+}
+
+//答复邀请 c ---> s
+message stReplyJoinInTeam
+{
+	optional uint32 teamID = 1;		//队伍ID
+	optional bool   agree = 2;		//true 同意,false不同意
+	optional uint32 pos = 3;		//位置
+	optional eTeamType eType = 4;   //队伍类型
+	optional bool   timesUseOut = 5;//只有agree为false使用有意义,true表示次数用完,false表示次数没有用完其它原因不想进入队伍
+
+	enum ProtoModID
+	{
+		ModID = 9;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 13;	
+	}		
+}
+
+//请求进入关卡 c ---> s
+message stReqEnterLv
+{
+	optional uint32 copyMapID = 1;		//关卡ID
+
+	enum ProtoModID
+	{
+		ModID = 9;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 14;	
+	}		
+}
+
+//在聊天协议框里邀请加入组队  c ---> s
+message stReqBroadcastInviteCmd
+{
+	optional uint32 charID = 1;			//角色ID
+
+	enum ProtoModID
+	{
+		ModID = 9;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 15;	
+	}		
+}
+
+//在聊天框里发送组队邀请 s ---> c
+message stBroadcastInviteJoinIn
+{
+	optional uint32 teamID = 1;				//队伍ID
+	optional uint32 charID = 2;				//角色ID
+	optional string name   = 3;				//邀请者名字
+	optional uint32 job = 4;				//职业
+	optional uint32 sex = 5;				//性别
+	optional uint32 battlePower = 6;		//邀请者的战力
+	optional uint32 vipLv = 7;				//vip等级
+	optional uint32 copyMapID = 8;			//副本关卡ID
+	optional uint32 photoID = 9;			//头像ID
+
+	enum ProtoModID
+	{
+		ModID = 9;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 16;	
+	}		
+}
+
+//请求自动匹配 c ---> s
+message stReqAutoMatchTeam
+{
+	optional uint32 charID = 1;			//角色ID
+	optional uint32 copyMapID = 2;		//副本ID
+
+	enum ProtoModID
+	{
+		ModID = 9;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 17;	
+	}		
+}
+
+//等待匹配结果 s ---> c
+message stWaitMatchTeam
+{
+	enum ProtoModID
+	{
+		ModID = 9;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 18;	
+	}		
+}
+
+//匹配队伍成功 c ---> s
+message stMathcTeamSuccess
+{
+	enum ProtoModID
+	{
+		ModID = 9;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 19;	
+	}		
+}
+
+//取消自动匹配 c ----> s
+message stCancelAutoMatchTeam
+{
+	optional uint32 charID = 1;		//角色ID
+	optional uint32 copyMapID = 2;  //副本ID
+
+	enum ProtoModID
+	{
+		ModID = 9;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 20;	
+	}		
+}
+
+//取消自动匹配结果 s ----> c
+message stCancelAutoMatchTeamResult
+{
+	enum eResult
+	{
+		eSUCCESS = 1;
+		eFAIL = 2;
+	}
+	
+	optional eResult result = 1;		//结果
+
+	enum ProtoModID
+	{
+		ModID = 9;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 21;	
+	}		
+}
+
+//请求某个关卡的首杀信息 c ----> s
+message stReqFirstKillInfoByID
+{
+	optional uint32 levelID = 1;	//关卡ID
+
+	enum ProtoModID
+	{
+		ModID = 9;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 22;	
+	}		
+}
+
+//返回某个关卡的首杀信息 s ---> c
+message stRetFirstKillInfo
+{
+	optional uint32 copymapID = 1;		//副本ID
+	optional uint32 charID1 = 2;		//角色1的ID
+	optional uint32 job1 = 3;			//角色1的职业
+	optional uint32 sex1 = 4;			//角色1的性别
+	optional string name1 = 5;			//角色1的姓名
+	optional uint32 level1 = 6;			//角色1的等级
+	optional uint32 battlePower1 = 7;	//角色1的战力
+	
+	optional uint32 charID2 = 8;		//角色2的ID
+	optional uint32 job2 = 9;			//角色2的职业
+	optional uint32 sex2 = 10;			//角色2的性别
+	optional string name2 = 11;			//角色2的姓名
+	optional uint32 level2 = 12;		//角色2的等级
+	optional uint32 battlePower2 = 13;	//角色2的战力
+
+	optional uint32 charID3 = 14;		//角色2的ID
+	optional uint32 job3 = 15;			//角色2的职业
+	optional uint32 sex3 = 16;			//角色2的性别
+	optional string name3 = 17;			//角色2的姓名
+	optional uint32 level3 = 18;		//角色2的等级
+	optional uint32 battlePower3 = 19;	//角色2的战力
+	
+	optional uint32 killTime = 20;		//首杀时间
+
+	optional uint32 photoID1 = 21;		//角色1的头像ID
+	optional uint32 photoID2 = 22;		//角色2的头像ID
+	optional uint32 photoID3 = 23;		//角色3的头像ID
+	
+	enum ProtoModID
+	{
+		ModID = 9;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 23;	
+	}		
+}
+
+enum eRealTimePKType
+{
+	eRealTimePKType_KillAll = 1;		//杀完对方所有人
+	eRealTimePKType_Finish = 2;			//完成所有节点
+}
+
+//请求实时战场单人匹配 c ----> s
+message stReqRealTimeSingleMatch
+{
+	optional eRealTimePKType eType = 1;	//实时战场类型
+
+	enum ProtoModID
+	{
+		ModID = 9;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 24;	
+	}			
+}
+
+//实时战场单人匹配等待 s ----> c
+message stRealTimeSingleMatchWait
+{
+	optional eRealTimePKType eType = 1;	//实时战场类型
+
+	enum ProtoModID
+	{
+		ModID = 9;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 25;	
+	}			
+}
+
+//实时战场单人匹配取消 c ----> s
+message stReqCancelRealTimeSingleMatch
+{
+	optional eRealTimePKType eType = 1;	//实时战场类型
+	
+	enum ProtoModID
+	{
+		ModID = 9;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 26;	
+	}			
+}
+
+//实时战场单人匹配取消返回 s ----> c
+message stCancelRealTimeSingleMatchResult
+{
+	optional bool success = 1;		//true成功,false失败
+
+	enum ProtoModID
+	{
+		ModID = 9;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 27;	
+	}			
+}
+
+//实时战场组队请求匹配 c ----> s
+message stReqRealTimeTeamMatch
+{
+	optional eRealTimePKType eType  = 1;	//实时战场类型
+	optional uint32  teamID = 2;			//队伍ID
+
+	enum ProtoModID
+	{
+		ModID = 9;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 28;	
+	}		
+}
+
+//实时战场组队请求匹配等待 s ----> c
+message stRealTimeTeamMatchWait
+{
+	optional eRealTimePKType eType = 1;	//实时战场类型
+
+	enum ProtoModID
+	{
+		ModID = 9;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 29;	
+	}			
+}
+
+//请求取消实时战场组队匹配 c ----> s
+message stReqCancelRealTimeTeamMatch
+{
+	optional eRealTimePKType eType = 1;	//实时战场类型
+	optional uint32 teamID = 2;			//组队ID
+
+	enum ProtoModID
+	{
+		ModID = 9;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 30;	
+	}			
+}
+
+//取消实时战场组队匹配返回 s ----> c
+message stCancelRealTimeTeamMatchResult
+{
+	optional bool success = 1;			//true成功,false失败
+	enum ProtoModID
+	{
+		ModID = 9;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 31;	
+	}				
+}
+
+//实时战场匹配未开启  s----> c
+message stRealTimePKNotOpen
+{
+	optional eRealTimePKType eType = 1; //实时战场类型
+
+	enum ProtoModID
+	{
+		ModID = 9;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 32;	
+	}			
+}

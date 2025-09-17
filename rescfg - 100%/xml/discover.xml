@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<!--
+		discoverNum: 免费次数
+		resetNum: 钻石购买次数
+        resetPrice：购买次数价格
+		
+	-->
+	<Discover discoverNum="20">
+		<entry resetNum="1" resetPrice="100" />
+		<entry resetNum="2" resetPrice="150" />
+		<entry resetNum="3" resetPrice="200" />
+		<entry resetNum="4" resetPrice="250" />
+		<entry resetNum="5" resetPrice="300" />
+		<entry resetNum="6" resetPrice="400" />
+	</Discover>
+	
+	<!--
+		bounds: 积分
+		boundsBox: 积分宝箱
+	-->
+	<discoverBounds>
+		<entry id="1" bounds="30" boundsBox="310000" />
+		<entry id="2" bounds="60" boundsBox="310001" />
+		<entry id="3" bounds="90" boundsBox="310002" />
+		<entry id="4" bounds="120" boundsBox="310003" />
+		<entry id="5" bounds="150" boundsBox="310004" />
+	</discoverBounds>
+	
+	<!--
+		mapID: 地图ID
+		mapRP: 地图概率
+	-->
+	<discoverMap>
+		<entry id="1" mapID="1" mapRP="1000" />
+	</discoverMap>
+	
+	<!--
+		squareID: 格子ID
+        squareType：格子类型（0：起点 1：钻石 2：金币 3：龙晶石 4：boss 5：战斗任务 6：普通任务 7：道具宝箱 8：随从宝箱 9：终点 10：空格
+	
+	-->
+	<Map id="1">
+		<square ID="0" squareType="0" />
+		<square ID="1" squareType="6" />
+		<square ID="2" squareType="10" />
+		<square ID="3" squareType="5" />
+		<square ID="4" squareType="4-1"  />
+		<square ID="5" squareType="10" />
+		<square ID="6" squareType="1" />
+		<square ID="7" squareType="10" />
+		<square ID="8" squareType="6" />
+		<square ID="9" squareType="10" />
+		<square ID="10" squareType="4-2" />
+		<square ID="11" squareType="5" />
+		<square ID="12" squareType="10"  />
+		<square ID="13" squareType="7" />
+		<square ID="14" squareType="2" />
+		<square ID="15" squareType="1" />
+		<square ID="16" squareType="10"  />
+		<square ID="17" squareType="6" />
+		<square ID="18" squareType="4-3" />
+		<square ID="19" squareType="10" />
+		<square ID="20" squareType="8" />
+		<square ID="21" squareType="3" />
+		<square ID="22" squareType="1" />
+		<square ID="23" squareType="10" />
+		<square ID="24" squareType="5" />
+		<square ID="25" squareType="4-4" />
+		<square ID="26" squareType="10" />
+		<square ID="27" squareType="6" />
+		<square ID="28" squareType="5" />
+		<square ID="29" squareType="1" />
+		<square ID="30" squareType="10" />
+		<square ID="31" squareType="9" />
+	</Map>
+	
+	<SquareType id="0" pic="ditai_1" ico="">
+	</SquareType>
+	<!--
+		rewardBox：钻石宝箱
+		battleRP：概率
+	-->
+	<SquareType id="1" pic="ditai_2" ico="diamond" wnd="1">
+		<entry ID="1" rewardBox="300100" rewardBounds="6" battleRP="6000" desc="discover_010"/>
+		<entry ID="2" rewardBox="300101" rewardBounds="6" battleRP="3000" desc="discover_010"/>
+		<entry ID="3" rewardBox="300102" rewardBounds="6" battleRP="1000" desc="discover_010"/>
+	</SquareType>
+	
+	<!--
+		levelID：金币关卡id
+		rewardBox：宝箱
+		rewardBounds：奖励积分
+		battleRP：概率
+	-->
+	<SquareType id="2" pic="ditai_3" ico="gold" wnd="2">
+		<entry ID="1" levelID="20520" rewardBox="300201" rewardBounds="6" battleRP="3000" desc="discover_020"/>
+		<entry ID="2" levelID="20521" rewardBox="300202" rewardBounds="6" battleRP="3000" desc="discover_020"/>
+		<entry ID="3" levelID="20522" rewardBox="300203" rewardBounds="6" battleRP="4000" desc="discover_020"/>
+	</SquareType> 
+	
+	
+	<!--
+		levelID：龙晶石关卡id
+		rewardBox：宝箱
+		rewardBounds：奖励积分
+		battleRP：概率
+	-->
+	<SquareType id="3" pic="ditai_3" ico="crystal" wnd="2">
+		<entry ID="1" levelID="20530" rewardBox="300301" rewardBounds="6" battleRP="3500" desc="discover_030"/>
+		<entry ID="2" levelID="20531" rewardBox="300302" rewardBounds="6" battleRP="3500" desc="discover_030"/>
+		<entry ID="3" levelID="20532" rewardBox="300303" rewardBounds="6" battleRP="3000" desc="discover_030"/>
+	</SquareType>
+	
+	<!--
+		levelID：boss关卡id;boss关卡id
+		playLevelRange: 等级范围;等级范围
+		rewardBox：宝箱
+		rewardBounds：奖励积分
+	-->
+	
+	<SquareType id="4" pic="ditai_6" wnd="2">
+			<entry ID="1" levelID="20540;20541;20542;20543;20544;20545;20546;20547" playLevelRange="17-20;21-25;26-30;31-35;36-40;41-50;51-60;61-70" rewardBox="300401" rewardBounds="6" ico="300680_ST" desc="discover_040"/>
+			<entry ID="2" levelID="20560;20561;20562;20563;20564;20565;20566;20567" playLevelRange="17-20;21-25;26-30;31-35;36-40;41-50;51-60;61-70" rewardBox="300402" rewardBounds="6" ico="300690_ST" desc="discover_040"/>
+			<entry ID="3" levelID="20580;20581;20582;20583;20584;20585;20586;20587" playLevelRange="17-20;21-25;26-30;31-35;36-40;41-50;51-60;61-70" rewardBox="300403" rewardBounds="6" ico="300700_ST" desc="discover_040"/>
+			<entry ID="4" levelID="20600;20601;20602;20603;20604;20605;20606;20607" playLevelRange="17-20;21-25;26-30;31-35;36-40;41-50;51-60;61-70" rewardBox="300404" rewardBounds="6" ico="300090_ST" desc="discover_040"/>
+	</SquareType>
+	
+	<!--
+		battleType：战斗类型（1：完成普通关卡 2：完成精英关卡 3：完成多人副本 4：完成天梯排行
+		battleNum：战斗次数
+		rewardBox：奖励宝箱
+		taskstage: 跳转
+		rewardBounds：奖励积分
+		battleRP：概率
+	-->
+	<SquareType id="5" pic="ditai_5" ico="battle" wnd="2">
+		<entry ID="1" battleType="1"  taskID="705100" taskstage="705101" battleNum="2" rewardBox="300501" rewardBounds="8" battleRP="2500" desc="discover_051"/>
+		<entry ID="2" battleType="2"  taskID="705200" taskstage="705201" battleNum="2" rewardBox="300502" rewardBounds="8" battleRP="2500" desc="discover_052"/>
+		<entry ID="3" battleType="3"  taskID="705200" taskstage="705301" battleNum="1" rewardBox="300503" rewardBounds="8" battleRP="2500" desc="discover_053"/>
+		<entry ID="4" battleType="4"  taskID="705200" taskstage="705401" battleNum="1" rewardBox="300504" rewardBounds="8" battleRP="2500" desc="discover_054"/>
+	</SquareType>
+	
+	<!--
+		missionType：任务类型（1：抽取宝箱 2：装备强化 3：宝石强化 4：完成夺宝奇兵 5：随从升级
+		missionNum：任务次数
+		rewardBox：奖励宝箱
+		rewardBounds：奖励积分
+		battleRP：概率
+	-->
+	<SquareType id="6" pic="ditai_1" ico="mission" wnd="2">
+		<entry ID="1" battleType="1" taskID="706100" taskstage="706101" battleNum="1" rewardBox="300601" rewardBounds="8" battleRP="2000" desc="discover_061"/>
+		<entry ID="2" battleType="2"  taskID="706200" taskstage="706201" battleNum="1" rewardBox="300602" rewardBounds="8" battleRP="2000" desc="discover_062"/>
+		<entry ID="3" battleType="3"  taskID="706200" taskstage="706301" battleNum="1" rewardBox="300603" rewardBounds="8" battleRP="2000" desc="discover_063"/>
+		<entry ID="4" battleType="4"  taskID="706200" taskstage="706401" battleNum="1" rewardBox="300604" rewardBounds="8" battleRP="2000" desc="discover_064"/>
+		<entry ID="5" battleType="5"  taskID="706200" taskstage="706501" battleNum="1" rewardBox="300605" rewardBounds="8" battleRP="2000" desc="discover_065"/>
+	</SquareType>
+	
+	<!--
+		rewardID：道具宝箱ID
+		rewardBox：宝箱
+		battleRP：概率
+	-->
+	<SquareType id="7" pic="ditai_4" ico="itembox" wnd="1">
+		<entry ID="1" rewardBox="300700" rewardBounds="6" battleRP="3000" desc="discover_071"/>
+		<entry ID="2" rewardBox="300701" rewardBounds="6" battleRP="3000" desc="discover_072"/>
+		<entry ID="3" rewardBox="300702" rewardBounds="6" battleRP="2000" desc="discover_073"/>
+		<entry ID="4" rewardBox="300703" rewardBounds="6" battleRP="2000" desc="discover_074"/>
+	</SquareType>
+	
+	<!--
+		rewardID：随从宝箱ID
+		rewardBox：宝箱
+		battleRP：概率
+	-->
+	<SquareType id="8" pic="ditai_4" ico="petbox" wnd="1">
+		<entry ID="1" rewardBox="300800" rewardBounds="6" battleRP="1000" desc="discover_080"/>
+	</SquareType>
+	
+	<!--
+		rewardBox：宝箱
+	-->
+	<SquareType id="9" pic="ditai_8" ico="end" wnd="3">
+		<entry ID="1" rewardBox="300900" />
+	</SquareType>
+	
+	<SquareType id="10" pic="ditai_1" ico="">
+		<entry ID="1" rewardBounds="3" />
+	</SquareType>
+</root>

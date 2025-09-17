@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>	
+	<!--符文合成
+		materialID：素材ID
+		Firenum：魂火需求量
+	-->
+
+	<synthetic>
+	<!--火属性符文合成-->
+		<!--火-绿阶-->
+		<entry id="100" materialID="770200" Firenum="20">
+			<result  id="1" resultID="670200" RP="7500"/>
+			<result  id="2" resultID="670210" RP="7500"/>
+			<result  id="3" resultID="670220" RP="18750"/>
+			<result  id="4" resultID="670230" RP="18750"/>
+			<result  id="5" resultID="670240" RP="22500"/>
+			<result  id="6" resultID="670400" RP="1000"/>
+			<result  id="7" resultID="670410" RP="1000"/>
+			<result  id="8" resultID="670420" RP="2500"/>
+			<result  id="9" resultID="670430" RP="2500"/>
+			<result  id="10" resultID="670440" RP="3000"/>
+			<result  id="11" resultID="660200" RP="10000"/>
+			<result  id="12" resultID="660400" RP="5000"/>
+		</entry>
+		<!--火-蓝阶-->
+		<entry id="101" materialID="770400" Firenum="40">
+			<result  id="1" resultID="670200" RP="6250"/>
+			<result  id="2" resultID="670210" RP="6250"/>
+			<result  id="3" resultID="670220" RP="15625"/>
+			<result  id="4" resultID="670230" RP="15625"/>
+			<result  id="5" resultID="670240" RP="18750"/>
+			<result  id="6" resultID="670400" RP="1350"/>
+			<result  id="7" resultID="670410" RP="1350"/>
+			<result  id="8" resultID="670420" RP="3375"/>
+			<result  id="9" resultID="670430" RP="3375"/>
+			<result  id="10" resultID="670440" RP="4050"/>
+			<result  id="11" resultID="671200" RP="250"/>
+			<result  id="12" resultID="671210" RP="250"/>
+			<result  id="13" resultID="671220" RP="625"/>
+			<result  id="14" resultID="671230" RP="625"/>
+			<result  id="15" resultID="671240" RP="750"/>
+			<result  id="16" resultID="660200" RP="12500"/>
+			<result  id="17" resultID="660400" RP="7500"/>
+			<result  id="18" resultID="661200" RP="1500"/>
+		</entry>
+		<!--火-紫阶-->
+		<entry id="102" materialID="771200" Firenum="100">
+			<result  id="1" resultID="670400" RP="5500"/>
+			<result  id="2" resultID="670410" RP="5500"/>
+			<result  id="3" resultID="670420" RP="13750"/>
+			<result  id="4" resultID="670430" RP="13750"/>
+			<result  id="5" resultID="670440" RP="16500"/>
+			<result  id="6" resultID="671200" RP="800"/>
+			<result  id="7" resultID="671210" RP="800"/>
+			<result  id="8" resultID="671220" RP="2000"/>
+			<result  id="9" resultID="671230" RP="2000"/>
+			<result  id="10" resultID="671240" RP="2400"/>
+			<result  id="11" resultID="672200" RP="100"/>
+			<result  id="12" resultID="672210" RP="100"/>
+			<result  id="13" resultID="672220" RP="250"/>
+			<result  id="14" resultID="672230" RP="250"/>
+			<result  id="15" resultID="672240" RP="300"/>
+			<result  id="16" resultID="660200" RP="20000"/>
+			<result  id="17" resultID="660400" RP="10000"/>
+			<result  id="18" resultID="661200" RP="5000"/>
+			<result  id="19" resultID="661200" RP="1000"/>
+		</entry>
+		<!--火-橙阶-->
+		<entry id="103" materialID="772200" Firenum="200">
+			<result  id="1" resultID="670400" RP="4500"/>
+			<result  id="2" resultID="670410" RP="4500"/>
+			<result  id="3" resultID="670420" RP="11250"/>
+			<result  id="4" resultID="670430" RP="11250"/>
+			<result  id="5" resultID="670440" RP="13500"/>	
+			<result  id="6" resultID="671200" RP="1500"/>
+			<result  id="7" resultID="671210" RP="1500"/>
+			<result  id="8" resultID="671220" RP="3750"/>
+			<result  id="9" resultID="671230" RP="3750"/>
+			<result  id="10" resultID="671240" RP="4500"/>
+			<result  id="11" resultID="672200" RP="500"/>
+			<result  id="12" resultID="672210" RP="500"/>
+			<result  id="13" resultID="672220" RP="1250"/>
+			<result  id="14" resultID="672230" RP="1250"/>
+			<result  id="15" resultID="672240" RP="1500"/>
+			<result  id="16" resultID="660400" RP="20000"/>
+			<result  id="17" resultID="661200" RP="10000"/>
+			<result  id="18" resultID="662200" RP="5000"/>
+		</entry>
+		<!--火-红阶-->
+		<entry id="104" materialID="773000" Firenum="1000">
+			<result  id="1" resultID="673000" RP="10000"/>
+			<result  id="2" resultID="673010" RP="10000"/>
+			<result  id="3" resultID="673020" RP="10000"/>
+			<result  id="4" resultID="673030" RP="10000"/>
+			<result  id="5" resultID="673040" RP="10000"/>
+			<result  id="6" resultID="663000" RP="50000"/>
+		</entry>
+		
+	<!--冰属性符文合成-->
+		<!--冰-绿阶-->
+		<entry id="200" materialID="780200" Firenum="20">
+			<result  id="1" resultID="680200" RP="22500"/>
+			<result  id="2" resultID="680210" RP="11250"/>
+			<result  id="3" resultID="680220" RP="11250"/>
+			<result  id="4" resultID="680230" RP="30000"/>
+			<result  id="5" resultID="680400" RP="3000"/>
+			<result  id="6" resultID="680410" RP="1500"/>
+			<result  id="7" resultID="680420" RP="1500"/>
+			<result  id="8" resultID="680430" RP="4000"/>
+			<result  id="9" resultID="660200" RP="10000"/>
+			<result  id="10" resultID="660400" RP="5000"/>
+		</entry>
+		<!--冰-蓝阶-->
+		<entry id="201" materialID="780400" Firenum="40">
+			<result  id="1" resultID="680200" RP="18750"/>
+			<result  id="2" resultID="680210" RP="9375"/>
+			<result  id="3" resultID="680220" RP="9375"/>
+			<result  id="4" resultID="680230" RP="25000"/>
+			<result  id="5" resultID="680400" RP="4050"/>
+			<result  id="6" resultID="680410" RP="2025"/>
+			<result  id="7" resultID="680420" RP="2025"/>
+			<result  id="8" resultID="680430" RP="5400"/>
+			<result  id="9" resultID="681200" RP="750"/>
+			<result  id="10" resultID="681210" RP="375"/>
+			<result  id="11" resultID="681220" RP="375"/>
+			<result  id="12" resultID="681230" RP="1000"/>
+			<result  id="13" resultID="660200" RP="12500"/>
+			<result  id="14" resultID="660400" RP="7500"/>
+			<result  id="15" resultID="661200" RP="1500"/>
+		</entry>
+		<!--冰-紫阶-->
+		<entry id="202" materialID="781200" Firenum="100">
+			<result  id="1" resultID="680400" RP="16500"/>
+			<result  id="2" resultID="680410" RP="8250"/>
+			<result  id="3" resultID="680420" RP="8250"/>
+			<result  id="4" resultID="680430" RP="22000"/>
+			<result  id="5" resultID="681200" RP="2400"/>
+			<result  id="6" resultID="681210" RP="1200"/>
+			<result  id="7" resultID="681220" RP="1200"/>
+			<result  id="8" resultID="681230" RP="3200"/>
+			<result  id="9" resultID="682200" RP="300"/>
+			<result  id="10" resultID="682210" RP="150"/>
+			<result  id="11" resultID="682220" RP="150"/>
+			<result  id="12" resultID="682230" RP="400"/>
+			<result  id="13" resultID="660200" RP="20000"/>
+			<result  id="14" resultID="660400" RP="10000"/>
+			<result  id="15" resultID="661200" RP="4000"/>
+			<result  id="16" resultID="662200" RP="1000"/>
+		</entry>
+		<!--冰-橙阶-->
+		<entry id="203" materialID="782200" Firenum="200">
+			<result  id="1" resultID="680400" RP="13500"/>
+			<result  id="2" resultID="680410" RP="6750"/>
+			<result  id="3" resultID="680420" RP="6750"/>
+			<result  id="4" resultID="680430" RP="18000"/>
+			<result  id="5" resultID="681200" RP="4500"/>
+			<result  id="6" resultID="681210" RP="2250"/>
+			<result  id="7" resultID="681220" RP="2250"/>
+			<result  id="8" resultID="681230" RP="6000"/>
+			<result  id="9" resultID="682200" RP="1500"/>
+			<result  id="10" resultID="682210" RP="750"/>
+			<result  id="11" resultID="682220" RP="750"/>
+			<result  id="12" resultID="682230" RP="2000"/>
+			<result  id="13" resultID="660400" RP="20000"/>
+			<result  id="14" resultID="661200" RP="10000"/>
+			<result  id="15" resultID="662200" RP="5000"/>
+		</entry>
+		<!--冰-红阶-->
+		<entry id="204" materialID="783000" Firenum="1000">
+			<result  id="1" resultID="683000" RP="10000"/>
+			<result  id="2" resultID="683010" RP="10000"/>
+			<result  id="3" resultID="683020" RP="10000"/>
+			<result  id="4" resultID="683030" RP="10000"/>
+			<result  id="5" resultID="663000" RP="50000"/>
+		</entry>
+		
+	<!--雷属性符文合成-->
+		<!--雷-绿阶-->
+		<entry id="300" materialID="790200" Firenum="20">
+			<result  id="1" resultID="690200" RP="11250"/>
+			<result  id="2" resultID="690210" RP="11250"/>
+			<result  id="3" resultID="690220" RP="22500"/>
+			<result  id="4" resultID="690230" RP="30000"/>
+			<result  id="5" resultID="690400" RP="1500"/>
+			<result  id="6" resultID="690410" RP="1500"/>
+			<result  id="7" resultID="690420" RP="3000"/>
+			<result  id="8" resultID="690430" RP="4000"/>
+			<result  id="9" resultID="660200" RP="10000"/>
+			<result  id="10" resultID="660400" RP="5000"/>
+		</entry>
+		<!--雷-蓝阶-->
+		<entry id="301" materialID="790400" Firenum="40">
+			<result  id="1" resultID="690200" RP="9375"/>
+			<result  id="2" resultID="690210" RP="9375"/>
+			<result  id="3" resultID="690220" RP="18750"/>
+			<result  id="4" resultID="690230" RP="25000"/>
+			<result  id="5" resultID="690400" RP="2025"/>
+			<result  id="6" resultID="690410" RP="2025"/>
+			<result  id="7" resultID="690420" RP="4050"/>
+			<result  id="8" resultID="690430" RP="5400"/>
+			<result  id="9" resultID="691200" RP="375"/>
+			<result  id="10" resultID="691210" RP="375"/>
+			<result  id="11" resultID="691220" RP="750"/>
+			<result  id="12" resultID="691230" RP="1000"/>
+			<result  id="13" resultID="660200" RP="12500"/>
+			<result  id="14" resultID="660400" RP="7500"/>
+			<result  id="15" resultID="661200" RP="1500"/>
+		</entry>
+		<!--雷-紫阶-->
+		<entry id="302" materialID="791200" Firenum="100">
+			<result  id="1" resultID="690400" RP="8250"/>
+			<result  id="2" resultID="690410" RP="8250"/>
+			<result  id="3" resultID="690420" RP="16500"/>
+			<result  id="4" resultID="690430" RP="22000"/>
+			<result  id="5" resultID="691200" RP="1200"/>
+			<result  id="6" resultID="691210" RP="1200"/>
+			<result  id="7" resultID="691220" RP="2400"/>
+			<result  id="8" resultID="691230" RP="3200"/>
+			<result  id="9" resultID="692200" RP="150"/>
+			<result  id="10" resultID="692210" RP="150"/>
+			<result  id="11" resultID="692220" RP="300"/>
+			<result  id="12" resultID="692230" RP="400"/>
+			<result  id="13" resultID="660200" RP="20000"/>
+			<result  id="14" resultID="660400" RP="10000"/>
+			<result  id="15" resultID="661200" RP="4000"/>
+			<result  id="16" resultID="662200" RP="1000"/>
+		</entry>
+		<!--雷-橙阶-->
+		<entry id="303" materialID="792200" Firenum="200">
+			<result  id="1" resultID="690400" RP="6750"/>
+			<result  id="2" resultID="690410" RP="6750"/>
+			<result  id="3" resultID="690420" RP="13500"/>
+			<result  id="4" resultID="690430" RP="18000"/>
+			<result  id="5" resultID="691200" RP="2250"/>
+			<result  id="6" resultID="691210" RP="2250"/>
+			<result  id="7" resultID="691220" RP="4500"/>
+			<result  id="8" resultID="691230" RP="6000"/>
+			<result  id="9" resultID="692200" RP="750"/>
+			<result  id="10" resultID="692210" RP="750"/>
+			<result  id="11" resultID="692220" RP="1500"/>
+			<result  id="12" resultID="692230" RP="2000"/>
+			<result  id="13" resultID="660400" RP="20000"/>
+			<result  id="14" resultID="661200" RP="10000"/>
+			<result  id="15" resultID="662200" RP="5000"/>
+		</entry>
+		<!--雷-红阶-->
+		<entry id="304" materialID="793000" Firenum="1000">
+			<result  id="1" resultID="693000" RP="10000"/>
+			<result  id="2" resultID="693010" RP="10000"/>
+			<result  id="3" resultID="693020" RP="10000"/>
+			<result  id="4" resultID="693030" RP="10000"/>
+			<result  id="5" resultID="663000" RP="50000"/>
+		</entry>	
+	</synthetic>
+</root>	
+

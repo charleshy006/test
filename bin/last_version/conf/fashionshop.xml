@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<root>
+	<!--
+		ShopID:对应shop表商店ID
+		StartTime:活动开始时间
+		EndTime:活动结束时间
+	-->
+	<shop>
+		<!-- <activity id="1" ShopID="29" StartTime="2021-09-24 00:00:00" EndTime="2021-09-26 23:59:59"/>
+		<activity id="2" ShopID="30" StartTime="2021-09-27 00:00:00" EndTime="2021-09-29 23:59:59"/>
+		<activity id="3" ShopID="33" StartTime="2021-09-30 00:00:00" EndTime="2021-10-02 23:59:59"/>
+		<activity id="4" ShopID="31" StartTime="2021-10-03 00:00:00" EndTime="2021-10-05 23:59:59"/>
+		<activity id="5" ShopID="32" StartTime="2021-10-06 00:00:00" EndTime="2021-10-08 23:59:59"/>
+		<activity id="6" ShopID="34" StartTime="2021-10-09 00:00:00" EndTime="2021-10-11 23:59:59"/>
+		
+		
+		<activity id="7" ShopID="29" StartTime="2017-04-09 00:00:00" EndTime="2017-04-11 23:59:59"/>
+		<activity id="8" ShopID="30" StartTime="2017-04-12 00:00:00" EndTime="2017-04-14 23:59:59"/>
+		<activity id="9" ShopID="33" StartTime="2017-04-15 00:00:00" EndTime="2017-04-17 23:59:59"/>
+		<activity id="10" ShopID="31" StartTime="2017-04-18 00:00:00" EndTime="2017-04-20 23:59:59"/>
+		<activity id="11" ShopID="32" StartTime="2017-04-21 00:00:00" EndTime="2017-04-23 23:59:59"/>
+		<activity id="12" ShopID="34" StartTime="2017-04-24 00:00:00" EndTime="2017-04-26 23:59:59"/>
+		
+		
+		<activity id="13" ShopID="29" StartTime="2017-04-27 00:00:00" EndTime="2017-04-29 23:59:59"/>
+		<activity id="14" ShopID="30" StartTime="2017-04-30 00:00:00" EndTime="2017-05-02 23:59:59"/>
+		<activity id="15" ShopID="33" StartTime="2017-05-03 00:00:00" EndTime="2017-05-05 23:59:59"/>
+		<activity id="16" ShopID="31" StartTime="2017-05-06 00:00:00" EndTime="2017-05-08 23:59:59"/>
+		<activity id="17" ShopID="32" StartTime="2017-05-09 00:00:00" EndTime="2017-05-11 23:59:59"/>
+		<activity id="18" ShopID="34" StartTime="2017-05-12 00:00:00" EndTime="2017-05-14 23:59:59"/>
+		
+		<activity id="19" ShopID="29" StartTime="2017-05-15 00:00:00" EndTime="2017-05-17 23:59:59"/>
+		<activity id="20" ShopID="30" StartTime="2017-05-18 00:00:00" EndTime="2017-05-20 23:59:59"/>
+		<activity id="21" ShopID="33" StartTime="2017-05-21 00:00:00" EndTime="2017-05-23 23:59:59"/>
+		<activity id="22" ShopID="31" StartTime="2017-05-24 00:00:00" EndTime="2017-05-26 23:59:59"/>
+		<activity id="23" ShopID="32" StartTime="2017-05-27 00:00:00" EndTime="2017-05-29 23:59:59"/>
+		<activity id="24" ShopID="34" StartTime="2017-05-30 00:00:00" EndTime="2017-06-01 23:59:59"/>
+		
+
+		<activity id="25" ShopID="29" StartTime="2017-06-02 00:00:00" EndTime="2017-06-04 23:59:59"/>
+		<activity id="26" ShopID="30" StartTime="2017-06-05 00:00:00" EndTime="2017-06-07 23:59:59"/>
+		<activity id="27" ShopID="33" StartTime="2017-06-08 00:00:00" EndTime="2017-06-10 23:59:59"/>
+		<activity id="28" ShopID="31" StartTime="2017-06-11 00:00:00" EndTime="2017-06-13 23:59:59"/>
+		<activity id="29" ShopID="32" StartTime="2017-06-14 00:00:00" EndTime="2017-06-16 23:59:59"/>
+		<activity id="30" ShopID="34" StartTime="2017-06-17 00:00:00" EndTime="2017-06-19 23:59:59"/>
+		
+		<activity id="31" ShopID="29" StartTime="2017-09-22 00:00:00" EndTime="2017-09-24 23:59:59"/>
+		<activity id="32" ShopID="30" StartTime="2017-09-25 00:00:00" EndTime="2017-09-27 23:59:59"/>
+		<activity id="33" ShopID="33" StartTime="2017-09-28 00:00:00" EndTime="2017-09-30 23:59:59"/>
+		<activity id="34" ShopID="31" StartTime="2017-10-01 00:00:00" EndTime="2017-10-03 23:59:59"/>
+		<activity id="35" ShopID="32" StartTime="2017-10-04 00:00:00" EndTime="2017-10-06 23:59:59"/>
+		<activity id="36" ShopID="34" StartTime="2017-10-07 00:00:00" EndTime="2017-10-09 23:59:59"/>
+		
+		<activity id="37" ShopID="29" StartTime="2017-10-10 00:00:00" EndTime="2017-10-12 23:59:59"/>
+		<activity id="38" ShopID="30" StartTime="2017-10-13 00:00:00" EndTime="2017-10-15 23:59:59"/>
+		<activity id="39" ShopID="33" StartTime="2017-10-16 00:00:00" EndTime="2017-10-18 23:59:59"/>
+		<activity id="40" ShopID="31" StartTime="2017-10-19 00:00:00" EndTime="2017-10-21 23:59:59"/>
+		<activity id="41" ShopID="32" StartTime="2017-10-22 00:00:00" EndTime="2017-10-24 23:59:59"/>
+		<activity id="42" ShopID="34" StartTime="2017-10-25 00:00:00" EndTime="2017-10-27 23:59:59"/>
+		
+		<activity id="43" ShopID="29" StartTime="2017-10-28 00:00:00" EndTime="2017-10-30 23:59:59"/>
+		<activity id="44" ShopID="30" StartTime="2017-10-31 00:00:00" EndTime="2017-11-02 23:59:59"/>
+		<activity id="45" ShopID="33" StartTime="2017-11-03 00:00:00" EndTime="2017-11-05 23:59:59"/>
+		<activity id="46" ShopID="31" StartTime="2017-11-06 00:00:00" EndTime="2017-11-08 23:59:59"/>
+		<activity id="47" ShopID="32" StartTime="2017-11-09 00:00:00" EndTime="2017-11-11 23:59:59"/>
+		<activity id="48" ShopID="34" StartTime="2017-11-12 00:00:00" EndTime="2017-11-14 23:59:59"/>
+		
+		<activity id="49" ShopID="29" StartTime="2017-11-15 00:00:00" EndTime="2017-11-17 23:59:59"/>
+		<activity id="50" ShopID="30" StartTime="2017-11-18 00:00:00" EndTime="2017-11-20 23:59:59"/>
+		<activity id="51" ShopID="33" StartTime="2017-11-21 00:00:00" EndTime="2017-11-23 23:59:59"/>
+		<activity id="52" ShopID="31" StartTime="2017-11-24 00:00:00" EndTime="2017-11-26 23:59:59"/>
+		<activity id="53" ShopID="32" StartTime="2017-11-27 00:00:00" EndTime="2017-11-29 23:59:59"/>
+		<activity id="54" ShopID="34" StartTime="2017-11-30 00:00:00" EndTime="2017-12-02 23:59:59"/> -->
+		
+		<activity id="55" ShopID="29" StartTime="2017-12-05 00:00:00" EndTime="2017-12-07 23:59:59"/>
+		<activity id="56" ShopID="30" StartTime="2017-12-08 00:00:00" EndTime="2017-12-10 23:59:59"/>
+		<activity id="57" ShopID="33" StartTime="2017-12-11 00:00:00" EndTime="2017-12-13 23:59:59"/>
+		<activity id="58" ShopID="31" StartTime="2017-12-14 00:00:00" EndTime="2017-12-16 23:59:59"/>
+		<activity id="59" ShopID="32" StartTime="2017-12-17 00:00:00" EndTime="2017-12-19 23:59:59"/>
+		<activity id="60" ShopID="34" StartTime="2017-12-20 00:00:00" EndTime="2017-12-22 23:59:59"/>
+		
+		<activity id="61" ShopID="29" StartTime="2017-12-23 00:00:00" EndTime="2017-12-25 23:59:59"/>
+		<activity id="62" ShopID="30" StartTime="2017-12-26 00:00:00" EndTime="2017-12-28 23:59:59"/>
+		<activity id="63" ShopID="33" StartTime="2017-12-29 00:00:00" EndTime="2017-12-31 23:59:59"/>
+		<activity id="64" ShopID="31" StartTime="2018-01-01 00:00:00" EndTime="2017-01-03 23:59:59"/>
+		<activity id="65" ShopID="32" StartTime="2018-01-04 00:00:00" EndTime="2017-01-06 23:59:59"/>
+		<activity id="66" ShopID="34" StartTime="2018-01-07 00:00:00" EndTime="2017-01-09 23:59:59"/>
+		
+		<activity id="67" ShopID="29" StartTime="2018-01-10 00:00:00" EndTime="2017-01-12 23:59:59"/>
+		<activity id="68" ShopID="30" StartTime="2018-01-13 00:00:00" EndTime="2017-01-15 23:59:59"/>
+		<activity id="69" ShopID="33" StartTime="2018-01-16 00:00:00" EndTime="2017-01-18 23:59:59"/>
+		<activity id="70" ShopID="31" StartTime="2018-01-19 00:00:00" EndTime="2017-01-21 23:59:59"/>
+		<activity id="71" ShopID="32" StartTime="2018-01-22 00:00:00" EndTime="2017-01-24 23:59:59"/>
+		<activity id="72" ShopID="34" StartTime="2018-01-25 00:00:00" EndTime="2017-01-27 23:59:59"/>
+		
+		<activity id="73" ShopID="29" StartTime="2018-01-28 00:00:00" EndTime="2017-01-30 23:59:59"/>
+		<activity id="74" ShopID="30" StartTime="2018-01-31 00:00:00" EndTime="2017-01-02 23:59:59"/>
+		<activity id="75" ShopID="33" StartTime="2018-02-03 00:00:00" EndTime="2017-02-05 23:59:59"/>
+		<activity id="76" ShopID="31" StartTime="2018-02-06 00:00:00" EndTime="2017-02-08 23:59:59"/>
+		<activity id="77" ShopID="32" StartTime="2018-02-09 00:00:00" EndTime="2017-02-11 23:59:59"/>
+		<activity id="78" ShopID="34" StartTime="2018-02-12 00:00:00" EndTime="2017-02-14 23:59:59"/>
+		
+		<activity id="79" ShopID="29" StartTime="2018-02-15 00:00:00" EndTime="2017-02-17 23:59:59"/>
+		<activity id="80" ShopID="30" StartTime="2018-02-18 00:00:00" EndTime="2017-02-20 23:59:59"/>
+		<activity id="81" ShopID="33" StartTime="2018-02-21 00:00:00" EndTime="2017-02-23 23:59:59"/>
+		<activity id="82" ShopID="31" StartTime="2018-02-24 00:00:00" EndTime="2017-02-26 23:59:59"/>
+		<activity id="83" ShopID="32" StartTime="2018-02-27 00:00:00" EndTime="2017-03-01 23:59:59"/>
+		<activity id="84" ShopID="34" StartTime="2018-03-02 00:00:00" EndTime="2017-03-04 23:59:59"/>
+		
+		<activity id="85" ShopID="29" StartTime="2018-03-05 00:00:00" EndTime="2017-03-07 23:59:59"/>
+		<activity id="86" ShopID="30" StartTime="2018-03-08 00:00:00" EndTime="2017-03-10 23:59:59"/>
+		<activity id="87" ShopID="33" StartTime="2018-03-11 00:00:00" EndTime="2017-03-13 23:59:59"/>
+		<activity id="88" ShopID="31" StartTime="2018-03-14 00:00:00" EndTime="2017-03-16 23:59:59"/>
+		<activity id="89" ShopID="32" StartTime="2018-03-17 00:00:00" EndTime="2017-03-19 23:59:59"/>
+		<activity id="90" ShopID="34" StartTime="2018-03-20 00:00:00" EndTime="2017-03-22 23:59:59"/>
+		
+		
+	</shop>
+</root>

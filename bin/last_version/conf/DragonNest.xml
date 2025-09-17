@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<root>
+	<!--
+        Levelid:关卡编号
+        NextLevel：过关后开放
+        Openweek：每周开放时间
+            1：星期一
+            2：星期二
+            3：星期三
+            4：星期四
+            5：星期五
+            6：星期六
+            7：星期日
+        Diamondreset：钻石重置价格
+	    First:初始第一关
+        1: 是
+        0：否-->
+	<DragonNest>
+		<!--前置，开放时间-->
+		<Level indexID="1" Levelid="40101" First="1" NextLevel="40102" Openweek="1:4:7"/>
+		<Level indexID="2" Levelid="40102" First="0" NextLevel="40103" Openweek="1:4:7"/>
+		<Level indexID="3" Levelid="40103" First="0" NextLevel="40104" Openweek="1:4:7"/>
+		<Level indexID="4" Levelid="40104" First="0" NextLevel="40105" Openweek="1:4:7"/>
+		<Level indexID="5" Levelid="40105" First="0" NextLevel="0" Openweek="1:4:7"/>
+		<Level indexID="6" Levelid="40201" First="1" NextLevel="40202" Openweek="2:5:7"/>
+		<Level indexID="7" Levelid="40202" First="0" NextLevel="40203" Openweek="2:5:7"/>
+		<Level indexID="8" Levelid="40203" First="0" NextLevel="40204" Openweek="2:5:7"/>
+		<Level indexID="9" Levelid="40204" First="0" NextLevel="40205" Openweek="2:5:7"/>
+		<Level indexID="10" Levelid="40205" First="0" NextLevel="0" Openweek="2:5:7"/>
+		<Level indexID="11" Levelid="40301" First="1" NextLevel="40302" Openweek="3:6:7"/>
+		<Level indexID="12" Levelid="40302" First="0" NextLevel="40303" Openweek="3:6:7"/>
+		<Level indexID="13" Levelid="40303" First="0" NextLevel="40304" Openweek="3:6:7"/>
+		<Level indexID="14" Levelid="40304" First="0" NextLevel="40305" Openweek="3:6:7"/>
+		<Level indexID="15" Levelid="40305" First="0" NextLevel="0" Openweek="3:6:7"/>
+	</DragonNest>
+	<!--钻石重置-->
+	<Diamondreset>
+		<Diamond indexID="1" Diamondnum="200"/>
+		<Diamond indexID="2" Diamondnum="200"/>
+		<Diamond indexID="3" Diamondnum="300"/>
+		<Diamond indexID="4" Diamondnum="300"/>
+		<Diamond indexID="5" Diamondnum="300"/>
+		<Diamond indexID="6" Diamondnum="400"/>
+		<Diamond indexID="7" Diamondnum="400"/>
+		<Diamond indexID="8" Diamondnum="400"/>
+		<Diamond indexID="9" Diamondnum="500"/>
+		<Diamond indexID="10" Diamondnum="500"/>
+		<Diamond indexID="11" Diamondnum="500"/>
+		<Diamond indexID="12" Diamondnum="700"/>
+		<Diamond indexID="13" Diamondnum="700"/>
+		<Diamond indexID="14" Diamondnum="700"/>
+		<Diamond indexID="15" Diamondnum="1000"/>
+		<Diamond indexID="16" Diamondnum="1000"/>
+		<Diamond indexID="17" Diamondnum="1000"/>
+		<Diamond indexID="18" Diamondnum="1500"/>
+		<Diamond indexID="19" Diamondnum="1500"/>
+		<Diamond indexID="20" Diamondnum="1500"/>
+	</Diamondreset>
+	<!--关卡难度星级-->
+	<LevelStar>
+		<entry Levelid="40101" StarNum="1"/>
+		<entry Levelid="40102" StarNum="2"/>
+		<entry Levelid="40103" StarNum="3"/>
+		<entry Levelid="40104" StarNum="4"/>
+		<entry Levelid="40105" StarNum="5"/>
+		<entry Levelid="40201" StarNum="1"/>
+		<entry Levelid="40202" StarNum="2"/>
+		<entry Levelid="40203" StarNum="3"/>
+		<entry Levelid="40204" StarNum="4"/>
+		<entry Levelid="40205" StarNum="5"/>
+		<entry Levelid="40301" StarNum="1"/>
+		<entry Levelid="40302" StarNum="2"/>
+		<entry Levelid="40303" StarNum="3"/>
+		<entry Levelid="40304" StarNum="4"/>
+		<entry Levelid="40305" StarNum="5"/>
+	</LevelStar>
+</root>

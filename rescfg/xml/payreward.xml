@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+	<!--
+		StartTime:活动开始时间
+		EndTime:活动结束时间
+		RefreshTime:活动刷新时间
+		Position:显示位置
+		Title:活动名字
+		Desc:活动描述
+		RechargeNum:充值钻石
+		Boxid:奖励boxid
+		Content:详细条件描述
+		
+		已通过后台配置，该表格不再维护
+		
+		活动填写规则说明：根据活动id来决定是否为新活动，已经使用过的id不能重复使用，过期的活动立即删除
+		
+	-->
+<RewardConf>
+	<activity id="4001" StartTime="2016-03-10 00:00:00" EndTime="2016-03-20 23:59:59" RefreshTime="86400" Position="1" Title="Payname_001" Desc="Paydesc_001" >
+		<cost id="1" RechargeNum="60" Boxid="1501" Content="Paycontent_001" />
+		<cost id="2" RechargeNum="300" Boxid="1502" Content="Paycontent_001" />
+		<cost id="3" RechargeNum="1000" Boxid="1503" Content="Paycontent_001" />
+		<cost id="4" RechargeNum="2000" Boxid="1504" Content="Paycontent_001" />
+	</activity>
+	
+	<activity id="4002" StartTime="2016-03-10 00:00:00" EndTime="2016-03-20 23:59:59" RefreshTime="604800" Position="2" Title="Payname_002" Desc="Paydesc_002" >
+		<cost id="1" RechargeNum="980" Boxid="1901" Content="Paycontent_002" />
+		<cost id="2" RechargeNum="1980" Boxid="1902" Content="Paycontent_002" />
+		<cost id="3" RechargeNum="4880" Boxid="1903" Content="Paycontent_002" />
+		<cost id="4" RechargeNum="8880" Boxid="1904" Content="Paycontent_002" />
+		<cost id="5" RechargeNum="18880" Boxid="1905" Content="Paycontent_002" />
+		<cost id="6" RechargeNum="38880" Boxid="1906" Content="Paycontent_002" />
+	</activity>
+	
+	<activity id="4003" StartTime="2016-03-21 00:00:00" EndTime="2016-03-27 23:59:59" RefreshTime="86400" Position="3" Title="Payname_003" Desc="Paydesc_001" >
+		<cost id="1" RechargeNum="60" Boxid="1511" Content="Paycontent_001" />
+		<cost id="2" RechargeNum="300" Boxid="1512" Content="Paycontent_001" />
+		<cost id="3" RechargeNum="1000" Boxid="1513" Content="Paycontent_001" />
+		<cost id="4" RechargeNum="2000" Boxid="1514" Content="Paycontent_001" />
+	</activity>
+	
+	<activity id="4004" StartTime="2016-03-21 00:00:00" EndTime="2016-03-27 23:59:59" RefreshTime="604800" Position="4" Title="Payname_004" Desc="Paydesc_002" >
+		<cost id="1" RechargeNum="980" Boxid="1911" Content="Paycontent_002" />
+		<cost id="2" RechargeNum="1980" Boxid="1912" Content="Paycontent_002" />
+		<cost id="3" RechargeNum="4880" Boxid="1913" Content="Paycontent_002" />
+		<cost id="4" RechargeNum="8880" Boxid="1914" Content="Paycontent_002" />
+		<cost id="5" RechargeNum="18880" Boxid="1915" Content="Paycontent_002" />
+		<cost id="6" RechargeNum="38880" Boxid="1916" Content="Paycontent_002" />
+	</activity>
+	
+	<activity id="4005" StartTime="2016-03-28 00:00:00" EndTime="2016-04-03 23:59:59" RefreshTime="86400" Position="5" Title="Payname_005" Desc="Paydesc_001" >
+		<cost id="1" RechargeNum="60" Boxid="1521" Content="Paycontent_001" />
+		<cost id="2" RechargeNum="300" Boxid="1522" Content="Paycontent_001" />
+		<cost id="3" RechargeNum="1000" Boxid="1523" Content="Paycontent_001" />
+		<cost id="4" RechargeNum="2000" Boxid="1524" Content="Paycontent_001" />
+	</activity>
+	
+	<activity id="4006" StartTime="2016-03-28 00:00:00" EndTime="2016-04-03 23:59:59" RefreshTime="604800" Position="6" Title="Payname_006" Desc="Paydesc_002" >
+		<cost id="1" RechargeNum="980" Boxid="1921" Content="Paycontent_002" />
+		<cost id="2" RechargeNum="1980" Boxid="1922" Content="Paycontent_002" />
+		<cost id="3" RechargeNum="4880" Boxid="1923" Content="Paycontent_002" />
+		<cost id="4" RechargeNum="8880" Boxid="1924" Content="Paycontent_002" />
+		<cost id="5" RechargeNum="18880" Boxid="1925" Content="Paycontent_002" />
+		<cost id="6" RechargeNum="38880" Boxid="1926" Content="Paycontent_002" />
+	</activity>
+
+	<activity id="4007" StartTime="2016-04-04 00:00:00" EndTime="2016-04-10 23:59:59" RefreshTime="86400" Position="7" Title="Payname_007" Desc="Paydesc_001" >
+		<cost id="1" RechargeNum="60" Boxid="1531" Content="Paycontent_001" />
+		<cost id="2" RechargeNum="300" Boxid="1532" Content="Paycontent_001" />
+		<cost id="3" RechargeNum="1000" Boxid="1533" Content="Paycontent_001" />
+		<cost id="4" RechargeNum="2000" Boxid="1534" Content="Paycontent_001" />
+	</activity>
+	
+	<activity id="4008" StartTime="2016-04-04 00:00:00" EndTime="2016-04-10 23:59:59" RefreshTime="604800" Position="8" Title="Payname_008" Desc="Paydesc_002" >
+		<cost id="1" RechargeNum="980" Boxid="1931" Content="Paycontent_002" />
+		<cost id="2" RechargeNum="1980" Boxid="1932" Content="Paycontent_002" />
+		<cost id="3" RechargeNum="4880" Boxid="1933" Content="Paycontent_002" />
+		<cost id="4" RechargeNum="8880" Boxid="1934" Content="Paycontent_002" />
+		<cost id="5" RechargeNum="18880" Boxid="1935" Content="Paycontent_002" />
+		<cost id="6" RechargeNum="38880" Boxid="1936" Content="Paycontent_002" />
+	</activity>
+		
+		
+		
+		
+		
+		
+		
+<!-- 	<activity id="4009" StartTime="2016-04-11 00:00:00" EndTime="2016-04-17 23:59:59" RefreshTime="86400" Position="9" Title="Payname_009" Desc="Paydesc_001" >
+		<cost id="1" RechargeNum="60" Boxid="1501" Content="Paycontent_001" />
+		<cost id="2" RechargeNum="300" Boxid="1502" Content="Paycontent_001" />
+		<cost id="3" RechargeNum="1000" Boxid="1503" Content="Paycontent_001" />
+		<cost id="4" RechargeNum="2000" Boxid="1504" Content="Paycontent_001" />
+	</activity>
+	
+	<activity id="4010" StartTime="2016-04-11 00:00:00" EndTime="2016-04-17 23:59:59" RefreshTime="604800" Position="10" Title="Payname_010" Desc="Paydesc_002" >
+		<cost id="1" RechargeNum="980" Boxid="1901" Content="Paycontent_002" />
+		<cost id="2" RechargeNum="1980" Boxid="1902" Content="Paycontent_002" />
+		<cost id="3" RechargeNum="4880" Boxid="1903" Content="Paycontent_002" />
+		<cost id="4" RechargeNum="8880" Boxid="1904" Content="Paycontent_002" />
+		<cost id="5" RechargeNum="18880" Boxid="1905" Content="Paycontent_002" />
+		<cost id="6" RechargeNum="38880" Boxid="1906" Content="Paycontent_002" />
+	</activity>
+	
+	<activity id="4011" StartTime="2016-04-18 00:00:00" EndTime="2016-04-24 23:59:59" RefreshTime="86400" Position="11" Title="Payname_011" Desc="Paydesc_001" >
+		<cost id="1" RechargeNum="60" Boxid="1511" Content="Paycontent_001" />
+		<cost id="2" RechargeNum="300" Boxid="1512" Content="Paycontent_001" />
+		<cost id="3" RechargeNum="1000" Boxid="1513" Content="Paycontent_001" />
+		<cost id="4" RechargeNum="2000" Boxid="1514" Content="Paycontent_001" />
+	</activity>
+	
+	<activity id="4012" StartTime="2016-04-18 00:00:00" EndTime="2016-04-24 23:59:59" RefreshTime="604800" Position="12" Title="Payname_012" Desc="Paydesc_002" >
+		<cost id="1" RechargeNum="980" Boxid="1911" Content="Paycontent_002" />
+		<cost id="2" RechargeNum="1980" Boxid="1912" Content="Paycontent_002" />
+		<cost id="3" RechargeNum="4880" Boxid="1913" Content="Paycontent_002" />
+		<cost id="4" RechargeNum="8880" Boxid="1914" Content="Paycontent_002" />
+		<cost id="5" RechargeNum="18880" Boxid="1915" Content="Paycontent_002" />
+		<cost id="6" RechargeNum="38880" Boxid="1916" Content="Paycontent_002" />
+	</activity>
+	
+	<activity id="4013" StartTime="2016-04-25 00:00:00" EndTime="2016-05-01 23:59:59" RefreshTime="86400" Position="13" Title="Payname_013" Desc="Paydesc_001" >
+		<cost id="1" RechargeNum="60" Boxid="1521" Content="Paycontent_001" />
+		<cost id="2" RechargeNum="300" Boxid="1522" Content="Paycontent_001" />
+		<cost id="3" RechargeNum="1000" Boxid="1523" Content="Paycontent_001" />
+		<cost id="4" RechargeNum="2000" Boxid="1524" Content="Paycontent_001" />
+	</activity>
+	
+	<activity id="4014" StartTime="2016-04-25 00:00:00" EndTime="2016-05-01 23:59:59" RefreshTime="604800" Position="14" Title="Payname_014" Desc="Paydesc_002" >
+		<cost id="1" RechargeNum="980" Boxid="1921" Content="Paycontent_002" />
+		<cost id="2" RechargeNum="1980" Boxid="1922" Content="Paycontent_002" />
+		<cost id="3" RechargeNum="4880" Boxid="1923" Content="Paycontent_002" />
+		<cost id="4" RechargeNum="8880" Boxid="1924" Content="Paycontent_002" />
+		<cost id="5" RechargeNum="18880" Boxid="1925" Content="Paycontent_002" />
+		<cost id="6" RechargeNum="38880" Boxid="1926" Content="Paycontent_002" />
+	</activity>
+
+	<activity id="4015" StartTime="2016-05-02 00:00:00" EndTime="2016-05-08 23:59:59" RefreshTime="86400" Position="15" Title="Payname_015" Desc="Paydesc_001" >
+		<cost id="1" RechargeNum="60" Boxid="1531" Content="Paycontent_001" />
+		<cost id="2" RechargeNum="300" Boxid="1532" Content="Paycontent_001" />
+		<cost id="3" RechargeNum="1000" Boxid="1533" Content="Paycontent_001" />
+		<cost id="4" RechargeNum="2000" Boxid="1534" Content="Paycontent_001" />
+	</activity>
+	
+	<activity id="4016" StartTime="2016-05-02 00:00:00" EndTime="2016-05-08 23:59:59" RefreshTime="604800" Position="16" Title="Payname_016" Desc="Paydesc_002" >
+		<cost id="1" RechargeNum="980" Boxid="1931" Content="Paycontent_002" />
+		<cost id="2" RechargeNum="1980" Boxid="1932" Content="Paycontent_002" />
+		<cost id="3" RechargeNum="4880" Boxid="1933" Content="Paycontent_002" />
+		<cost id="4" RechargeNum="8880" Boxid="1934" Content="Paycontent_002" />
+		<cost id="5" RechargeNum="18880" Boxid="1935" Content="Paycontent_002" />
+		<cost id="6" RechargeNum="38880" Boxid="1936" Content="Paycontent_002" />
+	</activity>
+	
+	
+	
+	
+	<activity id="4990" StartTime="2016-03-01 00:00:00" EndTime="2016-03-31 23:59:59" RefreshTime="2678400" Position="99" Title="Payname_100" Desc="Paydesc_003" >
+		<cost id="1" RechargeNum="60" Boxid="1401" Content="Paycontent_003" />
+	</activity>
+	<activity id="4991" StartTime="2016-04-01 00:00:00" EndTime="2016-04-30 23:59:59" RefreshTime="2678400" Position="99" Title="Payname_101" Desc="Paydesc_003" >
+		<cost id="1" RechargeNum="60" Boxid="1401" Content="Paycontent_003" />
+	</activity> -->
+</RewardConf>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 被2013 sp1 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!--UI切换
+	
+	-->
+<root>
+	<!-- 广告
+		最多四条同时
+		pic：图片
+		ADType：类型，找界面中对应的id
+	-->
+	<Advert>
+		<entry id="1" pic="sb_JCHD" ADType="1"/>
+		<entry id="2" pic="sb_XSKH" ADType="2"/>
+		<entry id="3" pic="sb_ZKSC" ADType="5"/>
+		<entry id="4" pic="sb_XSKH" ADType="2"/>
+	</Advert>
+	<!-- 界面
+   1	精彩活动	sb_JCHD	
+   2	限时狂欢	sb_XSKH	
+   3	百变时装	sb_BBSZ
+   4	星座圣衣	sb_XZSY
+   5	折扣商城	sb_ZKSC
+   6	英雄联赛	sb_YXLS
+   7	资源副本 	sb_ZYFB（无
+   8	翅膀展示 	sb_CBZS（无
+
+
+	WndBtn：打开的窗口
+	BtnOpen：buttonopen表id，999表示不由此表控制
+	OpenFunc：openfunction表id，999表示不由此表控制
+	
+	-->
+	<AdvertType>
+		<entry id="1" WndBtn="ActivityWnd" BtnOpen="242" OpenFunc="999" lan="scrollbar_01"/>
+		<entry id="2" WndBtn="TimedPetWnd" BtnOpen="64" OpenFunc="999" lan="scrollbar_02"/>
+		<entry id="3" WndBtn="FashionShopWnd" BtnOpen="221" OpenFunc="999" lan="scrollbar_03"/>
+		<entry id="4" WndBtn="GloryfashionWnd" BtnOpen="43" OpenFunc="999" lan="scrollbar_04"/>
+		<entry id="5" WndBtn="ActivityWnd" BtnOpen="222" OpenFunc="999" lan="scrollbar_05"/>
+		<entry id="6" WndBtn="LeagueHeroWnd" BtnOpen="999" OpenFunc="13" lan="scrollbar_06"/>
+		<!-- <entry id="7" WndBtn="LilianWnd" BtnOpen="999" OpenFunc="999" lan="scrollbar_07"/> -->
+	</AdvertType>
+</root>

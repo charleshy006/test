@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<root>
+	<!--
+		Bosslv:boss等级
+		HP：boss生命值
+		time:回复时间
+		DrawID：抽奖池
+		DeadID: 死亡奖励
+		MaxCount：最大次数
+		CountNum:每次抽奖次数
+		EXDraw:额外抽奖池
+		EXRP：额外获得几率%
+	-->
+	<M78 MaxCount="30" time="1200" VIP="3"> 
+		<entry id="1" Bosslv="1" HP="15" DrawID="1" DeadID="1" CountNum="2" EXDraw="1" EXRP="20" pic="Koboss01_"/>
+		<entry id="2" Bosslv="2" HP="16" DrawID="1" DeadID="1" CountNum="2" EXDraw="1" EXRP="20" pic="Koboss01_"/>
+		<entry id="3" Bosslv="3" HP="17" DrawID="1" DeadID="1" CountNum="2" EXDraw="1" EXRP="20" pic="Koboss01_"/>
+		<entry id="4" Bosslv="4" HP="18" DrawID="1" DeadID="1" CountNum="2" EXDraw="1" EXRP="20" pic="Koboss01_"/>
+		<entry id="5" Bosslv="5" HP="19" DrawID="1" DeadID="1" CountNum="2" EXDraw="1" EXRP="20" pic="Koboss01_"/>
+		<entry id="6" Bosslv="6" HP="20" DrawID="1" DeadID="1" CountNum="2" EXDraw="1" EXRP="20" pic="Koboss01_"/>
+		<entry id="7" Bosslv="7" HP="20" DrawID="1" DeadID="1" CountNum="2" EXDraw="1" EXRP="20" pic="Koboss01_"/>
+		<entry id="8" Bosslv="8" HP="20" DrawID="1" DeadID="1" CountNum="2" EXDraw="1" EXRP="20" pic="Koboss01_"/>
+		<entry id="9" Bosslv="9" HP="21" DrawID="1" DeadID="1" CountNum="2" EXDraw="1" EXRP="20" pic="Koboss01_"/>
+		<entry id="10" Bosslv="10" HP="21" DrawID="1" DeadID="1" CountNum="2" EXDraw="1" EXRP="20" pic="Koboss01_"/>
+		<entry id="11" Bosslv="11" HP="21" DrawID="2" DeadID="2" CountNum="2" EXDraw="2" EXRP="20" pic="Koboss01_"/>
+		<entry id="12" Bosslv="12" HP="22" DrawID="2" DeadID="2" CountNum="2" EXDraw="2" EXRP="20" pic="Koboss01_"/>
+		<entry id="13" Bosslv="13" HP="22" DrawID="2" DeadID="2" CountNum="2" EXDraw="2" EXRP="20" pic="Koboss01_"/>
+		<entry id="14" Bosslv="14" HP="22" DrawID="2" DeadID="2" CountNum="2" EXDraw="2" EXRP="20" pic="Koboss01_"/>
+		<entry id="15" Bosslv="15" HP="23" DrawID="2" DeadID="2" CountNum="2" EXDraw="2" EXRP="20" pic="Koboss01_"/>
+		<entry id="16" Bosslv="16" HP="23" DrawID="2" DeadID="2" CountNum="2" EXDraw="2" EXRP="20" pic="Koboss01_"/>
+		<entry id="17" Bosslv="17" HP="23" DrawID="2" DeadID="2" CountNum="2" EXDraw="2" EXRP="20" pic="Koboss01_"/>
+		<entry id="18" Bosslv="18" HP="24" DrawID="2" DeadID="2" CountNum="2" EXDraw="2" EXRP="20" pic="Koboss01_"/>
+		<entry id="19" Bosslv="19" HP="24" DrawID="2" DeadID="2" CountNum="2" EXDraw="2" EXRP="20" pic="Koboss01_"/>
+		<entry id="20" Bosslv="20" HP="24" DrawID="2" DeadID="2" CountNum="2" EXDraw="2" EXRP="20" pic="Koboss01_"/>
+		<entry id="21" Bosslv="21" HP="25" DrawID="3" DeadID="3" CountNum="2" EXDraw="3" EXRP="20" pic="Koboss01_"/>
+		<entry id="22" Bosslv="22" HP="25" DrawID="3" DeadID="3" CountNum="2" EXDraw="3" EXRP="20" pic="Koboss01_"/>
+		<entry id="23" Bosslv="23" HP="25" DrawID="3" DeadID="3" CountNum="2" EXDraw="3" EXRP="20" pic="Koboss01_"/>
+		<entry id="24" Bosslv="24" HP="26" DrawID="3" DeadID="3" CountNum="2" EXDraw="3" EXRP="20" pic="Koboss01_"/>
+		<entry id="25" Bosslv="25" HP="26" DrawID="3" DeadID="3" CountNum="2" EXDraw="3" EXRP="20" pic="Koboss01_"/>
+		<entry id="26" Bosslv="26" HP="26" DrawID="3" DeadID="3" CountNum="2" EXDraw="3" EXRP="20" pic="Koboss01_"/>
+		<entry id="27" Bosslv="27" HP="27" DrawID="3" DeadID="3" CountNum="2" EXDraw="3" EXRP="20" pic="Koboss01_"/>
+		<entry id="28" Bosslv="28" HP="27" DrawID="3" DeadID="3" CountNum="2" EXDraw="3" EXRP="20" pic="Koboss01_"/>
+		<entry id="29" Bosslv="29" HP="27" DrawID="3" DeadID="3" CountNum="2" EXDraw="3" EXRP="20" pic="Koboss01_"/>
+		<entry id="30" Bosslv="30" HP="28" DrawID="3" DeadID="3" CountNum="2" EXDraw="3" EXRP="20" pic="Koboss01_"/>
+		<entry id="31" Bosslv="31" HP="28" DrawID="4" DeadID="4" CountNum="2" EXDraw="4" EXRP="20" pic="Koboss01_"/>
+		<entry id="32" Bosslv="32" HP="28" DrawID="4" DeadID="4" CountNum="2" EXDraw="4" EXRP="20" pic="Koboss01_"/>
+		<entry id="33" Bosslv="33" HP="29" DrawID="4" DeadID="4" CountNum="2" EXDraw="4" EXRP="20" pic="Koboss01_"/>
+		<entry id="34" Bosslv="34" HP="29" DrawID="4" DeadID="4" CountNum="2" EXDraw="4" EXRP="20" pic="Koboss01_"/>
+		<entry id="35" Bosslv="35" HP="29" DrawID="4" DeadID="4" CountNum="2" EXDraw="4" EXRP="20" pic="Koboss01_"/>
+		<entry id="36" Bosslv="36" HP="30" DrawID="4" DeadID="4" CountNum="2" EXDraw="4" EXRP="20" pic="Koboss01_"/>
+		<entry id="37" Bosslv="37" HP="30" DrawID="4" DeadID="4" CountNum="2" EXDraw="4" EXRP="20" pic="Koboss01_"/>
+		<entry id="38" Bosslv="38" HP="30" DrawID="4" DeadID="4" CountNum="2" EXDraw="4" EXRP="20" pic="Koboss01_"/>
+		<entry id="39" Bosslv="39" HP="31" DrawID="4" DeadID="4" CountNum="2" EXDraw="4" EXRP="20" pic="Koboss01_"/>
+		<entry id="40" Bosslv="40" HP="31" DrawID="4" DeadID="4" CountNum="2" EXDraw="4" EXRP="20" pic="Koboss01_"/>
+		<entry id="41" Bosslv="41" HP="31" DrawID="4" DeadID="4" CountNum="2" EXDraw="4" EXRP="20" pic="Koboss01_"/>
+		<entry id="42" Bosslv="42" HP="32" DrawID="4" DeadID="4" CountNum="2" EXDraw="4" EXRP="20" pic="Koboss01_"/>
+		<entry id="43" Bosslv="43" HP="32" DrawID="4" DeadID="4" CountNum="2" EXDraw="4" EXRP="20" pic="Koboss01_"/>
+		<entry id="44" Bosslv="44" HP="32" DrawID="4" DeadID="4" CountNum="2" EXDraw="4" EXRP="20" pic="Koboss01_"/>
+		<entry id="45" Bosslv="45" HP="33" DrawID="4" DeadID="4" CountNum="2" EXDraw="4" EXRP="20" pic="Koboss01_"/>
+		<entry id="46" Bosslv="46" HP="33" DrawID="4" DeadID="4" CountNum="2" EXDraw="4" EXRP="20" pic="Koboss01_"/>
+		<entry id="47" Bosslv="47" HP="33" DrawID="4" DeadID="4" CountNum="2" EXDraw="4" EXRP="20" pic="Koboss01_"/>
+		<entry id="48" Bosslv="48" HP="34" DrawID="4" DeadID="4" CountNum="2" EXDraw="4" EXRP="20" pic="Koboss01_"/>
+		<entry id="49" Bosslv="49" HP="34" DrawID="4" DeadID="4" CountNum="2" EXDraw="4" EXRP="20" pic="Koboss01_"/>
+		<entry id="50" Bosslv="50" HP="34" DrawID="4" DeadID="4" CountNum="2" EXDraw="4" EXRP="20" pic="Koboss01_"/>
+		<entry id="51" Bosslv="51" HP="35" DrawID="5" DeadID="5" CountNum="2" EXDraw="5" EXRP="20" pic="Koboss01_"/>
+		<entry id="52" Bosslv="52" HP="35" DrawID="5" DeadID="5" CountNum="2" EXDraw="5" EXRP="20" pic="Koboss01_"/>
+		<entry id="53" Bosslv="53" HP="35" DrawID="5" DeadID="5" CountNum="2" EXDraw="5" EXRP="20" pic="Koboss01_"/>
+		<entry id="54" Bosslv="54" HP="36" DrawID="5" DeadID="5" CountNum="2" EXDraw="5" EXRP="20" pic="Koboss01_"/>
+		<entry id="55" Bosslv="55" HP="36" DrawID="5" DeadID="5" CountNum="2" EXDraw="5" EXRP="20" pic="Koboss01_"/>
+		<entry id="56" Bosslv="56" HP="36" DrawID="5" DeadID="5" CountNum="2" EXDraw="5" EXRP="20" pic="Koboss01_"/>
+		<entry id="57" Bosslv="57" HP="37" DrawID="5" DeadID="5" CountNum="2" EXDraw="5" EXRP="20" pic="Koboss01_"/>
+		<entry id="58" Bosslv="58" HP="37" DrawID="5" DeadID="5" CountNum="2" EXDraw="5" EXRP="20" pic="Koboss01_"/>
+		<entry id="59" Bosslv="59" HP="37" DrawID="5" DeadID="5" CountNum="2" EXDraw="5" EXRP="20" pic="Koboss01_"/>
+		<entry id="60" Bosslv="60" HP="38" DrawID="5" DeadID="5" CountNum="2" EXDraw="5" EXRP="20" pic="Koboss01_"/>
+		<entry id="61" Bosslv="61" HP="38" DrawID="5" DeadID="5" CountNum="2" EXDraw="5" EXRP="20" pic="Koboss01_"/>
+		<entry id="62" Bosslv="62" HP="38" DrawID="5" DeadID="5" CountNum="2" EXDraw="5" EXRP="20" pic="Koboss01_"/>
+		<entry id="63" Bosslv="63" HP="39" DrawID="5" DeadID="5" CountNum="2" EXDraw="5" EXRP="20" pic="Koboss01_"/>
+		<entry id="64" Bosslv="64" HP="39" DrawID="5" DeadID="5" CountNum="2" EXDraw="5" EXRP="20" pic="Koboss01_"/>
+		<entry id="65" Bosslv="65" HP="39" DrawID="5" DeadID="5" CountNum="2" EXDraw="5" EXRP="20" pic="Koboss01_"/>
+		<entry id="66" Bosslv="66" HP="40" DrawID="5" DeadID="5" CountNum="2" EXDraw="5" EXRP="20" pic="Koboss01_"/>
+		<entry id="67" Bosslv="67" HP="40" DrawID="5" DeadID="5" CountNum="2" EXDraw="5" EXRP="20" pic="Koboss01_"/>
+		<entry id="68" Bosslv="68" HP="40" DrawID="5" DeadID="5" CountNum="2" EXDraw="5" EXRP="20" pic="Koboss01_"/>
+		<entry id="69" Bosslv="69" HP="41" DrawID="5" DeadID="5" CountNum="2" EXDraw="5" EXRP="20" pic="Koboss01_"/>
+		<entry id="70" Bosslv="70" HP="41" DrawID="5" DeadID="5" CountNum="2" EXDraw="5" EXRP="20" pic="Koboss01_"/>
+		<entry id="71" Bosslv="71" HP="41" DrawID="6" DeadID="6" CountNum="2" EXDraw="6" EXRP="20" pic="Koboss01_"/>
+		<entry id="72" Bosslv="72" HP="42" DrawID="6" DeadID="6" CountNum="2" EXDraw="6" EXRP="20" pic="Koboss01_"/>
+		<entry id="73" Bosslv="73" HP="42" DrawID="6" DeadID="6" CountNum="2" EXDraw="6" EXRP="20" pic="Koboss01_"/>
+		<entry id="74" Bosslv="74" HP="42" DrawID="6" DeadID="6" CountNum="2" EXDraw="6" EXRP="20" pic="Koboss01_"/>
+		<entry id="75" Bosslv="75" HP="43" DrawID="6" DeadID="6" CountNum="2" EXDraw="6" EXRP="20" pic="Koboss01_"/>
+		<entry id="76" Bosslv="76" HP="43" DrawID="6" DeadID="6" CountNum="2" EXDraw="6" EXRP="20" pic="Koboss01_"/>
+		<entry id="77" Bosslv="77" HP="43" DrawID="6" DeadID="6" CountNum="2" EXDraw="6" EXRP="20" pic="Koboss01_"/>
+		<entry id="78" Bosslv="78" HP="44" DrawID="6" DeadID="6" CountNum="2" EXDraw="6" EXRP="20" pic="Koboss01_"/>
+		<entry id="79" Bosslv="79" HP="44" DrawID="6" DeadID="6" CountNum="2" EXDraw="6" EXRP="20" pic="Koboss01_"/>
+		<entry id="80" Bosslv="80" HP="44" DrawID="6" DeadID="6" CountNum="2" EXDraw="6" EXRP="20" pic="Koboss01_"/>
+		<entry id="81" Bosslv="81" HP="45" DrawID="6" DeadID="6" CountNum="2" EXDraw="6" EXRP="20" pic="Koboss01_"/>
+		<entry id="82" Bosslv="82" HP="45" DrawID="6" DeadID="6" CountNum="2" EXDraw="6" EXRP="20" pic="Koboss01_"/>
+		<entry id="83" Bosslv="83" HP="45" DrawID="6" DeadID="6" CountNum="2" EXDraw="6" EXRP="20" pic="Koboss01_"/>
+		<entry id="84" Bosslv="84" HP="47" DrawID="6" DeadID="6" CountNum="2" EXDraw="6" EXRP="20" pic="Koboss01_"/>
+		<entry id="85" Bosslv="85" HP="47" DrawID="6" DeadID="6" CountNum="2" EXDraw="6" EXRP="20" pic="Koboss01_"/>
+		<entry id="86" Bosslv="86" HP="47" DrawID="6" DeadID="6" CountNum="2" EXDraw="6" EXRP="20" pic="Koboss01_"/>
+		<entry id="87" Bosslv="87" HP="48" DrawID="6" DeadID="6" CountNum="2" EXDraw="6" EXRP="20" pic="Koboss01_"/>
+		<entry id="88" Bosslv="88" HP="48" DrawID="6" DeadID="6" CountNum="2" EXDraw="6" EXRP="20" pic="Koboss01_"/>
+		<entry id="89" Bosslv="89" HP="48" DrawID="6" DeadID="6" CountNum="2" EXDraw="6" EXRP="20" pic="Koboss01_"/>
+		<entry id="90" Bosslv="90" HP="49" DrawID="6" DeadID="6" CountNum="2" EXDraw="6" EXRP="20" pic="Koboss01_"/>
+		<entry id="91" Bosslv="91" HP="49" DrawID="7" DeadID="7" CountNum="2" EXDraw="7" EXRP="20" pic="Koboss01_"/>
+		<entry id="92" Bosslv="92" HP="49" DrawID="7" DeadID="7" CountNum="2" EXDraw="7" EXRP="20" pic="Koboss01_"/>
+		<entry id="93" Bosslv="93" HP="50" DrawID="7" DeadID="7" CountNum="2" EXDraw="7" EXRP="20" pic="Koboss01_"/>
+		<entry id="94" Bosslv="94" HP="50" DrawID="7" DeadID="7" CountNum="2" EXDraw="7" EXRP="20" pic="Koboss01_"/>
+		<entry id="95" Bosslv="95" HP="50" DrawID="7" DeadID="7" CountNum="2" EXDraw="7" EXRP="20" pic="Koboss01_"/>
+		<entry id="96" Bosslv="96" HP="50" DrawID="7" DeadID="7" CountNum="2" EXDraw="7" EXRP="20" pic="Koboss01_"/>
+		<entry id="97" Bosslv="97" HP="51" DrawID="7" DeadID="7" CountNum="2" EXDraw="7" EXRP="20" pic="Koboss01_"/>
+		<entry id="98" Bosslv="98" HP="51" DrawID="7" DeadID="7" CountNum="2" EXDraw="7" EXRP="20" pic="Koboss01_"/>
+		<entry id="99" Bosslv="99" HP="51" DrawID="7" DeadID="7" CountNum="2" EXDraw="7" EXRP="20" pic="Koboss01_"/>
+		<entry id="100" Bosslv="100" HP="51" DrawID="7" DeadID="7" CountNum="2" EXDraw="7" EXRP="20" pic="Koboss01_"/>
+		<entry id="101" Bosslv="101" HP="52" DrawID="7" DeadID="7" CountNum="2" EXDraw="7" EXRP="20" pic="Koboss01_"/>
+		<entry id="102" Bosslv="102" HP="52" DrawID="7" DeadID="7" CountNum="2" EXDraw="7" EXRP="20" pic="Koboss01_"/>
+		<entry id="103" Bosslv="103" HP="52" DrawID="7" DeadID="7" CountNum="2" EXDraw="7" EXRP="20" pic="Koboss01_"/>
+		<entry id="104" Bosslv="104" HP="52" DrawID="7" DeadID="7" CountNum="2" EXDraw="7" EXRP="20" pic="Koboss01_"/>
+		<entry id="105" Bosslv="105" HP="53" DrawID="7" DeadID="7" CountNum="2" EXDraw="7" EXRP="20" pic="Koboss01_"/>
+		<entry id="106" Bosslv="106" HP="53" DrawID="7" DeadID="7" CountNum="2" EXDraw="7" EXRP="20" pic="Koboss01_"/>
+		<entry id="107" Bosslv="107" HP="53" DrawID="7" DeadID="7" CountNum="2" EXDraw="7" EXRP="20" pic="Koboss01_"/>
+		<entry id="108" Bosslv="108" HP="53" DrawID="7" DeadID="7" CountNum="2" EXDraw="7" EXRP="20" pic="Koboss01_"/>
+		<entry id="109" Bosslv="109" HP="54" DrawID="7" DeadID="7" CountNum="2" EXDraw="7" EXRP="20" pic="Koboss01_"/>
+		<entry id="110" Bosslv="110" HP="54" DrawID="7" DeadID="7" CountNum="2" EXDraw="7" EXRP="20" pic="Koboss01_"/>
+		<entry id="111" Bosslv="111" HP="54" DrawID="8" DeadID="8" CountNum="2" EXDraw="8" EXRP="20" pic="Koboss01_"/>
+		<entry id="112" Bosslv="112" HP="54" DrawID="8" DeadID="8" CountNum="2" EXDraw="8" EXRP="20" pic="Koboss01_"/>
+		<entry id="113" Bosslv="113" HP="55" DrawID="8" DeadID="8" CountNum="2" EXDraw="8" EXRP="20" pic="Koboss01_"/>
+		<entry id="114" Bosslv="114" HP="55" DrawID="8" DeadID="8" CountNum="2" EXDraw="8" EXRP="20" pic="Koboss01_"/>
+		<entry id="115" Bosslv="115" HP="55" DrawID="8" DeadID="8" CountNum="2" EXDraw="8" EXRP="20" pic="Koboss01_"/>
+		<entry id="116" Bosslv="116" HP="55" DrawID="8" DeadID="8" CountNum="2" EXDraw="8" EXRP="20" pic="Koboss01_"/>
+		<entry id="117" Bosslv="117" HP="56" DrawID="8" DeadID="8" CountNum="2" EXDraw="8" EXRP="20" pic="Koboss01_"/>
+		<entry id="118" Bosslv="118" HP="56" DrawID="8" DeadID="8" CountNum="2" EXDraw="8" EXRP="20" pic="Koboss01_"/>
+		<entry id="119" Bosslv="119" HP="56" DrawID="8" DeadID="8" CountNum="2" EXDraw="8" EXRP="20" pic="Koboss01_"/>
+		<entry id="120" Bosslv="120" HP="56" DrawID="8" DeadID="8" CountNum="2" EXDraw="8" EXRP="20" pic="Koboss01_"/>
+		<entry id="121" Bosslv="121" HP="57" DrawID="8" DeadID="8" CountNum="2" EXDraw="8" EXRP="20" pic="Koboss01_"/>
+		<entry id="122" Bosslv="122" HP="57" DrawID="8" DeadID="8" CountNum="2" EXDraw="8" EXRP="20" pic="Koboss01_"/>
+		<entry id="123" Bosslv="123" HP="57" DrawID="8" DeadID="8" CountNum="2" EXDraw="8" EXRP="20" pic="Koboss01_"/>
+		<entry id="124" Bosslv="124" HP="57" DrawID="8" DeadID="8" CountNum="2" EXDraw="8" EXRP="20" pic="Koboss01_"/>
+		<entry id="125" Bosslv="125" HP="58" DrawID="8" DeadID="8" CountNum="2" EXDraw="8" EXRP="20" pic="Koboss01_"/>
+		<entry id="126" Bosslv="126" HP="58" DrawID="8" DeadID="8" CountNum="2" EXDraw="8" EXRP="20" pic="Koboss01_"/>
+		<entry id="127" Bosslv="127" HP="58" DrawID="8" DeadID="8" CountNum="2" EXDraw="8" EXRP="20" pic="Koboss01_"/>
+		<entry id="128" Bosslv="128" HP="58" DrawID="8" DeadID="8" CountNum="2" EXDraw="8" EXRP="20" pic="Koboss01_"/>
+		<entry id="129" Bosslv="129" HP="59" DrawID="8" DeadID="8" CountNum="2" EXDraw="8" EXRP="20" pic="Koboss01_"/>
+		<entry id="130" Bosslv="130" HP="59" DrawID="8" DeadID="8" CountNum="2" EXDraw="8" EXRP="20" pic="Koboss01_"/>
+		<entry id="131" Bosslv="131" HP="59" DrawID="9" DeadID="9" CountNum="2" EXDraw="9" EXRP="20" pic="Koboss01_"/>
+		<entry id="132" Bosslv="132" HP="59" DrawID="9" DeadID="9" CountNum="2" EXDraw="9" EXRP="20" pic="Koboss01_"/>
+		<entry id="133" Bosslv="133" HP="60" DrawID="9" DeadID="9" CountNum="2" EXDraw="9" EXRP="20" pic="Koboss01_"/>
+		<entry id="134" Bosslv="134" HP="60" DrawID="9" DeadID="9" CountNum="2" EXDraw="9" EXRP="20" pic="Koboss01_"/>
+		<entry id="135" Bosslv="135" HP="60" DrawID="9" DeadID="9" CountNum="2" EXDraw="9" EXRP="20" pic="Koboss01_"/>
+		<entry id="136" Bosslv="136" HP="60" DrawID="9" DeadID="9" CountNum="2" EXDraw="9" EXRP="20" pic="Koboss01_"/>
+		<entry id="137" Bosslv="137" HP="61" DrawID="9" DeadID="9" CountNum="2" EXDraw="9" EXRP="20" pic="Koboss01_"/>
+		<entry id="138" Bosslv="138" HP="61" DrawID="9" DeadID="9" CountNum="2" EXDraw="9" EXRP="20" pic="Koboss01_"/>
+		<entry id="139" Bosslv="139" HP="61" DrawID="9" DeadID="9" CountNum="2" EXDraw="9" EXRP="20" pic="Koboss01_"/>
+		<entry id="140" Bosslv="140" HP="61" DrawID="9" DeadID="9" CountNum="2" EXDraw="9" EXRP="20" pic="Koboss01_"/>
+		<entry id="141" Bosslv="141" HP="62" DrawID="9" DeadID="9" CountNum="2" EXDraw="9" EXRP="20" pic="Koboss01_"/>
+		<entry id="142" Bosslv="142" HP="62" DrawID="9" DeadID="9" CountNum="2" EXDraw="9" EXRP="20" pic="Koboss01_"/>
+		<entry id="143" Bosslv="143" HP="62" DrawID="9" DeadID="9" CountNum="2" EXDraw="9" EXRP="20" pic="Koboss01_"/>
+		<entry id="144" Bosslv="144" HP="62" DrawID="9" DeadID="9" CountNum="2" EXDraw="9" EXRP="20" pic="Koboss01_"/>
+		<entry id="145" Bosslv="145" HP="63" DrawID="9" DeadID="9" CountNum="2" EXDraw="9" EXRP="20" pic="Koboss01_"/>
+		<entry id="146" Bosslv="146" HP="63" DrawID="9" DeadID="9" CountNum="2" EXDraw="9" EXRP="20" pic="Koboss01_"/>
+		<entry id="147" Bosslv="147" HP="63" DrawID="9" DeadID="9" CountNum="2" EXDraw="9" EXRP="20" pic="Koboss01_"/>
+		<entry id="148" Bosslv="148" HP="63" DrawID="9" DeadID="9" CountNum="2" EXDraw="9" EXRP="20" pic="Koboss01_"/>
+		<entry id="149" Bosslv="149" HP="64" DrawID="9" DeadID="9" CountNum="2" EXDraw="9" EXRP="20" pic="Koboss01_"/>
+		<entry id="150" Bosslv="150" HP="64" DrawID="9" DeadID="9" CountNum="2" EXDraw="9" EXRP="20" pic="Koboss01_"/>
+		<entry id="151" Bosslv="151" HP="64" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="152" Bosslv="152" HP="64" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="153" Bosslv="153" HP="65" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="154" Bosslv="154" HP="65" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="155" Bosslv="155" HP="65" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="156" Bosslv="156" HP="65" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="157" Bosslv="157" HP="66" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="158" Bosslv="158" HP="66" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="159" Bosslv="159" HP="66" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="160" Bosslv="160" HP="66" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="161" Bosslv="161" HP="67" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="162" Bosslv="162" HP="67" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="163" Bosslv="163" HP="67" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="164" Bosslv="164" HP="67" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="165" Bosslv="165" HP="68" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="166" Bosslv="166" HP="68" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="167" Bosslv="167" HP="68" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="168" Bosslv="168" HP="68" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="169" Bosslv="169" HP="70" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="170" Bosslv="170" HP="70" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="171" Bosslv="171" HP="70" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="172" Bosslv="172" HP="70" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="173" Bosslv="173" HP="72" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="174" Bosslv="174" HP="72" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="175" Bosslv="175" HP="72" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="176" Bosslv="176" HP="72" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="177" Bosslv="177" HP="74" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="178" Bosslv="178" HP="74" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="179" Bosslv="179" HP="74" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="180" Bosslv="180" HP="74" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="181" Bosslv="181" HP="76" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="182" Bosslv="182" HP="76" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="183" Bosslv="183" HP="76" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="184" Bosslv="184" HP="76" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="185" Bosslv="185" HP="78" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="186" Bosslv="186" HP="78" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="187" Bosslv="187" HP="78" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="188" Bosslv="188" HP="78" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="189" Bosslv="189" HP="80" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="190" Bosslv="190" HP="80" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="191" Bosslv="191" HP="80" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="192" Bosslv="192" HP="80" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="193" Bosslv="193" HP="80" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="194" Bosslv="194" HP="80" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="195" Bosslv="195" HP="80" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="196" Bosslv="196" HP="80" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="197" Bosslv="197" HP="80" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="198" Bosslv="198" HP="80" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="199" Bosslv="199" HP="80" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+		<entry id="200" Bosslv="200" HP="80" DrawID="10" DeadID="10" CountNum="2" EXDraw="10" EXRP="20" pic="Koboss01_"/>
+	</M78>
+	<!--
+		
+		Cost：购买所需钻石
+		BuyNum: 购买次数[X—XX]区间
+		BuyCount：购买获得次数
+	-->
+	<Buy BuyCount="10">
+		<entry BuyNum="1-2" Cost="100"/>
+		<entry BuyNum="3-4" Cost="150"/>
+		<entry BuyNum="5-10" Cost="200"/>
+		<entry BuyNum="11-20" Cost="250"/>
+		<entry BuyNum="21-30" Cost="300"/>
+		<entry BuyNum="31-40" Cost="350"/>
+		<entry BuyNum="41-50" Cost="400"/>
+		<entry BuyNum="51-60" Cost="450"/>
+		<entry BuyNum="61-1000" Cost="500"/>
+	</Buy>
+	<!--
+		
+		lan:显示的language
+	-->
+	
+	<language>
+		<entry id="1" lan="M78_lan_01"/>
+		<entry id="2" lan="M78_lan_02"/>
+	</language>
+</root>

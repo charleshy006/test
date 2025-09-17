@@ -1,0 +1,828 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<Root>
+	<!--
+		ShopID: 商店种类ID
+			1：每日道具商店
+			2：VIP福利商店
+			3：黑市商店
+			4：竞技场商店
+			5：实时战场商店
+			6：组队副本商店
+			7：巅峰对决商店
+			8：擂台霸主商店
+			9：公会商店
+			10：VIP周礼包
+			11：限时抢购（1）
+			12：限时抢购（2）
+			13：竞技排名资格商店
+            29：翡翠梦境商店
+		refreshTime: 商店刷新时间（单位：秒）
+        costResType：商店花费资源种类（商店行里表示刷新用费用的货币类型/物品行表示物品购买时的货币种类）
+			1：游戏金币
+			2：钻石币
+			3：黑市结晶
+			4：声望值
+			5：荣誉值
+			6：勇者证
+			7：巅峰令
+			8：虎符
+			9：陨铁
+			10：公会贡献度
+			11：体力
+			12：历练
+			13：觉醒经验值
+			14：领悟经验值
+			15：黑市刷新令
+            16: 积分
+		costResNum：商店刷新时使用的货币数量
+		sellNum：商店内商品的最大数量（商品种类显示数量）
+		ItemID：商店物品ID
+		rate：商店物品出现概率（数值为累加、非百分比）
+		maxBuyNum：最大购买次数
+		buyNumOneTime：一次可以购买的数量
+		curPrice：真实价格数量
+		oriPrice：虚高价格数量
+		Superscript：黑市商店道具角标
+		             0：无角标显示
+					 1：特惠
+					 2：稀有
+					 3：极品
+					 4：人气
+					 5：神装
+		Buypermissions：购买权限
+			福利商店中VIP等级为数值0=VIP0
+			公会商店中公会等级为数值0=公会等级0
+			竞技场排名商店中排名数值100=100名以内
+			其他商店0=无需权限
+		Openclass：开放等级
+		random：商店是否随机商品（0=不随机、1=随机）
+		vipPrivilege：对应VIP特权类型序号（0代表不读VIP配置表，读取前面的最大购买数量）
+		priceID：对应price表价格ID（0：表示读取表格内价格）
+		indexID：商品ID（非物品ID）
+		refreshType：商店刷新类型
+			1表示每日刷新
+			2表示间隔时间刷新
+			3表示不刷新
+			4表示每周星期一凌晨0点刷新
+		retainBuyNum：商店中的商品是否永久刷新
+			1表示不刷新
+			0表示刷新（一辈子只卖一次）
+	-->
+	<!--黑市 一次刷新8个商品-->
+	<Shop id="3" refreshTime="7200" refreshType="2" costResType="122206" costResNum="1" sellNum="8" Openclass="1" random="1">
+		<item indexID="1" id="101290" rate="200000" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="150" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="2" id="201200" rate="21500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="200" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="3" id="211200" rate="21500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="200" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="4" id="221200" rate="21500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="200" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="5" id="231200" rate="21500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="200" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="6" id="241200" rate="21500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="200" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="7" id="251200" rate="21500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="200" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="8" id="261200" rate="21500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="200" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="9" id="202100" rate="21500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="200" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="10" id="212100" rate="21500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="200" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="11" id="222100" rate="21500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="200" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="12" id="232100" rate="21500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="200" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="13" id="242100" rate="21500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="200" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="14" id="252100" rate="21500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="200" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="15" id="262100" rate="21500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="200" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="16" id="302200" rate="6100" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="400" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="17" id="342200" rate="6100" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="400" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="18" id="362200" rate="6100" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="400" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="19" id="312210" rate="6100" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="400" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="20" id="332210" rate="6100" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="400" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="21" id="362210" rate="6100" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="400" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="22" id="342220" rate="6100" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="400" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="23" id="352220" rate="6100" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="400" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="24" id="362220" rate="6100" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="400" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="25" id="312230" rate="6100" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="400" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="26" id="322230" rate="6100" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="400" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="27" id="352230" rate="6100" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="400" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="28" id="312240" rate="6100" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="400" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="29" id="332240" rate="6100" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="400" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="30" id="352240" rate="6100" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="400" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="31" id="302250" rate="6100" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="400" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="32" id="322250" rate="6100" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="400" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="33" id="332250" rate="6100" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="400" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="34" id="302260" rate="6100" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="400" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="35" id="312260" rate="6100" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="400" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="36" id="322260" rate="6100" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="400" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="37" id="332260" rate="6100" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="400" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="38" id="352260" rate="6100" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="400" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="39" id="302270" rate="6100" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="400" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="40" id="312270" rate="6100" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="400" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="41" id="322270" rate="6100" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="400" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="42" id="302280" rate="6100" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="400" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="43" id="332280" rate="6100" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="400" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="44" id="342280" rate="6100" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="400" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="45" id="362280" rate="6100" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="400" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="46" id="322290" rate="6100" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="400" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="47" id="342290" rate="6100" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="400" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="48" id="352290" rate="6100" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="400" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="49" id="202200" rate="4500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="8000" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="50" id="242200" rate="4500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="8000" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="51" id="262200" rate="4500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="8000" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="52" id="212210" rate="4500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="8000" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="53" id="232210" rate="4500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="8000" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="54" id="262210" rate="4500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="8000" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="55" id="242220" rate="4500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="8000" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="56" id="252220" rate="4500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="8000" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="57" id="262220" rate="4500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="8000" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="58" id="212230" rate="4500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="8000" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="59" id="222230" rate="4500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="8000" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="60" id="252230" rate="4500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="8000" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="61" id="212240" rate="4500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="8000" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="62" id="232240" rate="4500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="8000" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="63" id="252240" rate="4500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="8000" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="64" id="202250" rate="4500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="8000" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="65" id="222250" rate="4500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="8000" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="66" id="232250" rate="4500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="8000" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="67" id="202260" rate="4500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="8000" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="68" id="212260" rate="4500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="8000" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="69" id="222260" rate="4500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="8000" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="70" id="232260" rate="4500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="8000" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="71" id="252260" rate="4500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="8000" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="72" id="202270" rate="4500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="8000" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="73" id="212270" rate="4500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="8000" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="74" id="222270" rate="4500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="8000" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="75" id="202280" rate="4500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="8000" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="76" id="232280" rate="4500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="8000" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="77" id="242280" rate="4500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="8000" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="78" id="262280" rate="4500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="8000" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="79" id="222290" rate="4500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="8000" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="80" id="242290" rate="4500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="8000" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="81" id="252290" rate="4500" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="8000" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="82" id="302600" rate="4700" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="1200" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="83" id="312600" rate="4700" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="1200" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="84" id="322600" rate="4700" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="1200" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="85" id="332600" rate="4700" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="1200" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="86" id="342600" rate="4700" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="1200" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="87" id="352600" rate="4700" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="1200" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="88" id="362600" rate="4700" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="1200" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="89" id="302610" rate="4700" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="1200" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="90" id="312610" rate="4700" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="1200" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="91" id="322610" rate="4700" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="1200" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="92" id="332610" rate="4700" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="1200" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="93" id="342610" rate="4700" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="1200" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="94" id="352610" rate="4700" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="1200" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="95" id="362610" rate="4700" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="1200" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="96" id="302620" rate="4700" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="1200" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="97" id="312620" rate="4700" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="1200" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="98" id="322620" rate="4700" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="1200" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="99" id="332620" rate="4700" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="1200" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="100" id="342620" rate="4700" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="1200" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="101" id="352620" rate="4700" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="1200" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="102" id="362620" rate="4700" maxBuyNum="1" buyNumOneTime="5" costResType="3" curPrice="1200" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="103" id="202600" rate="2400" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="24000" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="104" id="212600" rate="2400" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="24000" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="105" id="222600" rate="2400" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="24000" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="106" id="232600" rate="2400" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="24000" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="107" id="242600" rate="2400" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="24000" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="108" id="252600" rate="2400" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="24000" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="109" id="262600" rate="2400" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="24000" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="110" id="202610" rate="2400" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="24000" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="111" id="212610" rate="2400" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="24000" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="112" id="222610" rate="2400" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="24000" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="113" id="232610" rate="2400" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="24000" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="114" id="242610" rate="2400" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="24000" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="115" id="252610" rate="2400" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="24000" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="116" id="262610" rate="2400" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="24000" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="117" id="202620" rate="2400" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="24000" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="118" id="212620" rate="2400" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="24000" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="119" id="222620" rate="2400" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="24000" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="120" id="232620" rate="2400" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="24000" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="121" id="242620" rate="2400" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="24000" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="122" id="252620" rate="2400" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="24000" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="123" id="262620" rate="2400" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="24000" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="124" id="52220000" rate="25000" maxBuyNum="1" buyNumOneTime="1" costResType="3" curPrice="3000" oriPrice="0" Superscript="5" Buypermissions="0"/>
+	</Shop>
+	<!--公会黑市-->
+	<Shop id="103" refreshTime="7200" refreshType="2" costResType="122406" costResNum="1" sellNum="8" Openclass="1" random="1">
+		<item indexID="1" id="122207" rate="50000" maxBuyNum="1" buyNumOneTime="25" costResType="20" curPrice="36" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="2"  id="101204" rate="50000" maxBuyNum="1" buyNumOneTime="25" costResType="20" curPrice="36" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="3" id="101203" rate="75000" maxBuyNum="1" buyNumOneTime="6" costResType="20" curPrice="450" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="4" id="102205" rate="75000" maxBuyNum="1" buyNumOneTime="6" costResType="20" curPrice="450" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="5" id="143000" rate="5360" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="300000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="6" id="143001" rate="5360" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="300000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="7" id="143002" rate="5360" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="300000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="8" id="143003" rate="5360" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="300000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="9" id="143004" rate="5360" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="300000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="10" id="143005" rate="5360" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="300000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="11" id="143006" rate="5360" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="300000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="12" id="143007" rate="5360" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="300000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="13" id="143008" rate="5360" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="300000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="14" id="143009" rate="5360" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="300000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="15" id="143010" rate="5360" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="300000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="16" id="143011" rate="5360" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="300000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="17" id="143012" rate="5360" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="300000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="18" id="143013" rate="5360" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="300000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="19" id="143100" rate="8330" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="300000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="20" id="143101" rate="8330" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="300000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="21" id="143102" rate="8330" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="300000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="22" id="143103" rate="8330" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="300000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="23" id="143104" rate="8330" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="300000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="24" id="143105" rate="8330" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="300000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="25" id="143106" rate="8330" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="300000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="26" id="143107" rate="8330" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="300000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="27" id="143108" rate="8330" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="300000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="28" id="153000" rate="3570" maxBuyNum="1" buyNumOneTime="6" costResType="20" curPrice="900" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="29" id="153001" rate="3570" maxBuyNum="1" buyNumOneTime="6" costResType="20" curPrice="900" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="30" id="153002" rate="3570" maxBuyNum="1" buyNumOneTime="6" costResType="20" curPrice="900" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="31" id="153003" rate="3570" maxBuyNum="1" buyNumOneTime="6" costResType="20" curPrice="900" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="32" id="153004" rate="3570" maxBuyNum="1" buyNumOneTime="6" costResType="20" curPrice="900" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="33" id="153005" rate="3570" maxBuyNum="1" buyNumOneTime="6" costResType="20" curPrice="900" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="34" id="153006" rate="3570" maxBuyNum="1" buyNumOneTime="6" costResType="20" curPrice="900" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="35" id="153007" rate="3570" maxBuyNum="1" buyNumOneTime="6" costResType="20" curPrice="900" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="36" id="153008" rate="3570" maxBuyNum="1" buyNumOneTime="6" costResType="20" curPrice="900" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="37" id="153009" rate="3570" maxBuyNum="1" buyNumOneTime="6" costResType="20" curPrice="900" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="38" id="153010" rate="3570" maxBuyNum="1" buyNumOneTime="6" costResType="20" curPrice="900" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="39" id="153011" rate="3570" maxBuyNum="1" buyNumOneTime="6" costResType="20" curPrice="900" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="40" id="153012" rate="3570" maxBuyNum="1" buyNumOneTime="6" costResType="20" curPrice="900" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="41" id="153013" rate="3570" maxBuyNum="1" buyNumOneTime="6" costResType="20" curPrice="900" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="42" id="153000" rate="7140" maxBuyNum="1" buyNumOneTime="10" costResType="2" curPrice="15000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="43" id="153001" rate="7140" maxBuyNum="1" buyNumOneTime="10" costResType="2" curPrice="15000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="44" id="153002" rate="7140" maxBuyNum="1" buyNumOneTime="10" costResType="2" curPrice="15000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="45" id="153003" rate="7140" maxBuyNum="1" buyNumOneTime="10" costResType="2" curPrice="15000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="46" id="153004" rate="7140" maxBuyNum="1" buyNumOneTime="10" costResType="2" curPrice="15000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="47" id="153005" rate="7140" maxBuyNum="1" buyNumOneTime="10" costResType="2" curPrice="15000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="48" id="153006" rate="7140" maxBuyNum="1" buyNumOneTime="10" costResType="2" curPrice="15000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="49" id="153007" rate="7140" maxBuyNum="1" buyNumOneTime="10" costResType="2" curPrice="15000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="50" id="153008" rate="7140" maxBuyNum="1" buyNumOneTime="10" costResType="2" curPrice="15000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="51" id="153009" rate="7140" maxBuyNum="1" buyNumOneTime="10" costResType="2" curPrice="15000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="52" id="153010" rate="7140" maxBuyNum="1" buyNumOneTime="10" costResType="2" curPrice="15000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="53" id="153011" rate="7140" maxBuyNum="1" buyNumOneTime="10" costResType="2" curPrice="15000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="54" id="153012" rate="7140" maxBuyNum="1" buyNumOneTime="10" costResType="2" curPrice="15000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="55" id="153013" rate="7140" maxBuyNum="1" buyNumOneTime="10" costResType="2" curPrice="15000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="56" id="153100" rate="5560" maxBuyNum="1" buyNumOneTime="6" costResType="20" curPrice="900" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="57" id="153101" rate="5560" maxBuyNum="1" buyNumOneTime="6" costResType="20" curPrice="900" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="58" id="153102" rate="5560" maxBuyNum="1" buyNumOneTime="6" costResType="20" curPrice="900" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="59" id="153103" rate="5560" maxBuyNum="1" buyNumOneTime="6" costResType="20" curPrice="900" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="60" id="153104" rate="5560" maxBuyNum="1" buyNumOneTime="6" costResType="20" curPrice="900" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="61" id="153105" rate="5560" maxBuyNum="1" buyNumOneTime="6" costResType="20" curPrice="900" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="62" id="153106" rate="5560" maxBuyNum="1" buyNumOneTime="6" costResType="20" curPrice="900" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="63" id="153107" rate="5560" maxBuyNum="1" buyNumOneTime="6" costResType="20" curPrice="900" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="64" id="153108" rate="5560" maxBuyNum="1" buyNumOneTime="6" costResType="20" curPrice="900" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="65" id="153100" rate="11110" maxBuyNum="1" buyNumOneTime="10" costResType="2" curPrice="15000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="66" id="153101" rate="11110" maxBuyNum="1" buyNumOneTime="10" costResType="2" curPrice="15000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="67" id="153102" rate="11110" maxBuyNum="1" buyNumOneTime="10" costResType="2" curPrice="15000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="68" id="153103" rate="11110" maxBuyNum="1" buyNumOneTime="10" costResType="2" curPrice="15000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="69" id="153104" rate="11110" maxBuyNum="1" buyNumOneTime="10" costResType="2" curPrice="15000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="70" id="153105" rate="11110" maxBuyNum="1" buyNumOneTime="10" costResType="2" curPrice="15000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="71" id="153106" rate="11110" maxBuyNum="1" buyNumOneTime="10" costResType="2" curPrice="15000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="72" id="153107" rate="11110" maxBuyNum="1" buyNumOneTime="10" costResType="2" curPrice="15000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="73" id="153108" rate="11110" maxBuyNum="1" buyNumOneTime="10" costResType="2" curPrice="15000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="74" id="811604" rate="12500" maxBuyNum="1" buyNumOneTime="15" costResType="20" curPrice="48" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="75" id="811605" rate="12500" maxBuyNum="1" buyNumOneTime="15" costResType="20" curPrice="48" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="76" id="811610" rate="12500" maxBuyNum="1" buyNumOneTime="15" costResType="20" curPrice="48" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="77" id="811619" rate="12500" maxBuyNum="1" buyNumOneTime="15" costResType="20" curPrice="48" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="78" id="811620" rate="12500" maxBuyNum="1" buyNumOneTime="15" costResType="20" curPrice="48" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="79" id="811633" rate="12500" maxBuyNum="1" buyNumOneTime="15" costResType="20" curPrice="48" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="80" id="811608" rate="12500" maxBuyNum="1" buyNumOneTime="15" costResType="20" curPrice="450" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="81" id="811609" rate="12500" maxBuyNum="1" buyNumOneTime="15" costResType="20" curPrice="450" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="82" id="811611" rate="12500" maxBuyNum="1" buyNumOneTime="15" costResType="20" curPrice="135" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="83" id="811612" rate="12500" maxBuyNum="1" buyNumOneTime="15" costResType="20" curPrice="135" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="84" id="811613" rate="12500" maxBuyNum="1" buyNumOneTime="15" costResType="20" curPrice="135" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="85" id="811616" rate="12500" maxBuyNum="1" buyNumOneTime="15" costResType="20" curPrice="135" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="86" id="811607" rate="18750" maxBuyNum="1" buyNumOneTime="15" costResType="2" curPrice="4000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="87" id="811615" rate="18750" maxBuyNum="1" buyNumOneTime="15" costResType="2" curPrice="4000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="88" id="811624" rate="18750" maxBuyNum="1" buyNumOneTime="15" costResType="2" curPrice="4000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="89" id="811625" rate="18750" maxBuyNum="1" buyNumOneTime="15" costResType="2" curPrice="4000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="90" id="811606" rate="18750" maxBuyNum="1" buyNumOneTime="15" costResType="2" curPrice="20000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="91" id="811617" rate="18750" maxBuyNum="1" buyNumOneTime="15" costResType="2" curPrice="20000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="92" id="811618" rate="18750" maxBuyNum="1" buyNumOneTime="15" costResType="2" curPrice="20000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="93" id="811621" rate="18750" maxBuyNum="1" buyNumOneTime="15" costResType="2" curPrice="20000" oriPrice="0" Superscript="1" Buypermissions="0"/>
+	</Shop>
+	<!--公会商店-->
+	<Shop id="9" refreshTime="86400" refreshType="1" costResType="0" costResNum="0" sellNum="52" Openclass="1" random="0">
+		<item indexID="1" id="55211700" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="10" curPrice="500" oriPrice="0" Superscript="5" Buypermissions="24"/>
+		<item indexID="18" id="120104" rate="100" maxBuyNum="5" buyNumOneTime="1" costResType="10" curPrice="25" oriPrice="0" Buypermissions="1"/>
+		<item indexID="2" id="120101" rate="100" maxBuyNum="30" buyNumOneTime="1" costResType="10" curPrice="25" oriPrice="0" Buypermissions="1"/>
+		<item indexID="3" id="120404" rate="100" maxBuyNum="5" buyNumOneTime="1" costResType="10" curPrice="50" oriPrice="0" Buypermissions="3"/>
+		<item indexID="4" id="122252" rate="100" maxBuyNum="3" buyNumOneTime="1" costResType="10" curPrice="60" oriPrice="0" Buypermissions="3"/>
+		<item indexID="5" id="121204" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="10" curPrice="75" oriPrice="0" Buypermissions="6"/>
+		<item indexID="6" id="152005" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="10" curPrice="75" oriPrice="0" Buypermissions="6"/>
+		<item indexID="7" id="122206" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="10" curPrice="120" oriPrice="0" Buypermissions="9"/>
+		<item indexID="8" id="122208" rate="100" maxBuyNum="3" buyNumOneTime="1" costResType="10" curPrice="150" oriPrice="0" Buypermissions="9"/>
+		<item indexID="9" id="101204" rate="100" maxBuyNum="20" buyNumOneTime="1" costResType="10" curPrice="100" oriPrice="0" Buypermissions="12"/>
+		<item indexID="10" id="122207" rate="100" maxBuyNum="20" buyNumOneTime="1" costResType="10" curPrice="100" oriPrice="0" Buypermissions="12"/>
+		<item indexID="11" id="122204" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="10" curPrice="150" oriPrice="0" Buypermissions="16"/>
+		<item indexID="12" id="122252" rate="100" maxBuyNum="5" buyNumOneTime="1" costResType="10" curPrice="180" oriPrice="0" Buypermissions="16"/>
+		<item indexID="13" id="102650" rate="100" maxBuyNum="2" buyNumOneTime="1" costResType="10" curPrice="450" oriPrice="0" Buypermissions="20"/>
+		<item indexID="14" id="102651" rate="100" maxBuyNum="2" buyNumOneTime="1" costResType="10" curPrice="450" oriPrice="0" Buypermissions="20"/>
+		<item indexID="15" id="102652" rate="100" maxBuyNum="2" buyNumOneTime="1" costResType="10" curPrice="450" oriPrice="0" Buypermissions="20"/>
+		<item indexID="16" id="102205" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="10" curPrice="600" oriPrice="0" Buypermissions="24"/>
+		<item indexID="17" id="101203" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="10" curPrice="600" oriPrice="0" Buypermissions="24"/>
+	</Shop>
+	<!--福利商店-->
+	<Shop id="2" refreshTime="86400" refreshType="3" costResType="2" costResNum="0" sellNum="16" Openclass="1" random="0">
+		<item indexID="1" id="102260" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="3800" oriPrice="19800" Buypermissions="0" retainBuyNum="1"/>
+		<item indexID="2" id="102261" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="12800" oriPrice="29800" Buypermissions="1" retainBuyNum="1"/>
+		<item indexID="3" id="102262" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="16800" oriPrice="49800" Buypermissions="2" retainBuyNum="1"/>
+		<item indexID="4" id="102263" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="39800" oriPrice="99800" Buypermissions="3" retainBuyNum="1"/>
+		<item indexID="5" id="102264" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="69800" oriPrice="158800" Buypermissions="4" retainBuyNum="1"/>
+		<item indexID="6" id="102265" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="99800" oriPrice="258800" Buypermissions="5" retainBuyNum="1"/>
+		<item indexID="7" id="102266" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="128800" oriPrice="458800" Buypermissions="6" retainBuyNum="1"/>
+		<item indexID="8" id="102267" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="168800" oriPrice="558800" Buypermissions="7" retainBuyNum="1"/>
+		<item indexID="9" id="102268" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="198800" oriPrice="699800" Buypermissions="8" retainBuyNum="1"/>
+		<item indexID="10" id="102269" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="228800" oriPrice="858800" Buypermissions="9" retainBuyNum="1"/>
+		<item indexID="11" id="102270" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="248800" oriPrice="998800" Buypermissions="10" retainBuyNum="1"/>
+		<item indexID="12" id="102271" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="398800" oriPrice="1288800" Buypermissions="11" retainBuyNum="1"/>
+		<item indexID="13" id="102272" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="498800" oriPrice="1688800" Buypermissions="12" retainBuyNum="1"/>
+		<item indexID="14" id="102273" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="698800" oriPrice="1988800" Buypermissions="13" retainBuyNum="1"/>
+		<item indexID="15" id="102274" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="998800" oriPrice="2988800" Buypermissions="14" retainBuyNum="1"/>
+		<item indexID="16" id="102275" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="1688800" oriPrice="3988800" Buypermissions="15" retainBuyNum="1"/>
+	</Shop>
+	<!--一般商店-->
+	<Shop id="1" refreshTime="86400" refreshType="1" costResType="2" costResNum="0" sellNum="7" Openclass="18" random="0">
+		<item indexID="1" id="101201" rate="100" maxBuyNum="50" buyNumOneTime="1" costResType="2" curPrice="2500" oriPrice="0" Buypermissions="0" vipPrivilege="8" priceID="2" retainBuyNum="0" Tag="ui_VipShop_45"/>
+		<item indexID="2" id="101202" rate="100" maxBuyNum="50" buyNumOneTime="1" costResType="2" curPrice="2500" oriPrice="0" Buypermissions="0" vipPrivilege="9" priceID="2" retainBuyNum="0" Tag="ui_VipShop_45"/>
+		<item indexID="3" id="102903" rate="100" maxBuyNum="3" buyNumOneTime="1" costResType="2" curPrice="32000" oriPrice="0" Buypermissions="0" vipPrivilege="0" priceID="0" retainBuyNum="0" Tag="ui_VipShop_45"/>
+		<item indexID="4" id="122216" rate="100" maxBuyNum="300" buyNumOneTime="1" costResType="2" curPrice="100" oriPrice="0" Buypermissions="0" vipPrivilege="38" priceID="0" retainBuyNum="0"/>
+		<item indexID="5" id="172100" rate="100" maxBuyNum="20" buyNumOneTime="1" costResType="2" curPrice="9000" oriPrice="0" Buypermissions="0" vipPrivilege="0" priceID="0" retainBuyNum="0"/>
+		<item indexID="6" id="172101" rate="100" maxBuyNum="20" buyNumOneTime="1" costResType="2" curPrice="9000" oriPrice="0" Buypermissions="0" vipPrivilege="0" priceID="0" retainBuyNum="0"/>
+		<item indexID="7" id="121222" rate="100" maxBuyNum="300" buyNumOneTime="1" costResType="2" curPrice="750" oriPrice="0" Buypermissions="0" vipPrivilege="0" priceID="0" retainBuyNum="0"/>
+		<item indexID="9" id="121220" rate="100" maxBuyNum="300" buyNumOneTime="1" costResType="2" curPrice="400" oriPrice="0" Buypermissions="0" vipPrivilege="0" priceID="10" retainBuyNum="0"/>
+		<item indexID="10" id="121205" rate="100" maxBuyNum="100" buyNumOneTime="1" costResType="2" curPrice="500" oriPrice="0" Buypermissions="0" vipPrivilege="0" priceID="4" retainBuyNum="0"/>
+		<item indexID="11" id="101207" rate="100" maxBuyNum="100" buyNumOneTime="1" costResType="2" curPrice="500" oriPrice="0" Buypermissions="0" vipPrivilege="0" priceID="6" retainBuyNum="0"/>
+		<item indexID="12" id="122205" rate="100" maxBuyNum="100" buyNumOneTime="1" costResType="2" curPrice="2500" oriPrice="0" Buypermissions="0" vipPrivilege="0" priceID="5" retainBuyNum="0"/>
+		<item indexID="13" id="102207" rate="100" maxBuyNum="100" buyNumOneTime="1" costResType="2" curPrice="1250" oriPrice="0" Buypermissions="0" vipPrivilege="0" priceID="7" retainBuyNum="0"/>
+		<item indexID="14" id="122253" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="7800" oriPrice="0" Buypermissions="0" vipPrivilege="0" priceID="0" retainBuyNum="0"/>
+		<item indexID="15" id="172518" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="1800" oriPrice="0" Buypermissions="0" vipPrivilege="0" priceID="0" retainBuyNum="0"/>
+		<item indexID="16" id="122131" rate="100" maxBuyNum="300" buyNumOneTime="1" costResType="2" curPrice="900" oriPrice="0" Buypermissions="0" vipPrivilege="38" priceID="0" retainBuyNum="0"/>
+		<item indexID="17" id="102816" rate="100" maxBuyNum="20" buyNumOneTime="1" costResType="2" curPrice="9999" oriPrice="0" Buypermissions="0" vipPrivilege="0" priceID="0" retainBuyNum="0"/>
+                <item indexID="18" id="101219" rate="100" maxBuyNum="300" buyNumOneTime="1" costResType="2" curPrice="2500" oriPrice="0" Buypermissions="0" vipPrivilege="0" priceID="0" retainBuyNum="0"/>
+		<item indexID="19" id="103014" rate="100" maxBuyNum="300" buyNumOneTime="1" costResType="2" curPrice="3999" oriPrice="0" Buypermissions="0" vipPrivilege="0" priceID="0" retainBuyNum="0"/>
+		<item indexID="20" id="100105" rate="100" maxBuyNum="300" buyNumOneTime="1" costResType="2" curPrice="100" oriPrice="0" Buypermissions="0" vipPrivilege="0" priceID="0" retainBuyNum="0"/>
+		
+		<!-- <item indexID="10" id="121221" rate="100" maxBuyNum="100" buyNumOneTime="1" costResType="2" curPrice="250" oriPrice="0" Buypermissions="0" vipPrivilege="0" priceID="0" retainBuyNum="0"/>
+		<item indexID="11" id="122131" rate="100" maxBuyNum="500" buyNumOneTime="1" costResType="2" curPrice="2000" oriPrice="0" Buypermissions="0" vipPrivilege="0" priceID="0" retainBuyNum="0"/>
+		 -->
+	</Shop>
+	<!--竞技场商店-->
+	<Shop id="4" refreshTime="86400" refreshType="1" costResType="4" costResNum="20" sellNum="10" Openclass="0" random="0">
+		<item indexID="1" id="54220000" rate="100" maxBuyNum="2" buyNumOneTime="1" costResType="4" curPrice="300" oriPrice="0" Buypermissions="0" Superscript="5" retainBuyNum="0"/>
+		<item indexID="6" id="712600" rate="100" maxBuyNum="2" buyNumOneTime="1" costResType="4" curPrice="120" oriPrice="0" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="2" id="722600" rate="100" maxBuyNum="2" buyNumOneTime="1" costResType="4" curPrice="120" oriPrice="0" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="3" id="732600" rate="100" maxBuyNum="2" buyNumOneTime="1" costResType="4" curPrice="120" oriPrice="0" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="4" id="742600" rate="100" maxBuyNum="2" buyNumOneTime="1" costResType="4" curPrice="120" oriPrice="0" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="5" id="650600" rate="100" maxBuyNum="2" buyNumOneTime="1" costResType="4" curPrice="80" oriPrice="0" Buypermissions="0" retainBuyNum="0"/>
+		<!-- <item indexID="6" id="122131" rate="100" maxBuyNum="20" buyNumOneTime="1" costResType="4" curPrice="20" oriPrice="0" Buypermissions="0" retainBuyNum="0"/> -->
+	</Shop>
+	<!--组队副本商店-->
+	<Shop id="6" refreshTime="86400" refreshType="1" costResType="6" costResNum="10" sellNum="3" Openclass="0" random="0">
+		<item indexID="1" id="811612" rate="100" maxBuyNum="4" buyNumOneTime="1" costResType="6" curPrice="3" oriPrice="0" Buypermissions="0"/>
+		<item indexID="2" id="342610" rate="100" maxBuyNum="2" buyNumOneTime="1" costResType="6" curPrice="6" oriPrice="0" Buypermissions="0"/>
+		<item indexID="3" id="362610" rate="100" maxBuyNum="2" buyNumOneTime="1" costResType="6" curPrice="6" oriPrice="0" Buypermissions="0"/>
+		<item indexID="4" id="712000" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="6" curPrice="3" oriPrice="0" Buypermissions="0"/>
+		<item indexID="5" id="722000" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="6" curPrice="3" oriPrice="0" Buypermissions="0"/>
+		<item indexID="6" id="732000" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="6" curPrice="3" oriPrice="0" Buypermissions="0"/>
+		<item indexID="7" id="742000" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="6" curPrice="3" oriPrice="0" Buypermissions="0"/>
+		<item indexID="8" id="650600" rate="100" maxBuyNum="3" buyNumOneTime="1" costResType="6" curPrice="3" oriPrice="0" Buypermissions="0"/>
+	</Shop>
+	<!--1v1商店-->
+	<Shop id="7" refreshTime="86400" refreshType="1" costResType="7" costResNum="30" sellNum="3" Openclass="0" random="0">
+		<item indexID="1" id="53220000" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="7" curPrice="200" oriPrice="0" Superscript="5" Buypermissions="0"/>
+		<item indexID="9" id="811607" rate="100" maxBuyNum="4" buyNumOneTime="1" costResType="7" curPrice="50" oriPrice="0" Buypermissions="0"/>
+		<item indexID="2" id="121204" rate="100" maxBuyNum="5" buyNumOneTime="1" costResType="7" curPrice="10" oriPrice="0" Buypermissions="0"/>
+		<item indexID="3" id="122204" rate="100" maxBuyNum="5" buyNumOneTime="1" costResType="7" curPrice="20" oriPrice="0" Buypermissions="0"/>
+		<!-- <item indexID="4" id="102817" rate="100" maxBuyNum="5" buyNumOneTime="1" costResType="7" curPrice="20" oriPrice="0" Buypermissions="0"/>
+		<item indexID="5" id="102815" rate="100" maxBuyNum="3" buyNumOneTime="1" costResType="7" curPrice="100" oriPrice="0" Buypermissions="0"/>-->
+		<item indexID="4" id="102817" rate="100" maxBuyNum="5" buyNumOneTime="1" costResType="7" curPrice="20" oriPrice="0" Buypermissions="0"/>
+		<item indexID="6" id="102818" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="7" curPrice="50" oriPrice="0" Buypermissions="0"/>
+		<item indexID="7" id="100103" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="7" curPrice="5" oriPrice="0" Buypermissions="0"/>
+		<item indexID="8" id="100403" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="7" curPrice="15" oriPrice="0" Buypermissions="0"/>
+	</Shop>
+	<!--3v3商店-->
+	<Shop id="5" refreshTime="86400" refreshType="1" costResType="5" costResNum="30" sellNum="10" Openclass="0" random="0">
+		<item indexID="1" id="57222900" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="5" curPrice="200" oriPrice="0" Superscript="5" Buypermissions="0"/>
+		<item indexID="9" id="102650" rate="100" maxBuyNum="5" buyNumOneTime="1" costResType="5" curPrice="100" oriPrice="0" Buypermissions="0"/>
+		<item indexID="2" id="102651" rate="100" maxBuyNum="5" buyNumOneTime="1" costResType="5" curPrice="100" oriPrice="0" Buypermissions="0"/>
+		<item indexID="3" id="102652" rate="100" maxBuyNum="5" buyNumOneTime="1" costResType="5" curPrice="100" oriPrice="0" Buypermissions="0"/>
+		<item indexID="4" id="120101" rate="100" maxBuyNum="50" buyNumOneTime="1" costResType="5" curPrice="10" oriPrice="0" Buypermissions="0"/>
+		<item indexID="5" id="121222" rate="100" maxBuyNum="20" buyNumOneTime="1" costResType="5" curPrice="20" oriPrice="0" Buypermissions="0"/>
+		<item indexID="6" id="100104" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="5" curPrice="50" oriPrice="0" Buypermissions="0"/>
+		<item indexID="7" id="100404" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="5" curPrice="5" oriPrice="0" Buypermissions="0"/>
+		<item indexID="8" id="101218" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="5" curPrice="10" oriPrice="0" Buypermissions="0"/>
+	</Shop>
+	<!--擂台副本商店-->
+	<Shop id="8" refreshTime="86400" refreshType="1" costResType="8" costResNum="20" sellNum="10" Openclass="0" random="0">
+		<item indexID="1" id="811615" rate="100" maxBuyNum="4" buyNumOneTime="1" costResType="8" curPrice="3" oriPrice="0" Buypermissions="0"/>
+		<item indexID="2" id="122207" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="8" curPrice="2" oriPrice="0" Buypermissions="0"/>
+		<item indexID="3" id="101204" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="8" curPrice="2" oriPrice="0" Buypermissions="0"/>
+		<item indexID="4" id="712400" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="8" curPrice="8" oriPrice="0" Buypermissions="0"/>
+		<item indexID="5" id="722400" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="8" curPrice="8" oriPrice="0" Buypermissions="0"/>
+		<item indexID="6" id="732400" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="8" curPrice="8" oriPrice="0" Buypermissions="0"/>
+		<item indexID="7" id="742400" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="8" curPrice="8" oriPrice="0" Buypermissions="0"/>
+	</Shop>
+	<!--翡翠梦境商店-->
+	<Shop id="101" refreshTime="86400" refreshType="1" costResType="16" costResNum="200" sellNum="10" Openclass="20" random="0">
+		<item indexID="1" id="121221" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="16" curPrice="300" oriPrice="0" Buypermissions="0"/>
+		<item indexID="2" id="121220" rate="100" maxBuyNum="5" buyNumOneTime="1" costResType="16" curPrice="150" oriPrice="0" Buypermissions="0"/>
+		<item indexID="3" id="122207" rate="100" maxBuyNum="5" buyNumOneTime="1" costResType="16" curPrice="200" oriPrice="0" Buypermissions="0"/>
+		<item indexID="4" id="101204" rate="100" maxBuyNum="5" buyNumOneTime="1" costResType="16" curPrice="200" oriPrice="0" Buypermissions="0"/>
+	</Shop>
+	<!--神秘商店-->
+	<Shop id="102" refreshTime="86400" refreshType="2" costResType="122306" costResNum="1" sellNum="8" Openclass="20" random="1">
+		<item indexID="1" id="121204" rate="100000" maxBuyNum="1" buyNumOneTime="5" costResType="19" curPrice="120" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="2" id="122204" rate="100000" maxBuyNum="1" buyNumOneTime="5" costResType="19" curPrice="160" oriPrice="0" Superscript="2" Buypermissions="0"/>
+		<item indexID="3" id="101212" rate="100000" maxBuyNum="1" buyNumOneTime="5" costResType="19" curPrice="160" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="4" id="811604" rate="16660" maxBuyNum="1" buyNumOneTime="10" costResType="19" curPrice="100" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="5" id="811605" rate="16660" maxBuyNum="1" buyNumOneTime="10" costResType="19" curPrice="100" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="6" id="811610" rate="16660" maxBuyNum="1" buyNumOneTime="10" costResType="19" curPrice="100" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="7" id="811619" rate="16660" maxBuyNum="1" buyNumOneTime="10" costResType="19" curPrice="100" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="8" id="811620" rate="16660" maxBuyNum="1" buyNumOneTime="10" costResType="19" curPrice="100" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="9" id="811633" rate="16660" maxBuyNum="1" buyNumOneTime="10" costResType="19" curPrice="100" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="10" id="811604" rate="12500" maxBuyNum="1" buyNumOneTime="10" costResType="19" curPrice="80" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="11" id="811605" rate="12500" maxBuyNum="1" buyNumOneTime="10" costResType="19" curPrice="80" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="12" id="811610" rate="12500" maxBuyNum="1" buyNumOneTime="10" costResType="19" curPrice="80" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="13" id="811619" rate="12500" maxBuyNum="1" buyNumOneTime="10" costResType="19" curPrice="80" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="14" id="811620" rate="12500" maxBuyNum="1" buyNumOneTime="10" costResType="19" curPrice="80" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="15" id="811633" rate="12500" maxBuyNum="1" buyNumOneTime="10" costResType="19" curPrice="80" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="16" id="811608" rate="16660" maxBuyNum="1" buyNumOneTime="10" costResType="19" curPrice="600" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="17" id="811609" rate="16660" maxBuyNum="1" buyNumOneTime="10" costResType="19" curPrice="600" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="18" id="811611" rate="16660" maxBuyNum="1" buyNumOneTime="10" costResType="19" curPrice="250" oriPrice="0" Superscript="2" Buypermissions="0"/>
+		<item indexID="19" id="811612" rate="16660" maxBuyNum="1" buyNumOneTime="10" costResType="19" curPrice="250" oriPrice="0" Superscript="2" Buypermissions="0"/>
+		<item indexID="20" id="811613" rate="16660" maxBuyNum="1" buyNumOneTime="10" costResType="19" curPrice="250" oriPrice="0" Superscript="2" Buypermissions="0"/>
+		<item indexID="21" id="811616" rate="16660" maxBuyNum="1" buyNumOneTime="10" costResType="19" curPrice="250" oriPrice="0" Superscript="2" Buypermissions="0"/>
+		<item indexID="22" id="811608" rate="12500" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="9999" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="23" id="811609" rate="12500" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="9999" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="24" id="811611" rate="12500" maxBuyNum="1" buyNumOneTime="1" costResType="19" curPrice="200" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="25" id="811612" rate="12500" maxBuyNum="1" buyNumOneTime="1" costResType="19" curPrice="200" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="26" id="811613" rate="12500" maxBuyNum="1" buyNumOneTime="1" costResType="19" curPrice="200" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="27" id="811616" rate="12500" maxBuyNum="1" buyNumOneTime="1" costResType="19" curPrice="200" oriPrice="0" Superscript="0" Buypermissions="0"/>
+		<item indexID="28" id="811607" rate="18750" maxBuyNum="1" buyNumOneTime="5" costResType="19" curPrice="400" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="29" id="811615" rate="18750" maxBuyNum="1" buyNumOneTime="5" costResType="19" curPrice="400" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="30" id="811624" rate="18750" maxBuyNum="1" buyNumOneTime="5" costResType="19" curPrice="400" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="31" id="811625" rate="18750" maxBuyNum="1" buyNumOneTime="5" costResType="19" curPrice="400" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="32" id="811607" rate="25000" maxBuyNum="1" buyNumOneTime="10" costResType="2" curPrice="4800" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="33" id="811615" rate="25000" maxBuyNum="1" buyNumOneTime="10" costResType="2" curPrice="4800" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="34" id="811624" rate="25000" maxBuyNum="1" buyNumOneTime="10" costResType="2" curPrice="4800" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="35" id="811625" rate="25000" maxBuyNum="1" buyNumOneTime="10" costResType="2" curPrice="4800" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="36" id="811606" rate="18750" maxBuyNum="1" buyNumOneTime="5" costResType="19" curPrice="800" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="37" id="811617" rate="18750" maxBuyNum="1" buyNumOneTime="5" costResType="19" curPrice="800" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="38" id="811618" rate="18750" maxBuyNum="1" buyNumOneTime="5" costResType="19" curPrice="800" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="39" id="811621" rate="18750" maxBuyNum="1" buyNumOneTime="5" costResType="19" curPrice="800" oriPrice="0" Superscript="3" Buypermissions="0"/>
+		<item indexID="40" id="811606" rate="25000" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="8800" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="41" id="811617" rate="25000" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="8800" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="42" id="811618" rate="25000" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="8800" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="43" id="811621" rate="25000" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="8800" oriPrice="0" Superscript="1" Buypermissions="0"/>
+		<item indexID="44" id="51220000" rate="25000" maxBuyNum="1" buyNumOneTime="1" costResType="19" curPrice="800" oriPrice="0" Superscript="5" Buypermissions="0"/>
+	</Shop>
+	
+	<!--荣耀战场商店-->
+	<Shop id="104" refreshTime="86400" refreshType="1" costResType="18" costResNum="200" sellNum="10" Openclass="20" random="0">
+		<item indexID="1" id="121220" rate="100" maxBuyNum="5" buyNumOneTime="1" costResType="16" curPrice="150" oriPrice="0" Buypermissions="0"/>
+		<item indexID="2" id="121222" rate="100" maxBuyNum="5" buyNumOneTime="1" costResType="16" curPrice="200" oriPrice="0" Buypermissions="0"/>
+		<item indexID="3" id="122207" rate="100" maxBuyNum="5" buyNumOneTime="1" costResType="16" curPrice="400" oriPrice="0" Buypermissions="0"/>
+		<item indexID="4" id="101204" rate="100" maxBuyNum="5" buyNumOneTime="1" costResType="16" curPrice="300" oriPrice="0" Buypermissions="0"/>
+		<item indexID="5" id="121221" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="16" curPrice="300" oriPrice="0" Buypermissions="0"/>
+		<item indexID="6" id="120424" rate="100" maxBuyNum="3" buyNumOneTime="1" costResType="16" curPrice="200" oriPrice="0" Buypermissions="0"/>
+	</Shop>
+	
+	<!--VIP周礼包-->
+	<Shop id="10" refreshTime="86400" refreshType="4" costResType="2" costResNum="0" sellNum="16" Openclass="0" random="0">
+		<item indexID="1" id="172280" idshow="1" rate="100" maxBuyNum="1" buyNumOneTime="1" buyNumOneTimeShow="500000" costResType="2" curPrice="100" oriPrice="200" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="2" id="172281" idshow="101201" rate="100" maxBuyNum="1" buyNumOneTime="1" buyNumOneTimeShow="5" costResType="2" curPrice="200" oriPrice="400" Buypermissions="1" retainBuyNum="0"/>
+		<item indexID="3" id="172282" idshow="101202" rate="100" maxBuyNum="1" buyNumOneTime="1" buyNumOneTimeShow="10" costResType="2" curPrice="250" oriPrice="500" Buypermissions="2" retainBuyNum="0"/>
+		<item indexID="4" id="172283" idshow="101290" rate="100" maxBuyNum="1" buyNumOneTime="1" buyNumOneTimeShow="15" costResType="2" curPrice="250" oriPrice="500" Buypermissions="3" retainBuyNum="0"/>
+		<item indexID="5" id="172284" idshow="120101" rate="100" maxBuyNum="1" buyNumOneTime="1" buyNumOneTimeShow="100" costResType="2" curPrice="200" oriPrice="400" Buypermissions="4" retainBuyNum="0"/>
+		<item indexID="6" id="172285" idshow="811616" rate="100" maxBuyNum="1" buyNumOneTime="1" buyNumOneTimeShow="20" costResType="2" curPrice="840" oriPrice="1680" Buypermissions="5" retainBuyNum="0"/>
+		<item indexID="7" id="172286" idshow="122206" rate="100" maxBuyNum="1" buyNumOneTime="1" buyNumOneTimeShow="50" costResType="2" curPrice="500" oriPrice="1000" Buypermissions="6" retainBuyNum="0"/>
+		<item indexID="8" id="172287" idshow="102659" rate="100" maxBuyNum="1" buyNumOneTime="1" buyNumOneTimeShow="1" costResType="2" curPrice="500" oriPrice="1000" Buypermissions="7" retainBuyNum="0"/>
+		<item indexID="9" id="172288" idshow="120101" rate="100" maxBuyNum="1" buyNumOneTime="1" buyNumOneTimeShow="400" costResType="2" curPrice="800" oriPrice="1600" Buypermissions="8" retainBuyNum="0"/>
+		<item indexID="10" id="172289" idshow="1" rate="100" maxBuyNum="1" buyNumOneTime="1" buyNumOneTimeShow="2000000" costResType="2" curPrice="400" oriPrice="800" Buypermissions="9" retainBuyNum="0"/>
+		<item indexID="11" id="172290" idshow="811616" rate="100" maxBuyNum="1" buyNumOneTime="1" buyNumOneTimeShow="50" costResType="2" curPrice="2100" oriPrice="4200" Buypermissions="10" retainBuyNum="0"/>
+		<item indexID="12" id="172291" idshow="122206" rate="100" maxBuyNum="1" buyNumOneTime="1" buyNumOneTimeShow="100" costResType="2" curPrice="1000" oriPrice="2000" Buypermissions="11" retainBuyNum="0"/>
+		<item indexID="13" id="172292" idshow="102313" rate="100" maxBuyNum="1" buyNumOneTime="1" buyNumOneTimeShow="1" costResType="2" curPrice="840" oriPrice="1680" Buypermissions="12" retainBuyNum="0"/>
+		<item indexID="14" id="172293" idshow="102314" rate="100" maxBuyNum="1" buyNumOneTime="1" buyNumOneTimeShow="1" costResType="2" curPrice="1680" oriPrice="3360" Buypermissions="13" retainBuyNum="0"/>
+		<item indexID="15" id="172294" idshow="102313" rate="100" maxBuyNum="1" buyNumOneTime="1" buyNumOneTimeShow="3" costResType="2" curPrice="2520" oriPrice="5040" Buypermissions="14" retainBuyNum="0"/>
+		<item indexID="16" id="172295" idshow="102314" rate="100" maxBuyNum="1" buyNumOneTime="1" buyNumOneTimeShow="3" costResType="2" curPrice="5040" oriPrice="10080" Buypermissions="15" retainBuyNum="0"/>
+	</Shop>
+	<!--限时商店  限时特惠1-->
+	<Shop id="11" refreshTime="86400" refreshType="4" costResType="2" costResNum="0" sellNum="3" Openclass="0" random="0">
+		<item indexID="1" id="172200" rate="100" maxBuyNum="5" buyNumOneTime="1" costResType="2" curPrice="300" oriPrice="600" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="2" id="172201" rate="100" maxBuyNum="5" buyNumOneTime="1" costResType="2" curPrice="650" oriPrice="2150" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="3" id="172202" rate="100" maxBuyNum="3" buyNumOneTime="1" costResType="2" curPrice="800" oriPrice="2400" Buypermissions="0" retainBuyNum="0"/>
+	</Shop>
+	<!--限时商店  限时特惠2-->
+	<Shop id="12" refreshTime="86400" refreshType="4" costResType="2" costResNum="0" sellNum="3" Openclass="0" random="0">
+		<item indexID="1" id="172203" rate="100" maxBuyNum="5" buyNumOneTime="1" costResType="2" curPrice="400" oriPrice="1000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="2" id="172204" rate="100" maxBuyNum="5" buyNumOneTime="1" costResType="2" curPrice="800" oriPrice="2400" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="3" id="172205" rate="100" maxBuyNum="3" buyNumOneTime="1" costResType="2" curPrice="1000" oriPrice="5000" Buypermissions="0" retainBuyNum="0"/>
+	</Shop>
+	<!--竞技场排名商店-->
+	<Shop id="13" refreshTime="86400" refreshType="3" costResType="2" costResNum="0" sellNum="18" Openclass="0" random="0">
+		<item indexID="1" id="172262" idshow="1" rate="100" maxBuyNum="1" buyNumOneTime="1" buyNumOneTimeShow="250000" costResType="4" curPrice="50" oriPrice="100" Buypermissions="1000" retainBuyNum="1"/>
+		<item indexID="2" id="172263" idshow="9" rate="100" maxBuyNum="1" buyNumOneTime="1" buyNumOneTimeShow="40000" costResType="4" curPrice="100" oriPrice="200" Buypermissions="500" retainBuyNum="1"/>
+		<item indexID="3" id="172264" idshow="120101" rate="100" maxBuyNum="1" buyNumOneTime="1" buyNumOneTimeShow="100" costResType="4" curPrice="200" oriPrice="400" Buypermissions="300" retainBuyNum="1"/>
+		<item indexID="4" id="172265" idshow="2" rate="100" maxBuyNum="1" buyNumOneTime="1" buyNumOneTimeShow="250" costResType="4" curPrice="250" oriPrice="500" Buypermissions="200" retainBuyNum="1"/>
+		<item indexID="5" id="172266" idshow="122131" rate="100" maxBuyNum="1" buyNumOneTime="1" buyNumOneTimeShow="60" costResType="4" curPrice="300" oriPrice="600" Buypermissions="100" retainBuyNum="1"/>
+		<item indexID="6" id="172267" idshow="122206" rate="100" maxBuyNum="1" buyNumOneTime="1" buyNumOneTimeShow="40" costResType="4" curPrice="400" oriPrice="800" Buypermissions="50" retainBuyNum="1"/>
+		<item indexID="7" id="172268" idshow="651200" rate="100" maxBuyNum="1" buyNumOneTime="1" buyNumOneTimeShow="4" costResType="4" curPrice="500" oriPrice="1000" Buypermissions="20" retainBuyNum="1"/>
+		<item indexID="8" id="172269" idshow="2" rate="100" maxBuyNum="1" buyNumOneTime="1" buyNumOneTimeShow="1000" costResType="4" curPrice="1000" oriPrice="2000" Buypermissions="10" retainBuyNum="1"/>
+		<item indexID="9" id="172270" idshow="811607" rate="100" maxBuyNum="1" buyNumOneTime="1" buyNumOneTimeShow="30" costResType="4" curPrice="2000" oriPrice="4000" Buypermissions="5" retainBuyNum="1"/>
+		<item indexID="10" id="172271" idshow="612800" rate="100" maxBuyNum="1" buyNumOneTime="1" buyNumOneTimeShow="1" costResType="4" curPrice="3000" oriPrice="6000" Buypermissions="1" retainBuyNum="1"/>
+	</Shop>
+	<!--限时商店  超值装备1 武器 帽子-->
+	<Shop id="14" refreshTime="86400" refreshType="1" costResType="2" costResNum="0" sellNum="6" Openclass="0" random="0">
+		<item indexID="1" id="322600" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="480" oriPrice="600" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="2" id="322610" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="480" oriPrice="600" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="3" id="322620" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="480" oriPrice="600" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="4" id="302600" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="320" oriPrice="400" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="5" id="302610" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="320" oriPrice="400" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="6" id="302620" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="320" oriPrice="400" Buypermissions="0" retainBuyNum="0"/>
+	</Shop>
+	<!--限时商店  超值装备2 项链 衣服-->
+	<Shop id="15" refreshTime="86400" refreshType="1" costResType="2" costResNum="0" sellNum="6" Openclass="0" random="0">
+		<item indexID="1" id="342600" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="640" oriPrice="800" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="2" id="342610" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="640" oriPrice="800" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="3" id="342620" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="640" oriPrice="800" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="4" id="312600" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="320" oriPrice="400" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="5" id="312610" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="320" oriPrice="400" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="6" id="312620" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="320" oriPrice="400" Buypermissions="0" retainBuyNum="0"/>
+	</Shop>
+	<!--限时商店  超值装备3 戒指 裤子-->
+	<Shop id="16" refreshTime="86400" refreshType="1" costResType="2" costResNum="0" sellNum="6" Openclass="0" random="0">
+		<item indexID="1" id="362600" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="640" oriPrice="800" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="2" id="362610" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="640" oriPrice="800" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="3" id="362620" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="640" oriPrice="800" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="4" id="332600" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="320" oriPrice="400" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="5" id="332610" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="320" oriPrice="400" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="6" id="332620" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="320" oriPrice="400" Buypermissions="0" retainBuyNum="0"/>
+	</Shop>
+	<!--限时商店  超值装备4 武器 披风-->
+	<Shop id="17" refreshTime="86400" refreshType="1" costResType="2" costResNum="0" sellNum="6" Openclass="0" random="0">
+		<item indexID="1" id="322600" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="480" oriPrice="600" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="2" id="322610" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="480" oriPrice="600" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="3" id="322620" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="480" oriPrice="600" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="4" id="352600" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="320" oriPrice="400" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="5" id="352610" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="320" oriPrice="400" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="6" id="352620" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="320" oriPrice="400" Buypermissions="0" retainBuyNum="0"/>
+	</Shop>
+	<!--限时商店  每日兑换-->
+	<Shop id="18" refreshTime="86400" refreshType="4" costResType="2" costResNum="0" sellNum="6" Openclass="0" random="0">
+		<item indexID="1" id="122211" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="4" curPrice="300" oriPrice="500" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="2" id="152009" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="6" curPrice="40" oriPrice="60" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="3" id="102645" rate="100" maxBuyNum="5" buyNumOneTime="1" costResType="7" curPrice="60" oriPrice="80" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="4" id="102331" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="5" curPrice="150" oriPrice="200" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="5" id="102344" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="8" curPrice="50" oriPrice="100" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="6" id="102345" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="8" curPrice="50" oriPrice="100" Buypermissions="0" retainBuyNum="0"/>
+	</Shop>
+	<!--限时商店  限时时装  海军时装整套+学院时装2个部件+小猪鼻子+奶嘴+防风眼镜-->
+	<Shop id="19" refreshTime="86400" refreshType="1" costResType="2" costResNum="0" sellNum="6" Openclass="0" random="0">
+		<item indexID="1" id="162209" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="4950" oriPrice="6600" Buypermissions="0" retainBuyNum="1"/>
+		<item indexID="2" id="51221400" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="2" curPrice="60" oriPrice="100" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="3" id="59221400" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="2" curPrice="60" oriPrice="100" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="4" id="57221500" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="2" curPrice="36" oriPrice="60" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="5" id="57221600" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="2" curPrice="36" oriPrice="60" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="6" id="57220100" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="2" curPrice="36" oriPrice="60" Buypermissions="0" retainBuyNum="0"/>
+	</Shop>
+	<!--限时商店  限时时装  伯爵时装整套+玫瑰花+大耳机+小丑鼻子+面罩+胡子-->
+	<Shop id="20" refreshTime="86400" refreshType="1" costResType="2" costResNum="0" sellNum="6" Openclass="0" random="0">
+		<item indexID="1" id="162201" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="5235" oriPrice="6980" Buypermissions="0" retainBuyNum="1"/>
+		<item indexID="2" id="57221700" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="2" curPrice="36" oriPrice="60" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="3" id="57222600" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="2" curPrice="36" oriPrice="60" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="4" id="57220000" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="1" curPrice="120000" oriPrice="200000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="5" id="57222300" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="1" curPrice="120000" oriPrice="200000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="6" id="57222000" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="1" curPrice="120000" oriPrice="200000" Buypermissions="0" retainBuyNum="0"/>
+	</Shop>
+	<!--限时商店  限时时装  暗黑时装整套+军官时装2个部件+萌萌猫耳+萌萌兔耳+雷朋眼镜-->
+	<Shop id="21" refreshTime="86400" refreshType="1" costResType="2" costResNum="0" sellNum="6" Openclass="0" random="0">
+		<item indexID="1" id="162212" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="5820" oriPrice="7760" Buypermissions="0" retainBuyNum="1"/>
+		<item indexID="2" id="51221300" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="2" curPrice="60" oriPrice="100" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="3" id="59221300" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="2" curPrice="60" oriPrice="100" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="4" id="57222700" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="2" curPrice="36" oriPrice="60" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="5" id="57222800" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="2" curPrice="36" oriPrice="60" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="6" id="57221300" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="2" curPrice="36" oriPrice="60" Buypermissions="0" retainBuyNum="0"/>
+	</Shop>
+	<!--限时商店  限时时装  赛亚时装整套+兔子时装3个部件+战力眼镜+恶魔头饰-->
+	<Shop id="22" refreshTime="86400" refreshType="1" costResType="2" costResNum="0" sellNum="6" Openclass="0" random="0">
+		<item indexID="1" id="162205" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="5820" oriPrice="7760" Buypermissions="0" retainBuyNum="1"/>
+		<item indexID="2" id="51221500" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="2" curPrice="60" oriPrice="100" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="3" id="59221500" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="2" curPrice="60" oriPrice="100" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="4" id="53221500" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="2" curPrice="60" oriPrice="100" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="5" id="57221100" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="2" curPrice="36" oriPrice="60" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="6" id="57223600" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="2" curPrice="36" oriPrice="60" Buypermissions="0" retainBuyNum="0"/>
+	</Shop>
+	<!--限时商店  限时表情  生气脸+害羞脸+天真脸（钻石） + 严肃脸+可爱脸+帅气脸（金币）-->
+	<Shop id="23" refreshTime="86400" refreshType="1" costResType="2" costResNum="0" sellNum="6" Openclass="0" random="0">
+		<item indexID="1" id="55210800" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="2" curPrice="36" oriPrice="60" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="2" id="55210900" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="2" curPrice="36" oriPrice="60" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="3" id="55211000" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="2" curPrice="36" oriPrice="60" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="4" id="55210000" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="1" curPrice="80000" oriPrice="160000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="5" id="55210100" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="1" curPrice="80000" oriPrice="160000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="6" id="55210200" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="1" curPrice="80000" oriPrice="160000" Buypermissions="0" retainBuyNum="0"/>
+	</Shop>
+	<!--限时商店  限时表情  吐舌脸+哭泣脸+无语脸（钻石） + 高冷脸+无辜脸+淡定脸（金币）-->
+	<Shop id="24" refreshTime="86400" refreshType="1" costResType="2" costResNum="0" sellNum="6" Openclass="0" random="0">
+		<item indexID="1" id="55211100" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="2" curPrice="36" oriPrice="60" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="2" id="55211200" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="2" curPrice="36" oriPrice="60" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="3" id="55211300" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="2" curPrice="36" oriPrice="60" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="4" id="55210300" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="1" curPrice="80000" oriPrice="160000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="5" id="55210400" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="1" curPrice="80000" oriPrice="160000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="6" id="55210500" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="1" curPrice="80000" oriPrice="160000" Buypermissions="0" retainBuyNum="0"/>
+	</Shop>
+	<!--限时商店  限时表情  星星脸+蚊香眼+大叔脸（钻石） + 暴走脸+爱心脸+小丑脸（金币）-->
+	<Shop id="25" refreshTime="86400" refreshType="1" costResType="2" costResNum="0" sellNum="6" Openclass="0" random="0">
+		<item indexID="1" id="55211400" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="2" curPrice="12" oriPrice="30" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="2" id="55211500" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="2" curPrice="12" oriPrice="30" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="3" id="55211600" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="2" curPrice="12" oriPrice="30" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="4" id="55210600" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="1" curPrice="80000" oriPrice="160000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="5" id="55210700" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="1" curPrice="80000" oriPrice="160000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="6" id="55211700" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="1" curPrice="80000" oriPrice="160000" Buypermissions="0" retainBuyNum="0"/>
+	</Shop>
+	<!--限时商店  限时饰品  小猫头饰+小鸡头饰+蝴蝶结（钻石）+太阳镜+忍者面具+长鼻子-->
+	<Shop id="26" refreshTime="86400" refreshType="1" costResType="2" costResNum="0" sellNum="6" Openclass="0" random="0">
+		<item indexID="1" id="57222900" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="2" curPrice="48" oriPrice="80" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="2" id="57223000" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="2" curPrice="48" oriPrice="80" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="3" id="57223500" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="2" curPrice="48" oriPrice="80" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="4" id="57220200" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="1" curPrice="120000" oriPrice="200000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="5" id="57221900" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="1" curPrice="120000" oriPrice="200000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="6" id="57222100" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="1" curPrice="120000" oriPrice="200000" Buypermissions="0" retainBuyNum="0"/>
+	</Shop>
+	<!--限时商店  限时饰品  萌萌猫耳+萌萌兔耳+玫瑰花（钻石）+船长眼镜+黑框眼镜+机车面罩-->
+	<Shop id="27" refreshTime="86400" refreshType="1" costResType="2" costResNum="0" sellNum="6" Openclass="0" random="0">
+		<item indexID="1" id="57222700" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="2" curPrice="48" oriPrice="80" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="2" id="57222800" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="2" curPrice="48" oriPrice="80" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="3" id="57221700" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="2" curPrice="48" oriPrice="80" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="4" id="57221200" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="1" curPrice="120000" oriPrice="200000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="5" id="57221400" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="1" curPrice="120000" oriPrice="200000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="6" id="57222300" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="1" curPrice="120000" oriPrice="200000" Buypermissions="0" retainBuyNum="0"/>
+	</Shop>
+	<!--限时商店  限时饰品  宝石皇冠+潜水镜+金丝眼镜+浓眉+龅牙+口罩-->
+	<Shop id="28" refreshTime="86400" refreshType="1" costResType="2" costResNum="0" sellNum="6" Openclass="0" random="0">
+		<item indexID="1" id="57223100" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="2" curPrice="48" oriPrice="80" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="2" id="57223200" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="2" curPrice="48" oriPrice="80" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="3" id="57221800" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="2" curPrice="48" oriPrice="80" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="4" id="57223300" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="1" curPrice="120000" oriPrice="200000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="5" id="57223400" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="1" curPrice="120000" oriPrice="200000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="6" id="57222200" rate="100" maxBuyNum="7" buyNumOneTime="1" costResType="1" curPrice="120000" oriPrice="200000" Buypermissions="0" retainBuyNum="0"/>
+	</Shop>
+	<!--时装商店  钻石时装：海军套装    金币时装：学院套装    钻石饰品：宝石皇冠+潜水镜+金丝眼镜    金币饰品：浓眉+龅牙+口罩 -->
+	<Shop id="29" refreshTime="86400" refreshType="1" costResType="2" costResNum="0" sellNum="6" Openclass="0" random="0">
+		<item indexID="1" id="51220800" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="30" oriPrice="1000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="2" id="53220800" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="30" oriPrice="1000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="3" id="59220800" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="30" oriPrice="1000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="4" id="51221400" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="1" curPrice="200000" oriPrice="4500000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="5" id="59221400" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="1" curPrice="200000" oriPrice="4500000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="6" id="57223100" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="15" oriPrice="400" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="7" id="57223200" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="15" oriPrice="400" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="8" id="57221800" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="15" oriPrice="400" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="9" id="57223300" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="1" curPrice="100000" oriPrice="1500000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="10" id="57223400" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="1" curPrice="100000" oriPrice="1500000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="11" id="57222200" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="1" curPrice="100000" oriPrice="1500000" Buypermissions="0" retainBuyNum="0"/>
+	</Shop>
+	<!--时装商店  钻石时装：伯爵套装    金币时装：军官套装    钻石表情：星星脸+蚊香脸+大叔脸    金币表情：暴走脸+爱心脸+小丑脸 -->
+	<Shop id="30" refreshTime="86400" refreshType="1" costResType="2" costResNum="0" sellNum="6" Openclass="0" random="0">
+		<item indexID="1" id="51220000" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="35" oriPrice="1200" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="2" id="52220000" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="35" oriPrice="1200" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="3" id="53220000" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="35" oriPrice="1200" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="4" id="54220000" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="35" oriPrice="1200" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="5" id="51221300" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="1" curPrice="200000" oriPrice="4500000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="6" id="59221300" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="1" curPrice="200000" oriPrice="4500000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="7" id="55211400" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="15" oriPrice="400" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="8" id="55211500" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="15" oriPrice="400" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="9" id="55211600" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="15" oriPrice="400" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="10" id="55210600" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="1" curPrice="100000" oriPrice="1500000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="11" id="55210700" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="1" curPrice="100000" oriPrice="1500000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="12" id="55211700" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="1" curPrice="100000" oriPrice="1500000" Buypermissions="0" retainBuyNum="0"/>
+	</Shop>
+	<!--时装商店  钻石时装：兔子套装    金币时装：海军套装    钻石饰品：萌萌猫耳+萌萌兔耳+玫瑰花    金币饰品：船长眼镜+黑框眼镜+机车面罩 -->
+	<Shop id="31" refreshTime="86400" refreshType="1" costResType="2" costResNum="0" sellNum="6" Openclass="0" random="0">
+		<item indexID="1" id="51221500" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="30" oriPrice="800" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="2" id="53221500" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="30" oriPrice="800" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="3" id="59221500" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="30" oriPrice="800" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="4" id="51220800" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="1" curPrice="200000" oriPrice="4500000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="5" id="53220800" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="1" curPrice="200000" oriPrice="4500000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="6" id="59220800" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="1" curPrice="200000" oriPrice="4500000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="7" id="57222700" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="15" oriPrice="800" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="8" id="57222800" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="15" oriPrice="800" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="9" id="57221700" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="15" oriPrice="800" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="10" id="57221200" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="1" curPrice="100000" oriPrice="1500000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="11" id="57221400" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="1" curPrice="100000" oriPrice="1500000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="12" id="57222300" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="1" curPrice="100000" oriPrice="1500000" Buypermissions="0" retainBuyNum="0"/>
+	</Shop>
+	<!--时装商店  钻石时装：宫廷套装    金币时装：伯爵套装    钻石表情：吐舌脸+哭泣脸+无语脸    金币表情：高冷脸+无辜脸+淡定脸 -->
+	<Shop id="32" refreshTime="86400" refreshType="1" costResType="2" costResNum="0" sellNum="6" Openclass="0" random="0">
+		<item indexID="1" id="51221200" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="40" oriPrice="1600" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="2" id="59221200" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="40" oriPrice="1600" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="3" id="51220000" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="1" curPrice="200000" oriPrice="4500000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="4" id="52220000" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="1" curPrice="200000" oriPrice="4500000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="5" id="53220000" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="1" curPrice="200000" oriPrice="4500000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="6" id="54220000" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="1" curPrice="200000" oriPrice="4500000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="7" id="55211100" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="15" oriPrice="800" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="8" id="55211200" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="15" oriPrice="800" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="9" id="55211300" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="15" oriPrice="800" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="10" id="55210300" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="1" curPrice="100000" oriPrice="1500000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="11" id="55210400" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="1" curPrice="100000" oriPrice="1500000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="12" id="55210500" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="1" curPrice="100000" oriPrice="1500000" Buypermissions="0" retainBuyNum="0"/>
+	</Shop>
+	<!--时装商店  钻石表情：生气脸+害羞脸+天真脸    金币表情：严肃脸+可爱脸+帅气脸    钻石饰品：小猫头饰+小鸡头饰+蝴蝶结    金币饰品：太阳镜+忍者面具+长鼻子 -->
+	<Shop id="33" refreshTime="86400" refreshType="1" costResType="2" costResNum="0" sellNum="6" Openclass="0" random="0">
+		<item indexID="1" id="55210800" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="15" oriPrice="800" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="2" id="55210900" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="15" oriPrice="800" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="3" id="55211000" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="15" oriPrice="800" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="4" id="55210000" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="1" curPrice="100000" oriPrice="3000000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="5" id="55210100" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="1" curPrice="100000" oriPrice="3000000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="6" id="55210200" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="1" curPrice="100000" oriPrice="3000000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="7" id="57222900" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="20" oriPrice="800" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="8" id="57223000" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="20" oriPrice="800" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="9" id="57223500" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="20" oriPrice="800" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="10" id="57220200" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="1" curPrice="120000" oriPrice="3000000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="11" id="57221900" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="1" curPrice="120000" oriPrice="3000000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="12" id="57222100" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="1" curPrice="120000" oriPrice="3000000" Buypermissions="0" retainBuyNum="0"/>
+	</Shop>
+	<!--时装商店  钻石表情：严肃脸+可爱脸+帅气脸    金币表情：生气脸+害羞脸+天真脸    钻石饰品：太阳镜+忍者面具+长鼻子    金币饰品：小猫头饰+小鸡头饰+蝴蝶结 -->
+	<Shop id="34" refreshTime="86400" refreshType="1" costResType="2" costResNum="0" sellNum="6" Openclass="0" random="0">
+		<item indexID="1" id="55210800" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="15" oriPrice="800" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="2" id="55210900" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="15" oriPrice="800" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="3" id="55211000" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="15" oriPrice="800" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="4" id="55210000" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="1" curPrice="100000" oriPrice="3000000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="5" id="55210100" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="1" curPrice="100000" oriPrice="3000000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="6" id="55210200" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="1" curPrice="100000" oriPrice="3000000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="7" id="57222900" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="20" oriPrice="800" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="8" id="57223000" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="20" oriPrice="800" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="9" id="57223500" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="20" oriPrice="800" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="10" id="57220200" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="1" curPrice="120000" oriPrice="3000000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="11" id="57221900" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="1" curPrice="120000" oriPrice="3000000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="12" id="57222100" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="1" curPrice="120000" oriPrice="3000000" Buypermissions="0" retainBuyNum="0"/>
+	</Shop>
+	<!--限时商店  超值特惠  资源补充礼包+随从成长礼包+超值战力礼包+对应的大礼包-->
+	<Shop id="35" refreshTime="86400" refreshType="4" costResType="2" costResNum="0" sellNum="6" Openclass="0" random="0">
+		<item indexID="1" id="172210" rate="100" maxBuyNum="3" buyNumOneTime="1" costResType="2" curPrice="148" oriPrice="225" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="2" id="172211" rate="100" maxBuyNum="3" buyNumOneTime="1" costResType="2" curPrice="329" oriPrice="940" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="3" id="172212" rate="100" maxBuyNum="3" buyNumOneTime="1" costResType="2" curPrice="500" oriPrice="1000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="4" id="172213" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="297" oriPrice="450" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="5" id="172214" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="658" oriPrice="1880" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="6" id="172215" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="1000" oriPrice="2000" Buypermissions="0" retainBuyNum="0"/>
+	</Shop>
+	<!--限时商店  超值特惠  炼金福利礼包+幸运宝石礼包+翅膀飞升礼包+对应的大礼包-->
+	<Shop id="36" refreshTime="86400" refreshType="4" costResType="2" costResNum="0" sellNum="6" Openclass="0" random="0">
+		<item indexID="1" id="172216" rate="100" maxBuyNum="3" buyNumOneTime="1" costResType="2" curPrice="225" oriPrice="500" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="2" id="172217" rate="100" maxBuyNum="3" buyNumOneTime="1" costResType="2" curPrice="480" oriPrice="800" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="3" id="172218" rate="100" maxBuyNum="3" buyNumOneTime="1" costResType="2" curPrice="690" oriPrice="1150" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="4" id="172219" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="450" oriPrice="1000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="5" id="172220" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="1200" oriPrice="2000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="6" id="172221" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="1380" oriPrice="2300" Buypermissions="0" retainBuyNum="0"/>
+	</Shop>
+	<!--限时商店  超值特惠  炼金福利礼包+幸运宝石礼包+翅膀飞升礼包+对应的大礼包-->
+	<Shop id="37" refreshTime="86400" refreshType="4" costResType="2" costResNum="0" sellNum="6" Openclass="0" random="0">
+		<item indexID="1" id="172222" rate="100" maxBuyNum="3" buyNumOneTime="1" costResType="2" curPrice="120" oriPrice="300" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="2" id="172223" rate="100" maxBuyNum="3" buyNumOneTime="1" costResType="2" curPrice="210" oriPrice="600" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="3" id="172224" rate="100" maxBuyNum="3" buyNumOneTime="1" costResType="2" curPrice="196" oriPrice="280" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="4" id="172225" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="300" oriPrice="750" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="5" id="172226" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="420" oriPrice="1200" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="6" id="172227" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="2058" oriPrice="2940" Buypermissions="0" retainBuyNum="0"/>
+	</Shop>
+	<!--限时商店  每日兑换-->
+	<Shop id="38" refreshTime="86400" refreshType="4" costResType="2" costResNum="0" sellNum="6" Openclass="0" random="0">
+		<item indexID="1" id="122211" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="300" oriPrice="500" Buypermissions="0" retainBuyNum="0" Image="Z811606"/>
+		<item indexID="2" id="152009" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="40" oriPrice="60" Buypermissions="0" retainBuyNum="0" Image="Z811611"/>
+	</Shop>
+	<!--限时商店  龙牙版本-->
+	<!--限时商店  每周福利-->
+	<Shop id="50" refreshTime="86400" refreshType="4" costResType="2" costResNum="0" sellNum="6" Openclass="0" random="0">
+		<item indexID="1" id="172500" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="2000" oriPrice="4400" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="2" id="172501" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="1000" oriPrice="3000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="3" id="172502" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="1500" oriPrice="3000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="4" id="172503" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="2000" oriPrice="3500" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="5" id="172504" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="800" oriPrice="2000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="6" id="172505" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="3000" oriPrice="8000" Buypermissions="0" retainBuyNum="0"/>
+	</Shop>
+	<!--限时商店  每日礼包-->
+	<Shop id="51" refreshTime="86400" refreshType="1" costResType="2" costResNum="0" sellNum="6" Openclass="0" random="0">
+		<item indexID="1" id="172513" rate="100" maxBuyNum="10" buyNumOneTime="1" costResType="2" curPrice="50" oriPrice="60" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="2" id="172514" rate="100" maxBuyNum="1" buyNumOneTime="1" costResType="2" curPrice="248" oriPrice="400" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="3" id="172515" rate="100" maxBuyNum="2" buyNumOneTime="1" costResType="2" curPrice="298" oriPrice="500" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="4" id="172516" rate="100" maxBuyNum="2" buyNumOneTime="1" costResType="2" curPrice="188" oriPrice="300" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="5" id="172517" rate="100" maxBuyNum="2" buyNumOneTime="1" costResType="2" curPrice="188" oriPrice="300" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="6" id="172526" rate="100" maxBuyNum="5" buyNumOneTime="1" costResType="2" curPrice="98" oriPrice="200" Buypermissions="0" retainBuyNum="0"/>
+	</Shop>
+	<!--限时商店  本周特惠随从  克隆士兵+黑暗武士、斯巴达+小牧师-->
+	<Shop id="52" refreshTime="86400" refreshType="4" costResType="2" costResNum="0" sellNum="6" Openclass="0" random="0">
+		<item indexID="1" id="172506" rate="100" maxBuyNum="5" buyNumOneTime="1" costResType="2" curPrice="3888" oriPrice="6400" Buypermissions="0" retainBuyNum="0" Image="Z811608"/>
+		<item indexID="2" id="172507" rate="100" maxBuyNum="5" buyNumOneTime="1" costResType="2" curPrice="1998" oriPrice="3200" Buypermissions="0" retainBuyNum="0" Image="Z811607"/>
+	</Shop>
+	<!--限时商店  本周特惠随从  小红帽+萌猫剑客、初音+东方教主-->
+	<Shop id="53" refreshTime="86400" refreshType="4" costResType="2" costResNum="0" sellNum="6" Openclass="0" random="0">
+		<item indexID="1" id="172523" rate="100" maxBuyNum="5" buyNumOneTime="1" costResType="2" curPrice="998" oriPrice="2000" Buypermissions="0" retainBuyNum="0" Image="Z811612"/>
+		<item indexID="2" id="172524" rate="100" maxBuyNum="5" buyNumOneTime="1" costResType="2" curPrice="1998" oriPrice="3200" Buypermissions="0" retainBuyNum="0" Image="Z811624"/>
+	</Shop>
+	<!--限时商店  本周特惠随从  骷髅帝王+天神、小死神+雷神-->
+	<Shop id="54" refreshTime="86400" refreshType="4" costResType="2" costResNum="0" sellNum="6" Openclass="0" random="0">
+		<item indexID="1" id="172522" rate="100" maxBuyNum="5" buyNumOneTime="1" costResType="2" curPrice="998" oriPrice="2000" Buypermissions="0" retainBuyNum="0" Image="Z811611"/>
+		<item indexID="2" id="172507" rate="100" maxBuyNum="5" buyNumOneTime="1" costResType="2" curPrice="1988" oriPrice="3200" Buypermissions="0" retainBuyNum="0" Image="Z811607"/>
+	</Shop>
+	<!--限时商店  超值道具  聚灵水晶+黄金宝箱+突破石礼包-->
+	<Shop id="55" refreshTime="86400" refreshType="4" costResType="2" costResNum="0" sellNum="6" Openclass="0" random="0">
+		<item indexID="1" id="172509" rate="100" maxBuyNum="2" buyNumOneTime="1" costResType="2" curPrice="6288" oriPrice="10500" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="2" id="172510" rate="100" maxBuyNum="2" buyNumOneTime="1" costResType="2" curPrice="2288" oriPrice="4500" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="3" id="172512" rate="100" maxBuyNum="2" buyNumOneTime="1" costResType="2" curPrice="1388" oriPrice="3500" Buypermissions="0" retainBuyNum="0"/>
+	</Shop>
+	<!--限时商店  超值道具  炼金福利礼包+幸运宝石礼包+觉醒领悟礼包-->
+	<Shop id="56" refreshTime="86400" refreshType="4" costResType="2" costResNum="0" sellNum="6" Openclass="0" random="0">
+		<item indexID="1" id="172203" rate="100" maxBuyNum="2" buyNumOneTime="1" costResType="2" curPrice="398" oriPrice="1100" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="2" id="172204" rate="100" maxBuyNum="2" buyNumOneTime="1" costResType="2" curPrice="598" oriPrice="2000" Buypermissions="0" retainBuyNum="0"/>
+		<item indexID="3" id="172205" rate="100" maxBuyNum="2" buyNumOneTime="1" costResType="2" curPrice="998" oriPrice="4000" Buypermissions="0" retainBuyNum="0"/>
+	</Shop>
+</Root>

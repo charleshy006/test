@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<root>
+	<!-- 备注：
+		id：为条目ID
+		Startrank：开始排名等级
+		Endrank：结束排名等级
+		ItemID：奖励发放物品ID
+		Boxid：Box表引用ID
+        diamondmun：钻石消耗数量
+		ShopID:对应Shop表商店
+	-->
+	<!--排名区域奖励-->
+	<rankaward>
+		<Reward id="1" Startrank="1" Endrank="1" ItemID="170800" Boxid="170800"/>
+		<Reward id="2" Startrank="2" Endrank="2" ItemID="170801" Boxid="170801"/>
+		<Reward id="3" Startrank="3" Endrank="3" ItemID="170802" Boxid="170802"/>
+		<Reward id="4" Startrank="4" Endrank="10" ItemID="170803" Boxid="170803"/>
+		<Reward id="5" Startrank="11" Endrank="20" ItemID="170804" Boxid="170804"/>
+		<Reward id="6" Startrank="21" Endrank="50" ItemID="170805" Boxid="170805"/>
+		<Reward id="7" Startrank="51" Endrank="100" ItemID="170806" Boxid="170806"/>
+		<Reward id="8" Startrank="101" Endrank="200" ItemID="170807" Boxid="170807"/>
+		<Reward id="9" Startrank="201" Endrank="500" ItemID="170808" Boxid="170808"/>
+		<Reward id="10" Startrank="501" Endrank="1000" ItemID="170809" Boxid="170809"/>
+		<Reward id="11" Startrank="1001" Endrank="5000" ItemID="170810" Boxid="170810"/>
+		<Reward id="12" Startrank="5001" Endrank="10000" ItemID="170811" Boxid="170811"/>
+	</rankaward>
+	<!--重置次数消耗钻石-->
+	<reset>
+		<time num="1" diamondmun="50"/>
+		<time num="2" diamondmun="50"/>
+		<time num="3" diamondmun="100"/>
+		<time num="4" diamondmun="100"/>
+		<time num="5" diamondmun="200"/>
+	</reset>
+	<!--
+		副本开启时间
+		新服1天后由id：1开始按顺序开启活动；活动达到最大id后重新由id：1开始循环
+		Lvevlid:副本ID
+		opentime:持续时间(天)
+	-->
+	
+	<changeid>
+		<open id="1" Lvevlid="20501" opentime="2" />
+		<open id="2" Lvevlid="20502" opentime="2" />
+		<open id="3" Lvevlid="20503" opentime="2" />
+	</changeid>
+	<!--BOSS描述-->
+	<describe>
+		<Level id="20501" desc="bossdesc_20501"/>
+		<Level id="20502" desc="bossdesc_20502"/>
+		<Level id="20503" desc="bossdesc_20503"/>
+	</describe>
+	<!--每日次数-->
+	<frequency>
+		<Day num="6"/>
+	</frequency>
+</root>

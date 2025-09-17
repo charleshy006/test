@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>	
+	<!--
+		RefreshType:刷新类型
+					1:每天凌晨0点刷新
+					2:每周星期一凌晨0点刷新
+		StartTime:活动开始时间
+		EndTime:活动结束时间
+		UIType:客户端显示用， 显示活动UI类型
+			   1:道具呈现为上下拖动，道具数量较多采用该UI表现
+			   2:道具呈现为左右拖动，道具数量以3个为最优
+			   3:VIP周礼包界面
+			   
+			   4:每周特惠随从界面
+			   
+		Position:显示位于活动列表位置，字段无效
+		Title:活动名字
+			Salename_001:VIP周礼包
+			Salename_002:限时特惠  11  12 
+			Salename_003:超值装备  14  15  16  17  （周末特惠）
+			Salename_004:限时时装  19  20  21  22
+			Salename_005:每周福利  18
+			Salename_006:限时表情  23  24  25
+			Salename_007:限时饰品  26  27  28
+			
+			
+			
+			龙牙版本:
+			Salename_005:每周福利  50      该商店常驻限时商店
+			Salename_047:每日礼包  51      该商店常驻限时商店
+			Salename_048:特惠随从  52 53 54        该商店每周刷新
+			Salename_049:超值道具  55 56        该商店每周刷新
+			
+		Desc:活动描述
+		ShopID:对应Shop表商店
+		
+		活动填写规则说明：根据活动id来决定是否为新活动，已经使用过的id不能重复使用，过期的活动立即删除
+	-->
+	
+<RewardConf>	
+	
+	<activity id="3015" ShopID="51" StartTime="2022-06-10 00:00:00" EndTime="2022-06-12 23:59:59" UIType="1" Position="2" Title="Salename_047" Desc="Saledesc_047" icon="act_weihu"/>
+	<activity id="3016" ShopID="51" StartTime="2022-06-13 00:00:00" EndTime="2022-06-19 23:59:59" UIType="1" Position="2" Title="Salename_047" Desc="Saledesc_047" icon="act_weihu"/>
+	<activity id="3017" ShopID="51" StartTime="2022-06-20 00:00:00" EndTime="2022-06-26 23:59:59" UIType="1" Position="2" Title="Salename_047" Desc="Saledesc_047" icon="act_weihu"/>
+	<activity id="3018" ShopID="51" StartTime="2022-06-27 00:00:00" EndTime="2022-07-03 23:59:59" UIType="1" Position="2" Title="Salename_047" Desc="Saledesc_047" icon="act_weihu"/>
+	<activity id="3019" ShopID="51" StartTime="2022-07-04 00:00:00" EndTime="2022-07-10 23:59:59" UIType="1" Position="2" Title="Salename_047" Desc="Saledesc_047" icon="act_weihu"/>
+	<activity id="3020" ShopID="51" StartTime="2022-07-11 00:00:00" EndTime="2022-07-17 23:59:59" UIType="1" Position="2" Title="Salename_047" Desc="Saledesc_047" icon="act_weihu"/>	
+	<activity id="3021" ShopID="51" StartTime="2022-07-18 00:00:00" EndTime="2022-07-24 23:59:59" UIType="1" Position="2" Title="Salename_047" Desc="Saledesc_047" icon="act_weihu"/>	
+	<activity id="3022" ShopID="51" StartTime="2022-07-25 00:00:00" EndTime="2022-07-31 23:59:59" UIType="1" Position="2" Title="Salename_047" Desc="Saledesc_047" icon="act_weihu"/>
+	<activity id="3023" ShopID="51" StartTime="2022-08-01 00:00:00" EndTime="2022-08-07 23:59:59" UIType="1" Position="2" Title="Salename_047" Desc="Saledesc_047" icon="act_weihu"/>
+	<activity id="3024" ShopID="51" StartTime="2022-08-08 00:00:00" EndTime="2022-08-14 23:59:59" UIType="1" Position="2" Title="Salename_047" Desc="Saledesc_047" icon="act_weihu"/>
+
+
+
+	<activity id="3217" ShopID="50" StartTime="2022-06-10 00:00:00" EndTime="2022-06-12 23:59:59" UIType="1" Position="2" Title="Salename_005" Desc="Saledesc_005" icon="act_xiaohao"/>
+	<activity id="3218" ShopID="50" StartTime="2022-06-13 00:00:00" EndTime="2022-06-19 23:59:59" UIType="1" Position="2" Title="Salename_005" Desc="Saledesc_005" icon="act_xiaohao"/>
+	<activity id="3219" ShopID="50" StartTime="2022-06-20 00:00:00" EndTime="2022-06-26 23:59:59" UIType="1" Position="2" Title="Salename_005" Desc="Saledesc_005" icon="act_xiaohao"/>
+	<activity id="3220" ShopID="50" StartTime="2022-06-27 00:00:00" EndTime="2022-07-03 23:59:59" UIType="1" Position="2" Title="Salename_005" Desc="Saledesc_005" icon="act_xiaohao"/>
+	<activity id="3221" ShopID="50" StartTime="2022-07-04 00:00:00" EndTime="2022-07-10 23:59:59" UIType="1" Position="2" Title="Salename_005" Desc="Saledesc_005" icon="act_xiaohao"/>
+	<activity id="3222" ShopID="50" StartTime="2022-07-11 00:00:00" EndTime="2022-07-17 23:59:59" UIType="1" Position="2" Title="Salename_005" Desc="Saledesc_005" icon="act_xiaohao"/>
+	<activity id="3223" ShopID="50" StartTime="2022-07-18 00:00:00" EndTime="2022-07-24 23:59:59" UIType="1" Position="2" Title="Salename_005" Desc="Saledesc_005" icon="act_xiaohao"/>
+	<activity id="3224" ShopID="50" StartTime="2022-07-25 00:00:00" EndTime="2022-07-31 23:59:59" UIType="1" Position="2" Title="Salename_005" Desc="Saledesc_005" icon="act_xiaohao"/>
+	<activity id="3225" ShopID="50" StartTime="2022-08-01 00:00:00" EndTime="2022-08-07 23:59:59" UIType="1" Position="2" Title="Salename_005" Desc="Saledesc_005" icon="act_xiaohao"/>
+	<activity id="3226" ShopID="50" StartTime="2022-08-08 00:00:00" EndTime="2022-08-14 23:59:59" UIType="1" Position="2" Title="Salename_005" Desc="Saledesc_005" icon="act_xiaohao"/>
+	
+
+
+	<activity id="3089" ShopID="54" StartTime="2024-05-21 00:00:00" EndTime="2024-05-27 23:59:59" UIType="4" Position="2" Title="Salename_070" Desc="Saledesc_048" icon="fenxiang"/>
+	<activity id="3090" ShopID="56" StartTime="2024-05-21 00:00:00" EndTime="2024-05-27 23:59:59" UIType="2" Position="2" Title="Salename_071" Desc="Saledesc_049" icon="act_tehui"/>
+	<activity id="3091" ShopID="53" StartTime="2024-05-28 00:00:00" EndTime="2024-06-03 23:59:59" UIType="4" Position="2" Title="Salename_068" Desc="Saledesc_048" icon="fenxiang"/>
+	<activity id="3092" ShopID="55" StartTime="2024-05-28 00:00:00" EndTime="2024-06-03 23:59:59" UIType="2" Position="2" Title="Salename_069" Desc="Saledesc_049" icon="act_tehui"/>
+	
+	<activity id="3093" ShopID="54" StartTime="2024-06-04 00:00:00" EndTime="2024-06-10 23:59:59" UIType="4" Position="2" Title="Salename_070" Desc="Saledesc_048" icon="fenxiang"/>
+	<activity id="3094" ShopID="56" StartTime="2024-06-04 00:00:00" EndTime="2024-06-10 23:59:59" UIType="2" Position="2" Title="Salename_071" Desc="Saledesc_049" icon="act_tehui"/>
+	<activity id="3095" ShopID="53" StartTime="2024-06-11 00:00:00" EndTime="2024-06-17 23:59:59" UIType="4" Position="2" Title="Salename_068" Desc="Saledesc_048" icon="fenxiang"/>
+	<activity id="3096" ShopID="55" StartTime="2024-06-11 00:00:00" EndTime="2024-06-17 23:59:59" UIType="2" Position="2" Title="Salename_069" Desc="Saledesc_049" icon="act_tehui"/>
+	
+	<activity id="3097" ShopID="54" StartTime="2024-06-18 00:00:00" EndTime="2024-06-24 23:59:59" UIType="4" Position="2" Title="Salename_070" Desc="Saledesc_048" icon="fenxiang"/>
+	<activity id="3098" ShopID="56" StartTime="2024-06-18 00:00:00" EndTime="2024-06-24 23:59:59" UIType="2" Position="2" Title="Salename_071" Desc="Saledesc_049" icon="act_tehui"/>
+	<activity id="3099" ShopID="53" StartTime="2024-06-25 00:00:00" EndTime="2024-07-01 23:59:59" UIType="4" Position="2" Title="Salename_068" Desc="Saledesc_048" icon="fenxiang"/>
+	<activity id="3100" ShopID="55" StartTime="2024-06-25 00:00:00" EndTime="2024-07-01 23:59:59" UIType="2" Position="2" Title="Salename_069" Desc="Saledesc_049" icon="act_tehui"/>
+
+	<activity id="3101" ShopID="54" StartTime="2024-07-02 00:00:00" EndTime="2024-07-07 23:59:59" UIType="4" Position="2" Title="Salename_070" Desc="Saledesc_048" icon="fenxiang"/>
+	<activity id="3102" ShopID="56" StartTime="2024-07-02 00:00:00" EndTime="2024-07-07 23:59:59" UIType="2" Position="2" Title="Salename_071" Desc="Saledesc_049" icon="act_tehui"/>
+	<activity id="3103" ShopID="53" StartTime="2024-07-08 00:00:00" EndTime="2024-07-14 23:59:59" UIType="4" Position="2" Title="Salename_068" Desc="Saledesc_048" icon="fenxiang"/>
+	<activity id="3104" ShopID="55" StartTime="2024-07-08 00:00:00" EndTime="2024-07-14 23:59:59" UIType="2" Position="2" Title="Salename_069" Desc="Saledesc_049" icon="act_tehui"/>
+	<activity id="3105" ShopID="54" StartTime="2024-07-15 00:00:00" EndTime="2024-07-21 23:59:59" UIType="4" Position="2" Title="Salename_070" Desc="Saledesc_048" icon="fenxiang"/>
+	<activity id="3106" ShopID="56" StartTime="2024-07-15 00:00:00" EndTime="2024-07-21 23:59:59" UIType="2" Position="2" Title="Salename_071" Desc="Saledesc_049" icon="act_tehui"/>
+	<activity id="3107" ShopID="53" StartTime="2024-07-22 00:00:00" EndTime="2024-07-28 23:59:59" UIType="4" Position="2" Title="Salename_068" Desc="Saledesc_048" icon="fenxiang"/>
+	<activity id="3108" ShopID="55" StartTime="2024-07-22 00:00:00" EndTime="2024-07-28 23:59:59" UIType="2" Position="2" Title="Salename_069" Desc="Saledesc_049" icon="act_tehui"/>
+
+	<activity id="3109" ShopID="54" StartTime="2024-07-29 00:00:00" EndTime="2024-08-04 23:59:59" UIType="4" Position="2" Title="Salename_070" Desc="Saledesc_048" icon="fenxiang"/>
+	<activity id="3110" ShopID="56" StartTime="2024-07-29 00:00:00" EndTime="2024-08-04 23:59:59" UIType="2" Position="2" Title="Salename_071" Desc="Saledesc_049" icon="act_tehui"/>
+	<activity id="3111" ShopID="53" StartTime="2024-08-05 00:00:00" EndTime="2024-08-11 23:59:59" UIType="4" Position="2" Title="Salename_068" Desc="Saledesc_048" icon="fenxiang"/>
+	<activity id="3112" ShopID="55" StartTime="2024-08-05 00:00:00" EndTime="2024-08-11 23:59:59" UIType="2" Position="2" Title="Salename_069" Desc="Saledesc_049" icon="act_tehui"/>
+	<activity id="3113" ShopID="54" StartTime="2024-08-12 00:00:00" EndTime="2024-08-18 23:59:59" UIType="4" Position="2" Title="Salename_070" Desc="Saledesc_048" icon="fenxiang"/>
+	<activity id="3114" ShopID="56" StartTime="2024-08-12 00:00:00" EndTime="2024-08-18 23:59:59" UIType="2" Position="2" Title="Salename_071" Desc="Saledesc_049" icon="act_tehui"/>
+	<activity id="3115" ShopID="53" StartTime="2024-08-19 00:00:00" EndTime="2024-08-25 23:59:59" UIType="4" Position="2" Title="Salename_068" Desc="Saledesc_048" icon="fenxiang"/>
+	<activity id="3116" ShopID="55" StartTime="2024-08-19 00:00:00" EndTime="2024-08-25 23:59:59" UIType="2" Position="2" Title="Salename_069" Desc="Saledesc_049" icon="act_tehui"/>
+	<activity id="3117" ShopID="54" StartTime="2024-08-26 00:00:00" EndTime="2024-09-01 23:59:59" UIType="4" Position="2" Title="Salename_070" Desc="Saledesc_048" icon="fenxiang"/>
+	<activity id="3118" ShopID="56" StartTime="2024-08-26 00:00:00" EndTime="2024-09-01 23:59:59" UIType="2" Position="2" Title="Salename_071" Desc="Saledesc_049" icon="act_tehui"/>
+	<activity id="3119" ShopID="53" StartTime="2024-09-02 00:00:00" EndTime="2024-09-08 23:59:59" UIType="4" Position="2" Title="Salename_068" Desc="Saledesc_048" icon="fenxiang"/>
+	<activity id="3120" ShopID="55" StartTime="2024-09-02 00:00:00" EndTime="2024-09-08 23:59:59" UIType="2" Position="2" Title="Salename_069" Desc="Saledesc_049" icon="act_tehui"/>
+	<activity id="3121" ShopID="54" StartTime="2024-09-09 00:00:00" EndTime="2024-09-15 23:59:59" UIType="4" Position="2" Title="Salename_070" Desc="Saledesc_048" icon="fenxiang"/>
+	<activity id="3122" ShopID="56" StartTime="2024-09-09 00:00:00" EndTime="2024-09-15 23:59:59" UIType="2" Position="2" Title="Salename_071" Desc="Saledesc_049" icon="act_tehui"/>
+	<activity id="3123" ShopID="53" StartTime="2024-09-16 00:00:00" EndTime="2024-09-22 23:59:59" UIType="4" Position="2" Title="Salename_068" Desc="Saledesc_048" icon="fenxiang"/>
+	<activity id="3124" ShopID="55" StartTime="2024-09-16 00:00:00" EndTime="2024-09-22 23:59:59" UIType="2" Position="2" Title="Salename_069" Desc="Saledesc_049" icon="act_tehui"/>
+	<activity id="3125" ShopID="54" StartTime="2024-09-23 00:00:00" EndTime="2024-09-29 23:59:59" UIType="4" Position="2" Title="Salename_070" Desc="Saledesc_048" icon="fenxiang"/>
+	<activity id="3126" ShopID="56" StartTime="2024-09-23 00:00:00" EndTime="2024-09-29 23:59:59" UIType="2" Position="2" Title="Salename_071" Desc="Saledesc_049" icon="act_tehui"/>
+	<activity id="3127" ShopID="53" StartTime="2024-09-30 00:00:00" EndTime="2024-10-06 23:59:59" UIType="4" Position="2" Title="Salename_068" Desc="Saledesc_048" icon="fenxiang"/>
+	<activity id="3128" ShopID="55" StartTime="2024-09-30 00:00:00" EndTime="2024-10-06 23:59:59" UIType="2" Position="2" Title="Salename_069" Desc="Saledesc_049" icon="act_tehui"/>
+	
+
+
+	<activity id="31001" ShopID="54" StartTime="2022-07-18 00:00:00" EndTime="2022-07-24 23:59:59" UIType="4" Position="2" Title="Salename_070" Desc="Saledesc_048" icon="fenxiang"/>
+	<activity id="31002" ShopID="56" StartTime="2022-07-18 00:00:00" EndTime="2022-07-24 23:59:59" UIType="2" Position="2" Title="Salename_071" Desc="Saledesc_049" icon="act_tehui"/>
+	<activity id="31003" ShopID="53" StartTime="2022-07-25 00:00:00" EndTime="2022-07-31 23:59:59" UIType="4" Position="2" Title="Salename_068" Desc="Saledesc_048" icon="fenxiang"/>
+	<activity id="31004" ShopID="55" StartTime="2022-07-25 00:00:00" EndTime="2022-07-31 23:59:59" UIType="2" Position="2" Title="Salename_069" Desc="Saledesc_049" icon="act_tehui"/>
+	<activity id="31005" ShopID="54" StartTime="2022-08-01 00:00:00" EndTime="2022-08-07 23:59:59" UIType="4" Position="2" Title="Salename_070" Desc="Saledesc_048" icon="fenxiang"/>
+	<activity id="31006" ShopID="56" StartTime="2022-08-01 00:00:00" EndTime="2022-08-07 23:59:59" UIType="2" Position="2" Title="Salename_071" Desc="Saledesc_049" icon="act_tehui"/>
+	<activity id="31007" ShopID="53" StartTime="2022-08-08 00:00:00" EndTime="2022-08-14 23:59:59" UIType="4" Position="2" Title="Salename_068" Desc="Saledesc_048" icon="fenxiang"/>
+	<activity id="31008" ShopID="55" StartTime="2022-08-08 00:00:00" EndTime="2022-08-14 23:59:59" UIType="2" Position="2" Title="Salename_069" Desc="Saledesc_049" icon="act_tehui"/>
+
+
+</RewardConf>

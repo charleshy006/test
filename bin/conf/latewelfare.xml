@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+
+<!--
+	IsOpen:活动是否开放
+	       1：活动开放
+		   0：活动不开放，该按钮不会显示
+	id:活动ID，进入服务器时间不同的玩家活动id不同
+	EntryTime:进入服务器时间
+	          开服时间至当天23:59分创建角色计算为开服第1天
+			  过0点创建的角色至当天23:59分计算为开服第2天
+			  依次类推
+	CostDiamond:购买礼包消耗钻石
+	ActivityTime:活动持续时间，单位：秒，从主角进入游戏开始计时
+	RewardItem:奖励道具ID及奖励道具数量，使用分隔符"-"分割，例如：1-50000，表示奖励道具ID为1，奖励道具数量为50000
+	           多个道具使用符号":"分割
+	Lv:显示用等级
+-->
+<root>
+	<conf IsOpen="1">
+		<Gruop id="1" EntryTime="2-1" ActivityTime="172800" Lv="20">
+			<entry id="1" CostDiamond="688" RewardItem="103086-1:171910-1"/>
+			<entry id="2" CostDiamond="1588" RewardItem="102903-1:171920-1:171930-1"/>
+		</Gruop>
+		<Gruop id="2" EntryTime="3-1" ActivityTime="172800" Lv="26">
+			<entry id="1" CostDiamond="1688" RewardItem="103087-1:171911-1"/>
+			<entry id="2" CostDiamond="3188" RewardItem="102903-2:171921-1:171931-1"/>
+		</Gruop>
+		<Gruop id="3" EntryTime="4-1" ActivityTime="172800" Lv="30">
+			<entry id="1" CostDiamond="2688" RewardItem="103088-1:171912-1"/>
+			<entry id="2" CostDiamond="4488" RewardItem="102902-1:171922-1:171932-1"/>
+		</Gruop>
+		<Gruop id="4" EntryTime="5-1" ActivityTime="172800" Lv="33">
+			<entry id="1" CostDiamond="3688" RewardItem="103089-1:171913-1"/>
+			<entry id="2" CostDiamond="6988" RewardItem="102902-2:171923-1:171933-1"/>
+		</Gruop>
+		<Gruop id="5" EntryTime="6-10000" ActivityTime="172800" Lv="35">
+			<entry id="1" CostDiamond="4688" RewardItem="103090-1:171914-1"/>
+			<entry id="2" CostDiamond="9988" RewardItem="102916-1:171924-1:171934-1"/>
+		</Gruop>
+	</conf>
+</root>

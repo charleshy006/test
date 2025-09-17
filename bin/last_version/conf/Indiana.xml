@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<!--
+		Indianagroup: 强宝组
+		Type：夺宝类型（1：龙晶石、2：精炼水晶、3：核心符文、4：经验符文、5：金币、6：钻石）
+		Synthesisitem：合成的物品
+		Fragmentitem：碎片
+		Robotprobability:抢夺机器人胜利获得碎片概率，抢夺机器人必定胜利
+		Playerprobability:抢夺玩家胜利获得碎片概率
+		玩家抢夺胜负判断规则：
+		若抢夺方战斗力/被抢夺方战斗力>1.025，则抢夺方必定胜利，若抢夺方战斗力/被抢夺方战斗力<0.975，则抢夺方必定失败，若0.975<=抢夺方战斗力/被抢夺方战斗力<=1.025，则有50%概率胜利，50%概率失败
+		抢夺列表随机规则：
+		1、每次随机四个抢夺列表，则先从存在该碎片的符合规则的玩家列表中随机两个玩家，后随机两个ROBOT，若服务器内无玩家存在该碎片，则随机4个ROBOT
+		2、玩家随机规则：玩家等级-2<=玩家等级<=玩家等级+5，从该范围内存在该碎片的玩家中随机两位
+		显示规则：
+		1、若抢夺概率>=70%，界面显示高概率
+		2、若50%<=抢夺概率<70%，界面显示较高概率
+		3、若20%<抢夺概率<50%，界面显示低概率
+		4、若抢夺概率<=20%，界面显示较低概率
+		DropID:翻牌奖励ID，对应drop表ID
+		exe:经验系数，玩家获得经验值=经验系数*玩家等级
+		money:金钱系数，玩家获得金钱值=金钱系数*玩家等级
+	-->
+	<Indiana>
+		<!--1000龙晶石袋子-->
+		<Indianagroup Type="1" id="1" Synthesisitem="100290" Robotprobability="10000" Playerprobability="9000" DropID="70001" exe="6" money="100">
+			<entry id="1" Fragmentitem="130201"/>
+			<entry id="2" Fragmentitem="130202"/>
+		</Indianagroup>
+		<!--3000龙晶石袋子-->
+		<Indianagroup Type="1" id="2" Synthesisitem="100490" Robotprobability="5500" Playerprobability="7500" DropID="70001" exe="6" money="100">
+			<entry id="1" Fragmentitem="130401"/>
+			<entry id="2" Fragmentitem="130402"/>
+			<entry id="3" Fragmentitem="130403"/>
+		</Indianagroup>
+		<!--5000龙晶石袋子-->
+		<Indianagroup Type="1" id="3" Synthesisitem="101290" Robotprobability="3500" Playerprobability="5500" DropID="70001" exe="6" money="100">
+			<entry id="1" Fragmentitem="131201"/>
+			<entry id="2" Fragmentitem="131202"/>
+			<entry id="3" Fragmentitem="131203"/>
+			<entry id="4" Fragmentitem="131204"/>
+		</Indianagroup>
+		<!--精炼水晶-->
+		<Indianagroup Type="2" id="1" Synthesisitem="120101" Robotprobability="7500" Playerprobability="9000" DropID="70001" exe="6" money="100">
+			<entry id="1" Fragmentitem="131211"/>
+			<entry id="2" Fragmentitem="131212"/>
+			<entry id="3" Fragmentitem="131213"/>
+		</Indianagroup>
+		<!--小块精炼原石-->
+		<Indianagroup Type="2" id="2" Synthesisitem="101206" Robotprobability="5500" Playerprobability="7000" DropID="70001" exe="6" money="100">
+			<entry id="1" Fragmentitem="131411"/>
+			<entry id="2" Fragmentitem="131412"/>
+			<entry id="3" Fragmentitem="131413"/>
+		</Indianagroup>
+		<!--中块精炼原石-->
+		<Indianagroup Type="2" id="3" Synthesisitem="101406" Robotprobability="4000" Playerprobability="6000" DropID="70001" exe="6" money="100">
+			<entry id="1" Fragmentitem="131611"/>
+			<entry id="2" Fragmentitem="131612"/>
+			<entry id="3" Fragmentitem="131613"/>
+			<entry id="4" Fragmentitem="131614"/>
+		</Indianagroup>
+		<!--大块精炼原石-->
+		<Indianagroup Type="2" id="4" Synthesisitem="101606" Robotprobability="2500" Playerprobability="5000" DropID="70001" exe="6" money="100">
+			<entry id="1" Fragmentitem="131811"/>
+			<entry id="2" Fragmentitem="131812"/>
+			<entry id="3" Fragmentitem="131813"/>
+			<entry id="4" Fragmentitem="131814"/>
+			<entry id="5" Fragmentitem="131815"/>
+		</Indianagroup>
+		<!--2阶核心符文-->
+		<Indianagroup Type="3" id="1" Synthesisitem="600200" Robotprobability="7500" Playerprobability="9000" DropID="70001" exe="6" money="100">
+			<entry id="1" Fragmentitem="130221"/>
+			<entry id="2" Fragmentitem="130222"/>
+			<entry id="3" Fragmentitem="130223"/>
+		</Indianagroup>
+		<!--10阶核心符文-->
+		<Indianagroup Type="3" id="2" Synthesisitem="601000" Robotprobability="5000" Playerprobability="8000" DropID="70001" exe="6" money="100">
+			<entry id="1" Fragmentitem="131021"/>
+			<entry id="2" Fragmentitem="131022"/>
+			<entry id="3" Fragmentitem="131023"/>
+			<entry id="4" Fragmentitem="131024"/>
+		</Indianagroup>
+		<!--18阶核心符文-->
+		<Indianagroup Type="3" id="3" Synthesisitem="601800" Robotprobability="4000" Playerprobability="7500" DropID="70001" exe="6" money="100">
+			<entry id="1" Fragmentitem="131821"/>
+			<entry id="2" Fragmentitem="131822"/>
+			<entry id="3" Fragmentitem="131823"/>
+			<entry id="4" Fragmentitem="131824"/>
+			<entry id="5" Fragmentitem="131825"/>
+		</Indianagroup>
+		<!--20阶核心符文-->
+		<Indianagroup Type="3" id="4" Synthesisitem="602000" Robotprobability="3000" Playerprobability="7500" DropID="70001" exe="6" money="100">
+			<entry id="1" Fragmentitem="132021"/>
+			<entry id="2" Fragmentitem="132022"/>
+			<entry id="3" Fragmentitem="132023"/>
+			<entry id="4" Fragmentitem="132024"/>
+			<entry id="5" Fragmentitem="132025"/>
+		</Indianagroup>
+		<!--26阶核心符文-->
+		<Indianagroup Type="3" id="5" Synthesisitem="602600" Robotprobability="2000" Playerprobability="7000" DropID="70001" exe="6" money="100">
+			<entry id="1" Fragmentitem="132621"/>
+			<entry id="2" Fragmentitem="132622"/>
+			<entry id="3" Fragmentitem="132623"/>
+			<entry id="4" Fragmentitem="132624"/>
+			<entry id="5" Fragmentitem="132625"/>
+			<entry id="6" Fragmentitem="132626"/>
+		</Indianagroup>
+		<!--28阶核心符文-->
+		<Indianagroup Type="3" id="6" Synthesisitem="602800" Robotprobability="750" Playerprobability="4000" DropID="70001" exe="6" money="100">
+			<entry id="1" Fragmentitem="132821"/>
+			<entry id="2" Fragmentitem="132822"/>
+			<entry id="3" Fragmentitem="132823"/>
+			<entry id="4" Fragmentitem="132824"/>
+			<entry id="5" Fragmentitem="132825"/>
+			<entry id="6" Fragmentitem="132826"/>
+		</Indianagroup>
+		<!--28-1阶核心符文-->
+		<Indianagroup Type="3" id="7" Synthesisitem="602801" Robotprobability="750" Playerprobability="4000" DropID="70001" exe="6" money="100">
+			<entry id="1" Fragmentitem="132841"/>
+			<entry id="2" Fragmentitem="132842"/>
+			<entry id="3" Fragmentitem="132843"/>
+			<entry id="4" Fragmentitem="132844"/>
+			<entry id="5" Fragmentitem="132845"/>
+			<entry id="6" Fragmentitem="132846"/>
+		</Indianagroup>
+		<!--28-2阶核心符文-->
+		<Indianagroup Type="3" id="8" Synthesisitem="602802" Robotprobability="750" Playerprobability="4000" DropID="70001" exe="6" money="100">
+			<entry id="1" Fragmentitem="132851"/>
+			<entry id="2" Fragmentitem="132852"/>
+			<entry id="3" Fragmentitem="132853"/>
+			<entry id="4" Fragmentitem="132854"/>
+			<entry id="5" Fragmentitem="132855"/>
+			<entry id="6" Fragmentitem="132856"/>
+		</Indianagroup>
+		<!--30阶核心符文-->
+		<Indianagroup Type="3" id="9" Synthesisitem="603000" Robotprobability="500" Playerprobability="3500" DropID="70001" exe="6" money="100">
+			<entry id="1" Fragmentitem="133021"/>
+			<entry id="2" Fragmentitem="133022"/>
+			<entry id="3" Fragmentitem="133023"/>
+			<entry id="4" Fragmentitem="133024"/>
+			<entry id="5" Fragmentitem="133025"/>
+			<entry id="6" Fragmentitem="133026"/>
+		</Indianagroup>
+		<!--2阶经验符文-->
+		<Indianagroup Type="4" id="1" Synthesisitem="650200" Robotprobability="6000" Playerprobability="7500" DropID="70001" exe="6" money="100">
+			<entry id="1" Fragmentitem="130231"/>
+			<entry id="2" Fragmentitem="130232"/>
+			<entry id="3" Fragmentitem="130233"/>
+		</Indianagroup>
+		<!--6阶经验符文-->
+		<Indianagroup Type="4" id="2" Synthesisitem="650600" Robotprobability="4000" Playerprobability="5000" DropID="70001" exe="6" money="100">
+			<entry id="1" Fragmentitem="130631"/>
+			<entry id="2" Fragmentitem="130632"/>
+			<entry id="3" Fragmentitem="130633"/>
+			<entry id="4" Fragmentitem="130634"/>
+		</Indianagroup>
+		<!--12阶经验符文-->
+		<Indianagroup Type="4" id="3" Synthesisitem="651200" Robotprobability="2000" Playerprobability="3500" DropID="70001" exe="6" money="100">
+			<entry id="1" Fragmentitem="131231"/>
+			<entry id="2" Fragmentitem="131232"/>
+			<entry id="3" Fragmentitem="131233"/>
+			<entry id="4" Fragmentitem="131234"/>
+			<entry id="5" Fragmentitem="131235"/>
+		</Indianagroup>
+		
+		<!--2W金币卡-->
+		<Indianagroup Type="5" id="1" Synthesisitem="152017" Robotprobability="6000" Playerprobability="7500" DropID="70001" exe="6" money="100">
+			<entry id="1" Fragmentitem="130271"/>
+			<entry id="2" Fragmentitem="130272"/>
+			<entry id="3" Fragmentitem="130273"/>
+		</Indianagroup>
+		<!--5W金币卡-->
+		<Indianagroup Type="5" id="2" Synthesisitem="152018" Robotprobability="4000" Playerprobability="6000" DropID="70001" exe="6" money="100">
+			<entry id="1" Fragmentitem="130471"/>
+			<entry id="2" Fragmentitem="130472"/>
+			<entry id="3" Fragmentitem="130473"/>
+			<entry id="4" Fragmentitem="130474"/>
+		</Indianagroup>
+		<!--10W金币卡-->
+		<Indianagroup Type="5" id="3" Synthesisitem="152019" Robotprobability="2000" Playerprobability="4000" DropID="70001" exe="6" money="100">
+			<entry id="1" Fragmentitem="131271"/>
+			<entry id="2" Fragmentitem="131272"/>
+			<entry id="3" Fragmentitem="131273"/>
+			<entry id="4" Fragmentitem="131274"/>
+			<entry id="5" Fragmentitem="131275"/>
+		</Indianagroup>
+		
+		<!--10钻石卡-->
+		<Indianagroup Type="6" id="1" Synthesisitem="152220" Robotprobability="5000" Playerprobability="7500" DropID="70001" exe="6" money="100">
+			<entry id="1" Fragmentitem="130281"/>
+			<entry id="2" Fragmentitem="130282"/>
+			<entry id="3" Fragmentitem="130283"/>
+		</Indianagroup>
+		<!--20钻石卡-->
+		<Indianagroup Type="6" id="2" Synthesisitem="152221" Robotprobability="3500" Playerprobability="6000" DropID="70001" exe="6" money="100">
+			<entry id="1" Fragmentitem="130481"/>
+			<entry id="2" Fragmentitem="130482"/>
+			<entry id="3" Fragmentitem="130483"/>
+			<entry id="4" Fragmentitem="130484"/>
+		</Indianagroup>
+		<!--50钻石卡-->
+		<Indianagroup Type="6" id="3" Synthesisitem="152222" Robotprobability="2000" Playerprobability="4000" DropID="70001" exe="6" money="100">
+			<entry id="1" Fragmentitem="131281"/>
+			<entry id="2" Fragmentitem="131282"/>
+			<entry id="3" Fragmentitem="131283"/>
+			<entry id="4" Fragmentitem="131284"/>
+			<entry id="5" Fragmentitem="131285"/>
+		</Indianagroup>
+	</Indiana>
+	<Elude>
+		<Time hours="12" itemid="122253" costResType="2" costResNum="90"/>
+		<Time hours="3" itemid="122252" costResType="2" costResNum="25"/>
+		<Time hours="1" itemid="122251" costResType="2" costResNum="10"/>
+	</Elude>
+	<openingtime>
+		<entry opentime="0-86400"/>
+	</openingtime>	
+</root>

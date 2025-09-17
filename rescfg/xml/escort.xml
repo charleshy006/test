@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<root>
+	<!--
+		EscortNum:每日护送次数
+		InterceptNum:每日拦截次数
+		ByInterceptNum:每只船只可被拦截次数
+		HelpNum:每日协助好友护送次数
+		InterceptCD:每次拦截后可再次拦截的CD时间
+	-->
+	<basisnum>
+		<num id="1" EscortNum="3" InterceptNum="5" ByInterceptNum="2" HelpNum="2" InterceptCD="300" />
+	</basisnum>
+	
+	<!--
+			护送刷新及顶级宝藏消耗钻石
+			refreshdiamondnum:刷新消耗钻石
+			calldiamondnum:召唤消耗钻石
+			inspirediamondnum:鼓舞消耗钻石
+			quickdiamondnum:快速完成消耗钻石
+			clearCDdiamondnum:清除拦截CD消耗钻石
+		-->
+		<escortcomsume>
+			<comsume id="1" refreshdiamondnum="20" calldiamondnum="200" inspirediamondnum="20" quickdiamondnum="300" clearCDdiamondnum="20" />
+		</escortcomsume>
+	
+	<!--
+		Quality:宝箱品质
+		EscortTime:护送需要时间，单位为秒
+		RewardType1:护送奖励类型
+		RewardNum1:对应奖励类型奖励数量
+	-->
+	<escortinfo>
+		<info id="1" Quality="1" EscortTime="1200"  RewardType1="1" RewardNum1="90000" RewardType2="9" RewardNum2="9000" RewardType3="11" RewardNum3="9" />
+		<info id="2" Quality="2" EscortTime="1500"  RewardType1="1" RewardNum1="120000" RewardType2="9" RewardNum2="12000" RewardType3="11" RewardNum3="12" />
+		<info id="3" Quality="3" EscortTime="1800"  RewardType1="1" RewardNum1="150000" RewardType2="9" RewardNum2="15000" RewardType3="11" RewardNum3="16" />
+		<info id="4" Quality="4" EscortTime="2100"  RewardType1="1" RewardNum1="200000" RewardType2="9" RewardNum2="20000" RewardType3="11" RewardNum3="20" />
+		<info id="5" Quality="5" EscortTime="2400"  RewardType1="1" RewardNum1="250000" RewardType2="9" RewardNum2="25000" RewardType3="11" RewardNum3="24" />
+	</escortinfo>
+	
+	<!--
+		StartLevel:拦截方大于被拦截方等级范围内下限值
+		EndLevel:拦截方大于被拦截方等级范围内上限值
+		RewardPercent1:对应护送方奖励1 百分比，获得奖励=抢夺方RewardNum1*RewardPercent1
+		RewardPercent2:对应护送方奖励2 百分比，获得奖励=抢夺方RewardNum2*RewardPercent2
+	-->
+	<interceptreward>
+		<reward id="1" StartLevel="0" EndLevel="1"  RewardPercent1="20"  RewardPercent2="20" />
+		<reward id="2" StartLevel="2" EndLevel="3"  RewardPercent1="15"  RewardPercent2="15" />
+		<reward id="3" StartLevel="4" EndLevel="6"  RewardPercent1="10"  RewardPercent2="10" />
+		<reward id="4" StartLevel="7" EndLevel="1000"  RewardPercent1="0"  RewardPercent2="0" />
+	</interceptreward>
+	
+	<!--
+		IsByIntercept:是否被成功拦截，0:未被拦截   1:被成功拦截
+		RewardPercent1:对应护送方奖励1 百分比，获得奖励=协助护送方RewardNum1*RewardPercent1
+		RewardPercent2:对应护送方奖励2 百分比，获得奖励=协助护送方RewardNum2*RewardPercent2
+	-->
+	<helpreward>
+		<reward id="1" IsByIntercept="0" RewardPercent1="20" RewardPercent2="20" />
+		<reward id="2" IsByIntercept="1" RewardPercent1="0" RewardPercent2="0" />
+	</helpreward>
+	
+	<!--
+		宝藏刷新概率，万分比
+	-->
+	<escortrefresh>
+		<refresh id="1" Quality="1" RefreshSuccessPercent="3000" />
+		<refresh id="2" Quality="2" RefreshSuccessPercent="2000" />
+		<refresh id="3" Quality="3" RefreshSuccessPercent="1500" />
+		<refresh id="4" Quality="4" RefreshSuccessPercent="1000" />
+	</escortrefresh>
+	
+	<!--
+		鼓舞BUFF:
+		InspireNum:鼓舞次数
+		BuffID1:获得BUFF1
+		BuffID2:获得BUFF2
+	-->
+	<escortinspire>
+		<time InspireNum="1" BuffID1="40000" BuffID2="40001" Buffs="40000;40001;40010" BuffDesc="escort_BuffDesc_1" />
+		<time InspireNum="2" BuffID1="40002" BuffID2="40003" Buffs="40002;40003;40011" BuffDesc="escort_BuffDesc_2" />
+		<time InspireNum="3" BuffID1="40004" BuffID2="40005" Buffs="40004;40005;40012" BuffDesc="escort_BuffDesc_3" />
+		<time InspireNum="4" BuffID1="40006" BuffID2="40007" Buffs="40006;40007;40013" BuffDesc="escort_BuffDesc_4" />
+		<time InspireNum="5" BuffID1="40008" BuffID2="40009" Buffs="40008;40009;40014" BuffDesc="escort_BuffDesc_5" />
+	</escortinspire>
+</root>

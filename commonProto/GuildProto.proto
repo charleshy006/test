@@ -1,0 +1,2193 @@
+import "ModID.proto";
+package GuildProto;
+
+enum eGuildTile
+{
+	GUILD_TITLE_NORMAL = 0;		//普通
+	GUILD_TITLE_ELITE = 1;    	//精英
+	GUILD_TILE_VICELEADER = 2;  //副会长
+	GUILD_TITLE_LEADER = 3;     //会长
+}
+
+
+//公会成员信息
+message stSynGuildMemInfo
+{
+	optional uint32 charID = 1;				//角色ID
+	optional string name = 2;				//角色名字
+	optional uint32 level = 3;				//等级
+	optional uint32 job = 4;				//职业
+	optional uint32 sex = 5;				//性别
+	optional uint32 title = 6;				//头衔
+	optional uint32 todayContribute = 7;	//今日贡献度
+	optional uint32 contribute = 8;			//贡献度
+	optional bool	online = 9;				//是否在线
+	optional uint32 battlePower = 10;		//战力
+	optional uint32 challengeNum = 11;		//挑战次数
+	optional uint32 assistNum = 12;			//协助次数
+	optional uint32 activityVal = 13;		//活力值
+	optional uint32 lastLoginTime = 14;		//最后一次登录时间
+	optional uint32 photoID = 15;			//头像ID
+}
+
+//公会信息
+message stGuildListInfo
+{
+	optional uint32 rank = 1;			   //名次
+	optional uint32 guildID = 2;           //公会ID
+	optional string guildName = 3;         //公会名字
+	optional uint32 hallLv = 4;			   //大厅等级也就是公会等级
+	optional string leaderName = 5;		   //会长名字
+	optional uint32 leaderLv = 6;		   //会长等级
+	optional uint32 memNum = 7;			   //成员数量
+	optional uint32 maxNum = 8;            //最大数量
+	optional string sign = 9;			   //签名
+	optional bool   hasApplied = 10;	   //是否已经申请
+	optional uint32 badge = 11;			   //徽章
+}
+
+
+
+//请求公会信息  c ---> s
+message stReqGuild
+{
+	optional uint32 rank = 1;				//从第几名开始拉数据
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+	enum ProtoFunID
+	{
+		FunID = 1;	
+	}		
+}
+
+//返回公会信息 s ---> c
+message stRetGuild
+{
+	optional uint32 maxNum = 1;						//最大数量
+	repeated stGuildListInfo data = 2;			//公会列表
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 2;	
+	}			
+}
+
+//请求公会的详细信息 c ---> s
+message stReqGuildDetailInfo
+{
+	optional uint32 guildID = 1;		//公会ID
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 3;	
+	}		
+}
+
+//返回公会的详细信息 s ---> c
+message stRetGuildDetailInfo
+{
+	optional uint32 guildID = 1;	//公会ID
+	optional string guildName = 2;	//公会名字
+	optional uint32 hallLv	= 3;	//大厅等级也就是公会等级
+	optional uint32 exp		= 4;	//公会经验
+	optional uint32 memNum  = 5;	//成员数量
+	optional uint32 maxNum	= 7;	//成员最大数量
+	optional string sign	= 8;	//签名
+	repeated stSynGuildMemInfo memInfo = 9; //成员信息
+	optional uint32 badge = 10;		//徽章
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 4;	
+	}		
+}
+
+enum eCreateGuildError
+{
+	CREATE_GUILD_ERROR_LV_LOW = 1;         //等级太低 
+	CREATE_GUILD_ERROR_NO_GOLDCOIN = 2;	   //金币
+	CREATE_GUILD_ERROR_NO_DIAMOND = 3;	   //没有钻石
+	CREATE_GUILD_ERROR_HAS_GUILD = 4;  	   //已经有公会了
+	CREATE_GUILD_ERROR_NAME_EXIST = 5;	   //名字已经存在
+}
+
+//请求创建公会 c ---> s
+message stReqCreateGuild
+{
+	enum eUseResType
+	{
+		eDiamond = 1;		//钻石
+		eGoldCoin = 2;		//金币
+	}
+
+	optional string guildName = 1;			//公会名字
+	optional eUseResType eType = 2;			//类型 
+	optional uint32  badge = 3;				//徽章
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 5;	
+	}		
+}
+
+//创建公会错误 s ---> c
+message stCreateGuildError
+{
+	optional eCreateGuildError result = 1;		//创建结果
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 6;	
+	}		
+}
+
+//发送我的公会信息 s ---> c
+message stSendMyGuild
+{
+	optional uint32 guildID = 1;			//公会ID
+	optional string guildName = 2;			//公会名字
+	optional uint32 exp = 3;				//经验
+	optional uint32 leaderID = 4;			//团长ID
+	optional uint32 contribute = 5;			//贡献度
+	optional uint32 fireRemainTime = 6;		//解散剩余时间,0表示用不解散,其它值表示剩余时间
+	optional string sign = 7;				//签名
+	optional uint32 maxNum = 8;				//最大数量
+	optional string notice = 9;				//公告
+	optional uint32 hallLv = 10;			//大厅等级
+	optional uint32 shopLv = 11;			//商店等级
+	optional uint32 prayBuildingLv = 12;	//祈祷等级
+	repeated stSynGuildMemInfo data = 13;	//成员信息
+	optional uint32 badge = 14;				//徽章ID
+	optional uint32 rank = 15;				//排名
+	optional uint32 activityDegree = 16;	//活跃度
+	optional uint32 blackMarket = 17;		//黑市等级
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 7;	
+	}		
+}
+
+//请求加入公会 c ---> s
+message stReqJoinInGuild
+{
+	optional uint32 guildID = 1;			//公会ID
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 8;	
+	}		
+}
+
+enum  JoinGuildResult
+{
+	REQ_JOIN_GUILD_SUCESS = 1;                 //请求成功
+	REQ_JOIN_GUILD_ERROR_HAS_GROUP = 2;        //已经有公会
+	REQ_JOIN_GUILD_ERROR_NOT_EXIST = 3;        //公会不存在
+	REQ_JOIN_GUILD_ERROR_HAS_APPLY = 4;		   //已经申请过了
+	REQ_JOIN_GUILD_ERROR_CD		= 5;		   //还处于冷却时间
+	REQ_JOIN_GUILD_ERROR_FULL  = 6;			   //公会满了
+}
+
+//加入公会结果 s ---> c
+message stJoinInGuildResult
+{
+	optional JoinGuildResult result = 1;		
+	optional uint32 guildID = 2;
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 9;	
+	}		
+}
+
+//请求加入公会申请列表
+message stReqApplyJoinInList
+{
+	optional uint32 charID = 1;		//自己的角色ID
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 10;	
+	}		
+}
+
+//请求者信息
+message stSynApplierInfo
+{
+	optional uint32 charID = 1;		//请求者ID
+	optional string name  = 2;		//请求者的名字
+	optional uint32 level = 3;		//等级
+	optional uint32 job  = 4;		//职业 
+	optional uint32 sex = 5;		//性别
+	optional uint32 passTime = 6;	//已经过去的时间
+	optional uint32 battlePower = 7;//战力
+	optional uint32 photoID = 8;	//头像ID
+
+}
+
+//返回请求列表 s ---> c
+message stRetApplyJoinInList 
+{
+	repeated stSynApplierInfo data = 1;		//请求者列表
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 11;	
+	}		
+}
+
+//回复申请者 c ---> s
+message stReplyApplier
+{
+	optional uint32 charID = 1;		//申请者的角色ID
+	optional bool	agree = 2;		//TRUE同意false拒绝
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 12;	
+	}		
+}
+
+enum ReplyError
+{   
+	REPLY_ERROR_NO_POWER = 1;               //没有权利
+	REPLY_ERROR_FULL = 2;                   //已经满了
+	REPLY_ERROR_NO_IN_LIST = 3;             //不在列表中
+	REPLY_ERROR_HAS_GUILD = 4;				//已经有公会了
+}
+
+//回复申请者错误 s  ---> c
+message stReplyApplerError
+{
+	optional ReplyError result = 1;
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 13;	
+	}		
+}
+
+//加入公会提示 s --> c
+message stJoinInGuildTip
+{
+	optional bool accept = 1;		// true 同意,false拒绝
+	optional string otherName = 2;	///申请者的姓名
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 14;	
+	}		
+}
+
+//通知所有成员,某个玩家加入了s ---> c
+message stMemJoinInGuild
+{
+	optional stSynGuildMemInfo data = 1;		//玩家的信息
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 15;	
+	}		
+}
+
+//请求离开公会 c ---> s
+message stReqLeaveGuild
+{
+	optional uint32 guildID = 1;
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 16;	
+	}		
+}
+
+//某个成员离开了公会s --> c
+message stMemLeaveGuild
+{
+	optional uint32 charID = 1;		//成员的角色ID
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 17;	
+	}		
+}
+
+//晋职 c <-----> s
+message stAssignGuildTitle
+{
+	optional uint32 charID = 1;		//角色ID
+	optional eGuildTile eTitle = 2; //头衔
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 18;	
+	}	
+}
+
+//晋职错误
+enum eAssignTitleError
+{
+	ASSIGN_TITLE_ERROR_NO_POWER = 1;        //没有权限
+	ASSIGN_TITLE_ERROR_NOT_MEMBER = 2;      //不是成员
+}
+
+//晋职错误 s ---> c
+message stAssignTitleError
+{
+	optional eAssignTitleError result = 1;
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 19;	
+	}		
+}
+
+//取消头衔 c ----> s
+message stCancelTitle
+{
+	optional uint32 charID = 1;		//角色ID
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 20;	
+	}		
+}
+
+enum eCancelTitleError
+{
+	CANCEL_TITLE_ERROR_NO_POWER = 1;        //没有权限
+	CANCEL_TITLE_ERROR_NOT_MEMBER = 2;      //不是成员
+}
+
+//取消头衔结果
+message stCancelTitleError
+{
+	optional eCancelTitleError result = 1;		//取消头衔错误
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 21;	
+	}		
+}
+
+//转让领导 c <------> s
+message stGiveLeader2Other
+{
+	optional uint32 charID = 1;	///转让给的玩家
+	
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 22;	
+	}		
+}
+
+enum eGiveLeaderErrorNo
+{
+	GIVE_LEADER_ERROR_NO_POWER = 1;         //没有权限
+	GIVE_LEADER_ERROR_NOT_MEMBER = 2;       //不是成员
+}
+
+//转让职位错误 s ---> c
+message stGiveLeaderError
+{
+	optional eGiveLeaderErrorNo result = 1;
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 23;	
+	}		
+}
+
+//解散公会 c <---> s 
+message stFireGuild
+{
+	optional uint32 guildID = 1;	//解散的公会ID
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 24;	
+	}		
+}
+
+//解散公会错误码
+enum eFireMemberErrorNo
+{
+	FIRE_MEMBER_ERROR_NO_POWER = 1;         //没有权利
+}
+
+//解散公会错误 s ---> c
+message stFireGuildError
+{
+	optional eFireMemberErrorNo result = 1;		//解散公会错误码
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 25;	
+	}		
+}
+
+//成员上下线 s ---> c
+message stGuildMemOnOffLine
+{
+	optional uint32 charID = 1;		//角色ID
+	optional bool	online = 2;		//true上线,false下线
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 26;	
+	}		
+}
+
+//踢掉成员 c <----> s
+message stKillOutGroupMember 
+{
+	optional uint32 charID = 1;		//被题玩家的角色ID
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 27;	
+	}	
+}
+
+//被踢后的提示 s ---> c
+message stKillOutTip
+{
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 28;	
+	}		
+}
+
+enum eKillOutErrorNo
+{
+	KILL_OUT_ERROR_NOT_MEMBER = 1;  //不是成员
+	KILL_OUT_ERROR_NO_POWER = 2;    //没有权利
+}
+
+//踢成员错误 s ---> c
+message stKillOutGroupMemberError
+{
+	optional eKillOutErrorNo result = 1;
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 29;	
+	}		
+}
+
+//返回成员的详细数据 s ---> c
+message stRetGuildMemInfo
+{
+	optional uint32 charID = 1;							//角色ID
+	optional uint32 joinInTime = 2;             		//加入时间,离现在经过了多少秒
+	optional uint32 contributeTime = 3;  				//共享时间,到现在经过了多少秒
+	optional uint32 todayContribute = 4; 				//今日贡献
+	optional uint32 allContribute = 5;   				//总共贡献
+	optional uint32 lastLoginTime = 6;					//上次登录时,到现在经过多少秒
+	
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 30;	
+	}	
+}
+
+//同步数据 s ---> c
+message stSynGuildContribute
+{
+	optional uint32 num = 1;		//同步贡献度
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 31;	
+	}		
+}
+
+
+//修改签名 s <---> c
+message stChgGuildSign
+{
+	optional string sign = 1;	//签名
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 32;	
+	}
+}
+
+//解散公会剩余时间 s ---> c
+message stNotifyFireRemainTime
+{
+	optional uint32 remainTime = 1;		//剩余时间
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 33;	
+	}
+}
+
+//请求公会某个成员的信息 c ---> s
+message  stReqGuildMemInfo
+{
+	optional uint32 charID = 1;		//角色成员
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 34;	
+	}
+}
+
+//取消解散公会 c ---> s
+message stCancelFireGuild
+{
+	optional uint32 guildID = 1;	//公会ID
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 35;	
+	}
+}
+
+//取消解散结果
+message stCancelFireGuildResult
+{
+	enum eResult
+	{
+		eSUCCESS = 1;		//成功
+		eHAS_NOT_POWER = 2;	//没有权利
+	}
+	
+	optional eResult result = 1;
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 36;	
+	}
+}
+
+//取消申请加入公会 c ---> s
+message stCancelJoinInGuild
+{
+	optional uint32 guildID = 1;			//guildID
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 37;	
+	}
+}
+
+//取消申请加入公会返回 s ---> c
+message stCancelJoinInGuildResult
+{
+	enum eResult
+	{
+		eSUCCESS = 1;		//成功
+		eFAIL = 2;			//失败
+	}
+
+	optional uint32 guildID = 1;			//guildID
+	optional eResult result = 2;			//结果
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 38;	
+	}
+}
+
+//进行捐献 c ----> s 
+message stReqDonate
+{
+	enum eType
+	{
+		eType1 = 1;		//第一种捐赠
+		eType2 = 2;		//第二种捐赠
+		eType3 = 3;		//第三种捐赠
+	}
+
+	optional eType type = 1;
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 39;	
+	}
+}
+
+//捐献返回结果 s ---> c
+message stDonateResult
+{
+	enum eResult
+	{
+		eSUCCESS = 1;			//成功
+		eMONEY_NOT_ENOUGH = 2;	//金钱不足
+		eINNER_ERROR = 3;		//内部错误
+		eHAS_NO_GUILD = 4;		//没有公会
+		eHAS_DONATE = 5;		//已经捐赠了
+		eHAS_NO_VIPRIGHT = 6;	//没有vip权限
+	}
+
+	optional eResult result = 1; //返回结果
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 40;	
+	}
+}
+
+//升级大厅等级 c --->s
+message stReqLevelUpHallLv
+{
+	optional uint32 guildID = 1;		//公会ID
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 41;	
+	}
+}
+
+//升级大厅返回 s ---> c
+message stLevelUpHallLvResult
+{
+	enum eResult
+	{
+		eSUCCESS  = 1;					//成功
+		eCONTRIBUTE_NOT_ENOGUH = 2;		//贡献度不足
+		eHAS_NOT_RIGHT = 3;				//没有权限
+		eINNER_ERROR = 4;				//内部错误
+	}
+	
+	optional eResult result = 1;		//返回结果
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 42;	
+	}
+}
+
+//同步大厅等级
+message stSynHallLv
+{
+	optional uint32 lv = 1;		//当前等级
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 43;	
+	}
+}
+
+//升级祈福建筑 c ----> s
+message stReqPrayBuildingLv
+{
+	optional uint32 guildID = 1;	//公会的guildID
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 44;	
+	}
+}
+
+//升级祈福建筑返回 s ---> c
+message stPrayBuildingLvResult
+{
+	enum eResult 
+	{
+		eSUCCESS  = 1;					//成功
+		eCONTRIBUTE_NOT_ENOGUH = 2;		//贡献度不足
+		eHAS_NOT_RIGHT = 3;				//没有权限
+		eINNER_ERROR = 4;				//内部错误
+		eHALL_LV_TOO_LOW = 5;			//大厅等级太低
+	}
+	
+	optional eResult result = 1;
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 45;	
+	}
+}
+
+//同步祈福建筑等级  s ---> c
+message stSynPrayBuildingLv
+{
+	optional uint32 lv = 1;		//当前等级
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 46;	
+	}
+}
+
+//请求进行祈福 c ---> s
+message stReqPray
+{
+	optional uint32 guildID = 1;	//公会ID
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 47;	
+	}
+}
+
+//祈福返回 s ---> c
+message stPrayResult
+{
+	enum eResult
+	{
+		eSUCCESS = 1;	//成功
+		eHAS_PRAY = 2;	//已经祈福了
+		ePRAY_NUM_OUT = 3;//祈福次数完毕
+		eCANNT_PRAY = 4;  //不能祈福
+	}
+	
+	optional eResult result = 1;
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 48;	
+	}
+}
+
+//请求升级商店建筑 c ---> s
+message stReqLevelUpShopBuildingLv
+{
+	optional uint32 guildID = 1;
+	
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 49;	
+	}
+}
+
+//升级商店建筑返回  s ---> c
+message stLevelUpShopBuildingLvResult
+{
+	enum eResult
+	{
+		eSUCCESS = 1;	
+		eHAS_NO_RIGHT = 2;			//没有权限
+		eCONTRIBUTE_NOT_ENOUGH = 3;	//贡献度不足
+		eINNER_ERROR = 4;			//内部错误
+		eHALL_LV_TOO_LOW = 5;		//大厅等级太低
+	}
+	
+	optional eResult result = 1;
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 50;	
+	}
+}
+
+//商店等级 s ---> c
+message stSynShopBuilding
+{
+	optional uint32 lv = 1;			//商店等级
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 51;	
+	}
+}
+
+//请求公会动态列表 c ---> s
+message stReqGuildTrace
+{
+	optional uint32 guildID = 1;		//自己的公会ID
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 52;	
+	}
+}
+//公会成员加入
+//公会成员退出
+//任命公会成员职位（副会长、精英）
+//公会成员捐献信息（捐多少，获得多少）
+//公会建筑升级信息（什么建筑，升多少级）
+
+
+enum eTraceID
+{
+	eTrace_None = 0;
+	eTrace_Enter_Guild = 1;		//进入公会	
+	eTrace_Leave_Guild = 2;		//离开公会
+	eTrace_Kill_Out_Member = 3; //踢出公会
+	eTrace_Assign_Vice_Leader = 4;//设置副会长
+	eTrace_Assign_Elite = 5;	//设置精英
+	eTrace_Donate_Type1 = 6;	//捐赠类型1
+	eTrace_Donate_Type2 = 7;	//捐赠类型2
+	eTrace_Donate_Type3 = 8;	//捐赠类型3
+	eTrace_Hall_Levelup = 9;	//上级大厅
+	eTrace_Pray_BuildingLevelup = 10;//祈祷大厅升级
+	eTrace_Shop_Levelup = 11;	//商店升级
+	eTrace_BlackMarket_Levelup = 12;   //黑市升级
+}
+
+message stGuildTraceInfo
+{
+	optional eTraceID eTraceID = 1;		//跟踪ID
+	optional uint32   charID = 2;		//角色ID
+	optional string   name = 3;			//角色的名字
+	optional uint32   doTime = 4;		//时间,格林威治时间
+}
+
+//返回公会动态列表 s ----> c
+message stRetGuildTrace
+{
+	repeated stGuildTraceInfo traces = 1;
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 53;	
+	}
+}
+
+//通知所有人有新的公会动态  s ----> c
+message stAddNewGuildTrace
+{
+	optional stGuildTraceInfo traceInfo = 1;
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 54;	
+	}
+}
+
+//修改宣言 c <--->s
+message stChgNotice
+{
+	optional string notice = 1;
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 55;	
+	}
+}
+
+//是否捐献过 s ---> c
+message stGuildDonateState
+{
+	optional bool hasDonate = 1;	//true:今天捐献过,false:没有捐献过
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 56;	
+	}
+}
+
+//是否祈福过 s ---> c
+message stGuildPrayState
+{
+	optional bool hasPray = 1;		//true:今天祈福过,false:没有祈福过
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 57;	
+	}
+}
+
+//更换徽章 c -----> s
+message stReqChangeBadge
+{
+	optional uint32 badgeID = 1;		//徽章ID
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 58;	
+	}
+}
+
+//更换徽章返回 s ---> c
+message stChangeBadge
+{
+	enum eResult
+	{
+		eSuccess = 1;
+		eNot_Enough_Diamond = 2;	//钻石不足
+	}
+
+	optional uint32 badgeID = 1;		//徽章
+	optional eResult result = 2;
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 59;	
+	}
+}
+
+//进入公会领地 c ----> s
+message stIntoGuildCopymap
+{
+	optional uint32 charID  = 1;		//进入公会领地
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 60;	
+	}
+}
+
+//进入公会领地错误 s ----> c
+message stIntoGuildCopymapError
+{
+	enum eResult
+	{
+		eHAS_NOT_GUILD = 1;		//没有公会	
+	}
+	
+	optional eResult result = 1;
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 61;	
+	}
+}
+
+//根据名字搜索 c ---> s
+message stSearchGuild
+{
+	optional string guildName = 1;		//公会名字
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 62;	
+	}	
+}
+
+//搜索名字返回 s ----> c
+message stRetSearchGuildResult
+{
+	repeated  stGuildListInfo  listInfo = 1;		//查询到的列表
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 63;	
+	}	
+}
+
+//同步自己的贡献度 s ----> c
+message stSynMemberContribute
+{
+	optional uint32 charID = 1;
+	optional uint32 num = 2;
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 64;	
+	}		
+}
+
+//请求打开组队副本界面 c ---> s
+message stReqOpenGuildCopymapWin
+{
+	optional uint32 charID = 1;
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 65;	
+	}			
+}
+
+message stCopymapOpenInfo
+{
+	optional uint32 copymapID = 1;		//关卡ID
+	optional uint32 openTime = 2;		//开启时间
+	optional uint32 stepID = 3;			//阶段ID
+	optional bool   isStarted = 4;		//是否开启
+	optional uint32 killerID = 5;		//击杀者
+}
+
+//返回公会组队副本界面 s -----> c
+message stRetGuildCopymapInfo
+{
+	repeated stCopymapOpenInfo  openInfo = 1;		//开启信息
+	optional uint32  challengeNum = 2;				//挑战次数
+	optional uint32  assistNum = 3;					//协助次数
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 66;	
+	}			
+}
+
+//请求伤害排名 c ----> s
+message stReqDamageSortlist
+{
+	optional uint32 beginRank = 1 ;		//第几页
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 67;	
+	}			
+}
+
+message stDamageSortItemInfo
+{
+	optional uint32 charID = 1;
+	optional uint32 damage = 2;
+}
+
+//返回伤害排名 s ----> c
+message stRetDamageSortlist
+{
+	optional uint32 beginRank = 1;					//第几页
+	repeated stDamageSortItemInfo sortItem = 2;	//每一项的信息
+	optional uint32 myRank = 3;					//我的名次
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 68;	
+	}			
+}
+
+message stCopymapScoreSortItem
+{
+	optional uint32 guildID = 1;			//公会ID
+	optional string name = 2;				//名字
+	optional uint32 score = 3;				//积分
+}
+
+//请求副本积分排名 c ----> s
+message stReqGuildCopymapScoreSortlist
+{
+	optional uint32 beginRank = 1;					//第几页
+	optional uint32 copymapID = 2;					//副本ID
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 69;	
+	}		
+}
+
+//返回副本的积分排名信息 s -----> c
+message stRetGuildCopymapScoreSortlist
+{
+	optional uint32 beginRank = 1;					//第几页
+	optional uint32 copymapID = 2;					//副本ID
+	repeated stCopymapScoreSortItem sortItem = 3;	//排名信息
+	optional uint32 myRank	= 4;					//我的排名
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 70;	
+	}			
+}
+
+//同步公会活跃度 s  ----> c
+message stSynGuildActivityDegree
+{
+	optional uint32 value = 1;						//公会当前的活跃度
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 71;	
+	}		
+}
+
+//同步某个成员的挑战次数 s ----> c 
+message stSynMemberChallengeNum
+{
+	optional uint32 charID = 1;				//玩家ID
+	optional uint32 challengeNum = 2;		//挑战次数
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 72;	
+	}			
+}
+
+//同步玩家协助次数 s ----> c
+message stSynMemberAssistNum
+{
+	optional uint32 charID = 1;				//玩家ID
+	optional uint32 assistNum = 2;			//协助次数
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 73;	
+	}			
+}
+
+//请求进入公会副本 c ----> s
+message stReqEnterGuildCopymap
+{
+	optional uint32 copymapID = 1;
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 74;	
+	}			
+}
+
+//进入副本次数结果 s ----> c
+message stRetEnterGuildCopymapResult
+{
+	enum eResult
+	{
+		eHas_Member_timeout  = 1;			//有玩家次数用完了		
+		eHas_Not_Start = 2;					//没有开启
+		eHas_No_Team = 3;					//没有组队
+		eNot_Leader = 4;					//不是队长
+	}
+	
+	optional eResult result  = 1;
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 75;	
+	}		
+}
+
+//开启副本 c ----> s
+message stStartGuildCopymap
+{
+	optional uint32 copymapID = 1;			//公会副本ID
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 76;	
+	}			
+}
+
+//开启副本结果 s -----> c
+message stStartGuildCopymapResult
+{
+	enum eResult
+	{		
+		eSuccess = 1;					//成功
+		eNot_Enough_Activity = 2;		//活力值不足
+		eHas_Open = 3;					//已经开启了
+		eHas_No_Right = 4;				//没有权限
+		eLevel_Not_Meet = 5;			//等级不足
+	}
+
+	optional eResult result = 1;
+	optional uint32  startTime = 2;
+	optional uint32  copymapID = 3;			//开启的副本ID
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 77;	
+	}			
+}
+
+//在组队里面邀请 c ----> s
+message stInviteTeamInGuildChannel
+{
+	optional uint32 charID = 1;		//角色ID
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 78;	
+	}			
+}
+
+//通知某个成员的贡献度 s ----> c
+message stNotifyGuildMemContribute
+{
+	optional uint32 charID = 1;			//成员角色ID
+	optional uint32 curVal = 2;			//当前值
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 79;	
+	}		
+}
+
+//通知某个成功的活跃度 s ----> c
+message stNotifyGuildMemActivityDegree
+{
+	optional uint32 charID = 1;			//成员角色ID
+	optional uint32 curVal = 2;			//当前值
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 80;	
+	}		
+}
+
+//请求打开公会战界面  c ----> s
+message stReqGuildManorFightWin
+{
+	optional uint32 charID = 1;			//角色ID
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 81;	
+	}			
+}
+
+message stSynManorInfo
+{
+	optional uint32 manorID = 1;
+	optional uint32 ownerGuildID = 2;
+	optional string ownerGuildName = 3;
+	optional uint32 sideAGuildID = 4;
+	optional uint32 sideBGuildID = 5;
+}
+
+//返回公会界面信息 s ----> c
+message stRetGuildManorFightInfo
+{
+	repeated stSynManorInfo  manorInfos = 1;		//公会领地信息
+	optional uint32 applyManorID = 2;
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 82;	
+	}			
+}
+
+//请求打开领地战申请界面  c --- > s
+message stReqOpenApplyManorFightWin
+{
+	optional uint32 manorID = 1;					//领地ID
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 83;	
+	}			
+}
+
+message stSynManoryApplyInfo
+{
+	optional uint32 guildID = 1;
+	optional string guildName = 2;
+	optional uint32 contribute = 3;
+}
+
+//领地战界面 s  -----> c
+message stApplyManorWinInfo
+{
+	optional uint32 manorID = 1;
+	repeated stSynManoryApplyInfo applyInfo = 2;
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 84;	
+	}			
+}
+
+//刷新申请界面 c   ------> s
+message stRefreshManorApplyInfo
+{
+	optional uint32 manorID = 1;
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 85;	
+	}			
+}
+
+//返回申请列表 s ----> c
+message stRetManorApplyInfo
+{
+	optional uint32 manorID = 1;
+	repeated stSynManoryApplyInfo applyInfo = 2;
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 86;	
+	}		
+}
+
+//申请竞标 c ----> s
+message stApplyManorFight
+{
+	optional uint32 manorID = 1;		//申请竞标的领地
+	optional uint32 contribute = 2;		//花费贡献度
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 87;	
+	}			
+}
+
+//申请竞标领地返回 s ----> c
+message stApplyManorFightRet
+{
+	enum eResult
+	{
+		eSuccess = 1;
+		eRes_Not_Enough = 2;		//资源不足
+		eOut_Time = 3;				//不在时间段内
+		eHas_No_Right = 4;			//没有权限
+		eManor_ID_Error = 5;		//领地ID不存在
+		eManor_Has_Apply = 6;		//已经申请了
+	}
+
+	optional eResult result = 1;
+	optional uint32  manorID = 2;			//领地ID
+	optional uint32  contribute = 3;		//用户当前竞标的贡献
+	optional uint32  guildID = 4;			//公会ID
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 88;	
+	}		
+}
+
+//阵容
+enum eFormation
+{
+	eFormation_Main = 1;				//主阵
+	eFormation_Left = 2;				//左阵
+	eFormation_Right = 3;				//右阵
+}
+
+//打开领地战斗界面 c -----> s
+message stReqManorFightWin
+{
+	optional uint32 manorID = 1;
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 89;	
+	}			
+}
+
+//阵容胜利信息
+message stSynFormationTeamInfo
+{
+	optional uint32 teamID = 1;
+	optional uint32 num = 2;
+}
+
+//返回领地战斗界面信息 s  ----> c
+message stRetManorFightWinInfo
+{
+	repeated stSynFormationTeamInfo mainJoinInNum = 1;		//主阵参与队伍
+	repeated stSynFormationTeamInfo leftJoinInNum = 2;		//左阵参与队伍
+	repeated stSynFormationTeamInfo rightJoinInNum = 3;		//右阵参与队伍
+	optional uint32 manorID = 4;			//领地ID
+	optional string guildAName = 5;
+	optional string guildBName = 6;
+	optional uint32 mainWinGuildID = 7;	//中路胜者ID
+	optional uint32 leftWinGuildID = 8;	//左路胜者ID
+	optional uint32 rightWinGuildID = 9;	//右路胜者ID
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 90;	
+	}			
+}
+
+//请求战斗布阵信息 c ----> s
+message stReqManorFightFormation
+{
+	optional uint32 manorID = 1;		//领地ID
+	optional eFormation formation = 2;	
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 91;	
+	}			
+}
+
+message stSynManorBattleMem
+{
+	optional uint32 charID = 1;
+	optional string name = 2;		//角色名字
+	optional uint32 job  = 3;
+	optional uint32 sex = 4;
+	optional uint32 level = 5;		//关卡
+	optional uint32 battlePower = 6;//战力
+	optional uint32 curHP  = 7;		//当前血量
+	optional uint32 maxHP = 8;		//最大血量
+	optional uint32 pos = 9;		//所在队伍位置,0,1,2
+	optional uint32 teamID = 10;	//所在队伍ID,0,1,2,3,4	
+	optional uint32 photoID = 11;	//头像ID
+}
+//返回阵容信息 s ----> c
+message  stRetManorFightFormation
+{
+	optional uint32 manorID = 1;		//领地ID
+	optional eFormation formation = 2;	
+	repeated stSynManorBattleMem sideATeam = 3;
+	repeated stSynManorBattleMem sideBTeam = 4;
+	optional uint32  sideAGuildID = 5;				//A方公会ID
+	optional uint32  sideBGuildID = 6;				//B方公会ID
+
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 92;	
+	}			
+}
+
+//进入战斗队伍 c <----> s
+message stEnterManorFightTeam
+{
+	optional uint32 manorID = 1;			//阵容ID
+	optional eFormation formation = 2;		//哪个阵容
+	optional uint32  teamID = 3;			//0,1,2,3,4
+	optional uint32 pos = 4;				//队伍的位置,0,1,2
+	optional uint32  sideAGuildID = 5;		//A方公会ID
+	optional uint32  sideBGuildID = 6;		//B方公会ID
+	optional uint32  charID = 7;			//角色ID
+	optional string  name = 8;				//玩家名字
+	optional uint32  guildID = 9;			//公会ID
+	optional uint32  sex = 10;
+	optional uint32  job = 11;
+	optional uint32  level = 12;
+	optional uint32  battlePower = 13;
+	optional uint32  maxHP = 14;			//最大血量
+	optional uint32  photoID = 15;			//头像ID
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 93;	
+	}			
+}
+
+//进入战斗队伍结果 s ---> c
+message stEnterManorFightTeamResult
+{
+	enum eResult
+	{
+		eSuccess = 1;
+		eNot_ChallengeGuildID = 2;		//不是挑战的GuildID
+		ePos_Not_Empty = 3;				//位置非空
+		eNot_In_Time = 4;				//不在时间段内
+	}
+	
+	optional eResult result = 1;
+	optional uint32 manorID = 2;			//阵容ID
+	optional eFormation formation = 3;		//哪个阵容
+	optional uint32  teamID = 4;			//0,1,2,3,4
+	optional uint32 pos = 5;				//队伍的位置,0,1,2
+	optional uint32  sideAGuildID = 6;				//A方公会ID
+	optional uint32  sideBGuildID = 7;				//B方公会ID
+
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 94;	
+	}			
+}
+
+//通知服务器某个离开了战斗界面(要从队伍里清除) c <----> s
+message stNotifyLeaveManorFightWin
+{
+	optional uint32 charID = 1;
+	optional uint32 guildID = 2;		//公会ID
+	optional uint32 formation = 3;		//阵容
+	optional uint32 teamID = 4;			//队伍ID
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 95;	
+	}				
+}
+
+message stSynManorFightItem
+{
+	optional string roleName = 1;		//角色名字
+	optional uint32 level = 2;			//等级
+	optional uint32 battlePower = 3;	//战力
+	optional uint32 killNum = 4;		//杀敌数量
+	optional bool   isDie = 5;			//是否死亡
+}
+
+//领地战pk的结果 s -----> c
+message stManorFightPKResult
+{
+	repeated stSynManorFightItem sideA = 1;	//A方的人,该列表放胜利的一方
+	repeated stSynManorFightItem sideB = 2;	//B方的人
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 96;	
+	}
+}
+
+//领地战失败 s ----> c
+message stManorFightPKFail
+{
+	repeated stSynManorFightItem sideA = 1;	//A方的人,该列表放胜利的一方
+	repeated stSynManorFightItem sideB = 2;	//B方的人
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 97;	
+	}
+}
+
+//申请结束后出现结果  s  -----> c
+message stNotifyWinerAfterApplyEnd
+{
+	optional uint32 guildID = 1;
+	optional uint32 manorID = 2;
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 98;	
+	}
+}
+
+//领地战改变队伍位置 c ----> s
+message stReqChgManorFightTeamPos
+{
+	optional uint32 charID = 1;			//角色ID
+	optional uint32 destTeamID = 2;		//目的队伍
+	optional uint32 destPos = 3;		//目的位置
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 99;	
+	}
+}
+
+//通知某个玩家位置改变 s ------> c
+message stNotifyChgManorFightTeamPos
+{
+	optional uint32 charID = 1;
+	optional uint32 srcTeamID = 2;
+	optional uint32 srcPos = 3;
+	optional uint32 dstTeamID = 4;
+	optional uint32 dstPos = 5;
+	optional uint32 formation = 6;		//哪个阵容
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 100;	
+	}
+}
+
+//玩家位置改变结果 s -----> c
+message stChgManorFightTeamPosResult
+{
+	enum eResult
+	{
+		eSuccess = 1;
+		eHas_Not_Enter = 2;				//还没有进入
+		eDest_Pos_Was_Occupied = 3;		//领地被占领
+	}
+	
+	optional eResult result = 1;
+	optional uint32  teamID = 2;
+	optional uint32  pos = 3;
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 101;	
+	}
+}
+
+//通知公会领地战失败 s -----> c
+message stNotifyManorFightFail
+{
+	optional uint32 manorID = 1;
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 102;	
+	}
+}
+
+//没有匹配进入战斗  s -----> c
+message stManorFightHasNotMatch
+{
+	optional uint32 manorID = 1;
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 103;	
+	}
+}
+
+//阵容结算出胜负 s ------> c
+message stManorFightFormationResult
+{
+	optional uint32 manorID = 1;		//阵容ID
+	optional uint32 winGuildID = 2;		//胜利公会ID
+	optional uint32 formation = 3;		//阵容
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 104;	
+	}
+}
+
+//通知结束没有胜利者 s   -----> c
+message stManorFightFinish
+{
+	optional uint32 manorID = 1;		//领地ID
+
+	enum ProtoModID
+	{
+		ModID = 7;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 105;	
+	}
+}
+
+//请求升级黑市 c ---> s
+message stReqLevelUpBlackMarketLv
+{
+	optional uint32 guildID = 1;
+
+	enum ProtoModID
+	{
+		ModID = 7;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 106;
+	}
+}
+
+//升级黑市返回  s ---> c
+message stLevelUpBlackMarketLvResult
+{
+	enum eResult
+	{
+		eSUCCESS = 1;
+		eHAS_NO_RIGHT = 2;          //没有权限
+		eCONTRIBUTE_NOT_ENOUGH = 3; //贡献度不足
+		eINNER_ERROR = 4;           //内部错误
+		eHALL_LV_TOO_LOW = 5;       //大厅等级太低
+	}
+
+	optional eResult result = 1;
+
+	enum ProtoModID
+	{
+		ModID = 7;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 107;
+	}
+}
+
+//同步黑市建筑等级  s ---> c
+message stSynBlackMarketBuildingLv
+{   
+	optional uint32 lv = 1;     //当前等级
+
+	enum ProtoModID
+	{   
+		ModID = 7;
+	}
+
+	enum ProtoFunID
+	{   
+		FunID = 108;
+	}
+}

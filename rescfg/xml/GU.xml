@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2013 sp1 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<root>
+	<!--公会配置表
+		costResType：消耗金钱种类（1：金币、2：钻石）
+		costResmun：消耗金钱数量
+		construction：公会成长所需建设点数
+		upperlimit：可招收成员最大数量
+		adjutant：可任命副会长数量
+		elite：可任命精英数量
+		prayitem1：祈福获得物品1
+		prayitem2：祈福获得物品2
+		prayitem3：祈福获得物品3
+		donatenum：贡献点数
+		jurisdiction-LV：3为会长、2为副会长、1为精英、0为一般成员
+		manifesto：公会宣言权限
+		audit：新会员审核权限
+		dissolve：公会解散权限
+		dislodge：驱逐成员权限（逻辑为只能驱逐比自己级别底的成员）
+		GULvup：公会升级权限（公会建筑升级、公会商店升级、公会祈祷升级）
+		announcement：公会公告权限
+		GUchallengeopen：公会副本开启权利
+		以上权限1为有，0为无
+	-->
+	<constant>
+		<!--公会建立-->
+		<establish Openlv="17">
+			<cost id="1" costResType="1" costResmun="1000000"/>
+			<cost id="2" costResType="2" costResmun="500"/>
+		</establish>
+		<!--大厅成长-->
+		<Lobby>
+			<entry lv="1" construction="6000" upperlimit="30" adjutant="2" elite="5"/>
+			<entry lv="2" construction="9000" upperlimit="31" adjutant="2" elite="5"/>
+			<entry lv="3" construction="12000" upperlimit="31" adjutant="2" elite="5"/>
+			<entry lv="4" construction="15000" upperlimit="32" adjutant="2" elite="5"/>
+			<entry lv="5" construction="18000" upperlimit="32" adjutant="2" elite="5"/>
+			<entry lv="6" construction="21600" upperlimit="33" adjutant="2" elite="5"/>
+			<entry lv="7" construction="25200" upperlimit="33" adjutant="2" elite="5"/>
+			<entry lv="8" construction="28800" upperlimit="34" adjutant="2" elite="5"/>
+			<entry lv="9" construction="32400" upperlimit="34" adjutant="2" elite="5"/>
+			<entry lv="10" construction="36000" upperlimit="35" adjutant="2" elite="5"/>
+			<entry lv="11" construction="40200" upperlimit="35" adjutant="2" elite="5"/>
+			<entry lv="12" construction="44400" upperlimit="36" adjutant="2" elite="5"/>
+			<entry lv="13" construction="48600" upperlimit="36" adjutant="2" elite="5"/>
+			<entry lv="14" construction="52800" upperlimit="37" adjutant="2" elite="5"/>
+			<entry lv="15" construction="57000" upperlimit="37" adjutant="2" elite="5"/>
+			<entry lv="16" construction="61800" upperlimit="38" adjutant="2" elite="5"/>
+			<entry lv="17" construction="66600" upperlimit="38" adjutant="2" elite="5"/>
+			<entry lv="18" construction="71400" upperlimit="39" adjutant="2" elite="5"/>
+			<entry lv="19" construction="76200" upperlimit="39" adjutant="2" elite="5"/>
+			<entry lv="20" construction="81000" upperlimit="40" adjutant="2" elite="5"/>
+			<entry lv="21" construction="86400" upperlimit="40" adjutant="2" elite="5"/>
+			<entry lv="22" construction="91800" upperlimit="41" adjutant="2" elite="5"/>
+			<entry lv="23" construction="97200" upperlimit="41" adjutant="2" elite="5"/>
+			<entry lv="24" construction="102600" upperlimit="42" adjutant="2" elite="5"/>
+			<entry lv="25" construction="108000" upperlimit="42" adjutant="2" elite="5"/>
+			<entry lv="26" construction="114000" upperlimit="43" adjutant="2" elite="5"/>
+			<entry lv="27" construction="120000" upperlimit="43" adjutant="2" elite="5"/>
+			<entry lv="28" construction="126000" upperlimit="44" adjutant="2" elite="5"/>
+			<entry lv="29" construction="132000" upperlimit="44" adjutant="2" elite="5"/>
+			<entry lv="30" construction="138000" upperlimit="45" adjutant="2" elite="5"/>
+		</Lobby>
+		<!--祈福成长-->
+		<pray costResType="10" construction="50">
+			<entry lv="1" construction="4500" num="30" prayitem1="11" item1mun="10" prayitem2="1" item2mun="20000" prayitem3="4" item3mun="10"/>
+			<entry lv="2" construction="6750" num="31" prayitem1="11" item1mun="10" prayitem2="1" item2mun="25000" prayitem3="4" item3mun="11"/>
+			<entry lv="3" construction="9000" num="31" prayitem1="11" item1mun="10" prayitem2="1" item2mun="30000" prayitem3="4" item3mun="12"/>
+			<entry lv="4" construction="11250" num="32" prayitem1="11" item1mun="10" prayitem2="1" item2mun="35000" prayitem3="4" item3mun="13"/>
+			<entry lv="5" construction="13500" num="32" prayitem1="11" item1mun="10" prayitem2="1" item2mun="40000" prayitem3="4" item3mun="14"/>
+			<entry lv="6" construction="16200" num="33" prayitem1="11" item1mun="11" prayitem2="1" item2mun="45000" prayitem3="4" item3mun="15"/>
+			<entry lv="7" construction="18900" num="33" prayitem1="11" item1mun="11" prayitem2="1" item2mun="50000" prayitem3="4" item3mun="16"/>
+			<entry lv="8" construction="21600" num="34" prayitem1="11" item1mun="11" prayitem2="1" item2mun="55000" prayitem3="4" item3mun="17"/>
+			<entry lv="9" construction="24300" num="34" prayitem1="11" item1mun="11" prayitem2="1" item2mun="60000" prayitem3="4" item3mun="18"/>
+			<entry lv="10" construction="27000" num="35" prayitem1="11" item1mun="11" prayitem2="1" item2mun="65000" prayitem3="4" item3mun="19"/>
+			<entry lv="11" construction="30150" num="35" prayitem1="11" item1mun="12" prayitem2="1" item2mun="70000" prayitem3="4" item3mun="20"/>
+			<entry lv="12" construction="33300" num="36" prayitem1="11" item1mun="12" prayitem2="1" item2mun="75000" prayitem3="4" item3mun="21"/>
+			<entry lv="13" construction="36450" num="36" prayitem1="11" item1mun="12" prayitem2="1" item2mun="80000" prayitem3="4" item3mun="22"/>
+			<entry lv="14" construction="39600" num="37" prayitem1="11" item1mun="12" prayitem2="1" item2mun="85000" prayitem3="4" item3mun="23"/>
+			<entry lv="15" construction="42750" num="37" prayitem1="11" item1mun="12" prayitem2="1" item2mun="90000" prayitem3="4" item3mun="25"/>
+			<entry lv="16" construction="46350" num="38" prayitem1="11" item1mun="13" prayitem2="1" item2mun="95000" prayitem3="4" item3mun="26"/>
+			<entry lv="17" construction="49950" num="38" prayitem1="11" item1mun="13" prayitem2="1" item2mun="100000" prayitem3="4" item3mun="27"/>
+			<entry lv="18" construction="53550" num="39" prayitem1="11" item1mun="13" prayitem2="1" item2mun="105000" prayitem3="4" item3mun="28"/>
+			<entry lv="19" construction="57150" num="39" prayitem1="11" item1mun="13" prayitem2="1" item2mun="110000" prayitem3="4" item3mun="29"/>
+			<entry lv="20" construction="60750" num="40" prayitem1="11" item1mun="13" prayitem2="1" item2mun="115000" prayitem3="4" item3mun="30"/>
+			<entry lv="21" construction="64800" num="40" prayitem1="11" item1mun="14" prayitem2="1" item2mun="120000" prayitem3="4" item3mun="31"/>
+			<entry lv="22" construction="68850" num="41" prayitem1="11" item1mun="14" prayitem2="1" item2mun="125000" prayitem3="4" item3mun="32"/>
+			<entry lv="23" construction="72900" num="41" prayitem1="11" item1mun="14" prayitem2="1" item2mun="130000" prayitem3="4" item3mun="33"/>
+			<entry lv="24" construction="76950" num="42" prayitem1="11" item1mun="14" prayitem2="1" item2mun="135000" prayitem3="4" item3mun="34"/>
+			<entry lv="25" construction="81000" num="42" prayitem1="11" item1mun="14" prayitem2="1" item2mun="140000" prayitem3="4" item3mun="35"/>
+			<entry lv="26" construction="85500" num="43" prayitem1="11" item1mun="15" prayitem2="1" item2mun="145000" prayitem3="4" item3mun="36"/>
+			<entry lv="27" construction="90000" num="43" prayitem1="11" item1mun="15" prayitem2="1" item2mun="150000" prayitem3="4" item3mun="37"/>
+			<entry lv="28" construction="94500" num="44" prayitem1="11" item1mun="15" prayitem2="1" item2mun="155000" prayitem3="4" item3mun="38"/>
+			<entry lv="29" construction="99000" num="44" prayitem1="11" item1mun="15" prayitem2="1" item2mun="160000" prayitem3="4" item3mun="39"/>
+			<entry lv="30" construction="103500" num="45" prayitem1="11" item1mun="15" prayitem2="1" item2mun="165000" prayitem3="4" item3mun="40"/>
+		</pray>
+		<!--商店成长-->
+		<gushop shopID="9">
+			<entry lv="1" construction="4500"/>
+			<entry lv="2" construction="6750"/>
+			<entry lv="3" construction="9000"/>
+			<entry lv="4" construction="11250"/>
+			<entry lv="5" construction="13500"/>
+			<entry lv="6" construction="16200"/>
+			<entry lv="7" construction="18900"/>
+			<entry lv="8" construction="21600"/>
+			<entry lv="9" construction="24300"/>
+			<entry lv="10" construction="27000"/>
+			<entry lv="11" construction="30150"/>
+			<entry lv="12" construction="33300"/>
+			<entry lv="13" construction="36450"/>
+			<entry lv="14" construction="39600"/>
+			<entry lv="15" construction="42750"/>
+			<entry lv="16" construction="46350"/>
+			<entry lv="17" construction="49950"/>
+			<entry lv="18" construction="53550"/>
+			<entry lv="19" construction="57150"/>
+			<entry lv="20" construction="60750"/>
+			<entry lv="21" construction="64800"/>
+			<entry lv="22" construction="68850"/>
+			<entry lv="23" construction="72900"/>
+			<entry lv="24" construction="76950"/>
+			<entry lv="25" construction="81000"/>
+			<entry lv="26" construction="85500"/>
+			<entry lv="27" construction="90000"/>
+			<entry lv="28" construction="94500"/>
+			<entry lv="29" construction="99000"/>
+			<entry lv="30" construction="103500"/>
+		</gushop>
+		<!--捐献奖励配置-->
+		<donate>
+			<entry id="1" costResType="1" costResmun="20000" construction="200" donatenum="200"/>
+			<entry id="2" costResType="2" costResmun="20" construction="600" donatenum="400"/>
+			<entry id="3" costResType="2" costResmun="200" construction="1000" donatenum="2000"/>
+		</donate>
+		<!--公会权限-->
+		<jurisdiction>
+			<entry lv="0" manifesto="0" audit="0" dissolve="0" dislodge="0" announcement="0" GUchallengeopen="0" GULvup="0"/>
+			<entry lv="1" manifesto="0" audit="0" dissolve="0" dislodge="0" announcement="0" GUchallengeopen="0" GULvup="0"/>
+			<entry lv="2" manifesto="0" audit="1" dissolve="0" dislodge="1" announcement="1" GUchallengeopen="1" GULvup="1"/>
+			<entry lv="3" manifesto="1" audit="1" dissolve="1" dislodge="1" announcement="1" GUchallengeopen="1" GULvup="1"/>
+		</jurisdiction>
+		<!--公会图标-->
+		<GUimage>
+			<entry id="1" image="GUimage_01"/>
+			<entry id="2" image="GUimage_02"/>
+			<entry id="3" image="GUimage_03"/>
+			<entry id="4" image="GUimage_04"/>
+			<entry id="5" image="GUimage_05"/>
+			<entry id="6" image="GUimage_06"/>
+			<entry id="7" image="GUimage_07"/>
+			<entry id="8" image="GUimage_08"/>
+			<entry id="9" image="GUimage_09"/>
+			<entry id="10" image="GUimage_10"/>
+			<entry id="11" image="GUimage_11"/>
+			<entry id="12" image="GUimage_12"/>
+			<entry id="13" image="GUimage_13"/>
+			<entry id="14" image="GUimage_14"/>
+			<entry id="15" image="GUimage_15"/>
+		</GUimage>
+		<!--公会等级图标框-->
+		<GUlvimage>
+			<entry GUlv="1" image="GUlvimage_01"/>
+			<entry GUlv="4" image="GUlvimage_02"/>
+			<entry GUlv="7" image="GUlvimage_03"/>
+			<entry GUlv="10" image="GUlvimage_04"/>
+			<entry GUlv="13" image="GUlvimage_05"/>
+			<entry GUlv="16" image="GUlvimage_06"/>
+			<entry GUlv="19" image="GUlvimage_07"/>
+			<entry GUlv="20" image="GUlvimage_08"/>
+		</GUlvimage>
+		<!--公会副本开放条件（公会副本等级）-->
+		<GUgamecopy>
+			<entry GUcopylv="5" Openlevel="30100"/>
+			<entry GUcopylv="10" Openlevel="30200"/>
+			<entry GUcopylv="15" Openlevel="30300"/>
+			<entry GUcopylv="20" Openlevel="30400"/>
+			<entry GUcopylv="40" Openlevel="30500"/>
+			<entry GUcopylv="50" Openlevel="30600"/>
+		</GUgamecopy>
+		<!--公会副本开启活跃度消耗-->
+		<GUopencost>
+			<entry Levelid="30100" costactivity="40000"/>
+			<entry Levelid="30101" costactivity="45000"/>
+			<entry Levelid="30102" costactivity="50000"/>
+			<entry Levelid="30103" costactivity="55000"/>
+			<entry Levelid="30104" costactivity="60000"/>
+			<entry Levelid="30105" costactivity="70000"/>
+			<entry Levelid="30106" costactivity="80000"/>
+			<entry Levelid="30107" costactivity="90000"/>
+			<entry Levelid="30108" costactivity="100000"/>
+			<entry Levelid="30109" costactivity="120000"/>
+			<entry Levelid="30200" costactivity="60000"/>
+			<entry Levelid="30201" costactivity="70000"/>
+			<entry Levelid="30202" costactivity="80000"/>
+			<entry Levelid="30203" costactivity="90000"/>
+			<entry Levelid="30204" costactivity="100000"/>
+			<entry Levelid="30205" costactivity="110000"/>
+			<entry Levelid="30206" costactivity="120000"/>
+			<entry Levelid="30207" costactivity="120000"/>
+			<entry Levelid="30208" costactivity="120000"/>
+			<entry Levelid="30209" costactivity="120000"/>
+			<entry Levelid="30300" costactivity="40000"/>
+			<entry Levelid="30301" costactivity="45000"/>
+			<entry Levelid="30302" costactivity="50000"/>
+			<entry Levelid="30303" costactivity="55000"/>
+			<entry Levelid="30304" costactivity="60000"/>
+			<entry Levelid="30305" costactivity="70000"/>
+			<entry Levelid="30306" costactivity="80000"/>
+			<entry Levelid="30307" costactivity="90000"/>
+			<entry Levelid="30308" costactivity="100000"/>
+			<entry Levelid="30309" costactivity="120000"/>
+			<entry Levelid="30400" costactivity="60000"/>
+			<entry Levelid="30401" costactivity="70000"/>
+			<entry Levelid="30402" costactivity="80000"/>
+			<entry Levelid="30403" costactivity="90000"/>
+			<entry Levelid="30404" costactivity="100000"/>
+			<entry Levelid="30405" costactivity="110000"/>
+			<entry Levelid="30406" costactivity="120000"/>
+			<entry Levelid="30407" costactivity="120000"/>
+			<entry Levelid="30408" costactivity="120000"/>
+			<entry Levelid="30409" costactivity="120000"/>
+			<entry Levelid="30500" costactivity="50000"/>
+			<entry Levelid="30501" costactivity="55000"/>
+			<entry Levelid="30502" costactivity="60000"/>
+			<entry Levelid="30503" costactivity="65000"/>
+			<entry Levelid="30504" costactivity="70000"/>
+			<entry Levelid="30505" costactivity="75000"/>
+			<entry Levelid="30506" costactivity="80000"/>
+			<entry Levelid="30507" costactivity="80000"/>
+			<entry Levelid="30508" costactivity="80000"/>
+			<entry Levelid="30509" costactivity="80000"/>
+			<entry Levelid="30600" costactivity="60000"/>
+			<entry Levelid="30601" costactivity="65000"/>
+			<entry Levelid="30602" costactivity="70000"/>
+			<entry Levelid="30603" costactivity="75000"/>
+			<entry Levelid="30604" costactivity="80000"/>
+			<entry Levelid="30605" costactivity="80000"/>
+			<entry Levelid="30606" costactivity="80000"/>
+			<entry Levelid="30607" costactivity="80000"/>
+			<entry Levelid="30608" costactivity="80000"/>
+			<entry Levelid="30609" costactivity="80000"/>
+		</GUopencost>
+		<!--公会成员每日贡献活跃度上限和公会总活跃度上限-->
+		<!--
+			id:1表示公会成员每日贡献活跃度上限
+			   2表示公会总活跃度上限
+		-->
+		<GUactivity>
+			<entry id="1" activitylimit="400"/>
+			<entry id="2" activitylimit="80000"/>
+		</GUactivity>
+		<!--公会成员参与组队副本挑战次数及助战次数-->
+		<!--
+			id:1表示公会成员每日组队副本挑战次数
+			   2表示公会成员每日组队副本助战次数
+		-->
+		<GUchallenge>
+			<entry id="1" timelimit="3"/>
+			<entry id="2" timelimit="2"/>
+		</GUchallenge>
+		<!--公会组队副本通关奖励和击杀奖励-->
+		<!--
+			completeboxid:通关副本全部成员奖励
+			killboxid:击杀副本BOSS奖励
+		-->
+		<GUgamecopyreward>
+			<entry levelid="30100" completeboxid="801000" completerewarditem="102510" killboxid="800000" killrewarditem="102500" bossid="300731"/>
+			<entry levelid="30101" completeboxid="801000" completerewarditem="102510" killboxid="800000" killrewarditem="102500" bossid="300731"/>
+			<entry levelid="30102" completeboxid="801000" completerewarditem="102510" killboxid="800000" killrewarditem="102500" bossid="300731"/>
+			<entry levelid="30103" completeboxid="801000" completerewarditem="102510" killboxid="800000" killrewarditem="102500" bossid="300731"/>
+			<entry levelid="30104" completeboxid="801000" completerewarditem="102510" killboxid="800000" killrewarditem="102500" bossid="300731"/>
+			<entry levelid="30105" completeboxid="801000" completerewarditem="102510" killboxid="800000" killrewarditem="102500" bossid="300731"/>
+			<entry levelid="30106" completeboxid="801000" completerewarditem="102510" killboxid="800000" killrewarditem="102500" bossid="300731"/>
+			<entry levelid="30107" completeboxid="801000" completerewarditem="102510" killboxid="800000" killrewarditem="102500" bossid="300731"/>
+			<entry levelid="30108" completeboxid="801000" completerewarditem="102510" killboxid="800000" killrewarditem="102500" bossid="300731"/>
+			<entry levelid="30109" completeboxid="801000" completerewarditem="102510" killboxid="800000" killrewarditem="102500" bossid="300731"/>
+			<entry levelid="30200" completeboxid="801001" completerewarditem="102511" killboxid="800000" killrewarditem="102501" bossid="300701"/>
+			<entry levelid="30201" completeboxid="801001" completerewarditem="102511" killboxid="800001" killrewarditem="102501" bossid="300701"/>
+			<entry levelid="30202" completeboxid="801001" completerewarditem="102511" killboxid="800001" killrewarditem="102501" bossid="300701"/>
+			<entry levelid="30203" completeboxid="801001" completerewarditem="102511" killboxid="800001" killrewarditem="102501" bossid="300701"/>
+			<entry levelid="30204" completeboxid="801001" completerewarditem="102511" killboxid="800001" killrewarditem="102501" bossid="300701"/>
+			<entry levelid="30205" completeboxid="801001" completerewarditem="102511" killboxid="800001" killrewarditem="102501" bossid="300701"/>
+			<entry levelid="30206" completeboxid="801001" completerewarditem="102511" killboxid="800001" killrewarditem="102501" bossid="300701"/>
+			<entry levelid="30207" completeboxid="801001" completerewarditem="102511" killboxid="800001" killrewarditem="102501" bossid="300701"/>
+			<entry levelid="30208" completeboxid="801001" completerewarditem="102511" killboxid="800001" killrewarditem="102501" bossid="300701"/>
+			<entry levelid="30209" completeboxid="801001" completerewarditem="102511" killboxid="800001" killrewarditem="102501" bossid="300701"/>
+			<entry levelid="30300" completeboxid="801002" completerewarditem="102512" killboxid="800002" killrewarditem="102502" bossid="300401"/>
+			<entry levelid="30301" completeboxid="801002" completerewarditem="102512" killboxid="800002" killrewarditem="102502" bossid="300401"/>
+			<entry levelid="30302" completeboxid="801002" completerewarditem="102512" killboxid="800002" killrewarditem="102502" bossid="300401"/>
+			<entry levelid="30303" completeboxid="801002" completerewarditem="102512" killboxid="800002" killrewarditem="102502" bossid="300401"/>
+			<entry levelid="30304" completeboxid="801002" completerewarditem="102512" killboxid="800002" killrewarditem="102502" bossid="300401"/>
+			<entry levelid="30305" completeboxid="801002" completerewarditem="102512" killboxid="800002" killrewarditem="102502" bossid="300401"/>
+			<entry levelid="30306" completeboxid="801002" completerewarditem="102512" killboxid="800002" killrewarditem="102502" bossid="300401"/>
+			<entry levelid="30307" completeboxid="801002" completerewarditem="102512" killboxid="800002" killrewarditem="102502" bossid="300401"/>
+			<entry levelid="30308" completeboxid="801002" completerewarditem="102512" killboxid="800002" killrewarditem="102502" bossid="300401"/>
+			<entry levelid="30309" completeboxid="801002" completerewarditem="102512" killboxid="800002" killrewarditem="102502" bossid="300401"/>
+			<entry levelid="30400" completeboxid="801003" completerewarditem="102513" killboxid="800003" killrewarditem="102503" bossid="300681"/>
+			<entry levelid="30401" completeboxid="801003" completerewarditem="102513" killboxid="800003" killrewarditem="102503" bossid="300681"/>
+			<entry levelid="30402" completeboxid="801003" completerewarditem="102513" killboxid="800003" killrewarditem="102503" bossid="300681"/>
+			<entry levelid="30403" completeboxid="801003" completerewarditem="102513" killboxid="800003" killrewarditem="102503" bossid="300681"/>
+			<entry levelid="30404" completeboxid="801003" completerewarditem="102513" killboxid="800003" killrewarditem="102503" bossid="300681"/>
+			<entry levelid="30405" completeboxid="801003" completerewarditem="102513" killboxid="800003" killrewarditem="102503" bossid="300681"/>
+			<entry levelid="30406" completeboxid="801003" completerewarditem="102513" killboxid="800003" killrewarditem="102503" bossid="300681"/>
+			<entry levelid="30407" completeboxid="801003" completerewarditem="102513" killboxid="800003" killrewarditem="102503" bossid="300681"/>
+			<entry levelid="30408" completeboxid="801003" completerewarditem="102513" killboxid="800003" killrewarditem="102503" bossid="300681"/>
+			<entry levelid="30409" completeboxid="801003" completerewarditem="102513" killboxid="800003" killrewarditem="102503" bossid="300681"/>
+			<entry levelid="30500" completeboxid="801004" completerewarditem="102514" killboxid="800004" killrewarditem="102504" bossid="300731"/>
+			<entry levelid="30501" completeboxid="801004" completerewarditem="102514" killboxid="800004" killrewarditem="102504" bossid="300731"/>
+			<entry levelid="30502" completeboxid="801004" completerewarditem="102514" killboxid="800004" killrewarditem="102504" bossid="300731"/>
+			<entry levelid="30503" completeboxid="801004" completerewarditem="102514" killboxid="800004" killrewarditem="102504" bossid="300731"/>
+			<entry levelid="30504" completeboxid="801004" completerewarditem="102514" killboxid="800004" killrewarditem="102504" bossid="300731"/>
+			<entry levelid="30505" completeboxid="801004" completerewarditem="102514" killboxid="800004" killrewarditem="102504" bossid="300731"/>
+			<entry levelid="30506" completeboxid="801004" completerewarditem="102514" killboxid="800004" killrewarditem="102504" bossid="300731"/>
+			<entry levelid="30507" completeboxid="801004" completerewarditem="102514" killboxid="800004" killrewarditem="102504" bossid="300731"/>
+			<entry levelid="30508" completeboxid="801004" completerewarditem="102514" killboxid="800004" killrewarditem="102504" bossid="300731"/>
+			<entry levelid="30509" completeboxid="801004" completerewarditem="102514" killboxid="800004" killrewarditem="102504" bossid="300731"/>
+			<entry levelid="30600" completeboxid="801005" completerewarditem="102515" killboxid="800005" killrewarditem="102505" bossid="300731"/>
+			<entry levelid="30601" completeboxid="801005" completerewarditem="102515" killboxid="800005" killrewarditem="102505" bossid="300731"/>
+			<entry levelid="30602" completeboxid="801005" completerewarditem="102515" killboxid="800005" killrewarditem="102505" bossid="300731"/>
+			<entry levelid="30603" completeboxid="801005" completerewarditem="102515" killboxid="800005" killrewarditem="102505" bossid="300731"/>
+			<entry levelid="30604" completeboxid="801005" completerewarditem="102515" killboxid="800005" killrewarditem="102505" bossid="300731"/>
+			<entry levelid="30605" completeboxid="801005" completerewarditem="102515" killboxid="800005" killrewarditem="102505" bossid="300731"/>
+			<entry levelid="30606" completeboxid="801005" completerewarditem="102515" killboxid="800005" killrewarditem="102505" bossid="300731"/>
+			<entry levelid="30607" completeboxid="801005" completerewarditem="102515" killboxid="800005" killrewarditem="102505" bossid="300731"/>
+			<entry levelid="30608" completeboxid="801005" completerewarditem="102515" killboxid="800005" killrewarditem="102505" bossid="300731"/>
+			<entry levelid="30609" completeboxid="801005" completerewarditem="102515" killboxid="800005" killrewarditem="102505" bossid="300731"/>
+		</GUgamecopyreward>
+		<!--公会成员每日伤害排名奖励-->
+		<GUrankreward>
+			<entry id="1" boxid="802000" rewarditem="102520"/>
+			<entry id="2" boxid="802001" rewarditem="102521"/>
+			<entry id="3" boxid="802002" rewarditem="102522"/>
+			<entry id="4" boxid="802003" rewarditem="102523"/>
+			<entry id="5" boxid="802003" rewarditem="102523"/>
+			<entry id="6" boxid="802003" rewarditem="102523"/>
+			<entry id="7" boxid="802003" rewarditem="102523"/>
+			<entry id="8" boxid="802003" rewarditem="102523"/>
+			<entry id="9" boxid="802003" rewarditem="102523"/>
+			<entry id="10" boxid="802003" rewarditem="102523"/>
+			<entry id="11" boxid="802004" rewarditem="102524"/>
+			<entry id="12" boxid="802004" rewarditem="102524"/>
+			<entry id="13" boxid="802004" rewarditem="102524"/>
+			<entry id="14" boxid="802004" rewarditem="102524"/>
+			<entry id="15" boxid="802004" rewarditem="102524"/>
+			<entry id="16" boxid="802004" rewarditem="102524"/>
+			<entry id="17" boxid="802004" rewarditem="102524"/>
+			<entry id="18" boxid="802004" rewarditem="102524"/>
+			<entry id="19" boxid="802004" rewarditem="102524"/>
+			<entry id="20" boxid="802004" rewarditem="102524"/>
+			<entry id="21" boxid="802004" rewarditem="102524"/>
+			<entry id="22" boxid="802004" rewarditem="102524"/>
+			<entry id="23" boxid="802004" rewarditem="102524"/>
+			<entry id="24" boxid="802004" rewarditem="102524"/>
+			<entry id="25" boxid="802004" rewarditem="102524"/>
+			<entry id="26" boxid="802004" rewarditem="102524"/>
+			<entry id="27" boxid="802004" rewarditem="102524"/>
+			<entry id="28" boxid="802004" rewarditem="102524"/>
+			<entry id="29" boxid="802004" rewarditem="102524"/>
+			<entry id="30" boxid="802004" rewarditem="102524"/>
+			<entry id="31" boxid="802004" rewarditem="102524"/>
+			<entry id="32" boxid="802004" rewarditem="102524"/>
+			<entry id="33" boxid="802004" rewarditem="102524"/>
+			<entry id="34" boxid="802004" rewarditem="102524"/>
+			<entry id="35" boxid="802004" rewarditem="102524"/>
+			<entry id="36" boxid="802004" rewarditem="102524"/>
+			<entry id="37" boxid="802004" rewarditem="102524"/>
+			<entry id="38" boxid="802004" rewarditem="102524"/>
+			<entry id="39" boxid="802004" rewarditem="102524"/>
+			<entry id="40" boxid="802004" rewarditem="102524"/>
+			<entry id="41" boxid="802004" rewarditem="102524"/>
+			<entry id="42" boxid="802004" rewarditem="102524"/>
+			<entry id="43" boxid="802004" rewarditem="102524"/>
+			<entry id="44" boxid="802004" rewarditem="102524"/>
+			<entry id="45" boxid="802004" rewarditem="102524"/>
+			<entry id="46" boxid="802004" rewarditem="102524"/>
+			<entry id="47" boxid="802004" rewarditem="102524"/>
+			<entry id="48" boxid="802004" rewarditem="102524"/>
+			<entry id="49" boxid="802004" rewarditem="102524"/>
+			<entry id="50" boxid="802004" rewarditem="102524"/>
+		</GUrankreward>
+		<!--公会副本排名每周积分排名奖励-->
+		<GUpointreward>
+			<Level id="30100">
+				<entry id="1" boxid="803000" rewarditem="102530"/>
+				<entry id="2" boxid="803001" rewarditem="102531"/>
+				<entry id="3" boxid="803002" rewarditem="102532"/>
+				<entry id="4" boxid="803003" rewarditem="102533"/>
+				<entry id="5" boxid="803004" rewarditem="102534"/>
+			</Level>
+			<Level id="30200">
+				<entry id="1" boxid="803005" rewarditem="102535"/>
+				<entry id="2" boxid="803006" rewarditem="102536"/>
+				<entry id="3" boxid="803007" rewarditem="102537"/>
+				<entry id="4" boxid="803008" rewarditem="102538"/>
+				<entry id="5" boxid="803009" rewarditem="102539"/>
+			</Level>
+			<Level id="30300">
+				<entry id="1" boxid="803010" rewarditem="102540"/>
+				<entry id="2" boxid="803011" rewarditem="102541"/>
+				<entry id="3" boxid="803012" rewarditem="102542"/>
+				<entry id="4" boxid="803013" rewarditem="102543"/>
+				<entry id="5" boxid="803014" rewarditem="102544"/>
+			</Level>
+			<Level id="30400">
+				<entry id="1" boxid="803015" rewarditem="102545"/>
+				<entry id="2" boxid="803016" rewarditem="102546"/>
+				<entry id="3" boxid="803017" rewarditem="102547"/>
+				<entry id="4" boxid="803018" rewarditem="102548"/>
+				<entry id="5" boxid="803019" rewarditem="102549"/>
+			</Level>
+			<Level id="30500">
+				<entry id="1" boxid="803020" rewarditem="102550"/>
+				<entry id="2" boxid="803021" rewarditem="102551"/>
+				<entry id="3" boxid="803022" rewarditem="102552"/>
+				<entry id="4" boxid="803023" rewarditem="102553"/>
+				<entry id="5" boxid="803024" rewarditem="102554"/>
+			</Level>
+			<Level id="30600">
+				<entry id="1" boxid="803025" rewarditem="102555"/>
+				<entry id="2" boxid="803026" rewarditem="102556"/>
+				<entry id="3" boxid="803027" rewarditem="102557"/>
+				<entry id="4" boxid="803028" rewarditem="102558"/>
+				<entry id="5" boxid="803029" rewarditem="102559"/>
+			</Level>
+		</GUpointreward>
+		<!--公会领地-->
+		<!--公会领地战争时间-->
+		<!--
+				WerID：每周领地战场次
+				applytime：每周报名时间
+				applyover：竞标结束时间（竞标结束到准备开始时间）
+			    readinesstime：每周准备时间
+				accounttime：结算时间（宣布胜负时间同时发邮件）
+				ID：每场领地战轮数
+				breakTime：休息时间
+				WarTime：战斗时间	
+			-->
+		<GUturfwartime>
+			<!--测试用数据，每天2场 
+			    0点到5点竞标时间
+				5点到8点竞标结束时间
+				8点到9点准备时间
+				9点到10:15战斗时间（包含休息时间和战斗时间）
+				10:15到12点占领时间
+				上下午时间一样-->
+			<!--<Wer id="1" applytime="0-17999" applyover="18000-28799" readinesstime="28800-32399" accounttime="36900-43199">
+				<entry id="1" breakTime="32400-32699" WarTime="32700-33299"/>
+				<entry id="2" breakTime="33300-33599" WarTime="33600-34199"/>
+				<entry id="3" breakTime="34200-34499" WarTime="34500-35099"/>
+				<entry id="4" breakTime="35100-35399" WarTime="35400-35999"/>
+				<entry id="5" breakTime="36000-36299" WarTime="36300-36899"/>
+			</Wer>
+			<Wer id="2" applytime="43200-61199" applyover="61200-71999" readinesstime="72000-75599" accounttime="80100-86399">
+				<entry id="1" breakTime="75600-75899" WarTime="75900-76499"/>
+				<entry id="2" breakTime="76500-76799" WarTime="76800-77399"/>
+				<entry id="3" breakTime="77400-77699" WarTime="77700-78299"/>
+				<entry id="4" breakTime="78300-78599" WarTime="78600-79199"/>
+				<entry id="5" breakTime="79200-79499" WarTime="79500-80099"/>
+			</Wer>
+			<Wer id="3" applytime="86400-104399" applyover="104400-115199" readinesstime="115200-118799" accounttime="123300-129599">
+				<entry id="1" breakTime="118800-119099" WarTime="119100-119699"/>
+				<entry id="2" breakTime="119700-119999" WarTime="120000-120599"/>
+				<entry id="3" breakTime="120600-120899" WarTime="120900-121499"/>
+				<entry id="4" breakTime="121500-121799" WarTime="121800-122399"/>
+				<entry id="5" breakTime="122400-122699" WarTime="122700-123299"/>
+			</Wer>
+			<Wer id="4" applytime="129600-147599" applyover="147600-158399" readinesstime="158400-161999" accounttime="166500-172799">
+				<entry id="1" breakTime="162000-162299" WarTime="162300-162899"/>
+				<entry id="2" breakTime="162900-163199" WarTime="163200-163799"/>
+				<entry id="3" breakTime="163800-164099" WarTime="164100-164699"/>
+				<entry id="4" breakTime="164700-164999" WarTime="165000-165599"/>
+				<entry id="5" breakTime="165600-165899" WarTime="165900-166499"/>
+			</Wer>
+			<Wer id="5" applytime="205200-205500" applyover="205501-205800" readinesstime="205801-206400" accounttime="208501-2208800">
+				<entry id="1" breakTime="206401-206520" WarTime="206521-206820"/>
+				<entry id="2" breakTime="206821-206940" WarTime="206941-207240"/>
+				<entry id="3" breakTime="207241-207360" WarTime="207361-207660"/>
+				<entry id="4" breakTime="207661-207780" WarTime="207781-208080"/>
+				<entry id="5" breakTime="208081-208200" WarTime="208201-208500"/>
+			</Wer>
+			<Wer id="6" applytime="208801-209100" applyover="209101-209400" readinesstime="209401-210000" accounttime="212101-212400">
+				<entry id="1" breakTime="210001-210120" WarTime="210121-210420"/>
+				<entry id="2" breakTime="210421-210540" WarTime="210541-210840"/>
+				<entry id="3" breakTime="210841-210960" WarTime="210961-211260"/>
+				<entry id="4" breakTime="211261-211380" WarTime="211381-211680"/>
+				<entry id="5" breakTime="211681-211800" WarTime="211801-212100"/>
+			</Wer>
+			<Wer id="7" applytime="212401-212700" applyover="212701-213000" readinesstime="213001-213600" accounttime="215701-216000">
+				<entry id="1" breakTime="213601-213720" WarTime="213721-214020"/>
+				<entry id="2" breakTime="214021-214140" WarTime="214141-214440"/>
+				<entry id="3" breakTime="214441-214560" WarTime="214561-214860"/>
+				<entry id="4" breakTime="214861-214980" WarTime="214981-215280"/>
+				<entry id="5" breakTime="215281-215400" WarTime="215401-215700"/>
+			</Wer>
+			<Wer id="8" applytime="216001-216300" applyover="216301-216600" readinesstime="216601-217200" accounttime="219301-219600">
+				<entry id="1" breakTime="217201-217320" WarTime="217321-217620"/>
+				<entry id="2" breakTime="217621-217740" WarTime="217741-218040"/>
+				<entry id="3" breakTime="218041-218160" WarTime="218161-218460"/>
+				<entry id="4" breakTime="218461-218580" WarTime="218581-218880"/>
+				<entry id="5" breakTime="218881-219000" WarTime="219001-219300"/>
+			</Wer>
+			<Wer id="9" applytime="219601-219900" applyover="219901-220200" readinesstime="220201-220800" accounttime="222901-223200">
+				<entry id="1" breakTime="220801-220920" WarTime="220921-221220"/>
+				<entry id="2" breakTime="221221-221340" WarTime="221341-221640"/>
+				<entry id="3" breakTime="221641-221760" WarTime="221761-222060"/>
+				<entry id="4" breakTime="222061-222180" WarTime="222181-222480"/>
+				<entry id="5" breakTime="222481-222600" WarTime="222601-222900"/>
+			</Wer>
+			<Wer id="10" applytime="223201-223500" applyover="223501-223800" readinesstime="223801-224400" accounttime="226501-226800">
+				<entry id="1" breakTime="224401-224520" WarTime="224521-224820"/>
+				<entry id="2" breakTime="224821-224940" WarTime="224941-225240"/>
+				<entry id="3" breakTime="225241-225360" WarTime="225361-225660"/>
+				<entry id="4" breakTime="225661-225780" WarTime="225781-226080"/>
+				<entry id="5" breakTime="226081-226200" WarTime="226201-226500"/>
+			</Wer>
+			<Wer id="11" applytime="226801-227100" applyover="227101-227400" readinesstime="227401-228000" accounttime="230101-230400">
+				<entry id="1" breakTime="228001-228120" WarTime="228121-228420"/>
+				<entry id="2" breakTime="228421-228540" WarTime="228541-228840"/>
+				<entry id="3" breakTime="228841-228960" WarTime="228961-229260"/>
+				<entry id="4" breakTime="229261-229380" WarTime="229381-229680"/>
+				<entry id="5" breakTime="229681-229800" WarTime="229801-230100"/>
+			</Wer>
+			<Wer id="12" applytime="230401-230700" applyover="230701-231000" readinesstime="231001-231600" accounttime="233701-234000">
+				<entry id="1" breakTime="231601-231720" WarTime="231721-232020"/>
+				<entry id="2" breakTime="232021-232140" WarTime="232141-232440"/>
+				<entry id="3" breakTime="232441-232560" WarTime="232561-232860"/>
+				<entry id="4" breakTime="232861-232980" WarTime="232981-233280"/>
+				<entry id="5" breakTime="233281-233400" WarTime="233401-233700"/>
+			</Wer>
+			<Wer id="13" applytime="234001-234300" applyover="234301-234600" readinesstime="234601-235200" accounttime="237301-237600">
+				<entry id="1" breakTime="235201-235320" WarTime="235321-235620"/>
+				<entry id="2" breakTime="235621-235740" WarTime="235741-236040"/>
+				<entry id="3" breakTime="236041-236160" WarTime="236161-236460"/>
+				<entry id="4" breakTime="236461-236580" WarTime="236581-236880"/>
+				<entry id="5" breakTime="236881-237000" WarTime="237001-237300"/>
+			</Wer>
+			<Wer id="14" applytime="237601-237900" applyover="237901-238200" readinesstime="238201-238800" accounttime="240900-241200">
+				<entry id="1" breakTime="238801-238920" WarTime="238921-239220"/>
+				<entry id="2" breakTime="239221-239340" WarTime="239341-239640"/>
+				<entry id="3" breakTime="239641-239760" WarTime="239761-240060"/>
+				<entry id="4" breakTime="240061-240180" WarTime="240181-240480"/>
+				<entry id="5" breakTime="240481-240600" WarTime="240601-240900"/>
+			</Wer>
+			<Wer id="15" applytime="241201-241500" applyover="241501-241800" readinesstime="241801-242400" accounttime="244501-244800">
+				<entry id="1" breakTime="242401-242520" WarTime="242521-242820"/>
+				<entry id="2" breakTime="242821-242940" WarTime="242941-243240"/>
+				<entry id="3" breakTime="243241-243360" WarTime="243361-243660"/>
+				<entry id="4" breakTime="243661-243780" WarTime="243781-244080"/>
+				<entry id="5" breakTime="244081-244200" WarTime="244201-244500"/>
+			</Wer>
+			<Wer id="16" applytime="244801-245100" applyover="245101-245400" readinesstime="245401-246000" accounttime="248101-248400">
+				<entry id="1" breakTime="246001-246120" WarTime="246121-246420"/>
+				<entry id="2" breakTime="246421-246540" WarTime="246541-246840"/>
+				<entry id="3" breakTime="246841-246960" WarTime="246961-247260"/>
+				<entry id="4" breakTime="247261-247380" WarTime="247381-247680"/>
+				<entry id="5" breakTime="247681-247800" WarTime="247801-248100"/>
+			</Wer>
+			<Wer id="17" applytime="248401-248700" applyover="248701-249000" readinesstime="249001-249600" accounttime="251701-252000">
+				<entry id="1" breakTime="249601-249720" WarTime="249721-250020"/>
+				<entry id="2" breakTime="250021-250140" WarTime="250141-250440"/>
+				<entry id="3" breakTime="250441-250560" WarTime="250561-250860"/>
+				<entry id="4" breakTime="250861-250980" WarTime="250981-251280"/>
+				<entry id="5" breakTime="251281-251400" WarTime="251401-251700"/>
+			</Wer>
+			<Wer id="18" applytime="252001-252300" applyover="252301-252600" readinesstime="252601-253200" accounttime="255301-255600">
+				<entry id="1" breakTime="253201-253320" WarTime="253321-253620"/>
+				<entry id="2" breakTime="253621-253740" WarTime="253741-254040"/>
+				<entry id="3" breakTime="254041-254160" WarTime="254161-254460"/>
+				<entry id="4" breakTime="254461-254580" WarTime="254581-254880"/>
+				<entry id="5" breakTime="254881-255000" WarTime="255001-255300"/>
+			</Wer>
+			<Wer id="19" applytime="255601-255900" applyover="255901-256200" readinesstime="256201-256800" accounttime="258901-259200">
+				<entry id="1" breakTime="256801-256920" WarTime="256921-257220"/>
+				<entry id="2" breakTime="257221-257340" WarTime="257341-257640"/>
+				<entry id="3" breakTime="257641-257760" WarTime="257761-258060"/>
+				<entry id="4" breakTime="258061-258180" WarTime="258181-258480"/>
+				<entry id="5" breakTime="258481-258600" WarTime="258601-258900"/>
+			</Wer>-->
+			<!--<Wer id="7" applytime="259200-277199" applyover="277200-287999" readinesstime="288000-291599" accounttime="296100-302399">
+				<entry id="1" breakTime="291600-291899" WarTime="291900-292499"/>
+				<entry id="2" breakTime="292500-292799" WarTime="292800-293399"/>
+				<entry id="3" breakTime="293400-293699" WarTime="293700-294299"/>
+				<entry id="4" breakTime="294300-294599" WarTime="294600-295199"/>
+				<entry id="5" breakTime="295200-295499" WarTime="295500-296099"/>
+			</Wer>-->
+			<!--<Wer id="8" applytime="302400-320399" applyover="320400-331199" readinesstime="331200-334799" accounttime="339300-345599">
+				<entry id="1" breakTime="334800-335099" WarTime="335100-335699"/>
+				<entry id="2" breakTime="335700-335999" WarTime="336000-336599"/>
+				<entry id="3" breakTime="336600-336899" WarTime="336900-337499"/>
+				<entry id="4" breakTime="337500-337799" WarTime="337800-338399"/>
+				<entry id="5" breakTime="338400-338699" WarTime="338700-339299"/>
+			</Wer>-->
+			<!--<Wer id="9" applytime="345600-363599" applyover="363600-374399" readinesstime="374400-377999" accounttime="382500-388799">
+				<entry id="1" breakTime="378000-378299" WarTime="378300-378899"/>
+				<entry id="2" breakTime="378900-379199" WarTime="379200-379799"/>
+				<entry id="3" breakTime="379800-380099" WarTime="380100-380699"/>
+				<entry id="4" breakTime="380700-380999" WarTime="381000-381599"/>
+				<entry id="5" breakTime="381600-381899" WarTime="381900-382499"/>
+			</Wer>-->
+			<!--<Wer id="10" applytime="388800-406799" applyover="406800-417599" readinesstime="417600-421199" accounttime="425700-431999">
+				<entry id="1" breakTime="421200-421499" WarTime="421500-422099"/>
+				<entry id="2" breakTime="422100-422399" WarTime="422400-422999"/>
+				<entry id="3" breakTime="423000-423299" WarTime="423300-423899"/>
+				<entry id="4" breakTime="423900-424199" WarTime="424200-424799"/>
+				<entry id="5" breakTime="424800-425099" WarTime="425100-425699"/>
+			</Wer>-->
+			<!--<Wer id="11" applytime="432000-449999" applyover="450000-460799" readinesstime="460800-464399" accounttime="468900-475199">
+				<entry id="1" breakTime="464400-464699" WarTime="464700-465299"/>
+				<entry id="2" breakTime="465300-465599" WarTime="465600-466199"/>
+				<entry id="3" breakTime="466200-466499" WarTime="466500-467099"/>
+				<entry id="4" breakTime="467100-467399" WarTime="467400-467999"/>
+				<entry id="5" breakTime="468000-468299" WarTime="468300-468899"/>
+			</Wer>-->
+			<!--<Wer id="12" applytime="475200-493199" applyover="493200-503999" readinesstime="504000-507599" accounttime="512100-518399">
+				<entry id="1" breakTime="507600-507899" WarTime="507900-508499"/>
+				<entry id="2" breakTime="508500-508799" WarTime="508800-509399"/>
+				<entry id="3" breakTime="509400-509699" WarTime="509700-510299"/>
+				<entry id="4" breakTime="510300-510599" WarTime="510600-511199"/>
+				<entry id="5" breakTime="511200-511499" WarTime="511500-512099"/>
+			</Wer>-->
+			<!--<Wer id="13" applytime="518400-536399" applyover="536400-547199" readinesstime="547200-550799" accounttime="555300-561599">
+				<entry id="1" breakTime="550800-551099" WarTime="551100-551699"/>
+				<entry id="2" breakTime="551700-551999" WarTime="552000-552599"/>
+				<entry id="3" breakTime="552600-552899" WarTime="552900-553499"/>
+				<entry id="4" breakTime="553500-553799" WarTime="553800-554399"/>
+				<entry id="5" breakTime="554400-554699" WarTime="554700-555299"/>
+			</Wer>-->
+			<!--<Wer id="14" applytime="561600-579599" applyover="579600-590399" readinesstime="590400-593999" accounttime="598500-604799">
+				<entry id="1" breakTime="594000-594299" WarTime="594300-594899"/>
+				<entry id="2" breakTime="594900-595199" WarTime="595200-595799"/>
+				<entry id="3" breakTime="595800-596099" WarTime="596100-596699"/>
+				<entry id="4" breakTime="596700-596999" WarTime="597000-597599"/>
+				<entry id="5" breakTime="597600-597899" WarTime="597900-598499"/>
+			</Wer>-->
+			<!--第一场：竞标时间周一00:00到周三00:00
+			        竞标结束时间周三00:00到周三20:00
+					准备时间周三20:00到周三20:30
+					交战时间周三20:30到周三21:10（包含交战和交战休息时间）
+					占领时间周三21:10到周五00:00-->
+			<Wer id="1" applytime="0-172799" applyover="172800-244799" readinesstime="244800-246599" accounttime="248700-345599">
+				<entry id="1" breakTime="246600-246719" WarTime="246720-247019"/>
+				<entry id="2" breakTime="247020-247139" WarTime="247140-247439"/>
+				<entry id="3" breakTime="247440-247559" WarTime="247560-247859"/>
+				<entry id="4" breakTime="247860-247979" WarTime="247980-248279"/>
+				<entry id="5" breakTime="248280-248399" WarTime="248400-248699"/>
+			</Wer>
+			<!--第二场：竞标时间周五00:00到周日00:00
+			        竞标结束时间周日00:00到周日20:00
+					准备时间周日20:00到周日20:30
+					交战时间周日20:30到周日21:10（包含交战和交战休息时间）
+					占领时间周日21:10到下周一00:00-->
+			<Wer id="2" applytime="345599-518400" applyover="518400-590399" readinesstime="590400-592199" accounttime="594300-604799">
+				<entry id="1" breakTime="592200-592319" WarTime="592320-592619"/>
+				<entry id="2" breakTime="592620-592739" WarTime="592740-593039"/>
+				<entry id="3" breakTime="593040-593159" WarTime="593160-593459"/>
+				<entry id="4" breakTime="593460-593579" WarTime="593580-593879"/>
+				<entry id="5" breakTime="593880-593999" WarTime="594000-594299"/>
+			</Wer>
+		</GUturfwartime>
+		<!--公会领地战争战场-->
+		<!--
+				WerID：每周领地战场次
+				winawardbox：胜利方邮件奖励BOX
+			    defeatedawardbox：失败方邮件奖励BOX
+			-->
+		<GUturfwarMap>
+			<entry Mapid="20102" winawarditemID="102599" winawardbox="102599" defeatedawardID="102598" defeatedawardbox="102598"/>
+		</GUturfwarMap>
+		<!--公会领地信息-->
+		<!--
+				manorid：；领地ID
+				manorstar：领地星级
+			    manorname：领地名称
+				manordsec：领地描述
+				manoricon：领地Icon
+				outputboxID：领地祈福奖励额外BOXID
+			-->
+		<GUmanor>
+			<manor id="1" manorstar="4" manorname="manorname_02" manordsec="manordsec_01" manoricon="manoricon_02" outputitemID="102700" outputboxID="102700"/>
+			<manor id="2" manorstar="5" manorname="manorname_01" manordsec="manordsec_01" manoricon="manoricon_01" outputitemID="102701" outputboxID="102701"/>
+			<manor id="3" manorstar="3" manorname="manorname_03" manordsec="manordsec_01" manoricon="manoricon_03" outputitemID="102702" outputboxID="102702"/>
+			<manor id="4" manorstar="2" manorname="manorname_05" manordsec="manordsec_01" manoricon="manoricon_05" outputitemID="102703" outputboxID="102703"/>
+			<manor id="5" manorstar="3" manorname="manorname_04" manordsec="manordsec_01" manoricon="manoricon_04" outputitemID="102704" outputboxID="102704"/>
+			<manor id="6" manorstar="2" manorname="manorname_06" manordsec="manordsec_01" manoricon="manoricon_06" outputitemID="102705" outputboxID="102705"/>
+		</GUmanor>
+		<!--公会黑市升级
+				freshprice：刷新价格
+				construction：黑市成长所需建设点数
+				purchasequantity：黑市每日个人购买限制次数
+				limitfreshtime：每日刷新次数限制
+				shopID：引用shop的商店ID
+				free：每日免费刷新次数
+		-->
+		<blackmarket freshprice="20">
+			<entry lv="1" construction="6000000" purchasequantity="3" limitfreshtime="3" shopID="103" free="1"/>
+			<entry lv="2" construction="9000000" purchasequantity="6" limitfreshtime="5" shopID="103" free="1"/>
+			<entry lv="3" construction="12000000" purchasequantity="9" limitfreshtime="7" shopID="103" free="1"/>
+			<entry lv="4" construction="240000000" purchasequantity="12" limitfreshtime="10" shopID="103" free="1"/>
+			<entry lv="5" construction="500000000" purchasequantity="15" limitfreshtime="12" shopID="103" free="1"/>
+			<entry lv="6" construction="1000000000" purchasequantity="18" limitfreshtime="15" shopID="103" free="1"/>
+		</blackmarket>
+		<!--公会神兽喂养
+				reset_time:免费喂养重置时间
+				daily_limit:免费喂养每日限次
+				box_id：喂养奖励
+				
+				item_id:道具喂养的道具ID
+				exp:喂养一个道具给神兽加的经验
+				box_id:喂养奖励
+		-->
+		<guardian_feed>
+			<free_feed reset_time="00:00" daily_limit="1" exp="10" box_id="101210"/>
+			<item_feed>
+				<item_list item_id="text" exp="20" box_id="101210"/>
+				<item_list item_id="text" exp="50" box_id="101210"/>
+				<item_list item_id="text" exp="100" box_id="101210"/>
+			</item_feed>
+		</guardian_feed>
+		<!--公会神兽挑战
+				id:神兽ID，方便后续多神兽拓展。
+				name:神兽名
+				max_level：神兽最大等级
+				daily_limit：每日挑战次数。
+				reset_time:挑战次数重置时间
+				level:神兽等级
+				exp：升级至下一级所需经验
+				level_id：挑战该等级神兽进入的关卡
+				box_id:挑战奖励
+		-->
+		<guardian_challenge id="1" max_level="10" daily_limit="3" reset_time="00:00">
+			<level_info level="1" exp="1000" level_id="20501"/>
+			<level_info level="2" exp="2000" level_id="20501"/>
+			<level_info level="3" exp="5000" level_id="20501"/>
+			<level_info level="4" exp="10000" level_id="20501"/>
+			<level_info level="5" exp="20000" level_id="20501"/>
+			<level_info level="6" exp="50000" level_id="20501"/>
+			<level_info level="7" exp="100000" level_id="20501"/>
+			<level_info level="8" exp="200000" level_id="20501"/>
+			<level_info level="9" exp="500000" level_id="20501"/>
+			<level_info level="10" exp="1000000" level_id="20501"/>
+		</guardian_challenge>
+		<!--公会神兽挑战奖励
+				根据伤害值范围获得对应奖励
+				id:奖励id。
+				damage_low:伤害最低值
+				damage_up：伤害最高值
+				box_id:挑战奖励id
+		-->
+		<guaridan_reward>
+			<damage id="1" damage_low="0" damage_up="1000" box_id="101210"/>
+			<damage id="2" damage_low="1001" damage_up="10000" box_id="101210"/>
+			<damage id="3" damage_low="10001" damage_up="100000" box_id="101210"/>
+			<damage id="4" damage_low="100001" damage_up="1000000" box_id="101210"/>
+		</guaridan_reward>
+		<allshopguardiantips>
+			<function id="1" icon="Unionimage_01" name="GUfunctionname_01" product_des="GUfunctiondes_01" describle="公会建设" open="1"/>
+			<function id="2" icon="Unionimage_02" name="GUfunctionname_02" product_des="GUfunctiondes_02" describle="公会祈祷" open="1"/>
+			<function id="3" icon="Unionimage_03" name="GUfunctionname_03" product_des="GUfunctiondes_03" describle="公会商店" open="1"/>
+			<function id="4" icon="Unionimage_04" name="GUfunctionname_04" product_des="GUfunctiondes_04" describle="公会黑市" open="1"/>
+			<function id="5" icon="Unionimage_05" name="GUfunctionname_05" product_des="GUfunctiondes_05" describle="公会副本" open="1"/>
+			<function id="6" icon="Unionimage_06" name="GUfunctionname_06" product_des="GUfunctiondes_06" describle="公会领地" open="1"/>
+		</allshopguardiantips>
+	</constant>
+</root>

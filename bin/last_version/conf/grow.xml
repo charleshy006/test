@@ -1,0 +1,2088 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<constant>
+		<!--领悟消耗钻石-->
+		<entry id="1">
+			<time num="0" diamondmun="200" />
+			<time num="1" diamondmun="200" />
+			<time num="2" diamondmun="200" />
+			<time num="3" diamondmun="200" />
+			<time num="4" diamondmun="200" />
+			<time num="5" diamondmun="500" />
+			<time num="6" diamondmun="500" />
+			<time num="7" diamondmun="500" />
+			<time num="8" diamondmun="500" />
+			<time num="9" diamondmun="500" />
+			<time num="10" diamondmun="1000" />
+			<time num="11" diamondmun="1000" />
+			<time num="12" diamondmun="1000" />
+			<time num="13" diamondmun="1000" />
+			<time num="14" diamondmun="1000" />
+			<time num="15" diamondmun="1000" />
+			<time num="16" diamondmun="1000" />
+			<time num="17" diamondmun="1000" />
+			<time num="18" diamondmun="10000" />
+			<time num="19" diamondmun="10000" />
+			<time num="20" diamondmun="15000" />
+			<time num="21" diamondmun="15000" />
+			<time num="22" diamondmun="15000" />
+			<time num="23" diamondmun="15000" />
+			<time num="24" diamondmun="15000" />
+			<time num="25" diamondmun="15000" />
+			<time num="26" diamondmun="1500" />
+			<time num="27" diamondmun="1500" />
+			<time num="28" diamondmun="1500" />
+			<time num="29" diamondmun="1500" />
+			<time num="30" diamondmun="2000" />
+			<time num="31" diamondmun="2000" />
+			<time num="32" diamondmun="2000" />
+			<time num="33" diamondmun="2000" />
+			<time num="34" diamondmun="2000" />
+			<time num="35" diamondmun="2000" />
+			<time num="36" diamondmun="2000" />
+			<time num="37" diamondmun="2000" />
+			<time num="38" diamondmun="2000" />
+			<time num="39" diamondmun="2000" />
+			<time num="40" diamondmun="2500" />
+			<time num="41" diamondmun="2500" />
+			<time num="42" diamondmun="2500" />
+			<time num="43" diamondmun="2500" />
+			<time num="44" diamondmun="2500" />
+			<time num="45" diamondmun="2500" />
+			<time num="46" diamondmun="2500" />
+			<time num="47" diamondmun="2500" />
+			<time num="48" diamondmun="2500" />
+			<time num="49" diamondmun="2500" />
+			<time num="50" diamondmun="3000" />
+			<time num="51" diamondmun="3000" />
+			<time num="52" diamondmun="3000" />
+			<time num="53" diamondmun="3000" />
+			<time num="54" diamondmun="3000" />
+			<time num="55" diamondmun="3000" />
+			<time num="56" diamondmun="3000" />
+			<time num="57" diamondmun="3000" />
+			<time num="58" diamondmun="3000" />
+			<time num="59" diamondmun="3000" />
+			<time num="60" diamondmun="3000" />
+			<time num="61" diamondmun="3000" />
+			<time num="62" diamondmun="3000" />
+			<time num="63" diamondmun="3000" />
+			<time num="64" diamondmun="3000" />
+			<time num="65" diamondmun="3000" />
+			<time num="66" diamondmun="3000" />
+			<time num="67" diamondmun="3000" />
+			<time num="68" diamondmun="3000" />
+			<time num="69" diamondmun="3000" />
+			<time num="70" diamondmun="3000" />
+			<time num="71" diamondmun="3000" />
+			<time num="72" diamondmun="3000" />
+			<time num="73" diamondmun="3000" />
+			<time num="74" diamondmun="3000" />
+			<time num="75" diamondmun="3000" />
+			<time num="76" diamondmun="3000" />
+			<time num="77" diamondmun="3000" />
+			<time num="78" diamondmun="3000" />
+			<time num="79" diamondmun="3000" />
+			<time num="80" diamondmun="3500" />
+			<time num="81" diamondmun="3500" />
+			<time num="82" diamondmun="3500" />
+			<time num="83" diamondmun="3500" />
+			<time num="84" diamondmun="3500" />
+			<time num="85" diamondmun="3500" />
+			<time num="86" diamondmun="3500" />
+			<time num="87" diamondmun="3500" />
+			<time num="88" diamondmun="3500" />
+			<time num="89" diamondmun="3500" />
+			<time num="90" diamondmun="3500" />
+			<time num="91" diamondmun="3500" />
+			<time num="92" diamondmun="3500" />
+			<time num="93" diamondmun="3500" />
+			<time num="94" diamondmun="3500" />
+			<time num="95" diamondmun="3500" />
+			<time num="96" diamondmun="3500" />
+			<time num="97" diamondmun="3500" />
+			<time num="98" diamondmun="3500" />
+			<time num="99" diamondmun="3500" />
+			<time num="100" diamondmun="4000" />
+			<time num="101" diamondmun="4000" />
+			<time num="102" diamondmun="4000" />
+			<time num="103" diamondmun="4000" />
+			<time num="104" diamondmun="4000" />
+			<time num="105" diamondmun="4000" />
+			<time num="106" diamondmun="4000" />
+			<time num="107" diamondmun="4000" />
+			<time num="108" diamondmun="4000" />
+			<time num="109" diamondmun="4000" />
+			<time num="110" diamondmun="4000" />
+			<time num="111" diamondmun="4000" />
+			<time num="112" diamondmun="4000" />
+			<time num="113" diamondmun="4000" />
+			<time num="114" diamondmun="4000" />
+			<time num="115" diamondmun="4000" />
+			<time num="116" diamondmun="4000" />
+			<time num="117" diamondmun="4000" />
+			<time num="118" diamondmun="4000" />
+			<time num="119" diamondmun="4000" />
+			<time num="120" diamondmun="4500" />
+			<time num="121" diamondmun="4500" />
+			<time num="122" diamondmun="4500" />
+			<time num="123" diamondmun="4500" />
+			<time num="124" diamondmun="4500" />
+			<time num="125" diamondmun="4500" />
+			<time num="126" diamondmun="4500" />
+			<time num="127" diamondmun="4500" />
+			<time num="128" diamondmun="4500" />
+			<time num="129" diamondmun="4500" />
+			<time num="130" diamondmun="4500" />
+			<time num="131" diamondmun="4500" />
+			<time num="132" diamondmun="4500" />
+			<time num="133" diamondmun="4500" />
+			<time num="134" diamondmun="4500" />
+			<time num="135" diamondmun="4500" />
+			<time num="136" diamondmun="4500" />
+			<time num="137" diamondmun="4500" />
+			<time num="138" diamondmun="4500" />
+			<time num="139" diamondmun="4500" />
+			<time num="140" diamondmun="5000" />
+			<time num="141" diamondmun="5000" />
+			<time num="142" diamondmun="5000" />
+			<time num="143" diamondmun="5000" />
+			<time num="144" diamondmun="5000" />
+			<time num="145" diamondmun="5000" />
+			<time num="146" diamondmun="5000" />
+			<time num="147" diamondmun="5000" />
+			<time num="148" diamondmun="5000" />
+			<time num="149" diamondmun="5000" />
+			<time num="150" diamondmun="5000" />
+			<time num="151" diamondmun="5000" />
+			<time num="152" diamondmun="5000" />
+			<time num="153" diamondmun="5000" />
+			<time num="154" diamondmun="5000" />
+			<time num="155" diamondmun="5000" />
+			<time num="156" diamondmun="5000" />
+			<time num="157" diamondmun="5000" />
+			<time num="158" diamondmun="5000" />
+			<time num="159" diamondmun="5000" />
+			<time num="160" diamondmun="5000" />
+			<time num="161" diamondmun="5000" />
+			<time num="162" diamondmun="5000" />
+			<time num="163" diamondmun="5000" />
+			<time num="164" diamondmun="5000" />
+			<time num="165" diamondmun="5000" />
+			<time num="166" diamondmun="5000" />
+			<time num="167" diamondmun="5000" />
+			<time num="168" diamondmun="5000" />
+			<time num="169" diamondmun="5000" />
+			<time num="170" diamondmun="5000" />
+			<time num="171" diamondmun="5000" />
+			<time num="172" diamondmun="5000" />
+			<time num="173" diamondmun="5000" />
+			<time num="174" diamondmun="5000" />
+			<time num="175" diamondmun="5000" />
+			<time num="176" diamondmun="5000" />
+			<time num="177" diamondmun="5000" />
+			<time num="178" diamondmun="5000" />
+			<time num="179" diamondmun="5000" />
+			<time num="180" diamondmun="5000" />
+			<time num="181" diamondmun="5000" />
+			<time num="182" diamondmun="5000" />
+			<time num="183" diamondmun="5000" />
+			<time num="184" diamondmun="5000" />
+			<time num="185" diamondmun="5000" />
+			<time num="186" diamondmun="5000" />
+			<time num="187" diamondmun="5000" />
+			<time num="188" diamondmun="5000" />
+			<time num="189" diamondmun="5000" />
+			<time num="190" diamondmun="5000" />
+			<time num="191" diamondmun="5000" />
+			<time num="192" diamondmun="5000" />
+			<time num="193" diamondmun="5000" />
+			<time num="194" diamondmun="5000" />
+			<time num="195" diamondmun="5000" />
+			<time num="196" diamondmun="5000" />
+			<time num="197" diamondmun="5000" />
+			<time num="198" diamondmun="5000" />
+			<time num="199" diamondmun="5000" />
+			<time num="200" diamondmun="5000" />
+			<time num="201" diamondmun="5000" />
+			<time num="202" diamondmun="5000" />
+			<time num="203" diamondmun="5000" />
+			<time num="204" diamondmun="5000" />
+			<time num="205" diamondmun="5000" />
+			<time num="206" diamondmun="5000" />
+			<time num="207" diamondmun="5000" />
+			<time num="208" diamondmun="5000" />
+			<time num="209" diamondmun="5000" />
+			<time num="210" diamondmun="5000" />
+			<time num="211" diamondmun="5000" />
+			<time num="212" diamondmun="5000" />
+			<time num="213" diamondmun="5000" />
+			<time num="214" diamondmun="5000" />
+			<time num="215" diamondmun="5000" />
+			<time num="216" diamondmun="5000" />
+			<time num="217" diamondmun="5000" />
+			<time num="218" diamondmun="5000" />
+			<time num="219" diamondmun="5000" />
+			<time num="220" diamondmun="5000" />
+			<time num="221" diamondmun="5000" />
+			<time num="222" diamondmun="5000" />
+			<time num="223" diamondmun="5000" />
+			<time num="224" diamondmun="5000" />
+			<time num="225" diamondmun="5000" />
+			<time num="226" diamondmun="5000" />
+			<time num="227" diamondmun="5000" />
+			<time num="228" diamondmun="5000" />
+			<time num="229" diamondmun="5000" />
+			<time num="230" diamondmun="5000" />
+			<time num="231" diamondmun="5000" />
+			<time num="232" diamondmun="5000" />
+			<time num="233" diamondmun="5000" />
+			<time num="234" diamondmun="5000" />
+			<time num="235" diamondmun="5000" />
+			<time num="236" diamondmun="5000" />
+			<time num="237" diamondmun="5000" />
+			<time num="238" diamondmun="5000" />
+			<time num="239" diamondmun="5000" />
+			<time num="240" diamondmun="5000" />
+			<time num="241" diamondmun="5000" />
+			<time num="242" diamondmun="5000" />
+			<time num="243" diamondmun="5000" />
+			<time num="244" diamondmun="5000" />
+			<time num="245" diamondmun="5000" />
+			<time num="246" diamondmun="5000" />
+			<time num="247" diamondmun="5000" />
+			<time num="248" diamondmun="5000" />
+			<time num="249" diamondmun="5000" />
+			<time num="250" diamondmun="5000" />
+			<time num="251" diamondmun="5000" />
+			<time num="252" diamondmun="5000" />
+			<time num="253" diamondmun="5000" />
+			<time num="254" diamondmun="5000" />
+			<time num="255" diamondmun="5000" />
+			<time num="256" diamondmun="5000" />
+			<time num="257" diamondmun="5000" />
+			<time num="258" diamondmun="5000" />
+			<time num="259" diamondmun="5000" />
+			<time num="260" diamondmun="5000" />
+			<time num="261" diamondmun="5000" />
+			<time num="262" diamondmun="5000" />
+			<time num="263" diamondmun="5000" />
+			<time num="264" diamondmun="5000" />
+			<time num="265" diamondmun="5000" />
+			<time num="266" diamondmun="5000" />
+			<time num="267" diamondmun="5000" />
+			<time num="268" diamondmun="5000" />
+			<time num="269" diamondmun="5000" />
+			<time num="270" diamondmun="5000" />
+			<time num="271" diamondmun="5000" />
+			<time num="272" diamondmun="5000" />
+			<time num="273" diamondmun="5000" />
+			<time num="274" diamondmun="5000" />
+			<time num="275" diamondmun="5000" />
+			<time num="276" diamondmun="5000" />
+			<time num="277" diamondmun="5000" />
+			<time num="278" diamondmun="5000" />
+			<time num="279" diamondmun="5000" />
+			<time num="280" diamondmun="5000" />
+			<time num="281" diamondmun="5000" />
+			<time num="282" diamondmun="5000" />
+			<time num="283" diamondmun="5000" />
+			<time num="284" diamondmun="5000" />
+			<time num="285" diamondmun="5000" />
+			<time num="286" diamondmun="5000" />
+			<time num="287" diamondmun="5000" />
+			<time num="288" diamondmun="5000" />
+			<time num="289" diamondmun="5000" />
+			<time num="290" diamondmun="5000" />
+			<time num="291" diamondmun="5000" />
+			<time num="292" diamondmun="5000" />
+			<time num="293" diamondmun="5000" />
+			<time num="294" diamondmun="5000" />
+			<time num="295" diamondmun="5000" />
+			<time num="296" diamondmun="5000" />
+			<time num="297" diamondmun="5000" />
+			<time num="298" diamondmun="5000" />
+			<time num="299" diamondmun="5000" />
+			<time num="300" diamondmun="5000" />
+			<time num="301" diamondmun="5000" />
+			<time num="302" diamondmun="5000" />
+			<time num="303" diamondmun="5000" />
+			<time num="304" diamondmun="5000" />
+			<time num="305" diamondmun="5000" />
+			<time num="306" diamondmun="5000" />
+			<time num="307" diamondmun="5000" />
+			<time num="308" diamondmun="5000" />
+			<time num="309" diamondmun="5000" />
+			<time num="310" diamondmun="5000" />
+			<time num="311" diamondmun="5000" />
+			<time num="312" diamondmun="5000" />
+			<time num="313" diamondmun="5000" />
+			<time num="314" diamondmun="5000" />
+			<time num="315" diamondmun="5000" />
+			<time num="316" diamondmun="5000" />
+			<time num="317" diamondmun="5000" />
+			<time num="318" diamondmun="5000" />
+			<time num="319" diamondmun="5000" />
+			<time num="320" diamondmun="5000" />
+			<time num="321" diamondmun="5000" />
+			<time num="322" diamondmun="5000" />
+			<time num="323" diamondmun="5000" />
+			<time num="324" diamondmun="5000" />
+			<time num="325" diamondmun="5000" />
+			<time num="326" diamondmun="5000" />
+			<time num="327" diamondmun="5000" />
+			<time num="328" diamondmun="5000" />
+			<time num="329" diamondmun="5000" />
+			<time num="330" diamondmun="5000" />
+			<time num="331" diamondmun="5000" />
+			<time num="332" diamondmun="5000" />
+			<time num="333" diamondmun="5000" />
+			<time num="334" diamondmun="5000" />
+			<time num="335" diamondmun="5000" />
+			<time num="336" diamondmun="5000" />
+			<time num="337" diamondmun="5000" />
+			<time num="338" diamondmun="5000" />
+			<time num="339" diamondmun="5000" />
+			<time num="340" diamondmun="5000" />
+			<time num="341" diamondmun="5000" />
+			<time num="342" diamondmun="5000" />
+			<time num="343" diamondmun="5000" />
+			<time num="344" diamondmun="5000" />
+			<time num="345" diamondmun="5000" />
+			<time num="346" diamondmun="5000" />
+			<time num="347" diamondmun="5000" />
+			<time num="348" diamondmun="5000" />
+			<time num="349" diamondmun="5000" />
+			<time num="350" diamondmun="5000" />
+			<time num="351" diamondmun="5000" />
+			<time num="352" diamondmun="5000" />
+			<time num="353" diamondmun="5000" />
+			<time num="354" diamondmun="5000" />
+			<time num="355" diamondmun="5000" />
+			<time num="356" diamondmun="5000" />
+			<time num="357" diamondmun="5000" />
+			<time num="358" diamondmun="5000" />
+			<time num="359" diamondmun="5000" />
+			<time num="360" diamondmun="5000" />
+			<time num="361" diamondmun="5000" />
+			<time num="362" diamondmun="5000" />
+			<time num="363" diamondmun="5000" />
+			<time num="364" diamondmun="5000" />
+			<time num="365" diamondmun="5000" />
+			<time num="366" diamondmun="5000" />
+			<time num="367" diamondmun="5000" />
+			<time num="368" diamondmun="5000" />
+			<time num="369" diamondmun="5000" />
+			<time num="370" diamondmun="5000" />
+			<time num="371" diamondmun="5000" />
+			<time num="372" diamondmun="5000" />
+			<time num="373" diamondmun="5000" />
+			<time num="374" diamondmun="5000" />
+			<time num="375" diamondmun="5000" />
+			<time num="376" diamondmun="5000" />
+			<time num="377" diamondmun="5000" />
+			<time num="378" diamondmun="5000" />
+			<time num="379" diamondmun="5000" />
+			<time num="380" diamondmun="5000" />
+			<time num="381" diamondmun="5000" />
+			<time num="382" diamondmun="5000" />
+			<time num="383" diamondmun="5000" />
+			<time num="384" diamondmun="5000" />
+			<time num="385" diamondmun="5000" />
+			<time num="386" diamondmun="5000" />
+			<time num="387" diamondmun="5000" />
+			<time num="388" diamondmun="5000" />
+			<time num="389" diamondmun="5000" />
+			<time num="390" diamondmun="5000" />
+			<time num="391" diamondmun="5000" />
+			<time num="392" diamondmun="5000" />
+			<time num="393" diamondmun="5000" />
+			<time num="394" diamondmun="5000" />
+			<time num="395" diamondmun="5000" />
+			<time num="396" diamondmun="5000" />
+			<time num="397" diamondmun="5000" />
+			<time num="398" diamondmun="5000" />
+			<time num="399" diamondmun="5000" />
+			<time num="400" diamondmun="5000" />
+			<time num="401" diamondmun="5000" />
+			<time num="402" diamondmun="5000" />
+			<time num="403" diamondmun="5000" />
+			<time num="404" diamondmun="5000" />
+			<time num="405" diamondmun="5000" />
+			<time num="406" diamondmun="5000" />
+			<time num="407" diamondmun="5000" />
+			<time num="408" diamondmun="5000" />
+			<time num="409" diamondmun="5000" />
+			<time num="410" diamondmun="5000" />
+			<time num="411" diamondmun="5000" />
+			<time num="412" diamondmun="5000" />
+			<time num="413" diamondmun="5000" />
+			<time num="414" diamondmun="5000" />
+			<time num="415" diamondmun="5000" />
+			<time num="416" diamondmun="5000" />
+			<time num="417" diamondmun="5000" />
+			<time num="418" diamondmun="5000" />
+			<time num="419" diamondmun="5000" />
+			<time num="420" diamondmun="5000" />
+			<time num="421" diamondmun="5000" />
+			<time num="422" diamondmun="5000" />
+			<time num="423" diamondmun="5000" />
+			<time num="424" diamondmun="5000" />
+			<time num="425" diamondmun="5000" />
+			<time num="426" diamondmun="5000" />
+			<time num="427" diamondmun="5000" />
+			<time num="428" diamondmun="5000" />
+			<time num="429" diamondmun="5000" />
+			<time num="430" diamondmun="5000" />
+			<time num="431" diamondmun="5000" />
+			<time num="432" diamondmun="5000" />
+			<time num="433" diamondmun="5000" />
+			<time num="434" diamondmun="5000" />
+			<time num="435" diamondmun="5000" />
+			<time num="436" diamondmun="5000" />
+			<time num="437" diamondmun="5000" />
+			<time num="438" diamondmun="5000" />
+			<time num="439" diamondmun="5000" />
+			<time num="440" diamondmun="5000" />
+			<time num="441" diamondmun="5000" />
+			<time num="442" diamondmun="5000" />
+			<time num="443" diamondmun="5000" />
+			<time num="444" diamondmun="5000" />
+			<time num="445" diamondmun="5000" />
+			<time num="446" diamondmun="5000" />
+			<time num="447" diamondmun="5000" />
+			<time num="448" diamondmun="5000" />
+			<time num="449" diamondmun="5000" />
+			<time num="450" diamondmun="5000" />
+			<time num="451" diamondmun="5000" />
+			<time num="452" diamondmun="5000" />
+			<time num="453" diamondmun="5000" />
+			<time num="454" diamondmun="5000" />
+			<time num="455" diamondmun="5000" />
+			<time num="456" diamondmun="5000" />
+			<time num="457" diamondmun="5000" />
+			<time num="458" diamondmun="5000" />
+			<time num="459" diamondmun="5000" />
+			<time num="460" diamondmun="5000" />
+			<time num="461" diamondmun="5000" />
+			<time num="462" diamondmun="5000" />
+			<time num="463" diamondmun="5000" />
+			<time num="464" diamondmun="5000" />
+			<time num="465" diamondmun="5000" />
+			<time num="466" diamondmun="5000" />
+			<time num="467" diamondmun="5000" />
+			<time num="468" diamondmun="5000" />
+			<time num="469" diamondmun="5000" />
+			<time num="470" diamondmun="5000" />
+			<time num="471" diamondmun="5000" />
+			<time num="472" diamondmun="5000" />
+			<time num="473" diamondmun="5000" />
+			<time num="474" diamondmun="5000" />
+			<time num="475" diamondmun="5000" />
+			<time num="476" diamondmun="5000" />
+			<time num="477" diamondmun="5000" />
+			<time num="478" diamondmun="5000" />
+			<time num="479" diamondmun="5000" />
+			<time num="480" diamondmun="5000" />
+			<time num="481" diamondmun="5000" />
+			<time num="482" diamondmun="5000" />
+			<time num="483" diamondmun="5000" />
+			<time num="484" diamondmun="5000" />
+			<time num="485" diamondmun="5000" />
+			<time num="486" diamondmun="5000" />
+			<time num="487" diamondmun="5000" />
+			<time num="488" diamondmun="5000" />
+			<time num="489" diamondmun="5000" />
+			<time num="490" diamondmun="5000" />
+			<time num="491" diamondmun="5000" />
+			<time num="492" diamondmun="5000" />
+			<time num="493" diamondmun="5000" />
+			<time num="494" diamondmun="5000" />
+			<time num="495" diamondmun="5000" />
+			<time num="496" diamondmun="5000" />
+			<time num="497" diamondmun="5000" />
+			<time num="498" diamondmun="5000" />
+			<time num="499" diamondmun="5000" />
+			<time num="500" diamondmun="5000" />
+			<time num="501" diamondmun="5000" />
+			<time num="502" diamondmun="5000" />
+			<time num="503" diamondmun="5000" />
+			<time num="504" diamondmun="5000" />
+			<time num="505" diamondmun="5000" />
+			<time num="506" diamondmun="5000" />
+			<time num="507" diamondmun="5000" />
+			<time num="508" diamondmun="5000" />
+			<time num="509" diamondmun="5000" />
+			<time num="510" diamondmun="5000" />
+			<time num="511" diamondmun="5000" />
+			<time num="512" diamondmun="5000" />
+			<time num="513" diamondmun="5000" />
+			<time num="514" diamondmun="5000" />
+			<time num="515" diamondmun="5000" />
+			<time num="516" diamondmun="5000" />
+			<time num="517" diamondmun="5000" />
+			<time num="518" diamondmun="5000" />
+			<time num="519" diamondmun="5000" />
+			<time num="520" diamondmun="5000" />
+			<time num="521" diamondmun="5000" />
+			<time num="522" diamondmun="5000" />
+			<time num="523" diamondmun="5000" />
+			<time num="524" diamondmun="5000" />
+			<time num="525" diamondmun="5000" />
+			<time num="526" diamondmun="5000" />
+			<time num="527" diamondmun="5000" />
+			<time num="528" diamondmun="5000" />
+			<time num="529" diamondmun="5000" />
+			<time num="530" diamondmun="5000" />
+			<time num="531" diamondmun="5000" />
+			<time num="532" diamondmun="5000" />
+			<time num="533" diamondmun="5000" />
+			<time num="534" diamondmun="5000" />
+			<time num="535" diamondmun="5000" />
+			<time num="536" diamondmun="5000" />
+			<time num="537" diamondmun="5000" />
+			<time num="538" diamondmun="5000" />
+			<time num="539" diamondmun="5000" />
+			<time num="540" diamondmun="5000" />
+			<time num="541" diamondmun="5000" />
+			<time num="542" diamondmun="5000" />
+			<time num="543" diamondmun="5000" />
+			<time num="544" diamondmun="5000" />
+			<time num="545" diamondmun="5000" />
+			<time num="546" diamondmun="5000" />
+			<time num="547" diamondmun="5000" />
+			<time num="548" diamondmun="5000" />
+			<time num="549" diamondmun="5000" />
+			<time num="550" diamondmun="5000" />
+			<time num="551" diamondmun="5000" />
+			<time num="552" diamondmun="5000" />
+			<time num="553" diamondmun="5000" />
+			<time num="554" diamondmun="5000" />
+			<time num="555" diamondmun="5000" />
+			<time num="556" diamondmun="5000" />
+			<time num="557" diamondmun="5000" />
+			<time num="558" diamondmun="5000" />
+			<time num="559" diamondmun="5000" />
+			<time num="560" diamondmun="5000" />
+			<time num="561" diamondmun="5000" />
+			<time num="562" diamondmun="5000" />
+			<time num="563" diamondmun="5000" />
+			<time num="564" diamondmun="5000" />
+			<time num="565" diamondmun="5000" />
+			<time num="566" diamondmun="5000" />
+			<time num="567" diamondmun="5000" />
+			<time num="568" diamondmun="5000" />
+			<time num="569" diamondmun="5000" />
+			<time num="570" diamondmun="5000" />
+			<time num="571" diamondmun="5000" />
+			<time num="572" diamondmun="5000" />
+			<time num="573" diamondmun="5000" />
+			<time num="574" diamondmun="5000" />
+			<time num="575" diamondmun="5000" />
+			<time num="576" diamondmun="5000" />
+			<time num="577" diamondmun="5000" />
+			<time num="578" diamondmun="5000" />
+			<time num="579" diamondmun="5000" />
+			<time num="580" diamondmun="5000" />
+			<time num="581" diamondmun="5000" />
+			<time num="582" diamondmun="5000" />
+			<time num="583" diamondmun="5000" />
+			<time num="584" diamondmun="5000" />
+			<time num="585" diamondmun="5000" />
+			<time num="586" diamondmun="5000" />
+			<time num="587" diamondmun="5000" />
+			<time num="588" diamondmun="5000" />
+			<time num="589" diamondmun="5000" />
+			<time num="590" diamondmun="5000" />
+			<time num="591" diamondmun="5000" />
+			<time num="592" diamondmun="5000" />
+			<time num="593" diamondmun="5000" />
+			<time num="594" diamondmun="5000" />
+			<time num="595" diamondmun="5000" />
+			<time num="596" diamondmun="5000" />
+			<time num="597" diamondmun="5000" />
+			<time num="598" diamondmun="5000" />
+			<time num="599" diamondmun="5000" />
+			<time num="600" diamondmun="5000" />
+		</entry>
+		<!--领悟技能开放格子等级-->
+		<entry id="2" >
+			<Spaces num="1" Level="39"/>
+			<Spaces num="2" Level="43"/>
+			<Spaces num="3" Level="49"/>
+			<Spaces num="4" Level="56"/>
+			<Spaces num="5" Level="70"/>
+			<Spaces num="6" Level="80"/>
+		</entry>
+		<!--装备觉醒技能开放格子等级-->
+		<entry id="3" >
+			<Spaces num="1" Level="38"/>
+			<Spaces num="2" Level="42"/>
+			<Spaces num="3" Level="48"/>
+			<Spaces num="4" Level="55"/>
+			<Spaces num="5" Level="65"/>
+			<Spaces num="6" Level="75"/>
+		</entry>
+		<!--符文装备格子开放等级-->
+		<entry id="4" >
+			<Spaces num="1" Level="24"/>
+			<Spaces num="2" Level="26"/>
+			<Spaces num="3" Level="28"/>
+			<Spaces num="4" Level="30"/>
+			<Spaces num="5" Level="33"/>
+			<Spaces num="6" Level="36"/>
+			<Spaces num="7" Level="39"/>
+		</entry>
+		<!--扫荡重置次数和消耗钻石数量-->
+		<entry id="5">
+			<time num="1" diamondmun="300" />
+			<time num="2" diamondmun="400" />
+			<time num="3" diamondmun="500" />
+			<time num="4" diamondmun="700" />
+			<time num="5" diamondmun="1000" />
+			<time num="6" diamondmun="1200" />
+			<time num="7" diamondmun="1500" />
+			<time num="8" diamondmun="2000" />
+			<time num="9" diamondmun="2500" />
+			<time num="10" diamondmun="3000" />
+			<time num="11" diamondmun="3500" />
+			<time num="12" diamondmun="4000" />
+			<time num="13" diamondmun="5000" />
+			<time num="14" diamondmun="6000" />
+			<time num="15" diamondmun="7000" />
+			<time num="16" diamondmun="8000" />
+			<time num="17" diamondmun="9000" />
+			<time num="18" diamondmun="10000" />
+			<time num="19" diamondmun="10000" />
+			<time num="20" diamondmun="10000" />
+			<time num="21" diamondmun="10000" />
+			<time num="22" diamondmun="10000" />
+			<time num="23" diamondmun="10000" />
+			<time num="24" diamondmun="10000" />
+			<time num="25" diamondmun="10000" />
+			<time num="26" diamondmun="10000" />
+			<time num="27" diamondmun="10000" />
+			<time num="28" diamondmun="10000" />
+			<time num="29" diamondmun="10000" />
+			<time num="30" diamondmun="10000" />
+			<time num="31" diamondmun="10000" />
+			<time num="32" diamondmun="10000" />
+			<time num="33" diamondmun="10000" />
+			<time num="34" diamondmun="10000" />
+			<time num="35" diamondmun="10000" />
+			<time num="36" diamondmun="10000" />
+			<time num="37" diamondmun="10000" />
+			<time num="38" diamondmun="10000" />
+			<time num="39" diamondmun="10000" />
+			<time num="40" diamondmun="10000" />
+			<time num="41" diamondmun="10000" />
+			<time num="42" diamondmun="10000" />
+			<time num="43" diamondmun="10000" />
+			<time num="44" diamondmun="10000" />
+			<time num="45" diamondmun="10000" />
+			<time num="46" diamondmun="10000" />
+			<time num="47" diamondmun="10000" />
+			<time num="48" diamondmun="10000" />
+			<time num="49" diamondmun="10000" />
+			<time num="50" diamondmun="10000" />
+			<time num="51" diamondmun="10000" />
+			<time num="52" diamondmun="10000" />
+			<time num="53" diamondmun="10000" />
+			<time num="54" diamondmun="10000" />
+			<time num="55" diamondmun="10000" />
+			<time num="56" diamondmun="10000" />
+			<time num="57" diamondmun="10000" />
+			<time num="58" diamondmun="10000" />
+			<time num="59" diamondmun="10000" />
+			<time num="60" diamondmun="10000" />
+			<time num="61" diamondmun="10000" />
+			<time num="62" diamondmun="10000" />
+			<time num="63" diamondmun="10000" />
+			<time num="64" diamondmun="10000" />
+			<time num="65" diamondmun="10000" />
+			<time num="66" diamondmun="10000" />
+			<time num="67" diamondmun="10000" />
+			<time num="68" diamondmun="10000" />
+			<time num="69" diamondmun="10000" />
+			<time num="70" diamondmun="10000" />
+			<time num="71" diamondmun="10000" />
+			<time num="72" diamondmun="10000" />
+			<time num="73" diamondmun="10000" />
+			<time num="74" diamondmun="10000" />
+			<time num="75" diamondmun="10000" />
+			<time num="76" diamondmun="10000" />
+			<time num="77" diamondmun="10000" />
+			<time num="78" diamondmun="10000" />
+			<time num="79" diamondmun="10000" />
+			<time num="80" diamondmun="10000" />
+			<time num="81" diamondmun="10000" />
+			<time num="82" diamondmun="10000" />
+			<time num="83" diamondmun="10000" />
+			<time num="84" diamondmun="10000" />
+			<time num="85" diamondmun="10000" />
+			<time num="86" diamondmun="10000" />
+			<time num="87" diamondmun="10000" />
+			<time num="88" diamondmun="10000" />
+			<time num="89" diamondmun="10000" />
+			<time num="90" diamondmun="10000" />
+			<time num="91" diamondmun="10000" />
+			<time num="92" diamondmun="10000" />
+			<time num="93" diamondmun="10000" />
+			<time num="94" diamondmun="10000" />
+			<time num="95" diamondmun="10000" />
+			<time num="96" diamondmun="10000" />
+			<time num="97" diamondmun="10000" />
+			<time num="98" diamondmun="10000" />
+			<time num="99" diamondmun="10000" />
+			<time num="100" diamondmun="1000" />
+		</entry>
+		<!--VIP到本级所需钻石数量-->
+		<entry id="6">
+			<Vip Lv="1" Diamonds="10"/>
+			<Vip Lv="2" Diamonds="100"/>
+			<Vip Lv="3" Diamonds="300"/>
+			<Vip Lv="4" Diamonds="1000"/>
+			<Vip Lv="5" Diamonds="2000"/>
+			<Vip Lv="6" Diamonds="5000"/>
+			<Vip Lv="7" Diamonds="8000"/>
+			<Vip Lv="8" Diamonds="10000"/>
+			<Vip Lv="9" Diamonds="15000"/>
+			<Vip Lv="10" Diamonds="20000"/>
+			<Vip Lv="11" Diamonds="30000"/>
+			<Vip Lv="12" Diamonds="50000"/>
+			<Vip Lv="13" Diamonds="80000"/>
+			<Vip Lv="14" Diamonds="150000"/>
+			<Vip Lv="15" Diamonds="300000"/>
+		</entry>
+		<!--首次购买奖励-->
+		<entry id="7">
+			<firstbuy itemID="811615" itemnum="10"/>
+			<firstbuy itemID="271600" itemnum="1"/>
+			<firstbuy itemID="101201" itemnum="1"/>
+			<firstbuy itemID="1" itemnum="100000"/>
+		</entry>
+		<!--装备觉醒消耗钻石-->
+		<entry id="8">
+			<time num="0" diamondmun="100" />
+			<time num="1" diamondmun="100" />
+			<time num="2" diamondmun="100" />
+			<time num="3" diamondmun="100" />
+			<time num="4" diamondmun="100" />
+			<time num="5" diamondmun="200" />
+			<time num="6" diamondmun="200" />
+			<time num="7" diamondmun="200" />
+			<time num="8" diamondmun="200" />
+			<time num="9" diamondmun="200" />
+			<time num="10" diamondmun="500" />
+			<time num="11" diamondmun="500" />
+			<time num="12" diamondmun="500" />
+			<time num="13" diamondmun="500" />
+			<time num="14" diamondmun="500" />
+			<time num="15" diamondmun="500" />
+			<time num="16" diamondmun="500" />
+			<time num="17" diamondmun="500" />
+			<time num="18" diamondmun="500" />
+			<time num="19" diamondmun="500" />
+			<time num="20" diamondmun="800" />
+			<time num="21" diamondmun="800" />
+			<time num="22" diamondmun="800" />
+			<time num="23" diamondmun="800" />
+			<time num="24" diamondmun="800" />
+			<time num="25" diamondmun="800" />
+			<time num="26" diamondmun="800" />
+			<time num="27" diamondmun="800" />
+			<time num="28" diamondmun="800" />
+			<time num="29" diamondmun="800" />
+			<time num="30" diamondmun="1000" />
+			<time num="31" diamondmun="1000" />
+			<time num="32" diamondmun="1000" />
+			<time num="33" diamondmun="1000" />
+			<time num="34" diamondmun="1000" />
+			<time num="35" diamondmun="1000" />
+			<time num="36" diamondmun="1000" />
+			<time num="37" diamondmun="1000" />
+			<time num="38" diamondmun="1000" />
+			<time num="39" diamondmun="1000" />
+			<time num="40" diamondmun="1000" />
+			<time num="41" diamondmun="1250" />
+			<time num="42" diamondmun="1250" />
+			<time num="43" diamondmun="1250" />
+			<time num="44" diamondmun="1250" />
+			<time num="45" diamondmun="1250" />
+			<time num="46" diamondmun="1250" />
+			<time num="47" diamondmun="1250" />
+			<time num="48" diamondmun="1250" />
+			<time num="49" diamondmun="1250" />
+			<time num="50" diamondmun="1500" />
+			<time num="51" diamondmun="1500" />
+			<time num="52" diamondmun="1500" />
+			<time num="53" diamondmun="1500" />
+			<time num="54" diamondmun="1500" />
+			<time num="55" diamondmun="1500" />
+			<time num="56" diamondmun="1500" />
+			<time num="57" diamondmun="1500" />
+			<time num="58" diamondmun="1500" />
+			<time num="59" diamondmun="1500" />
+			<time num="60" diamondmun="1500" />
+			<time num="61" diamondmun="1500" />
+			<time num="62" diamondmun="1500" />
+			<time num="63" diamondmun="1500" />
+			<time num="64" diamondmun="1500" />
+			<time num="65" diamondmun="1500" />
+			<time num="66" diamondmun="1500" />
+			<time num="67" diamondmun="1500" />
+			<time num="68" diamondmun="1500" />
+			<time num="69" diamondmun="1500" />
+			<time num="70" diamondmun="1500" />
+			<time num="71" diamondmun="1500" />
+			<time num="72" diamondmun="1500" />
+			<time num="73" diamondmun="1500" />
+			<time num="74" diamondmun="1500" />
+			<time num="75" diamondmun="1500" />
+			<time num="76" diamondmun="1500" />
+			<time num="77" diamondmun="1500" />
+			<time num="78" diamondmun="1500" />
+			<time num="79" diamondmun="1500" />
+			<time num="80" diamondmun="1800" />
+			<time num="81" diamondmun="1800" />
+			<time num="82" diamondmun="1800" />
+			<time num="83" diamondmun="1800" />
+			<time num="84" diamondmun="1800" />
+			<time num="85" diamondmun="1800" />
+			<time num="86" diamondmun="1800" />
+			<time num="87" diamondmun="1800" />
+			<time num="88" diamondmun="1800" />
+			<time num="89" diamondmun="1800" />
+			<time num="90" diamondmun="1800" />
+			<time num="91" diamondmun="1800" />
+			<time num="92" diamondmun="1800" />
+			<time num="93" diamondmun="1800" />
+			<time num="94" diamondmun="1800" />
+			<time num="95" diamondmun="1800" />
+			<time num="96" diamondmun="1800" />
+			<time num="97" diamondmun="1800" />
+			<time num="98" diamondmun="1800" />
+			<time num="99" diamondmun="1800" />
+			<time num="100" diamondmun="2000" />
+			<time num="101" diamondmun="2000" />
+			<time num="102" diamondmun="2000" />
+			<time num="103" diamondmun="2000" />
+			<time num="104" diamondmun="2000" />
+			<time num="105" diamondmun="2000" />
+			<time num="106" diamondmun="2000" />
+			<time num="107" diamondmun="2000" />
+			<time num="108" diamondmun="2000" />
+			<time num="109" diamondmun="2000" />
+			<time num="110" diamondmun="2000" />
+			<time num="111" diamondmun="2000" />
+			<time num="112" diamondmun="2000" />
+			<time num="113" diamondmun="2000" />
+			<time num="114" diamondmun="2000" />
+			<time num="115" diamondmun="2000" />
+			<time num="116" diamondmun="2000" />
+			<time num="117" diamondmun="2000" />
+			<time num="118" diamondmun="2000" />
+			<time num="119" diamondmun="2000" />
+			<time num="120" diamondmun="2200" />
+			<time num="121" diamondmun="2200" />
+			<time num="122" diamondmun="2200" />
+			<time num="123" diamondmun="2200" />
+			<time num="124" diamondmun="2200" />
+			<time num="125" diamondmun="2200" />
+			<time num="126" diamondmun="2200" />
+			<time num="127" diamondmun="2200" />
+			<time num="128" diamondmun="2200" />
+			<time num="129" diamondmun="2200" />
+			<time num="130" diamondmun="2200" />
+			<time num="131" diamondmun="2200" />
+			<time num="132" diamondmun="2200" />
+			<time num="133" diamondmun="2200" />
+			<time num="134" diamondmun="2200" />
+			<time num="135" diamondmun="2200" />
+			<time num="136" diamondmun="2200" />
+			<time num="137" diamondmun="2200" />
+			<time num="138" diamondmun="2200" />
+			<time num="139" diamondmun="2200" />
+			<time num="140" diamondmun="2500" />
+			<time num="141" diamondmun="2500" />
+			<time num="142" diamondmun="2500" />
+			<time num="143" diamondmun="2500" />
+			<time num="144" diamondmun="2500" />
+			<time num="145" diamondmun="2500" />
+			<time num="146" diamondmun="2500" />
+			<time num="147" diamondmun="2500" />
+			<time num="148" diamondmun="2500" />
+			<time num="149" diamondmun="2500" />
+			<time num="150" diamondmun="2500" />
+			<time num="151" diamondmun="2500" />
+			<time num="152" diamondmun="2500" />
+			<time num="153" diamondmun="2500" />
+			<time num="154" diamondmun="2500" />
+			<time num="155" diamondmun="2500" />
+			<time num="156" diamondmun="2500" />
+			<time num="157" diamondmun="2500" />
+			<time num="158" diamondmun="2500" />
+			<time num="159" diamondmun="2500" />
+			<time num="160" diamondmun="2500" />
+			<time num="161" diamondmun="2500" />
+			<time num="162" diamondmun="2500" />
+			<time num="163" diamondmun="2500" />
+			<time num="164" diamondmun="2500" />
+			<time num="165" diamondmun="2500" />
+			<time num="166" diamondmun="2500" />
+			<time num="167" diamondmun="2500" />
+			<time num="168" diamondmun="2500" />
+			<time num="169" diamondmun="2500" />
+			<time num="170" diamondmun="2500" />
+			<time num="171" diamondmun="2500" />
+			<time num="172" diamondmun="2500" />
+			<time num="173" diamondmun="2500" />
+			<time num="174" diamondmun="2500" />
+			<time num="175" diamondmun="2500" />
+			<time num="176" diamondmun="2500" />
+			<time num="177" diamondmun="2500" />
+			<time num="178" diamondmun="2500" />
+			<time num="179" diamondmun="2500" />
+			<time num="180" diamondmun="2500" />
+			<time num="181" diamondmun="2500" />
+			<time num="182" diamondmun="2500" />
+			<time num="183" diamondmun="2500" />
+			<time num="184" diamondmun="2500" />
+			<time num="185" diamondmun="2500" />
+			<time num="186" diamondmun="2500" />
+			<time num="187" diamondmun="2500" />
+			<time num="188" diamondmun="2500" />
+			<time num="189" diamondmun="2500" />
+			<time num="190" diamondmun="2500" />
+			<time num="191" diamondmun="2500" />
+			<time num="192" diamondmun="2500" />
+			<time num="193" diamondmun="2500" />
+			<time num="194" diamondmun="2500" />
+			<time num="195" diamondmun="2500" />
+			<time num="196" diamondmun="2500" />
+			<time num="197" diamondmun="2500" />
+			<time num="198" diamondmun="2500" />
+			<time num="199" diamondmun="2500" />
+			<time num="200" diamondmun="2500" />
+			<time num="201" diamondmun="2500" />
+			<time num="202" diamondmun="2500" />
+			<time num="203" diamondmun="2500" />
+			<time num="204" diamondmun="2500" />
+			<time num="205" diamondmun="2500" />
+			<time num="206" diamondmun="2500" />
+			<time num="207" diamondmun="2500" />
+			<time num="208" diamondmun="2500" />
+			<time num="209" diamondmun="2500" />
+			<time num="210" diamondmun="2500" />
+			<time num="211" diamondmun="2500" />
+			<time num="212" diamondmun="2500" />
+			<time num="213" diamondmun="2500" />
+			<time num="214" diamondmun="2500" />
+			<time num="215" diamondmun="2500" />
+			<time num="216" diamondmun="2500" />
+			<time num="217" diamondmun="2500" />
+			<time num="218" diamondmun="2500" />
+			<time num="219" diamondmun="2500" />
+			<time num="220" diamondmun="2500" />
+			<time num="221" diamondmun="2500" />
+			<time num="222" diamondmun="2500" />
+			<time num="223" diamondmun="2500" />
+			<time num="224" diamondmun="2500" />
+			<time num="225" diamondmun="2500" />
+			<time num="226" diamondmun="2500" />
+			<time num="227" diamondmun="2500" />
+			<time num="228" diamondmun="2500" />
+			<time num="229" diamondmun="2500" />
+			<time num="230" diamondmun="2500" />
+			<time num="231" diamondmun="2500" />
+			<time num="232" diamondmun="2500" />
+			<time num="233" diamondmun="2500" />
+			<time num="234" diamondmun="2500" />
+			<time num="235" diamondmun="2500" />
+			<time num="236" diamondmun="2500" />
+			<time num="237" diamondmun="2500" />
+			<time num="238" diamondmun="2500" />
+			<time num="239" diamondmun="2500" />
+			<time num="240" diamondmun="2500" />
+			<time num="241" diamondmun="2500" />
+			<time num="242" diamondmun="2500" />
+			<time num="243" diamondmun="2500" />
+			<time num="244" diamondmun="2500" />
+			<time num="245" diamondmun="2500" />
+			<time num="246" diamondmun="2500" />
+			<time num="247" diamondmun="2500" />
+			<time num="248" diamondmun="2500" />
+			<time num="249" diamondmun="2500" />
+			<time num="250" diamondmun="2500" />
+			<time num="251" diamondmun="2500" />
+			<time num="252" diamondmun="2500" />
+			<time num="253" diamondmun="2500" />
+			<time num="254" diamondmun="2500" />
+			<time num="255" diamondmun="2500" />
+			<time num="256" diamondmun="2500" />
+			<time num="257" diamondmun="2500" />
+			<time num="258" diamondmun="2500" />
+			<time num="259" diamondmun="2500" />
+			<time num="260" diamondmun="2500" />
+			<time num="261" diamondmun="2500" />
+			<time num="262" diamondmun="2500" />
+			<time num="263" diamondmun="2500" />
+			<time num="264" diamondmun="2500" />
+			<time num="265" diamondmun="2500" />
+			<time num="266" diamondmun="2500" />
+			<time num="267" diamondmun="2500" />
+			<time num="268" diamondmun="2500" />
+			<time num="269" diamondmun="2500" />
+			<time num="270" diamondmun="2500" />
+			<time num="271" diamondmun="2500" />
+			<time num="272" diamondmun="2500" />
+			<time num="273" diamondmun="2500" />
+			<time num="274" diamondmun="2500" />
+			<time num="275" diamondmun="2500" />
+			<time num="276" diamondmun="2500" />
+			<time num="277" diamondmun="2500" />
+			<time num="278" diamondmun="2500" />
+			<time num="279" diamondmun="2500" />
+			<time num="280" diamondmun="2500" />
+			<time num="281" diamondmun="2500" />
+			<time num="282" diamondmun="2500" />
+			<time num="283" diamondmun="2500" />
+			<time num="284" diamondmun="2500" />
+			<time num="285" diamondmun="2500" />
+			<time num="286" diamondmun="2500" />
+			<time num="287" diamondmun="2500" />
+			<time num="288" diamondmun="2500" />
+			<time num="289" diamondmun="2500" />
+			<time num="290" diamondmun="2500" />
+			<time num="291" diamondmun="2500" />
+			<time num="292" diamondmun="2500" />
+			<time num="293" diamondmun="2500" />
+			<time num="294" diamondmun="2500" />
+			<time num="295" diamondmun="2500" />
+			<time num="296" diamondmun="2500" />
+			<time num="297" diamondmun="2500" />
+			<time num="298" diamondmun="2500" />
+			<time num="299" diamondmun="2500" />
+			<time num="300" diamondmun="2500" />
+			<time num="301" diamondmun="2500" />
+			<time num="302" diamondmun="2500" />
+			<time num="303" diamondmun="2500" />
+			<time num="304" diamondmun="2500" />
+			<time num="305" diamondmun="2500" />
+			<time num="306" diamondmun="2500" />
+			<time num="307" diamondmun="2500" />
+			<time num="308" diamondmun="2500" />
+			<time num="309" diamondmun="2500" />
+			<time num="310" diamondmun="2500" />
+			<time num="311" diamondmun="2500" />
+			<time num="312" diamondmun="2500" />
+			<time num="313" diamondmun="2500" />
+			<time num="314" diamondmun="2500" />
+			<time num="315" diamondmun="2500" />
+			<time num="316" diamondmun="2500" />
+			<time num="317" diamondmun="2500" />
+			<time num="318" diamondmun="2500" />
+			<time num="319" diamondmun="2500" />
+			<time num="320" diamondmun="2500" />
+			<time num="321" diamondmun="2500" />
+			<time num="322" diamondmun="2500" />
+			<time num="323" diamondmun="2500" />
+			<time num="324" diamondmun="2500" />
+			<time num="325" diamondmun="2500" />
+			<time num="326" diamondmun="2500" />
+			<time num="327" diamondmun="2500" />
+			<time num="328" diamondmun="2500" />
+			<time num="329" diamondmun="2500" />
+			<time num="330" diamondmun="2500" />
+			<time num="331" diamondmun="2500" />
+			<time num="332" diamondmun="2500" />
+			<time num="333" diamondmun="2500" />
+			<time num="334" diamondmun="2500" />
+			<time num="335" diamondmun="2500" />
+			<time num="336" diamondmun="2500" />
+			<time num="337" diamondmun="2500" />
+			<time num="338" diamondmun="2500" />
+			<time num="339" diamondmun="2500" />
+			<time num="340" diamondmun="2500" />
+			<time num="341" diamondmun="2500" />
+			<time num="342" diamondmun="2500" />
+			<time num="343" diamondmun="2500" />
+			<time num="344" diamondmun="2500" />
+			<time num="345" diamondmun="2500" />
+			<time num="346" diamondmun="2500" />
+			<time num="347" diamondmun="2500" />
+			<time num="348" diamondmun="2500" />
+			<time num="349" diamondmun="2500" />
+			<time num="350" diamondmun="2500" />
+			<time num="351" diamondmun="2500" />
+			<time num="352" diamondmun="2500" />
+			<time num="353" diamondmun="2500" />
+			<time num="354" diamondmun="2500" />
+			<time num="355" diamondmun="2500" />
+			<time num="356" diamondmun="2500" />
+			<time num="357" diamondmun="2500" />
+			<time num="358" diamondmun="2500" />
+			<time num="359" diamondmun="2500" />
+			<time num="360" diamondmun="2500" />
+			<time num="361" diamondmun="2500" />
+			<time num="362" diamondmun="2500" />
+			<time num="363" diamondmun="2500" />
+			<time num="364" diamondmun="2500" />
+			<time num="365" diamondmun="2500" />
+			<time num="366" diamondmun="2500" />
+			<time num="367" diamondmun="2500" />
+			<time num="368" diamondmun="2500" />
+			<time num="369" diamondmun="2500" />
+			<time num="370" diamondmun="2500" />
+			<time num="371" diamondmun="2500" />
+			<time num="372" diamondmun="2500" />
+			<time num="373" diamondmun="2500" />
+			<time num="374" diamondmun="2500" />
+			<time num="375" diamondmun="2500" />
+			<time num="376" diamondmun="2500" />
+			<time num="377" diamondmun="2500" />
+			<time num="378" diamondmun="2500" />
+			<time num="379" diamondmun="2500" />
+			<time num="380" diamondmun="2500" />
+			<time num="381" diamondmun="2500" />
+			<time num="382" diamondmun="2500" />
+			<time num="383" diamondmun="2500" />
+			<time num="384" diamondmun="2500" />
+			<time num="385" diamondmun="2500" />
+			<time num="386" diamondmun="2500" />
+			<time num="387" diamondmun="2500" />
+			<time num="388" diamondmun="2500" />
+			<time num="389" diamondmun="2500" />
+			<time num="390" diamondmun="2500" />
+			<time num="391" diamondmun="2500" />
+			<time num="392" diamondmun="2500" />
+			<time num="393" diamondmun="2500" />
+			<time num="394" diamondmun="2500" />
+			<time num="395" diamondmun="2500" />
+			<time num="396" diamondmun="2500" />
+			<time num="397" diamondmun="2500" />
+			<time num="398" diamondmun="2500" />
+			<time num="399" diamondmun="2500" />
+			<time num="400" diamondmun="2500" />
+			<time num="401" diamondmun="2500" />
+			<time num="402" diamondmun="2500" />
+			<time num="403" diamondmun="2500" />
+			<time num="404" diamondmun="2500" />
+			<time num="405" diamondmun="2500" />
+			<time num="406" diamondmun="2500" />
+			<time num="407" diamondmun="2500" />
+			<time num="408" diamondmun="2500" />
+			<time num="409" diamondmun="2500" />
+			<time num="410" diamondmun="2500" />
+			<time num="411" diamondmun="2500" />
+			<time num="412" diamondmun="2500" />
+			<time num="413" diamondmun="2500" />
+			<time num="414" diamondmun="2500" />
+			<time num="415" diamondmun="2500" />
+			<time num="416" diamondmun="2500" />
+			<time num="417" diamondmun="2500" />
+			<time num="418" diamondmun="2500" />
+			<time num="419" diamondmun="2500" />
+			<time num="420" diamondmun="2500" />
+			<time num="421" diamondmun="2500" />
+			<time num="422" diamondmun="2500" />
+			<time num="423" diamondmun="2500" />
+			<time num="424" diamondmun="2500" />
+			<time num="425" diamondmun="2500" />
+			<time num="426" diamondmun="2500" />
+			<time num="427" diamondmun="2500" />
+			<time num="428" diamondmun="2500" />
+			<time num="429" diamondmun="2500" />
+			<time num="430" diamondmun="2500" />
+			<time num="431" diamondmun="2500" />
+			<time num="432" diamondmun="2500" />
+			<time num="433" diamondmun="2500" />
+			<time num="434" diamondmun="2500" />
+			<time num="435" diamondmun="2500" />
+			<time num="436" diamondmun="2500" />
+			<time num="437" diamondmun="2500" />
+			<time num="438" diamondmun="2500" />
+			<time num="439" diamondmun="2500" />
+			<time num="440" diamondmun="2500" />
+			<time num="441" diamondmun="2500" />
+			<time num="442" diamondmun="2500" />
+			<time num="443" diamondmun="2500" />
+			<time num="444" diamondmun="2500" />
+			<time num="445" diamondmun="2500" />
+			<time num="446" diamondmun="2500" />
+			<time num="447" diamondmun="2500" />
+			<time num="448" diamondmun="2500" />
+			<time num="449" diamondmun="2500" />
+			<time num="450" diamondmun="2500" />
+			<time num="451" diamondmun="2500" />
+			<time num="452" diamondmun="2500" />
+			<time num="453" diamondmun="2500" />
+			<time num="454" diamondmun="2500" />
+			<time num="455" diamondmun="2500" />
+			<time num="456" diamondmun="2500" />
+			<time num="457" diamondmun="2500" />
+			<time num="458" diamondmun="2500" />
+			<time num="459" diamondmun="2500" />
+			<time num="460" diamondmun="2500" />
+			<time num="461" diamondmun="2500" />
+			<time num="462" diamondmun="2500" />
+			<time num="463" diamondmun="2500" />
+			<time num="464" diamondmun="2500" />
+			<time num="465" diamondmun="2500" />
+			<time num="466" diamondmun="2500" />
+			<time num="467" diamondmun="2500" />
+			<time num="468" diamondmun="2500" />
+			<time num="469" diamondmun="2500" />
+			<time num="470" diamondmun="2500" />
+			<time num="471" diamondmun="2500" />
+			<time num="472" diamondmun="2500" />
+			<time num="473" diamondmun="2500" />
+			<time num="474" diamondmun="2500" />
+			<time num="475" diamondmun="2500" />
+			<time num="476" diamondmun="2500" />
+			<time num="477" diamondmun="2500" />
+			<time num="478" diamondmun="2500" />
+			<time num="479" diamondmun="2500" />
+			<time num="480" diamondmun="2500" />
+			<time num="481" diamondmun="2500" />
+			<time num="482" diamondmun="2500" />
+			<time num="483" diamondmun="2500" />
+			<time num="484" diamondmun="2500" />
+			<time num="485" diamondmun="2500" />
+			<time num="486" diamondmun="2500" />
+			<time num="487" diamondmun="2500" />
+			<time num="488" diamondmun="2500" />
+			<time num="489" diamondmun="2500" />
+			<time num="490" diamondmun="2500" />
+			<time num="491" diamondmun="2500" />
+			<time num="492" diamondmun="2500" />
+			<time num="493" diamondmun="2500" />
+			<time num="494" diamondmun="2500" />
+			<time num="495" diamondmun="2500" />
+			<time num="496" diamondmun="2500" />
+			<time num="497" diamondmun="2500" />
+			<time num="498" diamondmun="2500" />
+			<time num="499" diamondmun="2500" />
+			<time num="500" diamondmun="2500" />
+			<time num="501" diamondmun="2500" />
+			<time num="502" diamondmun="2500" />
+			<time num="503" diamondmun="2500" />
+			<time num="504" diamondmun="2500" />
+			<time num="505" diamondmun="2500" />
+			<time num="506" diamondmun="2500" />
+			<time num="507" diamondmun="2500" />
+			<time num="508" diamondmun="2500" />
+			<time num="509" diamondmun="2500" />
+			<time num="510" diamondmun="2500" />
+			<time num="511" diamondmun="2500" />
+			<time num="512" diamondmun="2500" />
+			<time num="513" diamondmun="2500" />
+			<time num="514" diamondmun="2500" />
+			<time num="515" diamondmun="2500" />
+			<time num="516" diamondmun="2500" />
+			<time num="517" diamondmun="2500" />
+			<time num="518" diamondmun="2500" />
+			<time num="519" diamondmun="2500" />
+			<time num="520" diamondmun="2500" />
+			<time num="521" diamondmun="2500" />
+			<time num="522" diamondmun="2500" />
+			<time num="523" diamondmun="2500" />
+			<time num="524" diamondmun="2500" />
+			<time num="525" diamondmun="2500" />
+			<time num="526" diamondmun="2500" />
+			<time num="527" diamondmun="2500" />
+			<time num="528" diamondmun="2500" />
+			<time num="529" diamondmun="2500" />
+			<time num="530" diamondmun="2500" />
+			<time num="531" diamondmun="2500" />
+			<time num="532" diamondmun="2500" />
+			<time num="533" diamondmun="2500" />
+			<time num="534" diamondmun="2500" />
+			<time num="535" diamondmun="2500" />
+			<time num="536" diamondmun="2500" />
+			<time num="537" diamondmun="2500" />
+			<time num="538" diamondmun="2500" />
+			<time num="539" diamondmun="2500" />
+			<time num="540" diamondmun="2500" />
+			<time num="541" diamondmun="2500" />
+			<time num="542" diamondmun="2500" />
+			<time num="543" diamondmun="2500" />
+			<time num="544" diamondmun="2500" />
+			<time num="545" diamondmun="2500" />
+			<time num="546" diamondmun="2500" />
+			<time num="547" diamondmun="2500" />
+			<time num="548" diamondmun="2500" />
+			<time num="549" diamondmun="2500" />
+			<time num="550" diamondmun="2500" />
+			<time num="551" diamondmun="2500" />
+			<time num="552" diamondmun="2500" />
+			<time num="553" diamondmun="2500" />
+			<time num="554" diamondmun="2500" />
+			<time num="555" diamondmun="2500" />
+			<time num="556" diamondmun="2500" />
+			<time num="557" diamondmun="2500" />
+			<time num="558" diamondmun="2500" />
+			<time num="559" diamondmun="2500" />
+			<time num="560" diamondmun="2500" />
+			<time num="561" diamondmun="2500" />
+			<time num="562" diamondmun="2500" />
+			<time num="563" diamondmun="2500" />
+			<time num="564" diamondmun="2500" />
+			<time num="565" diamondmun="2500" />
+			<time num="566" diamondmun="2500" />
+			<time num="567" diamondmun="2500" />
+			<time num="568" diamondmun="2500" />
+			<time num="569" diamondmun="2500" />
+			<time num="570" diamondmun="2500" />
+			<time num="571" diamondmun="2500" />
+			<time num="572" diamondmun="2500" />
+			<time num="573" diamondmun="2500" />
+			<time num="574" diamondmun="2500" />
+			<time num="575" diamondmun="2500" />
+			<time num="576" diamondmun="2500" />
+			<time num="577" diamondmun="2500" />
+			<time num="578" diamondmun="2500" />
+			<time num="579" diamondmun="2500" />
+			<time num="580" diamondmun="2500" />
+			<time num="581" diamondmun="2500" />
+			<time num="582" diamondmun="2500" />
+			<time num="583" diamondmun="2500" />
+			<time num="584" diamondmun="2500" />
+			<time num="585" diamondmun="2500" />
+			<time num="586" diamondmun="2500" />
+			<time num="587" diamondmun="2500" />
+			<time num="588" diamondmun="2500" />
+			<time num="589" diamondmun="2500" />
+			<time num="590" diamondmun="2500" />
+			<time num="591" diamondmun="2500" />
+			<time num="592" diamondmun="2500" />
+			<time num="593" diamondmun="2500" />
+			<time num="594" diamondmun="2500" />
+			<time num="595" diamondmun="2500" />
+			<time num="596" diamondmun="2500" />
+			<time num="597" diamondmun="2500" />
+			<time num="598" diamondmun="2500" />
+			<time num="599" diamondmun="2500" />
+			<time num="600" diamondmun="2500" />
+		</entry>
+		<!--宠物栏开放等级-->
+		<entry id="9">
+			<time num="1" Level="5"/>
+			<time num="2" Level="16"/>
+			<time num="3" Level="23"/>
+			<time num="4" Level="23"/>
+		</entry>
+		<!--守擂挑战次数对应百分比-->
+		<entry id="10">
+			<time num="1" percent="60" />
+			<time num="2" percent="55" />
+			<time num="3" percent="50" />
+			<time num="4" percent="45" />
+			<time num="5" percent="40" />
+			<time num="6" percent="35" />
+			<time num="7" percent="25" />
+			<time num="8" percent="20" />
+			<time num="9" percent="15" />
+			<time num="10" percent="10" />
+		</entry>
+		<!--守擂挑战BUFF刷新价格，最多可刷新40次-->
+		<entry id="11">
+			<time num="0" diamondmun="20" />
+			<time num="1" diamondmun="40" />
+			<time num="2" diamondmun="60" />
+			<time num="3" diamondmun="80" />
+			<time num="4" diamondmun="100" />
+			<time num="5" diamondmun="100" />
+			<time num="6" diamondmun="100" />
+			<time num="7" diamondmun="150" />
+			<time num="8" diamondmun="150" />
+			<time num="9" diamondmun="150" />
+			<time num="10" diamondmun="200" />
+			<time num="11" diamondmun="200" />
+			<time num="12" diamondmun="200" />
+			<time num="13" diamondmun="250" />
+			<time num="14" diamondmun="250" />
+			<time num="15" diamondmun="250" />
+			<time num="16" diamondmun="300" />
+			<time num="17" diamondmun="300" />
+			<time num="18" diamondmun="300" />
+			<time num="19" diamondmun="400" />
+			<time num="20" diamondmun="400" />
+			<time num="21" diamondmun="400" />
+			<time num="22" diamondmun="500" />
+			<time num="23" diamondmun="500" />
+			<time num="24" diamondmun="500" />
+			<time num="25" diamondmun="600" />
+			<time num="26" diamondmun="600" />
+			<time num="27" diamondmun="600" />
+			<time num="28" diamondmun="700" />
+			<time num="29" diamondmun="700" />
+			<time num="30" diamondmun="700" />
+			<time num="31" diamondmun="800" />
+			<time num="32" diamondmun="800" />
+			<time num="33" diamondmun="800" />
+			<time num="34" diamondmun="900" />
+			<time num="35" diamondmun="900" />
+			<time num="36" diamondmun="900" />
+			<time num="37" diamondmun="1000" />
+			<time num="38" diamondmun="1000" />
+			<time num="39" diamondmun="1000" />
+		</entry>
+		<!--灵魂链接开放格子等级-->
+		<entry id="12" >
+			<Spaces num="1" Level="31"/>
+			<Spaces num="2" Level="35"/>
+			<Spaces num="3" Level="39"/>
+			<Spaces num="4" Level="43"/>
+			<Spaces num="5" Level="47"/>
+			<Spaces num="6" Level="51"/>
+		</entry>
+		<!--随从稀有技能按键格子开放等级-->
+		<entry id="13" >
+			<Spaces num="1" Level="25"/>
+			<Spaces num="2" Level="35"/>
+		</entry>
+		<!--随从脚下光环颜色-->
+		<entry id="14">
+			<Color Lv="0" colorID="1"/>
+			<Color Lv="15" colorID="2"/>
+			<Color Lv="30" colorID="3"/>
+			<Color Lv="45" colorID="4"/>
+		</entry>
+		<!--公会副本开放条件-->
+		<entry id="15" >
+			<Spaces num="1" GULevel="5"/>
+			<Spaces num="2" GULevel="10"/>
+			<Spaces num="3" GULevel="15"/>
+			<Spaces num="4" GULevel="20"/>
+			<Spaces num="5" GULevel="40"/>
+			<Spaces num="6" GULevel="50"/>
+		</entry>
+		<!--世界BOSS最低进入等级-->
+		<entry id="16">
+			<Openlevel Level="10" />
+		</entry>
+		<!--世界BOSS士气鼓舞价格-->
+		<entry id="17">
+			<time num="1" diamondmun="500" />
+			<time num="2" diamondmun="500" />
+			<time num="3" diamondmun="500" />
+			<time num="4" diamondmun="1000" />
+			<time num="5" diamondmun="1000" />
+			<time num="6" diamondmun="1000" />
+			<time num="7" diamondmun="1500" />
+			<time num="8" diamondmun="2000" />
+			<time num="9" diamondmun="2500" />
+			<time num="10" diamondmun="3000" />
+		</entry>
+		<!--统一的怪物掉落概率-->
+		<entry id="18">
+			<commonGlod probability ="40"/>
+			<commonItem probability ="5"/>
+		</entry>
+		<!--幸运宝箱图标-->
+		<entry id="19" >
+			<icon id="102656" iconid="262220_icon" />
+			<icon id="102328" iconid="costResType9" />
+			<icon id="152213" iconid="152200_icon" />
+			<icon id="121206" iconid="242620_icon" />
+			<icon id="102332" iconid="152000_icon" />
+			<icon id="102320" iconid="632400_icon" />
+			<icon id="102336" iconid="811611_roleicon" />
+			<icon id="152211" iconid="costResType2" />
+			<icon id="102340" iconid="811615_roleicon" />
+			<icon id="102324" iconid="101206_icon" />
+			
+			<!-- <icon id="102656" iconid="262220_icon" /> -->
+			<icon id="102329" iconid="costResType9" />
+			<!-- <icon id="152213" iconid="152200_icon" /> -->
+			<!-- <icon id="121206" iconid="242620_icon" /> -->
+			<icon id="102333" iconid="152000_icon" />
+			<icon id="102321" iconid="632400_icon" />
+			<icon id="102337" iconid="811611_roleicon" />
+			<!-- <icon id="152211" iconid="costResType2" /> -->
+			<icon id="102341" iconid="811615_roleicon" />
+			<icon id="102325" iconid="101206_icon" />
+			
+			<icon id="102658" iconid="242620_icon" />
+			<icon id="102330" iconid="costResType9" />
+			<icon id="152214" iconid="152200_icon" />
+			<!-- <icon id="102656" iconid="262220_icon" /> -->
+			<icon id="102334" iconid="152000_icon" />
+			<icon id="102322" iconid="633000_icon" />
+			<icon id="102338" iconid="811616_roleicon" />
+			<icon id="152212" iconid="costResType2" />
+			<icon id="102342" iconid="811617_roleicon" />
+			<icon id="102326" iconid="101206_icon" />
+			
+			<!-- <icon id="102658" iconid="242620_icon" /> -->
+			<icon id="102331" iconid="costResType9" />
+			<!-- <icon id="152214" iconid="152200_icon" /> -->
+			<!-- <icon id="102656" iconid="262220_icon" /> -->
+			<icon id="102335" iconid="152000_icon" />
+			<icon id="102323" iconid="633000_icon" />
+			<icon id="102339" iconid="811616_roleicon" />
+			<!-- <icon id="152212" iconid="costResType2" /> -->
+			<icon id="102343" iconid="811617_roleicon" />
+			<icon id="102327" iconid="101206_icon" />
+		</entry>
+		<!--一键抢夺、一键强化、一键扫荡开放等级-->
+		<!--
+			functiontype:1:一键抢夺
+						 2:一键强化
+						 3:一键扫荡
+						 4:一键装备觉醒
+						 5:一键随从领悟
+		-->
+		<entry id="20">
+			<level id="1" functiontype="1" openlevel="20" />
+			<level id="2" functiontype="2" openlevel="10" />
+			<level id="3" functiontype="3" openlevel="30" />
+			<level id="4" functiontype="4" openlevel="42" />
+			<level id="5" functiontype="5" openlevel="43" />
+		</entry>
+		<!--组队副本每日重置次数价格-->
+		<entry id="21">
+			<time num="1" diamondmun="900" />
+			<time num="2" diamondmun="900" />
+			<time num="3" diamondmun="900" />
+			<time num="4" diamondmun="900" />
+		</entry>
+		<!--实时战场每日重置次数价格-->
+		<entry id="22">
+			<time num="1" diamondmun="200" />
+			<time num="2" diamondmun="300" />
+			<time num="3" diamondmun="400" />
+			<time num="4" diamondmun="500" />
+		</entry>
+		<!--新年场景时间-->
+		<entry id="23">
+			<time id="1" starttime="2017-01-26" endtime="2017-02-05" eventName="newyear" />
+		</entry>
+		<!--成长计划返还额度-->
+		<entry id="24">
+			<level id="1" stagelevel="30" reclaindiamond="2500" />
+			<level id="2" stagelevel="45" reclaindiamond="4000" />
+			<level id="3" stagelevel="60" reclaindiamond="6500" />
+		</entry>
+		<!--重置时间-->
+		<entry id="25">
+			<!--战役副本重置时间-->
+			<ResetTime id="1" time="5" />
+			<!--组队副本单个次数重置时间-->
+			<ResetTime id="2" time="5" />
+			<!--战役副本总使用次数重置时间-->
+			<ResetTime id="3" time="0" />
+			<!--每日任务重置时间-->
+			<ResetTime id="4" time="5" />
+			<!--每日在线奖励-->
+			<ResetTime id="5" time="0" />
+			<!--擂台每日刷新-->
+			<ResetTime id="6" time="0" />
+			<!--实时战场次数重置时间-->
+			<ResetTime id="7" time="0" />
+			<!--金币龙晶石关卡重置时间-->
+			<ResetTime id="8" time="5" />
+			<!--公会副本每日挑战助战次数重置时间-->
+			<ResetTime id="9" time="0" />
+			<!--全部商店重置时间-->
+			<ResetTime id="10" time="0" />
+			<!--日充值日消费活动时间-->
+			<ResetTime id="11" time="0" />
+			<!--公会日常更新时间（祈祷、捐献、今日个人贡献度&活跃度）-->
+			<ResetTime id="12" time="0" />
+			<!--竞技场-->
+			<ResetTime id="13" time="5" />	
+		</entry>
+		<!--天梯竞技挑战次数、冷却时间、清除冷却消耗钻石-->
+		<entry id="26">
+			<arena id="1" time="6" coolingtime="300" diamondmun="20" />
+		</entry>
+		<!--天梯竞技重置次数消耗钻石-->
+		<entry id="27">
+			<time num="1" diamondmun="50" />
+			<time num="2" diamondmun="50" />
+			<time num="3" diamondmun="100" />
+			<time num="4" diamondmun="100" />
+			<time num="5" diamondmun="200" />
+			<time num="6" diamondmun="200" />
+			<time num="7" diamondmun="200" />
+			<time num="8" diamondmun="200" />
+			<time num="9" diamondmun="200" />
+			<time num="10" diamondmun="200" />
+			<time num="11" diamondmun="200" />
+			<time num="12" diamondmun="200" />
+			<time num="13" diamondmun="200" />
+			<time num="14" diamondmun="200" />
+			<time num="15" diamondmun="200" />
+		</entry>
+		<!--
+			重置拦截次数消耗钻石
+		-->
+		<entry id="28">
+			<time num="1" diamondmun="50" />
+			<time num="2" diamondmun="50" />
+			<time num="3" diamondmun="100" />
+			<time num="4" diamondmun="100" />
+			<time num="5" diamondmun="200" />
+		</entry>
+		<!--
+			好友最大数量
+		-->
+		<entry id="29">
+			<friends id="1" friendsmun="50"/>
+		</entry>
+		
+		<!--
+			场景切换时的提示索引
+			changeTime = 替换的间隔时间
+		-->
+			<entry id="30" min="1" max="24" changeTime="5">
+		</entry>
+		
+		<!--
+			世界聊天等级限制
+		-->
+		<entry id="31">
+			<level id="1" num="6"/>
+		</entry>
+		
+		<!--
+			黑市熔炼消耗钻石数量（1为装备，2为随从）
+		-->
+		<entry id="32">
+			<entry id="1" num="40"/>
+			<entry id="2" num="200"/>
+		</entry>
+		
+		<!--
+			改名次数消耗钻石（5次以后保持）
+		-->
+		<entry id="33">
+			<time num="1" diamondmun="200" />
+			<time num="2" diamondmun="300" />
+			<time num="3" diamondmun="500" />
+			<time num="4" diamondmun="1000" />
+			<time num="5" diamondmun="1000" />
+		</entry>
+		<!--
+			金币每日购买所需钻石
+			NUM：每次购买金币的数量
+			timeid：购买次数
+			diamondmun：每次购买消耗的钻石	
+		-->
+		<entry id="34" num="250000">
+			<time id="1" diamondmun="2000" />
+			<time id="2" diamondmun="2000" />
+			<time id="3" diamondmun="2000" />
+			<time id="4" diamondmun="5000" />
+			<time id="5" diamondmun="5000" />
+			<time id="6" diamondmun="5000" />
+			<time id="7" diamondmun="8000" />
+			<time id="8" diamondmun="8000" />
+			<time id="9" diamondmun="8000" />
+			<time id="10" diamondmun="10000" />
+			<time id="11" diamondmun="10000" />
+			<time id="12" diamondmun="10000" />
+			<time id="13" diamondmun="15000" />
+			<time id="14" diamondmun="15000" />
+			<time id="15" diamondmun="15000" />
+			<time id="16" diamondmun="15000" />
+			<time id="17" diamondmun="15000" />
+			<time id="18" diamondmun="15000" />
+			<time id="19" diamondmun="15000" />
+			<time id="20" diamondmun="15000" />
+			<time id="21" diamondmun="15000" />
+			<time id="22" diamondmun="15000" />
+			<time id="23" diamondmun="15000" />
+			<time id="24" diamondmun="15000" />
+			<time id="25" diamondmun="15000" />
+			<time id="26" diamondmun="15000" />
+			<time id="27" diamondmun="15000" />
+			<time id="28" diamondmun="15000" />
+			<time id="29" diamondmun="15000" />
+			<time id="30" diamondmun="15000" />
+		</entry>
+		<!-- 
+			启用游客登录
+		-->
+		<entry id="35" value="1"/>
+		
+		<!--
+		    世界聊天时间限制
+		-->
+		<entry id="36">
+			<time id="1" limittime="10"/>
+		</entry>
+		<!--
+		    名字长度配置(ID1为玩家名字、ID2为公会名字)
+		-->
+		<entry id="37">
+			<time id="1" length="8"/>
+			<time id="2" length="8"/>
+		</entry>
+		<!--
+		    当前角色等级最大上限，正常升级的最大值
+		-->
+		<entry id="38">
+			<time id="1" LVmaxnum="75"/>
+		</entry>
+		
+			<!--
+		    经验之书等级限制
+		-->
+		<entry id="39">
+			<item id="103091" levelRange="30-49"/>
+			<item id="103092" levelRange="50-59"/>
+			<item id="103093" levelRange="60-69"/>
+			<item id="103094" levelRange="70-79"/>
+			<item id="103095" levelRange="80-84"/>
+			<item id="103096" levelRange="1-84"/>
+		</entry>
+		<!--
+		    装备图鉴显示物品
+		-->
+		<entry id="40">
+			<item id="1" itemid="271600;271800;272000;272500;273000;202600;212600;222600;232600;242600;252600;262600;202610;212610;222610;232610;242610;252610;262610;202620;212620;222620;232620;242620;252620;262620;202200;242200;262200;212210;232210;262210;242220;252220;262220;212230;222230;252230;212240;232240;252240;202250;222250;232250;202260;212260;222260;232260;252260;202270;212270;222270;202280;232280;242280;262280;222290;242290;252290"/>
+		</entry>
+		
+		<!--
+		    经验之书等级限制
+		-->
+		<entry id="39">
+			<item id="103091" levelRange="0-10"/>
+			<item id="103092" levelRange="10-89"/>
+			<item id="103093" levelRange="10-89"/>
+			<item id="103094" levelRange="10-89"/>
+			<item id="103095" levelRange="80-84"/>
+			<item id="103096" levelRange="1-84"/>
+			<item id="103190" levelRange="10-69"/>
+			<item id="103086" levelRange="10-69"/>
+			<item id="103087" levelRange="10-69"/>
+			<item id="103088" levelRange="10-69"/>
+			<item id="103089" levelRange="10-69"/>
+			<item id="103090" levelRange="10-69"/>
+			
+		</entry>
+		
+		<!--首充礼包价格-->
+		<entry id="41">
+			<diamond id="1" diamondnum="1" />
+			<diamond id="2" diamondnum="1"/>
+		</entry>
+		
+		<!--
+			扫荡功能是否开启
+			isopen：1 开启
+                    0 关闭			
+		-->
+		<entry id="42">
+			<diamond id="1" isopen="1" />
+		</entry>
+		
+		<!--
+			符文进化等级限制（主角等级相关）
+		-->
+		<entry id="43">
+			<LV id="1" RefineLV="1" RoleLv="20" />
+			<LV id="2" RefineLV="2" RoleLv="30" />
+			<LV id="3" RefineLV="3" RoleLv="40" />
+			<LV id="4" RefineLV="4" RoleLv="50" />
+			<LV id="5" RefineLV="5" RoleLv="60" />
+		</entry>
+		
+		
+		<!--
+			装备觉醒、随从领悟、装备突破等级
+			
+			functiontype:1:装备觉醒
+			             2:随从领悟
+						 3:装备突破
+		-->
+		<entry id="44">
+			<level id="1" functiontype="1" levelNum="37" />
+			<level id="2" functiontype="2" levelNum="38" />
+			<level id="3" functiontype="3" levelNum="1" />
+		</entry>
+		
+		<!--
+			符文最大强化等级
+			
+			functiontype:1:装备觉醒
+			             2:随从领悟
+						 3:装备突破
+		-->
+		<entry id="45">
+			<level id="1" Maxnum="15"/>
+		</entry>
+		
+		<!--
+			装备图鉴
+			starNum：装备星级
+			itemID：装备ID
+			
+			填写说明：若一个星级品质装备数量非5的整数倍，补充999999ID直至该品质装备数量为5的整数倍
+		-->
+		<entry id="46">
+		
+				<item id="202600" starNum="5" />
+				<item id="212600" starNum="5" />
+				<item id="222600" starNum="5" />
+				<item id="232600" starNum="5" />
+				<item id="242600" starNum="5" />
+				
+				<item id="252600" starNum="5" />
+				<item id="262600" starNum="5" />
+				<item id="202610" starNum="5" />
+				<item id="212610" starNum="5" />
+				<item id="222610" starNum="5" />
+				
+				<item id="232610" starNum="5" />
+				<item id="242610" starNum="5" />
+				<item id="252610" starNum="5" />
+				<item id="262610" starNum="5" />
+				<item id="202620" starNum="5" />
+				
+				<item id="212620" starNum="5" />
+				<item id="222620" starNum="5" />
+				<item id="232620" starNum="5" />
+				<item id="242620" starNum="5" />
+				<item id="252620" starNum="5" />
+				
+				<item id="262620" starNum="5" />
+				<item id="999999" starNum="5"/>
+				<item id="999999" starNum="5"/>
+				<item id="999999" starNum="5"/>
+				<item id="999999" starNum="5"/>
+				
+	
+		
+				<item id="202200" starNum="4" />
+				<item id="242200" starNum="4" />
+				<item id="262200" starNum="4" />
+				<item id="212210" starNum="4" />
+				<item id="232210" starNum="4" />
+				
+				<item id="262210" starNum="4" />
+				<item id="242220" starNum="4" />
+				<item id="252220" starNum="4" />
+				<item id="262220" starNum="4" />
+				<item id="212230" starNum="4" />
+				
+				<item id="222230" starNum="4" />
+				<item id="252230" starNum="4" />
+				<item id="212240" starNum="4" />
+				<item id="232240" starNum="4" />
+				<item id="252240" starNum="4" />
+				
+				<item id="202250" starNum="4" />
+				<item id="222250" starNum="4" />
+				<item id="232250" starNum="4" />
+				<item id="202260" starNum="4" />
+				<item id="212260" starNum="4" />
+				
+				<item id="222260" starNum="4" />
+				<item id="232260" starNum="4" />
+				<item id="252260" starNum="4" />
+				<item id="202270" starNum="4" />
+				<item id="212270" starNum="4" />
+				
+				<item id="222270" starNum="4" />
+				<item id="202280" starNum="4" />
+				<item id="232280" starNum="4" />
+				<item id="242280" starNum="4" />
+				<item id="262280" starNum="4" />
+				
+				<item id="222290" starNum="4" />
+				<item id="242290" starNum="4" />
+				<item id="252290" starNum="4" />
+				<item id="999999" starNum="4"/>
+				<item id="999999" starNum="4"/>
+				
+				
+	
+				<item id="202100" starNum="3" />
+				<item id="212100" starNum="3" />
+				<item id="222100" starNum="3" />
+				<item id="232100" starNum="3" />
+				<item id="242100" starNum="3" />
+				
+				<item id="252100" starNum="3" />
+				<item id="262100" starNum="3" />
+				<item id="201200" starNum="3" />
+				<item id="211200" starNum="3" />
+				<item id="221200" starNum="3" />
+				
+				<item id="231200" starNum="3" />
+				<item id="241200" starNum="3" />
+				<item id="251200" starNum="3" />
+				<item id="261200" starNum="3" />
+				<item id="200500" starNum="3" />
+				
+				<item id="210500" starNum="3" />
+				<item id="220500" starNum="3" />
+				<item id="230500" starNum="3" />
+				<item id="240500" starNum="3" />
+				<item id="250500" starNum="3" />
+				
+				<item id="260500" starNum="3" />
+				<item id="200300" starNum="3" />
+				<item id="210300" starNum="3" />
+				<item id="220300" starNum="3" />
+				<item id="230300" starNum="3" />
+				
+				<item id="240300" starNum="3" />
+				<item id="250300" starNum="3" />
+				<item id="260300" starNum="3" />
+				<item id="999999" starNum="3"/>
+				<item id="999999" starNum="3"/>
+				
+		</entry>
+		
+		<!--
+			HPMAX:小于该HP范围内的血量取对应的条数
+			HPNum:生命条数
+		-->
+		<entry id="47">
+			<num id="1" HPMax="250000" HPNum="2" />
+			<num id="2" HPMax="500000" HPNum="2" />
+			<num id="3" HPMax="750000" HPNum="3" />
+			<num id="4" HPMax="1000000" HPNum="4" />
+			<num id="5" HPMax="1500000" HPNum="5" />
+			<num id="6" HPMax="2000000" HPNum="6" />
+			<num id="7" HPMax="2500000" HPNum="7" />
+			<num id="8" HPMax="3000000" HPNum="8" />
+			<num id="9" HPMax="3500000" HPNum="9" />
+			<num id="10" HPMax="4000000" HPNum="10" />
+			<num id="11" HPMax="4500000" HPNum="11" />
+			<num id="12" HPMax="5000000" HPNum="12" />
+			<num id="13" HPMax="5500000" HPNum="13" />
+			<num id="14" HPMax="6000000" HPNum="14" />
+			<num id="15" HPMax="6500000" HPNum="15" />
+			<num id="16" HPMax="7000000" HPNum="16" />
+			<num id="17" HPMax="7500000" HPNum="17" />
+			<num id="18" HPMax="8000000" HPNum="18" />
+			<num id="19" HPMax="8500000" HPNum="19" />
+			<num id="20" HPMax="9000000" HPNum="20" />
+			<num id="21" HPMax="9500000" HPNum="21" />
+			<num id="22" HPMax="10000000" HPNum="22" />
+			<num id="23" HPMax="11000000" HPNum="23" />
+			<num id="24" HPMax="12000000" HPNum="24" />
+			<num id="25" HPMax="13000000" HPNum="25" />
+			<num id="26" HPMax="14000000" HPNum="26" />
+			<num id="27" HPMax="15000000" HPNum="27" />
+			<num id="28" HPMax="16000000" HPNum="28" />
+			<num id="29" HPMax="17000000" HPNum="29" />
+			<num id="30" HPMax="18000000" HPNum="30" />
+			<num id="31" HPMax="19000000" HPNum="31" />
+			<num id="32" HPMax="20000000" HPNum="32" />
+			<num id="33" HPMax="21000000" HPNum="33" />
+			<num id="34" HPMax="22000000" HPNum="34" />
+			<num id="35" HPMax="23000000" HPNum="35" />
+			<num id="36" HPMax="24000000" HPNum="36" />
+			<num id="37" HPMax="25000000" HPNum="37" />
+			<num id="38" HPMax="26000000" HPNum="38" />
+			<num id="39" HPMax="27000000" HPNum="39" />
+			<num id="40" HPMax="28000000" HPNum="40" />
+			<num id="41" HPMax="29000000" HPNum="41" />
+			<num id="42" HPMax="30000000" HPNum="42" />
+			<num id="43" HPMax="31000000" HPNum="43" />
+			<num id="44" HPMax="32000000" HPNum="44" />
+			<num id="45" HPMax="33000000" HPNum="45" />
+			<num id="46" HPMax="34000000" HPNum="46" />
+			<num id="47" HPMax="35000000" HPNum="47" />
+			<num id="48" HPMax="36000000" HPNum="48" />
+			<num id="49" HPMax="37000000" HPNum="49" />
+			<num id="50" HPMax="38000000" HPNum="50" />
+			<num id="51" HPMax="39000000" HPNum="51" />
+			<num id="52" HPMax="40000000" HPNum="52" />
+			<num id="53" HPMax="42000000" HPNum="53" />
+			<num id="54" HPMax="44000000" HPNum="54" />
+			<num id="55" HPMax="46000000" HPNum="55" />
+			<num id="56" HPMax="48000000" HPNum="56" />
+			<num id="57" HPMax="50000000" HPNum="57" />
+			<num id="58" HPMax="52000000" HPNum="58" />
+			<num id="59" HPMax="54000000" HPNum="59" />
+			<num id="60" HPMax="56000000" HPNum="60" />
+			<num id="61" HPMax="58000000" HPNum="61" />
+			<num id="62" HPMax="60000000" HPNum="62" />
+			<num id="63" HPMax="62000000" HPNum="63" />
+			<num id="64" HPMax="64000000" HPNum="64" />
+			<num id="65" HPMax="66000000" HPNum="65" />
+			<num id="66" HPMax="68000000" HPNum="66" />
+			<num id="67" HPMax="70000000" HPNum="67" />
+			<num id="68" HPMax="72000000" HPNum="68" />
+			<num id="69" HPMax="74000000" HPNum="69" />
+			<num id="70" HPMax="76000000" HPNum="70" />
+			<num id="71" HPMax="78000000" HPNum="71" />
+			<num id="72" HPMax="80000000" HPNum="72" />
+			<num id="73" HPMax="82000000" HPNum="73" />
+			<num id="74" HPMax="84000000" HPNum="74" />
+			<num id="75" HPMax="86000000" HPNum="75" />
+			<num id="76" HPMax="88000000" HPNum="76" />
+			<num id="77" HPMax="90000000" HPNum="77" />
+			<num id="78" HPMax="92000000" HPNum="78" />
+			<num id="79" HPMax="94000000" HPNum="79" />
+			<num id="80" HPMax="96000000" HPNum="80" />
+			<num id="81" HPMax="98000000" HPNum="81" />
+			<num id="82" HPMax="100000000" HPNum="82" />
+			<num id="83" HPMax="110000000" HPNum="83" />
+			<num id="84" HPMax="120000000" HPNum="84" />
+			<num id="85" HPMax="130000000" HPNum="85" />
+			<num id="86" HPMax="140000000" HPNum="86" />
+			<num id="87" HPMax="150000000" HPNum="87" />
+			<num id="88" HPMax="160000000" HPNum="88" />
+			<num id="89" HPMax="170000000" HPNum="89" />
+			<num id="90" HPMax="180000000" HPNum="90" />
+			<num id="91" HPMax="190000000" HPNum="91" />
+			<num id="92" HPMax="200000000" HPNum="92" />
+			<num id="93" HPMax="250000000" HPNum="93" />
+			<num id="94" HPMax="300000000" HPNum="94" />
+			<num id="95" HPMax="350000000" HPNum="95" />
+			<num id="96" HPMax="400000000" HPNum="96" />
+			<num id="97" HPMax="450000000" HPNum="97" />
+			<num id="98" HPMax="500000000" HPNum="98" />
+			<num id="99" HPMax="600000000" HPNum="99" />
+			<num id="100" HPMax="3000000000" HPNum="100" />
+		</entry>
+		<!--
+			背包内所需红点的物品类型
+		-->
+		<entry id="48">
+			<reddot id="260;280;290;310;311;312;263;264;268;282;289"/>
+		</entry>
+		<!--
+			显示品质
+			item id:物品逻辑
+			role id:角色类型
+		-->
+		<entry id="49">
+			<item id="10;20;30;40;50;60;70;80;90;110;120;130;140;150;160;170;180;190;410;420;430;440;450;460;470;480;490;500"/>
+			<role id="7"/>
+		</entry>
+		<!--
+			组合属性角标显示规则
+		-->
+		<entry id="50">
+			<num id="1" property="1;20" subscript="101"/>
+			<num id="2" property="2;9" subscript="102"/>
+			<num id="3" property="3;4" subscript="103"/>
+			<num id="4" property="5;6" subscript="104"/>
+			<num id="5" property="7;8" subscript="105"/>
+			<num id="6" property="14;17" subscript="106"/>
+			<num id="7" property="15;18" subscript="107"/>
+			<num id="8" property="16;19" subscript="108"/>
+		</entry>
+		
+		<!--
+			挂机配置
+			
+			maxtime:时间上限
+			exp:每分钟产出经验
+			gold:每分钟产出金币系数,用关卡掉落除以这个系数
+		-->
+		<entry id="52">
+			<elem maxtime="36000" exp="50" gold="60"/>
+		</entry>
+	</constant>
+</root>

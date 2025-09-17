@@ -1,0 +1,41 @@
+﻿生成启动时间为 2017/2/24 13:46:54。
+     1>项目“C:\Users\Administrator\Desktop\protobuf-2.4.1\vsprojects\libprotobuf.vcxproj”在节点 2 上(Build 个目标)。
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(381,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (libprotobuf-lite.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+     1>Lib:
+         F:\vs\VC\bin\Lib.exe /OUT:"Debug\libprotobuf.lib" /NOLOGO Debug\coded_stream.obj
+         Debug\common.obj
+         Debug\descriptor.obj
+         Debug\descriptor.pb.obj
+         Debug\descriptor_database.obj
+         Debug\dynamic_message.obj
+         Debug\extension_set.obj
+         Debug\extension_set_heavy.obj
+         Debug\generated_message_reflection.obj
+         Debug\generated_message_util.obj
+         Debug\gzip_stream.obj
+         Debug\importer.obj
+         Debug\message.obj
+         Debug\message_lite.obj
+         Debug\once.obj
+         Debug\parser.obj
+         Debug\printer.obj
+         Debug\reflection_ops.obj
+         Debug\repeated_field.obj
+         Debug\service.obj
+         Debug\structurally_valid.obj
+         Debug\strutil.obj
+         Debug\substitute.obj
+         Debug\text_format.obj
+         Debug\tokenizer.obj
+         Debug\unknown_field_set.obj
+         Debug\wire_format.obj
+         Debug\wire_format_lite.obj
+         Debug\zero_copy_stream.obj
+         Debug\zero_copy_stream_impl.obj
+         Debug\zero_copy_stream_impl_lite.obj
+         libprotobuf.vcxproj -> C:\Users\Administrator\Desktop\protobuf-2.4.1\vsprojects\Debug\libprotobuf.lib
+     1>已完成生成项目“C:\Users\Administrator\Desktop\protobuf-2.4.1\vsprojects\libprotobuf.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:02.61

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<root>
+	<!--
+		Bossid:魔王召唤id
+		OpenCondition:抽奖开放条件，对应组队副本关卡ID
+		BossDrawid:对应填写draw表魔王召唤抽奖id
+		RewardType:奖励类型
+				   1:首杀奖励
+				   2:全民奖励
+		RewardBoxid:对应box表id
+	-->
+	<devil id="1" Bossid="300690" OpenCondition="20217" BossDrawid="3"> 
+		<reward>
+			<entry id="1" RewardType="1" RewardBoxid="720004"/>
+			<entry id="2" RewardType="2" RewardBoxid="720005"/>
+		</reward>
+	</devil>
+	
+	<devil id="2" Bossid="300840" OpenCondition="20215" BossDrawid="2">
+		<reward>
+			<entry id="1" RewardType="1" RewardBoxid="720002"/>
+			<entry id="2" RewardType="2" RewardBoxid="720003"/>
+		</reward>
+	</devil>
+	
+	<devil id="3" Bossid="300680" OpenCondition="20211" BossDrawid="1" >
+		<reward>
+			<entry id="1" RewardType="1" RewardBoxid="720000"/>
+			<entry id="2" RewardType="2" RewardBoxid="720001"/>
+		</reward>
+	</devil>
+</root>

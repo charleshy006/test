@@ -1,0 +1,1070 @@
+import "ModID.proto";
+package Map;
+
+enum eBeingState
+{
+	BEING_STATE_DEATH = 0;				//死亡状态
+	BEING_STATE_ICE = 1;				//冰冻伤害
+	BEING_STATE_SILENCE = 2;			//沉默
+	BEING_STATE_IMMUNE_DEBUFF = 3;		//免疫debuf状态
+	BEING_STATE_RAGE = 4;				//狂暴状态
+	BEING_STATE_FIRE_SPIRIT = 5;		//火灵状态
+	BEING_STATE_LIMIT_DEFENSE = 6;		//极限防御
+	BEING_STATE_DEC_VELOCITY = 7;		//减速状态
+	BEING_STATE_DIZZY = 8;				//眩晕状态
+	BEING_STATE_PROVATION = 9;			//挑衅状态
+	BEING_STATE_CHG_DAMAGE_PROP = 10;	//改变伤害属性状态
+	BEING_STATE_CHG_REF_BANG_PROP = 11;	//改变抗暴击状态
+	BEING_STATE_CHG_HIT_RATE = 12;		//改变命中概率
+	BEING_STATE_TIMER_DEC_HP = 13;		//定时持续扣血
+	BEING_STATE_CHG_BATI = 14;			//改变霸体
+	BEING_STATE_TIMER_ADD_HP = 15;		//定时增加血量
+	BEING_STATE_CHG_DODGE = 16;			//改变闪避
+	BEING_STATE_CHG_APPEARANCE = 17;	//变身
+	BEING_STATE_CHG_BANG_PROP = 18;		//改变暴击
+	BEING_STATE_MAX = 31;
+}
+
+
+//通知客户端进入场景 s ---> c
+message stNotifyEnterMapInfo
+{
+	optional uint32 mapID = 1;		//地图资源ID
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 1;	
+	}
+}
+
+//客户端加载完场景资源完成 c ---> s
+message stClientLoadResFinish
+{
+	optional uint32 levelID = 1;	//关卡ID	
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 2;	
+	}	
+};
+
+//请求进入关卡 c ---> s
+message ReqEnterLevelMap
+{
+	optional uint32 levelID = 1;		//关卡ID	
+	
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 3;	
+	}
+}
+
+//关卡掉落信息
+message stSynDropInfo
+{
+	optional uint32 itemID = 1;			//道具ID
+	optional uint32 num = 2;			//道具数量
+}
+
+//怪物信息
+message stSynMonsterInfo
+{
+	optional uint32 monsterID = 1;		//怪物ID
+	optional uint32 monsterLv = 2;		//怪物等级
+}
+
+//通知玩家进入关卡成功 s ---> c
+message NotifyEnterLevelMap
+{
+	optional uint32 levelID = 1;					//关卡ID	
+	repeated stSynDropInfo dropInfo = 2;			//掉落信息
+	repeated stSynMonsterInfo monsterInfo = 3;		//怪物信息
+	optional stSynMonsterInfo bossInfo = 4;			//boss信息
+	optional stSynDropInfo  drawInfo = 5;			//抽奖信息
+
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 4;	
+	}
+}
+
+//请求离开关卡 c ---> s
+message stReqLeaveLevel
+{
+	optional uint32 flag = 1;
+	
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 5;	
+	}
+}
+
+//离开关卡成功
+message stLeaveLevelSuccess
+{
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 6;	
+	}
+}
+
+//进入关卡错误协议 s ---> c
+message stEnterLevelError
+{
+	enum  Error
+	{
+		HAS_IN_LEVEL = 1;			//已经在关卡里面
+		PRE_LEVEL_NOT_FINISH = 2;	//前置关卡没有完成
+		SVR_CFG_ERROR = 3;			//服务器配置错误
+		LEVEL_LIMIT = 4;			//关卡限制
+		SP_NOT_ENGOUH = 5;			//体力不足
+		LILIAN_NOT_ENOUGH = 6;		//历练不足
+		RUSH_NUM_USE_OUT = 7;		//次数用完了
+		BAG_FULL = 8;				//背包满了
+		EQUIP_LIMIT = 9;			//装备不达标
+	}
+
+	optional Error errorCode = 1;			//进入关卡错误码
+
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 7;	
+	}
+}
+
+//地图对象类型,后面所说的类型都是这这个枚举
+enum eMapObjectType
+{
+	eMapObject_Player = 0;		//玩家	
+	eMapObject_Monster = 1;		//怪物
+	eMapObject_Hero = 2;		//武将
+	eMapObject_Item = 3;		//掉落的道具
+}
+
+enum eCamp
+{
+	eCamp_Red = 1;		//红方
+	eCamp_Black = 2;	//黑方
+}
+
+//玩家数据
+message stPlayerData
+{
+	optional uint32     moID = 1;                           //地图对象ID
+	optional string     roleName = 2;      					//角色名字
+	optional uint32     job = 3;							//职业
+	optional uint32     sex = 4;							//性别
+	optional uint32     level = 5;							//等级
+	optional uint32     x = 6;								//位置
+	optional uint32	    y = 7;								//位置
+	optional uint32		z = 8;								//位置
+	optional uint32	    dir = 9;							//方向
+	optional uint32		campID = 10;						//阵营ID
+	optional uint32     hp = 11;							//玩家血量
+	optional uint32		maxHP = 12;							//最大血量
+	optional uint32     mp = 13;							//当前蓝
+	optional uint32		maxMP = 14;							//最大蓝
+	optional uint32     bati = 15;							//霸体
+	optional uint32 	maxBati = 16;						//最大霸体
+	optional uint32     headID = 17;						//头部ID
+	optional uint32 	bodyID = 18;						//衣服ID
+	optional uint32		weaponID = 19;						//武器ID
+	optional uint32		cloackID = 20;						//披风ID
+	optional uint32		wingID = 21;						//翅膀ID
+	optional uint32     shoeID = 22;						//鞋子
+	optional uint32     fashionHair = 23;					//发型
+	optional uint32     fashionFace = 24;					//表情
+	optional uint32		fashionBody = 25;					//衣服
+	optional uint32		fashionWeapon = 26;					//武器
+	optional uint32		fashionShoe = 27;					//鞋子
+	optional uint32		fashionDecoration = 28;				//脸饰品
+	optional uint32 	titleID = 29;						//称号ID
+	optional uint32		effectID = 30;						//特效ID
+	optional uint32		wingBreakLv = 31;					//翅膀突破等级
+	optional uint32		followSpriteId = 32;        		//跟随精灵id
+	optional uint32		followSpriteLvl = 33;				//跟随精灵等级
+	optional uint32		fashionWingID = 34;					//时装翅膀ID
+	optional string     couplename = 35;                    //配偶名字
+	optional uint32		mountID = 36;						//坐骑
+	optional bool	isRobot = 37;				//是否机器人
+}
+
+
+//通知客户端玩家出现 s ---> c
+message NotifyPlayerAppear
+{
+	repeated stPlayerData data = 1;
+
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 8;	
+	}
+
+}
+
+//通知客户端地图物件消失 s ---> c
+message NotifyObjDisappear
+{
+	message stObjDisappearInfo
+	{
+		optional  uint32 moID = 1;           //消失的地图对象ID
+		optional  uint32 moType = 2;		 //消失的对象类型
+	}
+	repeated stObjDisappearInfo data = 1;			//npc消失
+	
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 9;	
+	}
+}
+
+
+//通知客户端npc出现
+message NotifyNpcAppear
+{
+	message stNpcData
+	{
+		optional uint32 npcID = 1;				//npcID
+		optional uint32 moID  = 2;				//实例ID
+		optional uint32 x  = 3;					//x坐标
+		optional uint32 y  = 4;					//y坐标
+		optional uint32 z = 5;					//z坐标
+		optional uint32 hp = 6;					//血量 
+		optional uint32 level = 7;				//等级
+		optional uint32 bornAminID = 8;			//出生动画ID
+		optional bool	isBoss = 9;				//是否是boss
+		optional uint32 dirAngle = 10;			//角度,度为单位
+		optional uint32 actionGroupID = 11;		//动作组ID
+	}
+	
+	repeated stNpcData  data = 1;
+
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 10;	
+	}
+}
+
+//通知客户端武将出现
+message NotifyHeroAppear
+{
+	message stHeroData
+	{
+		optional uint32 heroID = 1;				//heroID
+		optional uint32 moID = 2;				//实例ID
+		optional uint32 x  = 3;					//x坐标
+		optional uint32 y  = 4;					//y坐标
+		optional uint32 z  = 5;					//z坐标
+		optional uint32 hp = 6;					//血量
+		optional uint32 maxHP = 7;				//最大血量
+		optional uint32 masterMoID = 8;			//主人的地图对象ID
+		optional uint32 campID = 9;				//阵营ID
+		optional uint32 level = 10;				//等级
+		optional bool	createBySkill = 11;		//是否由技能创建
+		optional uint32 pos = 12;				//1到4
+	}
+	
+	repeated stHeroData  data = 1;
+
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 11;	
+	}
+}
+
+
+message Pos
+{
+		optional uint32 x = 1;
+		optional uint32 y = 2;
+		optional uint32 z = 3;
+}
+
+
+
+//请求移动 c ---> s
+message ReqMove
+{
+	optional uint32  moID = 1;				//地图对象的ID
+	optional uint32  type = 2;				//地图对象的类型
+	optional Pos	 path = 3;				//路径	
+	optional bool    isInstant = 4;			//是否是瞬移
+
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 12;	
+	}
+}
+
+//通知客户端某个对象移动了 s ---> c
+message stNotifyMODMove
+{
+	message stModMoveInfo
+	{
+		optional uint32 type = 1;		//移动类型
+		optional uint32 modID = 2;		//移动对象	
+		optional uint32 x = 3;			//移动的x坐标
+		optional uint32 y = 4;			//移动的y坐标
+		optional uint32 z = 5;			//移动的z坐标
+		optional uint32 dir = 6;		//移动的方向
+	}
+
+	repeated stModMoveInfo data = 1;
+
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 13;	
+	}
+}
+
+
+
+//释放某个技能 c <---> s ,服务器广播的时候也是发送这个协议
+message stThrowSkill
+{
+	optional uint32 skill = 1;		//释放的技能ID
+	optional uint32 attType = 2;	//攻击者的类型	
+	optional uint32 attMoID = 3;	//攻击者的ID
+	optional uint32 step = 4;		//技能的段数
+
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 14;	
+	}
+}
+
+message stHitInfo
+{
+	optional uint32 moType = 1;			//碰撞的地图对象类型
+	optional uint32 moID = 2;			//碰撞对象的ID
+	optional uint32 skillID = 3;		//由哪个技能造成的伤害
+	optional uint32 damageTime = 4;		//第几次的伤害
+}
+
+//通知服务器攻击碰撞了要进行计算 c ----> s
+message stNotifyHit
+{
+	optional uint32 attType = 1;			//攻击者的类型
+	optional uint32 attMoID = 2;			//攻击者的ID
+	optional uint32 step  = 3;				//技能的段
+	repeated stHitInfo hitInfos = 4;		//受击者信息
+
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 15;	
+	}
+}
+
+enum eAttResultType
+{
+	eAttResult_Missing = 1;			//未命中
+	eAttResult_Bang = 2;			//暴击
+	eAttResult_Fire_Damage = 4;		//火强伤害
+	eAttResult_Ice_Damage = 8;		//冰冻伤害
+	eAttResult_Thunder_Damage = 16; //雷电伤害
+}
+
+//攻击返回信息
+message AttRetInfo
+{
+	optional uint32 type = 1;	  //受击者的类型	
+	optional uint32 moID = 2;	  //受击者的ID
+	optional uint32 skill = 3;    //攻击者释放的技能ID
+	optional uint32 decHP = 4;	  //受击者扣血
+	optional uint32 result = 5;	  //攻击结果
+}
+
+//碰撞后的返回 s ---> c
+message AttackResult
+{
+	optional uint32 attType = 1;			//攻击者的类型
+	optional uint32 attMoID = 2;			//攻击者的ID
+	optional uint32 step  = 3;				//阶段
+	optional uint32 damageTime = 4;			//第几个攻击定义
+	repeated AttRetInfo  attList = 5;		//己方打敌方的返回信息
+	
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 16;	
+	}
+}
+
+
+//通知客户端给某个对象加血 s ---> c
+message stMapObjAddHP
+{
+	optional uint32 moType = 1;		//对象类型
+	optional uint32 moID  = 2;		//对象ID
+	optional uint32 addHP = 3;		//增加的血量
+	
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 17;	
+	}	
+}
+
+//瞬移 s ---> c 
+message stInstantMove
+{
+	optional uint32 moID = 1;		//地图对象
+	optional uint32 type = 2;		//定义同上
+	optional Pos    destPos = 3;	//目的坐标		
+	
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 18;	
+	}	
+}
+
+//攻击失败  s ---> c
+message stAttackFail
+{
+	enum ErrorCode
+	{
+		TARGET_HASH_DIED = 1;	//目标已经死亡		
+	};
+
+	optional ErrorCode errorCode = 1;	//攻击失败原因
+
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 19;	
+	}	
+}
+
+//播放技能中的技能被打断 c <-------> s
+message stInterruptPlaySkill
+{
+	optional uint32 attType = 1;			//播放技能的对象类型
+	optional uint32 attID = 2;				//播放技能的对象ID
+	optional string nextAction = 3;			//下一动作
+
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 20;	
+	}		
+}
+
+//地图对象朝向改变 c <------------> s
+message stMapObjectChgDir
+{
+	optional uint32 moType = 1;			//地图对象类型
+	optional uint32 moID = 2;			//玩家对象ID
+	optional uint32 dir = 3;			//最终朝向
+
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 21;	
+	}		
+}
+
+//主城请求在线玩家 c -----> s
+message stReqOnlineUserOnMainCity
+{
+	optional uint32 charID = 1;		//玩家的角色ID
+
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 22;	
+	}		
+}
+
+//给玩家返回主城玩家 s ------> c
+message stOnlineUserOnMainCity
+{
+	repeated stPlayerData userList = 1;
+
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 23;	
+	}		
+}
+
+//战斗中更换宠物 c ---> s
+message stChangeHeroGroup
+{
+	optional uint32 groupID = 1;		//填1或2,只有两组
+
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 24;	
+	}		
+}
+
+//切换宠物错误 s ---> c
+message stChangeHeroGroupError
+{
+	enum eResult
+	{
+		eCHG_HERO_COLD_DOWN = 1	;	//切换还处于cd中
+		eCUR_GROUP_HAS_GOOUT = 2;	//当前组已经出战
+	}
+
+	optional eResult result = 1;
+
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 25;	
+	}		
+}
+
+//同步某个对象的蓝 s ---> c
+message stNotifyObjMP
+{
+	optional uint32 moType = 1;			//地图对象类型
+	optional uint32 moID = 2;			//玩家对象ID
+	optional uint32 num = 3;			//通知对象蓝
+
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 26;	
+	}		
+}
+
+//通知某个对象的霸体 s -----> c
+message stNotifyObjBati
+{
+	optional uint32 moType = 1;			//地图对象类型
+	optional uint32 moID = 2;			//玩家对象ID
+	optional uint32 num = 3;			//通知对象蓝
+
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 27;	
+	}		
+}
+
+//给自己添加某个状态 s ----> c
+message stAddBufferState2Me
+{
+	optional uint32 attType = 1;		//攻击者对象类型
+	optional uint32 attModID = 2;		//攻击对象ID
+	optional uint32 stateID = 3;		//状态类型
+	optional uint32 defType = 4;		//受击者Type
+	optional uint32 defModID = 5;		//受击者ID
+	optional int32  extraVal = 6;		//不同的状态对应修改它的值
+	optional uint32 buffID = 7;			//服务buff表的ID
+
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 28;	
+	}			
+}
+
+//删除吊自己身上的状态 s ----> c
+message stDelBufferState
+{
+	optional uint32 stateID = 1;		//状态ID
+	optional uint32 moType = 2;			//对象类型
+	optional uint32 moID = 3;			//对象ID
+	optional uint32 bufferID = 4;		//服务器表的buffID
+
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 29;	
+	}		
+}
+
+//通知客户端做主机执行AI s ---> c
+message stNotifyExecAI
+{
+	optional uint32 charID = 1;	//执行AI的角色ID 
+
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 30;	
+	}		
+}
+
+//警告n秒后出现boss s ---> c
+message stAlertBossAppear
+{
+	optional uint32 delay = 1;		//延迟的时间
+
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 31;	
+	}	
+}
+
+//切换到另外的主城 c -----> s
+message stReqChangeMainCity
+{
+	optional uint32 levelID = 1;		//主城所对应的关卡ID
+
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 32;	
+	}		
+}
+
+//通知客户端在某个地方生成一个火强 s --> c
+message stNotifyAddFireWall
+{
+	optional uint32 x = 1;
+	optional uint32 y = 2;
+	optional uint32 z = 3;
+	optional uint32 lastTime = 4;		//持续时间
+
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 33;	
+	}			
+}
+
+//开始进行雷电伤害计算 s ----> c
+message stBeginThunderDamage
+{
+	optional uint32 attModType = 1;		//攻击者类型
+	optional uint32 attModID = 2;		//攻击者ID
+	optional uint32 defType = 3;		//受击者类型
+	optional uint32 defModID = 4;		//受击者ID
+
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 34;	
+	}	
+}
+
+//计算雷电伤害  c ----> s
+message stCalcThunderDamage
+{
+	optional uint32 attModType = 1;		//攻击者类型
+	optional uint32 attModID = 2;		//攻击者ID
+	optional uint32 defType = 3;		//受击者类型
+	optional uint32 defModID = 4;		//受击者ID
+
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 35;	
+	}		
+}
+
+//直接伤害  s ----> c
+message stDirectDamge
+{
+	optional uint32 modType = 1;		//受击者的类型
+	optional uint32 modID = 2;			//受击者的ID
+	optional uint32 damage = 3;			//伤害
+	optional uint32 attType = 4;		//攻击者类型
+	optional uint32 attModID = 5;		//攻击者的ID
+	optional uint32 result = 6;			//结果类型
+
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 36;	
+	}		
+}
+
+//通知客户端某个物件死亡 s ---> c
+message stNotifyObjDie
+{
+	optional uint32 moType = 1;		//对象类型
+	optional uint32 moID = 2;		//对象ID
+
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 37;	
+	}		
+}
+
+//开始进行战斗 s ----> c
+message stBeginBattle
+{
+	optional uint32 delay = 1;			//几秒后开始战斗
+	optional uint32 remainTime = 2;		//剩余时间,秒为单位
+
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 38;	
+	}			
+}
+
+//释放技能失败 s  ----> c
+message stThrowSkillFail
+{
+	enum eReason
+	{
+		ATTER_NOT_EXIST = 1;		//攻击者不存在,可能发送的攻击者id不对导致,或者服务器已经不存在这个物件
+		ATTER_SKILL_NOT_EXIST = 2;	//攻击者的技能不存在
+		ATTER_MP_NOT_ENOUGH = 3;	//魔法不足
+		ATTER_HAS_SILENCE = 4;		//遭受了沉默
+	}
+
+	optional eReason reason = 1;		//原因
+
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 39;	
+	}			
+}
+
+//通知资源点刷新 s ----> c
+message stNotifyResAppear
+{
+	optional uint32 id = 1;			//资源点ID
+	optional uint32 x  = 2;			//以厘米为单位
+	optional uint32 y  = 3;			//以厘米为单位
+	optional uint32 z =  4;			//以厘米为单位
+
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 40;	
+	}		
+}
+
+//资源点被采集后消失 s -----> c
+message stNotifyResDisappear
+{
+	optional uint32 id = 1;		//资源点ID	
+
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 41;	
+	}		
+}
+
+
+//通知buff点刷新 s ----> c
+message stNotifyBuffAppear
+{
+	optional uint32 id = 1;			//buff点id
+	optional uint32 x  = 2;			//以厘米为单位
+	optional uint32 y  = 3;			//以厘米为单位
+	optional uint32 z =  4;			//以厘米为单位
+	optional uint32 buffID = 5;		//buffID
+	
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 42;	
+	}			
+}
+
+//通知buff点消失 s  ----> c
+message stNotifyBuffDisappear
+{
+	optional uint32 id = 1;
+
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 43;	
+	}		
+}
+
+
+//玩家开始采集或取消采集资源 s -----> c
+message stOpCopyMapRes
+{
+	optional bool collect = 1 ;		//true采集,false取消采集
+    optional uint32 time = 2;       //采集持续时间
+
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 44;	
+	}		
+}
+
+//玩家获得了buff s ----> c
+message stPlayerGotBuff
+{
+	optional uint32 buffID = 1;		//获得buffID
+
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 45;	
+	}		
+}
+
+//玩家采集成功获得积分 s ----> c
+message stPlayerCollectSuccess
+{
+	optional uint32  score = 1;		//获得积分
+
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 46;	
+	}			
+}
+
+//刷新某个阵营的积分 s ---> c
+message stSynCampScore
+{
+	optional uint32 campID = 1;
+	optional uint32 score = 2;
+
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 47;	
+	}			
+}
+
+//玩家复活 s  ----> c
+message stUserRelive
+{
+	optional uint32 charID = 1;
+	optional uint32 x = 2;
+	optional uint32 y = 3;
+	optional uint32 z = 4;
+
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 48;	
+	}			
+}
+
+//发送玩家指向坐标  s ----> c
+message stNotifyUserPointToPos
+{
+	optional uint32 x = 1;
+	optional uint32 y = 2;
+	optional uint32 z = 3;
+	optional uint32 lasttime = 4;		//持续时间
+
+	enum ProtoModID
+	{
+		ModID = 3;	
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 49;	
+	}			
+}

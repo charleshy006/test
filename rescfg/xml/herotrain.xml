@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<constant>		
+		<!--
+		    maxtrainlevel: 随从调教等级最大上限
+			inittrainlevel: 随从初始调教等级
+		-->
+		<entry inittrainlevel="0" maxtrainlevel="3">
+		</entry>
+		
+		<!--
+		    奖励格式: 类型-id-数量;类型-id-数量;类型-id-数量;...
+			类型: 1-CG; 2-游戏道具
+				如 1-cgid-1;2-itemid1-10
+		-->
+		<levelaward>
+			<entry heroid="811621" trainlv="1"	award="2-102311-1" />
+			<entry heroid="811621" trainlv="2"	award="2-102336-1" />
+			<entry heroid="811621" trainlv="3"	award="2-102315-1" />
+			<entry heroid="811604" trainlv="1"	award="2-102311-1" />
+			<entry heroid="811604" trainlv="2"	award="2-102336-1" />
+			<entry heroid="811604" trainlv="3"	award="2-102315-1" />
+			<entry heroid="811633" trainlv="1"	award="2-102311-1" />
+			<entry heroid="811633" trainlv="2"	award="2-102336-1" />
+			<entry heroid="811633" trainlv="3"	award="2-102315-1" />
+			<entry heroid="811605" trainlv="1"	award="2-102311-1" />
+			<entry heroid="811605" trainlv="2"	award="2-102336-1" />
+			<entry heroid="811605" trainlv="3"	award="2-102315-1" />
+			<entry heroid="811620" trainlv="1"	award="2-102311-1" />
+			<entry heroid="811620" trainlv="2"	award="2-102336-1" />
+			<entry heroid="811620" trainlv="3"	award="2-102315-1" />
+ 			<entry heroid="811610" trainlv="1"	award="2-102311-1" />
+			<entry heroid="811610" trainlv="2"	award="2-102336-1" />
+			<entry heroid="811610" trainlv="3"	award="2-102315-1" />
+			<entry heroid="811619" trainlv="1"	award="2-102311-1" />
+			<entry heroid="811619" trainlv="2"	award="2-102336-1" />
+			<entry heroid="811619" trainlv="3"	award="2-102315-1" />
+			<entry heroid="811611" trainlv="1"	award="2-102336-1" />
+			<entry heroid="811611" trainlv="2"	award="2-102315-1" />
+			<entry heroid="811611" trainlv="3"	award="2-102313-1" />
+			<entry heroid="811616" trainlv="1"	award="2-102336-1" />
+			<entry heroid="811616" trainlv="2"	award="2-102315-1" />
+			<entry heroid="811616" trainlv="3"	award="2-102313-1" />
+			<entry heroid="811612" trainlv="1"	award="2-102336-1" />
+			<entry heroid="811612" trainlv="2"	award="2-102315-1" />
+			<entry heroid="811612" trainlv="3"	award="2-102313-1" />
+			<entry heroid="811613" trainlv="1"	award="2-102336-1" />
+			<entry heroid="811613" trainlv="2"	award="2-102315-1" />
+			<entry heroid="811613" trainlv="3"	award="2-102313-1" />
+			<entry heroid="811607" trainlv="1"	award="2-102315-1" />
+			<entry heroid="811607" trainlv="2"	award="2-102313-1" />
+			<entry heroid="811607" trainlv="3"	award="2-102340-1" />	
+			<entry heroid="811615" trainlv="1"	award="2-102315-1" />
+			<entry heroid="811615" trainlv="2"	award="2-102313-1" />
+			<entry heroid="811615" trainlv="3"	award="2-102340-1" />
+			<entry heroid="811624" trainlv="1"	award="2-102315-1" />
+			<entry heroid="811624" trainlv="2"	award="2-102313-1" />
+			<entry heroid="811624" trainlv="3"	award="2-102340-1" /> 
+			<entry heroid="811625" trainlv="1"	award="2-102315-1" />
+			<entry heroid="811625" trainlv="2"	award="2-102313-1" />
+			<entry heroid="811625" trainlv="3"	award="2-102340-1" /> 
+			<entry heroid="811606" trainlv="1"	award="2-102310-1" />
+			<entry heroid="811606" trainlv="2"	award="2-102341-1" />
+			<entry heroid="811606" trainlv="3"	award="2-102342-1" />
+			<entry heroid="811618" trainlv="1"	award="2-102310-1" />
+			<entry heroid="811618" trainlv="2"	award="2-102341-1" />
+			<entry heroid="811618" trainlv="3"	award="2-102342-1" /> 
+			<entry heroid="811617" trainlv="1"	award="2-102310-1" />
+			<entry heroid="811617" trainlv="2"	award="2-102341-1" />
+			<entry heroid="811617" trainlv="3"	award="2-102342-1" />
+			<entry heroid="811608" trainlv="1"	award="2-102310-1" />
+			<entry heroid="811608" trainlv="2"	award="2-102341-1" />
+			<entry heroid="811608" trainlv="3"	award="2-102342-1" />
+			<entry heroid="811609" trainlv="1"	award="2-102310-1" />
+			<entry heroid="811609" trainlv="2"	award="2-102341-1" />
+			<entry heroid="811609" trainlv="3"	award="2-102342-1" />
+		</levelaward>
+	</constant>
+</root>

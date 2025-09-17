@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<!--
+		opentime:世界BOSS挑战活动时间
+		openlevel:对应level表关卡ID
+	-->
+	<!--活动副本开启时间-->
+	<activitychange>
+	<!--正式数据-->
+		<open id="1" opentime="43200-44400" openlevel="40100" bossid="300091" />
+		<open id="2" opentime="64800-66000" openlevel="40100" bossid="300091" />
+	<!--测试数据24小时全开-->	
+		<!-- <open id="1" opentime="0-900" openlevel="40100" bossid="300091" />
+		<open id="2" opentime="1200-2100" openlevel="40100" bossid="300091" />
+		<open id="3" opentime="2400-3300" openlevel="40100" bossid="300091" />
+		<open id="4" opentime="3600-4500" openlevel="40100" bossid="300091" />
+		<open id="5" opentime="4800-5700" openlevel="40100" bossid="300091" />
+		<open id="6" opentime="6000-6900" openlevel="40100" bossid="300091" />
+		<open id="7" opentime="7200-8100" openlevel="40100" bossid="300091" />
+		<open id="8" opentime="8400-9300" openlevel="40100" bossid="300091" />
+		<open id="9" opentime="9600-10500" openlevel="40100" bossid="300091" />
+		<open id="10" opentime="10800-11700" openlevel="40100" bossid="300091" />
+		<open id="11" opentime="12000-12900" openlevel="40100" bossid="300091" />
+		<open id="12" opentime="13200-14100" openlevel="40100" bossid="300091" />
+		<open id="13" opentime="14400-15300" openlevel="40100" bossid="300091" />
+		<open id="14" opentime="15600-16500" openlevel="40100" bossid="300091" />
+		<open id="15" opentime="16800-17700" openlevel="40100" bossid="300091" />
+		<open id="16" opentime="18000-18900" openlevel="40100" bossid="300091" />
+		<open id="17" opentime="19200-20100" openlevel="40100" bossid="300091" />
+		<open id="18" opentime="20400-21300" openlevel="40100" bossid="300091" />
+		<open id="19" opentime="21600-22500" openlevel="40100" bossid="300091" />
+		<open id="20" opentime="22800-23700" openlevel="40100" bossid="300091" />
+		<open id="21" opentime="24000-24900" openlevel="40100" bossid="300091" />
+		<open id="22" opentime="25200-26100" openlevel="40100" bossid="300091" />
+		<open id="23" opentime="26400-27300" openlevel="40100" bossid="300091" />
+		<open id="24" opentime="27600-28500" openlevel="40100" bossid="300091" />
+		<open id="25" opentime="28800-29700" openlevel="40100" bossid="300091" />
+		<open id="26" opentime="30000-30900" openlevel="40100" bossid="300091" />
+		<open id="27" opentime="31200-32100" openlevel="40100" bossid="300091" />
+		<open id="28" opentime="32400-33300" openlevel="40100" bossid="300091" />
+		<open id="29" opentime="33600-34500" openlevel="40100" bossid="300091" />
+		<open id="30" opentime="34800-35700" openlevel="40100" bossid="300091" />
+		<open id="31" opentime="36000-36900" openlevel="40100" bossid="300091" />
+		<open id="32" opentime="37200-38100" openlevel="40100" bossid="300091" />
+		<open id="33" opentime="38400-39300" openlevel="40100" bossid="300091" />
+		<open id="34" opentime="39600-40500" openlevel="40100" bossid="300091" />
+		<open id="35" opentime="40800-41700" openlevel="40100" bossid="300091" />
+		<open id="36" opentime="42000-42900" openlevel="40100" bossid="300091" />
+		<open id="37" opentime="43200-44100" openlevel="40100" bossid="300091" />
+		<open id="38" opentime="44400-45300" openlevel="40100" bossid="300091" />
+		<open id="39" opentime="45600-46500" openlevel="40100" bossid="300091" />
+		<open id="40" opentime="46800-47700" openlevel="40100" bossid="300091" />
+		<open id="41" opentime="48000-48900" openlevel="40100" bossid="300091" />
+		<open id="42" opentime="49200-50100" openlevel="40100" bossid="300091" />
+		<open id="43" opentime="50400-51300" openlevel="40100" bossid="300091" />
+		<open id="44" opentime="51600-52500" openlevel="40100" bossid="300091" />
+		<open id="45" opentime="52800-53700" openlevel="40100" bossid="300091" />
+		<open id="46" opentime="54000-54900" openlevel="40100" bossid="300091" />
+		<open id="47" opentime="55200-56100" openlevel="40100" bossid="300091" />
+		<open id="48" opentime="56400-57300" openlevel="40100" bossid="300091" />
+		<open id="49" opentime="57600-58500" openlevel="40100" bossid="300091" />
+		<open id="50" opentime="58800-59700" openlevel="40100" bossid="300091" />
+		<open id="51" opentime="60000-60900" openlevel="40100" bossid="300091" />
+		<open id="52" opentime="61200-62100" openlevel="40100" bossid="300091" />
+		<open id="53" opentime="62400-63300" openlevel="40100" bossid="300091" />
+		<open id="54" opentime="63600-64500" openlevel="40100" bossid="300091" />
+		<open id="55" opentime="64800-65700" openlevel="40100" bossid="300091" />
+		<open id="56" opentime="66000-66900" openlevel="40100" bossid="300091" />
+		<open id="57" opentime="67200-68100" openlevel="40100" bossid="300091" />
+		<open id="58" opentime="68400-69300" openlevel="40100" bossid="300091" />
+		<open id="59" opentime="69600-70500" openlevel="40100" bossid="300091" />
+		<open id="60" opentime="70800-71700" openlevel="40100" bossid="300091" />
+		<open id="61" opentime="72000-72900" openlevel="40100" bossid="300091" />
+		<open id="62" opentime="73200-74100" openlevel="40100" bossid="300091" />
+		<open id="63" opentime="74400-75300" openlevel="40100" bossid="300091" />
+		<open id="64" opentime="75600-76500" openlevel="40100" bossid="300091" />
+		<open id="65" opentime="76800-77700" openlevel="40100" bossid="300091" />
+		<open id="66" opentime="78000-78900" openlevel="40100" bossid="300091" />
+		<open id="67" opentime="79200-80100" openlevel="40100" bossid="300091" />
+		<open id="68" opentime="80400-81300" openlevel="40100" bossid="300091" />
+		<open id="69" opentime="81600-82500" openlevel="40100" bossid="300091" />
+		<open id="70" opentime="82800-83700" openlevel="40100" bossid="300091" />
+		<open id="71" opentime="84000-84900" openlevel="40100" bossid="300091" />
+		<open id="72" opentime="85200-86100" openlevel="40100" bossid="300091" /> -->
+	</activitychange>
+	
+	<!--活动击杀奖励-->
+	<killreward>
+		<reward boxid="102680" rewarditem="102680" />
+	</killreward>
+	
+	
+	<!--活动排名奖励-->
+	<!--
+		startrank:该档次奖励的起始排名，若为0，表示击杀奖励
+		endrank:该档次奖励的结束排名
+		boxid:对应box表奖励ID，客户端读取显示
+		rewarditem:对应item表，服务器发送邮件奖励，奖励为礼包道具，开启获得boxid内对应道具
+	-->
+	<activityreward>
+		<reward id="1" startrank="1" endrank="1" boxid="102681" rewarditem="102681" />
+		<reward id="2" startrank="2" endrank="3" boxid="102682" rewarditem="102682" />
+		<reward id="3" startrank="4" endrank="10" boxid="102683" rewarditem="102683" />
+		<reward id="4" startrank="11" endrank="20" boxid="102684" rewarditem="102684" />
+		<reward id="5" startrank="21" endrank="50" boxid="102685" rewarditem="102685" />
+		<reward id="6" startrank="51" endrank="100" boxid="102686" rewarditem="102686" />
+		<reward id="7" startrank="101" endrank="500" boxid="102687" rewarditem="102687" />
+		<reward id="8" startrank="501" endrank="1000" boxid="102688" rewarditem="102688" />
+	</activityreward>
+	
+	
+</root>

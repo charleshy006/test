@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<root>
+	<!--
+		id：对应recharge表id
+		rechargenum：后台记录充值金额
+	-->
+	<cost id="28" rechaegenum="6" />
+	<cost id="29" rechaegenum="18" />
+	<cost id="30" rechaegenum="30" />
+	<cost id="31" rechaegenum="68" />
+	<cost id="32" rechaegenum="98" />
+	<cost id="33" rechaegenum="198" />
+	<cost id="34" rechaegenum="328" />
+	<cost id="35" rechaegenum="648" />
+	<cost id="36" rechaegenum="1000" />
+	<cost id="37" rechaegenum="2000" />
+	<cost id="38" rechaegenum="3000" />
+	<cost id="39" rechaegenum="5000" />
+	<cost id="40" rechaegenum="10000" />
+	<cost id="41" rechaegenum="20000" />
+	<cost id="42" rechaegenum="50000" />
+	<cost id="20" rechaegenum="30" />
+	<cost id="44" rechaegenum="68" />
+	<cost id="45" rechaegenum="648" />
+	<cost id="51" rechaegenum="98" />
+	<cost id="52" rechaegenum="98" />
+	<cost id="53" rechaegenum="6" />
+	<cost id="54" rechaegenum="10" />
+	<cost id="55" rechaegenum="40" />
+	<cost id="56" rechaegenum="50" />
+
+
+	
+</root>

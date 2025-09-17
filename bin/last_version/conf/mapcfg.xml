@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf8"?>
+<MapCfg>
+	<Server id="1">
+		<map id="1"/>
+		<map id="2"/>
+		<map id="3"/>
+	</Server>
+	<Server id="2">
+		<map id="1"/>
+		<map id="2"/>
+		<map id="3"/>
+		<map id="4"/>
+		<map id="5"/>
+	</Server>
+	<Server id="5">
+		<map id="1"/>
+		<map id="2"/>
+		<map id="3"/>
+	</Server>
+</MapCfg>

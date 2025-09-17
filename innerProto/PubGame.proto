@@ -1,0 +1,678 @@
+package  PubGame;
+
+enum PubGameModID
+{
+	NORMAL2PUB_MOD = 2;
+	PUB2NORMAL_MOD = 3;
+}
+
+////////////////////////////////////////////
+/////
+///////////////////////////////////////////
+
+message stLoginPubGame
+{
+	optional uint32 svrType  = 1;		
+	optional uint32 svrID = 2;
+	optional string ip = 3;
+	optional uint32 port = 4;
+	optional string key = 5;
+
+	enum ProtoModID
+	{
+		ModID = 2;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 1;	
+	}
+}
+
+message stTitleToPub
+{
+	optional  uint32    activeID = 1;				//激活称号id
+	repeated	uint32	gotSave = 2;
+	repeated	uint32	notSave = 3;
+}
+
+//玩家信息  game ---> pubgame
+message stRoleInfo
+{
+	optional  uint32    charID = 1;				//角色ID
+	optional  string    account = 2;			//账号
+	optional  uint32    dataSize = 3;			//二进制存档的大小
+	optional  bytes     data = 4;				//二进制存档内容
+	optional  string    ip = 5;					//IP
+	optional  uint32    normalServerID = 6;		//normalServerID
+	optional uint32		normalCharID = 7;		//charID in NormalGameServer
+	optional uint32		areaCode = 8;			//区服ID
+	optional uint32		mapId = 9;			    //当前地图id
+	optional  stTitleToPub    titles = 10;					//称号数据
+
+	enum ProtoModID
+	{
+		ModID = 2;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 2;
+	}
+}
+
+// game ---> pubgame
+message stNormalForwardPub
+{
+	optional uint32 charID = 1;
+	optional uint32 modID  = 2;
+	optional uint32 funID = 3;
+	optional uint32 cmdLen = 4;
+	optional bytes data     = 5;
+
+	enum ProtoModID
+	{
+		ModID = 2;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 3;
+	}
+}
+
+//玩家登出  game ---> pubgame
+message stRoleLogout
+{
+	optional  uint32	charID = 1;		//角色ID
+
+	enum ProtoModID
+	{
+		ModID = 2;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 4;
+	}
+}
+
+enum eRealTimePKType
+{
+	eRealTimePKType_KillAll = 1;            //杀完对方所有人
+	eRealTimePKType_Finish = 2;				//完成所有节点
+}
+
+//组队匹配信息到跨服 game ----> pubgame
+message stRealTimeTeamMatch
+{
+	optional eRealTimePKType eType  = 1;	//实时战场类型
+	optional uint32 teamID = 2;				//teamID
+	repeated uint32 memberId = 3;			//memberID
+
+	enum ProtoModID
+	{
+		ModID = 2;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 5;
+	}
+}
+// pubgame ---> game
+message stPubForwardNormal
+{
+	optional uint32 charID = 1;
+	optional uint32 modID  = 2;
+	optional uint32 funID = 3;
+	optional uint32 cmdLen = 4;
+	optional bytes data     = 5;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 1;
+	}
+}
+
+// pubgame ---> game ---> gate
+message stPubForwardGate
+{
+	optional uint32 charID = 1;
+	optional uint32 modID  = 2;
+	optional uint32 funID = 3;
+	optional uint32 cmdLen = 4;
+	optional bytes data     = 5;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 2;
+	}
+}
+
+// pubgame ---> game
+message stNotifyUserOnPub
+{
+	optional uint32 charID = 1;
+	optional bool onPub	=2;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 3;
+	}
+}
+
+// pubgame ---> game --->global
+message stPubForwardGlobal
+{
+	optional uint32 charID = 1;
+	optional uint32 modID  = 2;
+	optional uint32 funID = 3;
+	optional uint32 cmdLen = 4;
+	optional bytes data     = 5;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 4;
+	}
+}
+
+//通知1v1比赛结果 pubgame ---> game
+message stNotifyOne2OneResult
+{
+	optional uint32 charID1 = 1;
+	optional bool win1     =2;
+	optional uint32 score1 = 3;
+	optional uint32 charID2 = 4;
+	optional bool win2     =5;
+	optional uint32 score2 = 6;
+	optional bool withfriend     =7;
+	optional uint32 serverIdx1 = 8;
+	optional uint32 serverIdx2 = 9;
+	optional uint32 costLiLian = 10;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 5;
+	}
+}
+
+//通知实时比赛结果 pubgame ---> game
+message stNotifyRealTimeResult
+{
+	optional uint32 charID = 1;
+	optional bool win     = 2;
+	optional eRealTimePKType type = 3;
+	optional uint32 costLilian = 4;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 6;
+	}
+}
+
+
+//保存跨服玩家信息 pubgame ---> game
+message stSaveRoleInfo
+{
+	optional  uint32     charID = 1;				//角色ID
+	optional  uint32     dataSize = 2;				//二进制存档的大小
+	optional  bytes      data = 3;					//二进制存档内容
+	optional  uint32     normalServerID = 4	;		//normalServerID
+
+	enum ProtoModID
+	{
+		ModID = 2;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 7;
+	}
+}
+
+//增加报名次数 pubgame ----> game
+message stAddRegisterNum
+{
+	optional uint32 charID = 1;
+
+	enum ProtoModID
+	{
+		 ModID = 3;
+	}
+	        
+	enum ProtoFunID
+	{
+	    FunID = 8;
+	}
+}
+
+//英雄联赛匹配 game ----> pubgame
+message stHeroLeagueMatch
+{
+	optional uint32 charID = 1;
+
+	enum ProtoModID
+	{
+		ModID = 2;
+	}
+
+	enum ProtoFunID
+	{
+	    FunID = 9;
+	}
+}
+
+//英雄联赛匹配取消 game ----> pubgame
+message stHeroLeagueCancelMatch
+{   
+	optional uint32 charID = 1;
+
+	enum ProtoModID
+	{   
+		ModID = 2;
+	}
+
+	enum ProtoFunID
+	{   
+		FunID = 10;
+	}
+}
+message stPubRoleInfo
+{
+	optional uint32 charID = 1;				//普通服务器角色ID
+	optional uint32 pubCharID = 2;			//pub上角色ID
+	optional uint32 areaCode = 3;			//区服ID
+	optional string name = 4;				//名字
+	optional uint32 level = 5;				//等级
+	optional uint32 vipLv = 6;				//vip等级
+	optional uint32 job = 7;				//职业
+	optional uint32 sex = 8;				//性别
+	optional uint32 battlePower = 9;		//战力
+	optional uint32 pubServerIndex = 10;	//pubServerIndex
+	optional uint32 score = 11;				//积分
+	optional bool winOrLoss = 12;			//胜负(胜:true 负:false)
+	optional uint32 photoID = 13;			//头像ID
+}
+
+//通知英雄联赛比赛结果 pubgame ---> game
+message stNotifyHeroLeagueResult
+{
+	optional stPubRoleInfo user1 = 1;
+	optional stPubRoleInfo user2 = 2;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 10;
+	}
+}
+
+//通知各global同步角色列表  pubgame ---> game
+message stSynPubRoleList
+{
+	optional uint32 tag = 1;	//没用，随便填
+	
+	enum ProtoModID
+	{
+	    ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+	    FunID = 11;
+	}
+}
+
+message stSynRoleInfo
+{
+    optional uint32 pubCharID = 1;      //pub角色ID
+    optional uint32 pubServerIndex = 2;
+}
+/*
+message stTeam
+{
+	optional uint32 charID1 = 1;
+	optional uint32 charID2 = 2;
+}
+*/
+
+message stTeam
+{
+	optional stPubRoleInfo user1 = 1;
+	optional stPubRoleInfo user2 = 2;
+}
+//通知各global同步角色列表返回  game ---> pubserver
+message stSynPubRoleListResult
+{
+//	repeated stPubRoleInfo user = 1;    //pub角色ID
+	repeated stTeam team = 1;
+	repeated stPubRoleInfo charIDs = 2;
+	optional bool isFinal = 3;
+
+	enum ProtoModID
+	{
+		ModID = 2;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 12;
+	}
+}
+
+//请求匹配到的成员信息 game ----> pub  (决赛)
+message stReqMenberInfo
+{   
+	optional uint32  charID = 1;        //角色ID
+
+	enum ProtoModID
+	{   
+		ModID = 2;
+	}
+
+	enum ProtoFunID
+	{   
+		FunID = 13;
+	}
+}
+
+//组员信息
+message stSynChampionInfo
+{   
+	optional uint32 charID = 1;             //角色ID
+	optional string name = 2;               //名字
+	optional uint32 areaCode = 3;           //所在服务器ID
+	optional uint32 level = 4;              //等级
+	optional uint32 job  = 5;               //职业
+	optional uint32 sex = 6;                //性别
+	optional bool   leader = 7;             //队长
+	optional uint32 battlePower = 8;        //战力
+	optional uint32 pos = 9;                //位置
+	optional uint32 headID = 10;             //头部ID
+	optional uint32 bodyID = 11;            //衣服ID
+	optional uint32 weaponID = 12;          //武器ID
+	optional uint32 cloackID = 13;          //披风ID
+	optional uint32 wingID = 14;            //翅膀ID
+	optional uint32 shoeID = 15;            //鞋子
+	optional uint32 fashionHair = 16;       //发型
+	optional uint32 fashionFace = 17;       //表情
+	optional uint32 fashionBody = 18;		//衣服
+	optional uint32 fashionWeapon = 19;		//武器
+	optional uint32 fashionShoe = 20;		//鞋子
+	optional uint32 fashionDecoration =21;	//脸饰品
+	optional uint32 effectID =22;           //特效ID
+	optional uint32 wingBreakLv= 23;		//翅膀突破等级
+	optional uint32 photoID = 24;			//头像ID
+}
+
+//同步冠军信息  pub ----> game
+message stReqSynChampionInfo
+{
+	optional stSynChampionInfo info = 1;
+
+	enum ProtoModID
+	{
+	    ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+	    FunID = 14;
+	}
+}
+
+message stGloryUserPart
+{
+	optional uint32     charID = 1;		                    //玩家的角色ID
+    optional uint32     areaCode = 2;           			//所在服务器ID
+    optional string     name = 3;               			//名字
+	optional uint32     job = 4;							//职业
+	optional uint32     sex = 5;							//性别
+	optional uint32 	level = 6;              			//等级
+	optional uint32 	battlePower = 7;        			//战力
+	optional uint32     headID = 8;			    			//头部ID
+	optional uint32 	bodyID = 9;				    		//衣服ID
+	optional uint32		weaponID = 10;						//武器ID
+	optional uint32		cloackID = 11;						//披风ID
+	optional uint32		wingID = 12;						//翅膀ID
+	optional uint32     shoeID = 13;						//鞋子
+	optional uint32     fashionHair = 14;					//发型
+	optional uint32     fashionFace = 15;					//表情
+	optional uint32		fashionBody = 16;					//衣服
+	optional uint32		fashionWeapon = 17;					//武器
+	optional uint32		fashionShoe = 18;					//鞋子
+	optional uint32		fashionDecoration = 19;				//脸饰品
+	optional uint32		effectID = 20;						//特效ID
+	optional uint32		wingBreakLv = 21;					//翅膀突破等级
+}
+
+message stGloryUserDetail
+{
+	optional uint32     charID = 1;		                    //玩家的角色ID
+    optional uint32     areaCode = 2;           			//所在服务器ID
+    optional string     name = 3;               			//名字
+	optional uint32     job = 4;							//职业
+	optional uint32     sex = 5;							//性别
+	optional uint32 	level = 6;              			//等级
+	optional uint32 	battlePower = 7;        			//战力
+	optional uint32     headID = 8;			    			//头部ID
+	optional uint32 	bodyID = 9;				    		//衣服ID
+	optional uint32		weaponID = 10;						//武器ID
+	optional uint32		cloackID = 11;						//披风ID
+	optional uint32		wingID = 12;						//翅膀ID
+	optional uint32     shoeID = 13;						//鞋子
+	optional uint32     fashionHair = 14;					//发型
+	optional uint32     fashionFace = 15;					//表情
+	optional uint32		fashionBody = 16;					//衣服
+	optional uint32		fashionWeapon = 17;					//武器
+	optional uint32		fashionShoe = 18;					//鞋子
+	optional uint32		fashionDecoration = 19;				//脸饰品
+	optional uint32		effectID = 20;						//特效ID
+	optional uint32		wingBreakLv = 21;					//翅膀突破等级
+	optional uint32 	killNum = 22;         			    //本期击杀数
+	optional uint32 	evenKillNum = 23;          			//本期最大连杀数
+	optional uint32 	totalKillNum = 24;       			//历史总击杀数
+	optional uint32 	gloryVal = 25;        			    //本期荣耀值
+	optional uint32		gloryActionTime = 26;				//荣耀值获得时间
+	optional uint32		prostatedNum = 27;				    //被膜拜次数
+	optional uint32		prostateTime = 28;				    //上一次膜拜时间
+	optional uint32		normalId = 29;				        //角色id
+}
+
+message stGloryUser
+{
+	optional uint32     charID = 1;		                    //玩家的角色ID
+    optional uint32     areaCode = 2;           			//所在服务器ID
+    optional string     name = 3;               			//名字
+	optional uint32 	killNum = 4;         			    //本期击杀数
+	optional uint32 	evenKillNum = 5;          			//本期最大连杀数
+	optional uint32 	totalKillNum = 6;       			//历史总击杀数
+	optional uint32 	gloryVal = 7;        			    //本期荣耀值
+	optional uint32		gloryActionTime = 8;				//荣耀值获得时间
+	optional uint32		prostatedNum = 9;				    //被膜拜次数
+	optional uint32		prostateTime = 10;				    //上一次膜拜时间
+	optional uint32		normalId = 11;				        //角色id
+}
+
+//加载战场信息 game ----> pub
+message stEnterResBattle
+{
+	optional uint32 charId = 1;
+	optional uint32 copyMapLevel = 2;
+	optional uint32 guildId = 3;
+	optional stGloryUser self = 4;
+
+	enum ProtoModID
+	{
+	    ModID = 2;
+	}
+
+	enum ProtoFunID
+	{
+	    FunID = 15;
+	}
+}
+
+//同步个人主要信息到服务器 pub ----> game
+message stSynResBattleUserData
+{
+    optional stGloryUser user = 1;
+
+	enum ProtoModID
+	{
+	    ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+	    FunID = 16;
+	}
+}
+
+//同步top50到服务器 pub ----> game
+message stSynResBattleTop50
+{
+    repeated stGloryUserPart detail = 1;
+
+	enum ProtoModID
+	{
+	    ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+	    FunID = 17;
+	}
+}
+
+//同步荣耀王者到服务器 pub ----> game
+message stSynResBattleKing
+{
+    optional bool clear = 1;
+    optional stGloryUserDetail king = 2;
+
+	enum ProtoModID
+	{
+	    ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+	    FunID = 18;
+	}
+}
+
+//资源战场邀请好友 pub ----> game
+message stBroadResBattleInvite
+{
+	optional uint32 charId = 1;
+	optional string name = 2;
+	optional uint32 guildId = 3;
+    optional uint32 job = 4;        //职业
+    optional uint32 sex = 5;        //性别
+    optional uint32 battlePower = 6;//战斗力
+    optional uint32 vipLv = 7;      //vip等级
+	optional uint32 instanceLvl = 8;
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 19;
+	}
+}
+
+//同意邀请加入资源战场 game ----> pub
+message stReplyInviteResBattle
+{
+    optional bool agree = 1;        //1 同意, 0 不同意
+	optional uint32 charId = 2;		//角色id
+	optional uint32 guildId = 3;	//自己的公会id
+	optional uint32 inviteId = 4;	//邀请人pub char id
+	optional stGloryUser self = 5;
+
+	enum ProtoModID
+	{
+		ModID = 2;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 20;
+	}
+}
+
+//资源战场资源变化 pub ----> game
+message stResBattleResChange
+{
+    optional bool isAdd = 1;        //1 同意, 0 不同意
+	optional uint32 charId = 2;		//角色id
+	optional uint32 item = 3;	    //资源id
+	optional uint32 val = 4;	    //资源变化数值
+	optional string desc = 5;       //资源变化描述
+
+	enum ProtoModID
+	{
+		ModID = 3;
+	}
+
+	enum ProtoFunID
+	{
+		FunID = 21;
+	}
+}
+
+//同步资源战场信息到pub game ----> pub
+message stSendResBattle2Pub
+{
+	optional stGloryUserDetail king = 1;
+    repeated stGloryUserDetail detail = 2;
+
+	enum ProtoModID
+	{
+	    ModID = 2;
+	}
+
+	enum ProtoFunID
+	{
+	    FunID = 22;
+	}
+}

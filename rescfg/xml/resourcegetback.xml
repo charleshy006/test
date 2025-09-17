@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+
+<!--
+	累计找回3天资源，超过3天资源不在记录
+	
+	GetBackType:活动类型
+		1:资源找回：对应Type类型
+			1:大体力丹购买次数 与VIP等级挂钩
+			2:大历练丹购买次数 与VIP等级挂钩
+			3:每日体力礼包购买次数 10
+			
+		VIP等级   购买体力次数  购买历练次数
+			0			1			5
+			1			2			6
+			2			3			7
+			3			4			8
+			4			5			9
+			5			6			10
+			6			7			11
+			7			9			12
+			8			11			13
+			9			13			14
+			10			15			15
+			11			17			16
+			12			19			17
+			13			21			18
+			14			23			19
+			15			25			20
+		
+		2:活动找回：对应Type类型
+			101:翡翠梦境  前一天一次都未参与计算为该天有一次回购机会 1
+			102:秘境寻宝  每天最大回购次数  20
+			103:3V3战场   每天最大回购次数  10
+			104:护送飞船  每天最大回购次数  3
+			105:擂台霸主  每天最大回购次数  10
+			
+		3:副本找回：对应Type类型
+			201:组队副本  每天最大回购次数 3
+			202:金币副本  每天最大回购次数 3
+			203:龙晶石副本  每天最大回购次数 3
+			204:巨龙巢穴    每天最大回购次数  6
+			205:黑石深渊    每天最大回购次数  6
+			
+	GetBackTitle:找回按钮标题
+	CostDiamond:单次找回消耗钻石
+	GetBackItem:单次找回获得道具
+	Title:对应找回标题，如找回组队副本奖励，显示为"组队副本"
+	Desc:找回描述——"3天内可找回次数："
+	Sale:折扣数
+
+-->
+<conf>
+	<type id="1" GetBackType="1" GetBackTitle="GetBack_02">
+		<entry id="1" Type="1" CostDiamond="85" GetBackItem="101201-1:122216-3" Title="GetBack_title01" Desc="" Sale="8"/>
+		<entry id="2" Type="2" CostDiamond="50" GetBackItem="101202-1" Title="GetBack_title02" Desc="" Sale="8"/>
+		<entry id="3" Type="3" CostDiamond="50" GetBackItem="101201-1:122216-5" Title="GetBack_title03" Desc="" Sale="5"/>
+	</type>
+	
+	<type id="2" GetBackType="2" GetBackTitle="GetBack_03">
+		<entry id="1" Type="101" CostDiamond="300" GetBackItem="1-140000:121221-5:120124-2" Title="GetBack_title04" Desc="" Sale="4"/>
+		<entry id="2" Type="102" CostDiamond="20" GetBackItem="1-10000:9-5000:120101-10" Title="GetBack_title05" Desc="" Sale="3"/>
+		<entry id="3" Type="103" CostDiamond="20" GetBackItem="5-40" Title="GetBack_title06" Desc="" Sale="5"/>
+		<entry id="3" Type="104" CostDiamond="60" GetBackItem="1-150000:9-15000:11-16" Title="GetBack_title07" Desc="" Sale="3"/>
+		<entry id="3" Type="105" CostDiamond="40" GetBackItem="1-20000:122207-2:101204-2:811615-2" Title="GetBack_title08" Desc="" Sale="1"/>
+	</type>
+	
+	<type id="3" GetBackType="3" GetBackTitle="GetBack_04">
+		<entry id="1" Type="201" CostDiamond="100" GetBackItem="19-800:102800-6" Title="GetBack_title09" Desc="" Sale="3"/>
+		<entry id="2" Type="202" CostDiamond="50" GetBackItem="1-300000" Title="GetBack_title10" Desc="" Sale="5"/>
+		<entry id="3" Type="203" CostDiamond="100" GetBackItem="9-50000" Title="GetBack_title11" Desc="" Sale="4"/>
+		<entry id="4" Type="204" CostDiamond="100" GetBackItem="17-200:102821-3:102814-3" Title="GetBack_title12" Desc="" Sale="5"/>
+		<entry id="5" Type="205" CostDiamond="100" GetBackItem="122131-10:102644-5" Title="GetBack_title13" Desc="" Sale="2"/>
+		
+	</type>
+	
+	
+</conf>

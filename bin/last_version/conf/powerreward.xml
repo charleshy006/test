@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<!-- 备注：
+		id：为条目ID
+		Startrank：开始排名等级
+		Endrank：结束排名等级
+		ItemID：奖励发放物品ID
+		Boxid：Box表引用ID
+		duration:开服后持续活动页面多久（秒）
+	-->
+	
+	<!--
+		战力奖励发放规则：
+		1、开服一周（7X24小时）统计全服排名前50位。
+		2、此表为奖励列表，界面上无领取按钮。后端根据此表发放奖励（以邮件方式）。
+		3、统计时间后（7X24小时后），用户第一次上线会获得该奖励邮件。
+		4、每条排名奖励上文字为“开服竞赛战力第X-X名奖励”文字，有前端提供键值（可能需要2套）。
+		5、界面在7日后多显示存在1天
+	-->
+	
+	<!--战斗力奖励排名奖励-->
+	
+	<PowerReward duration="691200">
+		<Reward id="1" Startrank="1" Endrank="1" ItemID="170700" Boxid="170700"/>
+		<Reward id="2" Startrank="2" Endrank="2" ItemID="170701" Boxid="170701"/>
+		<Reward id="3" Startrank="3" Endrank="3" ItemID="170702" Boxid="170702"/>
+		<Reward id="4" Startrank="4" Endrank="5" ItemID="170703" Boxid="170703"/>
+		<Reward id="5" Startrank="6" Endrank="10" ItemID="170704" Boxid="170704"/>
+		<Reward id="6" Startrank="11" Endrank="15" ItemID="170705" Boxid="170705"/>
+		<Reward id="7" Startrank="16" Endrank="20" ItemID="170706" Boxid="170706"/>
+		<Reward id="8" Startrank="21" Endrank="30" ItemID="170707" Boxid="170707"/>
+		<Reward id="9" Startrank="31" Endrank="40" ItemID="170708" Boxid="170708"/>
+		<Reward id="10" Startrank="41" Endrank="50" ItemID="170709" Boxid="170709"/>
+	</PowerReward>
+	
+	<PowerReward2 duration="1382400">
+		<Reward id="1" Startrank="1" Endrank="1" ItemID="170700" Boxid="170700"/>
+		<Reward id="2" Startrank="2" Endrank="2" ItemID="170701" Boxid="170701"/>
+		<Reward id="3" Startrank="3" Endrank="3" ItemID="170702" Boxid="170702"/>
+		<Reward id="4" Startrank="4" Endrank="5" ItemID="170703" Boxid="170703"/>
+		<Reward id="5" Startrank="6" Endrank="10" ItemID="170704" Boxid="170704"/>
+		<Reward id="6" Startrank="11" Endrank="15" ItemID="170705" Boxid="170705"/>
+		<Reward id="7" Startrank="16" Endrank="20" ItemID="170706" Boxid="170706"/>
+		<Reward id="8" Startrank="21" Endrank="30" ItemID="170707" Boxid="170707"/>
+		<Reward id="9" Startrank="31" Endrank="40" ItemID="170708" Boxid="170708"/>
+		<Reward id="10" Startrank="41" Endrank="50" ItemID="170709" Boxid="170709"/>
+	</PowerReward2>
+</root>	

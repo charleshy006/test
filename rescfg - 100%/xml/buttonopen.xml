@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<!--
+		id：唯一编号
+		level：功能开放等级，若同一等级存在多个功能按钮同时开启，按id先后条件顺序开启显示
+		opentype：
+			按钮功能开放类型：
+			1：开放技能按钮
+			2：开放随从按钮
+			3：开放好友按钮
+			4：开放炼金按钮
+			5：开放排行按钮
+			6：开放镶嵌按钮
+			7：开放公会按钮
+			8：开放精灵按钮
+			9：开放坐骑按钮
+			10：开放时装按钮
+						
+			101：开放七日狂欢按钮
+			102：开放限时随从按钮
+			103: 开放精彩活动按钮
+			104: 开放福利礼包按钮(此按钮有新手引导，在没修改新手引导时必须填4)
+			105: 开放充值好礼按钮（此按钮101级开放）
+			106：开放限时商店按钮
+			107: 开放首冲礼包按钮
+			108：时装商店按钮
+			109：邀请好友按钮
+			110: 商店总览
+			
+			201：开放世界BOSS按钮
+			203：开放运镖按钮
+			204：开放魔王召唤按钮
+			205: 开放荣耀时装按钮
+			206: 开放秘境寻宝按钮
+			207：限时挖宝
+			208:中立资源按钮
+			209:等级直升礼包按钮
+			210:打怪兽
+			
+			301：开放幸运商店功能
+			302: 开放每日任务按钮
+			303: 开放活动公告按钮
+		备注：每次修改之前请告诉负责此功能的程序
+		isopen：是否开放（1代表开放、0代表不开放）
+		openday：在开服后几天开放（以更新时间早上5：00为准、0代表开服就开放）
+		
+		
+		appversion:值固定为1，表示APP审核模式关闭该按钮功能
+	-->
+	<!-- 底部主要功能按钮 -->
+	<open>
+		<level id="1" level="3" opentype="1" isopen="1" openday="0"/>
+		<level id="2" level="5" opentype="2" isopen="1" openday="0"/>
+		<level id="3" level="1" opentype="3" isopen="1" openday="0"/>
+		<level id="4" level="6" opentype="4" isopen="1" openday="0"/>
+		<level id="5" level="1" opentype="5" isopen="1" openday="0"/>
+		<level id="6" level="24" opentype="6" isopen="1" openday="0"/>
+		<level id="7" level="17" opentype="7" isopen="1" openday="0"/>
+		<level id="8" level="13" opentype="8" isopen="1" openday="0"/>
+		<level id="9" level="18" opentype="9" isopen="0" openday="0"/>
+		<level id="10" level="100" opentype="10" isopen="1" openday="0"/>
+	</open>
+	<!-- 上方第一排活动按钮 -->
+	<activityopen1>
+		<level id="1" level="9" opentype="101" isopen="1" openday="0"/>
+		<level id="2" level="6" opentype="102" isopen="1" openday="0"/>
+		<level id="3" level="7" opentype="103" isopen="1" openday="0"/>
+		<level id="4" level="4" opentype="104" isopen="1" openday="0"/>
+		<level id="5" level="101" opentype="105" isopen="1" openday="0"/>
+		<level id="6" level="14" opentype="106" isopen="1" openday="0"/>
+		<level id="7" level="1" opentype="107" isopen="1" openday="0"/>
+		<level id="8" level="8" opentype="108" isopen="1" openday="0" appversion="1"/>
+		<level id="9" level="7" opentype="109" isopen="0" openday="0" appversion="1"/>
+		<level id="10" level="5" opentype="110" isopen="1" openday="0"/>
+		<level id="11" level="10" opentype="201" isopen="1" openday="0"/>
+	</activityopen1>
+	<!-- 上方第二排活动按钮 -->
+	<activityopen2>
+		<level id="3" level="23" opentype="203" isopen="1" openday="0"/>
+		<level id="4" level="15" opentype="204" isopen="0" openday="0" appversion="1"/>
+		<level id="5" level="1" opentype="205" isopen="1" openday="0" appversion="1"/>
+		<level id="6" level="17" opentype="206" isopen="1" openday="0" appversion="1"/>
+		<level id="7" level="12" opentype="207" isopen="1" openday="0" appversion="1"/>
+		<level id="9" level="1" opentype="209" isopen="1" openday="0" appversion="1"/>
+		<level id="10" level="7" opentype="210" isopen="1" openday="0" appversion="1"/>
+		
+	</activityopen2>
+	<!-- 左侧按钮 -->
+	<left>
+		<level id="1" level="6" opentype="301" isopen="0" openday="0"/>
+		<level id="2" level="8" opentype="302" isopen="1" openday="0"/>
+		<level id="3" level="1" opentype="303" isopen="1" openday="0"/>
+	</left>
+	
+	<!-- 不播放飘动动画的按钮 -->
+	<NoStartup>
+		<NoPlayerType opentype="103,102,104,106,107,205,301,108,110,210" />
+	</NoStartup>
+	<!-- 播放飘动动画不点击也不打开的功能 -->
+	<DontOpen>
+		<!-- 不点击也不打开 -->
+		<Type opentype="1,2,3,4,5,6,7,8,9" />
+	</DontOpen>
+	<!-- 播放飘动动画点击但不打开的功能 -->
+	<ClickDontOpen>
+		<!-- 点击也不打开 -->
+		<Type opentype="302,203,204,303" />
+	</ClickDontOpen>
+</root>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 坐骑合成强化 -->
+<root>
+	<Synthesis>
+		<!-- 生命晶石 -->
+		<entry id="110" itemID="910200" ResultitemID="910400" synthesisnum="3" cost="10000"/>
+		<entry id="111" itemID="910400" ResultitemID="911200" synthesisnum="3" cost="10000"/>
+		<entry id="112" itemID="911200" ResultitemID="912100" synthesisnum="3" cost="10000"/>
+		<entry id="113" itemID="912100" ResultitemID="912200" synthesisnum="3" cost="10000"/>
+		<entry id="114" itemID="912200" ResultitemID="912600" synthesisnum="3" cost="10000"/>
+		<entry id="115" itemID="912600" ResultitemID="913000" synthesisnum="3" cost="10000"/>
+		<!-- 免伤晶石 -->
+		<entry id="120" itemID="910210" ResultitemID="910410" synthesisnum="3" cost="10000"/>
+		<entry id="121" itemID="910410" ResultitemID="911210" synthesisnum="3" cost="10000"/>
+		<entry id="122" itemID="911210" ResultitemID="912110" synthesisnum="3" cost="10000"/>
+		<entry id="123" itemID="912110" ResultitemID="912210" synthesisnum="3" cost="10000"/>
+		<entry id="124" itemID="912210" ResultitemID="912610" synthesisnum="3" cost="10000"/>
+		<entry id="125" itemID="912610" ResultitemID="913010" synthesisnum="3" cost="10000"/>
+		<!-- 防御晶石 -->
+		<entry id="130" itemID="910220" ResultitemID="910420" synthesisnum="3" cost="10000"/>
+		<entry id="131" itemID="910420" ResultitemID="911220" synthesisnum="3" cost="10000"/>
+		<entry id="132" itemID="911220" ResultitemID="912120" synthesisnum="3" cost="10000"/>
+		<entry id="133" itemID="912120" ResultitemID="912220" synthesisnum="3" cost="10000"/>
+		<entry id="134" itemID="912220" ResultitemID="912620" synthesisnum="3" cost="10000"/>
+		<entry id="135" itemID="912620" ResultitemID="913020" synthesisnum="3" cost="10000"/>
+		<!-- 伤害晶石 -->
+		<entry id="210" itemID="920200" ResultitemID="920400" synthesisnum="3" cost="10000"/>
+		<entry id="211" itemID="920400" ResultitemID="921200" synthesisnum="3" cost="10000"/>
+		<entry id="212" itemID="921200" ResultitemID="922100" synthesisnum="3" cost="10000"/>
+		<entry id="213" itemID="922100" ResultitemID="922200" synthesisnum="3" cost="10000"/>
+		<entry id="214" itemID="922200" ResultitemID="922600" synthesisnum="3" cost="10000"/>
+		<entry id="215" itemID="922600" ResultitemID="923000" synthesisnum="3" cost="10000"/>
+		<!-- 终伤晶石 -->
+		<entry id="220" itemID="920210" ResultitemID="920410" synthesisnum="3" cost="10000"/>
+		<entry id="221" itemID="920410" ResultitemID="921210" synthesisnum="3" cost="10000"/>
+		<entry id="222" itemID="921210" ResultitemID="922110" synthesisnum="3" cost="10000"/>
+		<entry id="223" itemID="922110" ResultitemID="922210" synthesisnum="3" cost="10000"/>
+		<entry id="224" itemID="922210" ResultitemID="922610" synthesisnum="3" cost="10000"/>
+		<entry id="225" itemID="922610" ResultitemID="923010" synthesisnum="3" cost="10000"/>
+		<!-- 攻击晶石 -->
+		<entry id="230" itemID="920220" ResultitemID="920420" synthesisnum="3" cost="10000"/>
+		<entry id="231" itemID="920420" ResultitemID="921220" synthesisnum="3" cost="10000"/>
+		<entry id="232" itemID="921220" ResultitemID="922120" synthesisnum="3" cost="10000"/>
+		<entry id="233" itemID="922120" ResultitemID="922220" synthesisnum="3" cost="10000"/>
+		<entry id="234" itemID="922220" ResultitemID="922620" synthesisnum="3" cost="10000"/>
+		<entry id="235" itemID="922620" ResultitemID="923020" synthesisnum="3" cost="10000"/>
+		<!-- 命中晶石 -->
+		<entry id="310" itemID="930200" ResultitemID="930400" synthesisnum="3" cost="10000"/>
+		<entry id="311" itemID="930400" ResultitemID="931200" synthesisnum="3" cost="10000"/>
+		<entry id="312" itemID="931200" ResultitemID="932100" synthesisnum="3" cost="10000"/>
+		<entry id="313" itemID="932100" ResultitemID="932200" synthesisnum="3" cost="10000"/>
+		<entry id="314" itemID="932200" ResultitemID="932600" synthesisnum="3" cost="10000"/>
+		<entry id="315" itemID="932600" ResultitemID="933000" synthesisnum="3" cost="10000"/>
+		<!-- 闪避晶石 -->
+		<entry id="320" itemID="930210" ResultitemID="930410" synthesisnum="3" cost="10000"/>
+		<entry id="321" itemID="930410" ResultitemID="931210" synthesisnum="3" cost="10000"/>
+		<entry id="322" itemID="931210" ResultitemID="932110" synthesisnum="3" cost="10000"/>
+		<entry id="323" itemID="932110" ResultitemID="932210" synthesisnum="3" cost="10000"/>
+		<entry id="324" itemID="932210" ResultitemID="932610" synthesisnum="3" cost="10000"/>
+		<entry id="325" itemID="932610" ResultitemID="933010" synthesisnum="3" cost="10000"/>
+		<!-- 集中晶石 -->
+		<entry id="330" itemID="930220" ResultitemID="930420" synthesisnum="3" cost="10000"/>
+		<entry id="331" itemID="930420" ResultitemID="931220" synthesisnum="3" cost="10000"/>
+		<entry id="332" itemID="931220" ResultitemID="932120" synthesisnum="3" cost="10000"/>
+		<entry id="333" itemID="932120" ResultitemID="932220" synthesisnum="3" cost="10000"/>
+		<entry id="334" itemID="932220" ResultitemID="932620" synthesisnum="3" cost="10000"/>
+		<entry id="335" itemID="932620" ResultitemID="933020" synthesisnum="3" cost="10000"/>
+		<!-- 暴击晶石 -->
+		<entry id="410" itemID="940200" ResultitemID="940400" synthesisnum="3" cost="10000"/>
+		<entry id="411" itemID="940400" ResultitemID="941200" synthesisnum="3" cost="10000"/>
+		<entry id="412" itemID="941200" ResultitemID="942100" synthesisnum="3" cost="10000"/>
+		<entry id="413" itemID="942100" ResultitemID="942200" synthesisnum="3" cost="10000"/>
+		<entry id="414" itemID="942200" ResultitemID="942600" synthesisnum="3" cost="10000"/>
+		<entry id="415" itemID="942600" ResultitemID="943000" synthesisnum="3" cost="10000"/>
+		<!-- 暴伤晶石 -->
+		<entry id="420" itemID="940210" ResultitemID="940410" synthesisnum="3" cost="10000"/>
+		<entry id="421" itemID="940410" ResultitemID="941210" synthesisnum="3" cost="10000"/>
+		<entry id="422" itemID="941210" ResultitemID="942110" synthesisnum="3" cost="10000"/>
+		<entry id="423" itemID="942110" ResultitemID="942210" synthesisnum="3" cost="10000"/>
+		<entry id="424" itemID="942210" ResultitemID="942610" synthesisnum="3" cost="10000"/>
+		<entry id="425" itemID="942610" ResultitemID="943010" synthesisnum="3" cost="10000"/>
+		<!-- 狂热晶石 -->
+		<entry id="430" itemID="940220" ResultitemID="940420" synthesisnum="3" cost="10000"/>
+		<entry id="431" itemID="940420" ResultitemID="941220" synthesisnum="3" cost="10000"/>
+		<entry id="432" itemID="941220" ResultitemID="942120" synthesisnum="3" cost="10000"/>
+		<entry id="433" itemID="942120" ResultitemID="942220" synthesisnum="3" cost="10000"/>
+		<entry id="434" itemID="942220" ResultitemID="942620" synthesisnum="3" cost="10000"/>
+		<entry id="435" itemID="942620" ResultitemID="943020" synthesisnum="3" cost="10000"/>
+		<!-- 抗暴晶石 -->
+		<entry id="510" itemID="950200" ResultitemID="950400" synthesisnum="3" cost="10000"/>
+		<entry id="511" itemID="950400" ResultitemID="951200" synthesisnum="3" cost="10000"/>
+		<entry id="512" itemID="951200" ResultitemID="952100" synthesisnum="3" cost="10000"/>
+		<entry id="513" itemID="952100" ResultitemID="952200" synthesisnum="3" cost="10000"/>
+		<entry id="514" itemID="952200" ResultitemID="952600" synthesisnum="3" cost="10000"/>
+		<entry id="515" itemID="952600" ResultitemID="953000" synthesisnum="3" cost="10000"/>
+		<!--暴免晶石 -->
+		<entry id="520" itemID="950210" ResultitemID="950410" synthesisnum="3" cost="10000"/>
+		<entry id="521" itemID="950410" ResultitemID="951210" synthesisnum="3" cost="10000"/>
+		<entry id="522" itemID="951210" ResultitemID="952110" synthesisnum="3" cost="10000"/>
+		<entry id="523" itemID="952110" ResultitemID="952210" synthesisnum="3" cost="10000"/>
+		<entry id="524" itemID="952210" ResultitemID="952610" synthesisnum="3" cost="10000"/>
+		<entry id="525" itemID="952610" ResultitemID="953010" synthesisnum="3" cost="10000"/>
+		<!--抵抗晶石 -->
+		<entry id="530" itemID="950220" ResultitemID="950420" synthesisnum="3" cost="10000"/>
+		<entry id="531" itemID="950420" ResultitemID="951220" synthesisnum="3" cost="10000"/>
+		<entry id="532" itemID="951220" ResultitemID="952120" synthesisnum="3" cost="10000"/>
+		<entry id="533" itemID="952120" ResultitemID="952220" synthesisnum="3" cost="10000"/>
+		<entry id="534" itemID="952220" ResultitemID="952620" synthesisnum="3" cost="10000"/>
+		<entry id="535" itemID="952620" ResultitemID="953020" synthesisnum="3" cost="10000"/>
+		<!-- 火伤晶石 -->
+		<entry id="610" itemID="960200" ResultitemID="960400" synthesisnum="3" cost="10000"/>
+		<entry id="611" itemID="960400" ResultitemID="961200" synthesisnum="3" cost="10000"/>
+		<entry id="612" itemID="961200" ResultitemID="962100" synthesisnum="3" cost="10000"/>
+		<entry id="613" itemID="962100" ResultitemID="962200" synthesisnum="3" cost="10000"/>
+		<entry id="614" itemID="962200" ResultitemID="962600" synthesisnum="3" cost="10000"/>
+		<entry id="615" itemID="962600" ResultitemID="963000" synthesisnum="3" cost="10000"/>
+		<!-- 火墙晶石 -->
+		<entry id="620" itemID="960210" ResultitemID="960410" synthesisnum="3" cost="10000"/>
+		<entry id="621" itemID="960410" ResultitemID="961210" synthesisnum="3" cost="10000"/>
+		<entry id="622" itemID="961210" ResultitemID="962110" synthesisnum="3" cost="10000"/>
+		<entry id="623" itemID="962110" ResultitemID="962210" synthesisnum="3" cost="10000"/>
+		<entry id="624" itemID="962210" ResultitemID="962610" synthesisnum="3" cost="10000"/>
+		<entry id="625" itemID="962610" ResultitemID="963010" synthesisnum="3" cost="10000"/>
+		<!-- 炎狱晶石 -->
+		<entry id="630" itemID="960220" ResultitemID="960420" synthesisnum="3" cost="10000"/>
+		<entry id="631" itemID="960420" ResultitemID="961220" synthesisnum="3" cost="10000"/>
+		<entry id="632" itemID="961220" ResultitemID="962120" synthesisnum="3" cost="10000"/>
+		<entry id="633" itemID="962120" ResultitemID="962220" synthesisnum="3" cost="10000"/>
+		<entry id="634" itemID="962220" ResultitemID="962620" synthesisnum="3" cost="10000"/>
+		<entry id="635" itemID="962620" ResultitemID="963020" synthesisnum="3" cost="10000"/>
+		<!-- 冰伤晶石 -->
+		<entry id="710" itemID="970200" ResultitemID="970400" synthesisnum="3" cost="10000"/>
+		<entry id="711" itemID="970400" ResultitemID="971200" synthesisnum="3" cost="10000"/>
+		<entry id="712" itemID="971200" ResultitemID="972100" synthesisnum="3" cost="10000"/>
+		<entry id="713" itemID="972100" ResultitemID="972200" synthesisnum="3" cost="10000"/>
+		<entry id="714" itemID="972200" ResultitemID="972600" synthesisnum="3" cost="10000"/>
+		<entry id="715" itemID="972600" ResultitemID="973000" synthesisnum="3" cost="10000"/>
+		<!-- 冰冻晶石 -->
+		<entry id="720" itemID="970210" ResultitemID="970410" synthesisnum="3" cost="10000"/>
+		<entry id="721" itemID="970410" ResultitemID="971210" synthesisnum="3" cost="10000"/>
+		<entry id="722" itemID="971210" ResultitemID="972110" synthesisnum="3" cost="10000"/>
+		<entry id="723" itemID="972110" ResultitemID="972210" synthesisnum="3" cost="10000"/>
+		<entry id="724" itemID="972210" ResultitemID="972610" synthesisnum="3" cost="10000"/>
+		<entry id="725" itemID="972610" ResultitemID="973010" synthesisnum="3" cost="10000"/>
+		<!-- 冰霜晶石 -->
+		<entry id="730" itemID="970220" ResultitemID="970420" synthesisnum="3" cost="10000"/>
+		<entry id="731" itemID="970420" ResultitemID="971220" synthesisnum="3" cost="10000"/>
+		<entry id="732" itemID="971220" ResultitemID="972120" synthesisnum="3" cost="10000"/>
+		<entry id="733" itemID="972120" ResultitemID="972220" synthesisnum="3" cost="10000"/>
+		<entry id="734" itemID="972220" ResultitemID="972620" synthesisnum="3" cost="10000"/>
+		<entry id="735" itemID="972620" ResultitemID="973020" synthesisnum="3" cost="10000"/>
+		<!-- 雷伤晶石 -->
+		<entry id="810" itemID="980200" ResultitemID="980400" synthesisnum="3" cost="10000"/>
+		<entry id="811" itemID="980400" ResultitemID="981200" synthesisnum="3" cost="10000"/>
+		<entry id="812" itemID="981200" ResultitemID="982100" synthesisnum="3" cost="10000"/>
+		<entry id="813" itemID="982100" ResultitemID="982200" synthesisnum="3" cost="10000"/>
+		<entry id="814" itemID="982200" ResultitemID="982600" synthesisnum="3" cost="10000"/>
+		<entry id="815" itemID="982600" ResultitemID="983000" synthesisnum="3" cost="10000"/>
+		<!-- 雷电晶石 -->
+		<entry id="820" itemID="980210" ResultitemID="980410" synthesisnum="3" cost="10000"/>
+		<entry id="821" itemID="980410" ResultitemID="981210" synthesisnum="3" cost="10000"/>
+		<entry id="822" itemID="981210" ResultitemID="982110" synthesisnum="3" cost="10000"/>
+		<entry id="823" itemID="982110" ResultitemID="982210" synthesisnum="3" cost="10000"/>
+		<entry id="824" itemID="982210" ResultitemID="982610" synthesisnum="3" cost="10000"/>
+		<entry id="825" itemID="982610" ResultitemID="983010" synthesisnum="3" cost="10000"/>
+		<!-- 怒雷晶石 -->
+		<entry id="830" itemID="980220" ResultitemID="980420" synthesisnum="3" cost="10000"/>
+		<entry id="831" itemID="980420" ResultitemID="981220" synthesisnum="3" cost="10000"/>
+		<entry id="832" itemID="981220" ResultitemID="982120" synthesisnum="3" cost="10000"/>
+		<entry id="833" itemID="982120" ResultitemID="982220" synthesisnum="3" cost="10000"/>
+		<entry id="834" itemID="982220" ResultitemID="982620" synthesisnum="3" cost="10000"/>
+		<entry id="835" itemID="982620" ResultitemID="983020" synthesisnum="3" cost="10000"/>
+	</Synthesis>
+	<!-- 坐骑合成进化 -->
+	<evolvement>
+		<!-- 防御晶石 -->
+		<entry id="1" item1ID="913000" item2ID="913010" ResultitemID="910220" cost="10000"/>
+		<!-- 攻击晶石 -->
+		<entry id="2" item1ID="923000" item2ID="923010" ResultitemID="920220" cost="10000"/>
+		<!-- 集中晶石 -->
+		<entry id="3" item1ID="933000" item2ID="933010" ResultitemID="930220" cost="10000"/>
+		<!-- 狂热晶石 -->
+		<entry id="4" item1ID="943000" item2ID="943010" ResultitemID="940220" cost="10000"/>
+		<!-- 铁壁晶石 -->
+		<entry id="5" item1ID="953000" item2ID="953010" ResultitemID="950220" cost="10000"/>
+		<!-- 炎狱晶石 -->
+		<entry id="6" item1ID="963000" item2ID="963010" ResultitemID="960220" cost="10000"/>
+		<!-- 冰霜晶石 -->
+		<entry id="7" item1ID="973000" item2ID="973010" ResultitemID="970220" cost="10000"/>
+		<!-- 怒雷晶石 -->
+		<entry id="8" item1ID="983000" item2ID="983010" ResultitemID="980220" cost="10000"/>
+	</evolvement>
+</root>

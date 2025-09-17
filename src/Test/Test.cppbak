@@ -1,0 +1,67 @@
+#include "EncDec.h"
+#include <hiredis.h>
+#include "RoleInfo.h"
+
+int main(int argc,char ** argv)
+{
+	/*EncDecHelper enc;
+	char inBuf[100] = "helloworld";
+	UINT32 srcLen = strlen(inBuf);
+	srcLen = (srcLen / 8) * 8 + (srcLen % 8 ? 8 : 0);
+	char outBuf[100] = {0};
+	bzero(outBuf,sizeof(outBuf));
+	enc.setEncDecMethod(ENCDEC_ECBDES);
+	//enc.setEcbkey("11111111");
+	enc.encdec(inBuf,srcLen,outBuf,srcLen,true);
+	printf("加密的数据为:%s,加密后的数据为:%s \n",inBuf,outBuf);
+	enc.encdec(outBuf,srcLen,outBuf,srcLen,false);
+	printf("\n解密后为:%s",outBuf);*/
+	redisContext *c = NULL; 
+	redisReply *reply = NULL;
+	const char *hostname = "127.0.0.1";
+	int port =  6379;
+	struct timeval timeout = { 1, 500000 }; // 1.5 seconds
+	c = redisConnectWithTimeout(hostname, port, timeout);
+	if (c == NULL || c->err) {
+		if (c) {
+			printf("Connection error: %s\n", c->errstr);
+			redisFree(c);
+		} else {
+			printf("Connection error: can't allocate redis context\n");
+		}   
+		exit(1);
+	} 
+	
+	/* PING server */
+	reply = (redisReply *)redisCommand(c,"PING");
+	printf("PING: %s\n", reply->str);
+	freeReplyObject(reply);
+
+	/* Set a key */
+	reply = (redisReply *)redisCommand(c,"SET %s %s", "foo", "hello world");
+	printf("SET: %s\n", reply->str);
+	freeReplyObject(reply);
+	
+
+	/* Try a GET and two INCR */
+	reply = (redisReply *)redisCommand(c,"GET foo");
+	printf("GET foo: %s,len=%d\n", reply->str,reply->len);
+	freeReplyObject(reply);
+	
+	/* Try SET BINARY */
+	RoleInfoForSave saveInfo;
+	saveInfo.m_roleInfo.m_charID = 2000;
+	reply = (redisReply *)redisCommand(c,"SET %s %b", "bar",&saveInfo,sizeof(saveInfo));
+	printf("SET (binary API): %s\n", reply->str);
+	freeReplyObject(reply);
+	
+	/* Try GET BINARY */
+	reply = (redisReply *)redisCommand(c,"GET bar");
+	RoleInfoForSave * gotSaveInfo = (RoleInfoForSave *)reply->str;
+	printf("GET foo:charID=%d, len=%d,struct size=%d\n",gotSaveInfo->m_roleInfo.m_charID,reply->len,(int)sizeof(RoleInfoForSave));
+	freeReplyObject(reply);
+
+
+	redisFree(c);
+	return 0;
+}

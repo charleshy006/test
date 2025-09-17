@@ -1,0 +1,95 @@
+# The set of languages for which implicit dependencies are needed:
+SET(CMAKE_DEPENDS_LANGUAGES
+  "CXX"
+  )
+# The set of files for implicit dependencies of each language:
+SET(CMAKE_DEPENDS_CHECK_CXX
+  "/data/workspace_H/Server/src/GlobalServer/ActivityConfigMgr.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/ActivityConfigMgr.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/Arena.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/Arena.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/Bill2GlobalHandle.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/Bill2GlobalHandle.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/BillPacketProcessor.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/BillPacketProcessor.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/BillSvrClient.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/BillSvrClient.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/BlackWhiteMgr.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/BlackWhiteMgr.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/CaptureTreasure.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/CaptureTreasure.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/CloseBetaWelfareMgr.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/CloseBetaWelfareMgr.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/CommonRefreshMgr.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/CommonRefreshMgr.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/CompensationSys.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/CompensationSys.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/DiscoverMgr.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/DiscoverMgr.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/DrawHeroScoreMgr.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/DrawHeroScoreMgr.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/EmeraldDreamMgr.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/EmeraldDreamMgr.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/Expedition.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/Expedition.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/FirstKillMgr.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/FirstKillMgr.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/FriendMgr.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/FriendMgr.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/FriendModHandle.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/FriendModHandle.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/GameModHandle.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/GameModHandle.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/GateModHandle.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/GateModHandle.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/GiftBag.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/GiftBag.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/GlobalServer.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/GlobalServer.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/GlobalTimerCB.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/GlobalTimerCB.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/GlobalVar.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/GlobalVar.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/GloryfashionMgr.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/GloryfashionMgr.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/GuardMgr.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/GuardMgr.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/Guild.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/Guild.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/GuildModHandle.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/GuildModHandle.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/HeroLeagueMgr.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/HeroLeagueMgr.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/HistoryRankMgr.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/HistoryRankMgr.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/InviteFriendMgr.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/InviteFriendMgr.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/LimitPetMgr.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/LimitPetMgr.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/LoginGlobalModHandle.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/LoginGlobalModHandle.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/Mail.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/Mail.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/MiscModHandle.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/MiscModHandle.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/NoticeMgr.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/NoticeMgr.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/One2OnePVP.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/One2OnePVP.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/OpenServerInfo.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/OpenServerInfo.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/OperateActivity.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/OperateActivity.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/PacketProcessor.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/PacketProcessor.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/Player.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/Player.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/PlayerManager.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/PlayerManager.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/QuestionMgr.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/QuestionMgr.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/RankMgr.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/RankMgr.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/RechargeMgr.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/RechargeMgr.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/RedisOpHelp.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/RedisOpHelp.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/RoleInfoManager.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/RoleInfoManager.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/RoleModHandle.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/RoleModHandle.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/ServerConfig.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/ServerConfig.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/ShutDownMgr.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/ShutDownMgr.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/SortListModHandle.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/SortListModHandle.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/Team.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/Team.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/TeamModHandle.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/TeamModHandle.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/TemplateDB.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/TemplateDB.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/TxGiftBagMgr.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/TxGiftBagMgr.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/WebModHandle.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/WebModHandle.cpp.o"
+  "/data/workspace_H/Server/src/GlobalServer/WorldBoss.cpp" "/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir/WorldBoss.cpp.o"
+  )
+SET(CMAKE_CXX_COMPILER_ID "GNU")
+
+# Targets to which this target links.
+SET(CMAKE_TARGET_LINKED_INFO_FILES
+  "/data/workspace_H/Server/src/linuxbuild/jsoncpp/CMakeFiles/jsoncpp.dir/DependInfo.cmake"
+  "/data/workspace_H/Server/src/linuxbuild/Proto/CMakeFiles/Proto.dir/DependInfo.cmake"
+  "/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir/DependInfo.cmake"
+  "/data/workspace_H/Server/src/linuxbuild/GameServer/CMakeFiles/commGame.dir/DependInfo.cmake"
+  )
+
+# The include file search paths:
+SET(CMAKE_C_TARGET_INCLUDE_PATH
+  "../../3rd/include"
+  "../../3rd/include/log4cxx"
+  "../../3rd/include/mysql"
+  "../../3rd/include/apr"
+  "../../3rd/include/zlib"
+  "../../3rd/include/protobuf"
+  "../../3rd/include/svrlib"
+  "../../3rd/include/curl"
+  "../../3rd/include/tinyxml"
+  "../../3rd/include/hiredis"
+  "../../3rd/include/openssl"
+  "../tmxparser"
+  "../common"
+  "../GameServer"
+  "../Proto"
+  "../navi"
+  )
+SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
+SET(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
+SET(CMAKE_ASM_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

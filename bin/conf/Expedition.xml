@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>	
+	<!--远征任务
+		id：任务ID
+		Star：任务星数
+		Openlv;副本对应等级
+		Time：远征任务消耗时间(秒)
+		Neednum：任务需要参与随从数量
+		BaseFightingCapacity;基础战斗力，用于计算基础奖励道具获得数量
+							 计算公式：
+							 基础道具获得数量=log(0.6+出战随从战斗力/BaseFightingCapacity,1.6)*BaseRewardNum
+							 额外设定：0.01<=log(0.6+出战随从战斗力/BaseFightingCapacity,1.6)<=1.2，即该乘数计算最小值为0.01，最大值为1.2
+							 若通过计算“基础道具获得数量”不足1，则按1计算
+		BaseRewardID;基础奖励道具ID，若奖励多个道具，使用“;”分开
+		BaseRewardNum：对应基础奖励道具的数量，顺序与基础奖励道具ID顺序一一对应
+		ExtraRewardID:额外道具奖励道具ID
+		ExtraRewardNum:额外奖励道具数量
+		name：远征名称引用
+		desc：远征描述引用
+		ExtraNeedtype：需求类型（0无、1远程型、2近程型、3攻击型、4防御型、5辅助型、6战斗力总和、7有等级大于）
+		ExtraNeedvalue：需求值
+			ExtraNeedtype1、2、3、4、5为所需随从数量
+			ExtraNeedtype6为出战随从总战斗力
+			ExtraNeedtype7为出战随从中有等级超过该数值
+		Expeditionimage:远征背景图
+		Extradesc：额外奖励引用描述	
+	-->
+	<Expeditiontask>
+	<!-- 金币龙晶石系列 -->
+	<!-- 金币龙晶石1星 -->
+		<task id="1" Star="1" Openlv="15-30" Time="14400" Neednum="1" BaseFightingCapacity="3245" BaseRewardID="1;9;120404" BaseRewardNum="60000;10000;2" ExtraRewardID="102808" ExtraRewardNum="2" name="Expeditionname_01" desc="Expeditiondesc_01" typeID="1" Expeditionimage="Expeditionimage_01" Extradesc="Extradesc_01">	
+			<Extra id="1" Needtype="1" ExtraNeedvalue="1"/>
+		</task>
+	<!-- 金币龙晶石2星 -->
+		<task id="2" Star="2" Openlv="31-40" Time="18000" Neednum="2" BaseFightingCapacity="14250" BaseRewardID="1;9;121204" BaseRewardNum="90000;15000;2" ExtraRewardID="102809" ExtraRewardNum="2" name="Expeditionname_02" desc="Expeditiondesc_01" typeID="1" Expeditionimage="Expeditionimage_01" Extradesc="Extradesc_02">
+			<Extra id="1" Needtype="2" ExtraNeedvalue="1"/>
+		</task>
+	<!-- 金币龙晶石3星 -->
+		<task id="3" Star="3" Openlv="41-50" Time="21600" Neednum="2" BaseFightingCapacity="25290" BaseRewardID="1;9;122204" BaseRewardNum="120000;20000;2" ExtraRewardID="102809" ExtraRewardNum="3" name="Expeditionname_03" desc="Expeditiondesc_01" typeID="1" Expeditionimage="Expeditionimage_01" Extradesc="Extradesc_03">
+			<Extra id="1" Needtype="6" ExtraNeedvalue="32490"/>
+		</task>
+	<!-- 金币龙晶石4星 -->
+		<task id="4" Star="4" Openlv="51-60" Time="21600" Neednum="3" BaseFightingCapacity="61305" BaseRewardID="1;9;122204" BaseRewardNum="150000;25000;3" ExtraRewardID="102810" ExtraRewardNum="2" name="Expeditionname_04" desc="Expeditiondesc_01" typeID="1" Expeditionimage="Expeditionimage_01" Extradesc="Extradesc_04">
+			<Extra id="1" Needtype="7" ExtraNeedvalue="53"/>
+		</task>
+	<!-- 金币龙晶石5星 -->
+		<task id="5" Star="5" Openlv="61-70" Time="28800" Neednum="3" BaseFightingCapacity="89025" BaseRewardID="1;9;122204" BaseRewardNum="280000;30000;3" ExtraRewardID="102810" ExtraRewardNum="3" name="Expeditionname_05" desc="Expeditiondesc_01" typeID="1" Expeditionimage="Expeditionimage_01" Extradesc="Extradesc_05">
+			<Extra id="1" Needtype="1" ExtraNeedvalue="2"/>
+			<Extra id="2" Needtype="2" ExtraNeedvalue="1"/>
+		</task>
+	<!-- 金币龙晶石6星 -->
+		<task id="6" Star="6" Openlv="71-90" Time="28800" Neednum="3" BaseFightingCapacity="112755" BaseRewardID="1;9;122604" BaseRewardNum="210000;35000;3" ExtraRewardID="102811" ExtraRewardNum="2" name="Expeditionname_06" desc="Expeditiondesc_01" typeID="1" Expeditionimage="Expeditionimage_01" Extradesc="Extradesc_06">
+			<Extra id="1" Needtype="2" ExtraNeedvalue="2"/>
+			<Extra id="2" Needtype="6" ExtraNeedvalue="130000"/>
+		</task>
+		
+	<!-- 随从突破石系列 -->
+	<!-- 随从突破石1星
+		<task id="11" Star="1" Openlv="20-30" Time="14400" Neednum="1" BaseFightingCapacity="3245" BaseRewardID="120404;120104" BaseRewardNum="3;3" ExtraRewardID="102800" ExtraRewardNum="2" name="Expeditionname_11" desc="Expeditiondesc_11" typeID="2" Expeditionimage="Expeditionimage_02" Extradesc="Extradesc_11">
+			<Extra id="1" Needtype="4" ExtraNeedvalue="1"/>
+		</task> -->
+	<!-- 随从突破石2星
+		<task id="12" Star="2" Openlv="31-40" Time="18000" Neednum="2" BaseFightingCapacity="14250" BaseRewardID="121204;120404" BaseRewardNum="3;3" ExtraRewardID="102800" ExtraRewardNum="3" name="Expeditionname_12" desc="Expeditiondesc_11" typeID="2" Expeditionimage="Expeditionimage_02" Extradesc="Extradesc_12">
+			<Extra id="1" Needtype="5" ExtraNeedvalue="1"/>
+		</task> -->
+	<!-- 随从突破石3星
+		<task id="13" Star="3" Openlv="41-50" Time="21600" Neednum="2" BaseFightingCapacity="25290" BaseRewardID="122204;121204" BaseRewardNum="3;2" ExtraRewardID="102800" ExtraRewardNum="4" name="Expeditionname_13" desc="Expeditiondesc_11" typeID="2" Expeditionimage="Expeditionimage_02" Extradesc="Extradesc_13">
+			<Extra id="1" Needtype="7" ExtraNeedvalue="43"/>
+		</task> -->
+	<!-- 随从突破石4星
+		<task id="14" Star="4" Openlv="51-60" Time="25200" Neednum="2" BaseFightingCapacity="40870" BaseRewardID="122204;121204" BaseRewardNum="3;3" ExtraRewardID="102800" ExtraRewardNum="5" name="Expeditionname_14" desc="Expeditiondesc_11" typeID="2" Expeditionimage="Expeditionimage_02" Extradesc="Extradesc_14">
+			<Extra id="1" Needtype="6" ExtraNeedvalue="49850"/>
+		</task> -->
+	<!-- 随从突破石5星
+		<task id="15" Star="5" Openlv="61-70" Time="28800" Neednum="2" BaseFightingCapacity="59350" BaseRewardID="122204;121204" BaseRewardNum="3;4" ExtraRewardID="102800" ExtraRewardNum="6" name="Expeditionname_15" desc="Expeditiondesc_11" typeID="2" Expeditionimage="Expeditionimage_02" Extradesc="Extradesc_15">
+			<Extra id="1" Needtype="3" ExtraNeedvalue="1"/>
+			<Extra id="2" Needtype="5" ExtraNeedvalue="1"/>
+		</task> -->
+	<!-- 随从突破石6星
+		<task id="16" Star="6" Openlv="71-80" Time="28800" Neednum="2" BaseFightingCapacity="75170" BaseRewardID="122604;122204" BaseRewardNum="3;3" ExtraRewardID="102800" ExtraRewardNum="6" name="Expeditionname_16" desc="Expeditiondesc_11" typeID="2" Expeditionimage="Expeditionimage_02"  Extradesc="Extradesc_16">
+			<Extra id="1" Needtype="4" ExtraNeedvalue="1"/>
+			<Extra id="2" Needtype="7" ExtraNeedvalue="73"/>
+		</task> -->
+
+	<!-- 精灵聚灵水晶系列 -->
+	<!-- 精灵聚灵水晶1星-->
+		<task id="21" Star="2" Openlv="30-40" Time="18000" Neednum="2" BaseFightingCapacity="17830" BaseRewardID="102812;122207;101204" BaseRewardNum="4;4;2" ExtraRewardID="121221" ExtraRewardNum="2" name="Expeditionname_21" desc="Expeditiondesc_21" typeID="3" Expeditionimage="Expeditionimage_03" Extradesc="Extradesc_21">
+			<Extra id="1" Needtype="3" ExtraNeedvalue="1"/>
+		</task>
+	<!-- 精灵聚灵水晶2星-->
+		<task id="22" Star="3" Openlv="41-50" Time="21600" Neednum="3" BaseFightingCapacity="48735" BaseRewardID="102812;122207;101204" BaseRewardNum="6;6;3" ExtraRewardID="121221" ExtraRewardNum="3" name="Expeditionname_22" desc="Expeditiondesc_21" typeID="3" Expeditionimage="Expeditionimage_03" Extradesc="Extradesc_22">
+			<Extra id="1" Needtype="1" ExtraNeedvalue="1"/>
+			<Extra id="2" Needtype="2" ExtraNeedvalue="1"/>
+		</task>
+	<!-- 精灵聚灵水晶3星-->
+		<task id="23" Star="4" Openlv="51-60" Time="21600" Neednum="3" BaseFightingCapacity="74775" BaseRewardID="102812;122207;101204" BaseRewardNum="8;8;4" ExtraRewardID="121221" ExtraRewardNum="4" name="Expeditionname_23" desc="Expeditiondesc_21" typeID="3" Expeditionimage="Expeditionimage_03" Extradesc="Extradesc_23">
+			<Extra id="1" Needtype="1" ExtraNeedvalue="1"/>
+			<Extra id="2" Needtype="7" ExtraNeedvalue="52"/>
+		</task>
+	<!-- 精灵聚灵水晶4星-->
+		<task id="24" Star="5" Openlv="61-70" Time="28800" Neednum="3" BaseFightingCapacity="104295" BaseRewardID="102812;122207;101204" BaseRewardNum="10;10;5" ExtraRewardID="121221" ExtraRewardNum="5" name="Expeditionname_24" desc="Expeditiondesc_21" typeID="3" Expeditionimage="Expeditionimage_03" Extradesc="Extradesc_24">
+			<Extra id="1" Needtype="4" ExtraNeedvalue="1"/>
+			<Extra id="2" Needtype="7" ExtraNeedvalue="64"/>
+		</task>
+	<!-- 精灵聚灵水晶5星-->
+		<task id="25" Star="6" Openlv="71-90" Time="28800" Neednum="3" BaseFightingCapacity="128355" BaseRewardID="102812;122207;101204" BaseRewardNum="12;12;6" ExtraRewardID="121221" ExtraRewardNum="5" name="Expeditionname_25" desc="Expeditiondesc_21" typeID="3" Expeditionimage="Expeditionimage_03" Extradesc="Extradesc_25">
+			<Extra id="1" Needtype="5" ExtraNeedvalue="1"/>
+			<Extra id="2" Needtype="6" ExtraNeedvalue="135000"/>
+		</task>
+
+		
+	<!-- 觉醒领悟水晶系列 -->
+	<!-- 觉醒领悟水晶3星
+		<task id="31" Star="3" Openlv="40-50" Time="28800" Neednum="3" BaseFightingCapacity="55935" BaseRewardID="122207;101204" BaseRewardNum="10;10" ExtraRewardID="102807" ExtraRewardNum="2" name="Expeditionname_31" desc="Expeditiondesc_31" typeID="4" Expeditionimage="Expeditionimage_04" Extradesc="Extradesc_31">
+			<Extra id="1" Needtype="3" ExtraNeedvalue="2"/>
+		</task> -->
+	<!-- 觉醒领悟水晶4星
+		<task id="32" Star="4" Openlv="51-60" Time="32400" Neednum="3" BaseFightingCapacity="83175" BaseRewardID="122207;101204" BaseRewardNum="12;12" ExtraRewardID="102807" ExtraRewardNum="3" name="Expeditionname_32" desc="Expeditiondesc_31" typeID="4" Expeditionimage="Expeditionimage_04" Extradesc="Extradesc_32">
+			<Extra id="1" Needtype="4" ExtraNeedvalue="1"/>
+			<Extra id="2" Needtype="5" ExtraNeedvalue="1"/>
+		</task> -->
+	<!-- 觉醒领悟水晶5星
+		<task id="33" Star="5" Openlv="61-70" Time="32400" Neednum="3" BaseFightingCapacity="113895" BaseRewardID="122207;101204" BaseRewardNum="14;14" ExtraRewardID="102807" ExtraRewardNum="4" name="Expeditionname_33" desc="Expeditiondesc_31" typeID="4" Expeditionimage="Expeditionimage_04" Extradesc="Extradesc_33">
+			<Extra id="1" Needtype="6" ExtraNeedvalue="125000"/>
+		</task> -->
+	<!-- 觉醒领悟水晶6星
+		<task id="34" Star="6" Openlv="71-80" Time="32400" Neednum="3" BaseFightingCapacity="134055" BaseRewardID="122207;101204" BaseRewardNum="16;16" ExtraRewardID="102807" ExtraRewardNum="5" name="Expeditionname_33" desc="Expeditiondesc_31" typeID="4" Expeditionimage="Expeditionimage_04" Extradesc="Extradesc_34">
+			<Extra id="1" Needtype="3" ExtraNeedvalue="1"/>
+			<Extra id="2" Needtype="6" ExtraNeedvalue="147500"/>
+		</task> -->
+
+
+	<!-- 精炼突破水晶系列 -->
+	<!-- 精炼突破水晶4星 -->
+		<task id="41" Star="4" Openlv="50-60" Time="28800" Neednum="3" BaseFightingCapacity="78675" BaseRewardID="121222;120101" BaseRewardNum="10;40" ExtraRewardID="102807" ExtraRewardNum="3" name="Expeditionname_41" desc="Expeditiondesc_41" typeID="5" Expeditionimage="Expeditionimage_05" Extradesc="Extradesc_41">
+			<Extra id="1" Needtype="4" ExtraNeedvalue="2"/>
+			<Extra id="2" Needtype="3" ExtraNeedvalue="1"/>
+		</task>
+	<!-- 精炼突破水晶5星 -->
+		<task id="42" Star="5" Openlv="61-70" Time="28800" Neednum="3" BaseFightingCapacity="113895" BaseRewardID="121222;120101" BaseRewardNum="20;50" ExtraRewardID="102807" ExtraRewardNum="4" name="Expeditionname_42" desc="Expeditiondesc_41" typeID="5" Expeditionimage="Expeditionimage_05" Extradesc="Extradesc_42">
+			<Extra id="1" Needtype="5" ExtraNeedvalue="1"/>
+			<Extra id="2" Needtype="7" ExtraNeedvalue="63"/>
+		</task>
+	<!-- 精炼突破水晶6星 -->
+		<task id="43" Star="6" Openlv="71-90" Time="28800" Neednum="3" BaseFightingCapacity="140355" BaseRewardID="121222;120101" BaseRewardNum="30;60" ExtraRewardID="102807" ExtraRewardNum="5" name="Expeditionname_43" desc="Expeditiondesc_41" typeID="5" Expeditionimage="Expeditionimage_05" Extradesc="Extradesc_43">
+			<Extra id="1" Needtype="6" ExtraNeedvalue="150000"/>
+		</task>
+    </Expeditiontask>
+	
+	
+	<!-- 远征基础配置
+		Lv：玩家等级
+		Dayurv：每日可远征最大数量
+	-->
+	<Expedition >
+		<entry id="1" Lv="15-29" Dayurv="4"/>
+		<entry id="2" Lv="30-39" Dayurv="5"/>
+		<entry id="3" Lv="40-49" Dayurv="6"/>
+		<entry id="4" Lv="50-59" Dayurv="7"/>
+		<entry id="5" Lv="60-69" Dayurv="8"/>
+		<entry id="6" Lv="70-80" Dayurv="8"/>
+	</Expedition>
+	
+	<!-- 
+		快速远征配置
+		快速远征消耗钻石=远征剩余时间（秒）/BaseTime*Consume
+		BaseTime;基础时间
+		Consume;基础时间消耗钻石
+	-->
+	<quickExpedition>
+		<entry id="1" BaseTime="600" Consume="20"/>
+	</quickExpedition>
+	
+</root>	

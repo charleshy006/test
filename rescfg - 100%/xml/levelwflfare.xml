@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+
+<!--
+	type:奖励类型：
+	     1：等级奖励；
+		 2：购买礼包；
+	costDiamond:购买礼包实际需求钻石，等级奖励栏不读该字段；
+	showDiamond:购买礼包显示需求钻石，等级奖励栏不读该字段；
+	rewardItem:对应item表ID
+			
+-->
+<root>
+	<group ID="1" lv="10" >
+		<entry id="1"  type="1" costDiamond="0" showDiamond="0" rewardItem="1-250000:2-100:120101-100" />
+		<entry id="2"  type="2" costDiamond="400"  showDiamond="4000" rewardItem="1-1000000:811606-20:120101-100" />
+	</group>
+	<group ID="2" lv="20" >
+		<entry id="1"  type="1" costDiamond="0" showDiamond="0" rewardItem="122209-1:2-100:120101-100" />
+		<entry id="2"  type="2" costDiamond="1500"  showDiamond="7500" rewardItem="122609-1:102659-1:120101-200" />
+	</group>
+	<group ID="3" lv="30" >
+		<entry id="1"  type="1" costDiamond="0" showDiamond="0" rewardItem="102655-1:2-100:120101-100" />
+		<entry id="2"  type="2" costDiamond="3000"  showDiamond="10000" rewardItem="102657-1:811606-40:120101-400" />
+	</group>
+	<group ID="4" lv="40" >
+		<entry id="1"  type="1" costDiamond="0" showDiamond="0" rewardItem="102313-2:2-100:120101-100" />
+		<entry id="2"  type="2" costDiamond="600"  showDiamond="17500" rewardItem="101204-400:102207-400:120101-800" />
+	</group>
+</root>

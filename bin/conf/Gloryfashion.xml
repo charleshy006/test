@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>	
+	<!--荣耀时装
+	Starttime：开始时间
+	Endtime：结束时间
+	price：价格（前面数值为资源itemID，后面编号为数量）
+	fashionitemid：时装包裹ID
+    Extraitemid：额外赠送包裹ID
+	background：背景整图
+	
+	-->
+	<Gloryfashion>
+	<!-- XX年XX月XX日至XX年XX月XX日 -->
+		<entry id="1" Starttime="2017-12-06 00:00:00" Endtime="2017-12-21 23:00:00" price="2-12000" fashionitemid="103101" background="Gloryfashion_01"/>
+	</Gloryfashion>
+</root>	

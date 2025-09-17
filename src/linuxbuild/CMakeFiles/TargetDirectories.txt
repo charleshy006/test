@@ -1,0 +1,13 @@
+/data/workspace_H/Server/src/linuxbuild/FetAppCfgTool/CMakeFiles/FetAppCfgTool.dir
+/data/workspace_H/Server/src/linuxbuild/FetAppCfgToolTx/CMakeFiles/FetAppCfgToolTx.dir
+/data/workspace_H/Server/src/linuxbuild/NormalGameServer/CMakeFiles/GameServer.dir
+/data/workspace_H/Server/src/linuxbuild/GateServer/CMakeFiles/GateServer.dir
+/data/workspace_H/Server/src/linuxbuild/GlobalServer/CMakeFiles/GlobalServer.dir
+/data/workspace_H/Server/src/linuxbuild/LoginServer/CMakeFiles/LoginServer.dir
+/data/workspace_H/Server/src/linuxbuild/Proto/CMakeFiles/Proto.dir
+/data/workspace_H/Server/src/linuxbuild/PubServer/CMakeFiles/PubServer.dir
+/data/workspace_H/Server/src/linuxbuild/Test/CMakeFiles/Test.dir
+/data/workspace_H/Server/src/linuxbuild/WebServer/CMakeFiles/WebServer.dir
+/data/workspace_H/Server/src/linuxbuild/GameServer/CMakeFiles/commGame.dir
+/data/workspace_H/Server/src/linuxbuild/common/CMakeFiles/common.dir
+/data/workspace_H/Server/src/linuxbuild/jsoncpp/CMakeFiles/jsoncpp.dir

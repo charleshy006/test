@@ -1,0 +1,17 @@
+
+package Proto;
+
+enum ModID
+{
+	LOGIN_MOD = 1;		//登录模块
+	ROLE_MOD = 2;		//角色数据相关模块
+	MAP_MOD = 3;		//地图模块
+	TASK_MOD = 4;		//任务模块
+	FRIEND_MOD = 5;		//好友模块
+	SORTLIST_MOD = 6;	//排名模块
+	GUILD_MOD = 7;		//军团模块
+	MISC_MOD = 8;		//杂项
+	TEAM_MOD = 9;		//队伍
+	MISC2_MOD = 10;		//杂项2
+}
+

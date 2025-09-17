@@ -1,0 +1,461 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+	<!--奖励系统配置表 
+		所有时间单位为（秒）
+		所有奖励领取跨越时间为凌晨00:00时
+		boxid：BOX组id
+		tag：角标id
+		RewardType：出现类型（1：签到、2：活动）
+		Type：
+			1：投资计划
+			2：吃大餐
+			3：满足条件即可领取
+			5：限时抽奖
+	-->
+<RewardConf>
+
+	<!-- 月签到奖励 -->
+	<SubReward index="SignInReward" RewardType="1" GiftType="1" time="2016-02-02 00:00:00" lastime="28" Signname="Signname_00" Signdesc="Signdesc_01" Signdesc1="Signdesc_02" Signdesc2="Signdesc_03" Signdesc3="Signdesc_04" >
+		<Displaydesc Type="3" monthid="1" ItemName="Day" ItemValue="id" Priority="3" Actname="Actname_003" Petthismonth="811616"/>
+			<Day id="1">
+				<Reward boxid="1101" desc="Signdesc_01" tag="VIP1"/>
+			</Day>
+			<Day id="2">
+				<Reward boxid="1102" desc="Signdesc_01" tag="0"/>
+			</Day>
+			<Day id="3">
+				<Reward boxid="1103" desc="Signdesc_01" tag="VIP2"/>
+			</Day>
+			<Day id="4">
+				<Reward boxid="1104" desc="Signdesc_01" tag="0"/>
+			</Day>
+			<Day id="5">
+				<Reward boxid="1105" desc="Signdesc_01" tag="VIP3"/>
+			</Day>
+			<Day id="6">
+				<Reward boxid="1106" desc="Signdesc_01" tag="VIP4"/>
+			</Day>
+			<Day id="7">
+				<Reward boxid="1107" desc="Signdesc_01" tag="0"/>
+			</Day>
+			<Day id="8">
+				<Reward boxid="1108" desc="Signdesc_01" tag="VIP5"/>
+			</Day>
+			<Day id="9">
+				<Reward boxid="1109" desc="Signdesc_01" tag="0"/>
+			</Day>
+			<Day id="10">
+				<Reward boxid="1110" desc="Signdesc_01" tag="VIP6"/>
+			</Day>
+			<Day id="11">
+				<Reward boxid="1111" desc="Signdesc_01" tag="VIP7"/>
+			</Day>
+			<Day id="12">
+				<Reward boxid="1112" desc="Signdesc_01" tag="0"/>
+			</Day>
+			<Day id="13">
+				<Reward boxid="1113" desc="Signdesc_01" tag="VIP8"/>
+			</Day>
+			<Day id="14">
+				<Reward boxid="1114" desc="Signdesc_01" tag="0"/>
+			</Day>
+			<Day id="15">
+				<Reward boxid="1115" desc="Signdesc_01" tag="VIP9"/>
+			</Day>
+			<Day id="16">
+				<Reward boxid="1116" desc="Signdesc_01" tag="VIP10"/>
+			</Day>
+			<Day id="17">
+				<Reward boxid="1117" desc="Signdesc_01" tag="0"/>
+			</Day>
+			<Day id="18">
+				<Reward boxid="1118" desc="Signdesc_01" tag="VIP11"/>
+			</Day>
+			<Day id="19">
+				<Reward boxid="1119" desc="Signdesc_01" tag="0"/>
+			</Day>
+			<Day id="20">
+				<Reward boxid="1120" desc="Signdesc_01" tag="VIP12"/>
+			</Day>
+			<Day id="21">
+				<Reward boxid="1121" desc="Signdesc_01" tag="VIP12"/>
+			</Day>
+			<Day id="22">
+				<Reward boxid="1122" desc="Signdesc_01" tag="0"/>
+			</Day>
+			<Day id="23">
+				<Reward boxid="1123" desc="Signdesc_01" tag="VIP13"/>
+			</Day>
+			<Day id="24">
+				<Reward boxid="1124" desc="Signdesc_01" tag="0"/>
+			</Day>
+			<Day id="25">
+				<Reward boxid="1125" desc="Signdesc_01" tag="VIP13"/>
+			</Day>
+			<Day id="26">
+				<Reward boxid="1126" desc="Signdesc_01" tag="VIP14"/>
+			</Day>
+			<Day id="27">
+				<Reward boxid="1127" desc="Signdesc_01" tag="0"/>
+			</Day>
+			<Day id="28">
+				<Reward boxid="1128" desc="Signdesc_01" tag="VIP14"/>
+			</Day>
+			<Day id="29">
+				<Reward boxid="1129" desc="Signdesc_01" tag="0"/>
+			</Day>
+			<Day id="30">
+				<Reward boxid="1130" desc="Signdesc_01" tag="VIP15"/>
+			</Day>
+			<Day id="31">
+				<Reward boxid="1131" desc="Signdesc_01" tag="VIP15"/>
+			</Day>
+	</SubReward>
+	
+	<!-- 开服奖励（30天奖励） -->
+	<SubReward index="OpenSvrReward" RewardType="1" GiftType="2">
+		<Displaydesc Type="3" ItemName="Day" ItemValue ="id" Priority="3" Actname="Actname_003"/>
+		<Day id="1" >
+			<Reward boxid="1201" desc="OpenSvrdesc_01"/>
+		</Day>
+		<Day id="2" >
+			<Reward boxid="1202" desc="OpenSvrdesc_01"/>
+		</Day>
+		<Day id="3" >
+			<Reward boxid="1203" desc="OpenSvrdesc_01"/>
+		</Day>
+		<Day id="4" >
+			<Reward boxid="1204" desc="OpenSvrdesc_01"/>
+		</Day>
+		<Day id="5" >
+			<Reward boxid="1205" desc="OpenSvrdesc_01"/>
+		</Day>
+		<Day id="6" >
+			<Reward boxid="1206" desc="OpenSvrdesc_01"/>
+		</Day>
+		<Day id="7" >
+			<Reward boxid="1207" desc="OpenSvrdesc_01"/>
+		</Day>
+		<Day id="8" >
+			<Reward boxid="1208" desc="OpenSvrdesc_01"/>
+		</Day>
+		<Day id="9" >
+			<Reward boxid="1209" desc="OpenSvrdesc_01"/>
+		</Day>
+		<Day id="10" >
+			<Reward boxid="1210" desc="OpenSvrdesc_01"/>
+		</Day>
+		<Day id="11" >
+			<Reward boxid="1211" desc="OpenSvrdesc_01"/>
+		</Day>
+		<Day id="12" >
+			<Reward boxid="1212" desc="OpenSvrdesc_01"/>
+		</Day>
+		<Day id="13" >
+			<Reward boxid="1213" desc="OpenSvrdesc_01"/>
+		</Day>
+		<Day id="14" >
+			<Reward boxid="1214" desc="OpenSvrdesc_01"/>
+		</Day>
+		<Day id="15" >
+			<Reward boxid="1215" desc="OpenSvrdesc_01"/>
+		</Day>
+		<Day id="16" >
+			<Reward boxid="1216" desc="OpenSvrdesc_01"/>
+		</Day>
+		<Day id="17" >
+			<Reward boxid="1217" desc="OpenSvrdesc_01"/>
+		</Day>
+		<Day id="18" >
+			<Reward boxid="1218" desc="OpenSvrdesc_01"/>
+		</Day>
+		<Day id="19" >
+			<Reward boxid="1219" desc="OpenSvrdesc_01"/>
+		</Day>
+		<Day id="20" >
+			<Reward boxid="1220" desc="OpenSvrdesc_01"/>
+		</Day>
+		<Day id="21" >
+			<Reward boxid="1221" desc="OpenSvrdesc_01"/>
+		</Day>
+		<Day id="22" >
+			<Reward boxid="1222" desc="OpenSvrdesc_01"/>
+		</Day>
+		<Day id="23" >
+			<Reward boxid="1223" desc="OpenSvrdesc_01"/>
+		</Day>
+		<Day id="24" >
+			<Reward boxid="1224" desc="OpenSvrdesc_01"/>
+		</Day>
+		<Day id="25" >
+			<Reward boxid="1225" desc="OpenSvrdesc_01"/>
+		</Day>
+		<Day id="26" >
+			<Reward boxid="1226" desc="OpenSvrdesc_01"/>
+		</Day>
+		<Day id="27" >
+			<Reward boxid="1227" desc="OpenSvrdesc_01"/>
+		</Day>
+		<Day id="28" >
+			<Reward boxid="1228" desc="OpenSvrdesc_01"/>
+		</Day>
+		<Day id="29" >
+			<Reward boxid="1229" desc="OpenSvrdesc_01"/>
+		</Day>
+		<Day id="30" >
+			<Reward boxid="1230" desc="OpenSvrdesc_01"/>
+		</Day>
+	</SubReward>
+	
+	<!--等级奖励-->
+	<SubReward index="LevelReward" RewardType="1" GiftType="3" lvname="lvname_00" lvdesc="lvdesc_00">
+		<Displaydesc Type="3" ItemName="Level" ItemValue ="val" Priority="3" Actname="Actname_003"/>
+		<Level val="4">
+			<Reward boxid="1004" desc="Leveldesc_01"/>
+		</Level>
+		<Level val="07">
+			<Reward boxid="1007" desc="Leveldesc_01"/>
+		</Level>
+		<Level val="10">
+			<Reward boxid="1010" desc="Leveldesc_01"/>
+		</Level>
+		<Level val="12">
+			<Reward boxid="1012" desc="Leveldesc_01"/>
+		</Level>
+		<Level val="15">
+			<Reward boxid="1015" desc="Leveldesc_01"/>
+		</Level>
+		<Level val="18">
+			<Reward boxid="1018" desc="Leveldesc_01"/>
+		</Level>
+		<Level val="20">
+			<Reward boxid="1020" desc="Leveldesc_01"/>
+		</Level>
+		<Level val="23">
+			<Reward boxid="1023" desc="Leveldesc_01"/>
+		</Level>
+		<Level val="25">
+			<Reward boxid="1025" desc="Leveldesc_01"/>
+		</Level>
+		<Level val="27">
+			<Reward boxid="1027" desc="Leveldesc_01"/>
+		</Level>
+		<Level val="30">
+			<Reward boxid="1030" desc="Leveldesc_01"/>
+		</Level>
+		<Level val="32">
+			<Reward boxid="1032" desc="Leveldesc_01"/>
+		</Level>
+		<Level val="35">
+			<Reward boxid="1035" desc="Leveldesc_01"/>
+		</Level>
+		<Level val="38">
+			<Reward boxid="1038" desc="Leveldesc_01"/>
+		</Level>
+		<Level val="40">
+			<Reward boxid="1040" desc="Leveldesc_01"/>
+		</Level>
+		<Level val="45">
+			<Reward boxid="1045" desc="Leveldesc_01"/>
+		</Level>
+		<Level val="50">
+			<Reward boxid="1050" desc="Leveldesc_01"/>
+		</Level>
+		<Level val="55">
+			<Reward boxid="1055" desc="Leveldesc_01"/>
+		</Level>
+		<Level val="60">
+			<Reward boxid="1060" desc="Leveldesc_01"/>
+		</Level>
+	</SubReward>
+
+	<!--在线奖励（累计XX秒）-->
+	<SubReward index="OnlineReward" RewardType="1" GiftType="4" Rewardname="Rewardname_00" Rewarddesc="Rewarddesc_00">
+		<Displaydesc Type="3" ItemName="Time" ItemValue ="val" Priority="3" Actname="Actname_003"/>
+		<Time id="1" val="300">
+			<Reward boxid="1310" desc="Onlinedesc_01"/>
+		</Time>
+		<Time id="2" val="900">
+			<Reward boxid="1311" desc="Onlinedesc_01"/>
+		</Time>
+		<Time id="3" val="1800">
+			<Reward boxid="1312" desc="Onlinedesc_01"/>
+		</Time>
+		<Time id="4" val="3600">
+			<Reward boxid="1313" desc="Onlinedesc_01"/>
+		</Time>
+		<Time id="5" val="5400">
+			<Reward boxid="1314" desc="Onlinedesc_01"/>
+		</Time>
+	</SubReward>
+
+
+	<!--吃大餐
+		index：活动系统名称
+		Starttime：每日开启时间
+		PhysicalType：获得体力种类
+		Physicalnum：获得体力数量
+		Type：活动类型
+		Priority：排序优先级
+		Actname：活动名称
+		Actdesc：活动描述
+		Activitiesimage：活动图片
+		Activitiesicon：活动icon
+		id：抽奖物品id
+		itemnum：抽奖物品数量
+		rate：抽奖物品概率
+		name：奖励条标题
+		desc：奖励条描述
+	-->	
+	<SubReward index="Eatdinner" RewardType="2" Starttime="43200-50400;64800-72000;75600-82800" time="2015-05-01 00:00:00" lastime="30" PhysicalType="11" Physicalnum="50">
+		<Displaydesc Type="2" ItemName="item" Priority="2" Actname="Actname_002" desc1="Actdesc_002" desc2="Actdesc_003" Activitiesimage="02" Activitiesicon="02"/>
+		<item id="1" itemnum="10000" rate="100" name="Actname_0002" desc="Actdesc_0002"/>
+	</SubReward>
+
+
+	<!--投资计划正式
+		index：活动系统名称
+		Starttime：每日开启时间
+		costResType：购买消耗金钱种类
+		Price：价格
+		FalsePrice：虚高价格
+		Type：活动类型
+		Priority：排序优先级
+		Actname：活动名称
+		Actdesc：活动描述
+		Activitiesimage：活动图片
+		Activitiesicon：活动icon
+		itemid：奖励物品id
+		itemnum：奖励物品数量
+		name：奖励条标题
+		desc：奖励条描述
+	-->
+	<SubReward index="Purchaseplan" RewardType="2" Starttime="0-86400" time="2015-05-01 00:00:00" lastime="30" costResType="2" Price="1000" FalsePrice="5888">
+		<Displaydesc Type="1" ItemName="Lv" Priority="1" Actname="Actname_001" Actdesc="Actdesc_001" Activitiesimage="01" Activitiesicon="01"/>
+		<Lv id="5" itemid="2" itemnum="250" name="Actname_0001" desc="Actdesc_0001"/>
+		<Lv id="10" itemid="2" itemnum="250" name="Actname_0001" desc="Actdesc_0001"/>
+		<Lv id="15" itemid="2" itemnum="250" name="Actname_0001" desc="Actdesc_0001"/>
+		<Lv id="20" itemid="2" itemnum="250" name="Actname_0001" desc="Actdesc_0001"/>
+		<Lv id="25" itemid="2" itemnum="250" name="Actname_0001" desc="Actdesc_0001"/>
+		<Lv id="30" itemid="2" itemnum="250" name="Actname_0001" desc="Actdesc_0001"/>
+		<Lv id="35" itemid="2" itemnum="500" name="Actname_0001" desc="Actdesc_0001"/>
+		<Lv id="40" itemid="2" itemnum="500" name="Actname_0001" desc="Actdesc_0001"/>
+		<Lv id="45" itemid="2" itemnum="500" name="Actname_0001" desc="Actdesc_0001"/>
+		<Lv id="50" itemid="2" itemnum="500" name="Actname_0001" desc="Actdesc_0001"/>
+		<Lv id="55" itemid="2" itemnum="1000" name="Actname_0001" desc="Actdesc_0001"/>
+		<Lv id="60" itemid="2" itemnum="1000" name="Actname_0001" desc="Actdesc_0001"/>
+	</SubReward>
+	
+	<!--单日累计充值好礼
+		index：活动系统名称
+		Starttime：每日开启时间
+		Type：活动类型
+		Priority：排序优先级
+		Actname：活动名称
+		Actdesc：活动描述
+		Activitiesimage：活动图片
+		Activitiesicon：活动icon
+		Rechargenum：充值数量
+		Rewardbox：充值奖励物品BOXid
+		name：奖励条标题
+	-->
+	<!-- <SubReward index="Rechargegift" RewardType="2" Starttime="0-86400" time="2015-05-01 00:00:00" lastime="30">
+		<Displaydesc Type="3" ItemName="Conditions" ValueName="Rechargenum" Priority="3" Actname="Actname_003" desc="Actdesc_003" Activitiesimage="03" Activitiesicon="03"/>
+		<Conditions id="1" Rechargenum="60" boxid="1501" name="Actname_0003"/>
+		<Conditions id="2" Rechargenum="300" boxid="1502" name="Actname_0003"/>
+		<Conditions id="3" Rechargenum="980" boxid="1503" name="Actname_0003"/>
+		<Conditions id="4" Rechargenum="1980" boxid="1504" name="Actname_0003"/>
+		<Conditions id="5" Rechargenum="3960" boxid="1505" name="Actname_0003"/>
+		<Conditions id="6" Rechargenum="8880" boxid="1506" name="Actname_0003"/>
+	</SubReward> -->
+
+	
+	<!--限时武神
+		index：活动系统名称
+		Starttime：每日开启时间
+		Listid：读取排行榜的id
+		Type：活动类型
+		Priority：排序优先级
+		Actname：活动名称
+		Actdesc：活动描述（1-7）
+		Activitiesimage：活动图片
+		Activitiesicon：活动icon
+		draw：抽奖组id
+		costResType：消费货币类型
+		curPrice：价格
+		Freetime：免费抽奖时间（秒）
+	-->
+	<!--
+	<SubReward index="TimedValkyrie" RewardType="2" Starttime="0-86400" Listid="10" time="2015-05-31 00:00:00" lastime="30">
+		<Displaydesc Type="5" ItemName="entry" Priority="5" petid="811606" Actname="Actname_004" desc1="Actdesc_0051" desc2="Actdesc_0052" desc3="Actdesc_0053" desc4="Actdesc_0054" desc5="Actdesc_0055" desc6="Actdesc_0056" desc7="Actdesc_0057" Activitiesimage="04" Activitiesicon="04"/>
+			<entry id="1" draw="1"/>
+	</SubReward>
+	-->
+	
+	
+	<SubReward2 index="EquipmentRecruitment" RewardType="11" Starttime="0-86400" time="2015-05-01 00:00:00" lastime="30" costResType="2" Price="1000" FalsePrice="51">
+	<Displaydesc Type="11" ItemName="SummonCount" Priority="1" Actname="Actname_001" Actdesc="Actdesc_001" Activitiesimage="01" Activitiesicon="01" rechargeId="51" />
+	<SummonCount id="1" itemId="1" itemNum="20000" boxId="120101" boxNum="10" name="EquipmentRecruitment01" desc="EquipmentRecruitment01"/>
+	<SummonCount id="5" itemId="1" itemNum="20000" boxId="120101" boxNum="10" name="EquipmentRecruitment01" desc="EquipmentRecruitment01"/>
+	<SummonCount id="10" itemId="1" itemNum="30000" boxId="120101" boxNum="10" name="EquipmentRecruitment01" desc="EquipmentRecruitment01"/>
+	<SummonCount id="15" itemId="1" itemNum="30000" boxId="120101" boxNum="10" name="EquipmentRecruitment01" desc="EquipmentRecruitment01"/>
+	<SummonCount id="20" itemId="120101" itemNum="10" boxId="102324" boxNum="1" name="EquipmentRecruitment01" desc="EquipmentRecruitment01"/>
+	<SummonCount id="25" itemId="1" itemNum="40000" boxId="102324" boxNum="1" name="EquipmentRecruitment01" desc="EquipmentRecruitment01"/>
+	<SummonCount id="30" itemId="1" itemNum="40000" boxId="102324" boxNum="1" name="EquipmentRecruitment01" desc="EquipmentRecruitment01"/>
+	<SummonCount id="35" itemId="1" itemNum="40000" boxId="102324" boxNum="1" name="EquipmentRecruitment01" desc="EquipmentRecruitment01"/>
+	<SummonCount id="40" itemId="120101" itemNum="10" boxId="122209" boxNum="2" name="EquipmentRecruitment01" desc="EquipmentRecruitment01"/>
+	<SummonCount id="45" itemId="1" itemNum="50000" boxId="102324" boxNum="1" name="EquipmentRecruitment01" desc="EquipmentRecruitment01"/>
+	<SummonCount id="50" itemId="1" itemNum="50000" boxId="102324" boxNum="1" name="EquipmentRecruitment01" desc="EquipmentRecruitment01"/>
+	<SummonCount id="55" itemId="1" itemNum="50000" boxId="102324" boxNum="1" name="EquipmentRecruitment01" desc="EquipmentRecruitment01"/>
+	<SummonCount id="60" itemId="120101" itemNum="10" boxId="102657" boxNum="1" name="EquipmentRecruitment01" desc="EquipmentRecruitment01"/>
+	<SummonCount id="65" itemId="1" itemNum="50000" boxId="102324" boxNum="1" name="EquipmentRecruitment01" desc="EquipmentRecruitment01"/>
+	<SummonCount id="70" itemId="1" itemNum="50000" boxId="102324" boxNum="1" name="EquipmentRecruitment01" desc="EquipmentRecruitment01"/>
+	<SummonCount id="75" itemId="1" itemNum="50000" boxId="102324" boxNum="1" name="EquipmentRecruitment01" desc="EquipmentRecruitment01"/>
+	<SummonCount id="80" itemId="120101" itemNum="10" boxId="102657" boxNum="1" name="EquipmentRecruitment01" desc="EquipmentRecruitment01"/>
+	<SummonCount id="85" itemId="1" itemNum="50000" boxId="102324" boxNum="1" name="EquipmentRecruitment01" desc="EquipmentRecruitment01"/>
+	<SummonCount id="90" itemId="1" itemNum="50000" boxId="102325" boxNum="1" name="EquipmentRecruitment01" desc="EquipmentRecruitment01"/>
+	<SummonCount id="95" itemId="1" itemNum="50000" boxId="102325" boxNum="1" name="EquipmentRecruitment01" desc="EquipmentRecruitment01"/>
+	<SummonCount id="100" itemId="120101" itemNum="20" boxId="122609" boxNum="1" name="EquipmentRecruitment01" desc="EquipmentRecruitment01"/>
+
+	</SubReward2>
+	
+	<SubReward2 index="AttendantRecruitment" RewardType="11" Starttime="0-86400" time="2015-05-01 00:00:00" lastime="30" costResType="2" Price="1000" FalsePrice="52">
+	<Displaydesc Type="11" ItemName="SummonCount" Priority="1" Actname="Actname_001" Actdesc="Actdesc_001" Activitiesimage="01" Activitiesicon="01" rechargeId="52" />
+	<SummonCount id="1" itemId="1" itemNum="20000" boxId="120404" boxNum="10" name="EquipmentRecruitment01" desc="EquipmentRecruitment01"/>
+	<SummonCount id="5" itemId="1" itemNum="20000" boxId="120404" boxNum="10" name="EquipmentRecruitment01" desc="EquipmentRecruitment01"/>
+	<SummonCount id="10" itemId="1" itemNum="30000" boxId="120404" boxNum="10" name="EquipmentRecruitment01" desc="EquipmentRecruitment01"/>
+	<SummonCount id="15" itemId="1" itemNum="30000" boxId="120404" boxNum="10" name="EquipmentRecruitment01" desc="EquipmentRecruitment01"/>
+	<SummonCount id="20" itemId="120404" itemNum="5" boxId="102337" boxNum="1" name="EquipmentRecruitment01" desc="EquipmentRecruitment01"/>
+	<SummonCount id="25" itemId="1" itemNum="40000" boxId="121204" boxNum="10" name="EquipmentRecruitment01" desc="EquipmentRecruitment01"/>
+	<SummonCount id="30" itemId="1" itemNum="40000" boxId="121204" boxNum="10" name="EquipmentRecruitment01" desc="EquipmentRecruitment01"/>
+	<SummonCount id="35" itemId="1" itemNum="40000" boxId="121204" boxNum="10" name="EquipmentRecruitment01" desc="EquipmentRecruitment01"/>
+	<SummonCount id="40" itemId="121204" itemNum="10" boxId="102340" boxNum="1" name="EquipmentRecruitment01" desc="EquipmentRecruitment01"/>
+	<SummonCount id="45" itemId="1" itemNum="50000" boxId="121204" boxNum="10" name="EquipmentRecruitment01" desc="EquipmentRecruitment01"/>
+	<SummonCount id="50" itemId="1" itemNum="50000" boxId="121204" boxNum="10" name="EquipmentRecruitment01" desc="EquipmentRecruitment01"/>
+	<SummonCount id="55" itemId="1" itemNum="50000" boxId="121204" boxNum="10" name="EquipmentRecruitment01" desc="EquipmentRecruitment01"/>
+	<SummonCount id="60" itemId="102315" itemNum="5" boxId="102315" boxNum="1" name="EquipmentRecruitment01" desc="EquipmentRecruitment01"/>
+	<SummonCount id="65" itemId="1" itemNum="50000" boxId="122204" boxNum="5" name="EquipmentRecruitment01" desc="EquipmentRecruitment01"/>
+	<SummonCount id="70" itemId="1" itemNum="50000" boxId="102313" boxNum="1" name="EquipmentRecruitment01" desc="EquipmentRecruitment01"/>
+	<SummonCount id="75" itemId="1" itemNum="50000" boxId="122204" boxNum="5" name="EquipmentRecruitment01" desc="EquipmentRecruitment01"/>
+	<SummonCount id="80" itemId="121204" itemNum="5" boxId="122604" boxNum="10" name="EquipmentRecruitment01" desc="EquipmentRecruitment01"/>
+	<SummonCount id="85" itemId="1" itemNum="50000" boxId="122204" boxNum="5" name="EquipmentRecruitment01" desc="EquipmentRecruitment01"/>
+	<SummonCount id="90" itemId="1" itemNum="50000" boxId="102314" boxNum="1" name="EquipmentRecruitment01" desc="EquipmentRecruitment01"/>
+	<SummonCount id="95" itemId="1" itemNum="50000" boxId="122204" boxNum="5" name="EquipmentRecruitment01" desc="EquipmentRecruitment01"/>
+	<SummonCount id="100" itemId="102315" itemNum="5" boxId="122604" boxNum="10" name="EquipmentRecruitment01" desc="EquipmentRecruitment01"/>
+	</SubReward2>
+	
+	<!--单日累计充值好礼
+		index：活动系统名称
+		Starttime：每日开启时间
+		Type：活动类型
+		Priority：排序优先级
+		Actname：活动名称
+		Actdesc：活动描述
+		Activitiesimage：活动图片
+		Activitiesicon：活动icon
+		Rechargenum：充值数量
+		Rewardbox：充值奖励物品BOXid
+		name：奖励条标题
+	-->
+	
+
+</RewardConf>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Conf>
+	<!--
+		Activityid:活动ID
+		StartTime:活动开启时间
+		EndTime:活动结束时间
+		说明:抽奖方式为不放回抽奖，即抽到的道具从奖池去掉
+	-->
+	
+	<Activity Activityid="1" StartTime="2021-12-27 00:00:00" EndTime="2022-10-31 23:59:00" >
+		<item id="1" Itemid="2" ItemNum="188" DrawProbability="9000" iconid="costResType2"/>
+		<item id="2" Itemid="100403" ItemNum="1" DrawProbability="68000" iconid="100403_icon"/>
+		<item id="3" Itemid="101290" ItemNum="5" DrawProbability="12000" iconid="101290_icon"/>
+		<item id="4" Itemid="100404" ItemNum="1" DrawProbability="3000" iconid="100404_icon"/>
+		<item id="5" Itemid="2" ItemNum="288" DrawProbability="500" iconid="costResType2"/>
+		<item id="6" Itemid="1" ItemNum="500000" DrawProbability="5000" iconid="costResType1"/>
+		<item id="7" Itemid="120101" ItemNum="100" DrawProbability="1500" iconid="120101_icon"/>
+		<item id="8" Itemid="100104" ItemNum="1" DrawProbability="1000" iconid="100104_icon"/>
+	</Activity>
+	
+	<!--
+		Level:需求角色等级
+		DrawNum:抽奖次数增加次数
+	-->
+	<DrawLevel>
+		<draw Level="7" DrawNum="1"/>
+		<draw Level="11" DrawNum="1"/>
+		<draw Level="16" DrawNum="1"/>
+		<draw Level="22" DrawNum="1"/>
+		<draw Level="24" DrawNum="1"/>
+		<draw Level="28" DrawNum="1"/>
+		<draw Level="31" DrawNum="1"/>
+		<draw Level="34" DrawNum="1"/>
+	</DrawLevel>
+</Conf>

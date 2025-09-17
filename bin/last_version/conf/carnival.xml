@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+
+<!--
+	activityType:活动类型：1:登陆奖励活动; 2:半价礼包活动; 3:目标任务活动1; 4:目标任务活动2
+	activityCondition:1:当天是否登陆：对应当天登陆次数是否大于等于1
+					  2:累计充值：对应累计充值额度达到指定数值
+					  3:钻石购买：对应半价礼包钻石购买价格
+					  4:主线副本获得星星数：对应主线副本获得星星数量
+					  5:指定数量技能强化等级达到指定等级：对应指定数量技能强化等级达到指定等级
+					  6:天梯竞技历史最高排名：对应天梯竞技历史最高排名
+					  7:指定件数装备精炼等级达到指定等级：对应身上指定数量装备精炼到达指定等级
+					  8:组队副本通关进度：对应通关组队副本ID
+					  9:指定件数装备强化等级达到指定等级：对应身上指定数量装备强化到达指定等级
+					  10:王者之战胜利几次：对应当天王者之战胜利次数(1V1)
+					  11:炼金商店刷新：对应当天炼金商店刷新次数
+					  12:实时战场参与次数：对应当天实时战场参与次数(3V3)
+					  13:宝石品质：对应身上镶嵌紫色品质以上宝石达到指定数值
+					  14:公会大厅等级：对应所在公会大厅等级达到指定数值
+					  15:角色等级：对应主角等级达到指定数值
+					  16:战斗力达标：对应战斗力达到指定数值
+					  17:宝藏抽取：对应当天宝藏抽取次数
+					  18:指定数量随从进阶到指定等级：对应指定数量随从进阶到指定等级
+					  19:累计消耗：对应累计消耗额度达到指定数值
+	conditionValue:activityCondition条件后对应数值
+	oriprice:半价礼包虚高价格
+	rewardBoxid:对应box表ID	
+    备注：	根据不同activityCondition条目language表内有对应键值，其中ui_sevenRevelry_22、24、26、30、31、32、33、34、35、36、37。{0}部分引用对应conditionValue数值
+	        其中activityCondition="8" 引用为多人副本关卡名，ui_sevenRevelry_28对应关卡为20200、20201、20202
+		ui_sevenRevelry_25、27、29 {0}是对应身上指定的数量，{1}是指定的数量强化或精炼的等级
+			
+-->
+<conf>
+	<days id="1" imageid="costResType1" >
+		<activity activityType="1">
+			<entry id="1" activityCondition="1" conditionValue="1" rewardBoxid="700000" />
+			<entry id="2" activityCondition="19" conditionValue="1000" rewardBoxid="700010" />
+		</activity>
+		<activity activityType="2">
+			<entry id="1" activityCondition="3" conditionValue="1500" oriPrice="3000" rewardBoxid="102300" />
+		</activity>
+		<activity activityType="3">
+			<entry id="1" activityCondition="4" conditionValue="27" rewardBoxid="700111" />
+			<entry id="2" activityCondition="4" conditionValue="42" rewardBoxid="700112" />
+			<entry id="3" activityCondition="4" conditionValue="69" rewardBoxid="700113" />
+			<entry id="4" activityCondition="4" conditionValue="96" rewardBoxid="700114" />
+			<entry id="5" activityCondition="4" conditionValue="123" rewardBoxid="700115" />
+		</activity>
+		<activity activityType="4">
+			<entry id="1" activityCondition="5" conditionValue="4" extraTarget="10" rewardBoxid="700211" />
+			<entry id="2" activityCondition="5" conditionValue="4" extraTarget="15" rewardBoxid="700212" />
+			<entry id="3" activityCondition="5" conditionValue="4" extraTarget="20" rewardBoxid="700213" />
+			<entry id="4" activityCondition="5" conditionValue="4" extraTarget="25" rewardBoxid="700214" />
+			<entry id="5" activityCondition="5" conditionValue="4" extraTarget="30" rewardBoxid="700215" />
+		</activity>
+	</days>
+	
+	<days id="2" imageid="carnival2" >
+		<activity activityType="1">
+			<entry id="1" activityCondition="1" conditionValue="1" rewardBoxid="700001" />
+			<entry id="2" activityCondition="19" conditionValue="3000" rewardBoxid="700011" />
+		</activity>
+		<activity activityType="2">
+			<entry id="1" activityCondition="3" conditionValue="1200" oriPrice="2400" rewardBoxid="102301" />
+		</activity>
+		<activity activityType="3">
+			<entry id="1" activityCondition="6" conditionValue="200" rewardBoxid="700121" />
+			<entry id="2" activityCondition="6" conditionValue="100" rewardBoxid="700122" />
+			<entry id="3" activityCondition="6" conditionValue="50" rewardBoxid="700123" />
+			<entry id="4" activityCondition="6" conditionValue="20" rewardBoxid="700124" />
+			<entry id="5" activityCondition="6" conditionValue="10" rewardBoxid="700125" />
+			<entry id="6" activityCondition="6" conditionValue="3" rewardBoxid="700126" />
+		</activity>
+		<activity activityType="4">
+			<entry id="1" activityCondition="9" conditionValue="7" extraTarget="40" rewardBoxid="700221" />
+			<entry id="2" activityCondition="9" conditionValue="7" extraTarget="45" rewardBoxid="700222" />
+			<entry id="3" activityCondition="9" conditionValue="7" extraTarget="50" rewardBoxid="700223" />
+			<entry id="4" activityCondition="9" conditionValue="7" extraTarget="55" rewardBoxid="700224" />
+			<entry id="5" activityCondition="9" conditionValue="7" extraTarget="60" rewardBoxid="700225" />
+			<entry id="6" activityCondition="9" conditionValue="7" extraTarget="70" rewardBoxid="700226" />
+		</activity>
+	</days>
+	
+	<days id="3" imageid="costResType2" >
+		<activity activityType="1">
+			<entry id="1" activityCondition="1" conditionValue="1" rewardBoxid="700002" />
+			<entry id="2" activityCondition="19" conditionValue="5000" rewardBoxid="700012" />
+		</activity>
+		<activity activityType="2">
+			<entry id="1" activityCondition="3" conditionValue="1000" oriPrice="2000" rewardBoxid="102302" />
+		</activity>
+		<activity activityType="3">		
+			<entry id="1" activityCondition="8" conditionValue="1" extraTarget="20201" rewardBoxid="700131" />
+			<entry id="2" activityCondition="8" conditionValue="1" extraTarget="20203" rewardBoxid="700132" />
+			<entry id="3" activityCondition="8" conditionValue="1" extraTarget="20205" rewardBoxid="700133" />
+			<entry id="4" activityCondition="8" conditionValue="1" extraTarget="20207" rewardBoxid="700134" />
+			<entry id="5" activityCondition="8" conditionValue="1" extraTarget="20209" rewardBoxid="700135" />			
+		</activity>
+		<activity activityType="4">
+			<entry id="1" activityCondition="18" conditionValue="5" extraTarget="2" rewardBoxid="700231" />
+			<entry id="2" activityCondition="18" conditionValue="4" extraTarget="3" rewardBoxid="700232" />
+			<entry id="3" activityCondition="18" conditionValue="3" extraTarget="4" rewardBoxid="700233" />
+			<entry id="4" activityCondition="18" conditionValue="2" extraTarget="5" rewardBoxid="700234" />
+			<entry id="5" activityCondition="18" conditionValue="1" extraTarget="6" rewardBoxid="700235" />
+		</activity>
+	</days>
+	
+	<days id="4" imageid="633000_icon" >
+		<activity activityType="1">
+			<entry id="1" activityCondition="1" conditionValue="1" rewardBoxid="700003" />
+			<entry id="2" activityCondition="19" conditionValue="8000" rewardBoxid="700013" />
+		</activity>
+		<activity activityType="2">
+			<entry id="1" activityCondition="3" conditionValue="1500" oriPrice="3000" rewardBoxid="102303" />
+		</activity>
+		<activity activityType="3">
+			<entry id="1" activityCondition="10" conditionValue="10" rewardBoxid="700141" />
+			<entry id="2" activityCondition="10" conditionValue="15" rewardBoxid="700142" />
+			<entry id="3" activityCondition="10" conditionValue="20" rewardBoxid="700143" />
+			<entry id="4" activityCondition="10" conditionValue="25" rewardBoxid="700144" />
+			<entry id="5" activityCondition="10" conditionValue="30" rewardBoxid="700145" />
+		</activity>
+		<activity activityType="4">
+			<entry id="1" activityCondition="11" conditionValue="100" rewardBoxid="700241" />
+			<entry id="2" activityCondition="11" conditionValue="150" rewardBoxid="700242" />
+			<entry id="3" activityCondition="11" conditionValue="200" rewardBoxid="700243" />
+			<entry id="4" activityCondition="11" conditionValue="250" rewardBoxid="700244" />
+			<entry id="5" activityCondition="11" conditionValue="300" rewardBoxid="700245" />
+		</activity>
+	</days>
+	
+	<days id="5" imageid="102319_icon" >
+		<activity activityType="1">
+			<entry id="1" activityCondition="1" conditionValue="1" rewardBoxid="700004" />
+			<entry id="2" activityCondition="19" conditionValue="10000" rewardBoxid="700014" />
+		</activity>
+		<activity activityType="2">
+			<entry id="1" activityCondition="3" conditionValue="1500" oriPrice="3000" rewardBoxid="102304" />
+		</activity>
+		<activity activityType="3">
+			<entry id="1" activityCondition="12" conditionValue="15" rewardBoxid="700151" />
+			<entry id="2" activityCondition="12" conditionValue="20" rewardBoxid="700152" />
+			<entry id="3" activityCondition="12" conditionValue="25" rewardBoxid="700153" />
+			<entry id="4" activityCondition="12" conditionValue="30" rewardBoxid="700154" />
+			<entry id="5" activityCondition="12" conditionValue="35" rewardBoxid="700155" />
+		</activity>
+		<activity activityType="4">
+			<entry id="1" activityCondition="13" conditionValue="5" rewardBoxid="700251" />
+			<entry id="2" activityCondition="13" conditionValue="10" rewardBoxid="700252" />
+			<entry id="3" activityCondition="13" conditionValue="15" rewardBoxid="700253" />
+			<entry id="4" activityCondition="13" conditionValue="20" rewardBoxid="700254" />
+			<entry id="5" activityCondition="13" conditionValue="25" rewardBoxid="700255" />
+		</activity>
+	</days>
+	
+	<days id="6" imageid="122204_icon" >
+		<activity activityType="1">
+			<entry id="1" activityCondition="1" conditionValue="1" rewardBoxid="700005" />
+			<entry id="2" activityCondition="19" conditionValue="15000" rewardBoxid="700015" />
+		</activity>
+		<activity activityType="2">
+			<entry id="1" activityCondition="3" conditionValue="3000" oriPrice="6000" rewardBoxid="102305" />
+		</activity>
+		<activity activityType="3">
+			<entry id="1" activityCondition="15" conditionValue="30" rewardBoxid="700161" />
+			<entry id="2" activityCondition="15" conditionValue="32" rewardBoxid="700162" />
+			<entry id="3" activityCondition="15" conditionValue="34" rewardBoxid="700163" />
+			<entry id="4" activityCondition="15" conditionValue="36" rewardBoxid="700164" />
+			<entry id="5" activityCondition="15" conditionValue="38" rewardBoxid="700165" />
+		</activity>
+		<activity activityType="4">
+			<entry id="1" activityCondition="7" conditionValue="6" extraTarget="2" rewardBoxid="700261" />
+			<entry id="2" activityCondition="7" conditionValue="5" extraTarget="3" rewardBoxid="700262" />
+			<entry id="3" activityCondition="7" conditionValue="4" extraTarget="4" rewardBoxid="700263" />
+			<entry id="4" activityCondition="7" conditionValue="3" extraTarget="5" rewardBoxid="700264" />
+			<entry id="5" activityCondition="7" conditionValue="2" extraTarget="6" rewardBoxid="700265" />
+		</activity>
+	</days>
+	
+	<days id="7" imageid="242620_icon" >
+		<activity activityType="1">
+			<entry id="1" activityCondition="1" conditionValue="1" rewardBoxid="700006" />
+			<entry id="2" activityCondition="19" conditionValue="20000" rewardBoxid="700016" />
+		</activity>
+		<activity activityType="2">
+			<entry id="1" activityCondition="3" conditionValue="2660" oriPrice="5320" rewardBoxid="102306" />
+		</activity>
+		<activity activityType="3">
+			<entry id="1" activityCondition="16" conditionValue="60000" rewardBoxid="700171" />
+			<entry id="2" activityCondition="16" conditionValue="80000" rewardBoxid="700172" />
+			<entry id="3" activityCondition="16" conditionValue="100000" rewardBoxid="700173" />
+			<entry id="4" activityCondition="16" conditionValue="120000" rewardBoxid="700174" />
+			<entry id="5" activityCondition="16" conditionValue="140000" rewardBoxid="700175" />
+		</activity>
+		<activity activityType="4">
+			<entry id="1" activityCondition="17" conditionValue="10" rewardBoxid="700271" />
+			<entry id="2" activityCondition="17" conditionValue="25" rewardBoxid="700272" />
+			<entry id="3" activityCondition="17" conditionValue="50" rewardBoxid="700273" />
+			<entry id="4" activityCondition="17" conditionValue="75" rewardBoxid="700274" />
+			<entry id="5" activityCondition="17" conditionValue="100" rewardBoxid="700275" />
+		</activity>
+	</days>
+</conf>
